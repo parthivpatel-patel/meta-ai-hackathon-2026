@@ -22,7 +22,7 @@ Retrieved source SHA-256 fingerprints (raw main-branch documents, which may chan
 
 ## Not verified / blockers
 
-- Official hackathon rules URL was not supplied. The event name and deadlines are owner-provided context; no specific model or hosting route can be called competition-eligible yet. An asynchronous request for the official link was made.
+- The owner supplied the official event and participant-guide URLs in a follow-up. Direct retrieval was denied by the proxy; event-specific model eligibility and terms therefore remain independently unverified. See the follow-up record below.
 - Access to `llama.developer.meta.com` and `www.llama.com` was denied by the cloud proxy with HTTP 403. This establishes a network-policy blocker for those documentation pages, not that the provider service is down.
 - Current participant access, model catalog, free-tier/sponsorship amount, payment-method requirement, quotas, regional restrictions, data retention/training policy, and service-specific data-handling terms remain unverified. The owner previously reported promotional credits but a payment-method prerequisite; no attempt was made to bypass it.
 - API-key authentication is documented, but no new key is needed for current functionality. Credentials were not requested, read, or added.
@@ -30,3 +30,31 @@ Retrieved source SHA-256 fingerprints (raw main-branch documents, which may chan
 ## Conditions before enabling a real provider
 
 Obtain the official rules and a documented, authorized free-access route without a payment method. Confirm model eligibility, current service terms and usage limits, data handling, and model identity. Use synthetic inputs only. Then separately authorize a bounded smoke test and implement an allowlisted HTTPS transport with secret injection, timeout/retry/size limits, output-schema validation, provenance, and no silent fallback. Retain the hard-disabled state until those requirements are met.
+
+
+## Follow-up: official event links and card-free research
+
+The owner supplied these sources:
+
+- [Event and registration](https://cerebralvalley.ai/e/meta-ai-developer-hackathon)
+- [Participant guide, rules, and technical resources](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details)
+- [Meta Model API](https://dev.meta.ai/)
+
+**Participant-reported, not independently verified:** the guide permits open-weight models; identifies Muse Spark series, Muse Wonder, Muse Image, Muse Voice Transcribe, SAM 3.1, Muse Glimmer, and Muse Spark Open; names Baseten, Modal, and Fireworks as inference partners; and specifies `meta-models/muse-spark-open-1026` for Baseten. The owner reports a public-repository requirement, work developed during the event, the Build for Your World / Push the Frontier tracks, and a November 4, 2026, 9 PM Eastern submission deadline. FORGE targets Push the Frontier with an internal October 30 deadline. These claims are recorded faithfully but not promoted to verified competition findings while the guide is inaccessible. The prior Llama documentation review does not establish that any particular Llama version is eligible for this event.
+
+Read-only GET attempts to the event, guide, Meta site, and the official partner pages below all failed with `Tunnel connection failed: 403 Forbidden`. This happened before the destination page could be retrieved; it is not evidence of account eligibility, service outage, or a credit-card requirement.
+
+| Official source attempted | Verified outcome |
+|---|---|
+| `cerebralvalley.ai/e/meta-ai-developer-hackathon` | Proxy denied access |
+| `cerebralvalley.ai/e/meta-ai-developer-hackathon/details` | Proxy denied access |
+| `dev.meta.ai` | Proxy denied access |
+| `www.baseten.co/pricing/` | Proxy denied access |
+| `modal.com/pricing` | Proxy denied access |
+| `fireworks.ai/pricing` | Proxy denied access |
+
+Official GitHub documentation was accessible: [Baseten Truss](https://github.com/basetenlabs/truss/blob/main/README.md), [Modal client](https://github.com/modal-labs/modal-client/blob/main/README.md), and [Fireworks cookbook](https://github.com/fw-ai/cookbook/blob/main/README.md). These establish official project/documentation resources; the retrieved READMEs do **not** establish current event model availability, participant sponsorship, card-free onboarding, inference quotas, or service data-retention terms. No free/card-free partner recommendation is verified yet.
+
+A network-settings draft adds only documentation/research hosts: `cerebralvalley.ai`, `dev.meta.ai`, `www.baseten.co`, `docs.baseten.co`, `modal.com`, `fireworks.ai`, `docs.fireworks.ai`. Existing package-manager presets are preserved. Saving a draft does not apply it to the current runtime; review/save it in environment settings, then publish the updated environment. Additional redirect or documentation hosts, if required, must be diagnosed rather than bypassing the proxy. No inference destination, secret binding, account signup, promotional redemption, or payment method was configured.
+
+After access is applied, retry the official guide and current service terms. Confirm the exact eligible model, participant-specific card-free offer, quotas/expiration, authentication, data handling, and repository/publication requirements. Check public repository visibility through an authorized metadata read before claiming it is public; successful authenticated Git operations alone do not prove visibility. Preserve the existing mock/rules-based development path until a separately authorized zero-cost inference test is possible. Never represent mock or rules-based output as real Meta output in a submission.
