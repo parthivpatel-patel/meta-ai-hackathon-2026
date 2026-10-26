@@ -1,0 +1,47 @@
+{
+  "checked_utc": "2026-10-26T21:43:51.750220+00:00",
+  "sources": [
+    {
+      "source": "event",
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+      "status": 200,
+      "bytes": 214849,
+      "sha256": "cc01ba9fce55097fb6134b134f937fe85ddf67d72dcf7c25386229ec3355d06e"
+    },
+    {
+      "source": "guide",
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
+      "status": 200,
+      "bytes": 201575,
+      "sha256": "ccd2d8f6229dff46f2ba526860868a12c57ae1a009c785e5d0b66a75fe46c8d0"
+    },
+    {
+      "source": "baseten-model",
+      "url": "https://www.baseten.co/library/muse-spark-open/",
+      "status": 200,
+      "bytes": 333712,
+      "sha256": "7d701d9602d8db163f6233eb766f37b4d71e5bc01f2200de4a5e7188b73bdf85"
+    },
+    {
+      "source": "baseten-billing",
+      "url": "https://docs.baseten.co/organization/billing",
+      "status": 200,
+      "bytes": 354732,
+      "sha256": "f635c1e91882a0e5bdca0653ecc4d7a32d183ac1e70ba0fa9a66bcc5cc195a04"
+    },
+    {
+      "source": "muse-license",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/resolve/main/LICENSE.md",
+      "status": 200,
+      "bytes": 8299,
+      "sha256": "458a5c57d8e622e395eb0e59799ba5bba1ea7524ffd120ee6e3018688d7d6ace"
+    },
+    {
+      "source": "spaces",
+      "url": "https://huggingface.co/docs/hub/spaces-overview",
+      "status": 200,
+      "bytes": 223299,
+      "sha256": "be96627e162b679aa81ccc729cc799a15e9e0e593c3569cf9549366e60c78ebd"
+    }
+  ]
+}

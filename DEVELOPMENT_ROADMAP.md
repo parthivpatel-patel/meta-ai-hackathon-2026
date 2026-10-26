@@ -43,3 +43,8 @@ Bounded synthetic interventions, competing process/sensor hypotheses, label-free
 Implemented bounded provider transport and structured proposals, independent per-proposal verification, calibrated thermal/waveform ingestion, noisy/multi-fault cases, familywise interval policy, v2 dashboard/reports/replay, 280-case new evaluation, end-to-end fixture/browser coverage and request hardening. The new matrix accepts 212/280 complete synthetic findings; weak/noisy and some same-channel mixtures remain unresolved. No real Meta model inference has occurred.
 
 By October 27, confirm the card-free Baseten route, event alias and license and obtain secure credentials. By October 28, run and evaluate an explicitly authorized eligible-model smoke/demo with capped zero-cost access. October 29: stabilize the demonstration, regressions and reproducible exports. October 30: internal freeze. See docs/PHASE2.md and docs/META_INTEGRATION.md for blockers and actual metrics. No paid route is authorized.
+
+
+## October 30 completion priorities
+
+October27–28: owner confirms Baseten approval, card-free credits, exact event alias, model license and authenticated rules; run a bounded genuine test only after zero-cost authorization. October29: real-model failure/evaluation matrix, measured latency/cost and truthful demo rehearsal. October30: freeze verified artifacts and record final demonstration. Public hosting remains optional and blocked pending verified no-card terms. No mock/rules output can satisfy the Meta requirement.

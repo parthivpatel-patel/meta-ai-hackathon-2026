@@ -49,6 +49,7 @@ class TransportSettings(BaseSettings):
     free_access_confirmed: bool = False
     request_budget: int = Field(default=0, ge=0, le=10)
     max_tokens: int = Field(default=1024, ge=256, le=2048)
+    token_budget: int = Field(default=32768, ge=0, le=262144)
     timeout_seconds: float = Field(default=15, gt=0, le=30)
     retry_limit: int = Field(default=0, ge=0, le=2)
 
@@ -106,6 +107,7 @@ class ChatProvider:
         self.settings = settings
         self.transport = transport
         self.used = 0
+        self.token_units_used = 0
         self.lock = threading.Lock()
 
     def status(self):
@@ -115,6 +117,7 @@ class ChatProvider:
             and s.free_access_confirmed
             and bool(s.api_key and s.api_key.get_secret_value())
             and self.used < s.request_budget
+            and self.token_units_used < s.token_budget
         )
         return {
             "status": "configured_unverified" if ready else "disabled",
@@ -122,6 +125,9 @@ class ChatProvider:
             "model_id": s.model_id,
             "network_inference_enabled": ready,
             "remaining_requests": max(0, s.request_budget - self.used),
+            "remaining_reserved_token_units": max(
+                0, s.token_budget - self.token_units_used
+            ),
             "access_verified": False,
             "reason": "Requires explicit opt-in, verified free access, credentials, and a positive process-lifetime request budget; no paid access is authorized.",
         }
@@ -148,13 +154,21 @@ class ChatProvider:
         }
         if len(json.dumps(payload)) > 18000:
             raise ProviderError("Inference input exceeds the bounded prompt size")
+        reservation = (
+            len(json.dumps(payload, ensure_ascii=False).encode()) + s.max_tokens + 512
+        )
         for attempt in range(s.retry_limit + 1):
             with self.lock:
                 if self.used >= s.request_budget:
                     raise ProviderError(
                         "Process-lifetime inference request budget exhausted"
                     )
+                if self.token_units_used + reservation > s.token_budget:
+                    raise ProviderError(
+                        "Conservative input-byte/output-token reservation budget exhausted; no request was sent"
+                    )
                 self.used += 1
+                self.token_units_used += reservation
             try:
                 async with (
                     asyncio.timeout(s.timeout_seconds),

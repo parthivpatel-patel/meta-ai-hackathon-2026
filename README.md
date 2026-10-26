@@ -1,10 +1,10 @@
 # FORGE
 
-A verifiable multimodal AI investigation platform, starting with industrial equipment failure investigation. **Phase 1 implements a verified synthetic investigation workflow, not a physical diagnostic system.** No Meta inference is performed. Legacy Phase 0 suggestions are explicitly mocked. Phase 1 candidates are rules-based; conclusions are supported, rejected, inconclusive, or abstained under a synthetic evidence policy.
+A verifiable multimodal AI investigation platform, starting with industrial equipment failure investigation. **Phase 3 adds a durable sequential investigation console and restricted public demo, not a physical diagnostic system.** No Meta inference is performed. Legacy Phase 0 suggestions are explicitly mocked. Phase 1 candidates are rules-based; conclusions are supported, rejected, inconclusive, or abstained under a synthetic evidence policy.
 
 ## Quick start
 
-Requirements: Python 3.12+, uv 0.12.23, Node.js 24 and npm. No GPU, database, API key, account, or paid API is needed. Use this existing checkout; cloud tasks are already isolated and do not need a new worktree.
+Requirements: Python 3.12+, uv 0.12.23, Node.js 24 and npm. No GPU, external database, API key, account, or paid API is needed. SQLite is embedded. Use this existing checkout; cloud tasks are already isolated and do not need a new worktree.
 
 ```bash
 cd /workspace/meta-ai-hackathon-2026
@@ -26,7 +26,7 @@ cd /workspace/meta-ai-hackathon-2026/frontend
 npm run dev -- --host 127.0.0.1
 ```
 
-Vite listens on port 5173 and proxies `/api` to backend port 8000. For another checkout location, substitute its path. Use local HTTP requests for cloud validation; onboarding does not provide public localhost previews. Both processes must restart in future tasks. The frontend production bundle requires a same-origin `/api` reverse proxy; deployment is outside Phase 0.
+Vite listens on port 5173 and proxies `/api` to backend port 8000. For another checkout location, substitute its path. Use local HTTP requests for cloud validation; onboarding does not provide public localhost previews. Both processes must restart in future tasks. For the Phase 3 same-origin production bundle and Docker option, follow [DEMO_RUNBOOK.md](DEMO_RUNBOOK.md). FastAPI serves `/demo` and `/assets`; build before startup. Public hosting has not been provisioned.
 
 ```bash
 curl --fail http://127.0.0.1:8000/api/v1/health
@@ -106,3 +106,9 @@ No physical verification, multimodal uploads, durable investigation storage, aut
 The dashboard now has a separate Phase 2 panel for noisy, simultaneous process/sensor faults and missing-data cases. Attach the explicit synthetic thermal/waveform sample or upload bounded evidence JSON, run the four-intervention investigation, inspect independent verification and source labels, then save JSON/HTML. General photos/audio/video and physical diagnoses are not implemented.
 
 New `/api/v2` endpoints provide evidence ingestion, a gated provider adapter, investigations, reports and offline replay. All `/api/v1` behavior remains intact. Real inference is disabled by default; even a supplied key does not enable it. A failed model call never silently falls back to mock/rules output. See [Phase 2 implementation and validation](docs/PHASE2.md) and [verified access research](docs/META_INTEGRATION.md). No new runtime dependencies are required; the frozen installation/startup commands above still apply.
+
+## Phase 3 sequential demo
+
+Open `/demo` for durable stepwise investigations, ordinal hypothesis ranking, adaptive experiment selection, cross-experiment controls, multimodal provenance and independently replayable JSON/HTML reports. Local v1/v2 workflows remain available through the original Vite dashboard. Public mode permits only fixed synthetic cases and blocks all real inference/uploads; private owner mode requires a secret token. Baseten approval is pending.
+
+See [Phase 3 implementation and evaluation](docs/PHASE3.md), [demo runbook](DEMO_RUNBOOK.md), [three-minute script](DEMO_SCRIPT.md), [judging alignment](JUDGING_ALIGNMENT.md) and [submission gates](SUBMISSION_CHECKLIST.md). The280-case synthetic evaluation achieved198/198 accepted exact findings with70.71% coverage; this is not industrial diagnostic accuracy.

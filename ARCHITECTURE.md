@@ -65,3 +65,8 @@ The earlier Phase 0 scope description above is historical: Phase 1 now implement
 ## Phase 2 extension
 
 The versioned `forge.phase2` modules add a provider-independent bounded transport, typed model proposals, calibrated thermal/waveform ingestion, a private multi-fault oracle, and an independent multi-intervention verifier. `contracts.py` contains public trial records so the verifier does not import private recipes. V1 modules and contracts are retained. ASGI request-body limits apply before parsing. The new dashboard lab operates on its own labeled synthetic cases. Reports record `deterministic_rules_not_meta`, `test_transport`, or `meta_http_response`; text suggestions never determine verification. Full data-flow, API, budget, replay and threat limitations are in [PHASE2.md](docs/PHASE2.md).
+
+
+## Phase 3 architecture
+
+The `/api/v3` modular monolith adds SQLite durable versioned sessions, a sequential selector, independent verifier, provenance ledger and replay. SafetyMiddleware wraps API access with local/public/private modes; public mode only allows fixed synthetic workflows. FastAPI serves the compiled React `/demo`; the non-root single-worker Docker image packages both. The verifier imports public contracts/statistics, never the private oracle or inference adapter. See docs/PHASE3.md for interfaces, trust boundaries and limits.

@@ -26,7 +26,19 @@ async def lifespan(app: FastAPI):
     get_settings()
     from .phase2.inference import get_provider
 
-    get_provider().status()  # Validate configuration only; never probes a remote endpoint.
+    # A restricted public demo never initializes an inference client.
+    from .phase3.safety import settings as public_settings
+
+    if public_settings().mode != "public":
+        get_provider().status()  # Configuration only, never a network probe.
+    from .phase3.storage import get_store
+    from .phase3.safety import settings as demo_settings
+    import asyncio
+
+    demo_settings()
+    if not get_store().ready():
+        raise RuntimeError("Durable storage failed startup readiness")
+    app.state.work_gate = asyncio.Semaphore(2)
     yield
 
 
@@ -166,3 +178,33 @@ from .body_limit import BodyLimitMiddleware
 
 app.include_router(phase2_router)
 app.add_middleware(BodyLimitMiddleware)
+
+from .phase3.routes import router as phase3_router
+from .phase3.safety import SafetyMiddleware
+from pathlib import Path
+from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
+
+app.include_router(phase3_router)
+# The body limiter runs before any JSON parser. Outer safety middleware blocks
+# public non-demo routes and applies headers; no cross-origin API access is enabled.
+app.add_middleware(SafetyMiddleware)
+_dist = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+
+
+@app.get("/", include_in_schema=False)
+def demo_redirect():
+    return RedirectResponse("/demo")
+
+
+@app.get("/demo", include_in_schema=False)
+def demo_index():
+    if not (_dist / "index.html").is_file():
+        raise HTTPException(503, "Build the frontend bundle before serving the demo")
+    return FileResponse(_dist / "index.html")
+
+
+if (_dist / "assets").is_dir():
+    app.mount(
+        "/assets", StaticFiles(directory=_dist / "assets"), name="dashboard_assets"
+    )
