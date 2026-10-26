@@ -1,0 +1,10 @@
+[project]
+name = "forge-investigation"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "numpy>=2,<3", "scipy>=1.15,<2", "httpx>=0.28,<1", "pydantic-settings>=2.7,<3"]
+[dependency-groups]
+dev = ["pytest>=9.0.3,<10"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

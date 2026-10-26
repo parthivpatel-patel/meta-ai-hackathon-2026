@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# FORGE frontend artifacts
+node_modules/
+frontend/dist/
+*.tsbuildinfo
