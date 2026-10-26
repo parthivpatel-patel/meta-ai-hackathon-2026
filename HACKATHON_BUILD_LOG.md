@@ -53,3 +53,8 @@ Phase 2 final checks: 91 backend and 9 frontend tests passed, no failures/skips;
 ## October 26 — Phase 3
 
 Preserved Phase2 baseline3837024494f77c6f7296f502b95e2477e98ca499 on feature/forge-phase-3. Implemented sequential durable synthetic investigations, independent cross-experiment verification, multimodal provenance, token reservations, public/private boundaries, polished `/demo`, Docker and evaluation/replay. Official license and hosting docs were rechecked; Baseten approval still pending. All106 initial backend and 9 initial frontend regressions passed before additional Phase3 checks. A rapid two-viewport browser run correctly hit the10-write/minute limit; the runner now waits61 seconds between viewports. Read-only home cache/buildx issues were resolved with temporary tool cache paths while retaining registry credentials/TLS. No paid services or real inference calls occurred. Final validation totals and caveats are recorded in docs/PHASE3.md.
+
+
+## October26 — Phase4
+
+Branched from verified Phase3. Prepared disabled model catalog/one-call smoke, secure public launcher, Host/route hardening, deployment audit/profile and owner submission gates. Official documents rechecked without inference; event alias and account approval remain unverified. Internal Docker bridge isolation prevented published-port access locally; replaced with a standard bridge, retaining public API gates and no credentials. No public hosting or paid service activated.

@@ -16,6 +16,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from ..engine.contracts import BlindInput, Channel, HypothesisID, Record, digest
 from ..providers import ProviderError
+from ..submission.models import DOCUMENTED_BASETEN_IDS
 
 ENDPOINTS = {
     "baseten": "https://inference.baseten.co/v1/chat/completions",
@@ -23,7 +24,7 @@ ENDPOINTS = {
     "meta": "https://api.meta.ai/v1/chat/completions",
 }
 VERIFIED_MODELS = {
-    "baseten": {"meta-models/muse-spark-open"},
+    "baseten": DOCUMENTED_BASETEN_IDS,
     "meta": {"muse-spark-1.3", "muse-spark-1.2", "muse-spark-1.1"},
     "fireworks": set(),
 }
@@ -181,8 +182,7 @@ class ChatProvider:
                         ),
                         trust_env=True,
                     ) as client,
-                ):
-                    async with client.stream(
+                    client.stream(
                         "POST",
                         s.endpoint,
                         headers={
@@ -190,30 +190,31 @@ class ChatProvider:
                             "Accept-Encoding": "identity",
                         },
                         json=payload,
-                    ) as response:
-                        if (
-                            response.status_code in (429, 502, 503, 504)
-                            and attempt < s.retry_limit
-                        ):
-                            continue
-                        if response.status_code != 200:
+                    ) as response,
+                ):
+                    if (
+                        response.status_code in (429, 502, 503, 504)
+                        and attempt < s.retry_limit
+                    ):
+                        continue
+                    if response.status_code != 200:
+                        raise ProviderError(
+                            "Inference provider returned a non-success status; no fallback was used"
+                        )
+                    if response.headers.get("content-encoding", "identity") not in (
+                        "",
+                        "identity",
+                    ):
+                        raise ProviderError(
+                            "Compressed inference responses are not permitted"
+                        )
+                    raw = bytearray()
+                    async for chunk in response.aiter_bytes(chunk_size=4096):
+                        raw.extend(chunk)
+                        if len(raw) > 32768:
                             raise ProviderError(
-                                "Inference provider returned a non-success status; no fallback was used"
+                                "Inference response exceeded the 32 KB limit"
                             )
-                        if response.headers.get("content-encoding", "identity") not in (
-                            "",
-                            "identity",
-                        ):
-                            raise ProviderError(
-                                "Compressed inference responses are not permitted"
-                            )
-                        raw = bytearray()
-                        async for chunk in response.aiter_bytes(chunk_size=4096):
-                            raw.extend(chunk)
-                            if len(raw) > 32768:
-                                raise ProviderError(
-                                    "Inference response exceeded the 32 KB limit"
-                                )
                 if (
                     len(s.api_key.get_secret_value()) >= 8
                     and s.api_key.get_secret_value().encode() in raw

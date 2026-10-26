@@ -1,0 +1,181 @@
+{
+  "checked_utc": "2026-10-26T22:51:56.979221+00:00",
+  "baseline_commit": "89c53e1115a8b5787a489889611194e604f9f231",
+  "backend_tests_passed": 154,
+  "frontend_tests_passed": 13,
+  "typescript_and_production_build": "passed",
+  "synthetic_evaluation_cases": 1040,
+  "phase3_deterministic_case_records_match_baseline": 280,
+  "new_console_browser_viewports": [
+    "desktop",
+    "mobile"
+  ],
+  "offline_phase3_report_replay": "passed",
+  "model_requests_sent": 0,
+  "model_preflight": {
+    "ready_for_explicit_execution": false,
+    "blockers": [
+      "approved_credits_unconfirmed",
+      "card_free_entitlement_unconfirmed",
+      "inference_disabled",
+      "free_access_unconfirmed",
+      "credential_missing",
+      "request_budget_must_equal_one",
+      "reservation_budget_must_be_one_to_16384"
+    ],
+    "provider": "baseten",
+    "model_id": "meta-models/muse-spark-open",
+    "request_limit": 1,
+    "retry_limit": 0,
+    "network_requests_sent": 0,
+    "entitlement_basis": "Operator attestations, not independently verified provider billing",
+    "cost": "Not measured. Local budgets do not guarantee provider billing.",
+    "mode": "dry_run"
+  },
+  "deployment_audit": {
+    "schema": "forge-deployment-audit-1",
+    "passed": true,
+    "checks": [
+      {
+        "check": "/api/v3/capabilities:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/api/v3/capabilities:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/api/v3/capabilities:no_cache",
+        "passed": true
+      },
+      {
+        "check": "restricted_public_capabilities",
+        "passed": true
+      },
+      {
+        "check": "/api/v3/ready:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/api/v3/ready:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/api/v3/ready:no_cache",
+        "passed": true
+      },
+      {
+        "check": "ready_storage_and_bundle",
+        "passed": true
+      },
+      {
+        "check": "/demo:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/demo:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "compiled_demo_available",
+        "passed": true
+      },
+      {
+        "check": "/docs:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/docs:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/docs:forbidden",
+        "passed": true
+      },
+      {
+        "check": "/redoc:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/redoc:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/redoc:forbidden",
+        "passed": true
+      },
+      {
+        "check": "/openapi.json:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/openapi.json:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/openapi.json:forbidden",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/model-status:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/model-status:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/model-status:no_cache",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/model-status:forbidden",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/investigations/demo:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/investigations/demo:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/investigations/demo:no_cache",
+        "passed": true
+      },
+      {
+        "check": "/api/v1/investigations/demo:forbidden",
+        "passed": true
+      },
+      {
+        "check": "/api/v2/model-status:security_headers",
+        "passed": true
+      },
+      {
+        "check": "/api/v2/model-status:no_cors_grant",
+        "passed": true
+      },
+      {
+        "check": "/api/v2/model-status:no_cache",
+        "passed": true
+      },
+      {
+        "check": "/api/v2/model-status:forbidden",
+        "passed": true
+      }
+    ],
+    "transport": "loopback_http_not_public_https",
+    "scope": "Read-only HTTP boundary/configuration checks; not a penetration test or proof of hosting billing/retention. No model calls or investigation mutations."
+  },
+  "dependency_audits": {
+    "python_known_vulnerabilities": 0,
+    "npm_known_vulnerabilities": 0
+  },
+  "public_https_deployment": "not_provisioned_or_verified",
+  "limitations": [
+    "One existing FastAPI TestClient/httpx deprecation warning",
+    "Hosted CI result is reported separately after push",
+    "Local tests/fixtures do not establish model access or public HTTPS"
+  ]
+}

@@ -48,3 +48,8 @@ Model suggestions are untrusted and independently assessed. Replay checks canoni
 ## Phase 3 demonstration boundary
 
 Restricted public mode blocks legacy APIs, custom recipes/uploads and all inference. Private mode uses constant-time bearer comparison and a minimum32-character token; local mode must stay local. One-worker rate/resource caps, body limits, strict schemas, no CORS grants, CSP/security headers, escaped reports, parameterized SQLite and0600 database files protect the demo boundary. Opaque session IDs are not user authorization; only fixed public synthetic data belongs in public mode. SQLite state is unsigned, retention is logical24h, and process-local budgets reset on restart. No credentials were introduced. Dependency audits and security tests are recorded in docs/PHASE3.md; these checks do not constitute a penetration test or industrial certification.
+
+
+## Phase4 deployment review
+
+Exact Host/route boundaries and a guarded public entrypoint address deployment misconfiguration. The Compose profile runs read-only with a data volume and caps; no inference/owner credentials belong in public containers. Read-only HTTPS audit verifies the deployed boundary but not billing or a full penetration test. See docs/DEPLOYMENT_SECURITY_AUDIT.md for findings/limitations.

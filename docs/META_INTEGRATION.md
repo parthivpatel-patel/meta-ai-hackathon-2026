@@ -55,3 +55,8 @@ Research-domain additions for owner review include the actual linked model/licen
 ## Phase3 access checkpoint
 
 Baseten approval remains pending, no inference credential is configured, and zero real calls have been made. Public mode hard-denies inference independently of global configuration. The local adapter now reserves a bounded UTF-8-payload/output accounting allowance per attempt in addition to its request cap; this is not provider token billing. `meta-models/muse-spark-open-1026` remains unverified and rejected by the registry. The final submission still requires genuine eligible Meta inference, measured evaluation and truthful provenance.
+
+
+## Phase4 activation readiness
+
+Current official Model APIs/chat docs confirm bearer authentication and the reviewed endpoint. Muse Spark Open lacks provider-native JSON/schema mode; the adapter uses prompted JSON plus strict validation. Both Baseten ID candidates are cataloged, but the event alias remains disabled pending authenticated evidence. Use the dry-default forge.submission.smoke CLI and OWNER_ACTIONS.md; no genuine call has run.

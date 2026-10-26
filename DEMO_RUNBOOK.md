@@ -58,3 +58,9 @@ Requires Chromium at `/usr/bin/chromium`, or set `CHROMIUM_EXECUTABLE_PATH`. Pha
 - Private mode requires `FORGE_DEMO_ACCESS_TOKEN` of at least32 characters, supplied securely; browser keeps it only in memory. It is owner authentication, not multi-user authorization. Do not put tokens in URLs, source or recordings.
 - Baseten remains pending. No approved key, zero real calls, no live Meta demo. See `docs/META_INTEGRATION.md` before any future opt-in.
 - No public hosting URL has been provisioned or verified. Local Docker is the tested fallback. Do not activate paid hosting.
+
+## Phase4 deployment profile and activation
+
+The image now launches through `forge.submission.serve`, which refuses developer/private mode, inference credentials or a nonzero request budget. Do not override its entrypoint for public hosting. `deploy/compose.yaml` is the tested local profile on127.0.0.1:7862 with read-only root, persistent data and resource limits. Run `docker compose -f deploy/compose.yaml up -d --no-build` after building `forge:phase4` (use the existing proxy CA secret in this managed environment). No TLS/public service is provisioned. Do not pass inference or owner credentials to this profile.
+
+Public/private APIs now require an exact `FORGE_DEMO_ALLOWED_HOSTS` JSON list. Defaults permit localhost,127.0.0.1 and::1. A future public ingress needs its actual hostname plus127.0.0.1 for healthchecks; wildcards/URLs are rejected. Manual local/private uvicorn launches should use `--no-proxy-headers`; the guarded container launcher already does. The public audit and owner activation commands are in [OWNER_ACTIONS.md](OWNER_ACTIONS.md). The smoke tool is dry by default; no real request has been run.

@@ -112,3 +112,7 @@ New `/api/v2` endpoints provide evidence ingestion, a gated provider adapter, in
 Open `/demo` for durable stepwise investigations, ordinal hypothesis ranking, adaptive experiment selection, cross-experiment controls, multimodal provenance and independently replayable JSON/HTML reports. Local v1/v2 workflows remain available through the original Vite dashboard. Public mode permits only fixed synthetic cases and blocks all real inference/uploads; private owner mode requires a secret token. Baseten approval is pending.
 
 See [Phase 3 implementation and evaluation](docs/PHASE3.md), [demo runbook](DEMO_RUNBOOK.md), [three-minute script](DEMO_SCRIPT.md), [judging alignment](JUDGING_ALIGNMENT.md) and [submission gates](SUBMISSION_CHECKLIST.md). The280-case synthetic evaluation achieved198/198 accepted exact findings with70.71% coverage; this is not industrial diagnostic accuracy.
+
+## Phase 4 submission preparation
+
+[Phase4](docs/PHASE4.md) adds a dry-default one-request smoke workflow, an evidence-backed two-ID Baseten catalog, an HTTPS deployment audit and a guarded public-only container launcher. Exact allowed hosts are required outside local mode. No real inference or public hosting has been activated. Follow [OWNER_ACTIONS.md](OWNER_ACTIONS.md); never load inference credentials into the public demo.

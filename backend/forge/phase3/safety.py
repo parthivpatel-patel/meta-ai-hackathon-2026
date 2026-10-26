@@ -1,12 +1,15 @@
 """Single-process public-demo boundary. No reliance on forwarded client headers."""
 
 import hmac
+import ipaddress
+import re
 import threading
 import time
 from collections import OrderedDict
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
+from urllib.parse import urlsplit
 from uuid import uuid4
 
 from pydantic import Field, SecretStr, model_validator
@@ -20,6 +23,11 @@ class DemoSettings(BaseSettings):
     )
     mode: Literal["local", "public", "private"] = "local"
     access_token: SecretStr | None = Field(default=None, repr=False, exclude=True)
+    allowed_hosts: list[str] = Field(
+        default_factory=lambda: ["localhost", "127.0.0.1", "::1"],
+        min_length=1,
+        max_length=10,
+    )
     rate_per_minute: int = Field(default=60, ge=1, le=600)
     writes_per_minute: int = Field(default=10, ge=1, le=60)
     global_per_minute: int = Field(default=240, ge=1, le=1200)
@@ -31,6 +39,17 @@ class DemoSettings(BaseSettings):
 
     @model_validator(mode="after")
     def private_token(self):
+        for host in self.allowed_hosts:
+            try:
+                ipaddress.ip_address(host)
+            except ValueError:
+                if not re.fullmatch(
+                    r"(?=.{1,253}$)[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*",
+                    host,
+                ):
+                    raise ValueError(
+                        "Allowed hosts must be exact lowercase hostnames or IP addresses; wildcards and URLs are forbidden"
+                    )
         if self.mode == "private" and (
             self.access_token is None or len(self.access_token.get_secret_value()) < 32
         ):
@@ -65,21 +84,53 @@ class WindowLimiter:
             return True
 
 
-def public_path(method, path):
+def public_path(method: str, path: str) -> bool:
     if method in ("GET", "HEAD"):
-        return path in (
-            "/",
-            "/demo",
-            "/api/v1/health",
-            "/api/v3/health",
-            "/api/v3/ready",
-            "/api/v3/capabilities",
-            "/api/v3/scenarios",
-        ) or path.startswith(("/assets/", "/api/v3/sessions/"))
+        return (
+            path
+            in (
+                "/",
+                "/demo",
+                "/api/v1/health",
+                "/api/v3/health",
+                "/api/v3/ready",
+                "/api/v3/capabilities",
+                "/api/v3/scenarios",
+            )
+            or bool(re.fullmatch(r"/assets/[A-Za-z0-9][A-Za-z0-9_.-]*", path))
+            or bool(
+                re.fullmatch(
+                    r"/api/v3/sessions/[a-f0-9]{32}(?:/report\.(?:json|html))?", path
+                )
+            )
+        )
     return method == "POST" and (
         path == "/api/v3/sessions"
-        or (path.startswith("/api/v3/sessions/") and path.endswith("/advance"))
+        or bool(re.fullmatch(r"/api/v3/sessions/[a-f0-9]{32}/advance", path))
     )
+
+
+def host_allowed(headers: list[tuple[bytes, bytes]], allowed: list[str]) -> bool:
+    values = [value for name, value in headers if name.lower() == b"host"]
+    if len(values) != 1:
+        return False
+    try:
+        value = values[0].decode("ascii")
+        if any(c.isspace() for c in value) or any(c in value for c in ("\\", "%")):
+            return False
+        parsed = urlsplit("http://" + value)
+        port = parsed.port
+        return bool(
+            parsed.hostname in allowed
+            and parsed.username is None
+            and parsed.password is None
+            and not parsed.path
+            and not parsed.query
+            and not parsed.fragment
+            and (port is None or 1 <= port <= 65535)
+        )
+    except (ValueError, UnicodeError):
+        return False
 
 
 class SafetyMiddleware:
@@ -130,6 +181,14 @@ class SafetyMiddleware:
                 message = {**message, "headers": headers}
             await send(message)
 
+        if config.mode != "local" and not host_allowed(
+            scope.get("headers", []), config.allowed_hosts
+        ):
+            return await reject(
+                400,
+                "invalid_host",
+                "Host is not permitted by the deployment configuration",
+            )
         if config.mode == "public" and not public_path(method, path):
             return await reject(
                 403,

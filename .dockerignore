@@ -9,3 +9,5 @@ frontend/dist
 backend/evaluation
 backend/tests
 docs/evidence
+artifacts
+deploy/*.env

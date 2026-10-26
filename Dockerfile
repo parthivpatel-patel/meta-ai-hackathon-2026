@@ -31,4 +31,4 @@ USER forge
 EXPOSE 7860
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
     CMD /app/backend/.venv/bin/python -c "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:'+os.environ.get('PORT','7860')+'/api/v3/ready',timeout=3)"
-CMD ["sh", "-c", "exec /app/backend/.venv/bin/uvicorn forge.main:app --host 0.0.0.0 --port \"${PORT:-7860}\" --workers 1 --no-access-log --timeout-graceful-shutdown 15"]
+CMD ["/app/backend/.venv/bin/python", "-m", "forge.submission.serve"]

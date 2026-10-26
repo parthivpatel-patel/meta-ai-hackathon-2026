@@ -70,3 +70,8 @@ The versioned `forge.phase2` modules add a provider-independent bounded transpor
 ## Phase 3 architecture
 
 The `/api/v3` modular monolith adds SQLite durable versioned sessions, a sequential selector, independent verifier, provenance ledger and replay. SafetyMiddleware wraps API access with local/public/private modes; public mode only allows fixed synthetic workflows. FastAPI serves the compiled React `/demo`; the non-root single-worker Docker image packages both. The verifier imports public contracts/statistics, never the private oracle or inference adapter. See docs/PHASE3.md for interfaces, trust boundaries and limits.
+
+
+## Phase4 submission boundary
+
+Submission tools are standalone trusted-owner CLIs, separate from HTTP routes. The public image uses a fail-closed launcher and exact Host/route allowlists. Only the approved owner smoke may instantiate an active provider after all gates; public sessions never do. See docs/PHASE4.md.

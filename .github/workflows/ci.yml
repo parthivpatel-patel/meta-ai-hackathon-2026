@@ -12,6 +12,8 @@ jobs:
           version: "0.12.23"
       - run: uv sync --project backend --frozen --python 3.12
       - run: cd backend && uv run --frozen pytest -q
+      - run: cd backend && uv run --frozen python -m forge.submission.smoke
+      - run: cd backend && uv run --frozen python -m forge.submission.models
       - run: cd backend && uv run --frozen python -m forge.evaluate --output /tmp/forge-evaluation.json
       - run: cd backend && uv run --frozen python -m forge.phase2.evaluate --output /tmp/forge-phase2-evaluation.json
       - run: cd backend && uv run --frozen python -m forge.phase3.evaluate --output /tmp/forge-phase3-evaluation.json

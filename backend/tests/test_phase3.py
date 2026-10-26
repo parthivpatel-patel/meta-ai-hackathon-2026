@@ -172,6 +172,7 @@ def test_sqlite_durability_versions_leases_and_capacity(tmp_path):
 def public_client(tmp_path, monkeypatch):
     config = DemoSettings(
         mode="public",
+        allowed_hosts=["testserver"],
         db_path=str(tmp_path / "sessions.sqlite"),
         rate_per_minute=600,
         writes_per_minute=60,
@@ -249,7 +250,10 @@ def test_private_authentication_and_token_redaction(tmp_path, monkeypatch):
     with pytest.raises(ValidationError):
         DemoSettings(mode="private", access_token="short")
     config = DemoSettings(
-        mode="private", access_token=token, db_path=str(tmp_path / "private.sqlite")
+        mode="private",
+        allowed_hosts=["testserver"],
+        access_token=token,
+        db_path=str(tmp_path / "private.sqlite"),
     )
     monkeypatch.setattr(safety, "settings", lambda: config)
     monkeypatch.setattr(storage, "settings", lambda: config)
@@ -265,7 +269,9 @@ def test_private_authentication_and_token_redaction(tmp_path, monkeypatch):
 
 
 def test_rate_limits_and_forwarded_headers_do_not_bypass(monkeypatch):
-    config = DemoSettings(mode="public", writes_per_minute=1)
+    config = DemoSettings(
+        mode="public", allowed_hosts=["testserver"], writes_per_minute=1
+    )
     monkeypatch.setattr(safety, "settings", lambda: config)
     small = FastAPI()
 

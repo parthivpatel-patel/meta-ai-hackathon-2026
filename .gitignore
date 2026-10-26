@@ -229,3 +229,7 @@ forge-data/
 *.sqlite3
 *.sqlite3-wal
 *.sqlite3-shm
+
+# Private activation evidence and local deployment values
+artifacts/
+deploy/*.env
