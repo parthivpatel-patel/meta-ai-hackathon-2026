@@ -116,3 +116,7 @@ See [Phase 3 implementation and evaluation](docs/PHASE3.md), [demo runbook](DEMO
 ## Phase 4 submission preparation
 
 [Phase4](docs/PHASE4.md) adds a dry-default one-request smoke workflow, an evidence-backed two-ID Baseten catalog, an HTTPS deployment audit and a guarded public-only container launcher. Exact allowed hosts are required outside local mode. No real inference or public hosting has been activated. Follow [OWNER_ACTIONS.md](OWNER_ACTIONS.md); never load inference credentials into the public demo.
+
+## Judge deployment and submission
+
+The current priority is an anonymous public HTTPS app through **November18,2026**. A free-only [Render Blueprint](render.yaml) deploys the existing Docker app from `deployment/judge-access`; account/network access and external URL verification are still pending. No public app URL is claimed. Follow [owner hosting steps](docs/HOSTING_AND_ACCESS.md), [judge checklist](JUDGE_ACCESSIBILITY.md), [recording fallback](RECORDED_DEMO_FALLBACK.md) and [actual replayable evidence](docs/submission/README.md). Render Free can sleep and lose SQLite state; the UI discloses these risks. No keep-alive bots, paid add-ons, Oracle A1 dependency or public inference credentials are used.

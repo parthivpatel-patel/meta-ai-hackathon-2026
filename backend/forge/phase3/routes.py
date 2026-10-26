@@ -122,7 +122,12 @@ def capabilities():
         "max_experiments": 4,
         "replicates_per_experiment": 96,
         "uploads_permitted": not public,
-        "persistence": "sqlite_local_disk",
+        "persistence": "ephemeral_sqlite"
+        if settings().storage_ephemeral
+        else "sqlite_local_disk",
+        "hosting_notice": "Free hosting may sleep when idle. SQLite sessions can be lost on restart or redeploy. Export completed JSON/HTML reports; start a new synthetic case if saved state is unavailable."
+        if settings().storage_ephemeral
+        else None,
         "ranking": "ordinal_not_probability",
         "physical_causality": False,
     }

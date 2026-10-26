@@ -1,0 +1,44 @@
+{
+  "schema": "forge-submission-evidence-1",
+  "public_application_url": null,
+  "external_https_verified": false,
+  "availability_target_through": "2026-11-18",
+  "availability_guarantee": false,
+  "genuine_meta_inference": "not_run_pending_approved_access",
+  "recorded_video_url": null,
+  "limitations": [
+    "Rules-based synthetic software evidence only",
+    "No live Meta inference or public deployment is established by these files",
+    "Hashes demonstrate consistency, not signed source authenticity"
+  ],
+  "files": [
+    {
+      "path": "misleading_sensor.json",
+      "sha256": "cff063f5bf02831f3f8051592762094d197cbb5863e1c175605522cabd39b27d",
+      "bytes": 123874,
+      "source": "deterministic_rules_not_meta",
+      "decision": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "path": "misleading_sensor.html",
+      "sha256": "af00c169922b9c6bdcfdcdb6dbb6cb68cf21d4f5c7662ba032869e64c3c10450",
+      "bytes": 136573,
+      "source": "deterministic_rules_not_meta",
+      "decision": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "path": "insufficient.json",
+      "sha256": "8c3848e2d06c78d4eccdf5ac041bad5e4fbcd93fad0097f868edd3a82f15503d",
+      "bytes": 33209,
+      "source": "not_run",
+      "decision": "ABSTAIN"
+    },
+    {
+      "path": "insufficient.html",
+      "sha256": "99676ae17ebf715ac43f6165bd0da77280cdcbf8048475d2611dc8ed0e8caee0",
+      "bytes": 42372,
+      "source": "not_run",
+      "decision": "ABSTAIN"
+    }
+  ]
+}

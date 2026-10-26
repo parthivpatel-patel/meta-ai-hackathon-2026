@@ -58,3 +58,7 @@ Preserved Phase2 baseline3837024494f77c6f7296f502b95e2477e98ca499 on feature/for
 ## October26 — Phase4
 
 Branched from verified Phase3. Prepared disabled model catalog/one-call smoke, secure public launcher, Host/route hardening, deployment audit/profile and owner submission gates. Official documents rechecked without inference; event alias and account approval remain unverified. Internal Docker bridge isolation prevented published-port access locally; replaced with a standard bridge, retaining public API gates and no credentials. No public hosting or paid service activated.
+
+## October26 — deployment and final access
+
+Continued from verified Phase4 cace30641fd664a202184897695d0ca56aac287a on deployment/judge-access. Prepared a free-only Render Blueprint, exact platform-host wiring, explicit ephemeral-storage notices and safe restore after transient503, without expanding the investigation engine. Added versioned independently replayed rules-based reports and judge/recording/owner checklists. Render and alternative-host docs remain proxy-blocked; cloud network additions were saved for owner publication, preserving existing domains. No hosting account/key exists in the current runtime. No public URL, real model execution, recorded-video URL, paid services or uptime guarantee is claimed.

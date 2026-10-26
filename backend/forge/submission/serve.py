@@ -6,6 +6,7 @@ import uvicorn
 
 from ..phase2.inference import TransportSettings
 from ..phase3.safety import DemoSettings
+from .render import configure_render
 
 
 def public_launch_blockers(
@@ -25,6 +26,7 @@ def public_launch_blockers(
 
 def main() -> int:
     try:
+        configure_render(os.environ)
         blockers = public_launch_blockers(DemoSettings(), TransportSettings())
         port = int(os.environ.get("PORT", "7860"))
         if not 1 <= port <= 65535:

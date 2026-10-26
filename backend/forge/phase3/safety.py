@@ -34,6 +34,7 @@ class DemoSettings(BaseSettings):
     db_path: str = str(
         Path(__file__).resolve().parents[3] / "forge-data" / "investigations.sqlite3"
     )
+    storage_ephemeral: bool = False
     max_sessions: int = Field(default=256, ge=1, le=1000)
     retention_hours: int = Field(default=24, ge=1, le=168)
 

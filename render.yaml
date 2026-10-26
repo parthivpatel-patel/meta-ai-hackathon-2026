@@ -1,0 +1,32 @@
+# Free-only fallback. No paid disk/database, inference credential, or keep-alive job.
+# Select this branch in the Render Blueprint UI; no main-branch changes required.
+services:
+  - type: web
+    name: forge-judge
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: deployment/judge-access
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/v3/ready
+    autoDeployTrigger: "off"
+    envVars:
+      - key: FORGE_DEMO_MODE
+        value: public
+      - key: FORGE_DEMO_STORAGE_EPHEMERAL
+        value: "true"
+      - key: FORGE_DEMO_DB_PATH
+        value: /tmp/forge-data/investigations.sqlite3
+      - key: FORGE_PROVIDER
+        value: mock
+      - key: FORGE_INFERENCE_ENABLED
+        value: "false"
+      - key: FORGE_INFERENCE_REQUEST_BUDGET
+        value: "0"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"

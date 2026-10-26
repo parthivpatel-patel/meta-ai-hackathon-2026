@@ -73,3 +73,38 @@ it("removes an expired saved session gracefully", async () => {
   );
   expect(screen.getByText("Inference not run")).toBeInTheDocument();
 });
+
+it("shows the ephemeral-hosting warning", async () => {
+  setup().mockImplementation(async (url: string) => ({
+    ok: true,
+    status: 200,
+    json: async () =>
+      url.endsWith("capabilities")
+        ? {
+            ...capabilities,
+            persistence: "ephemeral_sqlite",
+            hosting_notice:
+              "Free hosting may sleep; export reports before restart.",
+          }
+        : [],
+  }));
+  render(<DemoConsole />);
+  expect(await screen.findByRole("note")).toHaveTextContent(
+    "export reports before restart",
+  );
+});
+it("keeps the saved investigation ID after a transient hosting failure", async () => {
+  localStorage.setItem("forge-sequential-session", "saved");
+  setup().mockImplementation(async (url: string) =>
+    url.includes("/sessions/")
+      ? { ok: false, status: 503 }
+      : {
+          ok: true,
+          status: 200,
+          json: async () => (url.endsWith("capabilities") ? capabilities : []),
+        },
+  );
+  render(<DemoConsole />);
+  expect(await screen.findByRole("alert")).toHaveTextContent("503");
+  expect(localStorage.getItem("forge-sequential-session")).toBe("saved");
+});

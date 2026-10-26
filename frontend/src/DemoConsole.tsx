@@ -79,6 +79,8 @@ type Capabilities = {
   mode: string;
   real_inference_permitted: boolean;
   physical_causality: boolean;
+  persistence?: string;
+  hosting_notice?: string | null;
 };
 const CHANNELS: Channel[] = ["temperature", "vibration", "pressure"];
 const UNITS = { temperature: "°C", vibration: "mm/s", pressure: "bar" };
@@ -95,6 +97,14 @@ const sourceLabel = (source: string) =>
       : source === "not_run"
         ? "Inference not run"
         : "Rules-based · not Meta";
+class ApiError extends Error {
+  constructor(
+    public status: number,
+    message: string,
+  ) {
+    super(message);
+  }
+}
 export default function DemoConsole() {
   const [cap, setCap] = useState<Capabilities | null>(null);
   const [scenarios, setScenarios] = useState<{ id: string; title: string }[]>(
@@ -129,7 +139,8 @@ export default function DemoConsole() {
       );
     }
     if (!response.ok)
-      throw Error(
+      throw new ApiError(
+        response.status,
         response.status === 409
           ? "Investigation changed or an operation is in progress. Restore saved state before continuing."
           : response.status === 429
@@ -155,8 +166,19 @@ export default function DemoConsole() {
             setSession(
               await call("/api/v3/sessions/" + saved, undefined, abort.signal),
             );
-          } catch {
-            localStorage.removeItem("forge-sequential-session");
+          } catch (e) {
+            if (e instanceof ApiError && e.status === 404) {
+              localStorage.removeItem("forge-sequential-session");
+              setError(
+                "Saved investigation is missing or expired, possibly after a host restart. Start a new synthetic case; exported reports remain independently replayable.",
+              );
+            } else {
+              setError(
+                e instanceof Error
+                  ? e.message
+                  : "Saved state could not be restored. Retry after the host is ready.",
+              );
+            }
           }
         }
       })
@@ -248,6 +270,11 @@ export default function DemoConsole() {
         </span>
       </header>
       <main className="demo-main">
+        {cap?.hosting_notice && (
+          <div className="demo-disclosure" role="note">
+            {cap.hosting_notice}
+          </div>
+        )}
         <div className="demo-intro">
           <div>
             <div className="eyebrow">
@@ -614,8 +641,9 @@ export default function DemoConsole() {
                     ))}
                   </ol>
                   <small className="demo-muted">
-                    Durable local-disk state · optimistic versions prevent
-                    duplicate execution.
+                    {cap?.persistence === "ephemeral_sqlite"
+                      ? "Ephemeral local state · export completed reports before leaving."
+                      : "Durable local-disk state · optimistic versions prevent duplicate execution."}
                   </small>
                 </section>
                 <section className="demo-card">

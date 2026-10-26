@@ -16,8 +16,10 @@ Internal deadline: **October 30, 2026**. Official announced deadline: **November
 - [ ] Final truthful real-Meta demo recorded; verify recording, reports and links.
 - [x] Public repository visibility independently confirmed via GitHub.
 - [ ] Confirm authenticated submission form requirements and submit before official deadline.
-- [ ] Optional public HTTPS hosting verified under $0/no-card terms. No public URL is currently provisioned.
+- [ ] Required anonymous public HTTPS application URL verified under $0 terms and retained through November18,2026. No public URL is currently provisioned.
 
 Priority October27–28: access/alias/licensing confirmation and one bounded genuine smoke test if authorized. October29: actual-model evaluation and end-to-end rehearsal. October30: freeze verified build, record demo, check artifacts. If access remains blocked, explicitly report that the real-Meta competition requirement is unmet; never substitute rules/mock output.
 
 Phase4 adds the precise [owner activation/deployment/submission checklist](OWNER_ACTIONS.md), [deployment security audit](docs/DEPLOYMENT_SECURITY_AUDIT.md) and [implementation status](docs/PHASE4.md). Real inference and public HTTPS remain blocked; local fixture tests are not access verification.
+
+Latest deployment-only work: [Render setup](docs/HOSTING_AND_ACCESS.md), [judge accessibility](JUDGE_ACCESSIBILITY.md), [recording fallback](RECORDED_DEMO_FALLBACK.md) and [portable evidence](docs/submission/README.md). Free-tier cold starts, shared quotas,24h session retention and ephemeral filesystem loss must be disclosed. No guaranteed uptime or real Meta output is claimed.

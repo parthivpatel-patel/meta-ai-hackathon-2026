@@ -42,14 +42,11 @@ The command reserves a new file with mode `0600` before any network call and ref
 - [ ] Evaluate actual model proposals versus rules on a predeclared small scenario set within newly approved free limits. Record exact-set correctness, invalid outputs, abstentions, latency and provider usage; no model advantage is established yet.
 - [ ] Download JSON/HTML, replay independently, confirm recording readability/audio/timing and absence of credentials. Keep the three-minute narrative within the official format.
 
-## 5. Public HTTPS deployment — optional, still blocked
+## 5. Required public judge access through November18
 
-- [ ] Obtain a provider's **current** documented $0/no-card entitlement for this FastAPI/NumPy/SciPy container. HF Docker Spaces currently requires a paid plan; Modal standard use requires a payment method. Render/Cloudflare pages are network-blocked here. No suitable public host has been verified.
-- [ ] If a valid option exists, approve only required domains/account access through normal environment settings. Do not bypass proxy/TLS controls. This environment currently exposes no public HTTPS deployment capability or hosting credential.
-- [ ] Deploy the public-only launcher, one worker, exact `FORGE_DEMO_ALLOWED_HOSTS` JSON list including the actual ingress hostname and127.0.0.1 health host. No wildcard, owner token or inference key. Keep developer/Vite/private endpoints off public ingress.
-- [ ] Confirm TLS certificate, HTTPS redirect and appropriate HSTS at the ingress, restricted host ports, storage lifetime/backup, capacity/sleep behavior, access logs without secrets, and no external billing. Do not override the safe image entrypoint.
-- [ ] Run `uv run --frozen python -m forge.submission.audit --url https://YOUR-VERIFIED-HOST` from `backend`. It is read-only, verifies TLS, rejects redirects, and checks public readiness/headers/CORS/blocked developer routes. This does not certify the host's billing or replace security review.
-- [ ] Rehearse on the actual public URL, including a cold start, refresh, rate-limit recovery and report export. Local Docker alone does not prove public HTTPS availability.
+Follow [the Render owner setup](docs/HOSTING_AND_ACCESS.md) and [judge accessibility checklist](JUDGE_ACCESSIBILITY.md). This supersedes the earlier optional-hosting checkpoint. The free-only Blueprint is on `deployment/judge-access`; no public application URL is yet verified. Render account access and cloud network publication remain prerequisites. Do not add paid disks/databases, inference credentials, keep-alive jobs or a payment method. Public idle wake-up and ephemeral SQLite loss must be disclosed; export reports and retain the versioned evidence/recorded fallback. No current alternative is independently verified to have fewer limitations under the same budget.
+
+After deployment, provide the actual HTTPS URL for the existing external audit and anonymous browser test; preserve the service through November18. See [recorded fallback](RECORDED_DEMO_FALLBACK.md) and [prepared public evidence](docs/submission/README.md). Genuine Meta activation remains the separate guarded workflow above and must not be enabled on the public host.
 
 ## 6. Freeze and submit
 

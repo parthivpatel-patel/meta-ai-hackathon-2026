@@ -1,0 +1,52 @@
+{
+  "checked_utc": "2026-10-26T23:35:17.508766+00:00",
+  "sources": [
+    {
+      "source": "render-free",
+      "url": "https://render.com/docs/free",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "render-blueprint",
+      "url": "https://render.com/docs/blueprint-spec",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "render-deploy",
+      "url": "https://render.com/docs/deploys",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "koyeb-free",
+      "url": "https://www.koyeb.com/docs/reference/instances",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "koyeb-pricing",
+      "url": "https://www.koyeb.com/pricing",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "huggingface",
+      "url": "https://huggingface.co/docs/hub/spaces-overview",
+      "status": 200,
+      "bytes": 223299,
+      "sha256": "c0f29fbf96bea889017c944bcc6dd07c71ce9847be33fb42d24e7cd066b0f728"
+    },
+    {
+      "source": "railway",
+      "url": "https://docs.railway.com/reference/pricing/plans",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "cloudrun",
+      "url": "https://cloud.google.com/run/pricing",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "source": "azure",
+      "url": "https://azure.microsoft.com/en-us/pricing/details/app-service/linux/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}
