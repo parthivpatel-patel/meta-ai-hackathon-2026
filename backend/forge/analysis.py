@@ -1,10 +1,14 @@
 from math import isfinite
+
 import numpy as np
-from scipy.stats import median_abs_deviation
 from pydantic import BaseModel
+from scipy.stats import median_abs_deviation
+
 from .simulation import Measurement
 
 CHANNELS = ("temperature", "vibration", "pressure")
+
+
 class ChannelEvidence(BaseModel):
     channel: str
     unit: str
@@ -20,7 +24,9 @@ class ChannelEvidence(BaseModel):
     scores: list[float | None]
     anomaly_minutes: list[int]
 
+
 UNITS = {"temperature": "°C", "vibration": "mm/s RMS", "pressure": "bar"}
+
 
 def analyze(rows: list[Measurement]) -> list[ChannelEvidence]:
     if len(rows) < 30 or len(rows) > 1000:
@@ -38,11 +44,24 @@ def analyze(rows: list[Measurement]) -> list[ChannelEvidence]:
         observed = np.array([v for v in raw if v is not None], dtype=float)
         center = float(np.median(baseline))
         scale = max(float(median_abs_deviation(baseline, scale="normal")), 1e-6)
-        scores = [None if v is None else abs(v-center)/scale for v in raw]
-        result.append(ChannelEvidence(channel=channel, unit=UNITS[channel],
-            mean=float(observed.mean()), median=float(np.median(observed)),
-            std=float(observed.std()), minimum=float(observed.min()), maximum=float(observed.max()),
-            observed_count=len(observed), missing_count=len(rows)-len(observed),
-            baseline_median=center, baseline_scale=scale, scores=scores,
-            anomaly_minutes=[r.minute for r, s in zip(rows, scores) if s is not None and s > 6]))
+        scores = [None if v is None else abs(v - center) / scale for v in raw]
+        result.append(
+            ChannelEvidence(
+                channel=channel,
+                unit=UNITS[channel],
+                mean=float(observed.mean()),
+                median=float(np.median(observed)),
+                std=float(observed.std()),
+                minimum=float(observed.min()),
+                maximum=float(observed.max()),
+                observed_count=len(observed),
+                missing_count=len(rows) - len(observed),
+                baseline_median=center,
+                baseline_scale=scale,
+                scores=scores,
+                anomaly_minutes=[
+                    r.minute for r, s in zip(rows, scores) if s is not None and s > 6
+                ],
+            )
+        )
     return result
