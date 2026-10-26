@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import InvestigationWorkflow from "./InvestigationWorkflow";
 import {
   Activity,
   ArrowUpRight,
@@ -187,7 +188,7 @@ export default function App() {
         </nav>
         <div className="side-bottom">
           <div className="phase">
-            <span className="dot" /> PHASE 0 · FOUNDATION
+            <span className="dot" /> PHASE 1 · INVESTIGATION
           </div>
           <p>
             Built to question.
@@ -351,6 +352,7 @@ export default function App() {
                   ))}
                 </div>
               </section>
+              <InvestigationWorkflow scenario={scenario} />
               <div className="lower-grid">
                 <section className="panel" id="evidence">
                   <div className="panel-title">
@@ -454,7 +456,9 @@ export default function App() {
             <span>
               <Layers size={14} /> FORGE / Verifiable investigation systems
             </span>
-            <span>Phase 0 · No physical control or verified diagnosis</span>
+            <span>
+              Synthetic evidence only · No physical control or diagnosis
+            </span>
           </footer>
         </div>
       </main>

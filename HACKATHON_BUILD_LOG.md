@@ -21,3 +21,16 @@ Validation completed in the cloud instance:
 - Static credential-pattern scan and git whitespace check completed before commit; no credentials were found in project files.
 
  GitHub Actions execution is not claimed until a remote run is observed. No paid requests, Meta inference, or credential setup occurred. Screenshots and browser tooling used for local validation live under `/tmp` and are not application dependencies.
+
+
+## October 26, 2026 — Phase 1
+
+Created `feature/forge-phase-1` from exact Phase 0 baseline `e7f90e93570c06c685d526b4766b03cfa4f17629`; main was not merged or changed. Implemented only in this standalone repository.
+
+Added a narrow label-free summary interface, seven competing rules-based hypotheses, finite experiment registry, separate first-order relaxation experiment oracle with independent primary/witness sensors, stateful investigation routes, numerical verification/contradiction/abstention, optional typed claim rejection, portable report export/replay, a 480-case evaluator with baselines, responsive dashboard workflow, API/browser smoke scripts, and documentation. No new application dependencies, API keys, payment method, or inference requests were introduced.
+
+Backend checks: 51 passed (including all 26 Phase 0 tests), no failures/skips, one pre-existing dependency deprecation warning. Frontend: 6 passed (including all 3 Phase 0 tests), no failures/skips. Strict TypeScript and production build passed. Live-process API/report replay and four-scenario Chromium workflows at desktop/mobile sizes passed; screenshots are under `docs/evidence`.
+
+The first evaluation was rerun after correcting noise-factor scaling to multiply observational noise rather than add variance (especially important for factors below 1). The final published matrix reports 220 supported synthetic findings, 80 ABSTAIN, 180 INCONCLUSIVE; supported-finding precision 220/220, coverage 220/480, and experiment-selection accuracy 247/300. High-noise cases remain unresolved. Full per-case outputs and baseline false-positive/negative counts are committed; no industrial accuracy claim is made.
+
+Read official Meta model/license/use-policy/SDK documentation from Meta's GitHub organization. Meta documentation websites and GitHub Actions status lookup were blocked by current network policy. Official competition rules, eligible models, current free-access terms, and service data handling remain unverified; the owner was asked for the official rules URL. Meta remains explicitly disabled. Detailed sources and fingerprints are in `docs/META_INTEGRATION.md`.

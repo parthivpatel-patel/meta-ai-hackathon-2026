@@ -151,3 +151,9 @@ def analysis(body: AnalysisRequest):
 async def hypotheses(body: HypothesisRequest):
     settings = get_settings()
     return await run_inference(make_provider(settings), body, settings)
+
+
+# Registered after Phase 0 routes so /demo preserves its original contract.
+from .engine.routes import router as investigation_router
+
+app.include_router(investigation_router)

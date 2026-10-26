@@ -1,20 +1,45 @@
-# Evaluation plan
+# Evaluation method and measured Phase 1 results
 
-## Phase 0 acceptance checks
+## Blind boundary
 
-1. Install using `uv sync --project backend --frozen` and `npm ci --prefix frontend`.
-2. Run pytest for deterministic scenarios, seed variation, analytic mean/std/MAD references, constant baselines, missing values, insufficient baseline values, nonfinite data, ordering, API routes, configuration rejection, safe error/log handling, retries, timeout, and the Meta network gate.
-3. Run frontend Vitest for fetched evidence rendering and provenance labels, scenario requests, actionable error retry, and disconnected chart segments for missing samples.
-4. Run `npm run build` for strict TypeScript checking and production bundling.
-5. Start both services. Request every scenario through the Vite proxy and verify seed-42 flags: normal none; cooling_loss temperature 80–119; imbalance vibration 80–119; pressure_loss pressure 80–119.
-6. In a real browser at desktop and mobile widths, verify the data loads, three charts render, scenario transitions update evidence, and the page does not overflow horizontally or emit JavaScript errors.
+The experiment factory alone receives `CaseRecipe` (scenario, seed, noise factor, missingness, sensor bias, confounder). Candidate generation and automatic experiment selection accept only `BlindInput`: validated channel flag counts, maximum robust scores, coverage, and quality issues. The verifier accepts raw observed telemetry and raw experiment results, plus an optional typed proposal. It imports neither the generator nor the private oracle. No scenario label, seed, scenario-bearing identifier, or evaluator answer is passed to either inference boundary.
 
-Automated CI covers steps 1–4. The current-task live proxy and Chromium checks cover steps 5–6; they are not yet checked into CI as a browser suite. No Meta endpoint is called by any check. API tests run through FastAPI TestClient; this is distinct from the actual-process smoke checks.
+This is a tested software data-flow boundary in a trusted Python process, not a sandbox against malicious Python code. The operator can select a scenario in the demo UI, and the published evaluator output contains answer keys. The generator does not see those UI controls or evaluation outputs. This is not a private competition test set.
 
-## Phase 1 investigation evaluation
+## Fixed experiment and verification policy
 
-Create hidden-label synthetic cases spanning seeds, noise scales, missingness, sensor bias, operating-state changes, combinations, and near-threshold effects. Separate baseline/calibration, development, and holdout sets. Measure channel-level precision/recall, onset delay, false positives, hypothesis diversity, experiment discrimination, reproducibility, and correct abstention. Estimate confidence intervals across independent seeds rather than treating correlated samples as independent cases.
+Candidate set: one baseline-variability explanation plus process and sensor explanations for each of three channels. Automatic selection targets the most sustained flagged channel (at least 5 robust flags); otherwise it performs a reference check. Ties use maximum anomaly score. An operator may choose another allowlisted intervention before execution.
 
-Compare robust scoring against fixed thresholds and standard z-scores. For model-assisted work, compare mock, an eligible Meta model, and numerical-only baselines with the same evidence budget. Blind the inference input to scenario names and injected ground truth. Verify model eligibility, free access, provenance, model version, prompts, and usage before calling an endpoint.
+The independent experiment oracle uses 24 replicates and 24 steps of `x_next = x + 0.25 * (target - x)`. A synthetic process departure has normalized residual ±9. A matching intervention sets the target to 15% of that residual. Independent primary and witness noise has standard deviation `0.5 * noise_factor`; a sensor-bias case adds +10 only to the primary sensor. Confounded cases introduce departures outside the supported single-fault response model. This is a scripted counterfactual mechanism, not an independently validated physical twin.
 
-No industrial dataset benchmark, validated diagnosis accuracy, safety certification, real-world generalization, or model quality claim is established by Phase 0. Multimodal, experiment verification, contradictory evidence, and reproducible report evaluation remain unimplemented.
+The verifier recomputes 99% pointwise Student-t intervals. They are not simultaneous intervals, posterior cause probabilities, or a calibrated real-equipment confidence score. Support requires sustained telemetry flags, a matching intervention, witness departure outside ±4, reduction interval wholly above 3, and post-intervention primary/witness intervals within ±2, with baseline primary/witness agreement. Sensor support instead requires primary/witness separation above 4, a quiet witness before/after, and sustained primary departure. Normal support requires quiet primary and witness intervals in all channels and no sustained telemetry flags. Baseline/coverage failures produce ABSTAIN; ambiguity, unexplained channels, or insufficient effect produce INCONCLUSIVE. Physical-cause proposals are always REJECTED.
+
+## Reproducible case matrix
+
+Run `cd backend && uv run --frozen python -m forge.evaluate --output evaluation/results.json`.
+
+Seeds 100–119; four original scenarios × five profiles (clean, 15% missing, noise factor 6, 75% missing, confounded), plus three normal-process sensor-bias cases and one combined-fault case per seed: **480 cases**. Test/development examples use seeds 0, 1, and 42. Policies were fixed before this evaluation; the observation noise-scaling implementation was corrected and the entire matrix regenerated. Published cases are now available for inspection and must not be treated as permanently unseen data.
+
+Source of actual results: [results.json](backend/evaluation/results.json), including every case's inputs to the factory, expected answer, selected experiment, decision, finding, and dataset hash. The investigator never receives that answer-key file. Cases sharing seeds/profiles are correlated, so aggregate rates are descriptive and no independent-case confidence intervals are claimed.
+
+| Measurement | Actual result |
+|---|---:|
+| Supported synthetic findings | 220 / 480 (45.83% coverage) |
+| Precision among supported findings, including normal findings | 220 / 220 (100% on this synthetic matrix) |
+| Correct finding recall on supported-scope cases | 220 / 300 (73.33%) |
+| Experiment selection accuracy on eligible cases | 247 / 300 (82.33%) |
+| ABSTAIN | 80 |
+| INCONCLUSIVE | 180 |
+| Expected abstention/inconclusive on out-of-policy cases | 180 / 180 |
+| Additional abstentions on supported-scope cases | 80 |
+| Robust detector false-positive rate | 0 / 80 |
+| Robust detector false-negative rate | 113 / 400 (28.25%) |
+| Fixed-threshold baseline false-positive rate | 20 / 80 (25%) |
+| Fixed-threshold baseline false-negative rate | 71 / 400 (17.75%) |
+| Observational-only forced-finding baseline accuracy | 187 / 480 (38.96%) |
+
+For detection metrics, invalid/insufficient observations count as no detection, so false negatives include missing-data cases; verifier abstention is reported separately. A robust detection requires at least five flagged samples. The fixed baseline flags any post-baseline temperature >75 °C, vibration >3 mm/s, or pressure <5 bar. The observational-only baseline forces a process finding on the most flagged channel or normal, without experiments; it cannot distinguish sensor bias or safely abstain. Detection false-negative tradeoffs and low coverage are limitations, not suppressed failures.
+
+Clean, 15%-missing, and isolated sensor-bias cases produce the 220 accepted findings. All 80 high-noise cases are inconclusive. Missing75 produces 80 abstentions; confounded and combined faults produce 100 inconclusive cases. No real-world diagnostic precision, industrial safety, model quality, multimodal capability, or physical causality follows from these results.
+
+Automated numerical/API/security/frontend tests and reproducible browser commands are documented in [Phase 1 validation](docs/PHASE1_VALIDATION.md). Phase 2 should use new untouched seeds, realistic dependence, weaker and combined effects, and independent licensed data rather than tune to this published matrix.

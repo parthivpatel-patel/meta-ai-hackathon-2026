@@ -1,6 +1,6 @@
 # FORGE
 
-A verifiable multimodal AI investigation platform, starting with industrial equipment failure investigation. **Phase 0 is a synthetic-data foundation, not a verified diagnostic system.** No Meta inference is performed. Hypotheses are explicitly mocked and unverified.
+A verifiable multimodal AI investigation platform, starting with industrial equipment failure investigation. **Phase 1 implements a verified synthetic investigation workflow, not a physical diagnostic system.** No Meta inference is performed. Legacy Phase 0 suggestions are explicitly mocked. Phase 1 candidates are rules-based; conclusions are supported, rejected, inconclusive, or abstained under a synthetic evidence policy.
 
 ## Quick start
 
@@ -66,6 +66,36 @@ Default seed 42 produces no normal-case flags and exactly minutes 80–119 flagg
 
 Pydantic validates `FORGE_PROVIDER` (`mock`, default, or `meta`), `FORGE_META_ENDPOINT` (HTTPS required for Meta), `FORGE_MODEL_ID`, `FORGE_TIMEOUT_SECONDS` (0–60, exclusive zero), and `FORGE_RETRY_LIMIT` (0–3). Invalid settings fail startup. Meta mode requires an explicit non-mock model ID and endpoint but always returns a structured 503 for inference; no HTTP client is used by that adapter. Timeout and retry behavior are tested using local fake providers. No credentials are currently required or read. Do not configure paid inference.
 
+## Phase 1 investigation engine
+
+The dashboard includes a separate five-stage workflow: **observe → hypothesize → select → simulate → verify**. Click “Start investigation,” then advance each stage. Inspect seven competing candidates, choose an automatic or manual allowlisted intervention, inspect independent witness evidence, and verify the finding. Download portable JSON or readable HTML only after verification. Changing the demo scenario resets the current workflow view.
+
+The investigator receives telemetry summaries only; scenario names, recipes, seeds, and evaluation answers remain outside its inputs. Experiment outcomes come from a separate bounded relaxation simulator. A generator-independent verifier recomputes intervals and evidence quality, detects contradictions, rejects physical-cause proposals, and abstains when evidence is insufficient. An accepted finding is labeled **SUPPORTED_SYNTHETIC**, never proof about physical equipment. The existing `/demo`, `/analysis`, `/hypotheses`, `/health`, and `/model-status` contracts are preserved.
+
+New endpoints:
+
+| Method | Path | Purpose |
+|---|---|---|
+| POST | `/api/v1/investigations` | Factory creates a synthetic case from scenario/seed/perturbation settings; returns an opaque ID and blind observations |
+| GET | `/api/v1/investigations/{id}` | Current process-local snapshot |
+| POST | `…/{id}/hypotheses` | Generate rules-based candidates and competing predictions |
+| POST | `…/{id}/selection` | `{}` for automatic selection; or an allowlisted `kind` |
+| POST | `…/{id}/experiments` | Run the bounded synthetic intervention |
+| POST | `…/{id}/verification` | Recompute support/contradiction; optional `{ "proposal": { "hypothesis_id": "normal", "scope": "synthetic_mechanism" } }` tests a proposed claim |
+| GET | `…/{id}/report.json` / `…/{id}/report.html` | Download completed evidence and reproduction instructions |
+
+Out-of-order actions return 409. Immediate retries of an identical completed action are idempotent; changing a committed choice requires a new investigation. Sessions expire after one hour and the store holds at most 64 cases. Sessions disappear on restart; exported reports remain independently replayable. The dashboard runs the default unperturbed seed-42 cases; missing/noisy/confounded cases are available through the API and evaluation harness.
+
+```bash
+# Both services running, from repository root:
+python scripts/api-smoke.py
+cd backend
+UV_CACHE_DIR=/tmp/forge-uv-cache uv run --frozen python -m forge.replay /tmp/forge-phase1-report.json
+UV_CACHE_DIR=/tmp/forge-uv-cache uv run --frozen python -m forge.evaluate --output /tmp/forge-evaluation.json
+```
+
+See [Phase 1 validation](docs/PHASE1_VALIDATION.md) for actual test results and browser reproduction, [evaluation results](EVALUATION_PLAN.md) for the 480-case matrix and measured limitations, and [Meta integration readiness](docs/META_INTEGRATION.md) for official-source findings and unresolved eligibility/free-access questions.
+
 ## Scope and next steps
 
-No experiment execution, physical verification, multimodal uploads, report export, persistent investigations, authentication, live sensor integration, or eligible Meta model integration yet. Competition model eligibility must be checked against official rules before integration. See [ARCHITECTURE.md](ARCHITECTURE.md), [EVALUATION_PLAN.md](EVALUATION_PLAN.md), [SECURITY.md](SECURITY.md), [DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md), and [HACKATHON_BUILD_LOG.md](HACKATHON_BUILD_LOG.md).
+No physical verification, multimodal uploads, durable investigation storage, authentication, live sensor integration, or eligible Meta model integration yet. Experiments and reports are synthetic and bounded; this is development software, not production equipment software. Competition model eligibility must be checked against official rules before integration. See [ARCHITECTURE.md](ARCHITECTURE.md), [EVALUATION_PLAN.md](EVALUATION_PLAN.md), [SECURITY.md](SECURITY.md), [DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md), and [HACKATHON_BUILD_LOG.md](HACKATHON_BUILD_LOG.md).

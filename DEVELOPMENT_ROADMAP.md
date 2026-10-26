@@ -22,3 +22,17 @@ Verify official eligible model rules and obtain a free inference route without a
 ## Subsequent scope
 
 Add documented multimodal inputs, persistent investigations, authentication, deployment hardening, report replay, operating-state transitions, validated physical models, and licensed independent datasets as time permits. Prioritize a convincing reproducible demonstration of tested hypotheses over breadth. Do not claim incomplete features in the submission or demo.
+
+
+## Phase 1 checkpoint — implemented October 26, 2026
+
+Bounded synthetic interventions, competing process/sensor hypotheses, label-free investigator inputs, generator-independent verification, explicit rejection/inconclusive/abstention, 480-case evaluation with baselines, stepwise dashboard, portable JSON/HTML exports, and offline evidence replay are implemented. Published measurements and limitations replace desired-performance claims; see EVALUATION_PLAN.md. No Meta inference, production deployment, or physical verification has occurred.
+
+## Phase 2 priorities
+
+1. Secure a documented competition-eligible inference route with zero out-of-pocket cost and no payment method; verify rules, authentication, data terms, and spending bounds before enabling it.
+2. Validate a stronger simulation/experiment model, pre-register evaluation on new seeds, and improve high-noise detection and coverage without sacrificing correct abstention. Model dependent sensors and multiple faults explicitly.
+3. Introduce bounded sequential experiment selection and information-gain comparisons, including sensor recalibration and independent confirmation experiments; preserve contradictions across rounds.
+4. Add licensed multimodal evidence and provenance, keeping model claims separate from numerical verification.
+5. Add durable replayable investigation storage, authenticated access, request limits, and production threat modeling before any hosted multi-user use.
+6. Refine report narratives and a reproducible hackathon demonstration grounded in actual measurements. Confirm the official rules and submission date before making competition claims.

@@ -31,3 +31,32 @@ API errors use `{error: {code, message, request_id}}`; validation errors do not 
 ## Development and deployment
 
 Use the existing checkout in an isolated cloud task. Local development requires two processes; dependency files and build outputs persist, live processes do not. CI runs locked backend and frontend installs, pytest, Vitest, and a TypeScript/Vite production build. Production hosting, authentication, persistence, request limits, and lifecycle monitoring remain future work. No public deployment is configured.
+
+
+## Phase 1 additions
+
+`forge/engine/contracts.py` defines versioned typed records and the finite experiment registry. `oracle.py` is the only private synthetic case/experiment boundary. `hypotheses.py` receives `BlindInput`, never an oracle or recipe. `investigation.py` controls explicit state transitions and passes raw evidence to `verifier.py`. The verifier independently computes telemetry quality, paired t-intervals, support/contradiction, proposal rejection, and abstention. It does not import hypothesis generation or the private oracle. `routes.py` exposes a bounded, locked, process-local store and stepwise APIs; the original Phase 0 routes remain unchanged.
+
+```mermaid
+flowchart LR
+  Factory[Private case recipe] --> Oracle[Separate relaxation simulator]
+  Factory --> Telemetry[Observed measurements]
+  Telemetry --> Blind[Label-free summaries]
+  Blind --> Candidates[Rules-based candidates / predictions]
+  Blind --> Selector[Bounded experiment selection]
+  Selector --> Oracle
+  Oracle --> Raw[Raw paired primary / witness measurements]
+  Telemetry --> Verifier[Independent numerical verifier]
+  Raw --> Verifier
+  Proposal[Optional typed proposal] --> Verifier
+  Verifier --> Finding[Support / reject / inconclusive / abstain]
+  Finding --> Reports[Portable JSON + escaped HTML / offline replay]
+```
+
+`reporting.py` normalizes ephemeral session IDs to deterministic evidence-derived run IDs and serializes raw measurements, hypotheses, interventions, results, references, verification, limitations, and reproduction instructions. `forge.replay` recomputes evidence offline with no inference or network access. Digests detect consistency errors; they are not signatures or a sensor-authenticity guarantee.
+
+`forge.evaluate` alone holds answer labels. It feeds only observations into the investigation boundary, and compares final findings/selection against hidden answers after completion. Its published output is evaluation evidence, not inference input. This module-level boundary is tested but is not a hostile-code sandbox.
+
+The frontend adds `InvestigationWorkflow.tsx` beside the preserved Phase 0 telemetry and mock-suggestion panels. It starts only on user action, advances one backend stage at a time, displays uncertainty and provenance, and exports the backend report. Rules-based and mock/model statuses remain explicit. Process-local sessions, simulation assumptions, and the single-fault verifier limit current applicability; see the evaluation report.
+
+The earlier Phase 0 scope description above is historical: Phase 1 now implements bounded synthetic experiments and export/replay, while physical verification, production hosting, persistence, and eligible Meta integration remain incomplete.

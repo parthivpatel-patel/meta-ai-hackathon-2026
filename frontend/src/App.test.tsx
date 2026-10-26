@@ -55,19 +55,17 @@ afterEach(() => {
 });
 describe("dashboard", () => {
   it("loads backend evidence and labels simulation and mock inference", async () => {
-    const fetchMock = vi
-      .fn()
-      .mockImplementation((url: string) =>
-        Promise.resolve({
-          ok: true,
-          json: () =>
-            Promise.resolve(
-              url.includes("model-status")
-                ? { provider: "mock", status: "mock_ready" }
-                : data,
-            ),
-        }),
-      );
+    const fetchMock = vi.fn().mockImplementation((url: string) =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve(
+            url.includes("model-status")
+              ? { provider: "mock", status: "mock_ready" }
+              : data,
+          ),
+      }),
+    );
     vi.stubGlobal("fetch", fetchMock);
     render(<App />);
     expect(screen.getByRole("status")).toBeInTheDocument();
