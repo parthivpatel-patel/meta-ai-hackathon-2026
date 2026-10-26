@@ -36,3 +36,10 @@ Bounded synthetic interventions, competing process/sensor hypotheses, label-free
 4. Add licensed multimodal evidence and provenance, keeping model claims separate from numerical verification.
 5. Add durable replayable investigation storage, authenticated access, request limits, and production threat modeling before any hosted multi-user use.
 6. Refine report narratives and a reproducible hackathon demonstration grounded in actual measurements. Confirm the official rules and submission date before making competition claims.
+
+
+## Phase 2 checkpoint
+
+Implemented bounded provider transport and structured proposals, independent per-proposal verification, calibrated thermal/waveform ingestion, noisy/multi-fault cases, familywise interval policy, v2 dashboard/reports/replay, 280-case new evaluation, end-to-end fixture/browser coverage and request hardening. The new matrix accepts 212/280 complete synthetic findings; weak/noisy and some same-channel mixtures remain unresolved. No real Meta model inference has occurred.
+
+By October 27, confirm the card-free Baseten route, event alias and license and obtain secure credentials. By October 28, run and evaluate an explicitly authorized eligible-model smoke/demo with capped zero-cost access. October 29: stabilize the demonstration, regressions and reproducible exports. October 30: internal freeze. See docs/PHASE2.md and docs/META_INTEGRATION.md for blockers and actual metrics. No paid route is authorized.

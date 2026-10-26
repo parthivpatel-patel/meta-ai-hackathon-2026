@@ -43,3 +43,8 @@ For detection metrics, invalid/insufficient observations count as no detection, 
 Clean, 15%-missing, and isolated sensor-bias cases produce the 220 accepted findings. All 80 high-noise cases are inconclusive. Missing75 produces 80 abstentions; confounded and combined faults produce 100 inconclusive cases. No real-world diagnostic precision, industrial safety, model quality, multimodal capability, or physical causality follows from these results.
 
 Automated numerical/API/security/frontend tests and reproducible browser commands are documented in [Phase 1 validation](docs/PHASE1_VALIDATION.md). Phase 2 should use new untouched seeds, realistic dependence, weaker and combined effects, and independent licensed data rather than tune to this published matrix.
+
+
+## Phase 2 measured extension
+
+The new published matrix uses seeds 7000–7019 and 14 new composite/ramp/late/noisy/missing profiles, 280 cases total. Accepted complete-set precision is 212/212, coverage 212/280, answerable exact-set recall 212/240, detector FPR 0/20 and FNR 44/260; 20 cases abstain and 48 are inconclusive. All 40 out-of-policy cases abstain or remain inconclusive. Matched-data v1 complete-set precision is 60/66 and coverage 66/280. V2 expends 16× the raw experimental sample budget; this is not equal-compute evidence of algorithmic superiority. No live model outputs were evaluated. Method, profile breakdown, scripts and limitations are in [docs/PHASE2.md](docs/PHASE2.md); raw records are in [phase2-results.json](backend/evaluation/phase2-results.json).

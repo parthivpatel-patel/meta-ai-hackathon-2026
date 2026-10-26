@@ -34,3 +34,12 @@ The verifier recomputes raw evidence and digests, enforces dataset binding and r
 HTML exports escape all dynamic content, contain no JavaScript or remote resources, force attachment download, disable caching, and set a restrictive Content Security Policy. The JSON replay CLI caps input at 2 MB and parses strict schemas; it never evaluates embedded instructions or arbitrary code. Report version/source, canonical predictions/selection, summaries, references, and decisions are recomputed or checked.
 
 Meta license/use-policy and hosted-service data requirements remain an integration prerequisite documented in `docs/META_INTEGRATION.md`. Current synthetic experiments must not be presented as proof of physical-world causality or used to operate industrial equipment.
+
+
+## Phase 2 hardening
+
+The whole API now prebuffers at most 1 MiB per request, including chunked bodies, with a 15-second read deadline. V2 assets are bounded numerical arrays; no URL fetching, file paths, pickle, SVG execution, image decompression, or arbitrary code is supported. Thermal and waveform provenance is declared, not authenticated.
+
+The new transport requires exact reviewed HTTPS URLs/model IDs, explicit opt-in and free-access attestation, a present secret and a positive request budget. It preserves TLS verification and the environment proxy, disables redirects, caps response/input sizes and retries, rejects compressed/incomplete/tool-bearing output and credential echoes, checks returned model identity and validates a strict schema. Unknown Fireworks/event aliases are rejected until documented. No key or endpoint is accepted from an API request. Errors omit raw provider content and credentials. These controls bound requests, not financial liability; provider no-card/budget terms must be confirmed separately.
+
+Model suggestions are untrusted and independently assessed. Replay checks canonical metadata, sources, asset features, selection, raw evidence and decisions. HTML escapes all data and retains a restrictive CSP. Tests exercise SSRF-like configuration, malformed/oversized responses, timeout budgets, physical-scope outputs, markup injection, altered reports and chunked oversized uploads. No real endpoint was invoked by security tests. Authentication, persistent multi-user isolation and production exposure remain outside this checkpoint.

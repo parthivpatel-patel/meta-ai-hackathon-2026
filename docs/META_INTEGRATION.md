@@ -1,60 +1,50 @@
-# Meta integration readiness — October 26, 2026
+# Meta model access — verified follow-up, October 26, 2026
 
-**Status: disabled. No Meta inference has been performed.** Rules-based Phase 1 hypotheses and legacy Phase 0 mock suggestions are labeled separately. No endpoint, key, SDK, payment method, or paid inference request was added.
+**No real inference calls were made. No payment method, account signup, or paid deployment was initiated.** Configuration has no credentials and remains disabled. A secure adapter is implemented and tested with explicitly labeled local HTTP fixtures; these are not real Meta output.
 
-## Verified from official public sources
+## Official sources now accessible
 
-Read-only documentation retrieval succeeded from Meta's official GitHub organization:
+The published network policy permits the approved documentation sites. Public source retrieval succeeded:
 
-1. [Llama model repository](https://github.com/meta-llama/llama-models/blob/main/README.md): lists Llama families, including Llama 4 Scout and Maverick, model cards, licenses, download and acceptance requirements. Its published Scout example requires substantial GPU memory (80 GB for its Int4 example); this cloud CPU environment is not a verified local hosting route for that model.
-2. [Official Llama Python API SDK](https://github.com/meta-llama/llama-api-python/blob/main/README.md): documents API-key authentication via `LLAMA_API_KEY`, asynchronous calls, timeout/retry features, and a link to Meta's API documentation. Its [client implementation](https://github.com/meta-llama/llama-api-python/blob/main/src/llama_api_client/_client.py) specifies `https://api.llama.com/v1` as its default. This is a documented SDK URL, not a verified available inference endpoint for this participant; it was not called or configured in FORGE.
-3. [Llama 4 Community License](https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE): grants conditional royalty-free model rights, requires applicable attribution/license notices when distributing relevant materials or products, incorporates its acceptable-use policy, and has additional large-scale commercial terms. A model license is not a hosted-inference free-tier commitment or a hackathon eligibility determination. FORGE does not claim to be built with Llama yet.
-4. [Llama 4 acceptable-use policy](https://github.com/meta-llama/llama-models/blob/main/models/llama4/USE_POLICY.md): includes privacy/personal-information restrictions and restrictions on activities presenting risk of death or bodily harm, including operation of critical infrastructure or heavy machinery. The current software runs synthetic offline investigations with no equipment control; future operational use must be reviewed against the applicable model and service terms.
-
-Retrieved source SHA-256 fingerprints (raw main-branch documents, which may change later):
-
-| Source | SHA-256 |
+| Source | Verified finding |
 |---|---|
-| Model README | `0ac5f064caca753d78aa286ca382cf7e819b54b1f90edca9a905786b2aac238e` |
-| SDK README | `d953bd3863f13c82254f4a69f6d403e7a0af7f3704328a841ba3cc8811c97c4b` |
-| Llama 4 license | `6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f` |
-| Use policy | `bbf009b29f1dc413c2b3c9abb12637b0cdffa350cd0a3bd6eba89b270fc9e83f` |
+| [Official event](https://cerebralvalley.ai/e/meta-ai-developer-hackathon) | Use Muse Spark series, Muse Wonder, Muse Image and SAM 3.1 through Meta Model API or run Meta open weights; Push the Frontier includes manufacturing/physical systems. Lists Baseten $100 credits + 2M TPM, Modal $100 credits, Fireworks $25 credits **for selected participants**. Lists November 4, 9 PM Eastern submission, subject to updates. |
+| [Participant guide](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details) | Returns an application shell, not the guide. Public client code wraps details in authentication and approved-attendee boundaries. No attempt to bypass them. Event-specific `meta-models/muse-spark-open-1026`, public-repository and during-event-work clauses remain owner-reported pending authenticated confirmation. |
+| [Meta model site](https://dev.meta.ai/models/muse-spark-open/) and [model docs](https://dev.meta.ai/docs/muse-spark-open/) | Muse Spark Open is Meta's open-weight model; Baseten, Fireworks and Modal are among its inference launch platforms. Public event open-weight allowance supports this family in principle; exact event alias must still be checked. |
+| [Meta quickstart](https://dev.meta.ai/docs/quickstart), [authentication](https://dev.meta.ai/docs/authentication), [pricing](https://dev.meta.ai/docs/pricing-rate-limits) | Documents `https://api.meta.ai/v1`, bearer `MODEL_API_KEY`, and current Muse Spark IDs. Standard content is not used to train Meta models; Contributor variants permit training on submitted content and are discounted, not free. Owner reports the promotional-credit account requires a payment method; this was not bypassed or tested with inference. |
 
-## Not verified / blockers
+The earlier Llama documentation review is historical and does **not** establish event eligibility for a particular Llama version. No placeholder endpoint or model identifier has been invented.
 
-- The owner supplied the official event and participant-guide URLs in a follow-up. Direct retrieval was denied by the proxy; event-specific model eligibility and terms therefore remain independently unverified. See the follow-up record below.
-- Access to `llama.developer.meta.com` and `www.llama.com` was denied by the cloud proxy with HTTP 403. This establishes a network-policy blocker for those documentation pages, not that the provider service is down.
-- Current participant access, model catalog, free-tier/sponsorship amount, payment-method requirement, quotas, regional restrictions, data retention/training policy, and service-specific data-handling terms remain unverified. The owner previously reported promotional credits but a payment-method prerequisite; no attempt was made to bypass it.
-- API-key authentication is documented, but no new key is needed for current functionality. Credentials were not requested, read, or added.
+## Card-free route comparison
 
-## Conditions before enabling a real provider
+| Provider | Evidence | Decision under $0/no-card constraint |
+|---|---|---|
+| **Baseten** | [Billing](https://docs.baseten.co/organization/billing): new-workspace credits apply before charging; when credits run out and no payment method exists, models are deactivated. [Pricing](https://www.baseten.co/pricing/) also advertises starting credits. Event advertises $100 for selected participants. | **Fastest documented candidate**, conditional on owner activation/remaining credits and actual model access. Use hosted Model APIs, not billable GPU deployment/training. No account-specific entitlement or request has been verified. |
+| **Modal** | [Billing](https://modal.com/docs/guide/billing) explicitly requires a payment method to use Modal. [Pricing](https://modal.com/pricing) says Starter $30 applies to compute, not Shared Endpoints; those charge from first token (effective September 1, 2026). Event advertises $100 credits. | Standard onboarding does not meet no-card constraint. An organizer-confirmed event exception would be required; not verified. Do not mistake compute credits for free endpoint tokens. |
+| **Fireworks** | [Pricing](https://fireworks.ai/pricing) describes adding a payment method to buy serverless credits. Event advertises $25 for selected participants. Its Muse Glimmer 30B SFT promotion says no card through November 30, but this is **training**, not proof of free inference. | Event-specific card-free inference redemption remains unverified. Do not infer free inference from the training promotion. |
 
-Obtain the official rules and a documented, authorized free-access route without a payment method. Confirm model eligibility, current service terms and usage limits, data handling, and model identity. Use synthetic inputs only. Then separately authorize a bounded smoke test and implement an allowlisted HTTPS transport with secret injection, timeout/retry/size limits, output-schema validation, provenance, and no silent fallback. Retain the hard-disabled state until those requirements are met.
+Baseten's default budget is **notification only**. Its billing docs say enabling **Enforce budget** rejects Model API requests at the configured spend; this does not stop dedicated deployments or training. Do not rely on a notification budget or this application's request counter as proof of zero charges. Confirm no payment method, active credits, Model API access and enforced stopping behavior before authorizing one bounded request. We did not register an account, redeem credits, add payment information, or send messages to organizers/providers.
 
+## Documented model identifiers and endpoints
 
-## Follow-up: official event links and card-free research
-
-The owner supplied these sources:
-
-- [Event and registration](https://cerebralvalley.ai/e/meta-ai-developer-hackathon)
-- [Participant guide, rules, and technical resources](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details)
-- [Meta Model API](https://dev.meta.ai/)
-
-**Participant-reported, not independently verified:** the guide permits open-weight models; identifies Muse Spark series, Muse Wonder, Muse Image, Muse Voice Transcribe, SAM 3.1, Muse Glimmer, and Muse Spark Open; names Baseten, Modal, and Fireworks as inference partners; and specifies `meta-models/muse-spark-open-1026` for Baseten. The owner reports a public-repository requirement, work developed during the event, the Build for Your World / Push the Frontier tracks, and a November 4, 2026, 9 PM Eastern submission deadline. FORGE targets Push the Frontier with an internal October 30 deadline. These claims are recorded faithfully but not promoted to verified competition findings while the guide is inaccessible. The prior Llama documentation review does not establish that any particular Llama version is eligible for this event.
-
-Read-only GET attempts to the event, guide, Meta site, and the official partner pages below all failed with `Tunnel connection failed: 403 Forbidden`. This happened before the destination page could be retrieved; it is not evidence of account eligibility, service outage, or a credit-card requirement.
-
-| Official source attempted | Verified outcome |
+| Platform | Independently documented identifier / endpoint |
 |---|---|
-| `cerebralvalley.ai/e/meta-ai-developer-hackathon` | Proxy denied access |
-| `cerebralvalley.ai/e/meta-ai-developer-hackathon/details` | Proxy denied access |
-| `dev.meta.ai` | Proxy denied access |
-| `www.baseten.co/pricing/` | Proxy denied access |
-| `modal.com/pricing` | Proxy denied access |
-| `fireworks.ai/pricing` | Proxy denied access |
+| Baseten [Muse Spark Open library](https://www.baseten.co/library/muse-spark-open/) | `meta-models/muse-spark-open`; base `https://inference.baseten.co/v1`, chat path `/chat/completions`, API key authentication. The event-specific `…-1026` alias was supplied by the owner but not independently accessible in the guide. The code registry accepts only the public documented alias until the event alias is checked. |
+| Direct Meta | `muse-spark-1.3`, `muse-spark-1.2`, `muse-spark-1.1`; `https://api.meta.ai/v1/chat/completions` documented by authentication/quickstart. Contributor variants are not included in the application's reviewed registry. No direct Meta account access was verified. |
+| Fireworks [quickstart](https://docs.fireworks.ai/getting-started/quickstart) and [pricing](https://docs.fireworks.ai/serverless/pricing) | `https://api.fireworks.ai/inference/v1/chat/completions`; pricing lists Muse Spark Open and a model-page link, but its exact API identifier was not independently retrieved. The adapter's Fireworks model registry stays closed rather than guessing a canonical ID from a UI slug. |
+| Local open weights [Meta download guide](https://dev.meta.ai/docs/muse-spark-open/get-the-model) | `meta-models/Muse-Spark-Open-816B-A42B` (~1.65 TB BF16), `meta-models/Muse-Spark-Open-816B-A42B-NVFP4` (~537 GB weights), with documented multi-B300 GPU recipes. No weights downloaded; not a viable fast CPU route for this environment. |
 
-Official GitHub documentation was accessible: [Baseten Truss](https://github.com/basetenlabs/truss/blob/main/README.md), [Modal client](https://github.com/modal-labs/modal-client/blob/main/README.md), and [Fireworks cookbook](https://github.com/fw-ai/cookbook/blob/main/README.md). These establish official project/documentation resources; the retrieved READMEs do **not** establish current event model availability, participant sponsorship, card-free onboarding, inference quotas, or service data-retention terms. No free/card-free partner recommendation is verified yet.
+## License and data handling
 
-A network-settings draft adds only documentation/research hosts: `cerebralvalley.ai`, `dev.meta.ai`, `www.baseten.co`, `docs.baseten.co`, `modal.com`, `fireworks.ai`, `docs.fireworks.ai`. Existing package-manager presets are preserved. Saving a draft does not apply it to the current runtime; review/save it in environment settings, then publish the updated environment. Additional redirect or documentation hosts, if required, must be diagnosed rather than bypassing the proxy. No inference destination, secret binding, account signup, promotional redemption, or payment method was configured.
+Meta's Spark Open docs identify the **Muse Model License** and **Acceptable Use Policy**, and the download guide requires accepting licensing terms. They link [LICENSE.md](https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md) and [USE_POLICY.md](https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/USE_POLICY.md). Direct retrieval from that Hugging Face host was denied by the proxy; full grant, attribution, redistribution and use restrictions therefore remain unverified here. Do not apply Llama license terms to Muse or claim unconditional permission. Review the actual Muse terms before adoption/distribution.
 
-After access is applied, retry the official guide and current service terms. Confirm the exact eligible model, participant-specific card-free offer, quotas/expiration, authentication, data handling, and repository/publication requirements. Check public repository visibility through an authorized metadata read before claiming it is public; successful authenticated Git operations alone do not prove visibility. Preserve the existing mock/rules-based development path until a separately authorized zero-cost inference test is possible. Never represent mock or rules-based output as real Meta output in a submission.
+[Baseten security](https://docs.baseten.co/observability/security) states synchronous inference zero retention by default; async inputs can remain queued up to 72 hours. [Fireworks data handling](https://docs.fireworks.ai/guides/security_compliance/data_handling) describes no persistent prompt/generation storage for open models by default, volatile prompt caching, and metadata logging; Responses API `store=True` retains conversation data for 30 days. The implemented adapter uses synchronous chat completions, not Responses or asynchronous jobs. [Meta pricing](https://dev.meta.ai/docs/pricing-rate-limits) distinguishes Standard (not used for training) and Contributor (training permission) modes. Only synthetic summaries/features would be sent by this checkpoint; no actual sensor/customer data is uploaded externally.
+
+## Required next actions
+
+1. Owner: sign in to the approved-attendee guide and verify the exact eligible model alias, license and detailed rules. Do not submit mock/rules-based results as Meta inference. Verify repository visibility separately; authenticated Git access does not prove it is public.
+2. Owner: obtain/activate Baseten starting or participant credits **without any payment method**. Verify balance, Model API access, no-card stopping behavior and enforceable limits; stop if payment information is required. No card is requested.
+3. If that route is usable, enter `FORGE_INFERENCE_API_KEY` securely in environment settings, scoped to `inference.baseten.co`; never send its value in chat. The optional requirement is saved for the recommended route. Apply the network/secret settings and publish as needed. Existing metadata and process-name presence checks found no usable key.
+4. Only after zero-cost access and an exact model ID are confirmed, explicitly authorize a one-request synthetic smoke test and enable the transport with a request budget of one. It is disabled by default even when a key exists. The application cap resets on restart and cannot guarantee provider billing behavior.
+
+Research-domain additions for owner review include the actual linked model/license/account pages and GitHub metadata: `huggingface.co`, `app.baseten.co`, `app.fireworks.ai`, `api.github.com`. The secret binding adds `inference.baseten.co`. Current GitHub Actions status lookup is blocked at `api.github.com`; local CI-equivalent checks are recorded separately. Saving a draft does not apply it, prove account readiness, or initiate inference.

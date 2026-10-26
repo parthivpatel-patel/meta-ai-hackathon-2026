@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import InvestigationWorkflow from "./InvestigationWorkflow";
+import Phase2Investigation from "./Phase2Investigation";
 import {
   Activity,
   ArrowUpRight,
@@ -353,6 +354,7 @@ export default function App() {
                 </div>
               </section>
               <InvestigationWorkflow scenario={scenario} />
+              <Phase2Investigation />
               <div className="lower-grid">
                 <section className="panel" id="evidence">
                   <div className="panel-title">

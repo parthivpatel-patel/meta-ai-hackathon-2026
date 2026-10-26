@@ -24,6 +24,9 @@ if not logger.handlers:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     get_settings()
+    from .phase2.inference import get_provider
+
+    get_provider().status()  # Validate configuration only; never probes a remote endpoint.
     yield
 
 
@@ -157,3 +160,9 @@ async def hypotheses(body: HypothesisRequest):
 from .engine.routes import router as investigation_router
 
 app.include_router(investigation_router)
+
+from .phase2.routes import router as phase2_router
+from .body_limit import BodyLimitMiddleware
+
+app.include_router(phase2_router)
+app.add_middleware(BodyLimitMiddleware)

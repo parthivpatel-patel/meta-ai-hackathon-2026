@@ -99,3 +99,10 @@ See [Phase 1 validation](docs/PHASE1_VALIDATION.md) for actual test results and 
 ## Scope and next steps
 
 No physical verification, multimodal uploads, durable investigation storage, authentication, live sensor integration, or eligible Meta model integration yet. Experiments and reports are synthetic and bounded; this is development software, not production equipment software. Competition model eligibility must be checked against official rules before integration. See [ARCHITECTURE.md](ARCHITECTURE.md), [EVALUATION_PLAN.md](EVALUATION_PLAN.md), [SECURITY.md](SECURITY.md), [DEVELOPMENT_ROADMAP.md](DEVELOPMENT_ROADMAP.md), and [HACKATHON_BUILD_LOG.md](HACKATHON_BUILD_LOG.md).
+
+
+## Phase 2: multimodal and multi-fault lab
+
+The dashboard now has a separate Phase 2 panel for noisy, simultaneous process/sensor faults and missing-data cases. Attach the explicit synthetic thermal/waveform sample or upload bounded evidence JSON, run the four-intervention investigation, inspect independent verification and source labels, then save JSON/HTML. General photos/audio/video and physical diagnoses are not implemented.
+
+New `/api/v2` endpoints provide evidence ingestion, a gated provider adapter, investigations, reports and offline replay. All `/api/v1` behavior remains intact. Real inference is disabled by default; even a supplied key does not enable it. A failed model call never silently falls back to mock/rules output. See [Phase 2 implementation and validation](docs/PHASE2.md) and [verified access research](docs/META_INTEGRATION.md). No new runtime dependencies are required; the frozen installation/startup commands above still apply.

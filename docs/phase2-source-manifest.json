@@ -1,0 +1,100 @@
+[
+  {
+    "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+    "retrieved_date": "2026-10-26",
+    "sha256": "370f22982bb6c9679c364e7640dd32793309a03f872bdf02ee04f0486ac4b6da",
+    "bytes": 214849,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
+    "retrieved_date": "2026-10-26",
+    "sha256": "d55b97b017e26995cd7fd6948efb8a4d095291339d813a75166cfe97b06246b9",
+    "bytes": 201575,
+    "status": "shell_only_authentication_required"
+  },
+  {
+    "url": "https://dev.meta.ai/docs/authentication",
+    "retrieved_date": "2026-10-26",
+    "sha256": "2ab52ab4da0169cff5d7afc4e9bf5606a175df1547793be1822ab54ba96426cc",
+    "bytes": 140551,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://dev.meta.ai/docs/pricing-rate-limits",
+    "retrieved_date": "2026-10-26",
+    "sha256": "5747b88bb129269939073e408682969838e798a9e22c37a4068c641650137571",
+    "bytes": 197510,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://dev.meta.ai/docs/muse-spark-open/get-the-model",
+    "retrieved_date": "2026-10-26",
+    "sha256": "cb60b05c3d373de92d9d61a9b5ecb9f02d795344f003e43705aaf5351627c9d2",
+    "bytes": 163570,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://dev.meta.ai/docs/muse-spark-open/",
+    "retrieved_date": "2026-10-26",
+    "sha256": "a7c18444c7847a45e73db8bb8977b4227ade7fe03adb4565d94ecb4b8cfbc7ba",
+    "bytes": 146041,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://www.baseten.co/library/muse-spark-open/",
+    "retrieved_date": "2026-10-26",
+    "sha256": "6174249e01b8fbd477b101e65b7867678ff3149f0d0b665229ce6d275d33bb04",
+    "bytes": 327599,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://docs.baseten.co/organization/billing",
+    "retrieved_date": "2026-10-26",
+    "sha256": "f805f4fad6800cebd08aa6383a472f5661407d5a1712962cbc126fcdfe37ccc5",
+    "bytes": 481083,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://docs.baseten.co/observability/security",
+    "retrieved_date": "2026-10-26",
+    "sha256": "3d6f6779ecd7fac1d40b6cf5491c14c2fd28bf3eb9ab1873ca3efce811ab2132",
+    "bytes": 404590,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://modal.com/docs/guide/billing",
+    "retrieved_date": "2026-10-26",
+    "sha256": "550901c9704027df71a15c106c71e600350e203f206faaa438ebbc7b9deafe1b",
+    "bytes": 59055,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://modal.com/pricing",
+    "retrieved_date": "2026-10-26",
+    "sha256": "f7767c863b609636a92a9047ebae7f3bb4cbe24427311964393b89a30bbe7867",
+    "bytes": 323762,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://fireworks.ai/pricing",
+    "retrieved_date": "2026-10-26",
+    "sha256": "7bcfde6555a21a6f2b4c5fadf550307122ed383f7d95834c0660bce6aa35112f",
+    "bytes": 330992,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://docs.fireworks.ai/getting-started/quickstart.md",
+    "retrieved_date": "2026-10-26",
+    "sha256": "f8cddaecac4f88a2ce54e6240712219adc0510ddeea5a554a449e91d19723e89",
+    "bytes": 28634,
+    "status": "retrieved"
+  },
+  {
+    "url": "https://docs.fireworks.ai/guides/security_compliance/data_handling.md",
+    "retrieved_date": "2026-10-26",
+    "sha256": "671a3ed0e4bf7b321b18fee024143ce9d44ca3a467714673d9b663b17fe2bbd0",
+    "bytes": 2505,
+    "status": "retrieved"
+  }
+]

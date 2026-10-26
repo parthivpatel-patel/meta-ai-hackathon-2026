@@ -60,3 +60,8 @@ flowchart LR
 The frontend adds `InvestigationWorkflow.tsx` beside the preserved Phase 0 telemetry and mock-suggestion panels. It starts only on user action, advances one backend stage at a time, displays uncertainty and provenance, and exports the backend report. Rules-based and mock/model statuses remain explicit. Process-local sessions, simulation assumptions, and the single-fault verifier limit current applicability; see the evaluation report.
 
 The earlier Phase 0 scope description above is historical: Phase 1 now implements bounded synthetic experiments and export/replay, while physical verification, production hosting, persistence, and eligible Meta integration remain incomplete.
+
+
+## Phase 2 extension
+
+The versioned `forge.phase2` modules add a provider-independent bounded transport, typed model proposals, calibrated thermal/waveform ingestion, a private multi-fault oracle, and an independent multi-intervention verifier. `contracts.py` contains public trial records so the verifier does not import private recipes. V1 modules and contracts are retained. ASGI request-body limits apply before parsing. The new dashboard lab operates on its own labeled synthetic cases. Reports record `deterministic_rules_not_meta`, `test_transport`, or `meta_http_response`; text suggestions never determine verification. Full data-flow, API, budget, replay and threat limitations are in [PHASE2.md](docs/PHASE2.md).
