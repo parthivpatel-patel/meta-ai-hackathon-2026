@@ -1,0 +1,12 @@
+{
+  "schema": "forge-deployment-audit-1",
+  "passed": false,
+  "checks": [
+    {
+      "check": "bounded_probe_completed",
+      "passed": false
+    }
+  ],
+  "transport": "https_not_verified",
+  "scope": "Read-only HTTP boundary/configuration checks; not a penetration test or proof of hosting billing/retention. No model calls or investigation mutations."
+}

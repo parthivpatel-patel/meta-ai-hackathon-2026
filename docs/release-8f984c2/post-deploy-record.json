@@ -1,0 +1,21 @@
+{
+  "status": "NOT_EXECUTED_AWAITING_OWNER_APPROVAL",
+  "candidate_commit": "8f984c2b1ce27ba2fcd638b9f4089fa0ff7ccafd",
+  "origin": "https://forge-judge.onrender.com",
+  "approval_reference": null,
+  "deployed_sha_confirmed_in_render": null,
+  "deploy_id": null,
+  "checked_utc": null,
+  "checked_eastern": null,
+  "configuration_review": null,
+  "https_readiness": null,
+  "anonymous_full_workflow": null,
+  "equipment_rotation_zoom_selection": null,
+  "keyboard_and_mobile": null,
+  "exports_and_offline_replay": null,
+  "public_security_audit": null,
+  "no_credentials_and_zero_inference": null,
+  "evidence_paths": [],
+  "rollback_required": null,
+  "limitations": "Template only. Local candidate tests and existing live-origin checks do not fill these post-release fields."
+}

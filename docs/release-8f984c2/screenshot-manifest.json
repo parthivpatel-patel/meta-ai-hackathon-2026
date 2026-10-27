@@ -1,0 +1,82 @@
+[
+  {
+    "path": "screenshots/desktop-choose.png",
+    "bytes": 144306,
+    "sha256": "8441327d2fb21bfd1ad4342db03f84c95498720deb6d2144b73c81830fe973d1"
+  },
+  {
+    "path": "screenshots/desktop-equipment-initial.png",
+    "bytes": 298507,
+    "sha256": "27bf0aeafea2505105d2ee49a26a8c363ed0e03e0eec131f649236c2014313e5"
+  },
+  {
+    "path": "screenshots/desktop-equipment-selected.png",
+    "bytes": 303973,
+    "sha256": "3c2d1a301dda9ace22d5586e84c2bba5f6b83a517515ca38f0bea9e1485484ba"
+  },
+  {
+    "path": "screenshots/desktop-evidence.png",
+    "bytes": 177225,
+    "sha256": "9e8cb8f0fc94185d56c4c13df930f69528ec5c549637b407757110a60a9a24a3"
+  },
+  {
+    "path": "screenshots/desktop-overview.png",
+    "bytes": 155639,
+    "sha256": "1c6ed140452e5086b8c96dcc101c3284bc615794a6a9dbebe6ff2a6e35130ba6"
+  },
+  {
+    "path": "screenshots/desktop-possible-causes.png",
+    "bytes": 210928,
+    "sha256": "a2af9864e1b368ca52baa29cfc0f74edc8f5577d5bd957c2eead49fd2e415f1d"
+  },
+  {
+    "path": "screenshots/desktop-report.png",
+    "bytes": 159127,
+    "sha256": "3ebcc145e8933ee189f19bc50085e4e0400b8863ee099d08c3b5fea9d0805189"
+  },
+  {
+    "path": "screenshots/desktop-results.png",
+    "bytes": 191360,
+    "sha256": "b3f14dbfe521d8de16cea9724e5bb95b4e41ed318a51b81bf9368b8452b5dfad"
+  },
+  {
+    "path": "screenshots/desktop-test-proposal.png",
+    "bytes": 138701,
+    "sha256": "03fcebb8c51512829a2551617b516596866fbe0eadf6ed931869e3a21c53a585"
+  },
+  {
+    "path": "screenshots/desktop-tests.png",
+    "bytes": 139957,
+    "sha256": "2517a80237e85e765bf30746839dfb45f8b1b1e91529fc7b589584c0ba27b579"
+  },
+  {
+    "path": "screenshots/mobile-320-equipment.png",
+    "bytes": 247638,
+    "sha256": "c7b64752a7b3bef178ba7a665db0218ac63c1e11596fbcdf339652801baeb290"
+  },
+  {
+    "path": "screenshots/mobile-320-touch.png",
+    "bytes": 205399,
+    "sha256": "cef1ccd9e4fe4d0b6f93e959ace2c7e358ee33ace02754c82ccb7d7af59cf373"
+  },
+  {
+    "path": "screenshots/mobile-375-equipment.png",
+    "bytes": 241588,
+    "sha256": "f8bb6ccabd8ecc6fe4eab505b9ca1534a782dd705dbcab1f89ef7aca810a6be5"
+  },
+  {
+    "path": "screenshots/mobile-390-equipment.png",
+    "bytes": 238993,
+    "sha256": "51177702fd69744a9d8ec42c9a558aecc0ecdfae8a86cccca03f8b134b7d02d8"
+  },
+  {
+    "path": "screenshots/mobile-390-touch.png",
+    "bytes": 202288,
+    "sha256": "457088ae06fe39247983ecb360aa1b6f899c6165ea087ca0190b6e0fd1109e84"
+  },
+  {
+    "path": "screenshots/mobile-430-equipment.png",
+    "bytes": 249830,
+    "sha256": "97eeed74e30f2a15abe663e1f2dffa3b0984203d4b2a431ca4997b579022dcdf"
+  }
+]

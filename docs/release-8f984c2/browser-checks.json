@@ -1,0 +1,443 @@
+[
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "choose",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "test-proposal",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "evidence",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "thermal",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "waveform",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "equipment-initial",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "equipment-selected",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "view": "equipment-interaction-sample",
+    "violations": [],
+    "elapsed_ms": 146,
+    "domNodes": 195,
+    "usedJSHeapSize": 33193473,
+    "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "equipment",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "possible-causes",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "tests",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "results",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "report",
+    "violations": []
+  },
+  {
+    "viewport": "desktop",
+    "width": 1440,
+    "view": "missing-evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "choose",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "test-proposal",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "thermal",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "waveform",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "equipment-initial",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "equipment-selected",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "view": "equipment-interaction-sample",
+    "violations": [],
+    "elapsed_ms": 211,
+    "domNodes": 195,
+    "usedJSHeapSize": 22822517,
+    "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "equipment",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "possible-causes",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "tests",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "results",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "report",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-390",
+    "width": 390,
+    "view": "missing-evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "choose",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "thermal",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "waveform",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "equipment-initial",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "equipment-selected",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "view": "equipment-interaction-sample",
+    "violations": [],
+    "elapsed_ms": 204,
+    "domNodes": 195,
+    "usedJSHeapSize": 19103002,
+    "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "equipment",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "possible-causes",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "tests",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "results",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-320",
+    "width": 320,
+    "view": "report",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "choose",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "thermal",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "waveform",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "equipment-initial",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "equipment-selected",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "view": "equipment-interaction-sample",
+    "violations": [],
+    "elapsed_ms": 251,
+    "domNodes": 195,
+    "usedJSHeapSize": 25754077,
+    "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "equipment",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "possible-causes",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "tests",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "results",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-375",
+    "width": 375,
+    "view": "report",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "choose",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "overview",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "evidence",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "thermal",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "waveform",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "equipment-initial",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "equipment-selected",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "view": "equipment-interaction-sample",
+    "violations": [],
+    "elapsed_ms": 179,
+    "domNodes": 195,
+    "usedJSHeapSize": 25808228,
+    "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "equipment",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "possible-causes",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "tests",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "results",
+    "violations": []
+  },
+  {
+    "viewport": "mobile-430",
+    "width": 430,
+    "view": "report",
+    "violations": []
+  }
+]

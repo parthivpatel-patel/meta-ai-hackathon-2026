@@ -1,0 +1,1 @@
+{"mode": "public", "inference_enabled": false, "request_budget": 0, "credential_present": false, "provider_key_variable_present": false, "owner_token_present": false, "rate_per_minute": 60, "writes_per_minute": 10, "global_per_minute": 240, "max_sessions": 256, "retention_hours": 24}

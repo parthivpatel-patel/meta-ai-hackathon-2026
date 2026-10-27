@@ -1,0 +1,93 @@
+{
+  "schema": "forge-exact-release-validation-1",
+  "checked_utc": "2026-10-27T17:53:18.077375+00:00",
+  "candidate_commit": "8f984c2b1ce27ba2fcd638b9f4089fa0ff7ccafd",
+  "application_fixes_needed": false,
+  "documentation_branch": "feature/forge-release-preparation",
+  "candidate_ci": {
+    "url": "https://github.com/parthivpatel-patel/meta-ai-hackathon-2026/actions/runs/40550356064",
+    "status": "success"
+  },
+  "backend": {
+    "passed": 203,
+    "warning": "Existing TestClient/httpx deprecation"
+  },
+  "frontend": {
+    "passed": 22,
+    "test_typescript": "passed",
+    "production_build": "passed"
+  },
+  "docker": {
+    "build": "passed; BuildKit cache used",
+    "image_id": "sha256:256d84fed7c6e1be1c93c1c276a662a6cbdaf12cbeeb28096e06c4482957f4f5",
+    "uid": 10001,
+    "read_only_root": true,
+    "tmpfs_bytes": 67108864,
+    "memory_bytes": 536870912,
+    "cpus": 1,
+    "cap_drop": [
+      "ALL"
+    ],
+    "security_opt": [
+      "no-new-privileges"
+    ],
+    "http_checks_passed": 32,
+    "credential_bearing_public_start_refused": true,
+    "scope": "Local verification; Render platform runtime restrictions not independently attested"
+  },
+  "browser": {
+    "desktop_width": 1440,
+    "mobile_widths": [
+      320,
+      375,
+      390,
+      430
+    ],
+    "axe_view_checks": 66,
+    "violations": 0,
+    "webgl_disabled_in_validation": true,
+    "rotation_zoom_selection_keyboard": "passed",
+    "desktop_and_mobile_complete_investigation": "passed",
+    "insufficient_evidence": "passed",
+    "JSON_and_HTML_downloads": "passed (HTML scope text checked; only JSON downloads retained)",
+    "offline_replay": "Both downloaded JSON records passed",
+    "physical_mobile_hardware_tested": false,
+    "supplemental_harness": "browser-validation.cjs",
+    "touch_emulation": "320px/390px rotation, zoom and component taps passed; touch-checks.json"
+  },
+  "visual_review": {
+    "captures_retained": 16,
+    "inspected": [
+      "All ten retained desktop views",
+      "320px and 390px equipment views"
+    ],
+    "result": "No release-blocking layout or legibility defect observed; long equipment provenance remains scrollable, schematic geometry explicit",
+    "cosmetic_changes": false
+  },
+  "existing_live_origin": {
+    "origin": "https://forge-judge.onrender.com",
+    "initial_audit": "Bounded probe failed before HTTPS verification; transient timeout/transport condition",
+    "subsequent_readiness": "HTTP 200 ready",
+    "bounded_audit_retry": "32 checks passed with client-verified HTTPS",
+    "candidate_deployed": false,
+    "actual_live_sha": "Not independently confirmed",
+    "authenticated_configuration": "Unavailable; owner dashboard review required"
+  },
+  "genuine_inference_calls": 0,
+  "production_mutations": 0,
+  "main_or_deployment_branch_changes": false,
+  "eligibility": "OPEN ELIGIBILITY QUESTION, unchanged; organizer not contacted",
+  "recommendation": "READY FOR OWNER APPROVAL",
+  "conditions": [
+    "Owner confirms dashboard Free/quota/configuration/no-key state",
+    "Exact candidate approval before any production mutation",
+    "Post-deployment acceptance remains unexecuted"
+  ],
+  "limitations": [
+    "No uptime guarantee through November 18",
+    "Ephemeral SQLite lost on spin-down/restart/redeploy",
+    "Genuine model activation and eligibility remain separate submission blockers",
+    "Local restrictions do not attest Render host configuration",
+    "Emulated viewport testing is not physical mobile performance or comprehensive accessibility certification"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-27T17:47:52.752921+00:00",
+  "sources": [
+    {
+      "url": "https://render.com/docs/deploys",
+      "status": 200,
+      "sha256": "dac7781bcf8038790eae79d831f2797f31de36250ccce857e276c10e873d7304",
+      "bytes": 606064
+    },
+    {
+      "url": "https://render.com/docs/rollbacks",
+      "status": 200,
+      "sha256": "d873683ff4eb1a5b1bdf3cf2bf75a5e6a4e55e452c7e934296ecbbf5e8feb811",
+      "bytes": 322191
+    },
+    {
+      "url": "https://render.com/docs/free",
+      "status": 200,
+      "sha256": "4e5542fc56e8a55d127144b96461e3e594e32636da711cc53fa1fa8028f1ec48",
+      "bytes": 374505
+    },
+    {
+      "url": "https://render.com/docs/deploy-an-image",
+      "status": 200,
+      "sha256": "d5ff1221be58b637a25bcdbea29e41d7caaf6828f5e4c10befa55aa2ae35c0e1",
+      "bytes": 382195
+    },
+    {
+      "url": "https://render.com/docs/blueprint-spec",
+      "status": 200,
+      "sha256": "27856217430388a43a2dd974575104905d2354039cb1dec59bd17c47dd5b0435",
+      "bytes": 1430598
+    }
+  ]
+}

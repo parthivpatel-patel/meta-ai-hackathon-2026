@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-27T17:48:47.802823+00:00",
+  "scope": "Read-only public observations; no authenticated Render access",
+  "/api/v3/ready": {
+    "http_status": 200,
+    "body": {
+      "status": "ready",
+      "storage": true,
+      "frontend_bundle": true,
+      "inference_required": false
+    }
+  },
+  "/api/v3/capabilities": {
+    "http_status": 200,
+    "body": {
+      "mode": "public",
+      "scope": "restricted_synthetic_demo",
+      "real_inference_permitted": false,
+      "real_inference_verified": false,
+      "max_experiments": 4,
+      "replicates_per_experiment": 96,
+      "uploads_permitted": false,
+      "persistence": "ephemeral_sqlite",
+      "hosting_notice": "Free hosting may sleep when idle. SQLite sessions can be lost on restart or redeploy. Export completed JSON/HTML reports; start a new synthetic case if saved state is unavailable.",
+      "ranking": "ordinal_not_probability",
+      "physical_causality": false
+    }
+  }
+}
