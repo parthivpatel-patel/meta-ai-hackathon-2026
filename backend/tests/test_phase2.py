@@ -35,6 +35,7 @@ def run(**kwargs):
 def config(**kwargs):
     return TransportSettings(
         enabled=True,
+        model_id="meta-models/muse-spark-open",
         free_access_confirmed=True,
         request_budget=2,
         api_key=KEY,
@@ -167,7 +168,7 @@ def test_default_gate_and_budget():
     assert not seen
     p = ChatProvider(
         TransportSettings(
-            enabled=True, free_access_confirmed=True, request_budget=1, api_key=KEY
+            enabled=True, free_access_confirmed=True, request_budget=1, api_key=KEY, model_id="meta-models/muse-spark-open"
         ),
         httpx.MockTransport(send),
     )
@@ -370,8 +371,7 @@ def test_meta_endpoint_registry_and_no_unverified_models():
     )
     with pytest.raises(ValidationError):
         TransportSettings(model_id="unverified-or-non-meta-model")
-    with pytest.raises(ValidationError):
-        TransportSettings(model_id="meta-models/muse-spark-open-1026")
+    assert TransportSettings(model_id="meta-models/muse-spark-open-1026").model_id.endswith("-1026")
 
 
 def test_report_metadata_cannot_invent_physical_claims():

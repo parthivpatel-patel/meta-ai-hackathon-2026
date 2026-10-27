@@ -1,4 +1,4 @@
-"""Evidence-backed model catalog. Owner-reported aliases are never allowlisted."""
+"""Evidence-backed model catalog. Event identifiers require explicit participant confirmation."""
 
 import json
 from dataclasses import asdict, dataclass
@@ -8,10 +8,10 @@ from typing import Literal
 @dataclass(frozen=True)
 class ModelCandidate:
     model_id: str
-    status: Literal["documented_public", "owner_reported_disabled"]
+    status: Literal["documented_public", "participant_confirmed_event"]
     source: str
     endpoint: str = "https://inference.baseten.co/v1/chat/completions"
-    family_eligibility: str = "Public event permits Meta open weights; authenticated event-specific terms still require owner confirmation"
+    family_eligibility: str = "Public event permits Meta open weights; participant confirms event-specific model/credential restriction in the redesign directive"
     account_access_verified: bool = False
 
 
@@ -23,10 +23,13 @@ BASETEN_MODELS = (
     ),
     ModelCandidate(
         "meta-models/muse-spark-open-1026",
-        "owner_reported_disabled",
+        "participant_confirmed_event",
         "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
     ),
 )
+EVENT_MODEL_ID = "meta-models/muse-spark-open-1026"
+PARTICIPANT_CONFIRMED_BASETEN_IDS = frozenset({EVENT_MODEL_ID})
+
 DOCUMENTED_BASETEN_IDS = frozenset(
     m.model_id for m in BASETEN_MODELS if m.status == "documented_public"
 )

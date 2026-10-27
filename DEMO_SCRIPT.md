@@ -1,23 +1,15 @@
-# FORGE — three-minute demonstration
+# FORGE — three-minute investigation
 
-This is the reproducible **rules-based synthetic rehearsal**, not a real Meta demonstration. Baseten approval is pending. The final competition demo still needs genuine eligible Meta output. Never change the provenance labels or describe rehearsed rules as AI-generated candidates.
+Use `/demo`. The current rehearsal is **SYNTHETIC / RULES-BASED / NOT META**. Baseten promotional approval is confirmed, but no authenticated request has succeeded in this runtime because the protected key is absent. Do not change source labels or call the rehearsal genuine Meta reasoning.
 
-| Time | Action and narration |
+| Time | Action and narrative |
 |---|---|
-| 0:00–0:25 | Open `/demo`. “A biased sensor can hide a process departure. FORGE tests competing explanations instead of treating an explanation as proof.” Point to SYNTHETIC and inference source. |
-| 0:25–0:50 | Start the misleading sensor preset. Scrub the telemetry minute slider; inspect evidence ledger and metadata. Thermal/waveform features provide context, not verified model vision. |
-| 0:50–1:15 | Generate competing hypotheses. “These candidates currently come from deterministic rules. The prepared Meta adapter proposes competing explanations from blinded evidence; it has not run against a real model yet.” Expand pressure candidates and compare ordinal evidence ranks. |
-| 1:15–1:45 | Select and run the independent reference check, then select and run the targeted pressure intervention. Explain why each experiment separates competing predictions. Each action is recorded; the verifier cannot be overridden by candidate text. |
-| 1:45–2:15 | Show `SUPPORTED_SYNTHETIC`: process-pressure plus sensor-pressure, two experiments. “This is support within a scripted model, not physical-world causality.” Reload to demonstrate persisted state. |
-| 2:15–2:40 | Export JSON and HTML. Show trial/data hashes, model provenance and the offline replay command. Hashes support consistency, not signed authenticity. |
-| 2:40–3:00 | Start the missing-evidence preset: abstention with zero experiments. Conclude with evaluation coverage and limitations; never claim industrial accuracy. |
+|0:00–0:25|Workspace: “A convincing explanation is not evidence. FORGE investigates a misleading sensor by comparing mechanisms, choosing tests and independently verifying the result.” Keep synthetic/source labels visible.|
+|0:25–0:50|Start the misleading sensor case. Scrub telemetry with units/axes; open Evidence and inspect thermal/waveform provenance. “These are calibrated synthetic inputs. These image/FFT views are deterministic, not verified AI vision.”|
+|0:50–1:15|Generate candidates; open Hypotheses and expand one rationale/reference. “Current candidates are rules-based. The prepared event model proposes competing mechanisms from blinded evidence; its text cannot change numerical acceptance.”|
+|1:15–1:45|Return to Workspace. Select/run independent reference, then select/run pressure intervention. Show competing predictions and Experiments timeline. “A deterministic policy chooses these bounded tests; independent witnesses separate sensor bias from process response.”|
+|1:45–2:15|Verification: show channel outcomes, descriptive witness means and references. “The result supports both process and sensor mechanisms in this scripted model. Contradictions or insufficient observations cause inconclusive/abstained outcomes, not invented certainty.”|
+|2:15–2:40|Reports: show provenance preview, download JSON/HTML and replay the real export. “Hashes bind consistency; they are not signed source authenticity. Offline replay recomputes numerical decisions without rerunning the model.”|
+|2:40–3:00|Start the missing-evidence case: abstention, zero experiments. End with limits: synthetic evaluation only, no industrial safety/accuracy claim, free-host wake-up and ephemeral storage.|
 
-After approved real inference is independently tested, use an **authenticated private** session, opt in explicitly, and show recorded endpoint/model provenance. Prepare a separate truthful recording with actual responses; the public mode intentionally blocks all network inference. Rehearse again with measured endpoint latency and strict budget. Do not relabel this script as a live Meta demo before that gate passes.
-
-## Contribution and final-demo gate
-
-Technical novelty: a traceable sequential investigation loop selects informative bounded experiments, checks independent witness/control evidence, and rejects unsupported explanations. Hypothesis text cannot change numerical acceptance. Synthetic evidence does not establish a physical failure.
-
-For the final competition recording **only after a genuine response is validated**, replace the0:50–1:15 narration with: “This response came from the recorded [actual provider/model ID]. Meta proposes candidate mechanisms and rationales from blinded telemetry and numeric thermal/waveform context; the deterministic selector chooses experiments, and the independent verifier accepts or abstains.” Show actual provenance from the artifact; do not claim raw-image vision, an AI-selected experiment, improved accuracy or live inference unless separately demonstrated. If replaying a prior response, label it **recorded genuine inference + live offline verification**. A fresh live request needs a separate credit/budget check and authenticated local owner session.
-
-Current rehearsal cannot satisfy the competition's real-Meta requirement. Follow [OWNER_ACTIONS.md](OWNER_ACTIONS.md) for eligibility, activation, evaluation and submission gates.
+After a real authenticated smoke succeeds, replace only the candidate narration with the actual provider/model, recorded input mode and response. Show **Muse Spark Open / meta-models/muse-spark-open-1026** provenance from the genuine artifact. Its contribution is candidate choice/rationale; experiment selection and acceptance remain numerical. Never claim model-selected tests or native vision unless that actual path was run. A prerecorded genuine response must say **recorded genuine inference + live offline verification**, not live inference. Add “Built with Muse Spark Open” attribution when the model is actually used. Follow MODEL_ACTIVATION.md and REDESIGN_DEPLOYMENT.md; no unapproved live update.

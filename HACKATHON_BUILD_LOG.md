@@ -62,3 +62,8 @@ Branched from verified Phase3. Prepared disabled model catalog/one-call smoke, s
 ## October26 — deployment and final access
 
 Continued from verified Phase4 cace30641fd664a202184897695d0ca56aac287a on deployment/judge-access. Prepared a free-only Render Blueprint, exact platform-host wiring, explicit ephemeral-storage notices and safe restore after transient503, without expanding the investigation engine. Added versioned independently replayed rules-based reports and judge/recording/owner checklists. Render and alternative-host docs remain proxy-blocked; cloud network additions were saved for owner publication, preserving existing domains. No hosting account/key exists in the current runtime. No public URL, real model execution, recorded-video URL, paid services or uptime guarantee is claimed.
+
+
+## October26 Eastern — product redesign
+
+Implemented the six-view public product redesign and retained legacy labs, APIs, numerical evaluation and public security boundaries. Participant confirms Render deployment plus Baseten selection/$100 and restricted event ID, superseding old pending notes. Added protected event-key binding, total deadline/usage accounting, native thermal fixture path/provenance and private receipt gating. Initial accessibility contrast findings and a test-only TypeScript option mismatch were fixed, then browser/build checks rerun. Real-key absence and proxy-blocked live hostname remain explicit blockers. No live deploy, payment information or paid request was initiated.

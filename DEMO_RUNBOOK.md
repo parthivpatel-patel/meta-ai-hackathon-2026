@@ -68,3 +68,8 @@ Public/private APIs now require an exact `FORGE_DEMO_ALLOWED_HOSTS` JSON list. D
 ## Render fallback and final judging access
 
 Use root `render.yaml` on branch `deployment/judge-access`; see docs/HOSTING_AND_ACCESS.md for the free-only owner steps and limitations. The public launcher recognizes only a valid platform-provided exact `.onrender.com` hostname. `FORGE_DEMO_STORAGE_EPHEMERAL=true` enables explicit storage/sleep warnings. Current local checks do not establish Render deployment. Retain a recorded demo and exported reports through November18; never use periodic traffic to defeat idle spin-down.
+
+
+## Redesigned product checkpoint
+
+Use the six-view `/demo` workspace on feature/forge-product-redesign. Read MODEL_ACTIVATION.md for the now-confirmed Baseten allocation/event identifier and protected BASETEN_API_KEY; earlier pending-approval statements are superseded. Native thermal PNG is opt-in/fixture-tested; waveform processing remains numeric. From the root run the redesigned browser runner using external optional Playwright and @axe-core/playwright tooling, with FORGE_DEMO_URL pointing to a local public-mode instance. Do not update the live Render service without the exact-commit owner approval described in REDESIGN_DEPLOYMENT.md.

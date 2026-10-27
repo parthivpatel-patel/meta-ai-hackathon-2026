@@ -112,13 +112,17 @@ def ready():
 @router.get("/capabilities")
 def capabilities():
     public = settings().mode == "public"
+    model_status = None if public else get_provider().status()
     return {
         "mode": settings().mode,
         "scope": "restricted_synthetic_demo" if public else "development",
         "real_inference_permitted": False
         if public
-        else get_provider().status()["network_inference_enabled"],
-        "real_inference_verified": False,
+        else model_status["network_inference_enabled"],
+        "real_inference_verified": False
+        if public
+        else model_status["authenticated_response_received"],
+        "model_configuration": "disabled" if public else model_status["status"],
         "max_experiments": 4,
         "replicates_per_experiment": 96,
         "uploads_permitted": not public,

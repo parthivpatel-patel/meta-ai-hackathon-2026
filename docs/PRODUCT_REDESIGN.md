@@ -1,0 +1,40 @@
+# FORGE product redesign and event-model integration
+
+Baseline: verified deployment commit `5e2ad425b4a0f5781917020460f280f9b73c9179`. Development branch: `feature/forge-product-redesign`. The owner reports `https://forge-judge.onrender.com/demo` live on Render Free; this environment's proxy403 prevents independent HTTPS verification. No live-service update was made. Baseten selection/$100 promotional allocation and the restricted event model are now participant-confirmed, superseding earlier pending-approval notes.
+
+## Implemented product
+
+The public `/demo` experience is rebuilt around a dedicated shell with Workspace, Evidence, Hypotheses, Experiments, Verification and Reports. Every destination presents actual backend records or an actionable empty state. Navigation preserves the current case. The legacy local v1/v2 labs remain compatible; they are not publicly exposed or removed.
+
+`demo.css` is the reusable scoped token system: charcoal navigation, warm neutral canvas, forest-green actions, semantic support/rejection/uncertainty colors, compact borders, controlled radius/shadow, spacing/type/control tokens and responsive layouts. IBM Plex Sans400/500/600 Latin fonts are bundled locally via the OFL-licensed font package; no external font request. Numerical values use tabular figures, technical hashes use monospace, and public headings use sans-serif throughout. CSS cannot style the legacy app accidentally through generic card names.
+
+Signal charts show numeric axes, units,0–119 minute range, hover/click inspection, keyboard minute slider and explicit missing-sample gaps. Per-channel ranges are independent, not comparable amplitudes. Backend flags remain statistical indicators, not failure proof. The hypothesis register separates ordinal rank, rationale, numerical status and references; expandable verification includes descriptive witness means and96-replicate counts. Status labels are Supported/Rejected/Inconclusive/Not tested with explicit synthetic scope. No probability is invented.
+
+The evidence inspector renders calibrated thermal pixels, the actual waveform, metadata and content provenance. These visible plots are deterministic processing. Native model image interpretation, fixture transport, rules and actual provider output have separate provenance. Reports offer an actual preview and existing JSON/HTML exports; offline replay is preserved. Focus indicators, skip link, mobile menu controls, reduced-motion handling, labeled controls and source-aware loading/errors are included. Automatic accessibility tests are evidence, not a claim of complete accessibility certification.
+
+## Event integration
+
+- Default model: **`meta-models/muse-spark-open-1026`**. Endpoint: **`https://inference.baseten.co/v1/chat/completions`**. Protected key: **`BASETEN_API_KEY`**. No key is configured in this runtime.
+- The event key cannot be sent to a different provider/endpoint/public model. Conflicting legacy/new credentials fail configuration. The documented public alias remains only for explicit legacy compatibility; it is not substituted for the event credential. The model catalog records participant confirmation separately from authenticated access.
+- Requests retain strict schemas, exact returned model matching, prompt/response limits, request/token reservations, bounded retries, per-attempt and total deadlines, no redirects/compression/tools, secret-echo rejection and no fallback. Optional provider-reported token usage is validated and retained; no cost is inferred from unreviewed prices.
+- First smoke is numeric/context summaries only, one request, zero retries. It remains dry by default. Baseten approval is confirmed, but credential availability and successful authentication are not. No genuine inference call was made.
+- A private, owner-controlled0600 successful smoke receipt may be configured with `FORGE_INFERENCE_VALIDATED_SMOKE_PATH` for subsequent owner UI use. It must say actual HTTP source, exact model, one request, internally consistent independently replayed report, matching visual provenance if present, and cannot be a symlink/world-readable file. This is a trusted administrative receipt, not signed provider attestation; an owner who controls the server can forge files/config. Anonymous clients cannot submit it. Fixture receipts never unlock tested access.
+- Configured-but-untested UI state is explicit; its Meta checkbox stays disabled until authenticated-response evidence exists. Public mode always reports unavailable, never initializes an inference client, and the public launcher refuses either key or owner token. Live public inference is **not enabled**.
+
+## Multimodal readiness and limits
+
+Official [vision](https://docs.baseten.co/inference/model-apis/vision) docs list Muse Spark Open and OpenAI-compatible `image_url` image content, including base64/data URLs and PNG. The adapter has a separately opt-in native thermal path (`FORGE_INFERENCE_THERMAL_IMAGES=true`) that deterministically converts a validated8–64 square/rectangular calibrated array to bounded false-color PNG, supplies its Celsius legend, records source/PNG hashes and binds them during report replay. It sends no external media URL, fetches no file and executes no generated code. Local HTTP-fixture wire/provenance tests pass. **The event endpoint's real image acceptance and interpretation are unverified.** The first-smoke workflow refuses this flag; test numeric authentication first, then separately authorize any visual request.
+
+The reserved accounting allowance includes an extra8192 units for a thermal request; it is not a verified image tokenizer or billing ceiling. Provider credit stopping behavior and actual usage remain owner account responsibilities. Official audio docs specify `audio_url` content; arbitrary vibration arrays are not recordings. Native vibration-to-audio conversion/model audio is **not implemented**; FFT/RMS remains deterministic signal analysis. No raw-video/general photo reasoning is claimed. Muse Spark Open lacks provider-native JSON/schema mode in current docs, so prompted JSON is independently validated rather than called constrained decoding.
+
+Official fetch outcomes and SHA256 values, including blocked live URL and an initially incorrect vision-doc path, are recorded in `redesign-source-manifest.json`. No access restriction was bypassed.
+
+## Validation and release gate
+
+See `redesign-validation.json` for executed checks. Automated WCAG A/AA checks cover all six views at desktop/mobile widths; early contrast findings were fixed through shared tokens. Before images are the preserved `render-local-*`/Phase3 screenshots; after images are `redesign-*-{workspace,evidence,hypotheses,experiments,verification,reports}.png`. Old snapshots remain unchanged. Numerical evaluation policies are unchanged; synthetic results do not establish model advantage or industrial accuracy.
+
+Live update requires owner approval after test/visual/security review and genuine integration validation. The existing deployment branch remains unchanged. See `REDESIGN_DEPLOYMENT.md` for promotion/rollback and `MODEL_ACTIVATION.md` for the single-request owner workflow.
+
+### Executed results
+
+179 backend tests and17 frontend tests pass, with TypeScript/production build and Python lint checks. Both legacy browser suites pass desktop/mobile, and four real-process v1 API workflows pass against the current code. The redesigned six-view desktop/mobile run passes keyboard telemetry, state restore, provenance, exports and abstention, with zero detected WCAG A/AA violations across12 view/viewport combinations after fixing contrast. All1,040 synthetic benchmark cases execute; Phase3 metrics remain198/198 accepted exact findings,198/220 answerable recall and198/280 coverage. These are unchanged synthetic metrics, not evidence of actual Meta performance. All three report-replay CLIs and committed evidence replay pass. npm/Python audits report zero known vulnerabilities; one existing TestClient/httpx warning remains. No real key, authenticated model call or live service change is claimed.

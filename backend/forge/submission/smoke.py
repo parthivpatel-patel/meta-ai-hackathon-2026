@@ -15,6 +15,7 @@ from ..phase2.inference import ChatProvider, TransportSettings
 from ..phase3.reporting import export, replay
 from ..phase3.service import PRESETS, run
 from ..providers import ProviderError
+from .models import EVENT_MODEL_ID
 
 
 class ActivationSettings(BaseSettings):
@@ -34,6 +35,7 @@ def preflight(settings: TransportSettings, activation: ActivationSettings) -> di
             "card_free_entitlement_unconfirmed",
         ),
         (settings.provider == "baseten", "smoke_requires_reviewed_baseten_provider"),
+        (settings.model_id == EVENT_MODEL_ID, "smoke_requires_exact_hackathon_model"),
         (settings.enabled, "inference_disabled"),
         (settings.free_access_confirmed, "free_access_unconfirmed"),
         (
@@ -42,6 +44,7 @@ def preflight(settings: TransportSettings, activation: ActivationSettings) -> di
         ),
         (settings.request_budget == 1, "request_budget_must_equal_one"),
         (settings.retry_limit == 0, "retries_must_be_zero"),
+        (not settings.thermal_images, "first_smoke_must_use_numeric_summaries_only"),
         (0 < settings.token_budget <= 16384, "reservation_budget_must_be_one_to_16384"),
         (settings.timeout_seconds <= 20, "timeout_must_not_exceed_20_seconds"),
     ]:
@@ -87,7 +90,11 @@ async def execute(provider: ChatProvider, activation: ActivationSettings) -> dic
         "elapsed_workflow_ms": round((time.perf_counter() - started) * 1000, 3),
         "independent_replay_status": decision.status,
         "report": report,
-        "cost_and_provider_tokens": "Unmeasured; byte/output reservation is not billed-token usage",
+        "provider_reported_usage": session.inference.usage.model_dump()
+        if session.inference and session.inference.usage
+        else None,
+        "cost": "Unmeasured; no reviewed rate-card calculation. Provider-reported tokens are not an invoice.",
+        "cost_and_provider_tokens": "Byte/output reservation is not billed-token usage; provider-reported usage retained when supplied",
         "scope": "Synthetic numeric/context summaries; not raw-image model vision or industrial validation",
         "entitlement_basis": check["entitlement_basis"],
     }

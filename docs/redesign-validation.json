@@ -1,0 +1,262 @@
+{
+  "checked_utc": "2026-10-27T03:28:19.799516+00:00",
+  "baseline_commit": "5e2ad425b4a0f5781917020460f280f9b73c9179",
+  "branch": "feature/forge-product-redesign",
+  "backend_tests_passed": 179,
+  "frontend_tests_passed": 17,
+  "typescript_production_build": "passed",
+  "legacy_browser_workflows": "desktop/mobile v1 and v2 plus four real-process API workflows passed against current backend",
+  "new_browser_workflows": "six real views, keyboard telemetry, restored state, downloads and abstention passed desktop/mobile",
+  "accessibility": [
+    {
+      "viewport": "desktop",
+      "view": "Workspace",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Evidence",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Hypotheses",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Experiments",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Verification",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Reports",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Workspace",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Hypotheses",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Experiments",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Verification",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Reports",
+      "violations": []
+    }
+  ],
+  "synthetic_evaluation_cases": 1040,
+  "phase3_metrics_unchanged": true,
+  "phase3_accepted_precision": "198/198",
+  "phase3_coverage": "198/280",
+  "phase3_answerable_recall": "198/220",
+  "independent_replays": [
+    "v1 exported report",
+    "v2 exported report",
+    "v3 redesigned exported report",
+    "committed synthetic evidence"
+  ],
+  "dependency_audits": {
+    "npm_known_vulnerabilities": 0,
+    "python_known_vulnerabilities": 0
+  },
+  "model_preflight": {
+    "ready_for_explicit_execution": false,
+    "blockers": [
+      "approved_credits_unconfirmed",
+      "card_free_entitlement_unconfirmed",
+      "inference_disabled",
+      "free_access_unconfirmed",
+      "credential_missing",
+      "request_budget_must_equal_one",
+      "reservation_budget_must_be_one_to_16384"
+    ],
+    "provider": "baseten",
+    "model_id": "meta-models/muse-spark-open-1026",
+    "request_limit": 1,
+    "retry_limit": 0,
+    "network_requests_sent": 0,
+    "entitlement_basis": "Operator attestations, not independently verified provider billing",
+    "cost": "Not measured. Local budgets do not guarantee provider billing.",
+    "mode": "dry_run"
+  },
+  "baseten_promotion": "participant_confirmed_$100",
+  "protected_key_present": false,
+  "genuine_requests_sent": 0,
+  "native_thermal": "implemented_and_fixture_tested_not_real_endpoint_tested",
+  "model_audio": "not_implemented_no_raw_waveform_to_audio_conversion",
+  "live_render_update": "not_performed_owner_approval_required",
+  "live_render_https_check": "proxy_blocked_owner_reports_live",
+  "limitations": [
+    "Synthetic accuracy is not industrial accuracy or real-model evaluation",
+    "Automated accessibility does not prove full accessibility conformance",
+    "One existing FastAPI TestClient/httpx deprecation warning",
+    "Private smoke receipt is trusted administrative consistency evidence, not signed provider authentication"
+  ],
+  "docker": {
+    "build": "passed",
+    "runtime": "public Render-contract local simulation, readonly root,512MiB,1CPU",
+    "security_audit": {
+      "schema": "forge-deployment-audit-1",
+      "passed": true,
+      "checks": [
+        {
+          "check": "/api/v3/capabilities:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/capabilities:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/capabilities:no_cache",
+          "passed": true
+        },
+        {
+          "check": "restricted_public_capabilities",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:no_cache",
+          "passed": true
+        },
+        {
+          "check": "ready_storage_and_bundle",
+          "passed": true
+        },
+        {
+          "check": "/demo:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/demo:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "compiled_demo_available",
+          "passed": true
+        },
+        {
+          "check": "/docs:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/docs:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/docs:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/redoc:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/redoc:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/redoc:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:forbidden",
+          "passed": true
+        }
+      ],
+      "transport": "loopback_http_not_public_https",
+      "scope": "Read-only HTTP boundary/configuration checks; not a penetration test or proof of hosting billing/retention. No model calls or investigation mutations."
+    },
+    "protected_event_key_on_public_launcher": "rejected_before_serving_no_key_echo",
+    "live_deploy": "not_performed"
+  }
+}

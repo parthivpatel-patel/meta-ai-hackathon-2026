@@ -38,15 +38,15 @@ ACTIVATED = ActivationSettings(
 )
 
 
-def test_candidate_catalog_does_not_enable_unverified_event_alias():
+def test_candidate_catalog_preserves_public_id_and_confirms_event_alias():
     assert [m.model_id for m in BASETEN_MODELS] == [
         "meta-models/muse-spark-open",
         "meta-models/muse-spark-open-1026",
     ]
     assert DOCUMENTED_BASETEN_IDS == {"meta-models/muse-spark-open"}
     assert not any(m.account_access_verified for m in BASETEN_MODELS)
-    with pytest.raises(ValidationError):
-        TransportSettings(model_id=BASETEN_MODELS[1].model_id)
+    assert BASETEN_MODELS[1].status == "participant_confirmed_event"
+    assert TransportSettings(model_id=BASETEN_MODELS[1].model_id).model_id.endswith("-1026")
 
 
 @pytest.mark.parametrize(

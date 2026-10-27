@@ -23,3 +23,8 @@ Priority October27–28: access/alias/licensing confirmation and one bounded gen
 Phase4 adds the precise [owner activation/deployment/submission checklist](OWNER_ACTIONS.md), [deployment security audit](docs/DEPLOYMENT_SECURITY_AUDIT.md) and [implementation status](docs/PHASE4.md). Real inference and public HTTPS remain blocked; local fixture tests are not access verification.
 
 Latest deployment-only work: [Render setup](docs/HOSTING_AND_ACCESS.md), [judge accessibility](JUDGE_ACCESSIBILITY.md), [recording fallback](RECORDED_DEMO_FALLBACK.md) and [portable evidence](docs/submission/README.md). Free-tier cold starts, shared quotas,24h session retention and ephemeral filesystem loss must be disclosed. No guaranteed uptime or real Meta output is claimed.
+
+
+## Current redesign/integration release gates
+
+Baseten approval and event credential scope are participant-confirmed; previous pending/unverified-alias entries are historical. Protected BASETEN_API_KEY and a successful authenticated one-request smoke are still needed, followed by actual-model evaluation and truthful final recording. Review new screenshots/validation, keep live Render at known-good deployment until exact-commit owner approval, and follow REDESIGN_DEPLOYMENT.md for promotion/rollback. Do not call local validation an external HTTPS check.

@@ -1,10 +1,11 @@
 """Real-process workflow and export check; run after starting backend and Vite."""
 
 import json
+import os
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-BASE = "http://127.0.0.1:5173/api/v1/investigations"
+BASE = os.environ.get("FORGE_LEGACY_URL", "http://127.0.0.1:5173") + "/api/v1/investigations"
 
 
 def request(url, body=None):

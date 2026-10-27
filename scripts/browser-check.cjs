@@ -19,7 +19,7 @@ const path = require("node:path");
       });
       const errors = [];
       page.on("pageerror", (e) => errors.push(e.message));
-      await page.goto("http://127.0.0.1:5173");
+      await page.goto(process.env.FORGE_LEGACY_URL || "http://127.0.0.1:5173");
       await page
         .getByText("Process condition changed", { exact: true })
         .waitFor();
@@ -52,11 +52,9 @@ const path = require("node:path");
         )
           throw Error("Horizontal overflow: " + name + " " + scenario);
         if (scenario === "cooling_loss") {
-          await page
-            .locator("#investigation-engine")
-            .screenshot({
-              path: path.join("docs/evidence", `phase1-${name}.png`),
-            });
+          await page.locator("#investigation-engine").screenshot({
+            path: path.join("docs/evidence", `phase1-${name}.png`),
+          });
           const downloadPromise = page.waitForEvent("download");
           await page.getByRole("link", { name: "Download JSON" }).click();
           const download = await downloadPromise;

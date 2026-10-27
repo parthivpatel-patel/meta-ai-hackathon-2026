@@ -45,6 +45,12 @@ const fs = require("node:fs");
       await page
         .getByText("Supported in the synthetic model", { exact: true })
         .waitFor();
+      if (width <= 700)
+        await page.getByRole("button", { name: "Toggle navigation" }).click();
+      await page
+        .getByRole("navigation", { name: "Investigation navigation" })
+        .getByRole("button", { name: /^Evidence/ })
+        .click();
       await page.getByRole("button", { name: "thermal", exact: true }).click();
       await page.getByText(/no temporal alignment claim/).waitFor();
       if (
@@ -57,6 +63,12 @@ const fs = require("node:fs");
         path: `docs/evidence/phase3-${name}.png`,
         fullPage: true,
       });
+      if (width <= 700)
+        await page.getByRole("button", { name: "Toggle navigation" }).click();
+      await page
+        .getByRole("navigation", { name: "Investigation navigation" })
+        .getByRole("button", { name: "Workspace", exact: true })
+        .click();
       for (const [label, format] of [
         ["Export replayable JSON", "json"],
         ["Export readable HTML", "html"],

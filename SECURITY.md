@@ -53,3 +53,8 @@ Restricted public mode blocks legacy APIs, custom recipes/uploads and all infere
 ## Phase4 deployment review
 
 Exact Host/route boundaries and a guarded public entrypoint address deployment misconfiguration. The Compose profile runs read-only with a data volume and caps; no inference/owner credentials belong in public containers. Read-only HTTPS audit verifies the deployed boundary but not billing or a full penetration test. See docs/DEPLOYMENT_SECURITY_AUDIT.md for findings/limitations.
+
+
+## Event credential and redesign safety review
+
+BASETEN_API_KEY is scoped to the exact Baseten event model/endpoint, excluded from settings dumps and rejected on the public launcher. Conflicting credentials fail closed. Public restrictions, auth/rate/resource budgets and independent numerical acceptance are retained. Native thermal input is bounded local PNG/data URI with no URL fetch, no tools and separate8192-unit accounting reservation; its tokenizer/cost is unverified. First smoke is text/numeric only. A protected owner receipt is consistency/replay checked and cannot be uploaded anonymously; it is not a signed provider attestation. Never place either key on the anonymous Render service.

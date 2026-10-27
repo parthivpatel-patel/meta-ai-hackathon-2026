@@ -75,3 +75,8 @@ The `/api/v3` modular monolith adds SQLite durable versioned sessions, a sequent
 ## Phase4 submission boundary
 
 Submission tools are standalone trusted-owner CLIs, separate from HTTP routes. The public image uses a fail-closed launcher and exact Host/route allowlists. Only the approved owner smoke may instantiate an active provider after all gates; public sessions never do. See docs/PHASE4.md.
+
+
+## Redesign and guarded multimodal input
+
+The React application shell uses local state for six real investigation views and preserves versioned backend actions/exports. The event transport defaults to the confirmed -1026 ID, supports protected BASETEN_API_KEY with strict provider/model restriction, total deadlines, optional reported usage and a separately opt-in calibrated thermal PNG input. Visual source/PNG hashes are independently replayed; no raw waveform-to-audio transform is implemented. A private owner smoke receipt gates tested UI access; it is administrative evidence, not signed authentication. Public mode stays credential-free and hard-disabled for inference.

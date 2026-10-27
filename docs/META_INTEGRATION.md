@@ -1,3 +1,5 @@
+> **Current redesign checkpoint:** participant confirms Baseten selection/$100 and the restricted event model `meta-models/muse-spark-open-1026`. Use protected `BASETEN_API_KEY`, never substitute the public alias. Key is absent and no authenticated call has succeeded here. Read [MODEL_ACTIVATION.md](../MODEL_ACTIVATION.md); older pending/unverified-alias research below is historical.
+
 # Meta model access — verified follow-up, October 26, 2026
 
 **No real inference calls were made. No payment method, account signup, or paid deployment was initiated.** Configuration has no credentials and remains disabled. A secure adapter is implemented and tested with explicitly labeled local HTTP fixtures; these are not real Meta output.

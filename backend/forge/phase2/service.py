@@ -11,6 +11,7 @@ from .contracts import Trial
 from .evidence import EvidenceBundle, summarize_assets
 from .inference import HypothesisProvider, ModelHypothesis, ModelOutput, ModelRecord
 from .oracle import Oracle, Recipe
+from .thermal_input import verify_visual_record
 from .verification import Decision, observe, verify
 
 LIMITATIONS = [
@@ -193,6 +194,7 @@ def replay(report: RunReport) -> Decision:
             raise ValueError("Model provenance mismatch")
         if (
             inference.requested_model != inference.returned_model
+            or not verify_visual_record(inference, report.assets)
             or inference.input_hash
             != digest(
                 {"telemetry": observed.model_dump(), "multimodal_features": features}

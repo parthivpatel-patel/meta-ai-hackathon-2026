@@ -1,8 +1,10 @@
 # Final judge-accessibility checklist
 
+Owner reports live application: `https://forge-judge.onrender.com/demo` at the verified deployment commit. The current proxy blocks independent external verification here; the redesign is not deployed.
+
 Availability target: **through November18,2026**. Internal readiness target: **October30**. Official announced submission deadline: **November4,9PM Eastern**; confirm final guide.
 
-## Live application gate — currently unmet
+## Live application gate — owner reports live; independent check pending
 
 - [ ] Actual anonymous public HTTPS application URL recorded; not localhost, dashboard or repository URL.
 - [ ] TLS verified externally, exact audited deployment commit/time recorded, no login needed.
@@ -29,4 +31,4 @@ Availability target: **through November18,2026**. Internal readiness target: **O
 - [ ] Real-model evaluation and contribution are honestly reported; model candidates/rationales are separate from deterministic experimental selection and verification.
 - [ ] Public repo/branch/commit, CI, final guide rules/license attribution, demo and report links included. Save submission receipt.
 
-Current blockers are hosting account/network access, an externally verified application URL, the final public video link and genuine Meta activation. None is established by local tests.
+Current blockers are protected BASETEN_API_KEY, an authenticated model smoke/evaluation, independent external app verification (proxy-blocked here), final recording and exact-commit owner approval for the redesign release. Baseten selection and existing Render deployment are participant-confirmed; they are no longer pending. Local checks do not substitute for genuine model or external HTTPS evidence.

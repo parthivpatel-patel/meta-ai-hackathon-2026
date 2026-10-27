@@ -1,10 +1,11 @@
 {
   "schema": "forge-submission-evidence-1",
-  "public_application_url": null,
+  "public_application_url": "https://forge-judge.onrender.com/demo",
+  "public_application_url_source": "participant_reported_live_not_independently_verified_here",
   "external_https_verified": false,
   "availability_target_through": "2026-11-18",
   "availability_guarantee": false,
-  "genuine_meta_inference": "not_run_pending_approved_access",
+  "genuine_meta_inference": "not_run_missing_protected_key",
   "recorded_video_url": null,
   "limitations": [
     "Rules-based synthetic software evidence only",

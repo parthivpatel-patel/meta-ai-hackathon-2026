@@ -6,6 +6,7 @@ from ..engine.contracts import dataset_hash, digest
 from ..engine.hypotheses import generate_candidates
 from ..phase2.evidence import summarize_assets
 from ..phase2.inference import ModelHypothesis, ModelOutput
+from ..phase2.thermal_input import verify_visual_record
 from ..phase2.verification import observe
 from .service import Session, evidence_refs, rank, select
 from .verification import verify
@@ -97,6 +98,7 @@ def replay(report: dict):
         i = s.inference
         if (
             i is None
+            or not verify_visual_record(i, s.assets)
             or i.source != s.model_source
             or i.output != s.hypotheses
             or i.input_hash

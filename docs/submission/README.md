@@ -1,6 +1,6 @@
 # FORGE judge evidence — current checkpoint
 
-These are **actual independently replayed synthetic rules-based reports**, not Meta inference or proof of a live public application. Hosting and genuine-model activation are still pending. The manifest deliberately has no application/video URL until external verification.
+These are **actual independently replayed synthetic rules-based reports**, not Meta inference or proof of a live public application. The participant now reports the existing Render URL live, while independent HTTPS verification is proxy-blocked here. The manifest records that URL as participant-reported with external verification false; no video URL or genuine model execution is claimed. The redesign is not deployed.
 
 - [Misleading sensor JSON](misleading_sensor.json) and [readable HTML download](misleading_sensor.html): pressure process departure plus sensor bias, two bounded experiments, `SUPPORTED_SYNTHETIC`.
 - [Insufficient evidence JSON](insufficient.json) and [HTML download](insufficient.html): missing data causes `ABSTAIN`, zero experiments and no inference.

@@ -17,7 +17,7 @@ const fs = require("node:fs");
       });
       const errors = [];
       page.on("pageerror", (e) => errors.push(e.message));
-      await page.goto("http://127.0.0.1:5173");
+      await page.goto(process.env.FORGE_LEGACY_URL || "http://127.0.0.1:5173");
       await page
         .getByText("Process condition changed", { exact: true })
         .waitFor();

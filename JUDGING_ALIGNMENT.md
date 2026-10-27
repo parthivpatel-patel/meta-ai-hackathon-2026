@@ -8,3 +8,8 @@
 | Demonstration (25%) | Three-minute script, desktop/mobile console, evidence ledger, JSON/HTML export | Final real-Meta rehearsal/recording and public hosting remain outstanding |
 
 Chosen challenge: **Push the Frontier**. The public event supports physical-system investigations; authenticated participant terms and the event-specific model alias still require owner confirmation. The project demonstrates a testable investigation loop, not production industrial diagnosis.
+
+
+## Product and Meta evidence update
+
+The redesigned workspace makes the investigation loop visible within30 seconds through a source-stamped case header, hypotheses, controlled timeline and independent verification/report views. Baseten selection/$100 credit allocation is participant-confirmed, using restricted event ID meta-models/muse-spark-open-1026. Protected key and actual authenticated inference are still missing, so no genuine model advantage, native visual accuracy or real-model latency/cost is claimed. Rules/fixtures remain explicit; the public host has no inference credential. See docs/PRODUCT_REDESIGN.md.

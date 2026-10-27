@@ -293,9 +293,18 @@ async def advance(
     action = ""
     refs = []
     if s.status == "OBSERVED":
-        inference = (
-            await provider.infer(s.observed, s.asset_features) if provider else None
-        )
+        if (
+            provider
+            and getattr(provider, "thermal_images_enabled", False)
+            and s.assets.thermal is not None
+        ):
+            inference = await provider.infer_thermal(
+                s.observed, s.asset_features, s.assets.thermal
+            )
+        else:
+            inference = (
+                await provider.infer(s.observed, s.asset_features) if provider else None
+            )
         if inference:
             if len(inference.output.hypotheses) < 2:
                 raise ProviderError(

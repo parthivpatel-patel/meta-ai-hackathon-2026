@@ -120,3 +120,8 @@ See [Phase 3 implementation and evaluation](docs/PHASE3.md), [demo runbook](DEMO
 ## Judge deployment and submission
 
 The current priority is an anonymous public HTTPS app through **November18,2026**. A free-only [Render Blueprint](render.yaml) deploys the existing Docker app from `deployment/judge-access`; account/network access and external URL verification are still pending. No public app URL is claimed. Follow [owner hosting steps](docs/HOSTING_AND_ACCESS.md), [judge checklist](JUDGE_ACCESSIBILITY.md), [recording fallback](RECORDED_DEMO_FALLBACK.md) and [actual replayable evidence](docs/submission/README.md). Render Free can sleep and lose SQLite state; the UI discloses these risks. No keep-alive bots, paid add-ons, Oracle A1 dependency or public inference credentials are used.
+
+
+## Product redesign and event integration
+
+The public `/demo` product is redesigned with six functional views, a locally bundled IBM Plex Sans token system, unit-labeled interactive charts, source-bound evidence, hypothesis comparisons and dedicated verification/reporting. Legacy local v1/v2 labs and all numerical APIs remain compatible. Baseten event selection is confirmed; the exact event model is meta-models/muse-spark-open-1026 and the protected key name is BASETEN_API_KEY. No key is available here and no genuine call has run. Read docs/PRODUCT_REDESIGN.md, MODEL_ACTIVATION.md and REDESIGN_DEPLOYMENT.md. The existing reported Render deployment is preserved; live promotion requires owner approval.

@@ -37,11 +37,12 @@ for name in ("misleading_sensor", "insufficient"):
         )
 manifest = {
     "schema": "forge-submission-evidence-1",
-    "public_application_url": None,
+    "public_application_url": "https://forge-judge.onrender.com/demo",
+    "public_application_url_source": "participant_reported_live_not_independently_verified_here",
     "external_https_verified": False,
     "availability_target_through": "2026-11-18",
     "availability_guarantee": False,
-    "genuine_meta_inference": "not_run_pending_approved_access",
+    "genuine_meta_inference": "not_run_missing_protected_key",
     "recorded_video_url": None,
     "limitations": [
         "Rules-based synthetic software evidence only",

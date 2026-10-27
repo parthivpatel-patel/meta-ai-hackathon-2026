@@ -108,3 +108,38 @@ it("keeps the saved investigation ID after a transient hosting failure", async (
   expect(await screen.findByRole("alert")).toHaveTextContent("503");
   expect(localStorage.getItem("forge-sequential-session")).toBe("saved");
 });
+
+it("keeps configured but untested inference unavailable", async () => {
+  setup().mockImplementation(async (url: string) => ({
+    ok: true,
+    status: 200,
+    json: async () =>
+      url.endsWith("capabilities")
+        ? {
+            mode: "private",
+            real_inference_permitted: true,
+            real_inference_verified: false,
+            model_configuration: "configured_unverified",
+          }
+        : [],
+  }));
+  render(<DemoConsole />);
+  expect(
+    await screen.findByText(
+      "Configured · authenticated integration test required",
+    ),
+  ).toBeInTheDocument();
+  expect(screen.getByLabelText("Use real Meta inference")).toBeDisabled();
+});
+it("navigation opens functional report and evidence views", async () => {
+  setup();
+  render(<DemoConsole />);
+  await screen.findByText("Restricted public demo · SYNTHETIC");
+  fireEvent.click(screen.getByRole("button", { name: "Reports" }));
+  expect(screen.getByText("Take the evidence with you.")).toBeInTheDocument();
+  expect(
+    screen.getByRole("button", { name: "Export replayable JSON" }),
+  ).toBeDisabled();
+  fireEvent.click(screen.getByRole("button", { name: "Evidence" }));
+  expect(screen.getByText("Inspect the source")).toBeInTheDocument();
+});
