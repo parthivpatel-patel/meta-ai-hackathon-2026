@@ -13,17 +13,22 @@ import {
   Database,
   Menu,
 } from "lucide-react";
-import "@fontsource/ibm-plex-sans/latin-400.css";
-import "@fontsource/ibm-plex-sans/latin-500.css";
-import "@fontsource/ibm-plex-sans/latin-600.css";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/ibm-plex-mono/latin-400.css";
+import "./design-tokens.css";
 import "./demo.css";
-type Channel = "temperature" | "vibration" | "pressure";
-type Row = {
-  minute: number;
-  temperature: number | null;
-  vibration: number | null;
-  pressure: number | null;
-};
+import {
+  human,
+  Status,
+  Empty,
+  SignalChart,
+  Thermal,
+  Waveform,
+  type Channel,
+  type Row,
+} from "./InvestigationVisuals";
 type Reference = {
   id: string;
   modality: string;
@@ -120,20 +125,19 @@ type Capabilities = {
   hosting_notice?: string | null;
 };
 const CHANNELS: Channel[] = ["temperature", "vibration", "pressure"];
-const UNITS = { temperature: "°C", vibration: "mm/s", pressure: "bar" };
 const labels: Record<string, string> = {
   OBSERVED: "Generate competing hypotheses",
   HYPOTHESES_READY: "Select next experiment",
-  EXPERIMENT_SELECTED: "Run experiment & verify",
+  EXPERIMENT_SELECTED: "Run experiment and verify",
 };
 const sourceLabel = (source: string) =>
   source === "meta_http_response"
     ? "Recorded Meta endpoint response"
     : source === "test_transport"
-      ? "Local HTTP fixture · not Meta"
+      ? "Local test response. Not Meta inference."
       : source === "not_run"
         ? "Inference not run"
-        : "Rules-based · not Meta";
+        : "Analysis mode: Deterministic";
 class ApiError extends Error {
   constructor(
     public status: number,
@@ -307,7 +311,7 @@ export default function DemoConsole() {
               : 5,
       )
     : 0;
-  const nextAction = labels[session?.status || ""] || "Start investigation";
+  const nextAction = labels[session?.status || ""] || "Begin investigation";
   const views = [
     { name: "Workspace", icon: Layers },
     { name: "Evidence", icon: Database },
@@ -328,10 +332,12 @@ export default function DemoConsole() {
     <section className="forge-panel" aria-labelledby="hypothesis-heading">
       <div className="panel-heading">
         <div>
-          <span className="section-code">02 / COMPETING EXPLANATIONS</span>
+          <span className="section-code">02 / Competing explanations</span>
           <h2 id="hypothesis-heading">Hypothesis register</h2>
         </div>
-        <span className="quiet-label">Ordinal rank · not probability</span>
+        <span className="quiet-label">
+          Rank indicates order, not probability
+        </span>
       </div>
       {!session?.hypotheses ? (
         <Empty
@@ -373,7 +379,7 @@ export default function DemoConsole() {
                         : "Evidence references"}
                     </dt>
                     <dd className="digest">
-                      {r.evidence_refs.join(" · ") ||
+                      {r.evidence_refs.join(". ") ||
                         "No independent evidence yet"}
                     </dd>
                   </div>
@@ -391,7 +397,7 @@ export default function DemoConsole() {
         </div>
       )}
       <div className="panel-foot">
-        {sourceLabel(session?.model_source || "not_run")} · Independent evidence
+        {sourceLabel(session?.model_source || "not_run")}. Independent evidence
         determines status.
       </div>
     </section>
@@ -400,7 +406,7 @@ export default function DemoConsole() {
     <section className="forge-panel">
       <div className="panel-heading">
         <div>
-          <span className="section-code">03 / CONTROLLED TESTS</span>
+          <span className="section-code">03 / Controlled tests</span>
           <h2>Investigation timeline</h2>
         </div>
         <button
@@ -426,7 +432,7 @@ export default function DemoConsole() {
               </span>
               <div>
                 <span className="event-action">{human(e.action)}</span>
-                <p>{e.detail.replaceAll("_", " ")}</p>
+                <p>{narrative(e.detail)}</p>
                 {e.evidence_refs.length > 0 && (
                   <small className="digest">{e.evidence_refs.join(", ")}</small>
                 )}
@@ -440,8 +446,8 @@ export default function DemoConsole() {
       )}
       <div className="panel-foot">
         {cap?.persistence === "ephemeral_sqlite"
-          ? "Ephemeral local state · export completed reports before leaving."
-          : "Versioned local state · stale actions cannot execute twice."}
+          ? "Temporary storage. Export completed reports before leaving."
+          : "Saved versions prevent the same action from running twice."}
       </div>
     </section>
   );
@@ -449,8 +455,8 @@ export default function DemoConsole() {
     <section className="forge-panel verification-panel">
       <div className="panel-heading">
         <div>
-          <span className="section-code">04 / INDEPENDENT VERIFICATION</span>
-          <h2>Evidence, not model confidence</h2>
+          <span className="section-code">04 / Independent verification</span>
+          <h2>Verification result</h2>
         </div>
         <ShieldCheck size={22} />
       </div>
@@ -497,8 +503,8 @@ export default function DemoConsole() {
                   <div className="numerical-table-wrap">
                     <table className="numerical-table">
                       <caption>
-                        Witness means in normalized baseline units ·
-                        descriptive, not a probability
+                        Witness means in normalized baseline units. Descriptive,
+                        not a probability
                       </caption>
                       <thead>
                         <tr>
@@ -541,7 +547,7 @@ export default function DemoConsole() {
             ))}
           </div>
           <div className="uncertainty-note">
-            <strong>Uncertainty & scope</strong>
+            <strong>Uncertainty and scope</strong>
             <p>{session.decision.uncertainty}</p>
             <p>{session.verification_scope}</p>
             <ul>
@@ -558,7 +564,7 @@ export default function DemoConsole() {
     <section className="forge-panel">
       <div className="panel-heading">
         <div>
-          <span className="section-code">01 / EVIDENCE LEDGER</span>
+          <span className="section-code">01 / Evidence record</span>
           <h2>Inspect the source</h2>
         </div>
         <span className="quiet-label">Content-bound provenance</span>
@@ -604,9 +610,8 @@ export default function DemoConsole() {
               )}
               {chosen.modality === "telemetry" && (
                 <p>
-                  120 minute-indexed readings · temperature, vibration and
-                  pressure. Missing readings remain gaps, never interpolated
-                  evidence.
+                  120 readings of temperature, vibration and pressure. Missing
+                  readings remain gaps, never interpolated evidence.
                 </p>
               )}
               {chosen.modality === "metadata" && (
@@ -629,15 +634,15 @@ export default function DemoConsole() {
               {session.inference && (
                 <p className="provenance-line">
                   Recorded model input:{" "}
-                  {session.inference.input_mode || "numerical_summaries"} ·{" "}
-                  {sourceLabel(session.model_source)}
+                  {human(session.inference.input_mode || "numerical_summaries")}
+                  . {sourceLabel(session.model_source)}
                 </p>
               )}
               <p className="provenance-line">
                 Provenance: {chosen.provenance.replaceAll("_", " ")}
               </p>
               <details>
-                <summary>Content digest & interpretation limits</summary>
+                <summary>Content digest and interpretation limits</summary>
                 <code className="digest">{chosen.id}</code>
                 <p>
                   No independently established temporal alignment or physical
@@ -649,7 +654,7 @@ export default function DemoConsole() {
                 session.asset_features.modalities.thermal && (
                   <p className="feature-readout">
                     {session.asset_features.modalities.thermal.maximum_celsius}{" "}
-                    °C maximum ·{" "}
+                    °C maximum with{" "}
                     {session.asset_features.modalities.thermal.hot_pixel_count}{" "}
                     spatial hot pixels; no temporal alignment claim.
                   </p>
@@ -661,7 +666,7 @@ export default function DemoConsole() {
                       session.asset_features.modalities.waveform
                         .peak_frequency_hz
                     }{" "}
-                    Hz spectral peak ·{" "}
+                    Hz spectral peak with{" "}
                     {session.asset_features.modalities.waveform.rms_mm_per_second.toFixed(
                       3,
                     )}{" "}
@@ -678,14 +683,14 @@ export default function DemoConsole() {
     <section className="forge-panel">
       <div className="panel-heading">
         <div>
-          <span className="section-code">05 / REPRODUCIBLE OUTPUT</span>
+          <span className="section-code">05 / Reproducible reports</span>
           <h2>Investigation report</h2>
         </div>
         <FileText size={22} />
       </div>
       <div className="report-preview">
         <div className="report-sheet">
-          <span className="section-code">FORGE / INVESTIGATION RECORD</span>
+          <span className="section-code">FORGE / Investigation record</span>
           <h3>
             {session?.metadata.investigation_title ||
               "Evidence before explanation"}
@@ -706,8 +711,9 @@ export default function DemoConsole() {
             <div>
               <dt>Independent decision</dt>
               <dd>
-                {session?.decision.status.replaceAll("_", " ") ||
-                  "Not evaluated"}
+                {session?.decision
+                  ? human(session.decision.status)
+                  : "Not evaluated"}
               </dd>
             </div>
             <div>
@@ -717,13 +723,14 @@ export default function DemoConsole() {
             <div>
               <dt>Scope</dt>
               <dd>
-                Synthetic model only · no physical-world causality established
+                Synthetic model only. Physical-world causality is not
+                established.
               </dd>
             </div>
           </dl>
         </div>
         <div className="report-actions">
-          <h3>Take the evidence with you.</h3>
+          <h3>Export investigation reports</h3>
           <p>
             JSON includes the numerical record for offline replay. HTML provides
             a readable investigation trail. Content hashes support consistency,
@@ -777,10 +784,10 @@ export default function DemoConsole() {
             <Layers size={23} />
           </span>
           <span>
-            FORGE<small>INVESTIGATION SYSTEMS</small>
+            FORGE<small>Investigation systems</small>
           </span>
         </a>
-        <div className="sidebar-label">WORKSPACE</div>
+        <div className="sidebar-label">Investigation</div>
         <nav aria-label="Investigation navigation">
           {views.map(({ name, icon: Icon }) => (
             <button
@@ -798,7 +805,7 @@ export default function DemoConsole() {
         </nav>
         <div className="sidebar-method">
           <ShieldCheck size={18} />
-          <strong>Evidence before explanation.</strong>
+          <strong>Independent verification</strong>
           <p>
             Every conclusion is constrained by an independent numerical
             verifier.
@@ -844,8 +851,8 @@ export default function DemoConsole() {
                 ? "Restricted public demo"
                 : cap?.mode === "private"
                   ? "Authenticated owner API"
-                  : "Local development"}{" "}
-            · SYNTHETIC
+                  : "Local development"}
+            {". Synthetic data"}
           </span>
         </header>
         <main
@@ -856,24 +863,26 @@ export default function DemoConsole() {
         >
           <div className="page-title">
             <div>
-              <span className="section-code">
-                VERIFIABLE MULTIMODAL INVESTIGATION
-              </span>
-              <h1>{view === "Workspace" ? "Follow the evidence." : view}</h1>
+              <span className="section-code">Equipment investigation</span>
+              <h1>
+                {view === "Workspace"
+                  ? "Investigate equipment anomalies"
+                  : view}
+              </h1>
               <p>
                 {view === "Workspace"
-                  ? "Competing explanations. Controlled experiments. Independently verified findings."
+                  ? "Compare possible causes, run controlled tests and review the evidence."
                   : "A traceable record of what was observed, tested and supported."}
               </p>
             </div>
             <div className="source-stamp">
-              <span>MODEL PROVENANCE</span>
+              <span>Analysis source</span>
               <strong>{sourceLabel(session?.model_source || "not_run")}</strong>
               <small>
                 {cap?.real_inference_verified
                   ? "Authenticated response recorded; budgets still apply."
                   : cap?.model_configuration === "configured_unverified"
-                    ? "Configured · authenticated integration test required"
+                    ? "Configured. An authenticated test is required."
                     : "Real Meta inference unavailable in this mode."}
               </small>
             </div>
@@ -918,7 +927,7 @@ export default function DemoConsole() {
           )}
           <section className="case-bar" aria-label="Investigation controls">
             <div className="case-selector">
-              <label htmlFor="forge-case">SYNTHETIC INVESTIGATION</label>
+              <label htmlFor="forge-case">Synthetic investigation</label>
               <select
                 id="forge-case"
                 aria-label="Sequential demo case"
@@ -960,27 +969,19 @@ export default function DemoConsole() {
               disabled={busy || !cap}
             >
               <Play size={15} />
-              {busy
-                ? "Working…"
-                : session
-                  ? "Start investigation"
-                  : "Start investigation"}
+              {busy ? "Creating investigation…" : "Begin investigation"}
             </button>
           </section>
           {!session ? (
             <>
               <section className="empty-workspace">
                 <div>
-                  <span className="section-code">THE INVESTIGATION LOOP</span>
-                  <h2>
-                    A plausible explanation
-                    <br />
-                    is only the beginning.
-                  </h2>
+                  <span className="section-code">Investigation process</span>
+                  <h2>Test possible causes with evidence.</h2>
                   <p>
-                    A biased sensor can hide a real process departure. FORGE
-                    separates competing mechanisms through repeatable tests,
-                    then lets numerical evidence decide.
+                    Choose a synthetic equipment case. Compare possible causes,
+                    run controlled experiments and review independently computed
+                    results.
                   </p>
                   <span className="empty-caption">
                     Select a synthetic case above to begin.
@@ -1087,7 +1088,7 @@ export default function DemoConsole() {
                   <div className="panel-heading">
                     <div>
                       <span className="section-code">
-                        01 / OBSERVED TELEMETRY
+                        01 / Observed telemetry
                       </span>
                       <h2>Signal overview</h2>
                     </div>
@@ -1127,7 +1128,7 @@ export default function DemoConsole() {
                     <span>
                       <i className="legend-cursor" /> Inspection cursor
                     </span>
-                    <span>0–119 minutes · missing samples remain gaps</span>
+                    <span>0–119 minutes. Missing samples remain gaps.</span>
                     <details>
                       <summary>Dataset provenance</summary>
                       <code className="digest">{session.dataset_hash}</code>
@@ -1147,7 +1148,7 @@ export default function DemoConsole() {
                       {session.plan && (
                         <section className="experiment-callout">
                           <div className="section-code">
-                            NEXT / {human(session.plan.kind)}
+                            Next / {human(session.plan.kind)}
                           </div>
                           <h3>What will this test distinguish?</h3>
                           <p>{session.plan.reason}</p>
@@ -1157,7 +1158,7 @@ export default function DemoConsole() {
                             ))}
                           </ul>
                           <p className="quiet-label">
-                            Deterministic selection · controlled synthetic
+                            Deterministic selection for controlled synthetic
                             execution
                           </p>
                         </section>
@@ -1167,7 +1168,7 @@ export default function DemoConsole() {
                       {timeline}
                       <section className="decision-summary">
                         <span className="section-code">
-                          INDEPENDENT VERIFIER
+                          Independent verifier
                         </span>
                         <Status value={session.decision.status} />
                         <h3>
@@ -1245,260 +1246,13 @@ export default function DemoConsole() {
   );
 }
 
-function human(value: string) {
+function narrative(value: string) {
   return value
-    .replaceAll("_", " ")
-    .replaceAll("-", " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-}
-function Status({ value }: { value: string }) {
-  const text: Record<string, string> = {
-    SUPPORTED: "Supported",
-    SUPPORTED_SYNTHETIC: "Supported · synthetic",
-    CONTRADICTED: "Rejected",
-    REJECTED: "Rejected",
-    NEEDS_TEST: "Not tested",
-    UNRESOLVED: "Inconclusive",
-    INCONCLUSIVE: "Inconclusive",
-    ABSTAIN: "Abstained",
-    IN_PROGRESS: "In progress",
-    BASELINE_CONSISTENT: "Baseline consistent",
-    COMPLETE: "Complete",
-    OBSERVED: "Observed",
-    HYPOTHESES_READY: "Hypotheses ready",
-    EXPERIMENT_SELECTED: "Experiment selected",
-  };
-  const tone =
-    value.startsWith("SUPPORTED") || value === "BASELINE_CONSISTENT"
-      ? "positive"
-      : value === "REJECTED" || value === "CONTRADICTED"
-        ? "negative"
-        : value === "INCONCLUSIVE" ||
-            value === "ABSTAIN" ||
-            value === "UNRESOLVED"
-          ? "caution"
-          : "neutral";
-  return (
-    <span className={"status-badge " + tone}>
-      {text[value] || human(value)}
-    </span>
-  );
-}
-function Empty({ title, text }: { title: string; text: string }) {
-  return (
-    <div className="panel-empty">
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
-  );
-}
-function SignalChart({
-  channel,
-  rows,
-  minute,
-  onMinute,
-  flags,
-}: {
-  channel: Channel;
-  rows: Row[];
-  minute: number;
-  onMinute: (n: number) => void;
-  flags: number;
-}) {
-  const [hover, setHover] = useState<number | null>(null);
-  const index = hover ?? minute;
-  const values = rows
-    .map((r) => r[channel])
-    .filter((v): v is number => v !== null);
-  const minimum = values.length ? Math.min(...values) : 0,
-    maximum = values.length ? Math.max(...values) : 1;
-  const pad = Math.max(
-    (maximum - minimum) * 0.15,
-    channel === "temperature" ? 0.5 : channel === "pressure" ? 0.05 : 0.02,
-  );
-  const low = minimum - pad,
-    high = maximum + pad;
-  const x = (i: number) => 42 + (i / 119) * 284;
-  const y = (v: number) => 136 - ((v - low) / (high - low)) * 106;
-  const segments: string[] = [];
-  let points: string[] = [];
-  rows.forEach((r, i) => {
-    if (r[channel] === null) {
-      if (points.length) segments.push(points.join(" "));
-      points = [];
-    } else points.push(`${x(i)},${y(r[channel]!)}`);
-  });
-  if (points.length) segments.push(points.join(" "));
-  const missing = rows.filter((r) => r[channel] === null).length;
-  const current = rows[index]?.[channel];
-  return (
-    <article className="signal-chart">
-      <div className="signal-heading">
-        <h3>{human(channel)}</h3>
-        <span className={flags ? "signal-flag" : "quiet-label"}>
-          {flags ? flags + " flagged" : "No flags"}
-        </span>
-      </div>
-      <div className="signal-value">
-        {current?.toFixed(2) ?? "—"}
-        <span>{UNITS[channel]}</span>
-        <small>
-          at {index}m{current === null ? " · missing" : ""}
-        </small>
-      </div>
-      <svg
-        viewBox="0 0 344 166"
-        role="img"
-        aria-label={`${channel} sequential telemetry`}
-        onPointerMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          setHover(
-            Math.max(
-              0,
-              Math.min(
-                119,
-                Math.round(
-                  (((e.clientX - rect.left) / rect.width) * 344 - 42) / 284,
-                ),
-              ),
-            ),
-          );
-        }}
-        onPointerLeave={() => setHover(null)}
-        onClick={() => onMinute(index)}
-      >
-        <title>
-          {human(channel)} in {UNITS[channel]}, minutes 0 to 119. {missing}{" "}
-          missing samples. Use the telemetry minute slider for keyboard
-          inspection.
-        </title>
-        {[0, 0.5, 1].map((f) => (
-          <g key={f}>
-            <line
-              x1="42"
-              x2="326"
-              y1={136 - f * 106}
-              y2={136 - f * 106}
-              className="chart-grid"
-            />
-            <text x="34" y={140 - f * 106} textAnchor="end">
-              {(low + f * (high - low)).toFixed(
-                channel === "temperature" ? 0 : 1,
-              )}
-            </text>
-          </g>
-        ))}
-        {[0, 30, 60, 90, 119].map((i) => (
-          <text key={i} x={x(i)} y="157" textAnchor="middle">
-            {i}m
-          </text>
-        ))}
-        {segments.map((p, i) => (
-          <polyline key={i} points={p} className="chart-trace" />
-        ))}
-        <line
-          x1={x(index)}
-          x2={x(index)}
-          y1="25"
-          y2="136"
-          className="chart-inspection"
-        />
-        {current != null && (
-          <circle
-            cx={x(index)}
-            cy={y(current)}
-            r="3.5"
-            className="chart-point"
-          />
-        )}
-      </svg>
-      <div className="chart-reading" role="status" aria-live="off">
-        {index}m ·{" "}
-        {current == null
-          ? "Missing reading"
-          : current.toFixed(2) + " " + UNITS[channel]}
-        <span>
-          {missing ? missing + " missing samples" : "120 observed samples"}
-        </span>
-      </div>
-    </article>
-  );
-}
-function Thermal({ pixels }: { pixels: number[][] }) {
-  const all = pixels.flat(),
-    min = Math.min(...all),
-    max = Math.max(...all);
-  return (
-    <figure className="thermal-figure">
-      <svg
-        viewBox={`0 0 ${pixels[0].length} ${pixels.length}`}
-        role="img"
-        aria-label="Calibrated thermal image"
-      >
-        {pixels.flatMap((row, y) =>
-          row.map((v, x) => (
-            <rect
-              key={x + "-" + y}
-              x={x}
-              y={y}
-              width="1"
-              height="1"
-              fill={`hsl(${42 - ((v - min) / (max - min || 1)) * 30} 55% ${25 + ((v - min) / (max - min || 1)) * 40}%)`}
-            >
-              <title>
-                {v.toFixed(1)} °C at ({x},{y})
-              </title>
-            </rect>
-          )),
-        )}
-      </svg>
-      <figcaption>
-        Calibrated array · {pixels[0].length} × {pixels.length}
-        <span>
-          {min.toFixed(1)}–{max.toFixed(1)} °C
-        </span>
-        <small>
-          Deterministic color mapping; model input is recorded separately.
-        </small>
-      </figcaption>
-    </figure>
-  );
-}
-function Waveform({ samples, rate }: { samples: number[]; rate: number }) {
-  const max = Math.max(...samples.map(Math.abs), 0.01);
-  const points = samples
-    .map(
-      (v, i) =>
-        `${32 + (i / (samples.length - 1)) * 600},${75 - (v / max) * 48}`,
+    .replaceAll("SUPPORTED_SYNTHETIC", "Supported in simulation")
+    .replaceAll("IN_PROGRESS", "In progress")
+    .replaceAll(
+      "deterministic_rules_not_meta",
+      "deterministic rules, not Meta inference",
     )
-    .join(" ");
-  return (
-    <figure className="waveform-figure">
-      <svg
-        viewBox="0 0 650 160"
-        role="img"
-        aria-label="Calibrated vibration waveform"
-      >
-        <title>
-          Vibration in millimeters per second over {samples.length / rate}{" "}
-          seconds
-        </title>
-        <line x1="32" x2="632" y1="75" y2="75" className="chart-grid" />
-        <polyline points={points} className="chart-trace" />
-        <text x="32" y="145">
-          0 s
-        </text>
-        <text x="550" y="145">
-          {(samples.length / rate).toFixed(3)} s
-        </text>
-        <text x="32" y="15">
-          ±{max.toFixed(2)} mm/s
-        </text>
-      </svg>
-      <figcaption>
-        {rate} Hz sampling · {samples.length} samples · deterministic signal,
-        not model audio interpretation
-      </figcaption>
-    </figure>
-  );
+    .replaceAll("_", " ");
 }

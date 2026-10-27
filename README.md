@@ -125,3 +125,7 @@ The current priority is an anonymous public HTTPS app through **November18,2026*
 ## Product redesign and event integration
 
 The public `/demo` product is redesigned with six functional views, a locally bundled IBM Plex Sans token system, unit-labeled interactive charts, source-bound evidence, hypothesis comparisons and dedicated verification/reporting. Legacy local v1/v2 labs and all numerical APIs remain compatible. Baseten event selection is confirmed; the exact event model is meta-models/muse-spark-open-1026 and the protected key name is BASETEN_API_KEY. No key is available here and no genuine call has run. Read docs/PRODUCT_REDESIGN.md, MODEL_ACTIVATION.md and REDESIGN_DEPLOYMENT.md. The existing reported Render deployment is preserved; live promotion requires owner approval.
+
+## Design system 3.0 review
+
+The isolated `feature/forge-design-system-v3` branch refines the six public investigation views with local Inter and IBM Plex Mono fonts, shared design tokens and edited copy. See [design decisions and validation](docs/DESIGN_SYSTEM_V3.md) and [desktop/mobile screenshots](docs/evidence/DESIGN_V3_REVIEW.md). Live promotion still requires explicit owner approval.

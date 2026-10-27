@@ -1,0 +1,109 @@
+{
+  "scope": "FORGE public /demo design system 3.0; local synthetic backend only",
+  "branch": "feature/forge-design-system-v3",
+  "base_commit": "302ac4d557712b211c92c862703e7e465829a250",
+  "backend_tests": 179,
+  "frontend_tests": 17,
+  "typescript_and_production_build": "passed",
+  "browser": {
+    "desktop": [
+      1440,
+      1050
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "views": [
+      "workspace",
+      "evidence",
+      "hypotheses",
+      "experiments",
+      "verification",
+      "reports"
+    ],
+    "legacy_v1_v2_desktop_mobile": "passed",
+    "phase3_desktop_mobile": "passed",
+    "font_load": "local Inter and IBM Plex Mono passed",
+    "reflow_320px": "passed",
+    "zoom_200_percent": "passed",
+    "reduced_motion": "exercised"
+  },
+  "evaluation_cases": {
+    "v1": 480,
+    "v2": 280,
+    "v3": 280
+  },
+  "report_exports": "JSON and HTML downloaded; v1/v2/v3 offline replay passed",
+  "npm_audit_known_vulnerabilities": 0,
+  "model_requests_sent": 0,
+  "deployed": false,
+  "limitations": [
+    "Automated Axe checks do not establish complete accessibility conformance.",
+    "Synthetic evaluation does not establish real Meta or industrial accuracy.",
+    "Existing FastAPI TestClient/httpx deprecation warning remains.",
+    "Live deployment requires separate explicit owner approval."
+  ],
+  "accessibility": [
+    {
+      "viewport": "desktop",
+      "view": "Workspace",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Evidence",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Hypotheses",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Experiments",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Verification",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "view": "Reports",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Workspace",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Hypotheses",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Experiments",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Verification",
+      "violations": []
+    },
+    {
+      "viewport": "mobile",
+      "view": "Reports",
+      "violations": []
+    }
+  ]
+}

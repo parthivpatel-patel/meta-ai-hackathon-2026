@@ -1,40 +1,6 @@
-/* FORGE design system — locally served IBM Plex Sans, no remote font requests. */
+/* Component rules. Tokens live in design-tokens.css; fonts are served locally. */
 .forge-app {
-  --ink: #202823;
-  --muted: #5b675f;
-  --subtle: #657267;
-  --brand: #275942;
-  --brand-hover: #1b4431;
-  --canvas: #f3f3ef;
-  --surface: #fff;
-  --border: #dcded8;
-  --line: #eceee8;
-  --navigation: #181f1b;
-  --positive: #285d43;
-  --positive-bg: #eaf2ec;
-  --negative: #9d4038;
-  --negative-bg: #faeeeb;
-  --caution: #846023;
-  --caution-bg: #f8f2e4;
-  --radius: 4px;
-  --chart-primary: #347254;
-  --chart-grid: #e2e6df;
-  --chart-cursor: #9c7950;
-  --shadow: 0 1px 2px #18211a06;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --font-xs: 11px;
-  --font-sm: 12px;
-  --font-base: 14px;
-  --font-lg: 18px;
-  --control: 38px;
-  --sidebar: 218px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-interface);
   font-size: var(--font-base);
   line-height: 1.5;
   color: var(--ink);
@@ -104,7 +70,7 @@
   opacity: 0.5;
 }
 .forge-app :is(button, a, input, select, summary):focus-visible {
-  outline: 3px solid #34835e;
+  outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
 }
 .forge-app input[type="checkbox"] {
@@ -166,9 +132,9 @@
 }
 .forge-brand small {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.02em;
   color: #a2afa5;
   margin-top: 1px;
 }
@@ -182,8 +148,8 @@
   color: #c1d6b9;
 }
 .sidebar-label {
-  font-size: 9px;
-  letter-spacing: 1.8px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: #9aa99c;
   padding: 46px var(--space-3) var(--space-3);
 }
@@ -214,7 +180,7 @@
 }
 .nav-count {
   margin-left: auto;
-  font-size: 10px;
+  font-size: 12px;
   color: #c6d3c5;
   background: #415445;
   min-width: 20px;
@@ -246,7 +212,7 @@
   padding: var(--space-5) var(--space-3) 0;
   display: grid;
   gap: var(--space-1);
-  font-size: 10px;
+  font-size: 12px;
   color: #95a499;
 }
 .sidebar-footer strong {
@@ -254,8 +220,8 @@
   color: #c1cbbf;
 }
 .sidebar-footer span:last-child {
-  font-size: 8px;
-  letter-spacing: 1.2px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   margin-top: 17px;
 }
 .forge-body {
@@ -284,7 +250,7 @@
   color: var(--ink);
 }
 .environment-label {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.35px;
   color: var(--muted);
   border: 1px solid var(--border);
@@ -308,9 +274,9 @@
   align-items: flex-start;
 }
 .section-code {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.02em;
   color: var(--muted);
   display: block;
 }
@@ -332,8 +298,8 @@
   gap: 3px;
 }
 .source-stamp > span {
-  font-size: 8px;
-  letter-spacing: 1.4px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--muted);
 }
 .source-stamp strong {
@@ -341,7 +307,7 @@
   font-weight: 500;
 }
 .source-stamp small {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .hosting-notice {
@@ -411,8 +377,8 @@
   min-width: 0;
 }
 .case-selector > label {
-  font-size: 8px;
-  letter-spacing: 1.2px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--muted);
   font-weight: 500;
 }
@@ -438,7 +404,7 @@
 .model-switch small {
   display: block;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
 }
 .case-header {
   display: flex;
@@ -448,10 +414,10 @@
   margin: 26px 0 var(--space-5);
 }
 .case-identifier {
-  font-size: 9px;
-  letter-spacing: 1.2px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
   color: var(--muted);
-  font-family: monospace;
+  font-family: var(--font-data);
 }
 .case-header h2 {
   font-size: 21px;
@@ -462,7 +428,7 @@
   gap: var(--space-3);
   align-items: center;
   flex-wrap: wrap;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .workflow-rail {
@@ -511,7 +477,7 @@
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 3px 7px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   line-height: 1.3;
@@ -567,12 +533,12 @@
 }
 .quiet-label {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 .panel-foot {
   padding: 11px var(--space-5);
   border-top: 1px solid var(--line);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -596,8 +562,8 @@
   margin-left: 0;
 }
 .digest {
-  font-family: monospace;
-  font-size: 10px;
+  font-family: var(--font-data);
+  font-size: 12px;
   word-break: break-all;
   overflow-wrap: anywhere;
   display: block;
@@ -639,7 +605,7 @@
   font-weight: 500;
 }
 .signal-flag {
-  font-size: 9px;
+  font-size: 12px;
   color: #8a592b;
   background: #faf2e5;
   padding: 2px 5px;
@@ -661,7 +627,7 @@
   letter-spacing: 0;
 }
 .signal-value > small {
-  font-size: 9px;
+  font-size: 12px;
   margin-left: auto;
   letter-spacing: 0;
   font-weight: 400;
@@ -675,8 +641,8 @@
 }
 .signal-chart svg text,
 .waveform-figure svg text {
-  font-size: 9px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 12px;
+  font-family: var(--font-interface);
   fill: #68756c;
 }
 .chart-grid {
@@ -702,12 +668,13 @@
 .chart-reading {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   color: var(--muted);
   padding: 3px var(--space-1) 0;
   gap: var(--space-2);
 }
 .forge-app .legend-line {
+  border-color: var(--chart-primary);
   width: 14px;
   height: 2px;
   background: var(--chart-primary);
@@ -722,11 +689,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .time-inspector output {
-  font-family: monospace;
+  font-family: var(--font-data);
   color: var(--ink);
   min-width: 27px;
 }
@@ -765,7 +732,7 @@
 }
 .rank-index {
   font-size: var(--font-xs);
-  font-family: monospace;
+  font-family: var(--font-data);
   color: var(--subtle);
   width: 20px;
   flex-shrink: 0;
@@ -798,10 +765,10 @@
   margin-top: 10px;
 }
 .hypothesis-detail dt {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.6px;
 }
 .hypothesis-detail dd {
@@ -832,12 +799,12 @@
   padding-top: 2px;
 }
 .event-action {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--ink);
 }
 .forge-timeline p {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: var(--space-1);
   line-height: 1.6;
   overflow-wrap: anywhere;
@@ -940,7 +907,7 @@
   margin: var(--space-3) 0;
 }
 .channel-verdicts details {
-  font-size: 10px;
+  font-size: 12px;
 }
 .uncertainty-note {
   padding: var(--space-5) var(--space-6);
@@ -994,7 +961,7 @@
   border-top: 1px solid var(--line);
 }
 .evidence-inspector .provenance-line {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .feature-readout {
@@ -1029,7 +996,7 @@
 }
 .thermal-figure figcaption small {
   max-width: 230px;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .waveform-figure {
@@ -1042,7 +1009,7 @@
   max-height: 240px;
 }
 .waveform-figure figcaption {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .metadata-list > div {
@@ -1050,7 +1017,7 @@
   border-bottom: 1px solid var(--line);
 }
 .metadata-list dt {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .metadata-list dd {
@@ -1077,8 +1044,8 @@
   max-width: 280px;
 }
 .report-sheet > p {
-  font-size: 10px;
-  font-family: monospace;
+  font-size: 12px;
+  font-family: var(--font-data);
 }
 .report-sheet hr {
   border: 0;
@@ -1091,9 +1058,9 @@
   gap: 15px;
 }
 .report-sheet dt {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.6px;
 }
 .report-sheet dd {
@@ -1116,7 +1083,7 @@
   justify-self: start;
 }
 .report-actions code {
-  font-size: 10px;
+  font-size: 12px;
   overflow-wrap: anywhere;
   word-break: break-word;
   color: var(--muted);
@@ -1145,7 +1112,7 @@
 }
 .empty-caption {
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 30px;
   color: var(--muted);
 }
@@ -1186,11 +1153,11 @@
   display: flex;
   gap: var(--space-4);
   flex-wrap: wrap;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .forge-footer strong {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
   font-weight: 500;
 }
@@ -1245,7 +1212,7 @@
     font-size: 23px;
   }
   .signal-value > small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hypothesis-row > summary {
     padding: var(--space-3) 15px;
@@ -1269,7 +1236,7 @@
     padding: 0 var(--space-1);
   }
   .forge-brand small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .forge-sidebar {
     padding: 28px var(--space-3) var(--space-4);
@@ -1314,10 +1281,10 @@
     flex-wrap: wrap;
   }
   .case-meta {
-    font-size: 9px;
+    font-size: 12px;
   }
   .workflow-rail li {
-    font-size: 10px;
+    font-size: 12px;
     gap: 5px;
   }
   .empty-workspace {
@@ -1376,7 +1343,7 @@
     gap: 7px;
   }
   .environment-label {
-    font-size: 8px;
+    font-size: 12px;
     padding: 3px 5px;
     margin-left: auto;
     max-width: 145px;
@@ -1419,7 +1386,7 @@
     max-width: 155px;
     align-self: center;
     text-align: right;
-    font-size: 9px;
+    font-size: 12px;
   }
   .case-bar {
     gap: var(--space-3);
@@ -1455,13 +1422,13 @@
     margin-bottom: 18px;
   }
   .workflow-rail li {
-    font-size: 9px;
+    font-size: 12px;
     display: grid;
     gap: 3px;
     padding: 10px 3px;
   }
   .workflow-rail li > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .panel-heading {
     padding: var(--space-4);
@@ -1471,7 +1438,7 @@
     font-size: 15px;
   }
   .section-code {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1.1px;
   }
   .telemetry-panel > .panel-heading {
@@ -1499,11 +1466,11 @@
     max-height: 190px;
   }
   .chart-reading {
-    font-size: 9px;
+    font-size: 12px;
   }
   .panel-foot {
     padding: var(--space-3) var(--space-4);
-    font-size: 9px;
+    font-size: 12px;
     gap: 10px;
   }
   .panel-foot details {
@@ -1517,14 +1484,14 @@
     font-size: var(--font-xs);
   }
   .hypothesis-name small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .rank-index {
     width: 16px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .status-badge {
-    font-size: 8px;
+    font-size: 12px;
     padding: 3px 6px;
   }
   .hypothesis-detail {
@@ -1551,7 +1518,7 @@
   }
   .completion-actions > button {
     flex: 1;
-    font-size: 10px;
+    font-size: 12px;
     padding: var(--space-2);
   }
   .empty-workspace {
@@ -1612,7 +1579,7 @@
   }
   .forge-footer {
     gap: 9px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .forge-footer span {
     flex-basis: 100%;
@@ -1675,13 +1642,13 @@
 .numerical-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
 }
 .numerical-table caption {
   text-align: left;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.6;
   margin-bottom: var(--space-2);
 }
@@ -1697,4 +1664,72 @@
   position: sticky;
   top: 0;
   z-index: 15;
+}
+
+/* Shared analytical typography and layout. */
+.forge-content {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+.forge-app
+  :is(
+    code,
+    .signal-value,
+    .rank-index,
+    .case-meta,
+    .numerical-table td,
+    .chart-reading,
+    .time-inspector output
+  ) {
+  font-family: var(--font-data);
+}
+.forge-app .forge-sidebar nav button {
+  font-size: 14px;
+}
+.forge-app :is(.case-selector label, .model-switch, .owner-login label) {
+  font-size: 14px;
+}
+.forge-app :is(.section-code, .sidebar-label) {
+  letter-spacing: 0.02em;
+}
+.forge-app .page-title h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.forge-app .forge-brand small {
+  letter-spacing: 0;
+}
+.forge-app .forge-brand {
+  letter-spacing: 0.04em;
+}
+.forge-app :is(.case-meta, .panel-foot, .completion-actions, .chart-reading) {
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .forge-app .environment-label {
+    max-width: 155px;
+    font-size: 12px;
+  }
+  .forge-app .source-stamp {
+    grid-template-columns: 1fr;
+  }
+  .forge-app .source-stamp small {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: none;
+    text-align: left;
+  }
+  .forge-app .workflow-rail li {
+    font-size: 12px;
+  }
+  .forge-app .hypothesis-row > summary {
+    flex-wrap: wrap;
+  }
+  .forge-app .status-badge {
+    white-space: normal;
+  }
+  .forge-app .completion-actions > button {
+    flex-basis: 100%;
+    font-size: 14px;
+  }
 }

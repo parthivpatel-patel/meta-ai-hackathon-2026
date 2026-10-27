@@ -25,21 +25,21 @@ const fs = require("node:fs");
         (process.env.FORGE_DEMO_URL || "http://127.0.0.1:8005") + "/demo",
       );
       await page
-        .getByRole("button", { name: "Start investigation", exact: true })
+        .getByRole("button", { name: "Begin investigation", exact: true })
         .click();
       for (const label of [
         "Generate competing hypotheses",
         "Select next experiment",
-        "Run experiment & verify",
+        "Run experiment and verify",
         "Select next experiment",
-        "Run experiment & verify",
+        "Run experiment and verify",
       ])
         await page.getByRole("button", { name: label, exact: true }).click();
       await page
         .getByText("Supported in the synthetic model", { exact: true })
         .waitFor();
       await page.screenshot({
-        path: `docs/evidence/redesign-${name}-workspace.png`,
+        path: `docs/evidence/design-v3-${name}-workspace.png`,
         fullPage: true,
       });
       await page.reload();
@@ -103,7 +103,7 @@ const fs = require("node:fs");
           window.scrollTo(0, 0);
         });
         await page.screenshot({
-          path: `docs/evidence/redesign-${name}-${view.toLowerCase()}.png`,
+          path: `docs/evidence/design-v3-${name}-${view.toLowerCase()}.png`,
           fullPage: true,
         });
         if (
@@ -135,7 +135,7 @@ const fs = require("node:fs");
         .getByLabel("Sequential demo case")
         .selectOption("insufficient");
       await page
-        .getByRole("button", { name: "Start investigation", exact: true })
+        .getByRole("button", { name: "Begin investigation", exact: true })
         .click();
       await page
         .getByText("Explicit abstention or inconclusive evidence", {
@@ -152,7 +152,7 @@ const fs = require("node:fs");
         await new Promise((resolve) => setTimeout(resolve, 61000));
     }
     fs.writeFileSync(
-      "/tmp/forge-redesign-a11y.json",
+      "/tmp/forge-design-v3-a11y.json",
       JSON.stringify(results, null, 2),
     );
     const failed = results.filter((r) => r.violations.length);

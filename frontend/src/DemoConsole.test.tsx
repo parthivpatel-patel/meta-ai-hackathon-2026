@@ -28,7 +28,7 @@ function setup(status = 200) {
 it("discloses synthetic limits and disables real inference in public mode", async () => {
   setup();
   render(<DemoConsole />);
-  await screen.findByText("Restricted public demo · SYNTHETIC");
+  await screen.findByText("Restricted public demo. Synthetic data");
   expect(screen.getByLabelText("Use real Meta inference")).toBeDisabled();
   expect(
     screen.getByText(/Thermal\/waveform features are context/),
@@ -39,7 +39,7 @@ it("handles capacity errors without silently substituting inference", async () =
   const f = setup();
   render(<DemoConsole />);
   const start = await screen.findByRole("button", {
-    name: "Start investigation",
+    name: "Begin investigation",
   });
   await waitFor(() => expect(start).toBeEnabled());
   f.mockResolvedValue({ ok: false, status: 429 });
@@ -125,18 +125,16 @@ it("keeps configured but untested inference unavailable", async () => {
   }));
   render(<DemoConsole />);
   expect(
-    await screen.findByText(
-      "Configured · authenticated integration test required",
-    ),
+    await screen.findByText("Configured. An authenticated test is required."),
   ).toBeInTheDocument();
   expect(screen.getByLabelText("Use real Meta inference")).toBeDisabled();
 });
 it("navigation opens functional report and evidence views", async () => {
   setup();
   render(<DemoConsole />);
-  await screen.findByText("Restricted public demo · SYNTHETIC");
+  await screen.findByText("Restricted public demo. Synthetic data");
   fireEvent.click(screen.getByRole("button", { name: "Reports" }));
-  expect(screen.getByText("Take the evidence with you.")).toBeInTheDocument();
+  expect(screen.getByText("Export investigation reports")).toBeInTheDocument();
   expect(
     screen.getByRole("button", { name: "Export replayable JSON" }),
   ).toBeDisabled();

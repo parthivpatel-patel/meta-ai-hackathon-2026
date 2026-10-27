@@ -21,18 +21,18 @@ const fs = require("node:fs");
       await page.goto(
         (process.env.FORGE_DEMO_URL || "http://127.0.0.1:7860") + "/demo",
       );
-      await page.getByText("Restricted public demo · SYNTHETIC").waitFor();
+      await page.getByText("Restricted public demo. Synthetic data").waitFor();
       if (await page.getByLabel("Use real Meta inference").isEnabled())
         throw Error("Public inference enabled");
       await page
-        .getByRole("button", { name: "Start investigation", exact: true })
+        .getByRole("button", { name: "Begin investigation", exact: true })
         .click();
       for (const label of [
         "Generate competing hypotheses",
         "Select next experiment",
-        "Run experiment & verify",
+        "Run experiment and verify",
         "Select next experiment",
-        "Run experiment & verify",
+        "Run experiment and verify",
       ])
         await page.getByRole("button", { name: label, exact: true }).click();
       await page
@@ -91,7 +91,7 @@ const fs = require("node:fs");
         .getByLabel("Sequential demo case")
         .selectOption("insufficient");
       await page
-        .getByRole("button", { name: "Start investigation", exact: true })
+        .getByRole("button", { name: "Begin investigation", exact: true })
         .click();
       await page
         .getByText("Explicit abstention or inconclusive evidence", {
