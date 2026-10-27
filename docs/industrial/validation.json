@@ -1,0 +1,363 @@
+{
+  "schema": "forge-industrial-validation-1",
+  "checked_utc": "2026-10-27T23:14:38.245775+00:00",
+  "repository": "parthivpatel-patel/meta-ai-hackathon-2026",
+  "branch": "feature/forge-industrial-workstation",
+  "base_commit": "bf500f04ca865568cb28fb73f83ccc7a197aa360",
+  "final_commit_identity": "See final handoff and Git branch ref; image/source hashes avoid a self-referential commit field.",
+  "baseline": {
+    "backend_passed": 209,
+    "frontend_passed": 25
+  },
+  "tests": {
+    "backend_passed": 234,
+    "frontend_passed": 32,
+    "test_typescript": "passed",
+    "production_typescript_vite": "passed",
+    "ruff_new_backend_modules": "passed",
+    "warning": "One existing Starlette/httpx TestClient deprecation; Vite large lazy chunk advisory retained"
+  },
+  "docker": {
+    "image_id": "sha256:f05ec730d93f9b40545fbb7fb8ff96f1052e3682adf7ea1223f1aa644df8ccb2",
+    "production_build": "passed",
+    "source_asset_files_compared": 70,
+    "container_audit": "32 HTTP checks, UID10001 and credential-bearing public-start refusal passed",
+    "limits": "read-only root, bounded tmpfs,512MiB,one CPU,cap-drop ALL,no-new-privileges",
+    "external_https_verified_for_candidate": false
+  },
+  "browser": {
+    "machine_scenarios": 7,
+    "library_scenarios": 7,
+    "axe_views": 122,
+    "axe_violations": 0,
+    "widths": [
+      1440,
+      390,
+      320,
+      375,
+      430
+    ],
+    "source": "Real public backend responses; no canned diagnostic responses",
+    "machine_image": "Final image above",
+    "library_run_scope": "Same-branch regression before final workstation-only chart/window/capture refinements; established library source unchanged",
+    "lifecycle_controls": {
+      "mobile": [
+        {
+          "width": 320,
+          "touch": true,
+          "violations": 0
+        },
+        {
+          "width": 375,
+          "touch": true,
+          "violations": 0
+        },
+        {
+          "width": 430,
+          "touch": true,
+          "violations": 0
+        }
+      ],
+      "lifecycle": {
+        "camera_raf_cadence_ms": [
+          2.199999999254942,
+          1.6000000014901161,
+          16.699999999254942,
+          16.09999999962747,
+          16.200000001117587,
+          27.399999998509884,
+          28.600000001490116,
+          35,
+          34.79999999888241,
+          40.80000000074506,
+          25.59999999962747,
+          24.90000000037253,
+          39.5,
+          21.199999999254942,
+          11.900000000372529,
+          23.300000000745058,
+          39.899999998509884,
+          23.800000000745058,
+          23.59999999962747,
+          20.09999999962747,
+          46.70000000111759,
+          22.40000000037253,
+          20.199999999254942,
+          61.5,
+          37.69999999925494,
+          37.90000000037253,
+          23,
+          25,
+          53.20000000111759,
+          52.29999999888241,
+          51.30000000074506,
+          23.59999999962747,
+          71.09999999962747,
+          66.40000000037253,
+          85,
+          32.40000000037253,
+          36.69999999925494,
+          26.800000000745058,
+          53.09999999962747,
+          14.199999999254942,
+          51.20000000111759,
+          46.29999999888241,
+          16.200000001117587,
+          27,
+          49.19999999925494,
+          29.90000000037253,
+          37.40000000037253,
+          45.69999999925494,
+          31.300000000745058,
+          82.29999999888241,
+          35.5,
+          37.30000000074506,
+          36.19999999925494,
+          70,
+          23.700000001117587,
+          26.09999999962747,
+          48.19999999925494,
+          34.70000000111759,
+          45.79999999888241,
+          5.800000000745058
+        ],
+        "telemetry_ui_updates": [
+          {
+            "elapsed_ms": 500.2000000011176,
+            "sequence": 8
+          },
+          {
+            "elapsed_ms": 996.7000000011176,
+            "sequence": 16
+          },
+          {
+            "elapsed_ms": 1500.300000000745,
+            "sequence": 24
+          }
+        ],
+        "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
+        "heap_before": 5446212,
+        "heap_after": 7720928,
+        "mount_unmount_cycles": 5,
+        "component_changes": 60,
+        "keyboard_camera_activation": true,
+        "pointer_orbit_wheel_no_accidental_selection": true,
+        "reduced_motion": true,
+        "synthetic_visibility_pause": true,
+        "context_loss_recovery": true,
+        "manual_2d_and_3d_recovery": true,
+        "gpu": {
+          "engine": "three.js r180",
+          "drawCalls": "31",
+          "triangles": "4528"
+        },
+        "short_import_reset": true
+      },
+      "controls": {
+        "repair_response": true,
+        "shutdown_reaches_stopped": true,
+        "offline_load_preserves_recording": true,
+        "reconnect_reset": true
+      }
+    },
+    "report_import_tamper_and_telemetry_roundtrips": "passed",
+    "new_capture_during_counterfactual": "disabled and asserted after each experiment",
+    "machine_json_replays": 7,
+    "machine_html_reproduction_byte_matches": 7,
+    "legacy_browser_replays": 7,
+    "original_submission_fixtures_replayed_and_byte_unchanged": 2,
+    "manual_visual_review": "Bearing machine, timestamped/marked charts, mobile pressure, fallback and verification inspected; fallback labels staggered after review",
+    "assistive_technology_and_physical_mobile": "Not tested"
+  },
+  "evaluations": {
+    "v1_cases": 480,
+    "v2_cases": 280,
+    "v3_cases": 280,
+    "coupled_cases": 21,
+    "total": 1061,
+    "coupled_metrics": {
+      "cases": 21,
+      "accepted_exact": {
+        "numerator": 15,
+        "denominator": 15
+      },
+      "coverage": {
+        "numerator": 15,
+        "denominator": 21
+      },
+      "all_finding_precision": {
+        "numerator": 18,
+        "denominator": 18
+      },
+      "exact_agreement": {
+        "numerator": 18,
+        "denominator": 21
+      },
+      "replay_consistency": "21/21",
+      "inconclusive": 6
+    },
+    "sequential_metrics": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 23.933,
+      "latency_ms_p95": 57.009100000000004,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "scope": "Fixed synthetic panels only; no genuine-model or industrial field-performance claim"
+  },
+  "performance": {
+    "scope": "Single local warm runs; headless Chromium on Linux, software SwiftShader WebGL, loopback restricted public containers (512 MiB/one CPU). No physical mobile, hardware presentation FPS, production cold-start or no-leak claim.",
+    "javascript_chunks": [
+      {
+        "file": "assets/App-VRMjUTMg.js",
+        "bytes": 27935,
+        "gzip_bytes": 8317
+      },
+      {
+        "file": "assets/Workstation-jSwHJaZ0.js",
+        "bytes": 527166,
+        "gzip_bytes": 133847
+      },
+      {
+        "file": "assets/index-DH9Pbi1I.js",
+        "bytes": 276228,
+        "gzip_bytes": 85186
+      }
+    ],
+    "mesh_asset_bytes": 0,
+    "machine_load_ms": {
+      "min": 964,
+      "median": 980,
+      "max": 1403,
+      "samples": 7,
+      "scope": "page.goto to visible component selector; graphics availability is asserted next; not LCP"
+    },
+    "experiment_ui_ms": {
+      "min": 102,
+      "median": 186.0,
+      "p95": 379.75,
+      "max": 415,
+      "samples": 16,
+      "scope": "Click through backend response including automation/network/render overhead; not pure engine latency"
+    },
+    "coupled_evaluation_compute_ms": {
+      "median": 98.238,
+      "p95": 161.365,
+      "samples": 21,
+      "scope": "Offline fixed-panel investigate call; excludes later replay"
+    },
+    "camera_raf_cadence_ms": {
+      "median": 33.55000000074506,
+      "p95": 70.055,
+      "samples": 60,
+      "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS"
+    },
+    "heap_bytes": {
+      "before": 5446212,
+      "after": 7720928,
+      "difference": 2274716,
+      "gc_assisted_mount_cycles": 5,
+      "scope": "Diagnostic two snapshots including lazy-loaded library and context recovery; not retained-leak proof"
+    },
+    "telemetry_ui_inter_update_ms": {
+      "measured_gaps": [
+        496.5,
+        503.6
+      ],
+      "scope": "RAF-observed controlled-slider updates in a short 2 Hz playback sample, not network transport latency"
+    },
+    "gpu": {
+      "engine": "three.js r180",
+      "drawCalls": "31",
+      "triangles": "4528"
+    },
+    "javascript_compression": "gzip.compress with default compression level 9; actual byte counts, not Vite display rounding"
+  },
+  "security": {
+    "npm_known_vulnerabilities": 0,
+    "python_known_vulnerabilities": 0,
+    "audit_scope": "Same-agent adversarial engineering review, not an independent external audit",
+    "unresolved_known_critical": 0,
+    "unresolved_known_high": 0,
+    "secret_scan": "See evidence/security-scan.json for bounded staged/build/log scan; not a guarantee"
+  },
+  "model": {
+    "public_state": "UNAVAILABLE",
+    "owner_report": "Credential configured; no secret values inspected",
+    "genuine_requests_sent": 0,
+    "prepared_private_model_id": "meta-models/muse-spark-open-1026",
+    "prepared_private_endpoint": "https://inference.baseten.co/v1/chat/completions",
+    "card_free_entitlement_verified": false,
+    "new_workstation_proposals": "rules-based, not Meta; future bounded numeric-evidence export only",
+    "separate_authorization_required": true
+  },
+  "protected_refs": {
+    "main": "4f8c522b05ae3f64cb2871b8fe4601a9fe2e20e3",
+    "deployment/judge-access": "5e2ad425b4a0f5781917020460f280f9b73c9179",
+    "changed_by_this_work": false
+  },
+  "actions_not_performed": [
+    "merge",
+    "deployment",
+    "paid service/inference",
+    "history/timestamp rewrite",
+    "organizer contact"
+  ],
+  "recommendation": "GO FOR REVIEW of synthetic workstation only; real model, eligibility, authorized deployment, recording and submission remain owner gates."
+}

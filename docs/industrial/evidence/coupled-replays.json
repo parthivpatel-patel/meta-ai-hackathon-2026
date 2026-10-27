@@ -1,0 +1,51 @@
+[
+  {
+    "scenario": "normal",
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "9e0ff8006e8b7dbae748a97bfbd24645a33bc6c7e71fdea6e729011e15bd4a0e"
+  },
+  {
+    "scenario": "bearing",
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc"
+  },
+  {
+    "scenario": "misalignment",
+    "offline_cli": "Industrial replay verified: INCONCLUSIVE",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "23794ed38fb075ea57a1901209f1ed1e396bbf89eff5f99c6908e2f56e6c2d33"
+  },
+  {
+    "scenario": "cavitation",
+    "offline_cli": "Industrial replay verified: INCONCLUSIVE",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "edd698575aede8f5e2fc43d180f284877d7ce3304e3074d38fd04d5ac8a4bf83"
+  },
+  {
+    "scenario": "pressure_sensor",
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "31abafe9733511d133bc4586adcaca9a67d554d1ac39c4cecff43b0d6adfb4ae"
+  },
+  {
+    "scenario": "thermal",
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "2c9a9f3c5b7e3b447d93edcdf530ad6b39cd80cb36373672b3e8e2ad52d5f436"
+  },
+  {
+    "scenario": "process",
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "html_matches_reproduction": true,
+    "prepared_evidence_no_transport": true,
+    "report_hash": "5f224147b16a45e83d55fc77b54284548a9531a6f37ae17292511f5506a2b976"
+  }
+]

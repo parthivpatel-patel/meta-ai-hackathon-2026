@@ -1,6 +1,10 @@
 # Security
 
-## Current controls
+Current workstation controls and review: [industrial security](docs/industrial/SECURITY.md), [audit](docs/industrial/INDEPENDENT_AUDIT.md), [release boundary](docs/industrial/RELEASE_READINESS.md). Public Docker mode retains bounded body/rate/concurrency limits, restricted routes, CSP, no provider credentials and disabled inference. The new v4 routes accept only bounded simulation recipes/captures, not hardware writes, URLs or model controls. Local telemetry import is validated and never uploaded through a new ingestion API. The protected private Meta transport remains separately gated; no genuine request was made during this work.
+
+The milestone sections below preserve how controls evolved. Their earlier limitations are historical, not a substitute for the current reviewed boundaries. Do not expose the development launcher publicly or use the anonymous synthetic demo for sensitive industrial data.
+
+## Phase 0 controls (historical)
 
 - No API credentials in configuration, fixtures, or source; no inference network requests. Meta adapter fails closed, even when configured. No paid requests or payment details are needed.
 - Structured request schemas with bounded sample counts, numeric magnitude and seed bounds, finite values, ordered timestamps, allowed scenario/channel values, and forbidden extra analysis/model-input fields.

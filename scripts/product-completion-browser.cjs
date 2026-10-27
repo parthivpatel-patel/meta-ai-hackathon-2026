@@ -33,7 +33,7 @@ const fs = require("node:fs");
       const errors = [];
       page.on("pageerror", (e) => errors.push(e.message));
       const started = Date.now();
-      await page.goto(`http://127.0.0.1:${port}/demo`);
+      await page.goto(`http://127.0.0.1:${port}/demo?view=investigations`);
       await page
         .getByRole("button", { name: "Open investigation", exact: true })
         .waitFor();

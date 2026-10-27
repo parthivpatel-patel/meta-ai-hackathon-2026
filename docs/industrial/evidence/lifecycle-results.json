@@ -1,0 +1,120 @@
+{
+  "mobile": [
+    {
+      "width": 320,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 375,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 430,
+      "touch": true,
+      "violations": 0
+    }
+  ],
+  "lifecycle": {
+    "camera_raf_cadence_ms": [
+      2.199999999254942,
+      1.6000000014901161,
+      16.699999999254942,
+      16.09999999962747,
+      16.200000001117587,
+      27.399999998509884,
+      28.600000001490116,
+      35,
+      34.79999999888241,
+      40.80000000074506,
+      25.59999999962747,
+      24.90000000037253,
+      39.5,
+      21.199999999254942,
+      11.900000000372529,
+      23.300000000745058,
+      39.899999998509884,
+      23.800000000745058,
+      23.59999999962747,
+      20.09999999962747,
+      46.70000000111759,
+      22.40000000037253,
+      20.199999999254942,
+      61.5,
+      37.69999999925494,
+      37.90000000037253,
+      23,
+      25,
+      53.20000000111759,
+      52.29999999888241,
+      51.30000000074506,
+      23.59999999962747,
+      71.09999999962747,
+      66.40000000037253,
+      85,
+      32.40000000037253,
+      36.69999999925494,
+      26.800000000745058,
+      53.09999999962747,
+      14.199999999254942,
+      51.20000000111759,
+      46.29999999888241,
+      16.200000001117587,
+      27,
+      49.19999999925494,
+      29.90000000037253,
+      37.40000000037253,
+      45.69999999925494,
+      31.300000000745058,
+      82.29999999888241,
+      35.5,
+      37.30000000074506,
+      36.19999999925494,
+      70,
+      23.700000001117587,
+      26.09999999962747,
+      48.19999999925494,
+      34.70000000111759,
+      45.79999999888241,
+      5.800000000745058
+    ],
+    "telemetry_ui_updates": [
+      {
+        "elapsed_ms": 500.2000000011176,
+        "sequence": 8
+      },
+      {
+        "elapsed_ms": 996.7000000011176,
+        "sequence": 16
+      },
+      {
+        "elapsed_ms": 1500.300000000745,
+        "sequence": 24
+      }
+    ],
+    "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
+    "heap_before": 5446212,
+    "heap_after": 7720928,
+    "mount_unmount_cycles": 5,
+    "component_changes": 60,
+    "keyboard_camera_activation": true,
+    "pointer_orbit_wheel_no_accidental_selection": true,
+    "reduced_motion": true,
+    "synthetic_visibility_pause": true,
+    "context_loss_recovery": true,
+    "manual_2d_and_3d_recovery": true,
+    "gpu": {
+      "engine": "three.js r180",
+      "drawCalls": "31",
+      "triangles": "4528"
+    },
+    "short_import_reset": true
+  },
+  "controls": {
+    "repair_response": true,
+    "shutdown_reaches_stopped": true,
+    "offline_load_preserves_recording": true,
+    "reconnect_reset": true
+  }
+}

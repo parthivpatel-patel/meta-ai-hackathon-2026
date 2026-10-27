@@ -1,0 +1,13 @@
+# Telemetry and import contract
+
+Catalog sensors: RPM, motor temperature, bearing temperature, vibration RMS, suction pressure, discharge pressure, differential pressure, flow and load. Units are rpm, °C, mm/s, bar, m³/h and percent. Each reading binds its sensor ID to an immutable catalog unit and component, with value and quality; each containing frame supplies timestamp, sequence and source mode. Quality VALID/MISSING/OUT_OF_RANGE is separate from SIMULATED/REPLAYED_SYNTHETIC/REPLAYED_UNVERIFIED provenance.
+
+Simulation responses are validated in the browser for version/machine, bounds, geometry/sensor associations, monotonic timestamps, ordered sequences and numeric validity. Private truth is not returned. A run contains320–600 frames, nine readings each; the chart retains at most120 visible samples. Browser playback is2Hz with bounded1/8/32-sample increments. There is no server polling loop, network streaming claim or unbounded queue.
+
+Charts label units, vertical bounds and acquisition-window timestamps. The vertical scale follows visible samples and is disclosed; pause to inspect a fixed window. Amber diamonds identify display watch/out-of-range values, distinct from ordinary instrument dots. Missing values are omitted and quality remains explicit in the inspector. Imported recordings use their own timestamps rather than claiming the simulation interval. Counterfactual plots identify captured-before and actual simulated after-test timestamps.
+
+Portable telemetry JSON uses schema `forge-telemetry-1`, machine_id `pump-104`, declared_source `synthetic` or `operator_recorded_unverified`, and samples containing timestamp/sensor_id/component_id/value/unit. Missing readings are represented by null; absent instruments at a timestamp are filled as missing in browser replay. Imports never confer source authenticity or model verification.
+
+Local browser imports and the offline Python validator are bounded to1MiB,5400 readings and600 timestamps. Sensor IDs, component associations, units, finite values, valid timezone-aware calendar dates, ordering and duplicates are checked. CSV supports the canonical unquoted columns `timestamp,sensor_id,component_id,value,unit`, associated with pump-104; general quoted/multiline CSV is not supported by the browser parser. Prefer JSON for portable round trips. Browser-local files are not uploaded to a telemetry-ingestion API.
+
+A `ReadOnlyAdapter` protocol defines future sample iteration. OPC UA, MQTT, HTTPS equipment ingestion and every hardware write remain **unimplemented and unavailable**. Connected deployment would require separate authorization, network/credential review, sensor validation and industrial safety acceptance.

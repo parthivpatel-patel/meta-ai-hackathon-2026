@@ -1,0 +1,18 @@
+{
+  "schema": "forge-bounded-secret-review-1",
+  "checked_utc": "2026-10-27T23:16:20.537980+00:00",
+  "text_inputs_scanned": 120,
+  "bytes_scanned": 5266796,
+  "patterns": [
+    "private_key",
+    "github_token",
+    "aws_access_key",
+    "huggingface_token",
+    "openai_token",
+    "literal_authorization",
+    "literal_baseten_assignment"
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Final staged text changes, compiled frontend text/assets and nine own local acceptance-container logs. Known synthetic public-key refusal fixture excluded. No process environment, secret file or credential value inspected. Pattern checks plus source review are not a comprehensive secret-detection guarantee."
+}

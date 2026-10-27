@@ -29,7 +29,7 @@ const fs = require("node:fs");
       const errors = [];
       page.on("pageerror", (e) => errors.push(e.message));
       await page.emulateMedia({ reducedMotion: "reduce" });
-      await page.goto(base + "/demo");
+      await page.goto(base + "/demo?view=investigations");
       await page
         .getByRole("button", { name: "Open investigation", exact: true })
         .waitFor();

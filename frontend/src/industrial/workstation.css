@@ -1,0 +1,222 @@
+.industrial {
+  font-family: "Geist Sans", system-ui, sans-serif;
+  color: #173d41;
+  background: #f3f6f5;
+  padding: 24px;
+  max-width: 1600px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.industrial * {
+  box-sizing: border-box;
+}
+.industrial h1 {
+  font-size: 27px;
+  margin: 4px 0;
+}
+.industrial h2 {
+  font-size: 20px;
+}
+.industrial h3 {
+  font-size: 17px;
+}
+.station-header,
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+.station-header {
+  border-bottom: 1px solid #cbd8d7;
+  margin-bottom: 20px;
+}
+.station-header > span {
+  padding: 10px;
+  background: #e1eeea;
+  border: 1px solid #97b2ac;
+}
+.station-controls,
+.station-tabs,
+.machine-tools {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.industrial button,
+.industrial select,
+.industrial input[type="file"] {
+  font: inherit;
+  border: 1px solid #a3b9b6;
+  background: #fff;
+  color: #173d41;
+  border-radius: 4px;
+  padding: 9px 13px;
+  min-height: 44px;
+  cursor: pointer;
+}
+.industrial button:hover,
+.industrial button[aria-current="page"] {
+  background: #dceee9;
+}
+.industrial button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.industrial :focus-visible {
+  outline: 3px solid #075c54;
+  outline-offset: 3px;
+}
+.industrial label {
+  display: block;
+}
+.industrial select {
+  max-width: 100%;
+  display: block;
+}
+.machine-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 16px;
+}
+.station-panel {
+  background: white;
+  border: 1px solid #cbd8d7;
+  padding: 20px;
+  margin-bottom: 16px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.industrial table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+.industrial th,
+.industrial td {
+  text-align: left;
+  padding: 9px 6px;
+  border-bottom: 1px solid #d5dfdf;
+  vertical-align: top;
+}
+.industrial caption {
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.industrial svg {
+  width: 100%;
+  display: block;
+}
+.industrial input[type="range"] {
+  width: 100%;
+  min-height: 36px;
+}
+.industrial pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 500px;
+  overflow: auto;
+  background: #f4f7f6;
+  padding: 16px;
+  font-size: 12px;
+}
+.industrial .muted {
+  color: #536b6f;
+  font-size: 13px;
+}
+.industrial figure {
+  margin: 16px 0;
+}
+.industrial summary {
+  cursor: pointer;
+  min-height: 30px;
+}
+.station-error {
+  padding: 14px;
+  background: #fff0ed;
+  border: 1px solid #b54e39;
+}
+.workstation-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #173d41;
+  color: #fff;
+  gap: 10px;
+  align-items: center;
+}
+.workstation-entry button {
+  border: 1px solid #afcdc7;
+  padding: 10px 15px;
+  background: #fff;
+  color: #173d41;
+  font: inherit;
+  min-height: 44px;
+}
+@media (max-width: 800px) {
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+  .industrial {
+    padding: 12px;
+  }
+  .station-header {
+    display: block;
+  }
+  .industrial h1 {
+    font-size: 23px;
+  }
+  .station-panel {
+    padding: 14px;
+  }
+  .machine-tools button {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .panel-title {
+    display: block;
+  }
+  .industrial table {
+    font-size: 13px;
+  }
+  .industrial th,
+  .industrial td {
+    padding: 6px 4px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .industrial * {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+.workstation-entry {
+  font-family: "Geist Sans", system-ui, sans-serif;
+}
+.industrial figure {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 18px);
+  padding: 12px;
+  border: 1px solid #d5dfdf;
+  margin: 8px;
+}
+.industrial figure svg {
+  height: 130px;
+}
+.chart-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #536b6f;
+}
+@media (max-width: 800px) {
+  .industrial figure {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+  }
+}

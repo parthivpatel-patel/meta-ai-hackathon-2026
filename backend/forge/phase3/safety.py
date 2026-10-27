@@ -97,6 +97,7 @@ def public_path(method: str, path: str) -> bool:
                 "/api/v3/ready",
                 "/api/v3/capabilities",
                 "/api/v3/scenarios",
+                "/api/v4/catalog",
             )
             or bool(re.fullmatch(r"/assets/[A-Za-z0-9][A-Za-z0-9_.-]*", path))
             or bool(
@@ -106,7 +107,8 @@ def public_path(method: str, path: str) -> bool:
             )
         )
     return method == "POST" and (
-        path == "/api/v3/sessions"
+        path in ("/api/v4/simulate", "/api/v4/investigate", "/api/v4/report.html")
+        or path == "/api/v3/sessions"
         or bool(re.fullmatch(r"/api/v3/sessions/[a-f0-9]{32}/advance", path))
     )
 

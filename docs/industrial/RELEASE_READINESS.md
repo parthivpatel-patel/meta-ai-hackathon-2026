@@ -1,0 +1,11 @@
+# Release boundary and readiness
+
+Review branch `feature/forge-industrial-workstation`, exact final SHA in the handoff. Base `bf500f04ca865568cb28fb73f83ccc7a197aa360` remains preserved. Main, `deployment/judge-access`, release history and previous evidence must not be rewritten. No merge or deployment is authorized by this implementation.
+
+The existing Docker architecture remains: one FastAPI process, compiled local React assets, restricted public launcher, no provider keys, inference disabled, zero request budget, bounded CPU/memory and ephemeral SQLite for legacy investigations. The new stateless simulator needs no additional service, GPU or database. Connected mode is unavailable. The existing launcher refuses credential-bearing public startup.
+
+Only after explicit owner approval of a reviewed exact SHA: confirm the existing Render service is Free, auto-deploy off, source/settings unchanged and no paid resource/provider keys; export required reports; use the supported specific-commit manual deploy control if available; verify actual deployed SHA, HTTPS readiness, anonymous new workstation plus legacy library, graphics/fallback, scenarios/experiments/exports/replay and public API restrictions. If the exact commit cannot be selected, stop rather than switching branch heads silently. Preserve known-good rollback commits and verify the actual live artifact/settings; SQLite sessions may not survive.
+
+The owner reports a configured Baseten credential. A separate explicitly authorized bounded genuine smoke and subsequent evaluation remain unexecuted, with the exact eligible target and protected gates preserved. No unrestricted or paid request was made. Development-window eligibility remains unresolved; the original timing evidence and unsent organizer draft remain unchanged. Final recording/submission are owner actions. A synthetic public workstation is not a substitute for genuine eligible-model participation or industrial qualification.
+
+Recommendation: GO FOR REVIEW of the implemented synthetic workstation, with the final exact SHA, regression and CI conclusions in the handoff. GO FOR REVIEW is not physical-industrial deployment certification or permission to deploy.

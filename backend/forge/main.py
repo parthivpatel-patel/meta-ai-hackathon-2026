@@ -208,3 +208,7 @@ if (_dist / "assets").is_dir():
     app.mount(
         "/assets", StaticFiles(directory=_dist / "assets"), name="dashboard_assets"
     )
+
+from .industrial.routes import router as industrial_router
+
+app.include_router(industrial_router)

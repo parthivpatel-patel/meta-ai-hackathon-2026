@@ -1,0 +1,40 @@
+[
+  {
+    "file": "confounded.json",
+    "result": "Phase 3 replay verified: INCONCLUSIVE []"
+  },
+  {
+    "file": "insufficient.json",
+    "result": "Phase 3 replay verified: ABSTAIN []"
+  },
+  {
+    "file": "misleading_sensor.json",
+    "result": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']"
+  },
+  {
+    "file": "noisy_multifault.json",
+    "result": "Phase 3 replay verified: INCONCLUSIVE ['process-vibration']"
+  },
+  {
+    "file": "normal.json",
+    "result": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['normal']"
+  },
+  {
+    "file": "temperature_response.json",
+    "result": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-temperature']"
+  },
+  {
+    "file": "vibration_response.json",
+    "result": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-vibration']"
+  },
+  {
+    "file": "original-fixture/insufficient.json",
+    "result": "Phase 3 replay verified: ABSTAIN []",
+    "baseline_bytes_unchanged": true
+  },
+  {
+    "file": "original-fixture/misleading_sensor.json",
+    "result": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+    "baseline_bytes_unchanged": true
+  }
+]

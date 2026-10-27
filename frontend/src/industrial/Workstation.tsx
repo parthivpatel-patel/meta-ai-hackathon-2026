@@ -1,0 +1,993 @@
+import {
+  Component as ReactComponent,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+import { boundedFetch } from "../investigation/useInvestigation";
+import {
+  causeName,
+  resultLabel,
+  testName,
+} from "../investigation/presentation";
+import { Machine } from "./Machine";
+import {
+  canonical,
+  parseCSV,
+  validateRecording,
+  validateSimulation,
+  type Recording,
+  type Frame,
+  type Recipe,
+  type Report,
+} from "./contracts";
+import "./workstation.css";
+const initial: Recipe = {
+  version: "coupled-pump-1",
+  scenario: "normal",
+  seed: 2026,
+  steps: 360,
+  onset: 280,
+  sample_period_seconds: 1,
+  actions: [],
+};
+const displayWatch: Record<string, (v: number) => boolean> = {
+  motor_temperature: (v) => v > 70,
+  bearing_temperature: (v) => v > 60,
+  vibration: (v) => v > 2.4,
+  discharge_pressure: (v) => v < 5.6 || v > 6.4,
+  suction_pressure: (v) => v < 0.8,
+  flow: (v) => v < 50,
+  differential_pressure: (v) => v < 4.5,
+  load: (v) => v > 105,
+};
+class RenderBoundary extends ReactComponent<
+  { children: ReactNode },
+  { failed: boolean }
+> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    return this.state.failed ? (
+      <p role="alert">
+        Machine rendering failed. Use the component list and telemetry below;
+        reload to retry graphics.
+      </p>
+    ) : (
+      this.props.children
+    );
+  }
+}
+function download(name: string, text: string, type = "application/json") {
+  const a = document.createElement("a");
+  const u = URL.createObjectURL(new Blob([text], { type }));
+  a.href = u;
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(u), 1000);
+}
+export default function Workstation() {
+  const [recording, setRecording] = useState<Recording | null>(null);
+  const [recipe, setRecipe] = useState(initial);
+  const [selected, setSelected] = useState("pump");
+  const [cursor, setCursor] = useState(0);
+  const [playing, setPlaying] = useState(false);
+  const [speed, setSpeed] = useState(8);
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [replayed, setReplayed] = useState(false);
+  const [report, setReport] = useState<Report | null>(null);
+  const [graphics2D, setGraphics2D] = useState(false);
+  const [preview, setPreview] = useState<Frame | null>(null);
+  const [tab, setTab] = useState("Overview");
+  const [operatorEvents, setOperatorEvents] = useState<
+    { id: string; sequence: number; kind: string; component: string }[]
+  >([]);
+  const eventNumber = useRef(0);
+  function audit(kind: string) {
+    const e = {
+      id: "operator-" + eventNumber.current++,
+      sequence: cursor,
+      kind,
+      component: selected,
+    };
+    setOperatorEvents((old) => [...old.slice(-99), e]);
+  }
+  const [importHash, setImportHash] = useState("");
+  const [visible, setVisible] = useState(!document.hidden);
+  const request = useRef<AbortController | null>(null);
+  async function post<T>(url: string, body: unknown): Promise<T> {
+    const response = await boundedFetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: request.current?.signal,
+    });
+    if (!response.ok)
+      throw Error(
+        response.status === 429
+          ? "Request limit reached. Wait one minute before retrying."
+          : "The simulation request was rejected. Check the input and try again.",
+      );
+    return response.json();
+  }
+  async function load(next: Recipe) {
+    request.current?.abort();
+    const abort = new AbortController();
+    request.current = abort;
+    setBusy(true);
+    setError("");
+    setPlaying(false);
+    try {
+      const data = validateSimulation(
+        await post<unknown>("/api/v4/simulate", next),
+      );
+      if (abort.signal.aborted) return false;
+      setRecording(data);
+      setOperatorEvents([]);
+      eventNumber.current = 0;
+      setRecipe(next);
+      setCursor(0);
+      setReport(null);
+      setPreview(null);
+      setReplayed(false);
+      setImportHash("");
+      return true;
+    } catch (e) {
+      if (!abort.signal.aborted)
+        setError(
+          e instanceof Error
+            ? e.message
+            : "Simulation unavailable. Retry loading.",
+        );
+      return false;
+    } finally {
+      if (!abort.signal.aborted) setBusy(false);
+    }
+  }
+  useEffect(() => {
+    void load(initial);
+    return () => request.current?.abort();
+  }, []);
+  useEffect(() => {
+    const visibility = () => {
+      setVisible(!document.hidden);
+      if (document.hidden) setPlaying(false);
+    };
+    document.addEventListener("visibilitychange", visibility);
+    return () => document.removeEventListener("visibilitychange", visibility);
+  }, []);
+  useEffect(() => {
+    if (!playing || !visible || !recording) return;
+    const timer = setInterval(
+      () =>
+        setCursor((c) => {
+          const next = Math.min(recording.frames.length - 1, c + speed);
+          if (next === recording.frames.length - 1) setPlaying(false);
+          return next;
+        }),
+      500,
+    );
+    return () => clearInterval(timer);
+  }, [playing, visible, recording, speed]);
+  const frame = preview || recording?.frames[cursor];
+  const component = recording?.components.find((c) => c.id === selected);
+  const sensors =
+    recording?.sensors.filter((s) => component?.sensors.includes(s.id)) || [];
+  function health(id: string) {
+    const c = recording?.components.find((p) => p.id === id);
+    if (!frame || !c?.sensors.length) return "No instrument";
+    if (["STARTING", "STOPPED", "STOPPING"].includes(frame.state))
+      return "Transition / stopped";
+    const readings = frame.readings.filter((r) =>
+      c.sensors.includes(r.sensor_id),
+    );
+    if (readings.some((r) => r.quality === "MISSING"))
+      return "Data unavailable";
+    return readings.some(
+      (r) =>
+        r.value !== null &&
+        (r.quality === "OUT_OF_RANGE" || displayWatch[r.sensor_id]?.(r.value)),
+    )
+      ? "Watch: unusual readings"
+      : "Within display thresholds";
+  }
+  async function diagnose(next = false) {
+    if (!recording || busy || (!next && preview)) return;
+    setBusy(true);
+    setPlaying(false);
+    setError("");
+    try {
+      const body =
+        next && report
+          ? {
+              ...report.request,
+              experiments: Math.min(4, report.trials.length + 1),
+            }
+          : {
+              recipe,
+              context: {
+                component_id: selected,
+                at_sequence: Math.min(cursor, 359),
+              },
+              experiments: 0,
+            };
+      const response = await post<Report>("/api/v4/investigate", body);
+      setReport(response);
+      audit(
+        next
+          ? "Experiment and independent verification: " +
+              response.decision.status
+          : "Investigation captured",
+      );
+      setPreview(response.events.at(-1)?.after_frame || null);
+      setTab("Investigation");
+    } catch (e) {
+      setError(
+        e instanceof Error ? e.message : "Investigation failed. Try again.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function importFile(file: File) {
+    if (!recording) return;
+    if (file.size > 1048576) {
+      setError("Import exceeds 1 MiB. Reduce the file first.");
+      return;
+    }
+    setPlaying(false);
+    setError("");
+    setBusy(true);
+    try {
+      const text = await file.text();
+      const raw = file.name.toLowerCase().endsWith(".csv")
+        ? parseCSV(text)
+        : JSON.parse(text);
+      if (raw?.schema === "forge-industrial-report-1") {
+        const verified = await post<Report>("/api/v4/investigate", raw.request);
+        if (canonical(raw) !== canonical(verified))
+          throw Error(
+            "Investigation report does not match independent reproduction",
+          );
+        if (!(await load(raw.request.recipe)))
+          throw Error(
+            "Report import could not reproduce the simulation. Retry after recovery.",
+          );
+        setReport(verified);
+        setCursor(raw.request.context.at_sequence);
+        setSelected(raw.request.context.component_id);
+        setTab("Investigation");
+        return;
+      }
+      const frames = validateRecording(raw, recording.sensors);
+      setRecording({
+        ...recording,
+        frames,
+        events: [],
+        limitations:
+          raw.declared_source === "synthetic"
+            ? "Imported synthetic recording. No hardware connection or intervention oracle."
+            : "Imported operator recording, source and calibration unverified. No counterfactual oracle.",
+      });
+      setCursor(0);
+      setOperatorEvents([]);
+      eventNumber.current = 0;
+      setPreview(null);
+      setReport(null);
+      setReplayed(true);
+      const digest = await crypto.subtle.digest(
+        "SHA-256",
+        new TextEncoder().encode(text),
+      );
+      setImportHash(
+        [...new Uint8Array(digest)]
+          .map((v) => v.toString(16).padStart(2, "0"))
+          .join(""),
+      );
+    } catch (e) {
+      setError(
+        e instanceof Error
+          ? e.message
+          : "Import failed. Choose a valid JSON or CSV recording.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  }
+  function exportTelemetry() {
+    if (!recording) return;
+    audit("Telemetry export initiated");
+    const samples = recording.frames.flatMap((f) =>
+      f.readings.map((r) => {
+        const s = recording.sensors.find((s) => s.id === r.sensor_id)!;
+        return {
+          timestamp: f.timestamp,
+          sensor_id: s.id,
+          component_id: s.component_id,
+          value: r.value,
+          unit: s.unit,
+        };
+      }),
+    );
+    download(
+      "forge-telemetry.json",
+      JSON.stringify({
+        schema: "forge-telemetry-1",
+        machine_id: "pump-104",
+        declared_source:
+          replayed && recording.frames[0]?.source !== "REPLAYED_SYNTHETIC"
+            ? "operator_recorded_unverified"
+            : "synthetic",
+        samples,
+        operator_events: operatorEvents,
+      }),
+    );
+  }
+  if (!recording || !frame)
+    return (
+      <main className="industrial">
+        <h1>Industrial intelligence workstation</h1>
+        <p role="status">
+          {busy
+            ? "Loading the simulated machine…"
+            : "Simulation is not loaded."}
+        </p>
+        {error && <p role="alert">{error}</p>}
+        <button onClick={() => void load(initial)}>Retry simulation</button>
+      </main>
+    );
+  return (
+    <main className="industrial">
+      <header className="station-header">
+        <div>
+          <p>FORGE / PUMP-104</p>
+          <h1>Industrial intelligence workstation</h1>
+          <p>
+            Simulation only · Connected equipment unavailable · Rules-based
+            proposals, not Meta
+          </p>
+        </div>
+        <span role="status">
+          {busy
+            ? "Working…"
+            : preview
+              ? "Counterfactual test result"
+              : playing
+                ? replayed
+                  ? "Replaying"
+                  : "Simulation running"
+                : "Paused / ready"}
+        </span>
+      </header>
+      {error && (
+        <div role="alert" className="station-error">
+          {error}
+          <button onClick={() => setError("")}>Dismiss</button>
+        </div>
+      )}
+      <div className="station-controls">
+        <label>
+          Scenario
+          <select
+            aria-label="Machine scenario"
+            value={recipe.scenario}
+            disabled={busy}
+            onChange={(e) =>
+              void load({ ...initial, scenario: e.target.value })
+            }
+          >
+            {Object.entries({
+              normal: "Normal operation",
+              bearing: "Bearing degradation",
+              misalignment: "Shaft misalignment",
+              cavitation: "Cavitation-like conditions",
+              pressure_sensor: "Pressure sensor offset",
+              thermal: "Cooling degradation",
+              process: "Process pressure disturbance",
+            }).map(([id, name]) => (
+              <option value={id} key={id}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Sampling interval
+          <select
+            aria-label="Simulation sampling interval"
+            value={recipe.sample_period_seconds}
+            disabled={busy || replayed}
+            onChange={(e) =>
+              void load({
+                ...recipe,
+                sample_period_seconds: Number(e.target.value) as 1 | 2 | 5,
+                actions: [],
+              })
+            }
+          >
+            {[1, 2, 5].map((n) => (
+              <option value={n} key={n}>
+                {n} seconds
+              </option>
+            ))}
+          </select>
+        </label>
+        <button
+          disabled={busy || playing || !!preview}
+          onClick={() => {
+            if (cursor === recording.frames.length - 1) setCursor(0);
+            setPlaying(true);
+            audit("Playback started");
+          }}
+        >
+          {replayed
+            ? "Start recorded replay / Resume"
+            : "Start simulation / Resume"}
+        </button>
+        <button
+          disabled={!playing}
+          onClick={() => {
+            setPlaying(false);
+            audit("Playback paused");
+          }}
+        >
+          Pause
+        </button>
+        <button
+          disabled={
+            busy ||
+            replayed ||
+            !!preview ||
+            !!recipe.actions.length ||
+            cursor < 1
+          }
+          onClick={async () => {
+            const next = {
+              ...recipe,
+              steps: 600,
+              actions: [
+                {
+                  sequence: Math.min(cursor + 1, 599),
+                  kind: "stop",
+                },
+              ],
+            };
+            if (await load(next)) {
+              setCursor(cursor);
+              setPlaying(true);
+            }
+          }}
+        >
+          Simulate shutdown
+        </button>
+        <button
+          disabled={
+            busy ||
+            replayed ||
+            !!preview ||
+            cursor < recipe.onset ||
+            recipe.actions.length > 0
+          }
+          onClick={async () => {
+            const old = cursor;
+            const loaded = await load({
+              ...recipe,
+              steps: 600,
+              actions: [{ sequence: old + 1, kind: "reset_fault" }],
+            });
+            if (loaded) {
+              setCursor(old);
+              setPlaying(true);
+            }
+          }}
+        >
+          Apply simulated repair
+        </button>
+        <button
+          disabled={busy}
+          onClick={() => {
+            if (replayed) {
+              setPlaying(false);
+              setCursor(0);
+              setPreview(null);
+            } else void load({ ...recipe, actions: [] });
+          }}
+        >
+          {replayed ? "Reset recording" : "Reset scenario"}
+        </button>
+        <button
+          disabled={busy}
+          onClick={() => {
+            setPreview(null);
+            setCursor(0);
+            setPlaying(true);
+          }}
+        >
+          Replay from start
+        </button>
+        <label>
+          Playback speed
+          <select
+            aria-label="Simulation playback speed"
+            value={speed}
+            onChange={(e) => setSpeed(Number(e.target.value))}
+          >
+            {[1, 8, 32].map((n) => (
+              <option key={n} value={n}>
+                {n} samples / tick
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <nav className="station-tabs" aria-label="Workstation views">
+        {["Overview", "Telemetry", "Investigation", "Evidence", "Replay"].map(
+          (t) => (
+            <button
+              key={t}
+              aria-current={tab === t ? "page" : undefined}
+              onClick={() => setTab(t)}
+            >
+              {t}
+            </button>
+          ),
+        )}
+      </nav>
+      <div className="machine-grid">
+        <section className="station-panel">
+          <div className="panel-title">
+            <h2>Pump and motor assembly</h2>
+            <span>
+              {frame.state.replaceAll("_", " ")} · sample {frame.sequence}
+            </span>
+          </div>
+          <button onClick={() => setGraphics2D((v) => !v)}>
+            {graphics2D ? "Use 3D machine" : "Use 2D inspection"}
+          </button>
+          <RenderBoundary>
+            <Machine
+              force2D={graphics2D}
+              components={recording.components}
+              selected={selected}
+              warnings={recording.components
+                .filter((c) => health(c.id).startsWith("Watch"))
+                .map((c) => c.id)}
+              onSelect={setSelected}
+              frame={frame}
+            />
+          </RenderBoundary>
+          <label>
+            Recording position
+            <input
+              aria-label="Machine recording position"
+              type="range"
+              min="0"
+              max={recording.frames.length - 1}
+              value={cursor}
+              onChange={(e) => {
+                setPlaying(false);
+                setPreview(null);
+                setCursor(Number(e.target.value));
+              }}
+            />
+          </label>
+          <p>
+            <time>{frame.timestamp}</time> · {frame.source} · Sequence{" "}
+            {frame.sequence}
+          </p>
+          {preview && (
+            <button onClick={() => setPreview(null)}>
+              Return to observed simulation
+            </button>
+          )}
+        </section>
+        <aside className="station-panel">
+          <h2>Component inspector</h2>
+          <label>
+            Select component
+            <select
+              aria-label="Machine component"
+              value={selected}
+              onChange={(e) => setSelected(e.target.value)}
+            >
+              {recording.components.map((c) => (
+                <option value={c.id} key={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <h3>{component?.name}</h3>
+          <p>
+            {health(selected)}. Display thresholds are not a verified diagnosis.
+          </p>
+          <table>
+            <caption>Associated instruments</caption>
+            <thead>
+              <tr>
+                <th>Sensor</th>
+                <th>Value</th>
+                <th>Quality</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sensors.map((s) => {
+                const r = frame.readings.find((r) => r.sensor_id === s.id);
+                return (
+                  <tr key={s.id}>
+                    <th scope="row">{s.id.replaceAll("_", " ")}</th>
+                    <td>
+                      {r?.value == null
+                        ? "Missing"
+                        : r.value.toFixed(2) + " " + s.unit}
+                    </td>
+                    <td>{r?.quality || "MISSING"}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {!sensors.length && (
+            <p>No sensor is mapped to this structural component.</p>
+          )}
+          <button
+            disabled={
+              busy ||
+              replayed ||
+              !!preview ||
+              cursor < 319 ||
+              recipe.actions.length > 0 ||
+              !sensors.length
+            }
+            onClick={() => void diagnose()}
+          >
+            Investigate selected component
+          </button>
+          <p className="muted">
+            Capture requires samples through sequence319 with no manual actions.
+            Return to observed simulation before capturing a new investigation.
+            Use the position slider to inspect the full window. Recorded imports
+            have no intervention oracle.
+          </p>
+          <details>
+            <summary>Component provenance</summary>
+            <p>
+              {component?.provenance}. Parent: pump-104; stable ID: {selected}.
+              All machine controls modify simulation/replay only.
+            </p>
+          </details>
+        </aside>
+      </div>
+      {(tab === "Overview" || tab === "Telemetry") && (
+        <section className="station-panel">
+          <h2>
+            Telemetry ·{" "}
+            {preview
+              ? "counterfactual experiment"
+              : replayed
+                ? "imported replay"
+                : "simulated recording"}
+          </h2>
+          <p>
+            {replayed
+              ? "Imported acquisition timestamps determine the time axis."
+              : `${recipe.sample_period_seconds} second simulation step.`}{" "}
+            Playback is bounded to {recording.frames.length} frames; history
+            plots show at most 120 samples. Camera motion does not advance
+            physics. Amber diamonds mark display watch or out-of-range readings;
+            missing readings are omitted. Watch conditions do not establish a
+            failure. The displayed vertical range follows the visible samples.
+          </p>
+          {sensors.slice(0, 3).map((s) => {
+            const rows = preview
+              ? [
+                  recording.frames[
+                    report?.request.context.at_sequence ?? cursor
+                  ],
+                  preview,
+                ]
+              : recording.frames.slice(Math.max(0, cursor - 119), cursor + 1);
+            const values = rows.flatMap((f) => {
+              const v = f.readings.find((r) => r.sensor_id === s.id)?.value;
+              return v == null ? [] : [v];
+            });
+            const low = values.length ? Math.min(...values) : 0;
+            const high = values.length ? Math.max(...values) : 1;
+            const span = Math.max(high - low, 0.01);
+            return (
+              <figure key={s.id}>
+                <figcaption>
+                  {s.id.replaceAll("_", " ")} ({s.unit}) · displayed range{" "}
+                  {low.toFixed(2)}–{high.toFixed(2)}
+                </figcaption>
+                <p>
+                  {preview ? "Captured before / counterfactual after" : "Acquisition window"}:
+                  {" "}{rows[0]?.timestamp} → {rows.at(-1)?.timestamp}
+                </p>
+                <svg
+                  viewBox="0 0 600 120"
+                  role="img"
+                  aria-label={`${s.id} time series in ${s.unit}; range ${low.toFixed(2)} to ${high.toFixed(2)}; acquisition timestamps above`}
+                >
+                  <path d="M45 10V100H600" stroke="#aab7b8" fill="none" />
+                  <text x="0" y="18" fontSize="11" fill="#24494e">{high.toFixed(2)}</text>
+                  <text x="0" y="100" fontSize="11" fill="#24494e">{low.toFixed(2)}</text>
+                  {rows.map((f, i) => {
+                    const reading = f.readings.find(
+                      (r) => r.sensor_id === s.id,
+                    );
+                    const v = reading?.value;
+                    if (v == null) return null;
+                    const x = (i / Math.max(1, rows.length - 1)) * 550 + 45;
+                    const y = 100 - ((v - low) / span) * 85;
+                    const watch = reading?.quality === "OUT_OF_RANGE" || displayWatch[s.id]?.(v);
+                    const label = `${f.timestamp}: ${v} ${s.unit}; ${reading?.quality}${watch ? "; display watch" : ""}`;
+                    if (watch) return (
+                      <path key={f.sequence} d={`M${x} ${y - 4}l4 4 -4 4 -4 -4Z`} fill="#985000">
+                        <title>{label}</title>
+                      </path>
+                    );
+                    return (
+                      <circle
+                        key={f.sequence}
+                        cx={x}
+                        cy={y}
+                        r="2"
+                        fill="#15776e"
+                      ><title>{label}</title></circle>
+                    );
+                  })}
+                </svg>
+              </figure>
+            );
+          })}
+        </section>
+      )}
+      {tab === "Investigation" && (
+        <section className="station-panel">
+          <h2>Investigation workspace</h2>
+          {!report ? (
+            <p>
+              Select an instrumented component at sequence 319 or later, then
+              capture evidence. No model request is required.
+            </p>
+          ) : (
+            <>
+              <p>
+                Captured from {report.request.context.component_id} at sequence
+                {report.request.context.at_sequence}; evidence window{" "}
+                {report.evidence_window.first_sequence}–
+                {report.evidence_window.last_sequence}.
+              </p>
+              <h3>{resultLabel(report.decision.status)}</h3>
+              <p>
+                {report.decision.findings.map(causeName).join("; ") ||
+                  "No supported finding yet."}
+              </p>
+              <p>{report.decision.reasons.join(" ")}</p>
+              <table>
+                <caption>
+                  Competing explanations · ordering is not probability
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Evidence status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {report.ranking.map((r) => (
+                    <tr key={r.hypothesis_id}>
+                      <td>
+                        <details>
+                          <summary>{causeName(r.hypothesis_id)}</summary>
+                          <p>
+                            {
+                              report.hypotheses.hypotheses.find(
+                                (h) => h.hypothesis_id === r.hypothesis_id,
+                              )?.rationale
+                            }
+                          </p>
+                          <p>References: {r.evidence_refs.join(", ")}</p>
+                        </details>
+                      </td>
+                      <td>{resultLabel(r.evidence_status)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {report.plan && (
+                <>
+                  <h3>Proposed test: {testName(report.plan.kind)}</h3>
+                  <p>{report.plan.reason}</p>
+                  <ul>
+                    {report.plan.competing_predictions.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
+                  <button disabled={busy} onClick={() => void diagnose(true)}>
+                    Run proposed simulated test
+                  </button>
+                </>
+              )}
+              <h3>Independent verification</h3>
+              <p>{report.decision.uncertainty}</p>
+              <p>
+                Numerical channel support is not unique identification of a
+                physical failure. Tests use synthetic before/after instrument
+                replicates.
+              </p>
+              <ol>
+                {report.events.map((e) => (
+                  <li key={e.id}>
+                    <button
+                      onClick={() => {
+                        setPlaying(false);
+                        setPreview(e.after_frame);
+                      }}
+                    >
+                      {testName(e.action)} · {resultLabel(e.verification)} ·
+                      inspect machine response
+                    </button>
+                  </li>
+                ))}
+              </ol>
+              <button
+                onClick={() =>
+                  download(
+                    "forge-industrial-report.json",
+                    JSON.stringify(report, null, 2),
+                  )
+                }
+              >
+                Export investigation JSON
+              </button>
+              <button
+                disabled={busy}
+                onClick={async () => {
+                  setBusy(true);
+                  setError("");
+                  try {
+                    const response = await boundedFetch("/api/v4/report.html", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(report.request),
+                    });
+                    if (!response.ok)
+                      throw Error("HTML export failed. Wait and retry.");
+                    download(
+                      "forge-industrial-report.html",
+                      await response.text(),
+                      "text/html",
+                    );
+                  } catch (e) {
+                    setError(
+                      e instanceof Error ? e.message : "Export unavailable",
+                    );
+                  } finally {
+                    setBusy(false);
+                  }
+                }}
+              >
+                Export investigation HTML
+              </button>
+              <p>
+                Generate verified HTML offline: from backend run{" "}
+                <code>
+                  uv run --frozen python -m forge.industrial.replay report.json
+                  --html report.html
+                </code>
+                . Existing investigation-library HTML/JSON exports remain
+                available.
+              </p>
+              <details>
+                <summary>Complete evidence and limitations</summary>
+                <pre>{JSON.stringify(report, null, 2)}</pre>
+              </details>
+            </>
+          )}
+        </section>
+      )}
+      {(tab === "Overview" || tab === "Replay") && (
+        <section className="station-panel">
+          <h2>Fault and event timeline</h2>
+          <p>
+            Scenario events identify injected simulation conditions, not
+            independently diagnosed root causes.
+          </p>
+          <ol>
+            {[...recording.events, ...operatorEvents]
+              .sort((a, b) => a.sequence - b.sequence)
+              .map((e) => (
+                <li key={e.id}>
+                  <button
+                    onClick={() => {
+                      setPlaying(false);
+                      setPreview(null);
+                      setCursor(e.sequence);
+                      setSelected(e.component);
+                    }}
+                  >
+                    sample {e.sequence} · {e.kind.replaceAll("_", " ")} ·{" "}
+                    {e.component}
+                  </button>
+                </li>
+              ))}
+          </ol>
+          <button
+            disabled={busy || replayed}
+            onClick={() => {
+              setSelected(
+                (
+                  {
+                    bearing: "bearing",
+                    misalignment: "coupling",
+                    cavitation: "impeller",
+                    pressure_sensor: "pressure_sensor",
+                    thermal: "cooling",
+                    process: "pump",
+                  } as Record<string, string>
+                )[recipe.scenario] || "motor",
+              );
+              setCursor(319);
+              setPlaying(false);
+            }}
+          >
+            Focus scenario window
+          </button>
+        </section>
+      )}
+      {(tab === "Evidence" || tab === "Replay") && (
+        <section className="station-panel">
+          <h2>Evidence and portable replay</h2>
+          <p>{recording.limitations}</p>
+          <button onClick={exportTelemetry}>Export telemetry JSON</button>
+          <label>
+            Import bounded telemetry CSV/JSON or investigation JSON
+            <input
+              aria-label="Import recording"
+              type="file"
+              accept=".json,.csv"
+              disabled={busy}
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) void importFile(f);
+                e.target.value = "";
+              }}
+            />
+          </label>
+          <p>
+            Maximum 1 MiB, 600 timestamps and 5400 instrument samples. Mapping,
+            units and time order are validated. Imported source/calibration is
+            unverified; imports never enable connected mode or model calls.
+          </p>
+          {importHash && (
+            <p>
+              Imported file SHA-256: <code>{importHash}</code>
+            </p>
+          )}
+          <details>
+            <summary>Import format</summary>
+            <pre>
+              {
+                'JSON: {"schema":"forge-telemetry-1","machine_id":"pump-104","samples":[{"timestamp":"2026-10-27T08:00:00Z","sensor_id":"vibration","component_id":"bearing","value":2,"unit":"mm/s"}]}\nCSV header: timestamp,sensor_id,component_id,value,unit'
+              }
+            </pre>
+          </details>
+        </section>
+      )}
+      <footer>
+        <p>
+          Simulation only. No industrial control writes. Meta connection
+          unavailable. Export records before the free host restarts; browser
+          playback state is not durable storage.
+        </p>
+        <a href="/assets/THIRD_PARTY_NOTICES.txt">Third-party licenses</a>
+      </footer>
+    </main>
+  );
+}

@@ -1,0 +1,5545 @@
+{
+  "by_profile": {
+    "confounded": {
+      "accepted_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "statuses": {
+        "INCONCLUSIVE": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "late_pressure": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "missing15_pair": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "missing75_pair": {
+      "accepted_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "noisy_pair": {
+      "accepted_precision": {
+        "denominator": 19,
+        "numerator": 19,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 19,
+        "rate": 0.95
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 19,
+        "rate": 0.95
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "INCONCLUSIVE": 1,
+        "SUPPORTED_SYNTHETIC": 19
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "noisy_single": {
+      "accepted_precision": {
+        "denominator": 19,
+        "numerator": 19,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 19,
+        "rate": 0.95
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 19,
+        "rate": 0.95
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "INCONCLUSIVE": 1,
+        "SUPPORTED_SYNTHETIC": 19
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "normal": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "v1_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      }
+    },
+    "pair": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "ramp_pair": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 6,
+        "rate": 0.3
+      },
+      "v1_precision": {
+        "denominator": 6,
+        "numerator": 0,
+        "rate": 0.0
+      }
+    },
+    "same_channel_sensor_process": {
+      "accepted_precision": {
+        "denominator": 14,
+        "numerator": 14,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 14,
+        "rate": 0.7
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 14,
+        "rate": 0.7
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 6,
+        "rate": 0.3
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "INCONCLUSIVE": 6,
+        "SUPPORTED_SYNTHETIC": 14
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "sensor_only": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "v1_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      }
+    },
+    "single": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "v1_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      }
+    },
+    "triple": {
+      "accepted_precision": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "SUPPORTED_SYNTHETIC": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    },
+    "weak_noisy": {
+      "accepted_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "cases": 20,
+      "coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "detector_fnr": {
+        "denominator": 20,
+        "numerator": 18,
+        "rate": 0.9
+      },
+      "detector_fpr": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "required_abstention": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      },
+      "statuses": {
+        "INCONCLUSIVE": 20
+      },
+      "v1_coverage": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "v1_precision": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null
+      }
+    }
+  },
+  "cases": [
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "c3d9b73e8b06b6e27cdb39430dabcd581341f6fa72da5fcb67ccdbf76eae4fcc",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7b6b6f3f712299bff4c4b8eb1b470550ab7a5d9175433ee14cb761e71d7e5e4d",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "4e1ef0101952f1285ab98c982b09b8a84cf7a1f821e16f1687eb2f35b03cf8c8",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5ffe8dbcfba2adb66721a66584ccd0c9badb91d6bc32076b1c80ba2190c39a8e",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f04ffcc1ca80e0b3342f2cf8698ba359dd93818490e301b5e561483d54954403",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "26dd9fa73679d4bd821b6a324d28cdbd3f72dc8fa4c0084bbd7d741f57c3a325",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a056dffcee4412e7ca1ca9d68863a03bbe938b643ef274a13ad0f0f9313a295a",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a45620fe3c387912230e4984f0dc2ef4512cb0f361830036c8a75aa64048c73b",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "93aceabd6503f0ad6771d16381ea9887c77c715214cbc3e77dbd0d4bef62c5f1",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f90c0719b19e9eb8a3a1c020f51702bb27a156a5b8a3f9ce4ba2e6bd74b6aafb",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0089d00152120c91dccd9c716220e87af7fa34500125cd152b6cc677e25e49c1",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7000,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "48c7371166839b1ee94d9b145682ccf992b6597e2053630ea11b1c3e8a76105e",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7000,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "866af096a4ea0ee7532ebec260190c9a2332312f52686385342e552f4208ae8b",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7000,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "73747ea36c140813d541101be0e9d53a9e6a7eac98b947792cdb6b9084cf2a41",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7000,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "565ab80bd2c71bbc27c979f5d49953f4562424420c65192400360d18d84caab7",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "1c21a9e410b2b2cdeae531d28bf3961801807e76af8f2c0239e30e95f1b37712",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "47a46b5c48d6d46e0bcb84d99bf8ed5154487544d80dc743a7b3128b1e89b0e9",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d3b63fa5adee7858a414ac85aac8adce606d7b74ca1dc6845ff0b2cf3e9b4855",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c5d0adb2fcc385e96f85a4d032763c5d4c583b514e7c963e66b8adab104c298f",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7870b7125c7ec1e6fd2e6e3e3651ea9bd37274cdc627b5e2cfded9e6c1cc3a8b",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d6f1c9cc1780598a08fe3fba934ad76d95551e1a48eb7001751ad6b442d644a8",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7d324fe0a5b8c03c1f137c3c2c6171c3f1c7ae3c5397f5df61699a461826ff84",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2e0175ba21d2db7bf2d62a9df60edc71e5a98b2e04834cf1522cd134f92c7b78",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ec9b0edab67053ca81d41b4ac1c360cee4a09978f79af07f4cec9a0af6a12c00",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a67a9c6bc34b423c2768e252a29f8271229289c07e3d074bf2a4887dab215386",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7001,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "c0c52a9967c80202e514c23a6f81fbbcc2d03affcf0327a68d96deb8f76f3c9d",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7001,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "f9c7c55b3c55a53278f38002ba64d0b2b58b39779c67819edb4d2db08fe593d6",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7001,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "63c4d1f4ba9cb8ee848601471c369f55e52413ec204bb711a2a32d0d9279b37e",
+      "detected": true,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7001,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "0ad8d1a4311a2d786e495375a9c2d15a915a36d01a3d6a6355ffd5c62e1d7bcb",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "aac7ddcddb1d58ddb8b1524002f3868857058b280081ef1c419d78e69b30bb02",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ab83159e95c72f26bb9cef8a1fc36af04effceb6353517b118e2fa407fccc556",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "419c6514e769947045a98af2a8b529869002f46a2476a54cc629cef23c4a0189",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8b797d18ab899b78ca26677913daebb7ed5fab490ab8b67a7bad44dc5a8fbb20",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ed61b0ba10ad90567872eb03f3a642cbc1f2802571be555f4ee15d650f87f1e9",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7ed8852a62c529608095460886319272669a04e36678ffa8d0a4ffc85c91fb39",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b1b45b823cd561d227c29639d38ed889571759625dfac3311f90716de4ca0079",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "08f2e35b9becfc1c327c4861334456baea6ce9201f6194081181345d3ff3ccc0",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "bfa416e70b15fe67de6f21ed61c6b1cee4b918f4d63276e69ad87660dfcbbe10",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "26920813bce5d6c89a6a0475f0c4420cf6f7f00012ba54dc2a5f582aa94800d5",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7002,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "3aa4959ac2a07fc9334f5dcb975e72981a9b023e0d26ca7c3ad7422962eec68a",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7002,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "0ae7c3910a18d036b66cf703d0cdf4837fca758202627b8d578e5ca02a6a4704",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7002,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "fdfb6bbf97e5a02c5c07e18dd189bf77eaace8df13bea2250650ac412dcbdc15",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7002,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "d6a8aa1e71bcfc5abc74a85468bfbe7283dbfd33aece8dfce7a5a9232d69ea8c",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "70d45a59e7a1d396cb98550ba617dbdc8dae9109598b058cae9b610c37b9009f",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "dd2d96519ab3f41812d1bfb5239b9d672eb29e4dc5d1df25909ee40cffc0972b",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "732c4e12f8dbad266332eb2283902bf0cd525103c039f55f0cc8a48d5d3c68d2",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "f054bedffe6a5a62fe7cc19f207d277fba6e3e597fd7473a87444f11bae7f8ab",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7003,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "773a90c5ce3d0a920ebb3b59cacbd97485ad578417618acc4b72d21805bbffbe",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "31739e1f3b9356c57de72efc258076b61f07e7739b673e8d8bceb2d54103e970",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "bd5502f28e7a04d6486ad8cde71292cd36cbe3a09c5381974b825c306b71a5a8",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "65ae89207245815fc54b10d1df652e8e0c628ec1ea61fc0f1bbc83b6763797e1",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2330c932e98b36a5ab85a5ddadcb55c9c3242ff4e3bc10cfa6d9715e114f01d0",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "aead42d8801fc9734ccc9ebed92990d5b561ea863469359a33799e4d86f31d03",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7003,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "2774e411610a2ffb54a53558af28fc01e18d09a378f8f12bca0032091fc3d099",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7003,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "b08fa345309f91898fa42ef9a6751ba1b16385679a713cdd21e344fa8b56969c",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7003,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "55d44a6830d9ef8061a8cb76ddad9ca4ab7c82592312b9a3ff5cb36dfbddeebd",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7003,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "f2ec037643d408ed5e2f632c76362825676bf5b365d9a8796c52cc5d43417d09",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "797bb9e468c5f89b30a0c963d10d5dd80e81bc86a15a23503dca4e4267ef8064",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3cf9d05b953e036ae721d5cff563ac96dac61cf50ca3dc2daddb2f13a412174d",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0be9ba360bc045e3097686ff010d22efbbecfa29b3a19d9ad4ebe8ff3fc00d90",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5cb78a2ab627ae510e7258dbc3c675cf8317d8d6fbd945155aee491f26b8d050",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c5a82d4eee119b119e5cbb8cd217a82da3658150df272d02b06f87a4d443faf7",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "778335a99589f69a600ac3196e7f934b8e2c05715873322c3c1a92ac6911ab3c",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f72897d4231fb7850084bfe9e536a5a21e3d9675390c605600bd6910483dc1e2",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3fc267296290985ff181f7c823623063b45f255aaec719e3c3f5edfc83ab61f8",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2bef6aabdb62d9240ea00be88a0cd529f15b8c37899f38c8733f262739b03fa0",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "9b0a0fa51dadb87ac3baf6c731bd6b8dc9cd10fd4620f2ea56f1196aaa592fa4",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7004,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "5af77edce4bd2f33b1089a1265027d773e13d7d03f72e0cd0270ecd37dd743d1",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7004,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "b3132cdff58186e963e9f62c7dd4ca8e7c2ebcf302f410601e225199c3005e1b",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7004,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "af63b18f885418f38b6fa043e5e68369c763b2c997359363ac79b490d36d3700",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7004,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "280380af1c97dd99fc1573acae0ebaf1d8d7a25e6c5251f753c9fcf3a28df28b",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f9a87a5db34d04b5478d26ce7cd3e6a9dba15ab7bc37e21c9e15a0679516e4ef",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "bb864a46ac5381004822f130c6dbb4b52da682f21686ac6a5568ebe5a64cb58f",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "91effd279f475d04dddf2df83e7daf9abd129e9ec4e0f69f3f74fd48b0fe4992",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8499e089c39636738eb11e5ecccbc284c2b3aa961ae522ec8426b94917e46898",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "88a54ab52e6b7ec951169f1a3f9bf4ba81fc4c906a7d64a3bce63b44a12bb255",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "88887f38fd9fd8e932955fadf9bea27bb877ff977d882383ca3232d87854c6a9",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "831d35f06d11b6c010a7ee586401dfba3d87c053106ddf560357d814af3ae6e6",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "cfb4a4358130a909cc5e4c5ba7f55b7e7bf71e1513268a4db87e156b3792a850",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "eef93b95d3d1cb3bb56bbe9438e3f818c3b6019fde4715ab69e20e618b3f59e2",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5ad94fb411eec3ce71c031755dc401ac7eac05f9bd118a7dbe36a5a05855711a",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7005,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "22b31cf2babcbac8413abc3cd5042ad97554e1ece689f47be5b2b594698d8d27",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7005,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "37215102699c60b162482d9001f31828387c69ae5dbbd67745bb177b848acdff",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7005,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "08a02249bf315d78787369f94da975c813b01fbf00e7e517126ea0d3bd75a38c",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7005,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "a5610a71744f6c1b184432360ad92bde24b3f4d5523a6328054ed6b012f432d7",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8378ba3b5d7a0e2ef690a2d47b9ebeac23201fdcbe095f09f5f5b35cb3a7f83b",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5c3ec2173048037ba521db62d181c7c2aa57f64e1851e59cc4d886492c85634d",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ed7fef76b7b25f7711c3ffdd850adb0e8288e8cd22bce78c02202ac03af316f8",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "6e2d468e8345f7eaab05888b832814699c64a9a08ab9feb1d3f4e2d80eb49116",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2924635856d60c124fa1d3eaf224b12a0d1c017ed332ac0b4f6b6228a2fce06e",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "cc85d55c85bdbcecc1968db0f76f9cfbaef11ffdfa7ac25c32f5781122f72713",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3cff9a10522cd79e1a7391ce90aff292adaa1563455abfb3d7b85e50b9538c46",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "4cbf9d9ee389c5c61b751aa9f4d29348a9657ec03cfea4c2bb0af39a62902c9b",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "941e915fc68e044aa2d74b4cad23cf6ef8b9141c50e9832904ad9e5ee38a097d",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "1aee750e8927d598a258d8a9d6079a4e541071fec38c1b5b3763909582b53c12",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7006,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "831d142546249df817ed9453c3185dcca8ad1a984e0d1e2571cc4baf07ce9533",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7006,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "04f6101798be3dd6c2604ed8d5cbbf0d56531da6a8acaf6f0ec93b00d8563a04",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7006,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "ae6aa78872f6d7ceaab772fb774648647931c00a0f6d8ecd43aa5bce82962aba",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7006,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "642bdca335fe6c1d3fd82c25bb4588ea927d248b9308ba0f47105a5671f1b625",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "1718c32f4dc6f172e5f772e463916eae2b720ee6133bd584541ad89747eea158",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5322cf3da8a7eb2adadbdee230c157de5456f3bf3d66225e6a876d61277f5831",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "49186e8d2ffd02d0776006eee735a344b08d8dae66fc71a4c3ce188d1128f4a3",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "1e591ba1e8daab5a3c36b057ad4bc3197bac6f15c94be14d345882ab84883a1e",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7007,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a73127256cb913ef390f014ee4680d9de5f3ddba49399c627ea9602a37b07892",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "888ef4d3ce8d26bf452f4bcdf2596f472f0fa5befdaa6374f2126001980679e3",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d076c7f56a54bc3d7b802b044631e37d10450272cbe15eaf526f523f0777e23f",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a1d94051d6bc856ede476827027f60f901de859f03f1026d2f70f34596e1c8f9",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "158d38b731ce3e23b5c7f8c736ea690e4ff16c31009b90fd793be484a43a5dea",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5507e03a3b37eba6aabb16efe054b82e74a9d9a13b2f1a9c5584db6234719c93",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7007,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "034751302a28308f3a2a923671ed9195f5114246ab1c51bb3142fc0c921dbdc1",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7007,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "63d73a3cced9fd8172766a3fcf2064a341cb80324604176c6b75c82ff4b9572a",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7007,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "61a30a15f509d50fa312a5ce60cab0a92b5994c647735a8bdc5a324719f9831f",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7007,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "9520ffb2e849998ce82cbd439e6586870646d1b84dbb39d484fa4e1663c2a71d",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "e3ea8a0608ad1ac70c550a4cdb56fbfee31661da100bdd94f2b05765f6054171",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d879bea14e3acb6dcc7240243ee695128b6784c344834df6f7a18e900ae9fef4",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8ac23c85871b550019a671192dde7d40cac90fdf73857c7862f7d2b6b541c678",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "186ae303f51f60a7427834b399a83ba851db5d255b0f5b853b9fd4d67343270b",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7008,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "e267b7c6eb515afee8c4df5ac1a3ae05005e5ce25031896b85e8af1fdb44f54b",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ff3302db9ea1a69ee34f49830c5bfba595c73a0f70a891a762161b956fd8bd81",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a6583daabd9f8a9a8b27bf6afef2fc366c5d59d29c8681db79315e9bcdb08766",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f8c0dfb2f0d1326b9ae33382b67312eade70e1179adf5e179f14c776a6c615f0",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0ffe90ab7b8d91c6d64bbab5b86218a19f4ca9024df18fa4ade744be2036c8e6",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "191886a45bd1f7bb709c7d9a04a91ed21ef9e0c2562f101ee7b3995e53e16c3c",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7008,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "c916b7633eb3e421523fe5823762b90ed3c0c57e5c4d05f69fcad5fd44b03742",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7008,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "e228ee1c2bbd193183389f05d24ade9a5c7e187198b661ac090ee2fca3a3632a",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7008,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "74269caf44c40101b721a0b89afbc16bb047c4abdb7158959e6c1a0900a51459",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7008,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "c48fa9e95f7fb564d9226340ccf2ee9ac8a7c546be7829a8f9c45f8d7ba73b9d",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0f9fd38cd4490dee60a824fda02c8cd0ed22cd4cbfe90ddaeae3d8122e24237c",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3f0c45aa3a3919c4cd67c69689695688d3623f2079ef247e9bfdd8cde292e8d3",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b21618b336e349d32a7b0371cf6a8e5f7bc91de6dad7aa3b52acd1a508921b68",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "b6fc36ab5dc04084b65512f1377f25415431af2ed38257f8cfb5f490705e8588",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7009,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "299ec38756d50ab94ab46249f6d0de03fe07d685d63a9bb700f9319514ff0321",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "cfe54448dc3e66dbd7d5b63b1fdfc06b2af851bd65d406e93aa66d8208af4100",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "064d9fc65f111450aaadbcc0f262488f9aaea7d4e333ee4c61506811e21c3079",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "26d574b056ee339185507d1b23956b916dee06e09acd204cf1c259b7733052bc",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "824caa9d893439cab6f4796b8d8d8d63de6360af263299e357878a83e9aa56a2",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "4809e24a6109e12f5a4115db0f15079673af21e213b72c16a87f1fb972646357",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7009,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "9600bb0285360ea3356f3b984c90db1c91bc8217893bd417a0cb0770aeb22279",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7009,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "5e6e4f6f53cc933e964433770295c81c937143eb41aa047a8f10291a87976476",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7009,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "bc277a7e594db3bea1b906fde2435b74a57d62e3b7ebb960b25baed33dcbefaf",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7009,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "2a5fd69b3926b6a11ab8657f76f4230db45ac50a8f4c477c5e06a309f533b451",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2c9ff3cfbd860e8707c8a608e3c5c945f83bdc35025645c880fe2b22877a5515",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "89af4719cabbba4edfc7b5cfe166743dd9ee150f4ff16da55d69792eed490f3a",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b59414ff48e4fbdf46ef697c1bba0e4caae1edb4cf37baf9f685bccee5bb9e9b",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8cb4a0a8241893b59e2ff3b807f04278a553a3f9c519502876371b006f925445",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "13f7683d510af3075966d7876d2285c0d827154fc27ee08b6d9cf47b135d0124",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "64300defa2310dc1d2b6b70606ba0a89d6e45c68c9f37e7ca2f17d76209a525b",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "275e87ff338fcf0bde3a5bee170e7906d97f846d59b57ea14349b86767e10d70",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "96fe8254730ad933387e02760bb80674649e012491d62da0d723abb887c39f2a",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "97b89d88156137188964828f4428e6e50c8af30197d7bb66010b55dd724e2f5e",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "063d3ef8efb3336576106a420d2ea0b534b34f08fa9535e3250378113cf002d3",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7010,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "7a5b832fc48f27f0047b2929e8d28bd5046b2ae87669138433745e43290554d5",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7010,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "84370aec4a6f41a71c7221e3adfcaea36041dfcb41ebbe9c162803650b4475e7",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7010,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "36ec9ab552e23cb98f5a24d0937fed6c93787315f4f00e6c4eff30da7044ccef",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7010,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "d0a0ff156ae120cd08701b4321b7b2b79d5f3713674464773bde000af0c8c9b3",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "6e309b3193ed0cb6741d5ec60b116af348645f9611bdecf6f4cbac2edec98f1e",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f0e1811f93620d5d619bfba0142f78304cf27443de7316a0589ddf0cdd4fdbcf",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a4441b2a8f45008f5ab4178b331cd867bb2c4b6ac38277d9d8074cda6595ff92",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "21498c7ad06b94c63d5d6993010a2dc2f69007abcde6784e9a9218703ff7199f",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "26d3c7b0a2da23593709fa06ac470c4eea47bd94e1ef83a7be40019c0d1be7a4",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "279f387a20b119c7ac74bb54b9b9625332605f278a4cec0ff27bbf43b2d360da",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8869a91654f34c70cd0df702e14e2724c35c97436cc402db8262b260d2973c54",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5296efc0d4df72e02639b718b19983d60729eb4722bc0a8fed918063daa5987e",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "666f8e70436fe050153d6ed8b9722260bb59518bb600e04bfb8b96adca8a9f0c",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "6da19fe4fad8366d084d8cc9e12ef4a62f8fed85a8ede1a7ddf18520df0f517b",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7011,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "8e2375260a3ede2c506b507306d9568b3a45d3f8ecceaac328abfb6552ac67b9",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7011,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "e7840e1b641c4eb85fdc6bee645b697d4f56544bceabe0fe55b053483214eb21",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7011,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "bde38971ec958e7ad9ee98609469128093e91c6b67ab3b1bca07bd5c5e4e7b1a",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7011,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "6ca6948e1ad746d2fc2d02ee47369d32d296d28dd3772ea0626096fa67a0c61d",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2f33d3c15037200b022bb41f998018e3a41f08fcb4d6d850163fe4b7167f64a4",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ae648673419192d51d81358fb6b11ce37a37fb3ee8ea516c750bec9dc2f2f361",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "40a9034de753e096084fe0cf7993bd268a308d4005507f6bac075c0ed07e304f",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "4e7536ba0033765e669cd28f72318915a88eed928c9ef59f61181631c66151aa",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ad35e201e2e9291b25cbe45a1ce774b1040d4dde9cb2cd132d194ed2f8635819",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f8d3e39ac4b0951abf0f1166827d661a7637bda3c8aa2e3d8d2534010d4c57a7",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c557d3bfbac72ce7ba873b69b64d9eaee3058f27c325d55e268408cc824efd02",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "fa5c8b502306cd200a11f2d36a2c87fb692d2acd0bb0cd56fbeb5ce0ca3ca2ce",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [],
+      "profile": "noisy_single",
+      "seed": 7012,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "68fd18490909c46a68ea93edaf58b02c64711db782a5bc7bf47a4e4cf327f8de",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7012,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "bbf76fb90eea628f540e8a0b516b4089e835b339b7b10ebeb8a504862cce8cf4",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7012,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "9f66e40fb2fec3f5c6c42265c057e8387734a7de191c88426194ac07201742b4",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7012,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "9703a4774b55f777cdebf69911dffe021e2c903f4be9d381f7d1c2d92d0085e8",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7012,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "635035f208bb45a86dd7758d9ac0bdcefe1ccd2d962cae6a6b70c6f4d200ad05",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7012,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "9cb0d62413668a7d858977638740dca491abf3970f432f76a622088d31d71d0b",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "86fa611507ae6953771fef89d00f9031edfe339a5b607bf0a7cbff438451726d",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ca133ea9c7059f2857968821c77f380aea41143533b76cbff98ba4e9cc8b0132",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "32ea7b78106d92f008a16928ea84f65fc41e852c6816a452d786349c002da38c",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7322d16ca8ea32f940e4b1982eed21a6622907e97f0168a38276f65fd0f9d9ca",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2f1cc5a21e22f3cdad4378de3f29817be3be66dca5202c399860335695d0035f",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c363b180ab0a6e7a00a4b1f0ad5fcdb6fa881e38052192bf4de442d5c788d11d",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8d77133e2c3d5eb5edf3fee47910fc87912657c39975a60926b63d4187385ba6",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b4d031f33d0ea89c0c2c7fa01dfaf062e3842fddc39ec6a01453cd97ecf0b41c",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "759d8984f839ca1622033186a3d22952bbd4a7bac897a78c258c281b59608de4",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7e0bf19a848173668487b38665a0eafc778a92557a07d6c7a42edc915e3b825c",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7013,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "bcd74813b00150f5f2f84eaafb9dedb3be789be0e452c27ffbc93300018d3126",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7013,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "c75ec39ad9fd6ab78d9dae7886cdfac687d25054a53332bd69f90766425df8cc",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7013,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "ca4d4b8894f54d6969ee2db5a1f98134c8559380f11f6c95e2530f64db0e467e",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7013,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "2da7fb36690a90433cce237acb6ac2e625b8f492440a5411125bc9406df52244",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "36bf5428e29e5b49bbb4b136ea437b63761ce8263ee10addefffa8f8aba43756",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "7c69ba386287fe25252409d80aa832b85827ad2c1b9a71077342e4d3a6d57c0f",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a1b110035566264afa0a30389a326e235ce76bafd1f7c81ee11b39f0c1d412a3",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0b7443c7464c5108ea0e6d1e67f93a3e421141b51ccc69a3d64926edf283235f",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c7ec7531a800e4cc990999161ebbdd0c893d6683a7a1f768840f60c184d148d9",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0bae66ba2482db4c3d65aafae0e4ccfdc2bf1a50a48cdb7f926d426852a797dd",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "151443d8a4ec71c7f23a50c7a768a176a13a5180dec3dbde34613bfd69081e88",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a5b9a532d9cf841b64038db16ff13b3ef64188b7b6239fa53b5669546c429c61",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c5c3d5fc20fa171c56d012a0096f0b49acd498d4c2f95aa4114e6e26bf5a1479",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "073630c717603f36182ceab86ee3521a1afee1cb710f311d61fe7bf3c69eb1ce",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7014,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "ffb7be0df1eca19ce07379c4cf3081e1f4c7de43c494bc633280b76371227780",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7014,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "77436e8305ce1c502edd60b2516b1aa695cdfc3b883f0462984110e553fe78c3",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7014,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "3a655dbb4d461a203e4907274b747ce1a2cd48ecb389c3b85ef41852e585d7ca",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7014,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "f36964e20a235249b5870a657419a161a444e9cbe87437aad3bd7907f8490008",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "42ee4e8f0bf31f72685e9af0f91e534a5c43d82ccd38d12e4d69f9186b61aff7",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5e67254ca934fa921cc703f2b5014fc78989be8275ab8ac8054ee39e90955d52",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b123812ed2446daf6a01b93c6e278e77bc6e67f271de05518ee45276c1afb4ec",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "6c2c5c58a753d525551b95c2639f61fd73b21fc160cb4b79b8466d27f87e8778",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "135d997aee50bac5157c7871e8d144f4987c0c89db126f457a7ff979103e418e",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d0ef89b364dc4f5c8d59069630d374ec8d7935906fc85d310d9459997d5d47ec",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "27dd0e8b98a02cbb1e0fb98c235daf10cc55864c189a0fa095b036684602c058",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "69ff59476519a682f0610dc5d6096ae9ffc9291ee7b6bccb18698ec5394005b4",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "303ef6bbccf508c44efc1961cc90dce5a9f738b7116ec6405aeedcae30dd5d88",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "5b4310eb2c54a57dd26e6457b5bb7f3b58e4c7e51fa83d0a25a1b8c420852a56",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7015,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "161d20c08ca7dfceb21949816504c58bf54032789f96f992d239da22eaa2c1de",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7015,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "2f7ba1ca1b7bb53744d2f21922080e4dba8b658c0c13be8a6818a94d12e463fd",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7015,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "79fa22d2115e442fb4bec2876817cb974b8afafff5628463b992c1dd07854e0f",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7015,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "f116b4fb3bc56c7c7fa7d984f001c51a3bb4c7f2c2c0185c13b043dba006abc2",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "a0e61930db5f4e9c68ab0d04809f8276f08f1d5df61de2779b5ae9da6c4d2394",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "76c90a98508682b40cc2eedf5942eea731f71f7e34fab28b56589eb9ecc307fd",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "104f0841c03ef0e62cb7960beffc903870794c90ba0e6f0e87ef533ba624f794",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "56f74a813576145827976cf0e74e7446a8c7961b22bcb3f3934005c1357f81d3",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "6647e3f1eecbd4b4503dbafbb9c3e18481fa7eb78ddf3e30ec8717a9a1507b84",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "74fa108428b66264c6dd6bbd30cdf284a5956b3c8bd74385d9de20ec15cf877b",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8ed3ee8ae1957221949a9de289ca3905bcccb28302534c517a125b0f955cb8dd",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "de9fb93e95eec08d97bb795b60287466c9b859671d81a1da0e03cba6cba2fd44",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3113aea208147512d6f91e30d342e0aae27b0906494c95c1b8a8814a364f9d68",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "92a658ba09268bbb85a27e1355e1a88ac50f350d670bd6cb64b190e950658ea7",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7016,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "32466421ca697439132ce7a1f563e52ebf5e3b81a63e884fc919b3e1a30fb114",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7016,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "43ae6d679c7a660557d6c1971103929bdbd7afa9a67194e8e06caf3352e27253",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7016,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "a90e809883d7d169d7dea3ae3e7a756d3899c10e2f07f7ba34bbc99858d938d9",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7016,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "0d6769eff8e545e8798ecdfe13943ffc80ba8475b3548a14f972a52e7f0f8061",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "36eb8892717532e491e9084c514500748f4a183a9cd91e845424f6b1a45856ce",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2aa9322d5b2e2a0f10a6b88f72fb366da1e897e3f0f2ab741d4bfc3bbea27086",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3532f8ee2f83ba7caab32af8467ad41ccf47cb3e6a0eab6123d7999c49a04cf8",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "7ebcfb61be236f02ea18ed9b2b4c6440787b50986473878dabbe1cee59393e12",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7017,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2a4b96dd6a0d7c3fd43f5d96036b822d28c42b5817462e484f5a97c408d2a11f",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "28a89e5ca0e65bdc75d23a04f8fd10605592ae736071e852460a4a3c0a425a7c",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "352a12d2f6b5650d5129d67956c3eb2f4a8c6409508fd5e3cd6702656eb96175",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "71e12406473ac53a50bdbac10d20e6b0c3fabd0e28cec394f2978e70d46205ce",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "c2683521d45ede01fba2c008d5dc7e9fed40742ffdd016d6ff1818340ae7d3af",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ae4b219bb041acf1dc71afc3db92b2820544f13c46e9717f15a84bd52cd6ea90",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7017,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "674979ca053692c367f7545f9d8342d72e2f3d61f426d238800847e55b7081f3",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7017,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "0c52eb51c62b2e857f6190b995e9728c05f78e3d76dbc15df3d2cd0065af7bb9",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7017,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "050356b802dff7143bac3e53652746d4a2667a27e78cf58545af3b55bc577325",
+      "detected": true,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7017,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "a52412629a823e1a00a3f9cdb2ad267778c12fe1ad70bf8eb8cf1ed4ba7963d6",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "340ee53047c10b856c19f2c72c27f029c2c1b604f4810b73ac2678018e9aa41a",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8155590fd3cc28b6ad822744ad9f97d53c14059e578f96e7d6b19c06c42ece0e",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "49ae99dc3f60049d3ca89e4eb488a51cc2397a6d5a493e2229da998cb7be8f39",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d9462a6baa85dc622d6f328131e1fb6c4fa290941ce6ac21f100f2c688a5d4a4",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "profile": "same_channel_sensor_process",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "d6078d63887f5f5e2acfc6d4025476d6a7348c8c525b2ccd30c314ea461e73ff",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "4a741ca4687b20547d6bab9b5a6ddf583b1c530e9b80eb3d9e572e55fb4602af",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "8f42e692d81a1a55e9b04d39d4a2f963cf38bdc5ebd27f8e24c50d160b9fdfcb",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "f268879a40be7ce5d12d74892910857cdcdc090bf6723a6245a5d82b309b3d1d",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "ddddcc7abd8fc5908f755ddd2adddd27d650af64a40259bbe4d6b71cda58524f",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "29620ea30f2638dff20370a4cbc576871ccd1b5f163c8c6cbaf2ec341c9ac6fd",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7018,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "af2fa63ecae5e3578c50ccbdc7aa617ad7a32652e7441854d65ec7df458071e1",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7018,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "cde46a7ca5dda4f1ae83aeee1b919d27c4e325093184539ce58e0d77c2f9467b",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7018,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "44c2ae6cfd4009b61659433fe40a967ad657e8260297c0e2214b170ef6e7e5eb",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7018,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": false,
+      "correct": true,
+      "dataset_hash": "06a57f3246a281bb606f03b77c03994d72545b3fabc21b67c8bb8c6db636893e",
+      "detected": false,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "profile": "normal",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b5bf9720175b776d10bb493e85cc2a987f51bfc47303e24774ab16df02c076ea",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "single",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "e8fa6c791eb1ffdf3959eeeaa81b885b014dacf737408ad1f149db40858e4c78",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "pair",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "0a714281cac67ed5de7be4d6e610d108a8bca0acee9a2e5faeb0673c1d4c8e44",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "triple",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "dbc8c61b8ff896fa071afe60c2a2a246669f9087f48b2adbb6d3dbc2088b715f",
+      "detected": false,
+      "expected": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "findings": [],
+      "profile": "same_channel_sensor_process",
+      "seed": 7019,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "b0c1d1037adc3b3fa6a5806dccad97e71bdb9360dc056ee939aac135bbdb35e1",
+      "detected": true,
+      "expected": [
+        "sensor-vibration"
+      ],
+      "findings": [
+        "sensor-vibration"
+      ],
+      "profile": "sensor_only",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": true,
+      "v1_status": "SUPPORTED_SYNTHETIC"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "54f09d98245eb05a5fe33a0357b393aa5071afe88f0c489ee08e18e3452cb804",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "ramp_pair",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "dd93bf79ed646c047ea3e24f6b6e3322c2215f773dbb80cfb977acbf9db2f8b0",
+      "detected": true,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "profile": "late_pressure",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "acab2ab86d07e63477dabf3e04a9f7bc212d5756dca99ab18d3cc3d74a3b19a1",
+      "detected": true,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "profile": "noisy_single",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "3688dd9acadbd648a7477a6d72d38d21892b958e364668bc1faf3af271b0d3a8",
+      "detected": true,
+      "expected": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "findings": [
+        "process-temperature",
+        "process-vibration"
+      ],
+      "profile": "noisy_pair",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": true,
+      "dataset_hash": "2a18ee815be6677f008a4dcce0864605e461fac1c7156ae1b84d81cc1967b03d",
+      "detected": true,
+      "expected": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "findings": [
+        "process-pressure",
+        "process-temperature"
+      ],
+      "profile": "missing15_pair",
+      "seed": 7019,
+      "status": "SUPPORTED_SYNTHETIC",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "724528b4c72b4b80775de4ba95cc7f8274fcbda9d6fbcf8e0a03a4967cad423d",
+      "detected": false,
+      "expected": null,
+      "findings": [],
+      "profile": "missing75_pair",
+      "seed": 7019,
+      "status": "ABSTAIN",
+      "v1_correct": false,
+      "v1_status": "ABSTAIN"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "8effac395263d7dae6466e021bbc7fbd59bd6ade8e533df878d64f8cf26ea3a0",
+      "detected": true,
+      "expected": null,
+      "findings": [],
+      "profile": "confounded",
+      "seed": 7019,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    },
+    {
+      "abnormal": true,
+      "correct": false,
+      "dataset_hash": "18f7e6d01a93353eb338742e364faac3fac058c63fd7b26cb97bd250ffc62464",
+      "detected": false,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "profile": "weak_noisy",
+      "seed": 7019,
+      "status": "INCONCLUSIVE",
+      "v1_correct": false,
+      "v1_status": "INCONCLUSIVE"
+    }
+  ],
+  "comparison_limitations": "V2 uses four interventions with 96 replicates each; v1 uses one with 24. Sixteenfold raw experiment sample budget; not a like-for-like compute comparison. Same observational datasets; correlated profiles; descriptive rates only.",
+  "model_evaluation": "No real model inference; deterministic investigation and verification only",
+  "overall": {
+    "accepted_precision": {
+      "denominator": 212,
+      "numerator": 212,
+      "rate": 1.0
+    },
+    "answerable_exact_set_recall": {
+      "denominator": 240,
+      "numerator": 212,
+      "rate": 0.8833333333333333
+    },
+    "cases": 280,
+    "coverage": {
+      "denominator": 280,
+      "numerator": 212,
+      "rate": 0.7571428571428571
+    },
+    "detector_fnr": {
+      "denominator": 260,
+      "numerator": 44,
+      "rate": 0.16923076923076924
+    },
+    "detector_fpr": {
+      "denominator": 20,
+      "numerator": 0,
+      "rate": 0.0
+    },
+    "required_abstention": {
+      "denominator": 40,
+      "numerator": 40,
+      "rate": 1.0
+    },
+    "statuses": {
+      "ABSTAIN": 20,
+      "INCONCLUSIVE": 48,
+      "SUPPORTED_SYNTHETIC": 212
+    },
+    "v1_coverage": {
+      "denominator": 280,
+      "numerator": 66,
+      "rate": 0.2357142857142857
+    },
+    "v1_precision": {
+      "denominator": 66,
+      "numerator": 60,
+      "rate": 0.9090909090909091
+    }
+  },
+  "schema": "forge-phase2-evaluation-1",
+  "seeds": [
+    7000,
+    7001,
+    7002,
+    7003,
+    7004,
+    7005,
+    7006,
+    7007,
+    7008,
+    7009,
+    7010,
+    7011,
+    7012,
+    7013,
+    7014,
+    7015,
+    7016,
+    7017,
+    7018,
+    7019
+  ]
+}

@@ -1,0 +1,22 @@
+
+> forge-dashboard@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 /workspace/meta-ai-hackathon-2026/frontend
+
+
+ Test Files  8 passed (8)
+      Tests  32 passed (32)
+   Start at  23:07:40
+   Duration  2.37s (environment 49%, tests 29%, import 13%, setup 6%, transform 3%, worker 1%)
+
+Environment  jsdom was created 8 times · 2.78s total, 49% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
