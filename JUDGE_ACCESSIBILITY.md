@@ -1,34 +1,24 @@
-# Final judge-accessibility checklist
+# Judge accessibility checklist
 
-Owner reports live application: `https://forge-judge.onrender.com/demo` at the verified deployment commit. The current proxy blocks independent external verification here; the redesign is not deployed.
+## Verified current access
 
-Availability target: **through November18,2026**. Internal readiness target: **October30**. Official announced submission deadline: **November4,9PM Eastern**; confirm final guide.
+Existing URL: **https://forge-judge.onrender.com/demo**. On October 27, external HTTPS readiness and all 32 read-only public-boundary checks passed. See `docs/final-live-check.json` and `docs/final-live-audit.json`. These prove the existing service's HTTP behavior, not the final candidate's deployed SHA. No final engineering release has been deployed by this work.
 
-## Live application gate — owner reports live; independent check pending
+The repository is verified PUBLIC. If main remains unchanged, link judges directly to the reviewed `feature/forge-final-engineering` branch and exact commit. Do not imply the default branch contains the release candidate.
 
-- [ ] Actual anonymous public HTTPS application URL recorded; not localhost, dashboard or repository URL.
-- [ ] TLS verified externally, exact audited deployment commit/time recorded, no login needed.
-- [ ] `/demo`, readiness and public security audit pass on the actual hostname; developer endpoints remain forbidden and inference credentials absent.
-- [ ] Desktop and phone: cold load, fixed misleading-sensor case, complete two experiments, clear source/synthetic labels, reload and JSON/HTML export.
-- [ ] Free-tier warm-up and possible SQLite loss explicitly disclosed beside the submitted app link.
-- [ ] Account/service remain active, no paid add-ons, auto-deploy disabled, quota/suspension notices reviewed. Manually recheck before submission/judging and after any platform notice through November18; do not deploy keep-alive bots.
-- [ ] Fresh anonymous browser after a missing/expired session can start a new investigation. Exported reports replay independently of server state.
+## After an owner-approved candidate deployment
 
-## Recorded fallback and durable evidence
+- [ ] Confirm Render shows the exact approved commit, Free plan, auto-deploy off and no provider/owner credentials.
+- [ ] Open `/demo` anonymously in a clean desktop browser and on a phone. No account/token should be required for the restricted deterministic demo.
+- [ ] Complete case selection, Overview, Evidence, Possible causes, Tests, Results and Report. Inspect thermal/waveform context and the selected sensor without implying native model vision/audio.
+- [ ] Confirm synthetic labels, actual analysis source and uncertainty remain visible. Public Meta inference must remain unavailable.
+- [ ] Run the fixed pressure/sensor case, then download HTML/JSON and independently replay the JSON. Verify the insufficient-record case refuses a conclusion.
+- [ ] Confirm developer docs/APIs remain forbidden, bounded controls still apply and errors explain recovery after rate limits/cold starts.
+- [ ] Check 320/375/390/430-pixel layouts, keyboard measurement inspection, native stage selector and numerical-table scroll/focus controls.
+- [ ] Save URL, deployed SHA, UTC check time, video/report links and anonymous-access evidence outside the ephemeral host.
 
-- [ ] Final three-minute recording has a public, logged-out accessible HTTPS link; include it in the submission alongside the app URL. A recording is fallback evidence, not proof of live hosting.
-- [ ] Include a short note: “Free service may need about a minute to wake. If unavailable, watch the recorded walkthrough and inspect the replayable evidence.” Recheck wording against actual observed cold-start latency.
-- [ ] Current rules-only rehearsal is labeled **SYNTHETIC / RULES-BASED / NOT META**, with no claims of industrial accuracy or genuine model vision.
-- [ ] Once genuine Meta access exists, record exact provider/model provenance, actual response and verifier behavior; label prerecorded responses as recorded. Never relabel the existing rules rehearsal as Meta output.
-- [x] Versioned sample JSON/HTML, hashes and replay instructions prepared under `docs/submission/`; genuine Meta execution remains pending.
-- [ ] Final recording audio, readable labels, duration and public permissions checked by a logged-out viewer; download an offline backup.
+## Availability and judging fallback
 
-## Submission evidence and model gate
+Keep the service available through **November 18, 2026** as an owner-managed target. Free hosting may idle/sleep or restart; there is no uptime guarantee. Do not add unsupported external keep-alive pings. SQLite and finite application retention can remove sessions; export reports and keep the final video independently. Let a cold service start normally, then retry once or show the explicitly labeled recording/offline report.
 
-- [ ] Record actual app/video URLs and HTTPS audit results only after verification; current evidence manifest deliberately keeps them null.
-- [ ] Eligible exact Meta model, approved remaining credits and card-free entitlement confirmed; secret injected securely into the separate owner workflow. Public host stays credential-free.
-- [ ] Dry smoke passes readiness checks, then exactly one approved genuine call is independently verified and reviewed. Retry only after provider usage inspection. See OWNER_ACTIONS.md.
-- [ ] Real-model evaluation and contribution are honestly reported; model candidates/rationales are separate from deterministic experimental selection and verification.
-- [ ] Public repo/branch/commit, CI, final guide rules/license attribution, demo and report links included. Save submission receipt.
-
-Current blockers are protected BASETEN_API_KEY, an authenticated model smoke/evaluation, independent external app verification (proxy-blocked here), final recording and exact-commit owner approval for the redesign release. Baseten selection and existing Render deployment are participant-confirmed; they are no longer pending. Local checks do not substitute for genuine model or external HTTPS evidence.
+A recording is recorded evidence, not a live request. A deterministic fallback does not satisfy the genuine eligible-model requirement. Do not announce submission completion until the actual form confirmation exists.

@@ -1,0 +1,59 @@
+{
+  "checked_utc": "2026-10-27T13:14:29.947496+00:00",
+  "sources": [
+    {
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+      "status": 200,
+      "bytes": 218943,
+      "sha256": "a4a6491932b0df66fa7f4e2269b4e538905c086fa2cf4c9bba1e11f62482b910",
+      "bounded": true
+    },
+    {
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
+      "status": 200,
+      "bytes": 205826,
+      "sha256": "838e20978566ba0c98de8f5317acd09aaa81b3b149fdd3fb93ad93872fdf0291",
+      "bounded": true
+    },
+    {
+      "url": "https://docs.baseten.co/organization/billing",
+      "status": 200,
+      "bytes": 354778,
+      "sha256": "d3ffb75519a62d4e8160a32a04118ac7aae7f2d9c1622a4c07aabe79977490c2",
+      "bounded": true
+    },
+    {
+      "url": "https://docs.baseten.co/reference/inference-api/chat-completions",
+      "status": 200,
+      "bytes": 670379,
+      "sha256": "27a6cdadc54ea1a92982103d7c8b4c3a596b44a79e4f5f171476abb1a07033c1",
+      "bounded": true
+    },
+    {
+      "url": "https://docs.baseten.co/inference/model-apis/vision",
+      "status": 200,
+      "bytes": 358927,
+      "sha256": "cabea6341ea1fd237e63012dc57b18fd13d07a5d29ee51ec5bdc7050cdf01950",
+      "bounded": true
+    },
+    {
+      "url": "https://docs.baseten.co/inference/model-apis/audio",
+      "status": 200,
+      "bytes": 338497,
+      "sha256": "3bc32a8c8166fdd3bc9601d350daad8d1f1cd07686562c40b2802e1de772741a",
+      "bounded": true
+    },
+    {
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/resolve/main/LICENSE.md",
+      "status": 200,
+      "bytes": 8299,
+      "sha256": "458a5c57d8e622e395eb0e59799ba5bba1ea7524ffd120ee6e3018688d7d6ace",
+      "bounded": true
+    },
+    {
+      "url": "https://forge-judge.onrender.com/api/v3/ready",
+      "error": "The read operation timed out"
+    }
+  ],
+  "note": "Documentation GETs only. An application shell is not access to authenticated participant rules. No inference endpoint was called."
+}

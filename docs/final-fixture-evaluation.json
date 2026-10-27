@@ -1,0 +1,641 @@
+{
+  "execution_kind": "fixture_only_no_real_model",
+  "planned_cases": 6,
+  "completed_pairs": 6,
+  "request_attempts": 5,
+  "real_network_attempts": 0,
+  "genuine_validated_responses": 0,
+  "fixture_responses": 5,
+  "panel_hash": "db20d7ed805d5bf85f1b117caef522d9e2fd7f4c992cfd24344eb1683d15261e",
+  "metrics": {
+    "baseline": {
+      "completed_cases": 6,
+      "diagnostic_agreement": {
+        "numerator": 3,
+        "denominator": 4,
+        "rate": 0.75,
+        "wilson_95_interval": [
+          0.30064184258240184,
+          0.9544127391902995
+        ]
+      },
+      "accepted_precision": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.4385029682449546,
+          1.0
+        ]
+      },
+      "required_abstention": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.34238022750665303,
+          1.0
+        ]
+      },
+      "cases_with_truth_mismatched_proposals": {
+        "numerator": 5,
+        "denominator": 5,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.5655175352168251,
+          1.0
+        ]
+      },
+      "cases_rejecting_all_false_proposals": {
+        "numerator": 3,
+        "denominator": 4,
+        "rate": 0.75,
+        "wilson_95_interval": [
+          0.30064184258240184,
+          0.9544127391902995
+        ]
+      },
+      "first_target_relevance": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.5101091635454027,
+          1.0
+        ]
+      },
+      "proposals_total": 35,
+      "truth_mismatched_proposals_total": 27,
+      "mean_tests": 2.0
+    },
+    "matched_pairs": 6,
+    "pairs_with_different_decisions": 0,
+    "interpretation": "Case-level Wilson intervals are descriptive for this small fixed synthetic panel, not population guarantees. Proposal mismatches are measured against private synthetic truth, not a physical diagnosis. Model candidates do not control test selection or verification, so matched final decisions may be identical by design. Failed model arms are not replaced with baseline output.",
+    "fixture_assisted": {
+      "completed_cases": 6,
+      "diagnostic_agreement": {
+        "numerator": 3,
+        "denominator": 4,
+        "rate": 0.75,
+        "wilson_95_interval": [
+          0.30064184258240184,
+          0.9544127391902995
+        ]
+      },
+      "accepted_precision": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.4385029682449546,
+          1.0
+        ]
+      },
+      "required_abstention": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.34238022750665303,
+          1.0
+        ]
+      },
+      "cases_with_truth_mismatched_proposals": {
+        "numerator": 5,
+        "denominator": 5,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.5655175352168251,
+          1.0
+        ]
+      },
+      "cases_rejecting_all_false_proposals": {
+        "numerator": 3,
+        "denominator": 4,
+        "rate": 0.75,
+        "wilson_95_interval": [
+          0.30064184258240184,
+          0.9544127391902995
+        ]
+      },
+      "first_target_relevance": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0,
+        "wilson_95_interval": [
+          0.5101091635454027,
+          1.0
+        ]
+      },
+      "proposals_total": 35,
+      "truth_mismatched_proposals_total": 27,
+      "mean_tests": 2.0
+    }
+  },
+  "schema": "forge-fixture-evaluation-evidence-1",
+  "warning": "Local HTTP fixtures that propose every registered hypothesis. Not genuine Meta output, model quality, provider token usage or latency.",
+  "cases": [
+    {
+      "case": "normal",
+      "baseline": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "normal"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": null,
+        "first_target_relevant": null,
+        "tests_completed": 1,
+        "source": "deterministic_rules_not_meta"
+      },
+      "fixture_assisted": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "normal"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": null,
+        "first_target_relevant": null,
+        "tests_completed": 1,
+        "source": "test_transport"
+      }
+    },
+    {
+      "case": "pressure_and_sensor",
+      "baseline": {
+        "status": "INCONCLUSIVE",
+        "known_synthetic_causes": [
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration"
+        ],
+        "false_proposals_rejected": [
+          "process-temperature",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "pressure",
+        "first_target_relevant": true,
+        "tests_completed": 2,
+        "source": "deterministic_rules_not_meta"
+      },
+      "fixture_assisted": {
+        "status": "INCONCLUSIVE",
+        "known_synthetic_causes": [
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "false_proposals_rejected": [
+          "process-temperature",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "pressure",
+        "first_target_relevant": true,
+        "tests_completed": 2,
+        "source": "test_transport"
+      }
+    },
+    {
+      "case": "noisy_pair",
+      "baseline": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "process-temperature",
+          "process-vibration"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "sensor-temperature",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal",
+          "process-pressure",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-pressure",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "vibration",
+        "first_target_relevant": true,
+        "tests_completed": 3,
+        "source": "deterministic_rules_not_meta"
+      },
+      "fixture_assisted": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "process-temperature",
+          "process-vibration"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal",
+          "process-pressure",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-pressure",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "vibration",
+        "first_target_relevant": true,
+        "tests_completed": 3,
+        "source": "test_transport"
+      }
+    },
+    {
+      "case": "sensor_drift",
+      "baseline": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "sensor-temperature"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal",
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "temperature",
+        "first_target_relevant": true,
+        "tests_completed": 2,
+        "source": "deterministic_rules_not_meta"
+      },
+      "fixture_assisted": {
+        "status": "SUPPORTED_SYNTHETIC",
+        "known_synthetic_causes": [
+          "sensor-temperature"
+        ],
+        "answerable_under_policy": true,
+        "diagnostic_agreement": true,
+        "accepted": true,
+        "abstained_or_inconclusive": false,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal",
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-vibration"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "normal",
+          "process-pressure",
+          "process-temperature",
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-vibration"
+        ],
+        "first_nonreference_target": "temperature",
+        "first_target_relevant": true,
+        "tests_completed": 2,
+        "source": "test_transport"
+      }
+    },
+    {
+      "case": "confounded",
+      "baseline": {
+        "status": "INCONCLUSIVE",
+        "known_synthetic_causes": [
+          "process-pressure",
+          "process-temperature"
+        ],
+        "answerable_under_policy": false,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "process-pressure",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "sensor-temperature",
+          "process-vibration",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "normal"
+        ],
+        "first_nonreference_target": "temperature",
+        "first_target_relevant": true,
+        "tests_completed": 4,
+        "source": "deterministic_rules_not_meta"
+      },
+      "fixture_assisted": {
+        "status": "INCONCLUSIVE",
+        "known_synthetic_causes": [
+          "process-pressure",
+          "process-temperature"
+        ],
+        "answerable_under_policy": false,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [
+          "normal",
+          "process-temperature",
+          "process-vibration",
+          "process-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "truth_mismatched_proposals": [
+          "normal",
+          "process-vibration",
+          "sensor-temperature",
+          "sensor-vibration",
+          "sensor-pressure"
+        ],
+        "false_proposals_rejected": [
+          "normal"
+        ],
+        "truth_mismatched_proposals_not_supported": [
+          "process-vibration",
+          "sensor-pressure",
+          "sensor-temperature",
+          "sensor-vibration",
+          "normal"
+        ],
+        "first_nonreference_target": "temperature",
+        "first_target_relevant": true,
+        "tests_completed": 4,
+        "source": "test_transport"
+      }
+    },
+    {
+      "case": "missing75",
+      "baseline": {
+        "status": "ABSTAIN",
+        "known_synthetic_causes": [
+          "process-pressure"
+        ],
+        "answerable_under_policy": false,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [],
+        "truth_mismatched_proposals": [],
+        "false_proposals_rejected": [],
+        "truth_mismatched_proposals_not_supported": [],
+        "first_nonreference_target": null,
+        "first_target_relevant": null,
+        "tests_completed": 0,
+        "source": "not_run"
+      },
+      "fixture_assisted": {
+        "status": "ABSTAIN",
+        "known_synthetic_causes": [
+          "process-pressure"
+        ],
+        "answerable_under_policy": false,
+        "diagnostic_agreement": false,
+        "accepted": false,
+        "abstained_or_inconclusive": true,
+        "proposals": [],
+        "truth_mismatched_proposals": [],
+        "false_proposals_rejected": [],
+        "truth_mismatched_proposals_not_supported": [],
+        "first_nonreference_target": null,
+        "first_target_relevant": null,
+        "tests_completed": 0,
+        "source": "not_run"
+      }
+    }
+  ]
+}

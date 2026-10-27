@@ -1,0 +1,1399 @@
+{
+  "baseline_commit": "f5512c05c187733d1a69af86b399bc33175d6d5e",
+  "tracked_files": 232,
+  "method": "Complete tracked-file inventory at the verified v4 commit. Technical review focuses on executable source, tests, configuration, deployment, current documentation and existing evidence. Images and historical artifacts are inventoried; this is not a claim of a new cosmetic review.",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "git_blob": "174f5ae2965af73c2d6a83806d03c42eee1f81d3",
+      "bytes": 159,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "git_blob": "57a933c405ab7bdf6b27f59d9ae37ce3e27ff3d7",
+      "bytes": 1370,
+      "area": ".github"
+    },
+    {
+      "path": ".gitignore",
+      "git_blob": "0f015ad117f138e5101439f2d1bf2f326c39fdc8",
+      "bytes": 4896,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "git_blob": "c6ed16260aa1218fa58e51140a83d0edf5c15166",
+      "bytes": 7680,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "DEMO_RUNBOOK.md",
+      "git_blob": "dfedf34cd04c4cbe4e763ee8c11a2237dff7ce72",
+      "bytes": 7008,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "DEMO_SCRIPT.md",
+      "git_blob": "d2c0b5a1615c41cdce454bf55c4e9225c0dc7946",
+      "bytes": 3560,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "DEVELOPMENT_ROADMAP.md",
+      "git_blob": "343f8601e93c54506659f7e9179841600eae4e46",
+      "bytes": 5509,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "Dockerfile",
+      "git_blob": "0ac0a119e3687490a72d2a2944e3f52d0749faeb",
+      "bytes": 1697,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "EVALUATION_PLAN.md",
+      "git_blob": "ace00f2530b5aa1d2a47457dac9c21ffaa1a33bb",
+      "bytes": 7334,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "HACKATHON_BUILD_LOG.md",
+      "git_blob": "6385ea9d7adcd57e0e7df6a97a50bc1e309795d4",
+      "bytes": 11612,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "JUDGE_ACCESSIBILITY.md",
+      "git_blob": "b80a4a93be1e56ca74f6c232a8545086d88828ca",
+      "bytes": 3860,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "JUDGING_ALIGNMENT.md",
+      "git_blob": "5909129ff9bfee8826362f531c30963c96cc013e",
+      "bytes": 1895,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "14c09893e25fb8243cec4413af0f3349c790edda",
+      "bytes": 1075,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "MODEL_ACTIVATION.md",
+      "git_blob": "b7ba3a173672eea85b912f2d91dce81c887ac238",
+      "bytes": 3607,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "OWNER_ACTIONS.md",
+      "git_blob": "4c2b967ea853b25820a481d039b49ce60c38a011",
+      "bytes": 3548,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "695c6d0e72606f6da307cdbf05ae0f13c5bb8cfc",
+      "bytes": 13115,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "RECORDED_DEMO_FALLBACK.md",
+      "git_blob": "19582a77bb470d41add15a2d3a5731ba194b35cc",
+      "bytes": 1943,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "REDESIGN_DEPLOYMENT.md",
+      "git_blob": "99f6cd6e1279ce1ee26a4ff4a02bdc470a7606a7",
+      "bytes": 3329,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "SECURITY.md",
+      "git_blob": "3cba3662443f6db71493815b48e744874fc3952d",
+      "bytes": 8023,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "git_blob": "de7d8ee673f2c4563dc97929006951bd3933de0d",
+      "bytes": 3379,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "backend/evaluation/phase2-results.json",
+      "git_blob": "0d2bb7a9f051c2ac48c7f96559f221e4c83f1f34",
+      "bytes": 142367,
+      "area": "backend"
+    },
+    {
+      "path": "backend/evaluation/phase3-results.json",
+      "git_blob": "62351f2055febefa3b5b43cabce477b220f5b551",
+      "bytes": 254545,
+      "area": "backend"
+    },
+    {
+      "path": "backend/evaluation/results.json",
+      "git_blob": "4c15926fb495a648bc76104bdd3f03393932a432",
+      "bytes": 289739,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/analysis.py",
+      "git_blob": "628b046ce66ce94c8fe9edec9a96b9081a06d444",
+      "bytes": 2365,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/body_limit.py",
+      "git_blob": "32aa7cdb6f7d3c166d9d28a0cfa1531b22e03ba5",
+      "bytes": 1986,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/config.py",
+      "git_blob": "f22752a203a7f34d3ad9af012515da7cbb213632",
+      "bytes": 1138,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/__init__.py",
+      "git_blob": "30138942cb7c3f544b1108a30c0e32749fbdef45",
+      "bytes": 88,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/contracts.py",
+      "git_blob": "fc92de53b1823cbf797a3f5e87e99564d7e8dbd2",
+      "bytes": 3635,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/hypotheses.py",
+      "git_blob": "106e6cdf812c067347a74ef64554ce0b4bbfe26b",
+      "bytes": 3247,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/investigation.py",
+      "git_blob": "0d9cb5e3386bd2960500415e4927accd655c79d2",
+      "bytes": 4569,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/oracle.py",
+      "git_blob": "aad3a558f96e65fcc86cc7811a3490bb5cbaaf8e",
+      "bytes": 4101,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/reporting.py",
+      "git_blob": "4daf27fe7c4e7ade8701840d3fe0943adb6d47d3",
+      "bytes": 7435,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/routes.py",
+      "git_blob": "b03b91c8e05f103d10af47eb5f200700ef00adc3",
+      "bytes": 4611,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/engine/verifier.py",
+      "git_blob": "6c1f9ed1c1086b5d6bdec788fa25a6f2b4a6e5a0",
+      "bytes": 8860,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/evaluate.py",
+      "git_blob": "263e76b72c53d70c5f15f98018ef5c69447eb02c",
+      "bytes": 7714,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/main.py",
+      "git_blob": "fa36b4b2038a11dbee2a3a977e078b097ed7627f",
+      "bytes": 6500,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/__init__.py",
+      "git_blob": "315f2b7cdb102bec5c8b8029eaaa990ccd2a2812",
+      "bytes": 68,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/contracts.py",
+      "git_blob": "a743f36e57e0a807728ed3742036fe55c312638a",
+      "bytes": 952,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/evaluate.py",
+      "git_blob": "0748d1ca2670e1ca85c8a040adf9f0f44a0d6e23",
+      "bytes": 6835,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/evidence.py",
+      "git_blob": "9e5f6a7eadc4b032003b84bdedd5e9a0ebb40bca",
+      "bytes": 3154,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/inference.py",
+      "git_blob": "abac3ca01627c9bd2a888fd325dd912386512b7f",
+      "bytes": 16465,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/oracle.py",
+      "git_blob": "97f41db965a4d24b40cab95f63fa6a847c07030e",
+      "bytes": 4052,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/replay.py",
+      "git_blob": "b92c88a6d7c6f82c1690679657537a1a820ab2c0",
+      "bytes": 690,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/routes.py",
+      "git_blob": "b41a9015ce972b48edee1031543a6af1a3e88edf",
+      "bytes": 2070,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/service.py",
+      "git_blob": "b9974d579315c7c2ae1f7e99df72f52ae4d7ecb6",
+      "bytes": 8419,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/thermal_input.py",
+      "git_blob": "04931d036592eab9a03b9b5d79a93277d3200497",
+      "bytes": 1756,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase2/verification.py",
+      "git_blob": "57a93b14b20a63a0e3da7a9f9d03bb323e3a733f",
+      "bytes": 8076,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/__init__.py",
+      "git_blob": "7b71a41cce689ea7b153299e09cd01a74f0626b1",
+      "bytes": 76,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/evaluate.py",
+      "git_blob": "879f53447640c66e3695947de3f2b36dded20da5",
+      "bytes": 10276,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/oracle.py",
+      "git_blob": "7651558b014320ced73c68c7b82d4e4eaf873920",
+      "bytes": 2285,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/replay.py",
+      "git_blob": "f9d0d4dbccdd1210ffe7d55a82e5210aa07fabeb",
+      "bytes": 676,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/reporting.py",
+      "git_blob": "15c3384d0d28fe659bffa796c5586ce5a4b5eb67",
+      "bytes": 7667,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/routes.py",
+      "git_blob": "76733ef69191673ded37380db3f7f1075eae623a",
+      "bytes": 9532,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/safety.py",
+      "git_blob": "80cf3d651754a5b59d1192b38d97d8a8d7517b4a",
+      "bytes": 8734,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/service.py",
+      "git_blob": "a83c2c7cd1296c17d54df3537e0dea7050e5fe6c",
+      "bytes": 14271,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/storage.py",
+      "git_blob": "45afb64cc8c7aff554c177393a9f715c287861cc",
+      "bytes": 4526,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/phase3/verification.py",
+      "git_blob": "929577a03de862dea27ecffe65e4f5fe0d544cf6",
+      "bytes": 7814,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/providers.py",
+      "git_blob": "11b4a2218ee1dfd3262a8076e78335467e81e130",
+      "bytes": 2827,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/replay.py",
+      "git_blob": "c7aec1c237d43dc4e6ba940dcc090556a926f369",
+      "bytes": 799,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/simulation.py",
+      "git_blob": "96b49c986c51e966e29b1c81f115def6f45d3a1b",
+      "bytes": 1188,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/__init__.py",
+      "git_blob": "12209ca4e164ee3748ed9c3963cc32cb53c20129",
+      "bytes": 85,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/audit.py",
+      "git_blob": "cd7fefcf181832d70fac65d9940a0f321132871c",
+      "bytes": 5906,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/models.py",
+      "git_blob": "981b006b713e4d8f355ba88ed022d86cb842695f",
+      "bytes": 1550,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/receipt.py",
+      "git_blob": "de6c072ed24ae3b6e8b2f1415b9615b5c890bfa6",
+      "bytes": 1539,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/render.py",
+      "git_blob": "6e981d6a49f9779db37fbdb3d09f72e2fcff316f",
+      "bytes": 1027,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/serve.py",
+      "git_blob": "fc39fc733f1b47a128967cbe8a029ccdd1c40881",
+      "bytes": 1863,
+      "area": "backend"
+    },
+    {
+      "path": "backend/forge/submission/smoke.py",
+      "git_blob": "254e886b0d5011a445a3c553b627afe18e929b82",
+      "bytes": 7258,
+      "area": "backend"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "git_blob": "bfcf7e03e86a81f6de03956beb9f0104aef9108d",
+      "bytes": 336,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_engine.py",
+      "git_blob": "4e50aae2477753d2cbb58f1e171e26f55d42e9cf",
+      "bytes": 13566,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_event_integration.py",
+      "git_blob": "9d4fe4ccd3fd4668c32d17a197a79eeb8dad6904",
+      "bytes": 10151,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_forge.py",
+      "git_blob": "1f7fe1d8ea0972e75024abae38223798c61396e6",
+      "bytes": 8311,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_phase2.py",
+      "git_blob": "0a0c4c1d458e3398923100f8b2bf403d9503503f",
+      "bytes": 15243,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_phase3.py",
+      "git_blob": "8fa1dc2924dd9cae67afb6e5137c48d25029f080",
+      "bytes": 13606,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_render_deployment.py",
+      "git_blob": "7bb717f175a3231b11d687ee33ff6ffb215df07d",
+      "bytes": 2085,
+      "area": "backend"
+    },
+    {
+      "path": "backend/tests/test_submission.py",
+      "git_blob": "f3ed36636701ca70967767b2008a2e6eb9171c18",
+      "bytes": 11594,
+      "area": "backend"
+    },
+    {
+      "path": "backend/uv.lock",
+      "git_blob": "e0f8567026760d0cb2518bd127dea7d1564c29ea",
+      "bytes": 90930,
+      "area": "backend"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "git_blob": "01df6e9e730f08843b063a69d8748f80bc957552",
+      "bytes": 823,
+      "area": "deploy"
+    },
+    {
+      "path": "deploy/public.env.example",
+      "git_blob": "9a0eba7baa0b43f3af9792f57962e13150dbab89",
+      "bytes": 425,
+      "area": "deploy"
+    },
+    {
+      "path": "deploy/smoke.env.example",
+      "git_blob": "052adc99fa2140c9fea7493952f8600ae5319671",
+      "bytes": 1073,
+      "area": "deploy"
+    },
+    {
+      "path": "docs/DEPLOYMENT_SECURITY_AUDIT.md",
+      "git_blob": "776e6f83873d5d15bb31d5be00f1ceabb6e83cbc",
+      "bytes": 6217,
+      "area": "docs"
+    },
+    {
+      "path": "docs/DESIGN_SYSTEM_V3.md",
+      "git_blob": "08475747f17a1caac52708807cc522b5a849c45e",
+      "bytes": 6177,
+      "area": "docs"
+    },
+    {
+      "path": "docs/HOSTING_AND_ACCESS.md",
+      "git_blob": "46846ee2c817f2fbac4907c07d9a458f15eb73d7",
+      "bytes": 10252,
+      "area": "docs"
+    },
+    {
+      "path": "docs/META_INTEGRATION.md",
+      "git_blob": "f813c57506f3613af375cdb1a72e86d112de2ce8",
+      "bytes": 11605,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PHASE1_VALIDATION.md",
+      "git_blob": "0c1b485a8646321ef1997cdf9896057090921b8e",
+      "bytes": 4048,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PHASE2.md",
+      "git_blob": "fdb2fbe92e696d62f6411bf6618e08a9ec5d55f8",
+      "bytes": 11648,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PHASE3.md",
+      "git_blob": "1db6df0fba97fd785c84a97f5eba859f34ce2ca0",
+      "bytes": 9291,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PHASE4.md",
+      "git_blob": "5c9cb4b5e805e62c1ba6558d9f5c440244e537db",
+      "bytes": 5365,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PRODUCT_REDESIGN.md",
+      "git_blob": "66659d5b4987c09b1e3950f9e48122458224a2b0",
+      "bytes": 8095,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PRODUCT_V4_DESIGN_REVIEW.md",
+      "git_blob": "e4d9b326404070c9af682c96e92de6c6e4bb97d7",
+      "bytes": 4488,
+      "area": "docs"
+    },
+    {
+      "path": "docs/PRODUCT_V4_RELEASE.md",
+      "git_blob": "692b91f7bcf3526ce1d8cc402ef349e30550ff5e",
+      "bytes": 6991,
+      "area": "docs"
+    },
+    {
+      "path": "docs/design-v3-validation.json",
+      "git_blob": "b0789e0448a647e5f317b78ca57898ce6db11299",
+      "bytes": 2466,
+      "area": "docs"
+    },
+    {
+      "path": "docs/design/concept-a.svg",
+      "git_blob": "4ee9af2f7508b220a5e41880e04a68092794c455",
+      "bytes": 1720,
+      "area": "docs"
+    },
+    {
+      "path": "docs/design/concept-b.svg",
+      "git_blob": "3b575076baff341c8194c38e4957c12f2c64519f",
+      "bytes": 1913,
+      "area": "docs"
+    },
+    {
+      "path": "docs/design/concept-c.svg",
+      "git_blob": "498233594b04fbc7779fde3775964548df4e4b3a",
+      "bytes": 2096,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/DESIGN_V3_REVIEW.md",
+      "git_blob": "c07551afe56b9c856635532ff0b29810c314dcb4",
+      "bytes": 1180,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/PRODUCT_V4_REVIEW.md",
+      "git_blob": "9dbf927fff787d4800c5e707757eb2f758603c53",
+      "bytes": 5849,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/REDESIGN_REVIEW.md",
+      "git_blob": "404909632905e71775b04445ea96fcb9875c3c4a",
+      "bytes": 2328,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-evidence.png",
+      "git_blob": "7ee90f5710433144cdd53a7836a033440c02ecee",
+      "bytes": 225919,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-experiments.png",
+      "git_blob": "9f425fe065bf1e42bf4bc679a8f6a2c005fdd7a1",
+      "bytes": 160206,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-hypotheses.png",
+      "git_blob": "0c78ebbb1ce3bc7fcded1f30803376b23024e491",
+      "bytes": 173999,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-reports.png",
+      "git_blob": "32c9baecadc815e82621cb3af768332c3da4e7f3",
+      "bytes": 162179,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-verification.png",
+      "git_blob": "77fb0645235ca2fbc347c29429362ca7302ae705",
+      "bytes": 154029,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-workspace.png",
+      "git_blob": "3eff4a48fd82d46021cbf9ea96db723f97670213",
+      "bytes": 313073,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-evidence.png",
+      "git_blob": "21692d6430a9ca475986a2eb54aa58a7715f6be0",
+      "bytes": 190080,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-experiments.png",
+      "git_blob": "fbef592614607358d55b648c78dd6b2e34077a00",
+      "bytes": 121165,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-hypotheses.png",
+      "git_blob": "1aa1542918b952349cda938cf4cbf922428a188a",
+      "bytes": 135154,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-reports.png",
+      "git_blob": "fed18c3a10a96cbdcef6eeb8697d6a8588ea8b73",
+      "bytes": 120650,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-verification.png",
+      "git_blob": "4b5633ce40dde3dad41325cd011c0246f534da52",
+      "bytes": 127477,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-workspace.png",
+      "git_blob": "d1792ddfcec3b5d30f78761e6800ca8023f02031",
+      "bytes": 274991,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase1-desktop.png",
+      "git_blob": "3b04cddfb10572eadbe0febd79e056c2da034635",
+      "bytes": 106664,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase1-mobile.png",
+      "git_blob": "bd76c4166770e197841dd9588b704f05564aa964",
+      "bytes": 100752,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase2-desktop.png",
+      "git_blob": "001d0616e23f148945fa9adb7db4c41da97706e0",
+      "bytes": 94478,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase2-mobile.png",
+      "git_blob": "166bff00996f130c5090bb6aff1c52c14db49fcd",
+      "bytes": 97243,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase3-desktop.png",
+      "git_blob": "df183d9bff51ea21290155e4952a5deac51ab4f9",
+      "bytes": 241602,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/phase3-mobile.png",
+      "git_blob": "e7232690ad04b691664dac2a18a0f369d3d4ee95",
+      "bytes": 225920,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-choose.png",
+      "git_blob": "b3d494c4bc808b4b1e1cb3b69b6ee7efd16595a7",
+      "bytes": 134280,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-evidence.png",
+      "git_blob": "a86f0d709d2b4334c805ac72301f2f5274bff3ed",
+      "bytes": 167516,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-missing-evidence.png",
+      "git_blob": "abcf8b76871cea17b421016a58cf442b9c897e48",
+      "bytes": 147539,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-overview.png",
+      "git_blob": "1eb41ff8b22077f4d2a8987b257ab9a9ed21e836",
+      "bytes": 145680,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-possible-causes.png",
+      "git_blob": "aeb751f5f28fb782575b83a7d07489e69169772b",
+      "bytes": 201180,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-report.png",
+      "git_blob": "72e26adc2cf3691a18d7249eb0a3c3549906ed72",
+      "bytes": 149011,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-results.png",
+      "git_blob": "a89cdb00d84bf1cb4194832fca37d3f2dc9463dd",
+      "bytes": 181143,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-test-proposal.png",
+      "git_blob": "e06ab385c107d57688a8cd41806cd325112b96f0",
+      "bytes": 128622,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-tests.png",
+      "git_blob": "fa1df2ede103640b50387a7bec0159f7d5c2e160",
+      "bytes": 130206,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-thermal.png",
+      "git_blob": "53a87a0a16ee880e74013884105ef13cbde0b8d1",
+      "bytes": 141317,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-waveform.png",
+      "git_blob": "6cb01fa65339dacc9de72bc0d1a51fc3af576a61",
+      "bytes": 159289,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-choose.png",
+      "git_blob": "b37262f9c12a3a55ce8540213f9d756c09e09f0f",
+      "bytes": 117885,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-evidence.png",
+      "git_blob": "e53bdf9b0590c4187d8b1021ec03a8fcdd6c8fb7",
+      "bytes": 107047,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-overview.png",
+      "git_blob": "2e79bf5a268e8d2c77793e113292683b516ded78",
+      "bytes": 107559,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-possible-causes.png",
+      "git_blob": "b05651dfe82190d5fb2afcbeb4e166455cebb1dc",
+      "bytes": 157826,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-report.png",
+      "git_blob": "c58a64f9d0a9a47fc32a1da54dcc22ed51ea1ad6",
+      "bytes": 107460,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-results.png",
+      "git_blob": "d368ebaff2f21469fa46cd5c794070e45c22354e",
+      "bytes": 137529,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-tests.png",
+      "git_blob": "81200c5a00824d47a2cf8c9300f013130f831ed4",
+      "bytes": 90578,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-thermal.png",
+      "git_blob": "9294be0f9887c43bdb630619c5312477693a4104",
+      "bytes": 100237,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-waveform.png",
+      "git_blob": "903cf0075f9234812c6bea76eb5744f5a0baf6b0",
+      "bytes": 106300,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-choose.png",
+      "git_blob": "89602e4d291a5cdf773f99541ed6d3584c383880",
+      "bytes": 116043,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-evidence.png",
+      "git_blob": "1b6dbcf28741e3a97ec7c6ef0972ef39bb8a6aae",
+      "bytes": 109693,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-overview.png",
+      "git_blob": "aa16bae03a3f9c1c569b0646a726a178d10dad4f",
+      "bytes": 104777,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-possible-causes.png",
+      "git_blob": "43c6d3859431dc84c8792019178d11ccc9652363",
+      "bytes": 156425,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-report.png",
+      "git_blob": "fea931351f3cd5303fbffee59ee586479f5b5911",
+      "bytes": 107101,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-results.png",
+      "git_blob": "fb66095d79459f4b123e00b2505b34cb196ac5ec",
+      "bytes": 136909,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-tests.png",
+      "git_blob": "5c24c04bdf726827c2f6b3293fe17cfaa4bbb351",
+      "bytes": 91192,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-thermal.png",
+      "git_blob": "c7b3b4b5576381012e71d117735eb6c01d013c07",
+      "bytes": 98551,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-waveform.png",
+      "git_blob": "6a688cad1f94cf39bd85d3a222d9ac91414a0bde",
+      "bytes": 107645,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-choose.png",
+      "git_blob": "a5a30cb9118542fa2ada584b45654fc67165530e",
+      "bytes": 115506,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-evidence.png",
+      "git_blob": "39ac405ccd49cbe74846e47ed8689a3a55140029",
+      "bytes": 109371,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-missing-evidence.png",
+      "git_blob": "c2f02d3859fce71c2b2c732ae58607891d9ec9da",
+      "bytes": 97821,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-overview.png",
+      "git_blob": "c0db55135f3012fba6d2decfc2436b7530fb56f5",
+      "bytes": 104890,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-possible-causes.png",
+      "git_blob": "bf24a55e35f5aef071f849c030ce33ad0f1ab877",
+      "bytes": 154495,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-report.png",
+      "git_blob": "53c50c9c306d36c51f05e65983a5bc85115c9ede",
+      "bytes": 106464,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-results.png",
+      "git_blob": "e2e239c0aaaa3e075305d126859a1630c384c1d3",
+      "bytes": 137029,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-test-proposal.png",
+      "git_blob": "2f8e437fe5f6ee1af9eae37e09f63991b6dfcd5d",
+      "bytes": 85886,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-tests.png",
+      "git_blob": "e195b881a48f5058807fd8f2d10290ada6ce8bce",
+      "bytes": 90456,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-thermal.png",
+      "git_blob": "f769ce74b7263e8610114804d0938e0ea792b044",
+      "bytes": 98488,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-waveform.png",
+      "git_blob": "5800d5254a86af777f3f134a116033171e693a0a",
+      "bytes": 106778,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-choose.png",
+      "git_blob": "d68bac26a019bdc792093d427a48be9cde33a8cf",
+      "bytes": 115329,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-evidence.png",
+      "git_blob": "9218d13b861a936cca29772fb4f36aa3c07d47c4",
+      "bytes": 111119,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-overview.png",
+      "git_blob": "b4fa0945db418aa4b80c8611e726779dfd99da42",
+      "bytes": 106440,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-possible-causes.png",
+      "git_blob": "f83360214ce4b2047626c0b2eec6aeecb42272fa",
+      "bytes": 156293,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-report.png",
+      "git_blob": "3b188809fa29bd246dae1061c9515e476c425ab8",
+      "bytes": 106396,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-results.png",
+      "git_blob": "6fa455e45f042fa8e35f3c66e1bcec82bce41030",
+      "bytes": 136070,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-tests.png",
+      "git_blob": "d385b370c50bc7b14ae94be142843bf64c719244",
+      "bytes": 90875,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-thermal.png",
+      "git_blob": "fc3c2a2af878b5c402faf0958d2c8e9a596f5d21",
+      "bytes": 100058,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-waveform.png",
+      "git_blob": "70c8c71b66617a0fce7b60082238675be89f3d03",
+      "bytes": 108528,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-evidence.png",
+      "git_blob": "94a8528f6c8796a0213866f84a49154114130c78",
+      "bytes": 192270,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-experiments.png",
+      "git_blob": "55a7f3ff5668daa6209c1fcf36ada643e148ce8a",
+      "bytes": 133639,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-hypotheses.png",
+      "git_blob": "323dcc0218927c62075129662c841fe3a0142c4f",
+      "bytes": 148563,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-reports.png",
+      "git_blob": "d54b83d8a69667a543ad6e3c976730b0153b8af6",
+      "bytes": 135885,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-verification.png",
+      "git_blob": "2d54a281f0965634c77ba27ad49e959668b57962",
+      "bytes": 133645,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-workspace.png",
+      "git_blob": "a10513a6b26e4c396ace228a3e1a31ba39579cce",
+      "bytes": 257372,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-evidence.png",
+      "git_blob": "a68683637046cea071d9120e5d922db15eeb03d3",
+      "bytes": 158246,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-experiments.png",
+      "git_blob": "d91f2a2f65860526a3424f95e92bcd1b88d68a41",
+      "bytes": 100841,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-hypotheses.png",
+      "git_blob": "514959b0c0167dd29d4c2bc98f0d0f16c0c63574",
+      "bytes": 108024,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-reports.png",
+      "git_blob": "8cb0ed07c07d78d962c520530f6504242c501a66",
+      "bytes": 99099,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-verification.png",
+      "git_blob": "2e4b99240772971316b2807dc27ffd485d64d74d",
+      "bytes": 104705,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-workspace.png",
+      "git_blob": "212a72f6f990907d4ee29bfbe56d8566c8900957",
+      "bytes": 220590,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/render-local-desktop.png",
+      "git_blob": "ddc890ac3c18a4aeec6328837a9a6075f5629943",
+      "bytes": 247994,
+      "area": "docs"
+    },
+    {
+      "path": "docs/evidence/render-local-mobile.png",
+      "git_blob": "c8c7544c84fb971eaa9e8b166fd3ac0793a4f587",
+      "bytes": 233174,
+      "area": "docs"
+    },
+    {
+      "path": "docs/hosting-source-manifest.json",
+      "git_blob": "ea4eb2871ec9f036ce36b9340d48b624a57aaa90",
+      "bytes": 1701,
+      "area": "docs"
+    },
+    {
+      "path": "docs/hosting-validation.json",
+      "git_blob": "d39b5d9c778e3d14aa2be4c3eaccc1fc6e91bd76",
+      "bytes": 4480,
+      "area": "docs"
+    },
+    {
+      "path": "docs/phase2-source-manifest.json",
+      "git_blob": "c4f1fd29613993124f467f567ab3e1220bf45cb1",
+      "bytes": 3316,
+      "area": "docs"
+    },
+    {
+      "path": "docs/phase3-source-manifest.json",
+      "git_blob": "2e5f7fd8e3c9be4ec0a92fc98c6882b375b15536",
+      "bytes": 1531,
+      "area": "docs"
+    },
+    {
+      "path": "docs/phase4-source-manifest.json",
+      "git_blob": "ba2bb7a82d359e7c2a88f238b20e4883ae24761b",
+      "bytes": 2721,
+      "area": "docs"
+    },
+    {
+      "path": "docs/phase4-validation.json",
+      "git_blob": "6197eceb12a97239210e661c72b9fcb0ca5de87d",
+      "bytes": 4745,
+      "area": "docs"
+    },
+    {
+      "path": "docs/product-v4-validation.json",
+      "git_blob": "dc0280906a221719357fa947e8ed8c5ddfe603ff",
+      "bytes": 7595,
+      "area": "docs"
+    },
+    {
+      "path": "docs/redesign-source-manifest.json",
+      "git_blob": "4f7937b4c6f10e9362eddb8d33dfd909b3833cf9",
+      "bytes": 1589,
+      "area": "docs"
+    },
+    {
+      "path": "docs/redesign-validation.json",
+      "git_blob": "5d0a8faf54d0c4749c768bc9200b2bb538c3b217",
+      "bytes": 7272,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/README.md",
+      "git_blob": "73a89994b386d61842dd04d25d065c653d996a21",
+      "bytes": 1513,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/insufficient.html",
+      "git_blob": "69893bc86e1151983d65f9985b941e6b21fc6827",
+      "bytes": 42372,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/insufficient.json",
+      "git_blob": "fc434748060df0b9365fed8e959aa0e76c225ce2",
+      "bytes": 33209,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/manifest.json",
+      "git_blob": "5e3fe9821b4e7dab20e3f40416a82e7aa4a21967",
+      "bytes": 1577,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.html",
+      "git_blob": "81e33ed4f84d8e31ba881091b3fc0bc26ed09e4b",
+      "bytes": 136573,
+      "area": "docs"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.json",
+      "git_blob": "0a693aaa46b2f2ac84c57b48a6478d4252bdd40f",
+      "bytes": 123874,
+      "area": "docs"
+    },
+    {
+      "path": "frontend/index.html",
+      "git_blob": "97c9136e05389cf3d731720d1a39dc0015bf4fd0",
+      "bytes": 368,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "git_blob": "7fa4daf14e89b40f03764098b42e0b5eff92ae3d",
+      "bytes": 97547,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/package.json",
+      "git_blob": "905443e9677759c2960b003b9165c5a09a953b2a",
+      "bytes": 710,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/public/assets/geist-mono-OFL.txt",
+      "git_blob": "2e4aef1e27121f3682a1c97326ab558ced7d3bc7",
+      "bytes": 4498,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/public/assets/geist-sans-OFL.txt",
+      "git_blob": "b3e2de2a0360653b8ced522322e3aea18027745c",
+      "bytes": 4384,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "git_blob": "a449e251d40d4920ed5065412dc522a767d752cd",
+      "bytes": 3210,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "git_blob": "1788cfa692e39bdac3829ca299438cf0d9ba5d73",
+      "bytes": 15913,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/DemoConsole.test.tsx",
+      "git_blob": "351bb912bee02c42983e5b35ee0fd5831c45ab05",
+      "bytes": 6926,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/DemoConsole.tsx",
+      "git_blob": "84aaf4dec52e3756190d91522ed4ac54197d8b04",
+      "bytes": 11905,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/InvestigationWorkflow.test.tsx",
+      "git_blob": "6198f0d6d37d9f0157ac51aa766d9f55ae566d4f",
+      "bytes": 5910,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/InvestigationWorkflow.tsx",
+      "git_blob": "bbfc1e8b8a614efc33ec87be5e0793dfe43dd117",
+      "bytes": 12152,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/Phase2Investigation.test.tsx",
+      "git_blob": "1ba2b5ea051dd121842f2279df208ef7a4ed742d",
+      "bytes": 3944,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/Phase2Investigation.tsx",
+      "git_blob": "bfa4e0712cc15cf61bf0a3d5b5664a7f897efda4",
+      "bytes": 13289,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/AssetVisuals.tsx",
+      "git_blob": "832c72d06679b3af412aed6ebcfd076bf7543f67",
+      "bytes": 3183,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/CaseLobby.tsx",
+      "git_blob": "4e7a367096c59880ecf605d1b01de3bbcf653190",
+      "bytes": 5340,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/TelemetryChart.test.tsx",
+      "git_blob": "9c01833efe19dd5a9320a188941cf416b14a88d3",
+      "bytes": 1203,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/TelemetryChart.tsx",
+      "git_blob": "174b45a47952793e5ce558311dabbfa56c9d0b9f",
+      "bytes": 5940,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/components.tsx",
+      "git_blob": "a9444156501bda7cb079578262867f49ec7f737b",
+      "bytes": 3554,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/presentation.ts",
+      "git_blob": "3f8c3c6145c35b0d8d6e5a7621a77d2f426e1712",
+      "bytes": 3495,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/types.ts",
+      "git_blob": "28bf6866a85ebeca0bfee5ae291f00f3e3aee759",
+      "bytes": 2428,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/useInvestigation.ts",
+      "git_blob": "3ba19da48ee7060a0215b7cba8c4faf32fee5968",
+      "bytes": 6077,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/investigation/views.tsx",
+      "git_blob": "95ac76fe6d3422845e9e199ab311a2a5c9d63794",
+      "bytes": 21460,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "git_blob": "5e791a75031f554617bfccbc2e6cfdcf2000d605",
+      "bytes": 430,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/product-v4.css",
+      "git_blob": "a50755cbda0b8e5ea39a153c22d84663613873b6",
+      "bytes": 28029,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "git_blob": "c08a2d74777b1d70cab940ea2a81e1feff2cd398",
+      "bytes": 19191,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/test-setup.ts",
+      "git_blob": "f149f27ae4bbd7cc4f6253570176a4fce144ef95",
+      "bytes": 43,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/src/vite-env.d.ts",
+      "git_blob": "11f02fe2a0061d6e6e1f271b21da95423b448b32",
+      "bytes": 38,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "git_blob": "3d173d8f58e451bdc543f4b8f1e7d50a786d5eb7",
+      "bytes": 300,
+      "area": "frontend"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "git_blob": "639c59601fb5f67729744146a3366c05dcb8a01d",
+      "bytes": 328,
+      "area": "frontend"
+    },
+    {
+      "path": "render.yaml",
+      "git_blob": "75696feeff79bd987b0805b97775e13a974d78cf",
+      "bytes": 956,
+      "area": "root_docs_and_config"
+    },
+    {
+      "path": "scripts/api-smoke.py",
+      "git_blob": "203afef084ce0bfcf76770eb6bacb8ea44e962ad",
+      "bytes": 1475,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/browser-check.cjs",
+      "git_blob": "8d3ad4bbede94b053dad74b7fe225d7835dbca3e",
+      "bytes": 3103,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/build-submission-evidence.py",
+      "git_blob": "a0ce72e6e45362a1ef391d028f0e7066e82d73a5",
+      "bytes": 2161,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/design-system-check.cjs",
+      "git_blob": "2317e169be4ab67cd569f092c441d486c71b54a8",
+      "bytes": 193,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/phase2-browser-check.cjs",
+      "git_blob": "bdbe4938d9b0c2dfb5349e289978fe1b56ed628e",
+      "bytes": 3184,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/phase3-browser-check.cjs",
+      "git_blob": "2317e169be4ab67cd569f092c441d486c71b54a8",
+      "bytes": 193,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/product-v4-browser-check.cjs",
+      "git_blob": "a71a27da692bf97fe30e339d87f2c69c6648e15b",
+      "bytes": 9306,
+      "area": "scripts"
+    },
+    {
+      "path": "scripts/redesign-browser-check.cjs",
+      "git_blob": "2317e169be4ab67cd569f092c441d486c71b54a8",
+      "bytes": 193,
+      "area": "scripts"
+    }
+  ]
+}

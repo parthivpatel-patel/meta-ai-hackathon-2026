@@ -1,0 +1,29 @@
+{
+  "name": "Meta Global AI Developer Hackathon",
+  "startDate": "2026-10-26T17:00:00.000Z",
+  "endDate": "2026-11-05T02:00:00.000Z",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+  "end_eastern": "2026-11-04T21:00:00-05:00",
+  "published_submission_text_present": true,
+  "earliest_backend_commits": [
+    {
+      "commit": "03977072227b9b1e16436d061bb9b0d7de959ac2",
+      "author_utc": "2026-10-26T16:27:32Z",
+      "committer_utc": "2026-10-26T16:27:32Z"
+    },
+    {
+      "commit": "e7f90e93570c06c685d526b4766b03cfa4f17629",
+      "author_utc": "2026-10-26T16:28:43Z",
+      "committer_utc": "2026-10-26T16:28:43Z"
+    },
+    {
+      "commit": "6498e24cb2eedd702219fdb7e995f687ee56c2fd",
+      "author_utc": "2026-10-26T17:04:32Z",
+      "committer_utc": "2026-10-26T17:04:32Z"
+    }
+  ],
+  "limitation": "Public metadata, not the authenticated rules. Early commit timestamps precede the listed UTC start; owner/organizer clarification is needed. Commit clocks are not independently attested work records. Do not rewrite history to imply eligibility.",
+  "eligibility_status": "OPEN ELIGIBILITY QUESTION",
+  "owner_clarification": "Public pages confirm the date, but no official wording permitting/prohibiting pre-kickoff foundation or preexisting code has been verified. Preserve history; await authoritative written guidance."
+}

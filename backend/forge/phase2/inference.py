@@ -7,6 +7,7 @@ an operator attestation, not a guarantee by this client about provider billing.
 import asyncio
 import json
 import threading
+import time
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal, Protocol
@@ -159,6 +160,8 @@ class ChatProvider:
         self.used = 0
         self.token_units_used = 0
         self.successful_http_responses = 0
+        # Bounded safe diagnostics. Never retain headers, prompts, raw bodies or exception text.
+        self.attempts: list[dict] = []
         from ..submission.receipt import verified_smoke_receipt
 
         self.validated_receipt = verified_smoke_receipt(
@@ -215,16 +218,25 @@ class ChatProvider:
     async def _infer(
         self, observed: BlindInput, features: dict, thermal: ThermalFrame | None = None
     ) -> ModelRecord:
+        call_attempts: list[dict] = []
         try:
             async with asyncio.timeout(self.settings.total_timeout_seconds):
-                return await self._infer_attempts(observed, features, thermal)
+                return await self._infer_attempts(
+                    observed, features, thermal, call_attempts
+                )
         except TimeoutError as exc:
+            if call_attempts and call_attempts[-1]["status"] == "unverified":
+                call_attempts[-1]["error_code"] = "total_deadline"
             raise ProviderError(
                 "Total inference deadline timed out; no fallback was used"
             ) from exc
 
     async def _infer_attempts(
-        self, observed: BlindInput, features: dict, thermal: ThermalFrame | None = None
+        self,
+        observed: BlindInput,
+        features: dict,
+        thermal: ThermalFrame | None = None,
+        call_attempts: list[dict] | None = None,
     ) -> ModelRecord:
         if not self.status()["network_inference_enabled"]:
             raise ProviderError(
@@ -279,6 +291,21 @@ class ChatProvider:
                     )
                 self.used += 1
                 self.token_units_used += reservation
+                diagnostic = {
+                    "attempt": self.used,
+                    "requested_model": s.model_id,
+                    "returned_model": None,
+                    "http_status": None,
+                    "status": "unverified",
+                    "response_valid": False,
+                    "error_code": "interrupted_or_unverified",
+                    "elapsed_ms": None,
+                    "provider_reported_usage": None,
+                }
+                self.attempts.append(diagnostic)
+                if call_attempts is not None:
+                    call_attempts.append(diagnostic)
+            started = time.perf_counter()
             try:
                 async with (
                     asyncio.timeout(s.timeout_seconds),
@@ -301,6 +328,17 @@ class ChatProvider:
                         json=payload,
                     ) as response,
                 ):
+                    diagnostic["http_status"] = response.status_code
+                    diagnostic["error_code"] = (
+                        {
+                            401: "authentication_rejected",
+                            403: "access_rejected",
+                            402: "credits_or_payment_rejected",
+                            429: "rate_or_quota_rejected",
+                        }.get(response.status_code, "http_non_success")
+                        if response.status_code != 200
+                        else "response_rejected"
+                    )
                     if (
                         response.status_code in (429, 502, 503, 504)
                         and attempt < s.retry_limit
@@ -332,10 +370,15 @@ class ChatProvider:
                         "Sensitive content in the inference response was rejected"
                     )
                 data = json.loads(raw)
+                if not isinstance(data, dict):
+                    raise TypeError("Expected an object envelope")
+                diagnostic["error_code"] = "model_identity_mismatch"
                 if data.get("model") != s.model_id:
                     raise ProviderError(
                         "Returned model identity did not match the configured model"
                     )
+                diagnostic["returned_model"] = data["model"]
+                diagnostic["error_code"] = "structured_response_invalid"
                 choice = data["choices"][0]
                 if choice.get("finish_reason") != "stop" or choice["message"].get(
                     "tool_calls"
@@ -357,11 +400,23 @@ class ChatProvider:
                             )
                         }
                     )
+                diagnostic.update(
+                    {
+                        "status": "validated",
+                        "response_valid": True,
+                        "error_code": None,
+                        "provider_reported_usage": usage.model_dump()
+                        if usage
+                        else None,
+                    }
+                )
                 if self.transport is None:
                     with self.lock:
                         self.successful_http_responses += 1
                 return ModelRecord(
-                    source="test_transport" if self.transport else "meta_http_response",
+                    source="test_transport"
+                    if self.transport is not None
+                    else "meta_http_response",
                     input_mode="thermal_png_and_summaries"
                     if thermal is not None
                     else "numerical_summaries",
@@ -376,14 +431,24 @@ class ChatProvider:
                     output=output,
                 )
             except (TimeoutError, httpx.TimeoutException, httpx.TransportError) as exc:
+                diagnostic["error_code"] = (
+                    "transport_timeout"
+                    if isinstance(exc, (TimeoutError, httpx.TimeoutException))
+                    else "transport_failure"
+                )
                 if attempt == s.retry_limit:
                     raise ProviderError(
                         "Inference transport failed or timed out; no fallback was used"
                     ) from exc
-            except (ValueError, KeyError, IndexError, TypeError) as exc:
+            except (ValueError, KeyError, IndexError, TypeError, AttributeError) as exc:
+                diagnostic["error_code"] = "structured_response_invalid"
                 raise ProviderError(
                     "Inference output did not match the required structured schema"
                 ) from exc
+            finally:
+                diagnostic["elapsed_ms"] = round(
+                    (time.perf_counter() - started) * 1000, 3
+                )
         raise ProviderError("Inference retry limit exhausted")
 
 

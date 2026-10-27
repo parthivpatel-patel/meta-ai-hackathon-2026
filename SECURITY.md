@@ -58,3 +58,13 @@ Exact Host/route boundaries and a guarded public entrypoint address deployment m
 ## Event credential and redesign safety review
 
 BASETEN_API_KEY is scoped to the exact Baseten event model/endpoint, excluded from settings dumps and rejected on the public launcher. Conflicting credentials fail closed. Public restrictions, auth/rate/resource budgets and independent numerical acceptance are retained. Native thermal input is bounded local PNG/data URI with no URL fetch, no tools and separate8192-unit accounting reservation; its tokenizer/cost is unverified. First smoke is text/numeric only. A protected owner receipt is consistency/replay checked and cannot be uploaded anonymously; it is not a signed provider attestation. Never place either key on the anonymous Render service.
+
+## Final engineering checkpoint
+
+The separate genuine-model evaluation CLI is dry by default and inaccessible through public APIs. It requires a replayed private genuine smoke receipt and fresh owner authorization, caps the fixed pilot at five requests with zero retries, refuses public/Render execution and stops on its first failed model arm. Provider/account spending controls must still be verified: application counters reset by process and reservation units are not invoices or global billing caps.
+
+Smoke/evaluation artifacts are exclusive new 0600 files. Pending/interrupted artifacts must not trigger automatic retries. Safe diagnostics record bounded status/identity/timing/validated usage only; they do not retain raw remote error bodies, authorization headers, prompts or exception text. Invalid envelope types now become controlled provider failures. Structured candidate support is independently checked; every sentence of a rationale is not semantically verified.
+
+Production and test TypeScript configurations are separated so test fixtures outside the Docker frontend context cannot break release builds. Test type-checking still runs in CI, which now also builds and validates the actual non-root restricted public image. The external read-only audit explicitly requests uncompressed responses while preserving response-size/compression restrictions.
+
+Current runtime/public URL/dependency evidence is in `docs/FINAL_REQUIREMENTS_MATRIX.md` and `docs/final-engineering-validation.json`. No real key was configured or inference request sent. Zero known dependency advisories and bounded HTTP tests do not establish production readiness or a complete penetration test.

@@ -29,3 +29,7 @@ Choose **Prepare the report**. Download the readable report and numerical verifi
 ## Recording and judging evidence
 
 Record the exact branch/commit, screen size, analysis source and case used. Retain the video, HTML/JSON exports, independent replay output and validation summary. A recording of deterministic mode cannot substitute for the competition's eligible Meta model requirement. Keep the real activation blocker explicit; never splice a fixture into a recording and describe it as a real model response.
+
+## Genuine-Meta segment after verified activation
+
+For the final recording, replace the conditional integration explanation with actual evidence only after successful authorized smoke/evaluation. Show the actual source and requested/returned event model identifier, then say: “The Meta model supplied these structured possible causes from the observed evidence. The test selector and numerical verifier are independent.” If the response was retained earlier, explicitly say it is recorded. Use measured request timing and reported usage only when available; do not reuse fixture values. State the actual evaluation sample size and failure/abstention outcomes rather than promising a particular result. Accompany actual model use with the required “Built with Muse Spark Open” attribution and applicable license review.

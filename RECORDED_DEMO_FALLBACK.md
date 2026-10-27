@@ -1,11 +1,11 @@
-# Recorded-demo fallback
+# Recorded demonstration and report fallback
 
-Use the existing `DEMO_SCRIPT.md` three-minute narrative. Record the actual running browser: do not synthesize UI states, hide provenance or present generated footage as a live session. A free host may wake slowly; recording a local instance is acceptable **only if labeled local**, and does not establish public deployment.
+The final recorded video is **not yet produced**. The repository contains scripts, screenshots and reproducible synthetic reports, not a completed genuine-Meta submission recording.
 
-1. Start the verified public-mode local profile or externally verified deployed URL. Keep SYNTHETIC, RULES-BASED and ephemeral-storage labels visible. Use no account/settings screen or credential in the capture.
-2. Record the misleading sensor investigation, telemetry exploration, competing candidates, reference check, targeted intervention and independent decision. Show an actual JSON export and offline replay. End with missing-data abstention and limitations.
-3. Add narration from DEMO_SCRIPT.md; keep the final cut at the official three-minute limit. The model contribution remains “prepared, not yet executed” until real Meta activation succeeds. For a recorded genuine response, show its actual provenance and call it recorded rather than live.
-4. Upload using an existing no-cost video account with public/unlisted link viewable without login (or another verified no-cost artifact host). Do not start paid hosting/transcoding services. Test permissions and playback from a logged-out browser/mobile, then retain an offline copy plus SHA256.
-5. Put the verified video URL beside the verified application URL in the submission. If the app is waking/unavailable, judges can inspect video and versioned reports without depending on SQLite.
+1. Use the reviewed FORGE 4.0 candidate and the current three-minute `DEMO_SCRIPT.md`. Record the branch/SHA, actual source, case and viewport. Hide credential/environment panels, notifications and unrelated tabs.
+2. Show the pressure/sensor case from the case lobby through evidence, possible causes, two controlled tests, verification and report downloads. Inspect the independent reference means. Explain that the equipment and interventions are synthetic and the verifier is independent of generated candidate text.
+3. Before a genuine model artifact exists, label the entire run **Deterministic analysis. Synthetic data.** Do not narrate it as Meta inference. Once a separately authorized genuine response is verified, record its actual contribution and source. If replaying that artifact, label it **Recorded Meta response**, not a live anonymous public request.
+4. Keep the HTML report, replayable JSON and offline replay output with the video outside Render's ephemeral storage. Check file playback, readable text and narration on another device before sharing links. Do not publish private inference artifacts automatically; owner-review any sanitized public excerpt.
+5. If free hosting sleeps or loses sessions during judging, present the recorded workflow and downloaded evidence with clear labels. The existing public URL and recorded video are different forms of evidence. Do not use a recording to claim current uptime or hide a provider access failure.
 
-No finished narrated competition video or external video URL is claimed at this checkpoint. `docs/submission/` provides actual deterministic rules-based report evidence now. Run `UV_CACHE_DIR=/tmp/forge-uv-cache uv run --project backend --frozen python scripts/build-submission-evidence.py` to regenerate it without any inference request.
+The deterministic recording explains FORGE's technical loop but cannot replace the competition's genuine eligible-model requirement. Final video, eligible-model evidence, rule/window clarification and submission confirmation remain owner gates.

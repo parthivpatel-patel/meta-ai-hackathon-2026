@@ -1,0 +1,2718 @@
+{
+  "status": "OPEN ELIGIBILITY QUESTION",
+  "published_start_utc": "2026-10-26T17:00:00+00:00",
+  "baseline_commit": "f5512c05c187733d1a69af86b399bc33175d6d5e",
+  "prestart_snapshot": "e7f90e93570c06c685d526b4766b03cfa4f17629",
+  "prestart_commits": [
+    {
+      "commit": "4f8c522b05ae3f64cb2871b8fe4601a9fe2e20e3",
+      "author_timestamp": "2026-10-26T11:59:03-04:00",
+      "committer_timestamp": "2026-10-26T11:59:03-04:00",
+      "committer_utc": "2026-10-26T15:59:03+00:00",
+      "subject": "Initial commit",
+      "timing": "before_published_utc_start",
+      "files": [
+        {
+          "status": "A",
+          "path": ".gitignore"
+        },
+        {
+          "status": "A",
+          "path": "LICENSE"
+        },
+        {
+          "status": "A",
+          "path": "README.md"
+        }
+      ]
+    },
+    {
+      "commit": "03977072227b9b1e16436d061bb9b0d7de959ac2",
+      "author_timestamp": "2026-10-26T16:27:32Z",
+      "committer_timestamp": "2026-10-26T16:27:32Z",
+      "committer_utc": "2026-10-26T16:27:32+00:00",
+      "subject": "Build FORGE Phase 0 simulation, evidence API, and investigation dashboard",
+      "timing": "before_published_utc_start",
+      "files": [
+        {
+          "status": "A",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": ".gitignore"
+        },
+        {
+          "status": "A",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "A",
+          "path": "DEVELOPMENT_ROADMAP.md"
+        },
+        {
+          "status": "A",
+          "path": "EVALUATION_PLAN.md"
+        },
+        {
+          "status": "A",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "A",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/__init__.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/analysis.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/config.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/main.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/providers.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/simulation.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/pyproject.toml"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_forge.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/uv.lock"
+        },
+        {
+          "status": "A",
+          "path": "frontend/index.html"
+        },
+        {
+          "status": "A",
+          "path": "frontend/package-lock.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/package.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/App.test.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/App.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/main.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/style.css"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/test-setup.ts"
+        },
+        {
+          "status": "A",
+          "path": "frontend/tsconfig.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/vite.config.ts"
+        }
+      ]
+    },
+    {
+      "commit": "e7f90e93570c06c685d526b4766b03cfa4f17629",
+      "author_timestamp": "2026-10-26T16:28:43Z",
+      "committer_timestamp": "2026-10-26T16:28:43Z",
+      "committer_utc": "2026-10-26T16:28:43+00:00",
+      "subject": "Format backend and dashboard sources for maintainable development",
+      "timing": "before_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": "backend/forge/analysis.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/config.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/main.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/providers.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/simulation.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/tests/test_forge.py"
+        },
+        {
+          "status": "M",
+          "path": "frontend/index.html"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/App.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/App.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/main.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/style.css"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/test-setup.ts"
+        },
+        {
+          "status": "M",
+          "path": "frontend/tsconfig.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/vite.config.ts"
+        }
+      ]
+    }
+  ],
+  "prestart_snapshot_files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "snapshot_git_blob": "8c2600ebc50eabc91316ebd6a386c28246cec319",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": ".gitignore",
+      "snapshot_git_blob": "19a7de7b0a9f65dddfe7d94b5c0306be5d01286e",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "snapshot_git_blob": "3929870b18ceaf9ccc4a843eb55a457bad0b4f6d",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "DEVELOPMENT_ROADMAP.md",
+      "snapshot_git_blob": "7573ca42101373c73bd96fe0bd56512c6b62050c",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "EVALUATION_PLAN.md",
+      "snapshot_git_blob": "3fec71d3c2cd3fdc9291774f0acded0be2da45a3",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "HACKATHON_BUILD_LOG.md",
+      "snapshot_git_blob": "d71b51ae7e68a05329a92608535c1d854e6a16b8",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "LICENSE",
+      "snapshot_git_blob": "14c09893e25fb8243cec4413af0f3349c790edda",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "README.md",
+      "snapshot_git_blob": "7843c645a9e9e387f5d68198d95af8e755f47698",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "SECURITY.md",
+      "snapshot_git_blob": "59b940e910a94d9126d9b651d937e6d63af35b18",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "backend/forge/__init__.py",
+      "snapshot_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": []
+    },
+    {
+      "path": "backend/forge/analysis.py",
+      "snapshot_git_blob": "628b046ce66ce94c8fe9edec9a96b9081a06d444",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "ChannelEvidence",
+        "analyze"
+      ]
+    },
+    {
+      "path": "backend/forge/config.py",
+      "snapshot_git_blob": "f22752a203a7f34d3ad9af012515da7cbb213632",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "Settings",
+        "get_settings"
+      ]
+    },
+    {
+      "path": "backend/forge/main.py",
+      "snapshot_git_blob": "54487a38a4e632c41e2c0862eae2257b4dbdc8e2",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "lifespan",
+        "error",
+        "request_logging",
+        "validation_error",
+        "http_error",
+        "data_error",
+        "provider_error",
+        "health",
+        "model_status",
+        "demo",
+        "AnalysisRequest",
+        "analysis",
+        "hypotheses"
+      ]
+    },
+    {
+      "path": "backend/forge/providers.py",
+      "snapshot_git_blob": "11b4a2218ee1dfd3262a8076e78335467e81e130",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "HypothesisRequest",
+        "Hypothesis",
+        "HypothesisResponse",
+        "ProviderError",
+        "Provider",
+        "MockProvider",
+        "MetaProvider",
+        "make_provider",
+        "run_inference"
+      ]
+    },
+    {
+      "path": "backend/forge/simulation.py",
+      "snapshot_git_blob": "96b49c986c51e966e29b1c81f115def6f45d3a1b",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "Measurement",
+        "simulate"
+      ]
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "snapshot_git_blob": "bfcf7e03e86a81f6de03956beb9f0104aef9108d",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "backend/tests/test_forge.py",
+      "snapshot_git_blob": "1f7fe1d8ea0972e75024abae38223798c61396e6",
+      "present_at_v4_baseline": true,
+      "top_level_definitions": [
+        "client",
+        "test_simulated_shifts",
+        "test_normal_and_seed",
+        "test_statistics_reference",
+        "test_missing_excluded",
+        "test_constant_baseline_detects_shift",
+        "test_invalid_data",
+        "test_config_validation",
+        "test_api_workflow",
+        "test_query_validation",
+        "test_safe_errors_and_logging",
+        "test_meta_never_sends_network",
+        "test_retries_and_timeout",
+        "test_meta_api_does_not_fallback",
+        "test_invalid_startup_fails",
+        "test_numeric_input_bounds",
+        "test_malformed_json_and_unknown_channel"
+      ]
+    },
+    {
+      "path": "backend/uv.lock",
+      "snapshot_git_blob": "e0f8567026760d0cb2518bd127dea7d1564c29ea",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/index.html",
+      "snapshot_git_blob": "97c9136e05389cf3d731720d1a39dc0015bf4fd0",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "snapshot_git_blob": "059048215a642817c977652bcdb1855247739c47",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/package.json",
+      "snapshot_git_blob": "54cc309060be8fb0f8f0409df48ee49b5e8e22d1",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "snapshot_git_blob": "30f596d9c8ba4747d2549b58168939ab772cb0bd",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "snapshot_git_blob": "fb78bc7df4a0579b7051ad09fa5c6055569ec29e",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "snapshot_git_blob": "0f870c476233d9312e7e7f321d2e2f5fbe0369fd",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/src/style.css",
+      "snapshot_git_blob": "80e55954a7f94e85fe105afc1907192799cf3715",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/src/test-setup.ts",
+      "snapshot_git_blob": "f149f27ae4bbd7cc4f6253570176a4fce144ef95",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "snapshot_git_blob": "3d173d8f58e451bdc543f4b8f1e7d50a786d5eb7",
+      "present_at_v4_baseline": true
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "snapshot_git_blob": "b19958337c4ab1a26b19b1d2a596bfa27e4d9dd1",
+      "present_at_v4_baseline": true
+    }
+  ],
+  "poststart_recorded_commits": [
+    {
+      "commit": "6498e24cb2eedd702219fdb7e995f687ee56c2fd",
+      "author_timestamp": "2026-10-26T17:04:32Z",
+      "committer_timestamp": "2026-10-26T17:04:32Z",
+      "committer_utc": "2026-10-26T17:04:32+00:00",
+      "subject": "Implement Phase 1 blind synthetic investigations, independent verification, and reproducible reports",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "M",
+          "path": "DEVELOPMENT_ROADMAP.md"
+        },
+        {
+          "status": "M",
+          "path": "EVALUATION_PLAN.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "M",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "A",
+          "path": "backend/evaluation/results.json"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/__init__.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/contracts.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/hypotheses.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/investigation.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/oracle.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/reporting.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/routes.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/engine/verifier.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/evaluate.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/main.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/replay.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_engine.py"
+        },
+        {
+          "status": "A",
+          "path": "docs/META_INTEGRATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PHASE1_VALIDATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase1-desktop.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase1-mobile.png"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/App.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/App.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/InvestigationWorkflow.test.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/InvestigationWorkflow.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/style.css"
+        },
+        {
+          "status": "A",
+          "path": "scripts/api-smoke.py"
+        },
+        {
+          "status": "A",
+          "path": "scripts/browser-check.cjs"
+        }
+      ]
+    },
+    {
+      "commit": "e2213b819a1bebef2376b0289720c55795a2929d",
+      "author_timestamp": "2026-10-26T17:07:15Z",
+      "committer_timestamp": "2026-10-26T17:07:15Z",
+      "committer_utc": "2026-10-26T17:07:15+00:00",
+      "subject": "Document official hackathon sources and blocked card-free inference research",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/META_INTEGRATION.md"
+        }
+      ]
+    },
+    {
+      "commit": "3837024494f77c6f7296f502b95e2477e98ca499",
+      "author_timestamp": "2026-10-26T18:13:11Z",
+      "committer_timestamp": "2026-10-26T18:13:11Z",
+      "committer_utc": "2026-10-26T18:13:11+00:00",
+      "subject": "Build Phase 2 multimodal investigations, gated Meta transport, and independent multifault verification",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "M",
+          "path": "DEVELOPMENT_ROADMAP.md"
+        },
+        {
+          "status": "M",
+          "path": "EVALUATION_PLAN.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "M",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "A",
+          "path": "backend/evaluation/phase2-results.json"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/body_limit.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/main.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/__init__.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/contracts.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/evaluate.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/evidence.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/inference.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/oracle.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/replay.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/routes.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/service.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/verification.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_phase2.py"
+        },
+        {
+          "status": "M",
+          "path": "docs/META_INTEGRATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PHASE2.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase2-desktop.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase2-mobile.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/phase2-source-manifest.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/App.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/Phase2Investigation.test.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/Phase2Investigation.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/style.css"
+        },
+        {
+          "status": "A",
+          "path": "scripts/phase2-browser-check.cjs"
+        }
+      ]
+    },
+    {
+      "commit": "89c53e1115a8b5787a489889611194e604f9f231",
+      "author_timestamp": "2026-10-26T21:51:00Z",
+      "committer_timestamp": "2026-10-26T21:51:00Z",
+      "committer_utc": "2026-10-26T21:51:00+00:00",
+      "subject": "Build durable sequential FORGE demo with independent verification and hardening",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "A",
+          "path": ".dockerignore"
+        },
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": ".gitignore"
+        },
+        {
+          "status": "M",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "A",
+          "path": "DEMO_RUNBOOK.md"
+        },
+        {
+          "status": "A",
+          "path": "DEMO_SCRIPT.md"
+        },
+        {
+          "status": "M",
+          "path": "DEVELOPMENT_ROADMAP.md"
+        },
+        {
+          "status": "A",
+          "path": "Dockerfile"
+        },
+        {
+          "status": "M",
+          "path": "EVALUATION_PLAN.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "A",
+          "path": "JUDGING_ALIGNMENT.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "M",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "A",
+          "path": "SUBMISSION_CHECKLIST.md"
+        },
+        {
+          "status": "A",
+          "path": "backend/evaluation/phase3-results.json"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/main.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase2/inference.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/__init__.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/evaluate.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/oracle.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/replay.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/reporting.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/routes.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/safety.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/service.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/storage.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase3/verification.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_phase3.py"
+        },
+        {
+          "status": "M",
+          "path": "docs/META_INTEGRATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PHASE3.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase3-desktop.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/phase3-mobile.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/phase3-source-manifest.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/DemoConsole.test.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/DemoConsole.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/demo.css"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/main.tsx"
+        },
+        {
+          "status": "A",
+          "path": "scripts/phase3-browser-check.cjs"
+        }
+      ]
+    },
+    {
+      "commit": "cace30641fd664a202184897695d0ca56aac287a",
+      "author_timestamp": "2026-10-26T22:52:30Z",
+      "committer_timestamp": "2026-10-26T22:52:30Z",
+      "committer_utc": "2026-10-26T22:52:30+00:00",
+      "subject": "Prepare guarded Meta activation and audit hardened public deployment",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": ".dockerignore"
+        },
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": ".gitignore"
+        },
+        {
+          "status": "M",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "M",
+          "path": "DEMO_RUNBOOK.md"
+        },
+        {
+          "status": "M",
+          "path": "DEMO_SCRIPT.md"
+        },
+        {
+          "status": "M",
+          "path": "Dockerfile"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "A",
+          "path": "OWNER_ACTIONS.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "M",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "M",
+          "path": "SUBMISSION_CHECKLIST.md"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase2/inference.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/safety.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/__init__.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/audit.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/models.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/serve.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/smoke.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/tests/test_phase3.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_submission.py"
+        },
+        {
+          "status": "A",
+          "path": "deploy/compose.yaml"
+        },
+        {
+          "status": "A",
+          "path": "deploy/public.env.example"
+        },
+        {
+          "status": "A",
+          "path": "deploy/smoke.env.example"
+        },
+        {
+          "status": "A",
+          "path": "docs/DEPLOYMENT_SECURITY_AUDIT.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/META_INTEGRATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PHASE4.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/phase4-source-manifest.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/phase4-validation.json"
+        }
+      ]
+    },
+    {
+      "commit": "5e2ad425b4a0f5781917020460f280f9b73c9179",
+      "author_timestamp": "2026-10-26T23:47:33Z",
+      "committer_timestamp": "2026-10-26T23:47:33Z",
+      "committer_utc": "2026-10-26T23:47:33+00:00",
+      "subject": "Prepare free Render judge access and reproducible submission evidence",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": ".github/workflows/ci.yml"
+        },
+        {
+          "status": "M",
+          "path": "DEMO_RUNBOOK.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "A",
+          "path": "JUDGE_ACCESSIBILITY.md"
+        },
+        {
+          "status": "M",
+          "path": "OWNER_ACTIONS.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "A",
+          "path": "RECORDED_DEMO_FALLBACK.md"
+        },
+        {
+          "status": "M",
+          "path": "SUBMISSION_CHECKLIST.md"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/routes.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/safety.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/render.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/submission/serve.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_render_deployment.py"
+        },
+        {
+          "status": "A",
+          "path": "docs/HOSTING_AND_ACCESS.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/render-local-desktop.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/render-local-mobile.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/hosting-source-manifest.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/hosting-validation.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/README.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/insufficient.html"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/insufficient.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/manifest.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/misleading_sensor.html"
+        },
+        {
+          "status": "A",
+          "path": "docs/submission/misleading_sensor.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.tsx"
+        },
+        {
+          "status": "A",
+          "path": "render.yaml"
+        },
+        {
+          "status": "A",
+          "path": "scripts/build-submission-evidence.py"
+        }
+      ]
+    },
+    {
+      "commit": "302ac4d557712b211c92c862703e7e465829a250",
+      "author_timestamp": "2026-10-27T03:34:25Z",
+      "committer_timestamp": "2026-10-27T03:34:25Z",
+      "committer_utc": "2026-10-27T03:34:25+00:00",
+      "subject": "Redesign FORGE investigation workspace and prepare confirmed Baseten event integration",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": "ARCHITECTURE.md"
+        },
+        {
+          "status": "M",
+          "path": "DEMO_RUNBOOK.md"
+        },
+        {
+          "status": "M",
+          "path": "DEMO_SCRIPT.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "JUDGE_ACCESSIBILITY.md"
+        },
+        {
+          "status": "M",
+          "path": "JUDGING_ALIGNMENT.md"
+        },
+        {
+          "status": "A",
+          "path": "MODEL_ACTIVATION.md"
+        },
+        {
+          "status": "M",
+          "path": "OWNER_ACTIONS.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "A",
+          "path": "REDESIGN_DEPLOYMENT.md"
+        },
+        {
+          "status": "M",
+          "path": "SECURITY.md"
+        },
+        {
+          "status": "M",
+          "path": "SUBMISSION_CHECKLIST.md"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase2/inference.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase2/service.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/phase2/thermal_input.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/reporting.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/routes.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/phase3/service.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/submission/models.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/forge/submission/receipt.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/forge/submission/smoke.py"
+        },
+        {
+          "status": "A",
+          "path": "backend/tests/test_event_integration.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/tests/test_phase2.py"
+        },
+        {
+          "status": "M",
+          "path": "backend/tests/test_submission.py"
+        },
+        {
+          "status": "M",
+          "path": "deploy/smoke.env.example"
+        },
+        {
+          "status": "M",
+          "path": "docs/META_INTEGRATION.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PRODUCT_REDESIGN.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/REDESIGN_REVIEW.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-experiments.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-hypotheses.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-reports.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-verification.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-desktop-workspace.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-experiments.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-hypotheses.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-reports.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-verification.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/redesign-mobile-workspace.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/redesign-source-manifest.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/redesign-validation.json"
+        },
+        {
+          "status": "M",
+          "path": "docs/submission/README.md"
+        },
+        {
+          "status": "M",
+          "path": "docs/submission/manifest.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package-lock.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/public/assets/ibm-plex-sans-OFL.txt"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/demo.css"
+        },
+        {
+          "status": "M",
+          "path": "frontend/vite.config.ts"
+        },
+        {
+          "status": "M",
+          "path": "scripts/api-smoke.py"
+        },
+        {
+          "status": "M",
+          "path": "scripts/browser-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/build-submission-evidence.py"
+        },
+        {
+          "status": "M",
+          "path": "scripts/phase2-browser-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/phase3-browser-check.cjs"
+        },
+        {
+          "status": "A",
+          "path": "scripts/redesign-browser-check.cjs"
+        }
+      ]
+    },
+    {
+      "commit": "ee7015b6e3e4f284e6ab5deb3cfa590017087a8c",
+      "author_timestamp": "2026-10-27T12:15:21Z",
+      "committer_timestamp": "2026-10-27T12:15:21Z",
+      "committer_utc": "2026-10-27T12:15:21+00:00",
+      "subject": "Refine FORGE with Inter typography and design system 3.0",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/DESIGN_SYSTEM_V3.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/design-v3-validation.json"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/DESIGN_V3_REVIEW.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-experiments.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-hypotheses.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-reports.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-verification.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-desktop-workspace.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-experiments.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-hypotheses.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-reports.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-verification.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/design-v3-mobile-workspace.png"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package-lock.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/public/assets/ibm-plex-mono-OFL.txt"
+        },
+        {
+          "status": "D",
+          "path": "frontend/public/assets/ibm-plex-sans-OFL.txt"
+        },
+        {
+          "status": "A",
+          "path": "frontend/public/assets/inter-OFL.txt"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/InvestigationVisuals.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/demo.css"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/design-tokens.css"
+        },
+        {
+          "status": "A",
+          "path": "scripts/design-system-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/phase3-browser-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/redesign-browser-check.cjs"
+        }
+      ]
+    },
+    {
+      "commit": "f5512c05c187733d1a69af86b399bc33175d6d5e",
+      "author_timestamp": "2026-10-27T12:49:59Z",
+      "committer_timestamp": "2026-10-27T12:49:59Z",
+      "committer_utc": "2026-10-27T12:49:59+00:00",
+      "subject": "Reconstruct FORGE as a guided investigation product experience",
+      "timing": "at_or_after_published_utc_start",
+      "files": [
+        {
+          "status": "M",
+          "path": "DEMO_SCRIPT.md"
+        },
+        {
+          "status": "M",
+          "path": "HACKATHON_BUILD_LOG.md"
+        },
+        {
+          "status": "M",
+          "path": "README.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PRODUCT_V4_DESIGN_REVIEW.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/PRODUCT_V4_RELEASE.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/design/concept-a.svg"
+        },
+        {
+          "status": "A",
+          "path": "docs/design/concept-b.svg"
+        },
+        {
+          "status": "A",
+          "path": "docs/design/concept-c.svg"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/PRODUCT_V4_REVIEW.md"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-choose.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-missing-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-overview.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-possible-causes.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-report.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-results.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-test-proposal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-tests.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-thermal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-desktop-waveform.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-choose.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-overview.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-possible-causes.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-report.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-results.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-tests.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-thermal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-320-waveform.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-choose.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-overview.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-possible-causes.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-report.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-results.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-tests.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-thermal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-375-waveform.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-choose.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-missing-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-overview.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-possible-causes.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-report.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-results.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-test-proposal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-tests.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-thermal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-390-waveform.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-choose.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-evidence.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-overview.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-possible-causes.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-report.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-results.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-tests.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-thermal.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/evidence/product-v4-mobile-430-waveform.png"
+        },
+        {
+          "status": "A",
+          "path": "docs/product-v4-validation.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package-lock.json"
+        },
+        {
+          "status": "M",
+          "path": "frontend/package.json"
+        },
+        {
+          "status": "A",
+          "path": "frontend/public/assets/geist-mono-OFL.txt"
+        },
+        {
+          "status": "A",
+          "path": "frontend/public/assets/geist-sans-OFL.txt"
+        },
+        {
+          "status": "D",
+          "path": "frontend/public/assets/ibm-plex-mono-OFL.txt"
+        },
+        {
+          "status": "D",
+          "path": "frontend/public/assets/inter-OFL.txt"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.test.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/DemoConsole.tsx"
+        },
+        {
+          "status": "D",
+          "path": "frontend/src/InvestigationVisuals.tsx"
+        },
+        {
+          "status": "D",
+          "path": "frontend/src/demo.css"
+        },
+        {
+          "status": "D",
+          "path": "frontend/src/design-tokens.css"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/AssetVisuals.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/CaseLobby.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/TelemetryChart.test.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/TelemetryChart.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/components.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/presentation.ts"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/types.ts"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/useInvestigation.ts"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/investigation/views.tsx"
+        },
+        {
+          "status": "M",
+          "path": "frontend/src/main.tsx"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/product-v4.css"
+        },
+        {
+          "status": "A",
+          "path": "frontend/src/vite-env.d.ts"
+        },
+        {
+          "status": "M",
+          "path": "scripts/design-system-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/phase3-browser-check.cjs"
+        },
+        {
+          "status": "A",
+          "path": "scripts/product-v4-browser-check.cjs"
+        },
+        {
+          "status": "M",
+          "path": "scripts/redesign-browser-check.cjs"
+        }
+      ]
+    }
+  ],
+  "poststart_delta_from_prestart_snapshot": [
+    {
+      "status": "A",
+      "path": ".dockerignore"
+    },
+    {
+      "status": "M",
+      "path": ".github/workflows/ci.yml"
+    },
+    {
+      "status": "M",
+      "path": ".gitignore"
+    },
+    {
+      "status": "M",
+      "path": "ARCHITECTURE.md"
+    },
+    {
+      "status": "A",
+      "path": "DEMO_RUNBOOK.md"
+    },
+    {
+      "status": "A",
+      "path": "DEMO_SCRIPT.md"
+    },
+    {
+      "status": "M",
+      "path": "DEVELOPMENT_ROADMAP.md"
+    },
+    {
+      "status": "A",
+      "path": "Dockerfile"
+    },
+    {
+      "status": "M",
+      "path": "EVALUATION_PLAN.md"
+    },
+    {
+      "status": "M",
+      "path": "HACKATHON_BUILD_LOG.md"
+    },
+    {
+      "status": "A",
+      "path": "JUDGE_ACCESSIBILITY.md"
+    },
+    {
+      "status": "A",
+      "path": "JUDGING_ALIGNMENT.md"
+    },
+    {
+      "status": "A",
+      "path": "MODEL_ACTIVATION.md"
+    },
+    {
+      "status": "A",
+      "path": "OWNER_ACTIONS.md"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "A",
+      "path": "RECORDED_DEMO_FALLBACK.md"
+    },
+    {
+      "status": "A",
+      "path": "REDESIGN_DEPLOYMENT.md"
+    },
+    {
+      "status": "M",
+      "path": "SECURITY.md"
+    },
+    {
+      "status": "A",
+      "path": "SUBMISSION_CHECKLIST.md"
+    },
+    {
+      "status": "A",
+      "path": "backend/evaluation/phase2-results.json"
+    },
+    {
+      "status": "A",
+      "path": "backend/evaluation/phase3-results.json"
+    },
+    {
+      "status": "A",
+      "path": "backend/evaluation/results.json"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/body_limit.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/__init__.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/contracts.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/hypotheses.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/investigation.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/oracle.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/reporting.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/routes.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/engine/verifier.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/evaluate.py"
+    },
+    {
+      "status": "M",
+      "path": "backend/forge/main.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/__init__.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/contracts.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/evaluate.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/evidence.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/inference.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/oracle.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/replay.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/routes.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/service.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/thermal_input.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase2/verification.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/__init__.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/evaluate.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/oracle.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/replay.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/reporting.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/routes.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/safety.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/service.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/storage.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/phase3/verification.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/replay.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/__init__.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/audit.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/models.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/receipt.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/render.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/serve.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/forge/submission/smoke.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_engine.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_event_integration.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_phase2.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_phase3.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_render_deployment.py"
+    },
+    {
+      "status": "A",
+      "path": "backend/tests/test_submission.py"
+    },
+    {
+      "status": "A",
+      "path": "deploy/compose.yaml"
+    },
+    {
+      "status": "A",
+      "path": "deploy/public.env.example"
+    },
+    {
+      "status": "A",
+      "path": "deploy/smoke.env.example"
+    },
+    {
+      "status": "A",
+      "path": "docs/DEPLOYMENT_SECURITY_AUDIT.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/DESIGN_SYSTEM_V3.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/HOSTING_AND_ACCESS.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/META_INTEGRATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PHASE1_VALIDATION.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PHASE2.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PHASE3.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PHASE4.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PRODUCT_REDESIGN.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PRODUCT_V4_DESIGN_REVIEW.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/PRODUCT_V4_RELEASE.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/design-v3-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/design/concept-a.svg"
+    },
+    {
+      "status": "A",
+      "path": "docs/design/concept-b.svg"
+    },
+    {
+      "status": "A",
+      "path": "docs/design/concept-c.svg"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/DESIGN_V3_REVIEW.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/PRODUCT_V4_REVIEW.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/REDESIGN_REVIEW.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-experiments.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-hypotheses.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-reports.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-verification.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-desktop-workspace.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-experiments.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-hypotheses.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-reports.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-verification.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/design-v3-mobile-workspace.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase1-desktop.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase1-mobile.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase2-desktop.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase2-mobile.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase3-desktop.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/phase3-mobile.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-choose.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-missing-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-overview.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-possible-causes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-report.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-results.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-test-proposal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-tests.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-thermal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-desktop-waveform.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-choose.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-overview.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-possible-causes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-report.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-results.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-tests.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-thermal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-320-waveform.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-choose.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-overview.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-possible-causes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-report.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-results.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-tests.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-thermal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-375-waveform.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-choose.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-missing-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-overview.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-possible-causes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-report.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-results.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-test-proposal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-tests.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-thermal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-390-waveform.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-choose.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-overview.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-possible-causes.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-report.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-results.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-tests.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-thermal.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/product-v4-mobile-430-waveform.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-experiments.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-hypotheses.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-reports.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-verification.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-desktop-workspace.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-evidence.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-experiments.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-hypotheses.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-reports.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-verification.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/redesign-mobile-workspace.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/render-local-desktop.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/evidence/render-local-mobile.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/hosting-source-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/hosting-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/phase2-source-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/phase3-source-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/phase4-source-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/phase4-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/product-v4-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/redesign-source-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/redesign-validation.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/insufficient.html"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/insufficient.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/misleading_sensor.html"
+    },
+    {
+      "status": "A",
+      "path": "docs/submission/misleading_sensor.json"
+    },
+    {
+      "status": "M",
+      "path": "frontend/package-lock.json"
+    },
+    {
+      "status": "M",
+      "path": "frontend/package.json"
+    },
+    {
+      "status": "A",
+      "path": "frontend/public/assets/geist-mono-OFL.txt"
+    },
+    {
+      "status": "A",
+      "path": "frontend/public/assets/geist-sans-OFL.txt"
+    },
+    {
+      "status": "M",
+      "path": "frontend/src/App.test.tsx"
+    },
+    {
+      "status": "M",
+      "path": "frontend/src/App.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/DemoConsole.test.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/DemoConsole.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/InvestigationWorkflow.test.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/InvestigationWorkflow.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/Phase2Investigation.test.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/Phase2Investigation.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/AssetVisuals.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/CaseLobby.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/TelemetryChart.test.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/TelemetryChart.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/components.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/presentation.ts"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/types.ts"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/useInvestigation.ts"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/investigation/views.tsx"
+    },
+    {
+      "status": "M",
+      "path": "frontend/src/main.tsx"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/product-v4.css"
+    },
+    {
+      "status": "M",
+      "path": "frontend/src/style.css"
+    },
+    {
+      "status": "A",
+      "path": "frontend/src/vite-env.d.ts"
+    },
+    {
+      "status": "M",
+      "path": "frontend/vite.config.ts"
+    },
+    {
+      "status": "A",
+      "path": "render.yaml"
+    },
+    {
+      "status": "A",
+      "path": "scripts/api-smoke.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/browser-check.cjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/build-submission-evidence.py"
+    },
+    {
+      "status": "A",
+      "path": "scripts/design-system-check.cjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/phase2-browser-check.cjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/phase3-browser-check.cjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/product-v4-browser-check.cjs"
+    },
+    {
+      "status": "A",
+      "path": "scripts/redesign-browser-check.cjs"
+    }
+  ],
+  "owner_guidance": "No official wording permitting/prohibiting pre-kickoff development has been verified. Preserve history and timestamps; do not claim compliance, disqualification, organizer approval or automatic eligibility of dependent later work.",
+  "limitations": "Commit timestamps are records, not independently attested work-start times or a ruling. Public event metadata is not the authenticated development-window rule."
+}

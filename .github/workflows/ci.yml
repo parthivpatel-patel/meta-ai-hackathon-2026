@@ -13,6 +13,7 @@ jobs:
       - run: uv sync --project backend --frozen --python 3.12
       - run: cd backend && uv run --frozen pytest -q
       - run: cd backend && uv run --frozen python -m forge.submission.smoke
+      - run: cd backend && uv run --frozen python -m forge.submission.model_evaluation
       - run: cd backend && uv run --frozen python -m forge.submission.models
       - run: uv run --project backend --frozen python scripts/build-submission-evidence.py
       - run: git diff --exit-code -- docs/submission/
@@ -30,5 +31,23 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
       - run: npm ci
         working-directory: frontend
-      - run: npm test && npm run build
+      - run: npm run check:tests && npm test && npm run build
         working-directory: frontend
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t forge-ci .
+      - name: Start restricted public image
+        run: >-
+          docker run -d --name forge-ci --read-only --tmpfs /tmp:rw,nosuid,nodev,size=64m
+          --memory=512m --cpus=1 --cap-drop=ALL --security-opt=no-new-privileges
+          -e FORGE_DEMO_DB_PATH=/tmp/investigations.sqlite3
+          -e FORGE_DEMO_STORAGE_EPHEMERAL=true
+          -e OPENBLAS_NUM_THREADS=1 -e OMP_NUM_THREADS=1 forge-ci
+      - name: Verify readiness and public security boundaries
+        run: python scripts/check-container.py forge-ci --image forge-ci
+      - name: Clean up local test image process
+        if: always()
+        run: docker rm -f forge-ci || true

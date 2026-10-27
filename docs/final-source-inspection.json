@@ -1,0 +1,18 @@
+{
+  "event": {
+    "structured_evidence": "final-event-evidence.json",
+    "submission_deadline_eastern": "2026-11-04T21:00:00-05:00",
+    "source_start_utc": "2026-10-26T17:00:00Z"
+  },
+  "guide": {
+    "documented_event_id_in_public_html": false,
+    "has_client_shell": true,
+    "note": "HTML presence/absence is not access to the authenticated participant guide."
+  },
+  "license": {
+    "attribution_present": true,
+    "usage_policy_present": true,
+    "copyright_notice_present": true
+  },
+  "method_limitation": "Literal source-text probes only; encoded client content may not match these searches. Do not interpret a false probe as proof that a rule/date is absent."
+}

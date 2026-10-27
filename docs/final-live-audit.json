@@ -1,0 +1,136 @@
+{
+  "schema": "forge-deployment-audit-1",
+  "passed": true,
+  "checks": [
+    {
+      "check": "/api/v3/capabilities:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/api/v3/capabilities:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/api/v3/capabilities:no_cache",
+      "passed": true
+    },
+    {
+      "check": "restricted_public_capabilities",
+      "passed": true
+    },
+    {
+      "check": "/api/v3/ready:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/api/v3/ready:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/api/v3/ready:no_cache",
+      "passed": true
+    },
+    {
+      "check": "ready_storage_and_bundle",
+      "passed": true
+    },
+    {
+      "check": "/demo:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/demo:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "compiled_demo_available",
+      "passed": true
+    },
+    {
+      "check": "/docs:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/docs:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/docs:forbidden",
+      "passed": true
+    },
+    {
+      "check": "/redoc:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/redoc:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/redoc:forbidden",
+      "passed": true
+    },
+    {
+      "check": "/openapi.json:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/openapi.json:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/openapi.json:forbidden",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/model-status:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/model-status:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/model-status:no_cache",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/model-status:forbidden",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/investigations/demo:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/investigations/demo:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/investigations/demo:no_cache",
+      "passed": true
+    },
+    {
+      "check": "/api/v1/investigations/demo:forbidden",
+      "passed": true
+    },
+    {
+      "check": "/api/v2/model-status:security_headers",
+      "passed": true
+    },
+    {
+      "check": "/api/v2/model-status:no_cors_grant",
+      "passed": true
+    },
+    {
+      "check": "/api/v2/model-status:no_cache",
+      "passed": true
+    },
+    {
+      "check": "/api/v2/model-status:forbidden",
+      "passed": true
+    }
+  ],
+  "transport": "https_verified_by_client",
+  "scope": "Read-only HTTP boundary/configuration checks; not a penetration test or proof of hosting billing/retention. No model calls or investigation mutations."
+}

@@ -1,13 +1,51 @@
-# Baseten event activation — current instructions
+# Controlled genuine Meta activation
 
-The participant confirms official selection and **$100 promotional inference credits**, with advertised up-to2M TPM. This is not a workload allowance: FORGE uses tiny explicit budgets. Earlier “Baseten approval pending” and “event alias disabled” notes are historical. No credit card, subscription or out-of-pocket spend is authorized.
+**Current gate:** the replacement protected key is pending. No genuine Meta inference has run in this environment. Earlier text authorizing an automatic test when a key appeared is superseded: **obtain fresh explicit owner authorization before every real smoke, evaluation or follow-up inference run.** Promotional credits are authorized for controlled testing only after availability and spending safeguards are confirmed.
 
-1. Configure **BASETEN_API_KEY** through protected environment settings, scoped only to `inference.baseten.co`; never paste it into chat or source. A missing optional secret declaration is not a usable key. The existing public Render service must stay credential-free; its guarded launcher deliberately refuses keys. Use a separate trusted local/private owner runtime.
-2. Use the exact event model `meta-models/muse-spark-open-1026` and endpoint`https://inference.baseten.co/v1/chat/completions`. Do not substitute the public alias. The adapter refuses a protected event key with any other model/provider, and refuses conflicting credential sources.
-3. Set reviewed non-secret smoke variables from `deploy/smoke.env.example`: request budget1, retries0, reservation8192, max output1024, per-attempt15s, native thermal false. Enable inference/free-access confirmation and the smoke credit/card-free confirmations only for the approved promotional account with positive remaining credits and no payment method. The participant has authorized one small initial test when this protected access exists; do not launch an evaluation matrix against the model automatically.
-4. From `backend`, run `uv run --frozen python -m forge.submission.smoke` first. It is dry, reports exact blockers and sends zero requests. Then, once protected prerequisites are met, run the existing explicit `--execute --output ../artifacts/event-smoke-01.json`. Create the ignored artifacts directory beforehand. The file is exclusive0600, cannot overwrite a prior attempt, and the workflow independently replays the actual result.
-5. On any failure/interruption, inspect provider usage securely before a retry. Authentication, malformed JSON, returned-ID mismatch, quota/rate limits, deadline and credit rejection fail without mock fallback. Inspect actual returned model and reported token usage. No amount of local reservation proves provider billing; cost remains unmeasured until reviewed actual usage/pricing.
-6. For a subsequent authenticated owner UI, point `FORGE_INFERENCE_VALIDATED_SMOKE_PATH` at that private genuine artifact and restart only the local/private owner process. The receipt is checked/replayed at startup; it is administrative evidence, not cryptographic attestation. Recheck credits and authorize a separate bounded request budget. The UI distinguishes untested configuration, fixture, recorded HTTP response and rules. Anonymous public requests can never enable inference.
-7. Only after successful numeric authentication, separately review/authorize native thermal input. The optional path sends a bounded PNG rendering with Celsius scale and source hashes; it is locally fixture-tested, not actually model-tested. Keep `FORGE_INFERENCE_THERMAL_IMAGES=false` for the first smoke. Raw waveform arrays are not converted to audio.
+## Before requesting authorization
 
-Current result: **no protected key, zero genuine requests, no actual-model accuracy/latency/cost result**. The real-model smoke, actual visual acceptance, measured comparisons and final genuine-Meta recording remain blocked on that key. Participant approval itself is no longer a blocker. Do not present fixture success or deterministic thermal/FFT processing as real Meta inference.
+1. The owner confirms selection and $100 promotional Baseten credits, but the **current remaining balance, card-free entitlement, model access and enforced stopping policy must be checked in the actual account**. No payment method, paid subscription or GPU deployment is allowed. The provider's notification-only budget is not sufficient; confirm enforced Model API limits/no paid fallback. Local request counters and reservation units do not prove billing limits.
+2. Configure `BASETEN_API_KEY` through protected environment settings, scoped only to `inference.baseten.co`. Never send it in chat, commit it, print it or put it into frontend/public Render settings. Do not repeatedly probe authentication while the replacement key is pending.
+3. Target only `meta-models/muse-spark-open-1026` at `https://inference.baseten.co/v1/chat/completions`. No public alias substitution. The participant confirms this restricted event identifier; final authenticated rules/account access still need owner review.
+4. Use a trusted private/local owner runtime. Keep public Render credential-free, inference disabled and request budget zero. The public launcher refuses inference credentials. Check the official model license/Usage Policy and required **“Built with Muse Spark Open”** attribution before actual service use; the full license/terms links are in `docs/META_INTEGRATION.md`.
+
+## First bounded request
+
+Review `deploy/smoke.env.example`; it contains no credential. Use one request, no retries, maximum 1024 output tokens, reservation 8192 (or up to 16384), per-attempt 15s and total deadline at most 30s. Keep native thermal false. Enable the credit/free-access attestations only after owner verification and explicit authorization.
+
+From `backend`, first run the zero-request preflight:
+
+```sh
+uv run --frozen python -m forge.submission.smoke
+```
+
+**Only after the owner authorizes this exact one-request plan**, execute in the protected runtime:
+
+```sh
+mkdir -p ../artifacts
+uv run --frozen python -m forge.submission.smoke --execute --output ../artifacts/event-smoke-01.json
+```
+
+The new artifact is exclusive and mode 0600. Existing paths/symlinks are refused before networking. A pending/interrupted marker means an attempt may have consumed credits; do not automatically retry under another filename.
+
+Inspect the actual returned model, source `meta_http_response`, structured competing candidates, safe attempt timing/status, provider token usage when supplied and independent numerical replay. Workflow latency and request latency are different fields. Missing usage remains missing, not zero. HTTP 401/403, 402, 429, transport/deadline failures, invalid JSON/schema/model identity or tool-bearing output fail without fallback. Failed artifacts retain only safe diagnostics; raw bodies, headers and exception text are discarded.
+
+No future test is implicitly authorized by a successful smoke. The receipt is administrative consistency evidence checked against a private owner-controlled file and independent replay, not a cryptographically signed provider attestation.
+
+## Separate matched evaluation
+
+After a genuine successful smoke, review `deploy/evaluation.env.example` and `docs/GENUINE_MODEL_EVALUATION.md`. Set `FORGE_INFERENCE_VALIDATED_SMOKE_PATH` to the genuine private receipt. The fixed pilot has six cases, at most **five** model calls (the missing-data case abstains before inference), zero retries and four experiments per arm. `FORGE_EVALUATION_OWNER_AUTHORIZED` defaults false. Request a separate explicit owner authorization after showing the dry preflight and checking remaining credits.
+
+```sh
+uv run --frozen python -m forge.submission.model_evaluation
+# Execute only after that separate authorization:
+uv run --frozen python -m forge.submission.model_evaluation --execute --output ../artifacts/event-evaluation-01.json
+```
+
+The suite stops at its first failed model arm; it does not substitute rules output or continue reserving credits. Review provider usage before any retry. Successful comparison does not prove industrial accuracy or a model-driven experiment policy.
+
+## Follow-up owner UI and thermal evidence
+
+Use the genuine receipt and a separately authorized request budget only in the trusted owner runtime. A configured key or fixture is not authenticated access. The exact event model supports a prepared native thermal PNG path, but its actual acceptance/interpretation has not been tested. Require separate authorization, `FORGE_INFERENCE_THERMAL_IMAGES=true` and, for the suite, `FORGE_EVALUATION_NATIVE_THERMAL_AUTHORIZED=true`. Keep numerical and native-image results separate.
+
+No native audio path is implemented. The vibration evidence is measured in mm/s and processed by RMS/FFT; converting it into purported audio would misrepresent the evidence.

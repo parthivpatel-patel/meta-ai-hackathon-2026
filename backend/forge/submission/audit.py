@@ -68,7 +68,12 @@ def audit(
         def get(path):
             nonlocal tls_verified
             with client.stream(
-                "GET", origin + path, headers={"Origin": "https://untrusted.invalid"}
+                "GET",
+                origin + path,
+                headers={
+                    "Origin": "https://untrusted.invalid",
+                    "Accept-Encoding": "identity",
+                },
             ) as r:
                 tls_verified = origin.startswith("https://")
                 if r.headers.get("content-encoding", "identity") not in (

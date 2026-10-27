@@ -1,0 +1,410 @@
+{
+  "schema": "forge-final-engineering-validation-1",
+  "checked_utc": "2026-10-27T17:24:07.537475+00:00",
+  "baseline_commit": "f5512c05c187733d1a69af86b399bc33175d6d5e",
+  "branch": "feature/forge-final-engineering",
+  "backend": {
+    "passed": 203,
+    "warnings": [
+      "Existing FastAPI TestClient/httpx deprecation"
+    ]
+  },
+  "frontend": {
+    "passed": 22,
+    "test_typecheck": "passed",
+    "production_build": "passed"
+  },
+  "synthetic_evaluation": {
+    "cases": 1040,
+    "suites": [
+      480,
+      280,
+      280
+    ],
+    "phase3_overall": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 22.3905,
+      "latency_ms_p95": 37.8464,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "limitation": "Synthetic deterministic engine evaluation, not genuine model or industrial performance"
+  },
+  "container": {
+    "runtime_uid": 10001,
+    "http_audit": {
+      "schema": "forge-deployment-audit-1",
+      "passed": true,
+      "checks": [
+        {
+          "check": "/api/v3/capabilities:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/capabilities:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/capabilities:no_cache",
+          "passed": true
+        },
+        {
+          "check": "restricted_public_capabilities",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v3/ready:no_cache",
+          "passed": true
+        },
+        {
+          "check": "ready_storage_and_bundle",
+          "passed": true
+        },
+        {
+          "check": "/demo:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/demo:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "compiled_demo_available",
+          "passed": true
+        },
+        {
+          "check": "/docs:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/docs:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/docs:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/redoc:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/redoc:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/redoc:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/openapi.json:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/model-status:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v1/investigations/demo:forbidden",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:security_headers",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:no_cors_grant",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:no_cache",
+          "passed": true
+        },
+        {
+          "check": "/api/v2/model-status:forbidden",
+          "passed": true
+        }
+      ],
+      "transport": "loopback_http_not_public_https",
+      "scope": "Read-only HTTP boundary/configuration checks; not a penetration test or proof of hosting billing/retention. No model calls or investigation mutations."
+    },
+    "non_root_image_user": true,
+    "scope": "Local image only, not an external HTTPS deployment",
+    "credential_bearing_public_start_refused": true,
+    "passed": true
+  },
+  "container_image_id": "sha256:256d84fed7c6e1be1c93c1c276a662a6cbdaf12cbeeb28096e06c4482957f4f5",
+  "browser": {
+    "automated_accessibility_views": 56,
+    "violations": 0,
+    "viewport_widths": [
+      1440,
+      390,
+      320,
+      375,
+      430
+    ],
+    "completed_workflows": [
+      "Desktop and mobile full sequential investigation",
+      "Six stages and multimodal inspection",
+      "Insufficient evidence",
+      "JSON and HTML exports",
+      "Offline replay of both downloaded JSON reports",
+      "Keyboard telemetry and equipment rotation",
+      "Equipment selection and responsive layout"
+    ],
+    "resource_samples": [
+      {
+        "viewport": "desktop",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 180,
+        "domNodes": 195,
+        "usedJSHeapSize": 23615411,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-390",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 196,
+        "domNodes": 195,
+        "usedJSHeapSize": 28584513,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-320",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 131,
+        "domNodes": 195,
+        "usedJSHeapSize": 16127099,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-375",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 137,
+        "domNodes": 195,
+        "usedJSHeapSize": 16143130,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-430",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 142,
+        "domNodes": 195,
+        "usedJSHeapSize": 16138330,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      }
+    ],
+    "limitations": [
+      "Headless Chromium viewport emulation, not physical mobile devices",
+      "Heap samples do not establish absence of leaks",
+      "SVG equipment has no WebGL context; WebGL recovery is inapplicable"
+    ]
+  },
+  "security": {
+    "python_packages": 26,
+    "python_known_vulnerabilities": 0,
+    "npm_known_vulnerabilities": 0,
+    "static_secret_pattern_scan": "No matches at audit time; bounded pattern scan, not a comprehensive secret guarantee",
+    "scope": "Configuration, regression and boundary checks; not a penetration test"
+  },
+  "inference": {
+    "genuine_calls": 0,
+    "fixture_pairs": 6,
+    "intercepted_fixture_calls": 5,
+    "smoke_preflight": {
+      "ready_for_explicit_execution": false,
+      "blockers": [
+        "approved_credits_unconfirmed",
+        "card_free_entitlement_unconfirmed",
+        "inference_disabled",
+        "free_access_unconfirmed",
+        "credential_missing",
+        "request_budget_must_equal_one",
+        "reservation_budget_must_be_one_to_16384"
+      ],
+      "provider": "baseten",
+      "model_id": "meta-models/muse-spark-open-1026",
+      "request_limit": 1,
+      "max_output_tokens": 1024,
+      "reserved_accounting_budget": 32768,
+      "attempt_deadline_seconds": 15.0,
+      "total_request_deadline_seconds": 30.0,
+      "native_thermal": false,
+      "retry_limit": 0,
+      "network_requests_sent": 0,
+      "entitlement_basis": "Operator attestations, not independently verified provider billing",
+      "cost": "Not measured. Local budgets do not guarantee provider billing.",
+      "mode": "dry_run"
+    },
+    "evaluation_preflight": {
+      "ready_for_explicit_execution": false,
+      "blockers": [
+        "separate_owner_authorization_required",
+        "approved_credits_unconfirmed",
+        "card_free_entitlement_unconfirmed",
+        "inference_or_free_entitlement_disabled",
+        "credential_missing",
+        "request_budget_must_match_predeclared_cases",
+        "private_genuine_smoke_receipt_required"
+      ],
+      "mode": "dry_run",
+      "model_id": "meta-models/muse-spark-open-1026",
+      "endpoint": "https://inference.baseten.co/v1/chat/completions",
+      "planned_cases": 6,
+      "maximum_requests": 5,
+      "max_output_tokens": 1024,
+      "reserved_accounting_budget": 32768,
+      "attempt_deadline_seconds": 15.0,
+      "total_request_deadline_seconds": 30.0,
+      "native_thermal": false,
+      "retry_limit": 0,
+      "max_experiments_per_arm": 4,
+      "cases": [
+        "normal",
+        "pressure_and_sensor",
+        "noisy_pair",
+        "sensor_drift",
+        "confounded",
+        "missing75"
+      ],
+      "network_requests_sent": 0,
+      "warning": "Local reservations are not billing caps. Verify promotional balance and no paid fallback in the provider account before authorization."
+    },
+    "blocker": "Replacement key pending; confirmed card-free approved credits and fresh explicit authorization required before execution",
+    "genuine_model_metrics": null
+  },
+  "external_https": {
+    "existing_origin": "https://forge-judge.onrender.com/demo",
+    "readiness_evidence": "final-live-check.json",
+    "public_boundary_evidence": "final-live-audit.json",
+    "passed_checks": 32,
+    "candidate_deployed": false,
+    "deployed_sha_independently_confirmed": false,
+    "uptime_guarantee": false
+  },
+  "eligibility": {
+    "status": "OPEN ELIGIBILITY QUESTION",
+    "pre_cutoff_commits": 3,
+    "foundation_snapshot_paths": 28,
+    "subsequent_baseline_commits": 9,
+    "history_preserved": true,
+    "organizer_draft_sent": false,
+    "evidence": "ELIGIBILITY_TIMING_REVIEW.md"
+  },
+  "remaining": [
+    "Protected genuine model activation and separately authorized pilot",
+    "Authoritative development-window guidance",
+    "Owner-approved exact-commit release and external rehearsal",
+    "Final recording and owner submission",
+    "Native model thermal interpretation untested; native audio absent"
+  ],
+  "preserved": [
+    "Numerical Phase 3 engine",
+    "Existing frozen dependencies",
+    "Main and deployment branch refs",
+    "Existing live service",
+    "Original Git history and timestamps"
+  ]
+}

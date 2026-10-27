@@ -9,6 +9,8 @@ const fs = require("node:fs");
     args: ["--no-sandbox"],
   });
   const base = process.env.FORGE_DEMO_URL || "http://127.0.0.1:8021";
+  const evidenceDirectory = process.env.FORGE_EVIDENCE_DIR || "docs/evidence";
+  fs.mkdirSync(evidenceDirectory, { recursive: true });
   const results = [];
   let saved;
   try {
@@ -61,7 +63,7 @@ const fs = require("node:fs");
           window.scrollTo(0, 0);
         });
         await page.screenshot({
-          path: `docs/evidence/product-v4-${name}-${view}.png`,
+          path: `${evidenceDirectory}/product-v4-${name}-${view}.png`,
           fullPage: true,
         });
       }
@@ -186,6 +188,40 @@ const fs = require("node:fs");
             .getByRole("img", { name: "Calibrated vibration waveform" })
             .waitFor();
           await capture("waveform");
+          await page
+            .getByRole("button", { name: "Equipment record", exact: true })
+            .click();
+          const rotation = page.getByRole("slider", {
+            name: "Equipment rotation",
+          });
+          await rotation.focus();
+          await rotation.press("ArrowRight");
+          if ((await rotation.inputValue()) !== "31")
+            throw Error("Equipment keyboard rotation failed");
+          await page
+            .getByRole("button", { name: "Pump housing", exact: true })
+            .click();
+          await page
+            .getByRole("img", {
+              name: "Illustrative equipment, Pump housing selected",
+            })
+            .waitFor();
+          const started = Date.now();
+          for (let i = 0; i < 20; i++) await rotation.press("ArrowRight");
+          const metrics = await page.evaluate(() => ({
+            domNodes: document.querySelectorAll("*").length,
+            usedJSHeapSize: performance.memory?.usedJSHeapSize ?? null,
+          }));
+          results.push({
+            viewport: name,
+            view: "equipment-interaction-sample",
+            violations: [],
+            elapsed_ms: Date.now() - started,
+            ...metrics,
+            scope:
+              "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof",
+          });
+          await capture("equipment");
         }
       }
       const fonts = await page.evaluate(() => ({
@@ -255,7 +291,7 @@ const fs = require("node:fs");
     const failed = results.filter((r) => r.violations.length);
     if (failed.length) throw Error(JSON.stringify(failed, null, 2));
     console.log(
-      `Zero automated accessibility violations across ${results.length} view/viewport checks`,
+      `Zero automated accessibility violations across ${results.filter((r) => r.view !== "equipment-interaction-sample").length} view/viewport checks`,
     );
   } finally {
     await browser.close();

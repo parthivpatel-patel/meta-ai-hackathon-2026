@@ -44,6 +44,16 @@ def preflight(settings: TransportSettings, activation: ActivationSettings) -> di
         ),
         (settings.request_budget == 1, "request_budget_must_equal_one"),
         (settings.retry_limit == 0, "retries_must_be_zero"),
+        (settings.max_tokens <= 1024, "maximum_output_must_not_exceed_1024"),
+        (
+            settings.total_timeout_seconds <= 30,
+            "total_timeout_must_not_exceed_30_seconds",
+        ),
+        (
+            os.environ.get("FORGE_DEMO_MODE") != "public"
+            and os.environ.get("RENDER", "").lower() != "true",
+            "public_host_execution_forbidden",
+        ),
         (not settings.thermal_images, "first_smoke_must_use_numeric_summaries_only"),
         (0 < settings.token_budget <= 16384, "reservation_budget_must_be_one_to_16384"),
         (settings.timeout_seconds <= 20, "timeout_must_not_exceed_20_seconds"),
@@ -56,6 +66,11 @@ def preflight(settings: TransportSettings, activation: ActivationSettings) -> di
         "provider": settings.provider,
         "model_id": settings.model_id,
         "request_limit": 1,
+        "max_output_tokens": settings.max_tokens,
+        "reserved_accounting_budget": settings.token_budget,
+        "attempt_deadline_seconds": settings.timeout_seconds,
+        "total_request_deadline_seconds": settings.total_timeout_seconds,
+        "native_thermal": settings.thermal_images,
         "retry_limit": 0,
         "network_requests_sent": 0,
         "entitlement_basis": "Operator attestations, not independently verified provider billing",
@@ -86,6 +101,11 @@ async def execute(provider: ChatProvider, activation: ActivationSettings) -> dic
         "source": expected_source,
         "model_id": provider.settings.model_id,
         "request_attempts": provider.used,
+        "inference_attempts": provider.attempts,
+        "response_valid": True,
+        "returned_model": session.inference.returned_model
+        if session.inference
+        else None,
         "reserved_accounting_units": provider.token_units_used,
         "elapsed_workflow_ms": round((time.perf_counter() - started) * 1000, 3),
         "independent_replay_status": decision.status,
@@ -147,13 +167,18 @@ def main(argv: list[str] | None = None) -> int:
         )
         artifact.flush()
         os.fsync(artifact.fileno())
+        provider = None
         try:
-            result = asyncio.run(execute(ChatProvider(config), activation))
+            provider = ChatProvider(config)
+            result = asyncio.run(execute(provider, activation))
         except Exception:  # noqa: BLE001 -- sanitize the entire credential-bearing CLI boundary
             # Never include remote bodies, credential-bearing validation, or exception text.
             result = {
                 "schema": "forge-meta-smoke-1",
                 "status": "failed_or_unverified",
+                "request_attempts": provider.used if provider else 0,
+                "inference_attempts": provider.attempts if provider else [],
+                "response_valid": False,
                 "warning": "Do not retry automatically; an attempt may have consumed credits. Inspect provider usage securely. No fallback was used.",
             }
             artifact.seek(0)

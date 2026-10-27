@@ -1,6 +1,8 @@
 # FORGE
 
-A verifiable multimodal AI investigation platform, starting with industrial equipment failure investigation. **Phase 3 adds a durable sequential investigation console and restricted public demo, not a physical diagnostic system.** No Meta inference is performed. Legacy Phase 0 suggestions are explicitly mocked. Phase 1 candidates are rules-based; conclusions are supported, rejected, inconclusive, or abstained under a synthetic evidence policy.
+FORGE investigates synthetic equipment problems through competing causes, controlled tests and independent numerical verification. FORGE 4.0 is the frozen candidate interface. **No genuine Meta inference has run here**; fixtures and deterministic outputs are explicitly labeled.
+
+Current engineering evidence: **203 backend tests and 22 frontend tests passed**, along with production/test type-checking, the real container build, public security checks and offline replay. See [the final requirements matrix](docs/FINAL_REQUIREMENTS_MATRIX.md), [validation evidence](docs/final-engineering-validation.json), [owner gates](OWNER_ACTIONS.md), and [submission draft](SUBMISSION_PACKAGE.md). The replacement key, fresh inference authorization, development-window clarification and approved final release remain open. The existing public URL works; the final candidate has not been deployed.
 
 ## Quick start
 
@@ -26,7 +28,7 @@ cd /workspace/meta-ai-hackathon-2026/frontend
 npm run dev -- --host 127.0.0.1
 ```
 
-Vite listens on port 5173 and proxies `/api` to backend port 8000. For another checkout location, substitute its path. Use local HTTP requests for cloud validation; onboarding does not provide public localhost previews. Both processes must restart in future tasks. For the Phase 3 same-origin production bundle and Docker option, follow [DEMO_RUNBOOK.md](DEMO_RUNBOOK.md). FastAPI serves `/demo` and `/assets`; build before startup. Public hosting has not been provisioned.
+Open **http://127.0.0.1:5173/demo** for the FORGE 4.0 guided experience. The root route retains historical developer labs. Vite proxies `/api` to backend port 8000. For another checkout location, substitute its path. Use local HTTP requests for cloud validation; onboarding does not provide public localhost previews. Both processes must restart in future tasks. For the Phase 3 same-origin production bundle and Docker option, follow [DEMO_RUNBOOK.md](DEMO_RUNBOOK.md). FastAPI serves `/demo` and `/assets`; build before startup. The existing public demo at **https://forge-judge.onrender.com/demo** passed an external read-only HTTPS audit; final candidate deployment still requires explicit owner approval.
 
 ```bash
 curl --fail http://127.0.0.1:8000/api/v1/health
@@ -34,13 +36,14 @@ curl --fail 'http://127.0.0.1:5173/api/v1/investigations/demo?scenario=cooling_l
 cd /workspace/meta-ai-hackathon-2026/backend
 UV_CACHE_DIR=/tmp/forge-uv-cache uv run --frozen pytest -q
 cd ../frontend
+npm run check:tests
 npm test
 npm run build
 ```
 
 ## Implemented
 
-- FastAPI `/api/v1` health, model-status, investigation demo, analysis, and mock hypotheses endpoints; OpenAPI at `/docs`.
+- FastAPI `/api/v1` health, model-status, investigation demo, analysis, and mock hypotheses endpoints; OpenAPI at `/docs` in local developer mode only; public mode forbids developer routes.
 - Deterministic 120-sample telemetry with temperature (°C), vibration (mm/s RMS), pressure (bar), and equipment state (`running`). Four selectable scenarios.
 - Robust normal-scaled median absolute deviation scores, descriptive statistics, explicit missing-value counts, deterministic threshold flags.
 - React/TypeScript dashboard with SVG telemetry, evidence ledger, timeline, scenario selection, loading/error handling, and explicit simulation/mock status.
@@ -62,9 +65,9 @@ Scenario names describe the injected test case, not a diagnosis. Baseline uses t
 
 Default seed 42 produces no normal-case flags and exactly minutes 80–119 flagged on the shifted channel for each abnormal scenario. These expectations are tested. Other seeds are reproducible but may produce incidental flags; no false-positive guarantee is made. Operational data needs a separately curated clean baseline; using an already-abnormal baseline can hide anomalies.
 
-## Configuration
+## Legacy Phase 0 configuration
 
-Pydantic validates `FORGE_PROVIDER` (`mock`, default, or `meta`), `FORGE_META_ENDPOINT` (HTTPS required for Meta), `FORGE_MODEL_ID`, `FORGE_TIMEOUT_SECONDS` (0–60, exclusive zero), and `FORGE_RETRY_LIMIT` (0–3). Invalid settings fail startup. Meta mode requires an explicit non-mock model ID and endpoint but always returns a structured 503 for inference; no HTTP client is used by that adapter. Timeout and retry behavior are tested using local fake providers. No credentials are currently required or read. Do not configure paid inference.
+Pydantic validates `FORGE_PROVIDER` (`mock`, default, or `meta`), `FORGE_META_ENDPOINT` (HTTPS required for Meta), `FORGE_MODEL_ID`, `FORGE_TIMEOUT_SECONDS` (0–60, exclusive zero), and `FORGE_RETRY_LIMIT` (0–3). Invalid settings fail startup. Meta mode requires an explicit non-mock model ID and endpoint but always returns a structured 503 for inference; no HTTP client is used by that adapter. Timeout and retry behavior are tested using local fake providers. That legacy adapter does not read an inference credential. The separate current private HTTP adapter uses `FORGE_INFERENCE_*` and protected `BASETEN_API_KEY`; follow `MODEL_ACTIVATION.md` and never enable it on the public host.
 
 ## Phase 1 investigation engine
 
@@ -133,3 +136,9 @@ The isolated `feature/forge-design-system-v3` branch refines the six public inve
 ## FORGE 4.0 product reconstruction
 
 The `feature/forge-product-v4` branch replaces the dashboard with a case lobby and a guided six-stage investigation, locally bundled Geist typography and dedicated evidence/test/result views. Review [the three concepts](docs/PRODUCT_V4_DESIGN_REVIEW.md), [all before/after screenshots](docs/evidence/PRODUCT_V4_REVIEW.md), and [architecture, validation and safe release steps](docs/PRODUCT_V4_RELEASE.md). No live promotion occurs without explicit owner approval. This section supersedes the earlier public design-system descriptions for this branch.
+
+## Final engineering release candidate
+
+Cosmetic work is frozen. See the [requirements/evidence matrix](docs/FINAL_REQUIREMENTS_MATRIX.md), [genuine-model evaluation protocol](docs/GENUINE_MODEL_EVALUATION.md), [release procedure](docs/FINAL_RELEASE.md) and [submission draft](SUBMISSION_PACKAGE.md). The replacement key and fresh inference authorization are still required; no genuine model call or final deployment has been made. Public HTTPS access to the existing deployment is verified, while the published start-time versus early commit-time discrepancy needs owner/organizer clarification. Production build and test type-checking are separate: run `npm run check:tests`, `npm test` and `npm run build` from `frontend`.
+
+The optional [interactive equipment inspector](docs/INTERACTIVE_EQUIPMENT.md) provides projected 3D rotation, zoom and component-linked evidence without WebGL. Geometry is illustrative, not a validated digital twin.

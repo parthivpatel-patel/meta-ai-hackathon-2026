@@ -12,6 +12,7 @@ import type { Stage } from "./presentation";
 import { causeName, sourceLabel, testName, resultLabel } from "./presentation";
 import { Badge, Disclosure, EmptyState } from "./components";
 import { TelemetryChart } from "./TelemetryChart";
+import { EquipmentModel } from "./EquipmentModel";
 import { Thermal, Waveform } from "./AssetVisuals";
 
 export function Overview({
@@ -156,6 +157,7 @@ export function EvidenceView({ session }: { session: Session }) {
         {modality === "metadata" && (
           <section>
             <h2>Equipment record</h2>
+            <EquipmentModel session={session} />
             <dl className="record-fields">
               <div>
                 <dt>Equipment</dt>

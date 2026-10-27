@@ -1,3 +1,5 @@
+> **Final engineering checkpoint (October 27):** replacement key pending; zero real calls. Fresh explicit authorization is required before every real run. Read [current activation](../MODEL_ACTIVATION.md), [the requirements matrix](FINAL_REQUIREMENTS_MATRIX.md) and [current source evidence](final-source-check.json). Historical automatic-test and alias-disabled statements below are superseded. The existing external Render URL now passes the 32-check HTTPS boundary audit; the final candidate is not deployed.
+
 > **Current redesign checkpoint:** participant confirms Baseten selection/$100 and the restricted event model `meta-models/muse-spark-open-1026`. Use protected `BASETEN_API_KEY`, never substitute the public alias. Key is absent and no authenticated call has succeeded here. Read [MODEL_ACTIVATION.md](../MODEL_ACTIVATION.md); older pending/unverified-alias research below is historical.
 
 # Meta model access — verified follow-up, October 26, 2026

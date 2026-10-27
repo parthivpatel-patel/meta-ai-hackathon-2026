@@ -53,3 +53,7 @@ The new published matrix uses seeds 7000–7019 and 14 new composite/ramp/late/n
 ## Phase 3 executed evaluation
 
 The committed backend/evaluation/phase3-results.json records280 new synthetic cases over14 profiles/seeds9000–9019. Accepted precision198/198; answerable recall198/220; coverage198/280; required abstention60/60; detector FNR39/260. Budget-matched fixed prefix coverage78/280; matching is post hoc, not optimized stopping. Adversarial suggestions cannot alter verification.50 Gaussian interval families test interval coverage, not causal calibration. In-process latency excludes browser/storage/network/model calls. No real-model cost or accuracy has been measured. Full definitions and limitations: docs/PHASE3.md.
+
+## Final genuine-model pilot
+
+The separate dry-default `forge.submission.model_evaluation` suite uses six predeclared new-seed matched cases, at most five model calls and equal four-test budgets. It requires genuine smoke evidence and separate owner authorization, stops on first failure, records actual usage/latency when supplied, and reports case-level intervals and missing denominators. Only clearly labeled fixtures have executed. See [the protocol](docs/GENUINE_MODEL_EVALUATION.md); no actual-model metrics or industrial accuracy are claimed.
