@@ -238,9 +238,7 @@ export default function DemoConsole() {
                   <strong>{session.metadata.investigation_title}</strong>
                 </div>
                 <span className="case-version">
-                  <span className="version-label">
-                    Saved version {session.version}
-                  </span>
+                  <span className="version-label">Saved</span>
                   <button
                     className="icon-button"
                     aria-label="Reload saved investigation"
@@ -291,7 +289,6 @@ export default function DemoConsole() {
               <div className="analysis-footer">
                 <ShieldCheck size={17} aria-hidden="true" />
                 <span>{sourceLabel(session.model_source)}.</span>
-                <span>Independent numerical verification.</span>
                 {cap?.model_configuration === "configured_unverified" && (
                   <span>An authenticated model test is still required.</span>
                 )}
@@ -301,10 +298,7 @@ export default function DemoConsole() {
         </main>
         <footer className="product-footer">
           <span>FORGE</span>
-          <p>
-            Synthetic data only. No physical causality or industrial safety
-            certification is established.
-          </p>
+          <p>Simulation only. Not for equipment operation.</p>
           <a href="#investigation-main">
             Back to the workspace
             <ArrowLeft size={14} />

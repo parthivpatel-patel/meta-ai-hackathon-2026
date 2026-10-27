@@ -11,3 +11,10 @@ backend/tests
 docs/evidence
 artifacts
 deploy/*.env
+
+# Local credentials and transient browser output
+**/*.env
+**/*.key
+**/*.pem
+**/playwright-report
+**/test-results

@@ -1,0 +1,2035 @@
+{
+  "baseline": "0107579414f20e46d3919fcffbaf979fcb5296a9",
+  "tracked_files": 336,
+  "counts": {
+    "Required configuration": 25,
+    "Product documentation": 20,
+    "Required attribution and licensing": 1,
+    "Essential application source": 63,
+    "Essential tests": 17,
+    "Historical or overlapping documentation retained for traceability": 13,
+    "Reproducibility and evaluation evidence": 197
+  },
+  "files": [
+    {
+      "path": ".dockerignore",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "a67dd712a5d3f01acd2463935e28880c6fea6484d0aab663c7c4ca7a6cf29ed5"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "7d5678da3c9fb42ac429b64b8d1abf8eb0fd03a7d6015e048d6c7e3071967928"
+    },
+    {
+      "path": ".gitignore",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "e314f49b70f5cab81f2717cb125c69c792bf905ce3eab7a5e72742c8abb79495"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "f302d105c0d89596a3108e813de38f515c9da20b21e615b01931539adf489659"
+    },
+    {
+      "path": "DEMO_RUNBOOK.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "c074bc0c3dad82e77ad76c9afbca0c53fb59b802ef38d94e7cb2da3447ebab16"
+    },
+    {
+      "path": "DEMO_SCRIPT.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "27896ddd30dbfd1ba1cd9d205e08f0f13383779f512425954006dca5e5130b69"
+    },
+    {
+      "path": "DEVELOPMENT_ROADMAP.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "6f62da551c36f457f5bf0320ad4a6f9698dab74c0dddbc37914ff8dbb4c53993"
+    },
+    {
+      "path": "Dockerfile",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "9b26c25c63ca746c5bcdbf046dadc6d5fc9b2e7320567127d4cdc53c2e726e66"
+    },
+    {
+      "path": "EVALUATION_PLAN.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "1bb9b43d6cd3d1521ff0eddb71e04f82b086f21794e6052682f420daac3018b9"
+    },
+    {
+      "path": "HACKATHON_BUILD_LOG.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "3f82a28faed295bf17d5d37b631b9653c553530d0e2eb468b773159a0d4354e3"
+    },
+    {
+      "path": "JUDGE_ACCESSIBILITY.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "2413023a0a1584c6ef078bdd54f2249070f57d9e96ed87fb96452143420cd987"
+    },
+    {
+      "path": "JUDGING_ALIGNMENT.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "8e2548a1f212df018eac380150b760e5b561dfbc1569b26d382ff0db03da90a9"
+    },
+    {
+      "path": "LICENSE",
+      "category": "Required attribution and licensing",
+      "action": "retain",
+      "sha256": "c54a09f50637f247e440c6903b3d56d5e7381c426fd03fa1e50ffe077d0af4c1"
+    },
+    {
+      "path": "MODEL_ACTIVATION.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "0c85f23ccd6f42a0c40b3acad53a33b58eeff984d82c352a50b7a093e7fe47b2"
+    },
+    {
+      "path": "OWNER_ACTIONS.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "817d17729feb9f4f42727700d50e76d396040f99ef79041e7ccbe07427ad1809"
+    },
+    {
+      "path": "README.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "affcbfffd6eb2e9de8a94022b59aaaf9a0701be214c4ebd17b74de9cbfcca99c"
+    },
+    {
+      "path": "RECORDED_DEMO_FALLBACK.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "5853752c83402f265d369321d685fbcee5b1b2b39cec7c8584a73607f5fe1387"
+    },
+    {
+      "path": "REDESIGN_DEPLOYMENT.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "d8eb396948ac073c427d54f853066e2e615dedd2aafd05d4ec20496c582a4e4f"
+    },
+    {
+      "path": "SECURITY.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "26537c685cb04ac1de004b208b8425980d79ec135a204476b43c6007de873297"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "86107a1020ebd13512620465c7b63bd0404ac111cb4c48833b0e2903da742150"
+    },
+    {
+      "path": "SUBMISSION_PACKAGE.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "6f791e557d5f1a40e833579ce3cf04b14a77e76d682922c93c8a73725639bdb9"
+    },
+    {
+      "path": "backend/evaluation/phase2-results.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "1c310361e4a6e68373c3963facfb5375e68694264f2014816c0a03bd15835184"
+    },
+    {
+      "path": "backend/evaluation/phase3-results.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "cfaf8fcceb663dec3bad4869487dcc91c15e8e6c84774522a5e72cb0f19ae7b4"
+    },
+    {
+      "path": "backend/evaluation/results.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "c4b778225309db74cb92bf906c29c8e40772a3e129d351e087ae8e2876fecaa7"
+    },
+    {
+      "path": "backend/forge/__init__.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backend/forge/analysis.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "46cbf7f9bdd8b31d6632ed4ca71d2eead381599ba8477c894a389763fec7d0ab"
+    },
+    {
+      "path": "backend/forge/body_limit.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "cd3dc605ffe3f6e7e249fa294ace8c2cf656da51a2a966b8ef855d2c5795a06e"
+    },
+    {
+      "path": "backend/forge/config.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "afbcd775cd79543df1ab8973173c1cabe4e69e06bb563107de4651805f446edd"
+    },
+    {
+      "path": "backend/forge/engine/__init__.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "f88bab262ab9c62170a547c33d1fb26b5070bc6158b9c63838c845970c3a65ed"
+    },
+    {
+      "path": "backend/forge/engine/contracts.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "b69d8f0640d5cb6621920435bda8aa859028f0d0b1f9f30fc113c9cb73d107cb"
+    },
+    {
+      "path": "backend/forge/engine/hypotheses.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "86c6eab9775970e11db56fa2ef70e9e78ae762ed706e9938975de7209daf81a5"
+    },
+    {
+      "path": "backend/forge/engine/investigation.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "379f05db9cca0a963a6a81b2be02aaed6775b22e0c5e1d7d6b1efdbcd8f909ad"
+    },
+    {
+      "path": "backend/forge/engine/oracle.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "fb7ff0ef760b4aabbae3d7335e718b95a6d016e601821387f66b2c151f87d852"
+    },
+    {
+      "path": "backend/forge/engine/reporting.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "804ea99117e70571d2f5f4cf5efa5a9279dc03c653694f7e6b47e0686bb1081e"
+    },
+    {
+      "path": "backend/forge/engine/routes.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "a3ace70f9d1f87a5593ec8cac315ae80b10dee2619ea6262c71d25f2899daa1e"
+    },
+    {
+      "path": "backend/forge/engine/verifier.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "ce513f526a202498eb9e2690055cb763955f202d4b2a3bc5edf15879aa36cae4"
+    },
+    {
+      "path": "backend/forge/evaluate.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "76afec7f0cb0290ce7852f1390b944c9daf2daed2f3acb27b412b605c4ffd5de"
+    },
+    {
+      "path": "backend/forge/main.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "f229e804c1aa62d2923ff8235fe6f57171452faa288540d5ca74147f5351642c"
+    },
+    {
+      "path": "backend/forge/phase2/__init__.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "ca9a61db6111006b22b95b7c90392d0b7e05200d1ce0e77816916fe90a389197"
+    },
+    {
+      "path": "backend/forge/phase2/contracts.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "1496ae452a13b6c63093cc3b3b852f93a19e1e9f2e1c7ec314f5e557c93e1b43"
+    },
+    {
+      "path": "backend/forge/phase2/evaluate.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "c0c4103341a2f4cc558a765a7c5c66e017c1987bd9e20f815d57859c3a4c1029"
+    },
+    {
+      "path": "backend/forge/phase2/evidence.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "5daf2113a2395331bd83663fd5190f502c5a40bd290d7944e5438ec37b3d76ce"
+    },
+    {
+      "path": "backend/forge/phase2/inference.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "1bc6a184084e10f817415a8586f678b980a2c87fd9c8bfd7a84dca899ea001fb"
+    },
+    {
+      "path": "backend/forge/phase2/oracle.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "89d16d3b3d8dfc8f16166a11dbf83455edf2a13635672103feb6801d116868cc"
+    },
+    {
+      "path": "backend/forge/phase2/replay.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "ab3e5ed30ee9b0ee5c27b62bdff855cb2da30e4b6553c6e2fd78626ac98eb9b2"
+    },
+    {
+      "path": "backend/forge/phase2/routes.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "f5d5f67d72b73a9c083d70f887081fa3fee2b9db896df8d1bb9b475146e1291e"
+    },
+    {
+      "path": "backend/forge/phase2/service.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "372177df9d28458d78a97c8a972114f5038f9d0cf9b7f6017fdde253db93f255"
+    },
+    {
+      "path": "backend/forge/phase2/thermal_input.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "050f4cb433c8fab03bbf9e0cfa0daa9986d345cff45152f75935c0063227122b"
+    },
+    {
+      "path": "backend/forge/phase2/verification.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "1c0fbf1b37f7c1aa4941b6179bc550f045245b02356c6072bebdc7967eb2e509"
+    },
+    {
+      "path": "backend/forge/phase3/__init__.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "446d80b1a50abbf8b139d31f95851ce3c95b776689bdbe4163be3c3d0e8f2bd4"
+    },
+    {
+      "path": "backend/forge/phase3/evaluate.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "01a08fa61a6bf7e7d1728491c19edc547027aed625c9f6a0cb73cd152909183c"
+    },
+    {
+      "path": "backend/forge/phase3/oracle.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "8085532b40fbed901e49120a2e73835b36998b266db75325632704bf6189eb32"
+    },
+    {
+      "path": "backend/forge/phase3/replay.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "9bd1036f3e33cab491ffc3a36842185085c48cfe50e532f5b0516dd17702b7ba"
+    },
+    {
+      "path": "backend/forge/phase3/reporting.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "f99b129212066d097e30f9a0b1805c6bf7457b5fea016e55e5d139f00fb28a1c"
+    },
+    {
+      "path": "backend/forge/phase3/routes.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "aafe6f9c76738c90ea415f426b4b0be8fdf343d4a727076ee883a9bcefe0957e"
+    },
+    {
+      "path": "backend/forge/phase3/safety.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "de8a6f2e370db7705651cd5bfee20c8fe2feb5df6af2b8abcf9d11c52efd0717"
+    },
+    {
+      "path": "backend/forge/phase3/service.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "b510c3027f6cd62009b1a23d23e0daec82bf98ad09a2df4051b19cb6ce065d6e"
+    },
+    {
+      "path": "backend/forge/phase3/storage.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "946b9d58fd629e6338e0d7496cd65750ab000606d4667957884c9bd7238f3e26"
+    },
+    {
+      "path": "backend/forge/phase3/verification.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "01fc3a1cdd1f4f1e037e10ae3917cfaca675e88e7784f0d5aa862c5a1da0d897"
+    },
+    {
+      "path": "backend/forge/providers.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "0e3edf69b354722a913922b5b5c63b4b13b320d115120c99d189cbea0495a6fe"
+    },
+    {
+      "path": "backend/forge/replay.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "5f26e77bcb77878b7478889cdd98d37d4c0121ed3838d9088fb622188d1d80b2"
+    },
+    {
+      "path": "backend/forge/simulation.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "b8a63fb0e91499718eb37cb6394f34b9cd7f62db629658f633cc6574a7a9086b"
+    },
+    {
+      "path": "backend/forge/submission/__init__.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "5d5a8bc07add201112bddf752439aad31227e5a9b90add254d01f3a2fbc8eb00"
+    },
+    {
+      "path": "backend/forge/submission/audit.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "edbd873ceb73dd22f1ac08e3f8c9629850247e3879e3cd12a98486ca8cd151c6"
+    },
+    {
+      "path": "backend/forge/submission/model_evaluation.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "b81df874a362ff2cb38d55b6cfc5cef9ce3be87bbaebfcd6765d4afc4e637f1b"
+    },
+    {
+      "path": "backend/forge/submission/models.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "6e38b5100ea43895246fdefd0e877f70a2ae5d596f787f30b7a7390a18fa3a78"
+    },
+    {
+      "path": "backend/forge/submission/receipt.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "8e9941483450a31a66e59199558f977ce88f6ebd832b3c07b962ad4669241165"
+    },
+    {
+      "path": "backend/forge/submission/render.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "586afdfe18264409f757e40b53f45f8506bdb2403645219d199ea4b2214c3c76"
+    },
+    {
+      "path": "backend/forge/submission/serve.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "1ab7bbdc8ec23d7fbbfda751b783c9f388f921aabcf23024ecb8a3ee13136e0d"
+    },
+    {
+      "path": "backend/forge/submission/smoke.py",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "07a6e3fbd30b3bd43d2e3124c951724fc088355dfa474fac3ae7972fa72f7e35"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "64aaedfefbcf77ade07dba6f31a3a3e699f6752a321d221995579bf6e3909080"
+    },
+    {
+      "path": "backend/tests/test_engine.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "eb4ddf6573a871d85bb68c3f3202a0a1962e6278de84de4a3509da0f91345afa"
+    },
+    {
+      "path": "backend/tests/test_event_integration.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "98902b27b8fa0ea49f1f6623c13b1516bc09903fc1836a560ca8bc273d7d0a19"
+    },
+    {
+      "path": "backend/tests/test_final_engineering.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "36adcd6ae606ac74ae49311eb9e8444dce36fc6a94a658775e52586c0e8a53e4"
+    },
+    {
+      "path": "backend/tests/test_forge.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "74227696ee4b94c91746c573c5023dc574d42730fc82e24a224d65da42438b28"
+    },
+    {
+      "path": "backend/tests/test_phase2.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "b4388879ee9cab30025e4bd02479a171f0b172e109db00ddd3fe47d70e22678e"
+    },
+    {
+      "path": "backend/tests/test_phase3.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "ae6faf4da02a4d4b8ce3037be1d0c6e611ab4026377785e802fe0b1d3c046543"
+    },
+    {
+      "path": "backend/tests/test_product_completion.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "eb77259ef63de6a954fc084f23d4675bcf24e2a3a3292ff6de2ae3cfa9391096"
+    },
+    {
+      "path": "backend/tests/test_render_deployment.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "305caa6ef07882bf6ddb92c6d66b1194b41aaef5fc14cc676708958f54d2c94c"
+    },
+    {
+      "path": "backend/tests/test_submission.py",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "9f745420816862e3c8d04b3ad2594c8aebdfda8ef92d4353b570c601c5992724"
+    },
+    {
+      "path": "backend/uv.lock",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "b358748ffec45bceb2169251abac84a3abcf1ebfc67827d4217d30a7a84faa49"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "77924eaf27f39789200735fe6dece70bb9bb7d0443d79e67c1586c777b605610"
+    },
+    {
+      "path": "deploy/evaluation.env.example",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "2418ed1b66271b0812058d8dda5ba670bdbd74f475814c6de53db2f22a2992aa"
+    },
+    {
+      "path": "deploy/public.env.example",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "650da829627c96c5bc9226b5cc64e1e3558e644dda8c2f3c6580d6b169fb0fa2"
+    },
+    {
+      "path": "deploy/smoke.env.example",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "97c1690a7b8ff9057e458eab5ff455a887f7e90d46cbf1684e64dc4d55d539a2"
+    },
+    {
+      "path": "docs/DEPLOYMENT_SECURITY_AUDIT.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "f6ca50f98d12fbb6775dbdd23eb9ab7046444827eb2df3910adf94eea6049852"
+    },
+    {
+      "path": "docs/DESIGN_SYSTEM_V3.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "c5448b63fe8f87fe11e8e919b8fb1dd810a6915b874279b6dbb90f478b05b1b2"
+    },
+    {
+      "path": "docs/ELIGIBILITY_TIMING_REVIEW.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "fd826966cd5b6b3fc3db5afbf8a5c5940854e5a2347bbc71fb6c96258f6886de"
+    },
+    {
+      "path": "docs/FINAL_RELEASE.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "4f74f7634e21587a98aa3426a5f71bbc67168e4a442abcf0263ce6c3d292e83f"
+    },
+    {
+      "path": "docs/FINAL_REQUIREMENTS_MATRIX.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "f385864fb49807b9fce9f5fb64bb3b50e7f29b0ae9a9983638bf1dde8d6a1862"
+    },
+    {
+      "path": "docs/GENUINE_MODEL_EVALUATION.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "70b0f4b7ef1e6c0be30a0a0c1646efa88e303826db0111c9874238b15c6cb20a"
+    },
+    {
+      "path": "docs/HOSTING_AND_ACCESS.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "25bac1e30d3162f393680d5cbbf3f6e8365f12eaed07d87b8e8df7f6c39742d4"
+    },
+    {
+      "path": "docs/INTERACTIVE_EQUIPMENT.md",
+      "category": "Product documentation",
+      "action": "retain",
+      "sha256": "355fa82f25bae22c18e0240a70f7c129205527cb060e9939dfcc928a9aee3bae"
+    },
+    {
+      "path": "docs/META_INTEGRATION.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "e441f13f2cad3b154e712f5c08333ef12092cab2f656ab33c7de3b8301e161ea"
+    },
+    {
+      "path": "docs/ORGANIZER_CLARIFICATION_DRAFT.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "aee16c811e138eb537dd6d0bffe604059fe745b6d66ea953ef59c90f98cba4e5"
+    },
+    {
+      "path": "docs/PHASE1_VALIDATION.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "f5b73b0cc80120d4767337d9c70d2b5f78b6a90ed4ce960cd2abd2c8f6ee2780"
+    },
+    {
+      "path": "docs/PHASE2.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "ceca717509db3d7e910331182f306480eb869de1a7800ddd0e1df243f2990fae"
+    },
+    {
+      "path": "docs/PHASE3.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "1371314031886f7b7fd4e94e60cd5da95f81eb4c618f7bcf18251c76407c9bb7"
+    },
+    {
+      "path": "docs/PHASE4.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "eb8674a07e3c37b609bbd3604ca613deaf7d4ace132fe5ae61971b5e7dd29dea"
+    },
+    {
+      "path": "docs/PRODUCT_REDESIGN.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "b5f05a0045d8fcddaa0d6d5083c549ddb28a47e6a281d8668d13ab7ea174619c"
+    },
+    {
+      "path": "docs/PRODUCT_V4_DESIGN_REVIEW.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "6e9d0b3cc26f054d4b6378162665c5b3b59c65382f2d9479ed245901f3beabf2"
+    },
+    {
+      "path": "docs/PRODUCT_V4_RELEASE.md",
+      "category": "Historical or overlapping documentation retained for traceability",
+      "action": "retain",
+      "sha256": "3b7fc55df88b70158fe8b14d672f20fc6dc7e62a1563717b6158104cd079b715"
+    },
+    {
+      "path": "docs/design-v3-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c0fd336affa8a69ff43b7d3cd1302219ab172f8ab30411c3649e80e6a2fa566e"
+    },
+    {
+      "path": "docs/design/concept-a.svg",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "7b20a241117725a50a3577b657e6cb1599929fe514416430b5ebf02486d86a9c"
+    },
+    {
+      "path": "docs/design/concept-b.svg",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "188f52b926c4cb49fd51e623f7431fbede8e40f62d312008edebccf02424bf74"
+    },
+    {
+      "path": "docs/design/concept-c.svg",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "1cfd5a2035369cf7d1f31ed50889639bce9c45fc93ccc4310b92b6badd877d8d"
+    },
+    {
+      "path": "docs/eligibility-timing-inventory.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "03f98c30678d24785286913a81774c4ee5788ec7325bfb72f076929e92a2fbd9"
+    },
+    {
+      "path": "docs/evidence/DESIGN_V3_REVIEW.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "70fd3bad770185013de685e3c896c9eb3a51b54bdafa3d2900f3ecd4e6e4a5bb"
+    },
+    {
+      "path": "docs/evidence/PRODUCT_V4_REVIEW.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "752a522b7689bcd50eb485e0f168e20365e170870f8574e9df327a11a069d326"
+    },
+    {
+      "path": "docs/evidence/REDESIGN_REVIEW.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5abba2f141e2bd464bc5003faac8c2d1aec1ddb9edd4ab3bb9d1e8918716898e"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "41531d11d0d535f76a3edec19d14001c6bf41ea3f7de63296197745a492219f5"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-experiments.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d4283a9d9aed29c374c07d1f2296445fce859a9a1d86170ee6ca0e6ba54f40a2"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-hypotheses.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "8e23a1f0a9f03a83ddb3cb39341d8c13e4e0d20b957cd143ca96299c765441c1"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-reports.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cd2b4c143e5b5856e7bccf6f3b6c347a802f6780f6714a07c341c71ecdbd495f"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-verification.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1f7a84616e1538008854406d56a8a75a49874bb150c7e02f5301da8545f2dde5"
+    },
+    {
+      "path": "docs/evidence/design-v3-desktop-workspace.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d48dd1b1bb4090a8d3badcc78d194045ec9fed6432fa7109af80d8917078f083"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "899b1b840f0606c63797cbbfe364aed2e763c24be50369d5dd4758dc3150dcfb"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-experiments.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ada244b0d4b875150d331793053fdda55eb67f1a56aa043b1093256f6010b9cb"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-hypotheses.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ab0aaa69f9ec41d04003b16331e9c88cb802a21fa6d2dc487b91f91235fedfc7"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-reports.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1f8b6014874a66d2e90cbddacbf9ac0a352f2f94b1596f8df9930c1fc62322ab"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-verification.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "61c82515facf88b37de8e3c927255da96b2f41faf88db5de592b3af0b3ff483c"
+    },
+    {
+      "path": "docs/evidence/design-v3-mobile-workspace.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "2ba54cb93f523fa97cda18f37d8f9e7e4e1f4acbffa52dbb809b0c6fd6259f81"
+    },
+    {
+      "path": "docs/evidence/phase1-desktop.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f7bd6ff0b707f06b0a2b23e06a6a291d7b1b9eb4594a96f3af91e4d8cdfefab0"
+    },
+    {
+      "path": "docs/evidence/phase1-mobile.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ae11c542291d93f1bc37cd7b4b790191ec6b4105ae6479aac43ce139c5431571"
+    },
+    {
+      "path": "docs/evidence/phase2-desktop.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cf59edb15239ac2d2b37e8d917e935efa6e3c1a91fd90afbb98845a003e78ad3"
+    },
+    {
+      "path": "docs/evidence/phase2-mobile.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "011ad4616587be450f44660a146f2260dbd53ce0b94548d6326535ec1c9a4d81"
+    },
+    {
+      "path": "docs/evidence/phase3-desktop.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "8be73a19e5d1b4f40173ac4599cd3efd2e0d9646baba6041ea536e17dd76c768"
+    },
+    {
+      "path": "docs/evidence/phase3-mobile.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1772f08526153c8fc49ec04667536ad3f622d819e6d0724ba7d00059e6a7fdb4"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-choose.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "b73b380cc2b06c672b1337e5b472b299534d48f1dee6504f1adbf4aff2a11402"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c6909b5a524ee9cd335ad20adc25f6f198747cd5980790511eb89b01e29d90ba"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-missing-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "53f9d3652e21851c887f1b511f4743134c674bb0da4739850fdf57bdaf68fde8"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0bc579fb3b18b60f47ffba86fb120b564203ff1d0ce913ab5dbe862a54acc30f"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "aac4a4d57e201485dfeeea19e8b84d2fc9b21b68c98c5ae2f0e0d1f35a96c6a2"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "631e1e654ae42467d94bde29b0f40aa71f463c5d19fe1d08685867165c577eee"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4eef465bae5ed4957330b211bec063b595b7b0279ca1b1661d87693a835e6414"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-test-proposal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "211c92dd386589e1386afca2fc2654c157fd2d9fa9afb23aae8953c889d9ec49"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9f22c97ed5aaae2e9dc5b9030c89dd349a258c509476d105c4245a628e919819"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-thermal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ecd27d96c446ccb533a49785d67b2144cf268838f4cccd602032b3b1d6783294"
+    },
+    {
+      "path": "docs/evidence/product-v4-desktop-waveform.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "17c4d622fc191c5351eaf8d60906f1f155b18c6946c9e9d704891c8e9bd97981"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-choose.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ec9537e4f6c91cb5cbc2d32a516a54661c4772d0f98fc9bb59347a00b3d0191f"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a860d2070d2feb587a3c06e39b01199559c7c3fda0b7e64be03926d191f3ddb9"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a32b0af915620644df017b3a7752c9fa9be3ce316457112cb990aeedce88b6f1"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e82093a2356877b8c39e78832d60a49bc610587680e74f7f727ba81e22bb8464"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "89638131df450581553dda2ac0800299dc711f68fc2a4a2b7d3f1f0f1997fee3"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5bad5e78b87354290585fc3c4329682825facacf69f09754e8c69fb5778ae767"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ee57be44f7c7c36548fb09378379c43e1b0309dbe1d63db6158b8eeb297ca7cd"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-thermal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e35a803c4e9bdcab10b9c802289fbaf213e2f2da8c52d9e1fbd029b328add5da"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-320-waveform.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "068f09380f077631c1f982dc24526b00f27c458abef84c78f7918cd3a9f2bed1"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-choose.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d22b1b81580da2fdcdeb6d74e5b9ebaf4381fadd92037aea7998bad61af5fa64"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5f2bc5fde9f59cb8bf28cbb716ed09d7e16ada0a1addaf16186481a64782bcda"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "59760fb2d40b5c1cbfad610bb3289f23a162beaed931706e756986aebdf94ef5"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f454479c61bb2234eb09760cfb26eb6cef8171bde76221bb50528d5a3ad40b94"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "22d4a1ced4c62200375abac15f77504ff678a5a3a5e238295f4e7ee366556956"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a6237e04693cbcea36fa54bc02399d012e5f045d8c8d5cb2cae70792d7dfdc87"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "23cfc163b10770971443dc91e17485e6bbecbf35f1534a60f200b5796ce569c9"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-thermal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d54250425f23b28f26be4aaa7732e1b2228d53c933cb4629795ddd025f72a393"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-375-waveform.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c5f5dc47be2aee21363440525133be2439699cc0a446db40d2758b2d19585644"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-choose.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "95ae0827adde20758f72ff64acf17893bf18fbc5454f69a7c3c1461ba5c98083"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1ef898cbe1a988dd4ebf743bfd72a4f2e57c6485e34c993d8b5617a61f9d3015"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-missing-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bebcdd033725a80e40b2d6dfef8a1f9278ac63cc85a1ee2ed7b4675ec46e2467"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "249e31295686cf803712bfaf7a2907d8fcb967ff9553d0dbbaf3a146cfbc0a52"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bf317c86946a63232aa67637f79f9f2a29e1221e97a55a7d6e0d32c57e3b0710"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e6831f96b503ec5dde8d3a6c588ff4dfd0391c4c57187aa3f7e14db7ac83e3fe"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9705fd7c28ce8ff858fa3f13e2664a1468949684cc3afb59605ebab82cdde3f7"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-test-proposal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "b7f12d1a78f864f809ddf06886c497e47c3c4879d624becc3013f5d8d27ad16e"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9170780b895f29033f19169e3696e4f839ea599015c9512f8a7b4efae320fc2f"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-thermal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7c434180809fc77bc70a04d3b5574050da434108e1c7cb66effa4cef011f22b3"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-390-waveform.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5d7c766ab0d9d6ebdda5b8a749c54b01ebf0f06b97003044e20564b30bf1887a"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-choose.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "6ead27fe195ad51e0415ee68b71dd83a754290f7470666ff352ca8c7983bf25a"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7aca97d3725366d5f23e4bdcff023ac82f295ce30dba570e2802d31d60579ee1"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bc16fa62e5879be3cef65e7b4a58fb88d40cb3b1e2e41f8ef365833c64b74180"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7cd79c80a206db672f2074c3101691aec547b96a7778047f3335c9761b9d9558"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "78a2cfe1f2fb50b5afc41be0a85a86e8352ea89e4909ebf2727c7964c43b1c73"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e289c083913e8463d8b4fc91cd62410389487acd5f86979757bb84494ff51173"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "3644c6e54bc92a265501b0c8bddff1e4c17bdff42420170569ed53507c06aad1"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-thermal.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ae52811003992c2ba69a350d6cad5fa957479bee5124de372ac367e913a6de09"
+    },
+    {
+      "path": "docs/evidence/product-v4-mobile-430-waveform.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "35ec0a1362b4896d935183fd7441e553a493f6ee7ef50c8a0270226be9fa695b"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f3e8ca16d4a6c61f13e0d58bbdcfda2dac305dd1d62f7a829e2f5a6b5d0b057c"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-experiments.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cd2b4e19cc4b8509ddbf5ba76c0335fbafc2c89b3cfd23ba6c37fac135badb5c"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-hypotheses.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0dcea9e1d35ea3601789ffb8b3444d296c80cb72f99dbc672582918e930fc013"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-reports.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ec35a866a243224ab8afbb29fa8298db4b767087b4826a4cee1ec61ccc02a5c3"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-verification.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d8c693c5c9fa917bfbb86a6dd335cacaeeb651d097702dd7b6136e6bb32fb4f0"
+    },
+    {
+      "path": "docs/evidence/redesign-desktop-workspace.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f8356ae335a2e81a1c4cedf08961fcca148642b9958f3bb8db7f8ebf141876a0"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "395c0559e5c0354ccdbb02ff2d00cd324e5e424343e4eaf7400792509686343d"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-experiments.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e283b8523e1b38fa2cd3ca4d83c31b9eaf9db282b23f53e10883658ea7d5f0c1"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-hypotheses.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "247bedbc5bcff10e6b77ea63f8cf9f74cf3e42441809e0063215d0e6e9194c87"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-reports.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "348d0858cf4f014804d8e7339a98b5bcc017a32752a2ad8b9d512f44eaf3fb84"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-verification.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "add82c6ccd457c5b2c675cefa9f817679dad0ac36647ad896189a4c92a55e4e6"
+    },
+    {
+      "path": "docs/evidence/redesign-mobile-workspace.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c50bd05fe9782a168f7c83c31ed38e8f2ea928574831dcf7e2ccc75f22d2748e"
+    },
+    {
+      "path": "docs/evidence/render-local-desktop.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "02eadba4b618c6bdd8624e6bb072edb0396a5c993db2c205fb4808846f5aee58"
+    },
+    {
+      "path": "docs/evidence/render-local-mobile.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9987e430f113476f02c18615f298d964a14bc8b33760ceeeb1f64d4876488630"
+    },
+    {
+      "path": "docs/final-audit-inventory.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d64b65a6e705161ae42484c8970a5ec20cd8492155bf2c7c50de11d23a8c8404"
+    },
+    {
+      "path": "docs/final-engineering-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f34a531d4bcec9500281403f48972adc5b7d772b24edcc1294f106a32e8a5452"
+    },
+    {
+      "path": "docs/final-event-evidence.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "862b9c011e242b7ee5a5c3bce57b7c09b487d819220591478eff7fa228715127"
+    },
+    {
+      "path": "docs/final-fixture-evaluation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ca3166568db034cd513b6015c68c93b21063afb256402a6e4e923d4098843ecd"
+    },
+    {
+      "path": "docs/final-live-audit.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "94b42c96fd92420c3371719b2187afa14fe29ce03f8054f30b4e04f0ee32b7ad"
+    },
+    {
+      "path": "docs/final-live-check.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cb604baa896e45fdf74114acb32016ce93b820ff3eb5ad4f924952cefa400077"
+    },
+    {
+      "path": "docs/final-source-check.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bcae05f13ed0ca8e0054e6c0dce4e4a591fcf72c3130f8c9ce7583b0fa9d9a83"
+    },
+    {
+      "path": "docs/final-source-inspection.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d5f0b6a5c3978205bc983f1471caa353f545cfd604aa7b8024b859a538fd82d0"
+    },
+    {
+      "path": "docs/hosting-source-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7c23ae2c1f710b87d8e824d0c325b991acb69225412c05934f7064b112df98ed"
+    },
+    {
+      "path": "docs/hosting-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5eda4fba739360e576bc4159fb8c00da48194ef9102a95aaf0fab9d3b58ce6e8"
+    },
+    {
+      "path": "docs/phase2-source-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "66a55511b3fa199ba5d8a3aa6ac82f252e01bf400fd325bf190f750828ea11da"
+    },
+    {
+      "path": "docs/phase3-source-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9a43f8f65c84852c8577ac05246f07242e61f4940146a8dc2eb4e1879d49835a"
+    },
+    {
+      "path": "docs/phase4-source-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cba9541a565d19e1a5b0d25e9ec602baa9660594462387121ee6f29d858c6baf"
+    },
+    {
+      "path": "docs/phase4-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "00775ac649991ef021540cd2f8585148b76f0afa812d8655a5cb27c22931ead3"
+    },
+    {
+      "path": "docs/product-completion/ENGINEERING_REVIEW.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "2e69fa7d54aa36fa99c533dc2fd75a2cdf0e0714a5ce44aeed34e5060a20e7f5"
+    },
+    {
+      "path": "docs/product-completion/README.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d6abb0cc3eff989c53af3eb4e52300b7db6e9662f2e5769f9dc93abda5e6418d"
+    },
+    {
+      "path": "docs/product-completion/USER_GUIDE.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "12c3e6872ef52c7465fec9de991d1da4b9e868fbcae1fc6f7c4d5df68fee9082"
+    },
+    {
+      "path": "docs/product-completion/all-width-browser.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "53a1846bb81c311ed56ecaed66fd05129b91e0f347b2e3d6d04ccce6abab7f38"
+    },
+    {
+      "path": "docs/product-completion/browser-results.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4ae3491b7e76b67e65024d6e12545301e4f3483a4bae5d0f7794e21c0831f366"
+    },
+    {
+      "path": "docs/product-completion/confounded.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "23d51a79a8d681794ae7f67b07446cf5ef5f3c65a9cf12d496081d75ffab993d"
+    },
+    {
+      "path": "docs/product-completion/confounded.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949"
+    },
+    {
+      "path": "docs/product-completion/container-audit.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e04d8afa3330b673fecf0825ff93be6976ebf174eefbbe526709dfabea43d6dc"
+    },
+    {
+      "path": "docs/product-completion/insufficient.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5488b0192bd2cb005af4373c1a20a8e3c706f84dcc002cea8b11bcfb2d962e8e"
+    },
+    {
+      "path": "docs/product-completion/insufficient.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b"
+    },
+    {
+      "path": "docs/product-completion/misleading_sensor.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "8835dc1bab327d68badadb18d22536c98c1684491c3046f869702780e92c811a"
+    },
+    {
+      "path": "docs/product-completion/misleading_sensor.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/product-completion/noisy_multifault.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f226ee107a99c9973757bd72e82f1aac46dea4575d6ff4c19212e15545b0f1ea"
+    },
+    {
+      "path": "docs/product-completion/noisy_multifault.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da"
+    },
+    {
+      "path": "docs/product-completion/normal.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "17f61b9066b0584ddf2eecc527d1460bcaeead0932668143a905743b7fe81136"
+    },
+    {
+      "path": "docs/product-completion/normal.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0"
+    },
+    {
+      "path": "docs/product-completion/npm-audit.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f115c0bd230f19fc7b36f385d246cd2db4603baaeb0c8ec096bcdf58d85c7ab5"
+    },
+    {
+      "path": "docs/product-completion/python-audit.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "30a68649084eb584b3ccddb34de1aaca1925fe74c6e6c26e59dad39c2a9880d7"
+    },
+    {
+      "path": "docs/product-completion/screenshot-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4b33561349e2797de6ddc265b40ad5489b8a46a2b13d2544cc5bd8faadc0971e"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "d58298c57dd8008945f8f909167a875863cd2f90b9c7a8c09745f4b37152d7c3"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c96bdb343b9885b7093538f36dbc348227464f89512cecbb5ec175a9725c21d9"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4ecb76bcfacc214d050d0d5d0e8b8498bc3156c1508e12baecd18647e306cb94"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cedd61a4b21e14f7cbebf1fd18a655c5ae4d7c3d3ba59afb832985f7da2d88ca"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7f6e53a325b551f60fa287bdd871e2c6e786fc2f8df38672f728cad8fa391164"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bf3fbc8be2831ba3857810c03e86670f1a732d2c4a92141f6ddb3057e1b73e03"
+    },
+    {
+      "path": "docs/product-completion/screenshots/confounded-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "b4c968450b036edcb88981b69874b973bba068891ea97447ba17a82735a12b24"
+    },
+    {
+      "path": "docs/product-completion/screenshots/equipment-320.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0a34b81ef543734996bdee92a9a88225e2ce702ee6205ecf085a95e2c493a234"
+    },
+    {
+      "path": "docs/product-completion/screenshots/equipment-375.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f8c52605ce43087b37d35c09de72968d4e1d1b888d838148b293fc794a90e8e0"
+    },
+    {
+      "path": "docs/product-completion/screenshots/equipment-390.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0981e61c19171ce4dcd2067ef05d3d7df84014fce5559d7783bf4efb1edb998c"
+    },
+    {
+      "path": "docs/product-completion/screenshots/equipment-430.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e5705c44357054e2479e50616262c3f13838fe7bf9c32fea2e5adbe55c395fcb"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ee4109aca3d3a6c55b0ac3f7b9340066986e652b4d647b8f2f6c4fa976a21b0c"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "86d3204345c5c5f805f26b033159aac9e20e5e68b664023d2582fcca514ded8c"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "80a37bd0e341d953f4c90b87b20925271eb94140571dd7e565fd4250bb58dbb5"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7bfd62463ad2f01b4d80733d385a191c7947b998ddbdcce9165b44c011438fcb"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4cef000b43d77023c315eed4ed6888cea3ed7f17e5ecf6d85df842e8176563ce"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "b6d76944bb3974387b14c1e2d3473468847a5e220543fa60c5a26184851d092c"
+    },
+    {
+      "path": "docs/product-completion/screenshots/insufficient-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1a8b4acd693640d599a032dae9ef4aa101ae3ce20e19d39be93fe8b1d4cdadb6"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "012357d79a09909d47c7892bf0c81214632aae983b178eb0999ddd24ffda5626"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0ed19896d595dda5c8de5bfa3e193cdcf9269c7c2a7103c5aec313b5cb2ea37f"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "2f1cd0b8eee6ce07b8ebd70aefab43794e3ae3661147eb550bb09f1beaf09ce8"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5c544e38cbedc0b3b94f070968d6df035b5608b787d16025a5447f66a066318f"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ce873cb77d4ee322cf83b76f829c70028ca7c9921df69af525ccd0cf8d9ba395"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c156376b0ec6704fb517030d1cd74c09959c5e388974e6da032bb5414a4211c3"
+    },
+    {
+      "path": "docs/product-completion/screenshots/misleading_sensor-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "38de0bcdeb7191c3a4230f18faa3b21fcdafcac1536734c43089bf63c6277c48"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "bd6699f40ec7514d42b06cc57211a083e1546fe854f191c3205bba898fd79d3a"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e0d4c78fa27a34e39c2df28e0744a89ab70352eeb798cd842154c23b0ca18c96"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cd13872f92759962ba227072d4c2c195986b127f3ac3a917566cd1f004bf2326"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "59737ac56f6a4d2d1edb7298a6d67b93ab9625fc7aaf6615464e6a74d604de4a"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "4ee7b3c7d3fd0eedcc5c9e9095970fcaf63c9e52c43373263e6cac46f825b5d6"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "18422f0a874e92fd61a1979e5066fec6a36f416b6391ce6eccea9b3fc774c6a8"
+    },
+    {
+      "path": "docs/product-completion/screenshots/noisy_multifault-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ac5910a86e56ee42261f446cbc3c5f395392a811bd867af654339e35ddb4e6dc"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c1eaacf7f7e254684efa300d303cabe104cdefa55da2533c7117ff44ce6a3930"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5ca8ba1952df808f68a2cabce63df402f1e74aa7f2fb8d2cfa87137b9d9c146b"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "762cea18fc87059c2182b68ee7af8f347e641b42d7e5c55f5ac6ec3b5a29496e"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "90a7a73b6715e2f605a4ab270faed9dc3c61879a6ff3f0a07179b8e791a53908"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "2af4644ae981f3645b3711d607550805edd2f0b0a129647e02761679f3980242"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c9913d4712cbc97623e01493320a7d9af776a46a795e03f08e5db5522bd56bb6"
+    },
+    {
+      "path": "docs/product-completion/screenshots/normal-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "2c9b7303b339b296ed1383ddc4899368f14bc86588ca8b616f4f4e331d1d9704"
+    },
+    {
+      "path": "docs/product-completion/screenshots/readable-report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a7407959d2051c260e51613d5cdd6717c5e42269f0f7b58ade897f0b5c70eef0"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0c1b1a2dde9bc0faa6c270943e2520ac2b901a313419f2bd695ded0190147044"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7b79433d06511fd351bfc275b4578ab0cc9b9d9f66e732216f3a28d0000026c0"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "70eff55a4f9cba34542e065d16f553bad98221a0cabb4f1d31ef160ac513b32e"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "33435b08f1e6d4fa1c5bcd309574c041783a4c3d69a46d1be3f33c520fa854d2"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "49d97203bb25e4e92a81fe49abf946d7f195f68940d8abc009c56359e77f269d"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "7b81e3bb6d88bb517090aef70f4cb08bbe41430c002d3aab66b1cb09ab8c2d93"
+    },
+    {
+      "path": "docs/product-completion/screenshots/temperature_response-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "99f712ec6ce78f3003c2bf30a98a39671d612ce4ba76dc721c70fc35b73bfded"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-Possible-causes.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1347141c560c150dfa1e3bfbdf4f1d9d4b1f5ce6863e74dfdc85c5de6ceaca47"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-Report.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "764ef8d75162f41a9fc7fccc16a4a819cb9c1ad371127a309671c50b7a7782bf"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-Results.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c5baa2a7b0fd2dc68a3648211d9f1a26ef194e8bffa73c5647de030f64fe6cdd"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-Tests.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9d5f648f4f8043fad9c5ce1ac0e5118d5e5fe8e16b98aad9d76f2253f33da69b"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-equipment.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "0d92983882c0402aeda1b70f127bc484f324a04bc3828a69ff1ed1fe0c8a41ce"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-evidence.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1ecbbe5864f2c7979091de9207ba0609d9c88b966132cb74b778e0498be11614"
+    },
+    {
+      "path": "docs/product-completion/screenshots/vibration_response-overview.png",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "39b0aeddf8bb064f10dfcf9c689ef0956dbfa7ccfd1a3d3ab468df9e696b9f1d"
+    },
+    {
+      "path": "docs/product-completion/temperature_response.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "271d69b8221d04235cf30a02c8fde09f6802c7a811b106a16193d39a9202dd6e"
+    },
+    {
+      "path": "docs/product-completion/temperature_response.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488"
+    },
+    {
+      "path": "docs/product-completion/validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9bae15ddbf28de74f4a43e911c9e5800d33691501d505be4ef57e17faab1cc8a"
+    },
+    {
+      "path": "docs/product-completion/vibration_response.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "df41fd7508fee2a098a1b76efc1be728139c41d360dd32bbf169e838130877c2"
+    },
+    {
+      "path": "docs/product-completion/vibration_response.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19"
+    },
+    {
+      "path": "docs/product-v4-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "3e531df697e45a90bdaf95e88fb28871c321d4ae596f46ef8f64da3bec108574"
+    },
+    {
+      "path": "docs/redesign-source-manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "e5892ec2706817d065744b21a5860ca54e7e676c8760dc68dee9889ddd0ddf6e"
+    },
+    {
+      "path": "docs/redesign-validation.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5a077fe520c8b618461a411324435901c25d72477fb4e500a559c5ab923e335e"
+    },
+    {
+      "path": "docs/submission/README.md",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "1107d8c7299cf1410697bab3ea4273a3974686f9bcb70207d5741a8dc58ee0ac"
+    },
+    {
+      "path": "docs/submission/insufficient.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "5488b0192bd2cb005af4373c1a20a8e3c706f84dcc002cea8b11bcfb2d962e8e"
+    },
+    {
+      "path": "docs/submission/insufficient.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "8c3848e2d06c78d4eccdf5ac041bad5e4fbcd93fad0097f868edd3a82f15503d"
+    },
+    {
+      "path": "docs/submission/manifest.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "c43c5c7a6a06733bbd897c2e5ba842f5f4a3ee2bbfc673e74fc187c4dd930d2a"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.html",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "8835dc1bab327d68badadb18d22536c98c1684491c3046f869702780e92c811a"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.json",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "cff063f5bf02831f3f8051592762094d197cbb5863e1c175605522cabd39b27d"
+    },
+    {
+      "path": "frontend/index.html",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "5f9d6d47b30db8c9a5e8eecbae8227c0e49edb13834612acd6c5180831607a78"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "da566026e6f2e877a6cb5c7e74efe91cfff048350fdc0e6b0b05562fdbcd5cfd"
+    },
+    {
+      "path": "frontend/package.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "ef8e36e0e77a9969fe88fa81168592fa1c73d34f5e202d6420d4fe435828b739"
+    },
+    {
+      "path": "frontend/public/assets/geist-mono-OFL.txt",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "cc815ed4fc045f0e991abb10395b7932bd028c6a067deb13316d6002105074e6"
+    },
+    {
+      "path": "frontend/public/assets/geist-sans-OFL.txt",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "934b987e215a2bc463d7b1a99456c1d83e9505f5ef6d8b0dd439181fb2414b1b"
+    },
+    {
+      "path": "frontend/src/App.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "859ae7646d1ecff4ebc200f3c086678e37130be0ba89fbec58eb17a2e665270f"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "17e057a76717c62de05759065b06c40bc0cf609d17dae6194bd82be02f1e984a"
+    },
+    {
+      "path": "frontend/src/DemoConsole.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "aba2ef2a290038daddc8ee7d9b74c79ec22a467010498cf939de80a70a550cf0"
+    },
+    {
+      "path": "frontend/src/DemoConsole.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "2615bff904dad960243cf1e1b6d240842bb918395f77285e34fb37b4f425c038"
+    },
+    {
+      "path": "frontend/src/InvestigationWorkflow.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "a186061b1ff14e4990d8ce2975d121a6b831c98122471b0f354be5f36807c994"
+    },
+    {
+      "path": "frontend/src/InvestigationWorkflow.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "d661ba7803d28fa50a67099220767e3b9e1de5f79bb321c13794f14108aa6378"
+    },
+    {
+      "path": "frontend/src/Phase2Investigation.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "88a05c934ff089853ae7b6765f4c095a571f3fdf3a6332e1c69d78fd31c8fe05"
+    },
+    {
+      "path": "frontend/src/Phase2Investigation.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "facec0493a8cfb5bcea0b5b01a40dbc386ac7c2446db5c8a612df13c3c26096e"
+    },
+    {
+      "path": "frontend/src/investigation/AssetVisuals.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "ebf6022488a86ea270eb6a8c1288593cf104e1cb7add6519c7463bc719475080"
+    },
+    {
+      "path": "frontend/src/investigation/CaseLobby.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "986e70c842f6812d87982cd05028887ea51d5e483b99484cc679850f0124d3fe"
+    },
+    {
+      "path": "frontend/src/investigation/EquipmentModel.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "f4cd707ede0867bf271cf519074f48b9a578e17b17d0280b926c48e144e426d3"
+    },
+    {
+      "path": "frontend/src/investigation/EquipmentModel.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "fd635f3b3d10eb4df507ec1b23d2b245272c18562e671f9afe51b04bea1a4ea0"
+    },
+    {
+      "path": "frontend/src/investigation/TelemetryChart.test.tsx",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "7b28f961b734ec80c9bfe54c4fd812b064bbe4198bc188faef5de046877e50b0"
+    },
+    {
+      "path": "frontend/src/investigation/TelemetryChart.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "30893c9341dffbd5e0ef446b2f5e077530469c9e722895150f70d4b6da8e9734"
+    },
+    {
+      "path": "frontend/src/investigation/components.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "0145d3beaab934af3f459525248010c705c1cb3f4fc55aed2c2dfcf5ea88c27a"
+    },
+    {
+      "path": "frontend/src/investigation/presentation.ts",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "ce9ab6ff6f354edb7f107fa9d5e6b486cda3dc5c7807c62a159976cfd24795b0"
+    },
+    {
+      "path": "frontend/src/investigation/request.test.ts",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "b0588864a23e6edd3b9304dd72a329beb04f9da1d47dba82008f274130060722"
+    },
+    {
+      "path": "frontend/src/investigation/types.ts",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "76ad0f796242c3280334a5b1f556f7fa473cc6ff1625cacfb90da44318c2f0b6"
+    },
+    {
+      "path": "frontend/src/investigation/useInvestigation.ts",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "529bdc8368ddb91985e0eab734163da9e53e52e1ced7e7ac83675a806d54f32c"
+    },
+    {
+      "path": "frontend/src/investigation/views.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "db07ae5cc7b2207afbd846fd9a1855a9d21a4190e72c173dc083417a367d7d1f"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "38516b5fd6579141a54fe2e1a5254b8f56a99a652a294f35173c8a8c1a76f809"
+    },
+    {
+      "path": "frontend/src/product-v4.css",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "a75e146cef7620321dc4ccd9e1cae38cf552509d8eeab93b162594b56d433f81"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "66b69b6e7cefb570b6e823ca2490e9e30edc1e558bda6a5a2e1bfb765cd259f0"
+    },
+    {
+      "path": "frontend/src/test-setup.ts",
+      "category": "Essential tests",
+      "action": "retain",
+      "sha256": "9b328c4843431fa76d8de00008fc159e95f99a840211085ff3b8f25e53d14409"
+    },
+    {
+      "path": "frontend/src/vite-env.d.ts",
+      "category": "Essential application source",
+      "action": "retain",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "f58aef860be0ea5ca41a6f2f5be08c5defd873b311679f0ed01ecbc2b192956d"
+    },
+    {
+      "path": "frontend/tsconfig.tests.json",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "4471db3a5a72e031e73adef1e8413fb6093901b977b6d8b83fa1b58218e0fbac"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "897dad0f8cd4989fbdc934ffa8a48d68b60d1d69ffcd24c001eb08a54a133075"
+    },
+    {
+      "path": "render.yaml",
+      "category": "Required configuration",
+      "action": "retain",
+      "sha256": "6762ca17b159b946aacde93c5510e9c158e8df0ea9d0fd0d9b085a0c7e13d563"
+    },
+    {
+      "path": "scripts/api-smoke.py",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "6dd3297e30ca2279d8d688895b693f6a4c5407a9b212615643cb6c7802c0dd3b"
+    },
+    {
+      "path": "scripts/browser-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ff8a348b41a6c24cc7322b13700017152b695f4f1dea8d3330c1319af525fa4c"
+    },
+    {
+      "path": "scripts/build-submission-evidence.py",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "20165caa57afbe9e829450962af305d52154b8dba0ad898efd5d9486213ff598"
+    },
+    {
+      "path": "scripts/check-container.py",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "9eb91325842f9917c4370727bd364aea4eff9ddbde94107dd17f401230fd1832"
+    },
+    {
+      "path": "scripts/design-system-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "69bec5c709008822edf5f7e9e161ed5481c729acd4610d565ed417358c231129"
+    },
+    {
+      "path": "scripts/phase2-browser-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "ea45f2d642ec9c72de861937b5b6058316164cd98844dc28894a2f12bdf458ee"
+    },
+    {
+      "path": "scripts/phase3-browser-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "69bec5c709008822edf5f7e9e161ed5481c729acd4610d565ed417358c231129"
+    },
+    {
+      "path": "scripts/product-completion-browser.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "dd0c26ea61c74f91e034ba35fefe7b1694bdf9dbbbbbad29b8952034dc9288cc"
+    },
+    {
+      "path": "scripts/product-v4-browser-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "a7836200cd392434166c6d9b28be9b710942b04211b6e085dbab9f3a8412035d"
+    },
+    {
+      "path": "scripts/redesign-browser-check.cjs",
+      "category": "Reproducibility and evaluation evidence",
+      "action": "retain",
+      "sha256": "69bec5c709008822edf5f7e9e161ed5481c729acd4610d565ed417358c231129"
+    }
+  ],
+  "obsolete_development_artifacts": [],
+  "temporary_exports": [],
+  "unnecessary_generated_files": [],
+  "note": "Historical reports/screenshots are intentional evidence. Overlapping milestone documents are retained unchanged, not treated as disposable duplicates."
+}

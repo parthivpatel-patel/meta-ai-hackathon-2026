@@ -1,0 +1,65 @@
+[
+  {
+    "case": "confounded",
+    "replay": "INCONCLUSIVE",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949"
+  },
+  {
+    "case": "insufficient",
+    "replay": "ABSTAIN",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b"
+  },
+  {
+    "case": "misleading_sensor",
+    "replay": "SUPPORTED_SYNTHETIC",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+  },
+  {
+    "case": "noisy_multifault",
+    "replay": "INCONCLUSIVE",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da"
+  },
+  {
+    "case": "normal",
+    "replay": "SUPPORTED_SYNTHETIC",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0"
+  },
+  {
+    "case": "temperature_response",
+    "replay": "SUPPORTED_SYNTHETIC",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488"
+  },
+  {
+    "case": "vibration_response",
+    "replay": "SUPPORTED_SYNTHETIC",
+    "baseline_byte_identical": {
+      "json": true,
+      "html": true
+    },
+    "json_sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19"
+  }
+]

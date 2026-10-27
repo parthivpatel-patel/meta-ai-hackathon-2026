@@ -1,0 +1,53 @@
+{
+  "schema": "forge-presentation-validation-1",
+  "checked_utc": "2026-10-27T20:30:22.920446+00:00",
+  "baseline_commit": "0107579414f20e46d3919fcffbaf979fcb5296a9",
+  "branch": "feature/forge-presentation-cleanup",
+  "backend_tests": 209,
+  "frontend_tests": 25,
+  "test_typescript": "passed",
+  "production_build": "passed",
+  "container_build": "passed",
+  "container_image": "sha256:f3d509075cde6df58164944a2f40ff6279ba91dd8b8818a7598327a49bb9feec",
+  "container_public_checks": 32,
+  "browser_cases": 7,
+  "axe_view_checks": 105,
+  "automated_violations": 0,
+  "viewports": [
+    1440,
+    390,
+    320,
+    375,
+    430
+  ],
+  "seven_report_replays_and_baseline_byte_comparisons": "passed; replay-checks.json",
+  "existing_evidence_and_backend": "unchanged",
+  "readme_words": {
+    "baseline": 1852,
+    "current": 571
+  },
+  "files_deleted": [],
+  "removed_content": [
+    "Obsolete/repeated README phase sections, archived verbatim",
+    "Unrelated ignore-template entries",
+    "Three redundant/internal shell copy fragments"
+  ],
+  "temporary_captures": "/tmp/forge-cleanup-cases and /tmp/forge-cleanup-widths; not duplicated in Git",
+  "notices": "Installed frontend license texts grouped without modifying license wording, served under existing allowed assets route",
+  "secrets_pattern_matches": 0,
+  "pattern_scope": "Private-key/GitHub-token patterns only; not exhaustive",
+  "real_inference_requests": 0,
+  "production_mutations": 0,
+  "warnings": [
+    "Existing TestClient/httpx deprecation",
+    "First browser attempts could not start because optional tooling was absent; tooling installed under /tmp and complete runs passed"
+  ],
+  "limits": [
+    "Synthetic demonstration, not real industrial certification",
+    "Free-host idle sleep and ephemeral SQLite",
+    "Genuine model activation and development-window eligibility remain unresolved",
+    "No physical mobile or screen-reader certification",
+    "Remote document availability and fragment anchors not covered by local link-path audit"
+  ],
+  "final_asset_note": "Final image rebuilt after removing generated trailing blank lines from notice assembly; license wording unchanged. Container audit rerun. Browser behavior/code unchanged."
+}
