@@ -1,0 +1,1390 @@
+{
+  "schema": "forge-report-3",
+  "run_id": "RUN3-ca3621ef015c4fb9e71dac4026efc8ec39f73aabe999ad642604d352a511aef1",
+  "investigation": {
+    "engine_version": "forge-engine-3.0",
+    "status": "COMPLETE",
+    "metadata": {
+      "equipment_id": "P-104",
+      "investigation_title": "Synthetic pump investigation",
+      "acquired_at": null,
+      "declared_synthetic": true
+    },
+    "measurements": [
+      {
+        "minute": 0,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.051752
+      },
+      {
+        "minute": 1,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.036699,
+        "pressure": null
+      },
+      {
+        "minute": 2,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.926325,
+        "pressure": null
+      },
+      {
+        "minute": 3,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 4,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 5,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 6,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.788405,
+        "pressure": null
+      },
+      {
+        "minute": 7,
+        "state": "running",
+        "temperature": 65.315803,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 8,
+        "state": "running",
+        "temperature": 63.413192,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 9,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 10,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.05589
+      },
+      {
+        "minute": 11,
+        "state": "running",
+        "temperature": 65.142031,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 12,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 13,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.066612
+      },
+      {
+        "minute": 14,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 15,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.957043,
+        "pressure": null
+      },
+      {
+        "minute": 16,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.928651
+      },
+      {
+        "minute": 17,
+        "state": "running",
+        "temperature": 65.726608,
+        "vibration": null,
+        "pressure": 5.930659
+      },
+      {
+        "minute": 18,
+        "state": "running",
+        "temperature": 65.232075,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 19,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.126503
+      },
+      {
+        "minute": 20,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.961518
+      },
+      {
+        "minute": 21,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.980837
+      },
+      {
+        "minute": 22,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 23,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 24,
+        "state": "running",
+        "temperature": 65.297916,
+        "vibration": null,
+        "pressure": 5.823941
+      },
+      {
+        "minute": 25,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.983928
+      },
+      {
+        "minute": 26,
+        "state": "running",
+        "temperature": 63.852968,
+        "vibration": null,
+        "pressure": 5.958135
+      },
+      {
+        "minute": 27,
+        "state": "running",
+        "temperature": 64.216118,
+        "vibration": null,
+        "pressure": 5.766698
+      },
+      {
+        "minute": 28,
+        "state": "running",
+        "temperature": 63.064574,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 29,
+        "state": "running",
+        "temperature": 66.442755,
+        "vibration": null,
+        "pressure": 5.976403
+      },
+      {
+        "minute": 30,
+        "state": "running",
+        "temperature": 65.062628,
+        "vibration": null,
+        "pressure": 5.922906
+      },
+      {
+        "minute": 31,
+        "state": "running",
+        "temperature": 64.641134,
+        "vibration": null,
+        "pressure": 6.081313
+      },
+      {
+        "minute": 32,
+        "state": "running",
+        "temperature": 65.03272,
+        "vibration": null,
+        "pressure": 5.983449
+      },
+      {
+        "minute": 33,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 34,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.914288
+      },
+      {
+        "minute": 35,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.799079,
+        "pressure": null
+      },
+      {
+        "minute": 36,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.906378
+      },
+      {
+        "minute": 37,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 38,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.126437,
+        "pressure": null
+      },
+      {
+        "minute": 39,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.956593,
+        "pressure": null
+      },
+      {
+        "minute": 40,
+        "state": "running",
+        "temperature": 65.317403,
+        "vibration": 2.137288,
+        "pressure": null
+      },
+      {
+        "minute": 41,
+        "state": "running",
+        "temperature": 64.480692,
+        "vibration": null,
+        "pressure": 5.985773
+      },
+      {
+        "minute": 42,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 43,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 44,
+        "state": "running",
+        "temperature": 66.351744,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 45,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.031442,
+        "pressure": null
+      },
+      {
+        "minute": 46,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.011814
+      },
+      {
+        "minute": 47,
+        "state": "running",
+        "temperature": 65.607224,
+        "vibration": 1.926394,
+        "pressure": null
+      },
+      {
+        "minute": 48,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.198593
+      },
+      {
+        "minute": 49,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 50,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 51,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 52,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.184611,
+        "pressure": 6.225525
+      },
+      {
+        "minute": 53,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 54,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 55,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.035685,
+        "pressure": 5.797284
+      },
+      {
+        "minute": 56,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.987441,
+        "pressure": null
+      },
+      {
+        "minute": 57,
+        "state": "running",
+        "temperature": 64.63222,
+        "vibration": null,
+        "pressure": 5.812362
+      },
+      {
+        "minute": 58,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 59,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 60,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.918545
+      },
+      {
+        "minute": 61,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.927054,
+        "pressure": null
+      },
+      {
+        "minute": 62,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 63,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.03625
+      },
+      {
+        "minute": 64,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 65,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 66,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 67,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 68,
+        "state": "running",
+        "temperature": 65.78388,
+        "vibration": null,
+        "pressure": 6.03003
+      },
+      {
+        "minute": 69,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.128211
+      },
+      {
+        "minute": 70,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.850317
+      },
+      {
+        "minute": 71,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 72,
+        "state": "running",
+        "temperature": 66.342656,
+        "vibration": null,
+        "pressure": 6.112678
+      },
+      {
+        "minute": 73,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 74,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 75,
+        "state": "running",
+        "temperature": 65.674524,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 76,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 77,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.012947
+      },
+      {
+        "minute": 78,
+        "state": "running",
+        "temperature": 65.426747,
+        "vibration": 2.049477,
+        "pressure": null
+      },
+      {
+        "minute": 79,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 80,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 81,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 82,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 83,
+        "state": "running",
+        "temperature": 71.933144,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 84,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 85,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 6.237354
+      },
+      {
+        "minute": 86,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.895122,
+        "pressure": null
+      },
+      {
+        "minute": 87,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 88,
+        "state": "running",
+        "temperature": 71.903915,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 89,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 90,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 91,
+        "state": "running",
+        "temperature": 73.06586,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 92,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 93,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.941418
+      },
+      {
+        "minute": 94,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 95,
+        "state": "running",
+        "temperature": 71.251478,
+        "vibration": 2.039579,
+        "pressure": null
+      },
+      {
+        "minute": 96,
+        "state": "running",
+        "temperature": 71.337241,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 97,
+        "state": "running",
+        "temperature": 71.897326,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 98,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.959282
+      },
+      {
+        "minute": 99,
+        "state": "running",
+        "temperature": null,
+        "vibration": 2.04725,
+        "pressure": null
+      },
+      {
+        "minute": 100,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 101,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 102,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 103,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 104,
+        "state": "running",
+        "temperature": 73.063349,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 105,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 106,
+        "state": "running",
+        "temperature": 72.405668,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 107,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 108,
+        "state": "running",
+        "temperature": 70.332514,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 109,
+        "state": "running",
+        "temperature": null,
+        "vibration": 1.920476,
+        "pressure": null
+      },
+      {
+        "minute": 110,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 111,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 112,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.932259
+      },
+      {
+        "minute": 113,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 114,
+        "state": "running",
+        "temperature": 71.71837,
+        "vibration": null,
+        "pressure": 6.225096
+      },
+      {
+        "minute": 115,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 116,
+        "state": "running",
+        "temperature": 71.516878,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 117,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": 5.869381
+      },
+      {
+        "minute": 118,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      },
+      {
+        "minute": 119,
+        "state": "running",
+        "temperature": null,
+        "vibration": null,
+        "pressure": null
+      }
+    ],
+    "dataset_hash": "a07b30deff5df5eca6cfb1595c022f110ffdd3b9beebc0bda8300187f23fd182",
+    "observed": {
+      "signals": [],
+      "quality_issues": [
+        "temperature: insufficient coverage",
+        "vibration: insufficient coverage",
+        "pressure: insufficient coverage"
+      ]
+    },
+    "assets": {
+      "thermal": {
+        "pixels": [
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ]
+        ],
+        "declared_synthetic": true,
+        "units": "celsius"
+      },
+      "waveform": {
+        "samples": [
+          0.0,
+          0.7653668647301796,
+          1.414213562373095,
+          1.8477590650225735,
+          2.0,
+          1.8477590650225735,
+          1.4142135623730951,
+          0.7653668647301798,
+          2.4492935982947064e-16,
+          -0.7653668647301793,
+          -1.414213562373095,
+          -1.847759065022573,
+          -2.0,
+          -1.8477590650225733,
+          -1.4142135623730954,
+          -0.7653668647301808,
+          -4.898587196589413e-16,
+          0.7653668647301799,
+          1.4142135623730947,
+          1.847759065022573,
+          2.0,
+          1.8477590650225735,
+          1.4142135623730967,
+          0.765366864730181,
+          7.347880794884119e-16,
+          -0.7653668647301797,
+          -1.4142135623730958,
+          -1.8477590650225728,
+          -2.0,
+          -1.8477590650225735,
+          -1.414213562373097,
+          -0.7653668647301812,
+          -9.797174393178826e-16,
+          0.7653668647301795,
+          1.4142135623730956,
+          1.8477590650225728,
+          2.0,
+          1.8477590650225737,
+          1.4142135623730971,
+          0.7653668647301815,
+          1.2246467991473533e-15,
+          -0.7653668647301759,
+          -1.4142135623730954,
+          -1.8477590650225726,
+          -2.0,
+          -1.8477590650225737,
+          -1.4142135623730974,
+          -0.7653668647301785,
+          -1.4695761589768238e-15,
+          0.7653668647301757,
+          1.4142135623730951,
+          1.8477590650225726,
+          2.0,
+          1.8477590650225737,
+          1.4142135623730974,
+          0.7653668647301787,
+          1.7145055188062944e-15,
+          -0.7653668647301755,
+          -1.4142135623730951,
+          -1.8477590650225726,
+          -2.0,
+          -1.847759065022574,
+          -1.4142135623730976,
+          -0.7653668647301789,
+          -1.959434878635765e-15,
+          0.7653668647301752,
+          1.414213562373095,
+          1.8477590650225724,
+          2.0,
+          1.847759065022574,
+          1.4142135623730978,
+          0.7653668647301791,
+          2.204364238465236e-15,
+          -0.765366864730175,
+          -1.4142135623730947,
+          -1.8477590650225724,
+          -2.0,
+          -1.8477590650225741,
+          -1.414213562373098,
+          -0.7653668647301793,
+          -2.4492935982947065e-15,
+          0.7653668647301748,
+          1.4142135623730896,
+          1.8477590650225748,
+          2.0,
+          1.8477590650225741,
+          1.4142135623730983,
+          0.7653668647301861,
+          9.799650315725178e-15,
+          -0.7653668647301811,
+          -1.4142135623730943,
+          -1.8477590650225721,
+          -2.0,
+          -1.847759065022577,
+          -1.4142135623730934,
+          -0.7653668647301798,
+          -2.9391523179536475e-15,
+          0.7653668647301743,
+          1.4142135623730892,
+          1.8477590650225748,
+          2.0,
+          1.8477590650225744,
+          1.4142135623730985,
+          0.7653668647301866,
+          -3.921345679817883e-15,
+          -0.7653668647301807,
+          -1.414213562373094,
+          -1.847759065022572,
+          -2.0,
+          -1.8477590650225773,
+          -1.4142135623730936,
+          -0.7653668647301802,
+          -3.429011037612589e-15,
+          0.7653668647301739,
+          1.4142135623730887,
+          1.8477590650225746,
+          2.0,
+          1.8477590650225746,
+          1.414213562373099,
+          0.765366864730187,
+          1.0779367755043061e-14,
+          -0.7653668647301802,
+          -1.4142135623730936,
+          -1.8477590650225717,
+          -2.0,
+          -1.8477590650225773,
+          -1.414213562373094,
+          -0.7653668647301807,
+          -3.91886975727153e-15,
+          0.7653668647301735,
+          1.4142135623730885,
+          1.8477590650225744,
+          2.0,
+          1.8477590650225748,
+          1.4142135623730991,
+          0.7653668647301874,
+          -2.941628240500001e-15,
+          -0.7653668647301798,
+          -1.4142135623730934,
+          -1.8477590650225715,
+          -2.0,
+          -1.8477590650225775,
+          -1.4142135623730943,
+          -0.7653668647301811,
+          -4.408728476930472e-15,
+          0.765366864730173,
+          1.414213562373088,
+          1.8477590650225741,
+          2.0,
+          1.8477590650225748,
+          1.4142135623730996,
+          0.7653668647301879,
+          1.1759085194360944e-14,
+          -0.7653668647301793,
+          -1.414213562373093,
+          -1.8477590650225713,
+          -2.0,
+          -1.8477590650225777,
+          -1.4142135623730947,
+          -0.7653668647301816,
+          -4.898587196589413e-15,
+          0.7653668647301726,
+          1.4142135623730878,
+          1.8477590650225686,
+          2.0,
+          1.8477590650225806,
+          1.4142135623730898,
+          0.7653668647301752,
+          -1.9619108011821185e-15,
+          -0.7653668647301789,
+          -1.4142135623730927,
+          -1.8477590650225713,
+          -2.0,
+          -1.847759065022578,
+          -1.4142135623731051,
+          -0.7653668647301951,
+          -1.9599300631450357e-14,
+          0.7653668647301852,
+          1.4142135623730974,
+          1.8477590650225737,
+          2.0,
+          1.8477590650225753,
+          1.4142135623731003,
+          0.7653668647301888,
+          1.2738802633678827e-14,
+          -0.7653668647301652,
+          -1.4142135623730823,
+          -1.8477590650225764,
+          -2.0,
+          -1.8477590650225726,
+          -1.4142135623730954,
+          -0.7653668647301825,
+          -5.878304635907295e-15,
+          0.7653668647301716,
+          1.4142135623730872,
+          1.8477590650225681,
+          2.0,
+          1.847759065022581,
+          1.4142135623730905,
+          0.7653668647301761,
+          -9.82193361864236e-16,
+          -0.765366864730178,
+          -1.414213562373092,
+          -1.8477590650225708,
+          -2.0,
+          -1.8477590650225784,
+          -1.4142135623731058,
+          -0.7653668647301961,
+          7.842691359635767e-15,
+          0.7653668647301843,
+          1.4142135623730967,
+          1.8477590650225735,
+          2.0,
+          1.8477590650225757,
+          1.414213562373101,
+          0.7653668647301898,
+          1.371852007299671e-14,
+          -0.7653668647301644,
+          -1.4142135623730816,
+          -1.8477590650225761,
+          -2.0,
+          -1.847759065022573,
+          -1.414213562373096,
+          -0.7653668647301833,
+          -6.858022075225178e-15,
+          0.7653668647301707,
+          1.4142135623730865,
+          1.8477590650225677,
+          2.0,
+          1.8477590650225812,
+          1.4142135623730911,
+          0.765366864730177,
+          -2.475922546353431e-18,
+          -0.765366864730177,
+          -1.4142135623730911,
+          -1.8477590650225704,
+          -2.0,
+          -1.8477590650225786,
+          -1.4142135623731065,
+          -0.765366864730197,
+          -2.1558735510086122e-14,
+          0.7653668647301834,
+          1.414213562373096,
+          1.847759065022573,
+          2.0,
+          1.8477590650225761,
+          1.4142135623731016,
+          0.7653668647301907,
+          1.469823751231459e-14,
+          -0.7653668647301635,
+          -1.414213562373081,
+          -1.8477590650225757,
+          -2.0,
+          -1.8477590650225735,
+          -1.4142135623730967,
+          -0.7653668647301843
+        ],
+        "sample_rate_hz": 1024,
+        "declared_synthetic": true,
+        "units": "mm_per_second"
+      }
+    },
+    "asset_features": {
+      "content_hash": "9e0cdd165af6491d67ea3f95ed49071b50a1008bd9e64a71f7f96d53e0528418",
+      "modalities": {
+        "thermal": {
+          "height": 12,
+          "width": 12,
+          "median_celsius": 65.0,
+          "maximum_celsius": 85.0,
+          "hot_pixel_count": 9,
+          "declared_synthetic": true
+        },
+        "waveform": {
+          "samples": 256,
+          "rms_mm_per_second": 1.4142135623730951,
+          "peak_frequency_hz": 64.0,
+          "frequency_resolution_hz": 4.0,
+          "declared_synthetic": true
+        }
+      },
+      "limitation": "Numerical thermal/waveform features only; uploaded provenance is unverified. No general photo, audio, or video understanding; features do not establish a cause."
+    },
+    "evidence": [
+      {
+        "id": "a07b30deff5df5eca6cfb1595c022f110ffdd3b9beebc0bda8300187f23fd182",
+        "modality": "telemetry",
+        "summary": "120 synthetic minute measurements",
+        "provenance": "synthetic_factory",
+        "scope": "numerical_test_input"
+      },
+      {
+        "id": "4bede86d7f1b66a944b0170defa219f4e974f67aafc01eec21838fb5354d7ea8",
+        "modality": "metadata",
+        "summary": "Equipment/time context, not used for hypothesis inference",
+        "provenance": "operator_declared_unverified",
+        "scope": "descriptive_context"
+      },
+      {
+        "id": "1a15fc505b3f9692959c688160d8345878ae21095eb2ef67808b10bb8629bb8b",
+        "modality": "thermal",
+        "summary": "Validated numerical thermal context; alignment to telemetry is not independently established",
+        "provenance": "operator_declared_unverified",
+        "scope": "descriptive_context"
+      },
+      {
+        "id": "b571e2718fc7493475cd6925c6237860cb2b2cca1dde035cf9b9c90fee2213d0",
+        "modality": "waveform",
+        "summary": "Validated numerical waveform context; alignment to telemetry is not independently established",
+        "provenance": "operator_declared_unverified",
+        "scope": "descriptive_context"
+      }
+    ],
+    "hypotheses": null,
+    "model_source": "not_run",
+    "inference": null,
+    "ranking": [],
+    "plan": null,
+    "trials": [],
+    "decision": {
+      "status": "ABSTAIN",
+      "findings": [],
+      "channels": [],
+      "reasons": [
+        "temperature: insufficient coverage",
+        "vibration: insufficient coverage",
+        "pressure: insufficient coverage"
+      ],
+      "uncertainty": "Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities."
+    },
+    "max_experiments": 4,
+    "events": [
+      {
+        "index": 0,
+        "action": "observe",
+        "evidence_refs": [],
+        "detail": "Created an isolated synthetic case; recipe/answer labels excluded from model inputs"
+      }
+    ],
+    "verification_scope": "Telemetry plus controlled synthetic interventions. Thermal/waveform evidence is descriptive context, not cross-modal causal proof.",
+    "uncertainty_policy": "Fixed familywise interval policy, not a posterior probability; ranking is ordinal. No physical-world cause is established."
+  },
+  "reproduction": "From backend: uv run --frozen python -m forge.phase3.replay report.json. Offline numerical replay only, not an inference rerun or physical experiment.",
+  "limitations": [
+    "Synthetic systems only; no physical causality or industrial certification",
+    "Ordinal rankings and statistical intervals are not calibrated causal probabilities",
+    "Thermal/waveform context has no independent time/alignment or model-vision verification",
+    "Evidence digests are not source authentication; model provenance is not a signed attestation"
+  ]
+}

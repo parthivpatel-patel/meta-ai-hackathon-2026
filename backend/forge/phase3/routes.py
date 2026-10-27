@@ -28,7 +28,13 @@ if not logger.handlers:
 
 class CreateRequest(Record):
     preset: Literal[
-        "misleading_sensor", "noisy_multifault", "normal", "insufficient", "confounded"
+        "misleading_sensor",
+        "noisy_multifault",
+        "normal",
+        "insufficient",
+        "confounded",
+        "temperature_response",
+        "vibration_response",
     ] = "misleading_sensor"
     recipe: Recipe | None = None
     assets: EvidenceBundle | None = None
@@ -169,7 +175,15 @@ async def create_session(body: CreateRequest, request: Request):
         s = create(
             recipe,
             body.assets if body.assets is not None else demo_assets(),
-            body.metadata,
+            Metadata(
+                equipment_id="RIG-104",
+                investigation_title=PRESETS[body.preset][0],
+                acquired_at="2026-10-27T08:00:00Z",
+            )
+            if body.recipe is None
+            and body.metadata == Metadata()
+            and body.preset in {"temperature_response", "vibration_response"}
+            else body.metadata,
             body.max_experiments,
         )
         state = json.dumps(

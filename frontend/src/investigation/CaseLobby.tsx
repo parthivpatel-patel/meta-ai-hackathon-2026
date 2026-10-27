@@ -26,6 +26,16 @@ export function CaseLobby({
   modelConfigured: boolean;
 }) {
   const descriptions: Record<string, { title: string; description: string }> = {
+    temperature_response: {
+      title: "Temperature rises under steady load",
+      description:
+        "Track a gradual temperature rise on the simulated test rig. Compare a process change with a sensor error.",
+    },
+    vibration_response: {
+      title: "Vibration rises during operation",
+      description:
+        "Investigate increased vibration on the simulated test rig using independent reference readings and a controlled test.",
+    },
     misleading_sensor: {
       title: "An unusual pressure reading",
       description:
@@ -61,13 +71,11 @@ export function CaseLobby({
             Return to your investigation
           </button>
         )}
-        <span className="eyebrow">
-          A testable path from observation to conclusion
-        </span>
+        <span className="eyebrow">Evidence. Tests. Findings.</span>
         <h1>Investigate equipment problems.</h1>
         <p>
-          Choose a synthetic case. Examine the evidence, compare possible causes
-          and run tests before reaching a conclusion.
+          Investigate a simulated equipment incident. Compare causes, run tests
+          and review the findings.
         </p>
         <ol className="lobby-journey">
           <li>
@@ -146,7 +154,7 @@ export function CaseLobby({
               ? "A verified connection is available. Requests remain subject to configured budgets."
               : modelConfigured
                 ? "The model is configured, but an authenticated test is required before it can be used."
-                : "Real Meta inference is unavailable in this environment. Investigations use explicitly labeled deterministic analysis."}
+                : "Real Meta inference is unavailable. This demo uses rules-based proposals and numerical verification."}
           </p>
           <p>
             Thermal images and vibration waveforms provide numerical context.

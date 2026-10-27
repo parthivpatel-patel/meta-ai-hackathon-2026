@@ -9,8 +9,10 @@ const titles = {
 export function TelemetryChart({
   rows,
   flags,
+  acquiredAt,
 }: {
   rows: Row[];
+  acquiredAt?: string | null;
   flags: { channel: string; flags: number }[];
 }) {
   const plot = useRef<SVGSVGElement>(null);
@@ -26,7 +28,12 @@ export function TelemetryChart({
   const left = 48,
     right = width - 20,
     span = right - left;
-  const [channel, setChannel] = useState<Channel>("pressure");
+  const [channel, setChannel] = useState<Channel>(() => {
+    const flagged = flags.find((s) => s.flags > 0)?.channel;
+    return flagged === "temperature" || flagged === "vibration"
+      ? flagged
+      : "pressure";
+  });
   const [minute, setMinute] = useState(100);
   const [hover, setHover] = useState<number | null>(null);
   const index = hover ?? minute;
@@ -176,6 +183,15 @@ export function TelemetryChart({
         />
         <output>{index} min</output>
       </label>
+      {acquiredAt && (
+        <p>
+          Sample time:{" "}
+          <time>
+            {new Date(Date.parse(acquiredAt) + index * 60000).toISOString()}
+          </time>{" "}
+          (synthetic acquisition clock).
+        </p>
+      )}
       <p className="plot-note">
         {missing
           ? `${missing} ${missing === 1 ? "observation is" : "observations are"} missing. Gaps and dashed marks show where no reading exists.`

@@ -1,0 +1,417 @@
+{
+  "schema": "forge-product-validation-1",
+  "checked_utc": "2026-10-27T19:11:41.646561+00:00",
+  "base_commit": "8f984c2b1ce27ba2fcd638b9f4089fa0ff7ccafd",
+  "branch": "feature/forge-product-completion",
+  "backend_tests_passed": 209,
+  "frontend_tests_passed": 25,
+  "test_typescript_and_production_build": "passed",
+  "warning": "Existing TestClient/httpx deprecation",
+  "docker_image": "sha256:d4fac0eb791f5c8a403e8fcac3bca035b692a7dfbc7abb9a2dd14ba4a8bccb95",
+  "container_audit": "32 HTTP checks, non-root UID10001, public-key start refusal passed; readonly/512MiB/one CPU/cap-drop/no-new-privileges local test",
+  "browser": {
+    "case_workflows": 7,
+    "all_presets_completed": true,
+    "offline_JSON_replays": 7,
+    "axe_views": 105,
+    "axe_violations": 0,
+    "widths": [
+      1440,
+      390,
+      320,
+      375,
+      430
+    ],
+    "keyboard_and_refresh_restart_isolation": "passed",
+    "manual_visual_review": "Temperature evidence, mobile equipment, pressure findings and readable HTML report inspected; no blocking defect observed",
+    "physical_screen_reader_or_mobile_hardware": "Not tested"
+  },
+  "performance": {
+    "scope": "Warm local container with headless Chromium. UI step/download timings include automation/network/render overhead; not pure server latency or public cold start. Single runs, not population estimates.",
+    "cases": [
+      {
+        "case": "misleading_sensor",
+        "initial_load_ms": 184,
+        "initialization_ms": 82,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 83
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 65
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 79
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 48
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 73
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 61
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 89
+          }
+        ]
+      },
+      {
+        "case": "temperature_response",
+        "initial_load_ms": 227,
+        "initialization_ms": 100,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 51
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 85
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 74
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 48
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 69
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 99
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 99
+          }
+        ]
+      },
+      {
+        "case": "vibration_response",
+        "initial_load_ms": 187,
+        "initialization_ms": 84,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 55
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 65
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 51
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 60
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 60
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 59
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 74
+          }
+        ]
+      },
+      {
+        "case": "insufficient",
+        "initial_load_ms": 216,
+        "initialization_ms": 90,
+        "steps": [],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 49
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 55
+          }
+        ]
+      },
+      {
+        "case": "noisy_multifault",
+        "initial_load_ms": 246,
+        "initialization_ms": 61,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 47
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 52
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 53
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 59
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 64
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 50
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 86
+          }
+        ]
+      },
+      {
+        "case": "normal",
+        "initial_load_ms": 313,
+        "initialization_ms": 85,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 54
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 46
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 56
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 61
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 93
+          }
+        ]
+      },
+      {
+        "case": "confounded",
+        "initial_load_ms": 188,
+        "initialization_ms": 54,
+        "steps": [
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 56
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 58
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 55
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 60
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 63
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 60
+          },
+          {
+            "status": "HYPOTHESES_READY",
+            "elapsed_ms": 72
+          },
+          {
+            "status": "EXPERIMENT_SELECTED",
+            "elapsed_ms": 57
+          },
+          {
+            "status": "COMPLETE",
+            "elapsed_ms": 69
+          }
+        ],
+        "downloads": [
+          {
+            "format": "json",
+            "elapsed_ms": 58
+          },
+          {
+            "format": "html",
+            "elapsed_ms": 195
+          }
+        ]
+      }
+    ],
+    "equipment_samples": [
+      {
+        "viewport": "desktop",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 188,
+        "domNodes": 199,
+        "usedJSHeapSize": 23549943,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-390",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 130,
+        "domNodes": 199,
+        "usedJSHeapSize": 28639888,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-320",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 169,
+        "domNodes": 199,
+        "usedJSHeapSize": 16117019,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-375",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 148,
+        "domNodes": 199,
+        "usedJSHeapSize": 16096526,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      },
+      {
+        "viewport": "mobile-430",
+        "view": "equipment-interaction-sample",
+        "violations": [],
+        "elapsed_ms": 138,
+        "domNodes": 199,
+        "usedJSHeapSize": 16121664,
+        "scope": "Headless Chromium desktop CPU with viewport emulation; not a mobile hardware benchmark or leak proof"
+      }
+    ],
+    "bundle_build_output": "\n> forge-dashboard@0.1.0 build\n> tsc -b && vite build\n\nvite v6.4.5 building for production...\ntransforming...\n\u2713 1596 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                           0.47 kB \u2502 gzip:  0.30 kB\ndist/assets/geist-mono-latin-400-normal-DTRLJnHl.woff2    9.86 kB\ndist/assets/geist-mono-latin-400-normal-B2yvC1Cq.woff    13.04 kB\ndist/assets/geist-sans-latin-400-normal-gapTbOY8.woff2   33.40 kB\ndist/assets/geist-sans-latin-500-normal-uokXdC-Q.woff2   34.72 kB\ndist/assets/geist-sans-latin-600-normal-DFOURf8L.woff2   35.29 kB\ndist/assets/geist-sans-latin-400-normal-BOaIZNA2.woff    38.91 kB\ndist/assets/geist-sans-latin-500-normal-CN2lyvyL.woff    40.52 kB\ndist/assets/geist-sans-latin-600-normal-CA1yjETN.woff    41.20 kB\ndist/assets/style-DVLkYlYq.css                           14.91 kB \u2502 gzip:  3.92 kB\ndist/assets/index-JDTF92g9.css                           23.53 kB \u2502 gzip:  5.16 kB\ndist/assets/App-D5cWTewi.js                              27.94 kB \u2502 gzip:  8.34 kB\ndist/assets/index-Bf7LUdaz.js                           275.00 kB \u2502 gzip: 85.11 kB\n\u2713 built in 2.00s\n"
+  },
+  "evaluation": {
+    "synthetic_cases": 1040,
+    "suites": [
+      480,
+      280,
+      280
+    ],
+    "sequential": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 24.6975,
+      "latency_ms_p95": 45.15650000000001,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "genuine_model_metrics": null
+  },
+  "security": {
+    "python_known_vulnerabilities": 0,
+    "npm_known_vulnerabilities": 0,
+    "scope": "Regression, dependency and configuration checks; not a penetration test or production certification"
+  },
+  "production_mutations": 0,
+  "genuine_inference_requests": 0,
+  "eligibility": "OPEN ELIGIBILITY QUESTION; original evidence/history unchanged",
+  "limits": [
+    "Temporary SQLite and free-host cold starts",
+    "No genuine model execution; replacement key and explicit authorization pending",
+    "Simplified synthetic test rig, not validated physical equipment",
+    "User reviews policy-proposed tests; no arbitrary intervention designer",
+    "Body-stream total deadline not implemented; header waits bounded",
+    "Legacy restricted lab copy retained",
+    "Final video, submission and owner-approved deployment not performed"
+  ]
+}

@@ -1,8 +1,10 @@
+> Latest candidate: `feature/forge-product-completion`, based on `8f984c2`. See the [beginner guide](docs/product-completion/USER_GUIDE.md) and [engineering review](docs/product-completion/ENGINEERING_REVIEW.md). This candidate is not deployed; model access and submission eligibility remain unresolved. Older final-engineering/release records below describe their own baseline.
+
 # FORGE
 
 FORGE investigates synthetic equipment problems through competing causes, controlled tests and independent numerical verification. FORGE 4.0 is the frozen candidate interface. **No genuine Meta inference has run here**; fixtures and deterministic outputs are explicitly labeled.
 
-Current engineering evidence: **203 backend tests and 22 frontend tests passed**, along with production/test type-checking, the real container build, public security checks and offline replay. See [the final requirements matrix](docs/FINAL_REQUIREMENTS_MATRIX.md), [validation evidence](docs/final-engineering-validation.json), [owner gates](OWNER_ACTIONS.md), and [submission draft](SUBMISSION_PACKAGE.md). The replacement key, fresh inference authorization, development-window clarification and approved final release remain open. The existing public URL works; the final candidate has not been deployed.
+Current engineering evidence: **209 backend tests and 25 frontend tests passed**, along with production/test type-checking, the real container build, public security checks and offline replay. See [the final requirements matrix](docs/FINAL_REQUIREMENTS_MATRIX.md), [validation evidence](docs/final-engineering-validation.json), [owner gates](OWNER_ACTIONS.md), and [submission draft](SUBMISSION_PACKAGE.md). The replacement key, fresh inference authorization, development-window clarification and approved final release remain open. The existing public URL works; the final candidate has not been deployed.
 
 ## Quick start
 

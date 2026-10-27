@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Channel, Session } from "./types";
-import { causeName, testName } from "./presentation";
+import { causeName, testName, resultLabel } from "./presentation";
 const parts: { channel: Channel; name: string; x: number; unit: string }[] = [
   { channel: "temperature", name: "Motor housing", x: -1.2, unit: "°C" },
   { channel: "vibration", name: "Bearing assembly", x: 0, unit: "mm/s" },
@@ -51,8 +51,8 @@ export function EquipmentModel({ session }: { session: Session }) {
     <section aria-label="Interactive equipment diagram">
       <h3>Inspect the equipment</h3>
       <p>
-        Illustrative 3D geometry and sensor locations, not a validated digital
-        twin. Yellow marks statistical anomalies, not proven damage.
+        Illustrative equipment, not a validated digital twin. Yellow marks
+        unusual readings; blue marks your selection.
       </p>
       <svg
         viewBox="0 0 500 220"
@@ -130,13 +130,24 @@ export function EquipmentModel({ session }: { session: Session }) {
           0}
         .
       </p>
-      <p>
-        Possible causes:{" "}
-        {session.ranking
-          .map((r) => `${causeName(r.hypothesis_id)} (${r.evidence_status})`)
-          .join("; ") || "Not yet evaluated"}
-        . Candidates are not localized damage.
-      </p>
+      <details>
+        <summary>Possible causes for this sensor</summary>
+        <p>
+          Possible causes:{" "}
+          {session.ranking
+            .filter(
+              (r) =>
+                r.hypothesis_id.endsWith(selected) ||
+                r.hypothesis_id === "normal",
+            )
+            .map(
+              (r) =>
+                `${causeName(r.hypothesis_id)} (${resultLabel(r.evidence_status)})`,
+            )
+            .join("; ") || "Not yet evaluated"}
+          . Candidates are not localized damage.
+        </p>
+      </details>
       <p>
         Next test:{" "}
         {session.plan ? testName(session.plan.kind) : "No pending test"}.
@@ -157,19 +168,23 @@ export function EquipmentModel({ session }: { session: Session }) {
         </details>
       ))}
       <p>
-        Independent verification: {result?.status ?? "Not yet available"}.{" "}
+        Independent verification:{" "}
+        {result ? resultLabel(result.status) : "Not yet available"}.{" "}
         {result?.reasons.join(" ")}
       </p>
-      <ul>
-        {session.evidence.map((e) => (
-          <li key={e.id}>
-            <code>{e.id}</code>: {e.summary} ({e.provenance})
-          </li>
-        ))}
-      </ul>
+      <details>
+        <summary>Evidence sources and integrity</summary>
+        <ul>
+          {session.evidence.map((e) => (
+            <li key={e.id}>
+              <code>{e.id}</code>: {e.summary} ({e.provenance})
+            </li>
+          ))}
+        </ul>
+      </details>
       <p>
-        SVG rendering needs no WebGL context. Use keyboard controls for
-        rotation, zoom and component selection.
+        Use the sliders or arrow keys to rotate and zoom. Select a component to
+        inspect its sensor.
       </p>
     </section>
   );

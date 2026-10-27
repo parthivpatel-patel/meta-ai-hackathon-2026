@@ -22,8 +22,8 @@
     },
     {
       "path": "misleading_sensor.html",
-      "sha256": "af00c169922b9c6bdcfdcdb6dbb6cb68cf21d4f5c7662ba032869e64c3c10450",
-      "bytes": 136573,
+      "sha256": "8835dc1bab327d68badadb18d22536c98c1684491c3046f869702780e92c811a",
+      "bytes": 140440,
       "source": "deterministic_rules_not_meta",
       "decision": "SUPPORTED_SYNTHETIC"
     },
@@ -36,8 +36,8 @@
     },
     {
       "path": "insufficient.html",
-      "sha256": "99676ae17ebf715ac43f6165bd0da77280cdcbf8048475d2611dc8ed0e8caee0",
-      "bytes": 42372,
+      "sha256": "5488b0192bd2cb005af4373c1a20a8e3c706f84dcc002cea8b11bcfb2d962e8e",
+      "bytes": 45590,
       "source": "not_run",
       "decision": "ABSTAIN"
     }

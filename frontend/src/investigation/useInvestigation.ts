@@ -8,6 +8,26 @@ class ApiError extends Error {
     super(message);
   }
 }
+export async function boundedFetch(path: string, init: RequestInit = {}) {
+  const deadline = new AbortController();
+  const timer = setTimeout(() => deadline.abort(), 30000);
+  try {
+    return await fetch(path, {
+      ...init,
+      signal: init.signal
+        ? AbortSignal.any([init.signal, deadline.signal])
+        : deadline.signal,
+    });
+  } catch (error) {
+    if (deadline.signal.aborted)
+      throw Error(
+        "The server took too long to respond. Wait for the demo to wake, then reconnect. Reload the saved investigation before retrying a test.",
+      );
+    throw error;
+  } finally {
+    clearTimeout(timer);
+  }
+}
 export function useInvestigation() {
   const [cap, setCap] = useState<Capabilities | null>(null);
   const [scenarios, setScenarios] = useState<{ id: string; title: string }[]>(
@@ -24,7 +44,7 @@ export function useInvestigation() {
   const [useMeta, setUseMeta] = useState(false);
   const controller = useRef<AbortController | null>(null);
   async function call(path: string, body?: object, signal?: AbortSignal) {
-    const response = await fetch(path, {
+    const response = await boundedFetch(path, {
       method: body ? "POST" : "GET",
       headers: {
         ...(body ? { "Content-Type": "application/json" } : {}),
@@ -141,7 +161,7 @@ export function useInvestigation() {
   async function download(format: "json" | "html") {
     setError("");
     try {
-      const r = await fetch(
+      const r = await boundedFetch(
         `/api/v3/sessions/${session!.id}/report.${format}`,
         {
           headers: token.current

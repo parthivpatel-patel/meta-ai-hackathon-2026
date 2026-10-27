@@ -124,8 +124,7 @@ export function Guide({
         </button>
       )}
       <p className="guide-disclosure">
-        All equipment and measurements are synthetic. These results do not
-        establish a real equipment failure.
+        Simulated equipment and data. Findings apply to this case only.
       </p>
     </aside>
   );

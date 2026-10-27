@@ -151,6 +151,7 @@ export function EvidenceView({ session }: { session: Session }) {
         {modality === "telemetry" && (
           <TelemetryChart
             rows={session.measurements}
+            acquiredAt={session.metadata.acquired_at}
             flags={session.observed.signals}
           />
         )}{" "}

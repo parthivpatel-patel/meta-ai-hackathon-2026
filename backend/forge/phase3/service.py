@@ -32,6 +32,14 @@ from .verification import SequentialDecision, verify
 
 VERSION = "forge-engine-3.0"
 PRESETS = {
+    "temperature_response": (
+        "Temperature rises under steady load",
+        Recipe(faults=["temperature"], shape="ramp", seed=8043),
+    ),
+    "vibration_response": (
+        "Vibration rises during operation",
+        Recipe(faults=["vibration"], noise_factor=2, seed=9043),
+    ),
     "misleading_sensor": (
         "A sensor can impersonate a process fault",
         Recipe(faults=["pressure"], sensor_biases=["pressure"], seed=3042),

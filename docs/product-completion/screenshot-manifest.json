@@ -1,0 +1,272 @@
+[
+  {
+    "path": "screenshots/confounded-Possible-causes.png",
+    "sha256": "d58298c57dd8008945f8f909167a875863cd2f90b9c7a8c09745f4b37152d7c3",
+    "bytes": 158432
+  },
+  {
+    "path": "screenshots/confounded-Report.png",
+    "sha256": "c96bdb343b9885b7093538f36dbc348227464f89512cecbb5ec175a9725c21d9",
+    "bytes": 156368
+  },
+  {
+    "path": "screenshots/confounded-Results.png",
+    "sha256": "4ecb76bcfacc214d050d0d5d0e8b8498bc3156c1508e12baecd18647e306cb94",
+    "bytes": 140421
+  },
+  {
+    "path": "screenshots/confounded-Tests.png",
+    "sha256": "cedd61a4b21e14f7cbebf1fd18a655c5ae4d7c3d3ba59afb832985f7da2d88ca",
+    "bytes": 147984
+  },
+  {
+    "path": "screenshots/confounded-equipment.png",
+    "sha256": "7f6e53a325b551f60fa287bdd871e2c6e786fc2f8df38672f728cad8fa391164",
+    "bytes": 211040
+  },
+  {
+    "path": "screenshots/confounded-evidence.png",
+    "sha256": "bf3fbc8be2831ba3857810c03e86670f1a732d2c4a92141f6ddb3057e1b73e03",
+    "bytes": 155887
+  },
+  {
+    "path": "screenshots/confounded-overview.png",
+    "sha256": "b4c968450b036edcb88981b69874b973bba068891ea97447ba17a82735a12b24",
+    "bytes": 151462
+  },
+  {
+    "path": "screenshots/equipment-320.png",
+    "sha256": "0a34b81ef543734996bdee92a9a88225e2ce702ee6205ecf085a95e2c493a234",
+    "bytes": 158976
+  },
+  {
+    "path": "screenshots/equipment-375.png",
+    "sha256": "f8c52605ce43087b37d35c09de72968d4e1d1b888d838148b293fc794a90e8e0",
+    "bytes": 158550
+  },
+  {
+    "path": "screenshots/equipment-390.png",
+    "sha256": "0981e61c19171ce4dcd2067ef05d3d7df84014fce5559d7783bf4efb1edb998c",
+    "bytes": 157387
+  },
+  {
+    "path": "screenshots/equipment-430.png",
+    "sha256": "e5705c44357054e2479e50616262c3f13838fe7bf9c32fea2e5adbe55c395fcb",
+    "bytes": 159361
+  },
+  {
+    "path": "screenshots/insufficient-Possible-causes.png",
+    "sha256": "ee4109aca3d3a6c55b0ac3f7b9340066986e652b4d647b8f2f6c4fa976a21b0c",
+    "bytes": 118254
+  },
+  {
+    "path": "screenshots/insufficient-Report.png",
+    "sha256": "86d3204345c5c5f805f26b033159aac9e20e5e68b664023d2582fcca514ded8c",
+    "bytes": 156877
+  },
+  {
+    "path": "screenshots/insufficient-Results.png",
+    "sha256": "80a37bd0e341d953f4c90b87b20925271eb94140571dd7e565fd4250bb58dbb5",
+    "bytes": 131272
+  },
+  {
+    "path": "screenshots/insufficient-Tests.png",
+    "sha256": "7bfd62463ad2f01b4d80733d385a191c7947b998ddbdcce9165b44c011438fcb",
+    "bytes": 128293
+  },
+  {
+    "path": "screenshots/insufficient-equipment.png",
+    "sha256": "4cef000b43d77023c315eed4ed6888cea3ed7f17e5ecf6d85df842e8176563ce",
+    "bytes": 190562
+  },
+  {
+    "path": "screenshots/insufficient-evidence.png",
+    "sha256": "b6d76944bb3974387b14c1e2d3473468847a5e220543fa60c5a26184851d092c",
+    "bytes": 153086
+  },
+  {
+    "path": "screenshots/insufficient-overview.png",
+    "sha256": "1a8b4acd693640d599a032dae9ef4aa101ae3ce20e19d39be93fe8b1d4cdadb6",
+    "bytes": 166020
+  },
+  {
+    "path": "screenshots/misleading_sensor-Possible-causes.png",
+    "sha256": "012357d79a09909d47c7892bf0c81214632aae983b178eb0999ddd24ffda5626",
+    "bytes": 166258
+  },
+  {
+    "path": "screenshots/misleading_sensor-Report.png",
+    "sha256": "0ed19896d595dda5c8de5bfa3e193cdcf9269c7c2a7103c5aec313b5cb2ea37f",
+    "bytes": 156887
+  },
+  {
+    "path": "screenshots/misleading_sensor-Results.png",
+    "sha256": "2f1cd0b8eee6ce07b8ebd70aefab43794e3ae3661147eb550bb09f1beaf09ce8",
+    "bytes": 143796
+  },
+  {
+    "path": "screenshots/misleading_sensor-Tests.png",
+    "sha256": "5c544e38cbedc0b3b94f070968d6df035b5608b787d16025a5447f66a066318f",
+    "bytes": 136689
+  },
+  {
+    "path": "screenshots/misleading_sensor-equipment.png",
+    "sha256": "ce873cb77d4ee322cf83b76f829c70028ca7c9921df69af525ccd0cf8d9ba395",
+    "bytes": 207002
+  },
+  {
+    "path": "screenshots/misleading_sensor-evidence.png",
+    "sha256": "c156376b0ec6704fb517030d1cd74c09959c5e388974e6da032bb5414a4211c3",
+    "bytes": 171086
+  },
+  {
+    "path": "screenshots/misleading_sensor-overview.png",
+    "sha256": "38de0bcdeb7191c3a4230f18faa3b21fcdafcac1536734c43089bf63c6277c48",
+    "bytes": 148759
+  },
+  {
+    "path": "screenshots/noisy_multifault-Possible-causes.png",
+    "sha256": "bd6699f40ec7514d42b06cc57211a083e1546fe854f191c3205bba898fd79d3a",
+    "bytes": 166573
+  },
+  {
+    "path": "screenshots/noisy_multifault-Report.png",
+    "sha256": "e0d4c78fa27a34e39c2df28e0744a89ab70352eeb798cd842154c23b0ca18c96",
+    "bytes": 156503
+  },
+  {
+    "path": "screenshots/noisy_multifault-Results.png",
+    "sha256": "cd13872f92759962ba227072d4c2c195986b127f3ac3a917566cd1f004bf2326",
+    "bytes": 139847
+  },
+  {
+    "path": "screenshots/noisy_multifault-Tests.png",
+    "sha256": "59737ac56f6a4d2d1edb7298a6d67b93ab9625fc7aaf6615464e6a74d604de4a",
+    "bytes": 135471
+  },
+  {
+    "path": "screenshots/noisy_multifault-equipment.png",
+    "sha256": "4ee7b3c7d3fd0eedcc5c9e9095970fcaf63c9e52c43373263e6cac46f825b5d6",
+    "bytes": 199562
+  },
+  {
+    "path": "screenshots/noisy_multifault-evidence.png",
+    "sha256": "18422f0a874e92fd61a1979e5066fec6a36f416b6391ce6eccea9b3fc774c6a8",
+    "bytes": 169411
+  },
+  {
+    "path": "screenshots/noisy_multifault-overview.png",
+    "sha256": "ac5910a86e56ee42261f446cbc3c5f395392a811bd867af654339e35ddb4e6dc",
+    "bytes": 150290
+  },
+  {
+    "path": "screenshots/normal-Possible-causes.png",
+    "sha256": "c1eaacf7f7e254684efa300d303cabe104cdefa55da2533c7117ff44ce6a3930",
+    "bytes": 165861
+  },
+  {
+    "path": "screenshots/normal-Report.png",
+    "sha256": "5ca8ba1952df808f68a2cabce63df402f1e74aa7f2fb8d2cfa87137b9d9c146b",
+    "bytes": 156331
+  },
+  {
+    "path": "screenshots/normal-Results.png",
+    "sha256": "762cea18fc87059c2182b68ee7af8f347e641b42d7e5c55f5ac6ec3b5a29496e",
+    "bytes": 140822
+  },
+  {
+    "path": "screenshots/normal-Tests.png",
+    "sha256": "90a7a73b6715e2f605a4ab270faed9dc3c61879a6ff3f0a07179b8e791a53908",
+    "bytes": 128570
+  },
+  {
+    "path": "screenshots/normal-equipment.png",
+    "sha256": "2af4644ae981f3645b3711d607550805edd2f0b0a129647e02761679f3980242",
+    "bytes": 196973
+  },
+  {
+    "path": "screenshots/normal-evidence.png",
+    "sha256": "c9913d4712cbc97623e01493320a7d9af776a46a795e03f08e5db5522bd56bb6",
+    "bytes": 171918
+  },
+  {
+    "path": "screenshots/normal-overview.png",
+    "sha256": "2c9b7303b339b296ed1383ddc4899368f14bc86588ca8b616f4f4e331d1d9704",
+    "bytes": 147830
+  },
+  {
+    "path": "screenshots/readable-report.png",
+    "sha256": "a7407959d2051c260e51613d5cdd6717c5e42269f0f7b58ade897f0b5c70eef0",
+    "bytes": 304783
+  },
+  {
+    "path": "screenshots/temperature_response-Possible-causes.png",
+    "sha256": "0c1b1a2dde9bc0faa6c270943e2520ac2b901a313419f2bd695ded0190147044",
+    "bytes": 166974
+  },
+  {
+    "path": "screenshots/temperature_response-Report.png",
+    "sha256": "7b79433d06511fd351bfc275b4578ab0cc9b9d9f66e732216f3a28d0000026c0",
+    "bytes": 158141
+  },
+  {
+    "path": "screenshots/temperature_response-Results.png",
+    "sha256": "70eff55a4f9cba34542e065d16f553bad98221a0cabb4f1d31ef160ac513b32e",
+    "bytes": 141188
+  },
+  {
+    "path": "screenshots/temperature_response-Tests.png",
+    "sha256": "33435b08f1e6d4fa1c5bcd309574c041783a4c3d69a46d1be3f33c520fa854d2",
+    "bytes": 136063
+  },
+  {
+    "path": "screenshots/temperature_response-equipment.png",
+    "sha256": "49d97203bb25e4e92a81fe49abf946d7f195f68940d8abc009c56359e77f269d",
+    "bytes": 201228
+  },
+  {
+    "path": "screenshots/temperature_response-evidence.png",
+    "sha256": "7b81e3bb6d88bb517090aef70f4cb08bbe41430c002d3aab66b1cb09ab8c2d93",
+    "bytes": 168051
+  },
+  {
+    "path": "screenshots/temperature_response-overview.png",
+    "sha256": "99f712ec6ce78f3003c2bf30a98a39671d612ce4ba76dc721c70fc35b73bfded",
+    "bytes": 149925
+  },
+  {
+    "path": "screenshots/vibration_response-Possible-causes.png",
+    "sha256": "1347141c560c150dfa1e3bfbdf4f1d9d4b1f5ce6863e74dfdc85c5de6ceaca47",
+    "bytes": 127139
+  },
+  {
+    "path": "screenshots/vibration_response-Report.png",
+    "sha256": "764ef8d75162f41a9fc7fccc16a4a819cb9c1ad371127a309671c50b7a7782bf",
+    "bytes": 121221
+  },
+  {
+    "path": "screenshots/vibration_response-Results.png",
+    "sha256": "c5baa2a7b0fd2dc68a3648211d9f1a26ef194e8bffa73c5647de030f64fe6cdd",
+    "bytes": 102165
+  },
+  {
+    "path": "screenshots/vibration_response-Tests.png",
+    "sha256": "9d5f648f4f8043fad9c5ce1ac0e5118d5e5fe8e16b98aad9d76f2253f33da69b",
+    "bytes": 101715
+  },
+  {
+    "path": "screenshots/vibration_response-equipment.png",
+    "sha256": "0d92983882c0402aeda1b70f127bc484f324a04bc3828a69ff1ed1fe0c8a41ce",
+    "bytes": 151428
+  },
+  {
+    "path": "screenshots/vibration_response-evidence.png",
+    "sha256": "1ecbbe5864f2c7979091de9207ba0609d9c88b966132cb74b778e0498be11614",
+    "bytes": 121614
+  },
+  {
+    "path": "screenshots/vibration_response-overview.png",
+    "sha256": "39b0aeddf8bb064f10dfcf9c689ef0956dbfa7ccfd1a3d3ab468df9e696b9f1d",
+    "bytes": 112468
+  }
+]

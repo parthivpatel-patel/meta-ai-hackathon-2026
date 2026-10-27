@@ -14,13 +14,12 @@ export const introductions: Record<
 > = {
   Overview: {
     title: "Understand the problem.",
-    description:
-      "Start with the observed measurements. Then compare causes and test what the evidence supports.",
+    description: "Review the incident, then inspect the measurements.",
   },
   Evidence: {
     title: "Examine the evidence.",
     description:
-      "Inspect a signal or supporting record. A flagged measurement is a reason to investigate, not proof of failure.",
+      "Explore measurements and supporting records. Unusual readings are not a diagnosis.",
   },
   "Possible causes": {
     title: "Consider what could explain it.",
@@ -49,7 +48,7 @@ export function sourceLabel(source: string) {
   if (source === "test_transport")
     return "Analysis mode: Local test response, not Meta";
   if (source === "not_run") return "Model inference has not run";
-  return "Analysis mode: Deterministic";
+  return "Analysis mode: Rules-based, not Meta";
 }
 export function causeName(id: string): string {
   if (id === "normal") return "Measurements consistent with normal operation";

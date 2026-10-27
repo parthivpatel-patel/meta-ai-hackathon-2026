@@ -25,7 +25,11 @@ export type Session = {
     thermal?: { pixels: number[][]; declared_synthetic: boolean } | null;
     waveform?: { samples: number[]; sample_rate_hz: number } | null;
   };
-  metadata: { equipment_id: string; investigation_title: string };
+  metadata: {
+    equipment_id: string;
+    investigation_title: string;
+    acquired_at?: string | null;
+  };
   measurements: Row[];
   model_source: string;
   inference?: {
