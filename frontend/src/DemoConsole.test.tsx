@@ -7,6 +7,7 @@ import {
   waitFor,
 } from "@testing-library/react";
 import DemoConsole from "./DemoConsole";
+import record from "../../docs/submission/misleading_sensor.json";
 afterEach(() => {
   cleanup();
   vi.unstubAllGlobals();
@@ -23,36 +24,44 @@ function setup(status = 200) {
         : [{ id: "misleading_sensor", title: "Misleading sensor" }],
   }));
   vi.stubGlobal("fetch", f);
+  vi.stubGlobal("scrollTo", vi.fn());
   return f;
 }
 it("discloses synthetic limits and disables real inference in public mode", async () => {
   setup();
   render(<DemoConsole />);
-  await screen.findByText("Restricted public demo. Synthetic data");
+  await screen.findByText("Synthetic research demo");
   expect(screen.getByLabelText("Use real Meta inference")).toBeDisabled();
   expect(
-    screen.getByText(/Thermal\/waveform features are context/),
+    screen.getByText(
+      /Thermal images and vibration waveforms provide numerical context/,
+    ),
   ).toBeInTheDocument();
-  expect(screen.getByText("Inference not run")).toBeInTheDocument();
+  expect(
+    screen.getByText(/Real Meta inference is unavailable/),
+  ).toBeInTheDocument();
 });
 it("handles capacity errors without silently substituting inference", async () => {
   const f = setup();
   render(<DemoConsole />);
   const start = await screen.findByRole("button", {
-    name: "Begin investigation",
+    name: "Open investigation",
   });
   await waitFor(() => expect(start).toBeEnabled());
   f.mockResolvedValue({ ok: false, status: 429 });
   fireEvent.click(start);
   expect(await screen.findByRole("alert")).toHaveTextContent("capacity limit");
-  expect(screen.getByText("Inference not run")).toBeInTheDocument();
+  expect(
+    screen.getByText(/Real Meta inference is unavailable/),
+  ).toBeInTheDocument();
 });
 it("requires owner authentication and does not persist tokens", async () => {
   setup(401);
   render(<DemoConsole />);
-  expect(
-    await screen.findByLabelText("Owner access token (not stored)"),
-  ).toHaveAttribute("type", "password");
+  expect(await screen.findByLabelText("Owner access token")).toHaveAttribute(
+    "type",
+    "password",
+  );
   expect(localStorage.length).toBe(0);
 });
 it("removes an expired saved session gracefully", async () => {
@@ -71,7 +80,9 @@ it("removes an expired saved session gracefully", async () => {
   await waitFor(() =>
     expect(localStorage.getItem("forge-sequential-session")).toBeNull(),
   );
-  expect(screen.getByText("Inference not run")).toBeInTheDocument();
+  expect(
+    screen.getByText(/Real Meta inference is unavailable/),
+  ).toBeInTheDocument();
 });
 
 it("shows the ephemeral-hosting warning", async () => {
@@ -125,19 +136,70 @@ it("keeps configured but untested inference unavailable", async () => {
   }));
   render(<DemoConsole />);
   expect(
-    await screen.findByText("Configured. An authenticated test is required."),
+    await screen.findByText(
+      "The model is configured, but an authenticated test is required before it can be used.",
+    ),
   ).toBeInTheDocument();
   expect(screen.getByLabelText("Use real Meta inference")).toBeDisabled();
 });
-it("navigation opens functional report and evidence views", async () => {
-  setup();
+it("moves from the case lobby to focused evidence and report views", async () => {
+  setup().mockImplementation(async (url: string) => ({
+    ok: true,
+    status: 200,
+    json: async () =>
+      url.endsWith("capabilities")
+        ? capabilities
+        : url.endsWith("scenarios")
+          ? [{ id: "misleading_sensor", title: "Misleading sensor" }]
+          : { ...record.investigation, id: "test-case", version: 5 },
+  }));
   render(<DemoConsole />);
-  await screen.findByText("Restricted public demo. Synthetic data");
-  fireEvent.click(screen.getByRole("button", { name: "Reports" }));
-  expect(screen.getByText("Export investigation reports")).toBeInTheDocument();
-  expect(
-    screen.getByRole("button", { name: "Export replayable JSON" }),
-  ).toBeDisabled();
+  const open = await screen.findByRole("button", {
+    name: "Open investigation",
+  });
+  await waitFor(() => expect(open).toBeEnabled());
+  fireEvent.click(open);
+  await screen.findByRole("heading", { name: "Understand the problem." });
+  expect(screen.queryByRole("slider")).not.toBeInTheDocument();
   fireEvent.click(screen.getByRole("button", { name: "Evidence" }));
-  expect(screen.getByText("Inspect the source")).toBeInTheDocument();
+  expect(
+    screen.getByRole("slider", { name: "Measurement minute" }),
+  ).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "Report" }));
+  expect(
+    screen.getByRole("button", { name: /Download verification record/ }),
+  ).toBeEnabled();
+  expect(
+    screen.getByRole("region", { name: "Report preview" }),
+  ).toBeInTheDocument();
+});
+it("lets users inspect another case without discarding the current investigation", async () => {
+  localStorage.setItem("forge-sequential-session", "test-case");
+  const f = setup();
+  f.mockImplementation(async (url: string) => ({
+    ok: true,
+    status: 200,
+    json: async () =>
+      url.endsWith("capabilities")
+        ? capabilities
+        : url.endsWith("scenarios")
+          ? [{ id: "misleading_sensor", title: "Case" }]
+          : { ...record.investigation, id: "test-case", version: 5 },
+  }));
+  render(<DemoConsole />);
+  await screen.findByRole("heading", { name: "Understand the problem." });
+  fireEvent.click(screen.getByRole("button", { name: "Change case" }));
+  expect(
+    screen.getByRole("heading", { name: "Choose a case" }),
+  ).toBeInTheDocument();
+  fireEvent.click(
+    screen.getByRole("button", { name: "Return to your investigation" }),
+  );
+  expect(
+    screen.getByRole("heading", { name: "Understand the problem." }),
+  ).toBeInTheDocument();
+  expect(localStorage.getItem("forge-sequential-session")).toBe("test-case");
+  expect(f.mock.calls.every(([, options]) => options.method === "GET")).toBe(
+    true,
+  );
 });

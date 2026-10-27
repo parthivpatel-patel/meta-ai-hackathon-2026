@@ -129,3 +129,7 @@ The public `/demo` product is redesigned with six functional views, a locally bu
 ## Design system 3.0 review
 
 The isolated `feature/forge-design-system-v3` branch refines the six public investigation views with local Inter and IBM Plex Mono fonts, shared design tokens and edited copy. See [design decisions and validation](docs/DESIGN_SYSTEM_V3.md) and [desktop/mobile screenshots](docs/evidence/DESIGN_V3_REVIEW.md). Live promotion still requires explicit owner approval.
+
+## FORGE 4.0 product reconstruction
+
+The `feature/forge-product-v4` branch replaces the dashboard with a case lobby and a guided six-stage investigation, locally bundled Geist typography and dedicated evidence/test/result views. Review [the three concepts](docs/PRODUCT_V4_DESIGN_REVIEW.md), [all before/after screenshots](docs/evidence/PRODUCT_V4_REVIEW.md), and [architecture, validation and safe release steps](docs/PRODUCT_V4_RELEASE.md). No live promotion occurs without explicit owner approval. This section supersedes the earlier public design-system descriptions for this branch.

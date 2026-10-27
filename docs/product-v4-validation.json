@@ -1,0 +1,379 @@
+{
+  "branch": "feature/forge-product-v4",
+  "base_commit": "ee7015b6e3e4f284e6ab5deb3cfa590017087a8c",
+  "scope": "Local public-mode synthetic product validation; not a deployment",
+  "backend_regression_tests": 179,
+  "frontend_tests": 19,
+  "typescript": "passed",
+  "production_build": "passed",
+  "legacy_desktop_mobile_v1_v2": "passed",
+  "api_workflows_v1": 4,
+  "report_formats": [
+    "html",
+    "json"
+  ],
+  "offline_replay_versions": [
+    "v1",
+    "v2",
+    "v3 desktop",
+    "v3 mobile"
+  ],
+  "evaluation_cases": {
+    "v1": 480,
+    "v2": 280,
+    "v3": 280
+  },
+  "npm_audit_known_vulnerabilities": 0,
+  "real_model_requests_sent": 0,
+  "deployment_performed": false,
+  "warnings": [
+    "Existing FastAPI TestClient/httpx deprecation warning."
+  ],
+  "limitations": [
+    "No timed first-time-user study was performed.",
+    "Automated checks do not establish full accessibility conformance.",
+    "Synthetic metrics are not evidence of real-model or industrial accuracy.",
+    "No public v4 URL is claimed. Explicit owner approval is required before promotion."
+  ],
+  "accessibility": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "choose",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "test-proposal",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "evidence",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "thermal",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "waveform",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "tests",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "results",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "report",
+      "violations": []
+    },
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "view": "missing-evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "choose",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "test-proposal",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "thermal",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "waveform",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "tests",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "results",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "report",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "view": "missing-evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "choose",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "thermal",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "waveform",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "tests",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "results",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "width": 320,
+      "view": "report",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "choose",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "thermal",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "waveform",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "tests",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "results",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "view": "report",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "choose",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "overview",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "evidence",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "thermal",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "waveform",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "tests",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "results",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "width": 430,
+      "view": "report",
+      "violations": []
+    }
+  ],
+  "final_cause_layout_recheck": [
+    {
+      "viewport": "desktop",
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-320",
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-375",
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-390",
+      "view": "possible-causes",
+      "violations": []
+    },
+    {
+      "viewport": "mobile-430",
+      "view": "possible-causes",
+      "violations": []
+    }
+  ],
+  "typography_observed": {
+    "interface": "Geist Sans",
+    "measurements": "Geist Mono",
+    "body": "16px",
+    "axes": "13px"
+  }
+}
