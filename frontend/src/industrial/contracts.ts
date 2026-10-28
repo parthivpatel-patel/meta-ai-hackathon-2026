@@ -52,6 +52,12 @@ export type Recording = {
 };
 export type Report = {
   schema: string;
+  provider?: string;
+  model_proposal?: {
+    source: "test_transport" | "meta_http_response";
+    requested_model: string;
+    returned_model: string;
+  };
   report_hash: string;
   request: {
     recipe: Recipe;
@@ -103,6 +109,24 @@ export function canonical(value: unknown): string {
       "}"
     );
   return JSON.stringify(value);
+}
+
+// Sampled, deliberately slowed rotor illustration; never a diagnostic input.
+export function rotorPhases(frames: Frame[]): (number | null)[] {
+  let angle = 0;
+  return frames.map((frame, index) => {
+    const reading = frame.readings.find((r) => r.sensor_id === "rpm");
+    const rpm = reading?.value;
+    if (rpm == null || !Number.isFinite(rpm) || reading?.quality !== "VALID") return null;
+    if (index === 0 || frame.state === "STOPPED") return angle;
+    const previous = frames[index - 1];
+    const previousReading = previous.readings.find((r) => r.sensor_id === "rpm");
+    const before = previousReading?.value;
+    if (before == null || !Number.isFinite(before) || previousReading?.quality !== "VALID") return null;
+    const dt = (Date.parse(frame.timestamp) - Date.parse(previous.timestamp)) / 1000;
+    angle = (angle + ((rpm + before) / 2) * dt * 2 * Math.PI / 60 / 600) % (2 * Math.PI);
+    return angle;
+  });
 }
 function validTimestamp(value: unknown): value is string {
   if (typeof value !== "string") return false;

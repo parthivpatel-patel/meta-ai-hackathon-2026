@@ -1,0 +1,23 @@
+# Distinct adversarial engineering review
+
+This is a separate review pass by the same implementation agent, not an external independent audit or industrial certification. Final measurements and findings are in `validation.json` and the handoff.
+
+Reviewed boundaries: actual serialized request contents; indirect label leakage; model identity and output/reference validation; proposal-versus-verifier independence; repeated clicks and stale asynchronous responses; imported provenance; bounded files/requests; HTML escaping; public access; private output permissions; budgets/deadlines; dependency/credential scans; rendering cleanup and fallback; old-report compatibility.
+
+Controls and resolved findings:
+
+- HIGH: a model integration must not become an anonymous credit proxy. All new HTTP routes perform only preparation/replay/one confirmed numerical advance/export. No inference route/provider initialization exists there. Eventual live execution is a separate private CLI with explicit owner/account/smoke gates, one request and zero retries.
+- HIGH: model input must not reuse the full reproducible report, which contains recipes and trial/oracle evidence. The actual wire request uses a new allow-listed observed-only feature object. Tests inspect serialized request content and hold observations fixed while changing private recipe labels/seeds to check indirect leakage.
+- HIGH: imported provider fields cannot authenticate genuine use. Source labels remain fixture or recorded-unattested; no imported document enables verified access, active attribution or calls. Public receipts whitelist fields and omit operational diagnostics/usage. Digests establish reproduction consistency, not identity.
+- HIGH: model text cannot determine its own support. Existing experiment selection and numerical decisions are unchanged; a deliberately wrong fixture still yields the independent baseline decision. Every advance replays prior evidence and preserves the original proposal/capture.
+- MEDIUM: notification-only limits do not prevent charges. Smoke, evaluation and workstation preflights now require separate confirmation of enforced provider stopping behavior. This remains an owner attestation; no account capability is assumed or tested.
+- MEDIUM: the nonexistent `FORGE_INFERENCE_KEY` alias could be ignored ambiguously. Nonempty use now fails closed; canonical/generic credential conflicts remain rejected without values in errors.
+- MEDIUM: new asynchronous preparation/diagnosis needed duplicate-operation and stale-response guards. Synchronous in-flight state and captured abort-controller checks preserve the prior report; browser refresh/unmount and repeated-click checks exercise cancellation. No uncertain provider operation is retried.
+- MEDIUM: offline stat-before-read alone is not a sufficient byte bound. Industrial JSON reads now reject symlinks/nonregular files and read at most 1 MiB plus one byte. Exclusive 0600 outputs are reserved before any eventual call.
+- Validation correction: the full API test initially reused another test's public quota. It now uses a distinct test client address while retaining all established limits; no production quota was raised. A payload-key test was corrected to distinguish an actual `diagnostics` field from the explanatory limitation text.
+- MEDIUM: deprecated OpenAI-compatible `function_call` envelopes could accompany otherwise valid JSON with a stop reason. The adapter now rejects them alongside modern tool calls; a new local-transport case verifies one attempt, no fallback and no raw-body disclosure.
+- Resource boundary: only disposable prior build cache and completed own acceptance containers may be removed. Source, prior evidence and production state are preserved. Docker uses the managed proxy/CA with TLS verification enabled.
+
+The new rationale screen rejects selected URL/code/control forms, but security does not depend on classifying arbitrary prose: narratives are escaped inert text and can never introduce an executable action, endpoint, physical command or verifier override. Provider HTTP status and safely bounded diagnostics remain private even when later semantic validation rejects an otherwise schema-valid response. Missing usage stays unknown. Failure does not synthesize model findings or silently fall back to rules.
+
+Remaining limits: same-agent review; no genuine response/account billing verification; no authenticated external-source signature; anonymous synthetic demo; ephemeral storage; fixed synthetic panels; sampled slow rotor illustration; no calibrated physics/hardware safety or physical assistive-device testing. No production-readiness claim follows from passing tests.

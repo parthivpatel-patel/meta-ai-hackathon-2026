@@ -1,0 +1,7 @@
+normal passed
+bearing passed
+misalignment passed
+cavitation passed
+pressure_sensor passed
+thermal passed
+process passed

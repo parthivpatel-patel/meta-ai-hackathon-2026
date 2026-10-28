@@ -34,7 +34,7 @@ def config(**kwargs):
 
 
 ACTIVATED = ActivationSettings(
-    credits_approved=True, card_free_entitlement_confirmed=True
+    credits_approved=True, card_free_entitlement_confirmed=True, provider_spending_limit_confirmed=True
 )
 
 

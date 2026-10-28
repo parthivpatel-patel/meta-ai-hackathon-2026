@@ -1,0 +1,122 @@
+{
+  "mobile": [
+    {
+      "width": 320,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 375,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 430,
+      "touch": true,
+      "violations": 0
+    }
+  ],
+  "lifecycle": {
+    "camera_raf_cadence_ms": [
+      2.199999999254942,
+      22.200000001117587,
+      55,
+      3.599999999627471,
+      20.40000000037253,
+      27.799999998882413,
+      18.700000001117587,
+      32.79999999888241,
+      22,
+      57.5,
+      44.30000000074506,
+      14,
+      62.09999999962747,
+      15.5,
+      82.20000000111759,
+      34.59999999962747,
+      32.79999999888241,
+      36.70000000111759,
+      29.799999998882413,
+      28.300000000745058,
+      72.40000000037253,
+      25,
+      21.199999999254942,
+      35.59999999962747,
+      11.100000001490116,
+      23.199999999254942,
+      18.5,
+      32.19999999925494,
+      19.90000000037253,
+      34.5,
+      20.40000000037253,
+      33.59999999962747,
+      22.90000000037253,
+      23.800000000745058,
+      23,
+      38.69999999925494,
+      18.300000000745058,
+      22.699999999254942,
+      20.5,
+      33.19999999925494,
+      29.300000000745058,
+      26.5,
+      33.90000000037253,
+      22.199999999254942,
+      20.40000000037253,
+      22.40000000037253,
+      39,
+      23.199999999254942,
+      29.09999999962747,
+      22.100000001490116,
+      34.79999999888241,
+      32.5,
+      24.200000001117587,
+      45.79999999888241,
+      23.40000000037253,
+      26.59999999962747,
+      55.40000000037253,
+      12.099999999627471,
+      28.5,
+      48.09999999962747
+    ],
+    "telemetry_ui_updates": [
+      {
+        "elapsed_ms": 512.2000000011176,
+        "sequence": 8
+      },
+      {
+        "elapsed_ms": 997.6000000014901,
+        "sequence": 16
+      },
+      {
+        "elapsed_ms": 1512.7000000011176,
+        "sequence": 24
+      }
+    ],
+    "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
+    "heap_before": 5510520,
+    "heap_after": 7872256,
+    "mount_unmount_cycles": 5,
+    "component_changes": 60,
+    "keyboard_camera_activation": true,
+    "pointer_orbit_wheel_no_accidental_selection": true,
+    "reduced_motion": true,
+    "synthetic_visibility_pause": true,
+    "context_loss_recovery": true,
+    "manual_2d_and_3d_recovery": true,
+    "gpu": {
+      "engine": "three.js r180",
+      "drawCalls": "32",
+      "triangles": "4540",
+      "rotorPhase": "0",
+      "reducedMotion": "true"
+    },
+    "short_import_reset": true
+  },
+  "controls": {
+    "repair_response": true,
+    "shutdown_reaches_stopped": true,
+    "offline_load_preserves_recording": true,
+    "reconnect_reset": true
+  }
+}

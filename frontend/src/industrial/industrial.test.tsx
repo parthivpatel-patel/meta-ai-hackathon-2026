@@ -4,6 +4,7 @@ import {
   validateRecording,
   parseCSV,
   canonical,
+  rotorPhases,
   type Sensor,
   type Component,
   type Frame,
@@ -12,6 +13,20 @@ import { Machine } from "./Machine";
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
+});
+
+it("derives slowed rotor phase from acquisition time/RPM and freezes stopped states", () => {
+  const frames: Frame[] = [0, 1, 2].map((sequence) => ({
+    sequence, timestamp: `2026-10-27T08:00:0${sequence}Z`, state: sequence === 2 ? "STOPPED" : "RUNNING", source: "SIMULATED",
+    readings: [{ sensor_id: "rpm", value: 3000, quality: "VALID" }],
+  }));
+  const phases = rotorPhases(frames);
+  expect(phases[1]).toBeCloseTo(Math.PI / 6);
+  expect(phases[2]).toBe(phases[1]);
+  frames[1].readings[0].value = null;
+  expect(rotorPhases(frames)[1]).toBeNull();
+  frames[1].readings[0] = { sensor_id: "rpm", value: 8000, quality: "OUT_OF_RANGE" };
+  expect(rotorPhases(frames)[1]).toBeNull();
 });
 const sensors: Sensor[] = [
   { id: "vibration", component_id: "bearing", unit: "mm/s", range: [0, 30] },

@@ -1,0 +1,18 @@
+{
+  "schema": "forge-phase5-bounded-credential-review-1",
+  "checked_utc": "2026-10-28T00:40:36.301914+00:00",
+  "text_inputs_scanned": 142,
+  "bytes_scanned": 4903345,
+  "patterns": [
+    "private_key",
+    "github_token",
+    "aws_access_key",
+    "huggingface_token",
+    "openai_token",
+    "literal_authorization",
+    "literal_baseten_assignment"
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Final changed text/outputs, compiled frontend text and own saved local test-container logs. Known synthetic refusal/transport key fixtures excluded. No environment dump or credential/secret-file value inspected. Bounded pattern/source review is not a comprehensive guarantee."
+}

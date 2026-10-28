@@ -1,0 +1,9 @@
+{
+  "changed_runtime_files_since_full_public_browser_matrix": [
+    "backend/forge/phase2/inference.py"
+  ],
+  "change": "Reject deprecated function_call envelopes in the private adapter; no HTTP inference path or shared API/graphics behavior changed",
+  "final_backend_suite": 265,
+  "full_public_browser_image": "sha256:8cdc500a5eb93566b8802735bff435cd995fd1138ed97338e7eb588d57aa8207",
+  "scope": "Final model journey and container audit rerun on final image; all other backend HTTP handlers and frontend asset bytes identical"
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "forge-phase5-validation-1",
+  "checked_utc": "2026-10-28T00:18:05.504371+00:00",
+  "client_timezone": "America/New_York",
+  "repository": "parthivpatel-patel/meta-ai-hackathon-2026",
+  "branch": "feature/forge-meta-final-integration",
+  "base_commit": "0a26fea0d7336607c1fb70aa56be0642dab0e1df",
+  "final_commit_identity": "Final handoff/Git branch ref; no self-referential commit field invented",
+  "baseline": {
+    "backend_tests": 234,
+    "frontend_tests": 32,
+    "synthetic_cases": 1061,
+    "rerun_before_major_changes": true
+  },
+  "tests": {
+    "backend_passed": 265,
+    "frontend_passed": 39,
+    "test_typescript": "passed",
+    "production_build": "passed",
+    "new_backend_ruff": "passed",
+    "warnings": [
+      "Existing Starlette/httpx TestClient deprecation",
+      "Vite large lazy chunk advisory"
+    ]
+  },
+  "browser": {
+    "machine_cases": 7,
+    "legacy_cases": 7,
+    "recorded_fixture_journeys": 2,
+    "axe_views": 127,
+    "axe_violations": 0,
+    "performance_only_entries_excluded": 5,
+    "widths": [
+      1440,
+      390,
+      320,
+      375,
+      430
+    ],
+    "recorded_source": "test_transport, never genuine",
+    "duplicate_prepare_and_experiment_clicks": "bounded and asserted",
+    "pending_refresh": "aborted; no stale state or automatic request reissue",
+    "html_json_exports_and_tamper_preservation": "passed",
+    "real_api_responses": true,
+    "screen_reader_and_physical_mobile": "not tested",
+    "visual_review": "Recorded competing-proposal desktop and mobile fallback screenshots inspected; source/uncertainty visible",
+    "full_machine_legacy_matrix_image": "sha256:8cdc500a5eb93566b8802735bff435cd995fd1138ed97338e7eb588d57aa8207",
+    "final_model_journey_image": "sha256:69170bb0333fb33a05213bba2282131a605ed0c7077f30db50f14df9a54a8a55",
+    "final_runtime_delta": "Only private adapter function_call rejection guard; all HTTP handler/frontend asset hashes unchanged. See evidence/final-runtime-delta.json."
+  },
+  "reports": {
+    "offline_replays": 18,
+    "machine_html_byte_matches": 7,
+    "recorded_fixture_final_html_byte_match": 1,
+    "original_submission_fixture_json_bytes_unchanged": 2,
+    "source_authentication": "Not established by report replay; recorded model claims explicitly unattested"
+  },
+  "numerical_evaluation": {
+    "existing_cases": 1061,
+    "coupled_metrics": {
+      "cases": 21,
+      "accepted_exact": {
+        "numerator": 15,
+        "denominator": 15
+      },
+      "coverage": {
+        "numerator": 15,
+        "denominator": 21
+      },
+      "all_finding_precision": {
+        "numerator": 18,
+        "denominator": 18
+      },
+      "exact_agreement": {
+        "numerator": 18,
+        "denominator": 21
+      },
+      "replay_consistency": "21/21",
+      "inconclusive": 6
+    },
+    "sequential_metrics": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 25.657,
+      "latency_ms_p95": 46.043650000000014,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "local_model_fixture_comparisons": 7,
+    "fixture_decisions_match_baseline": "7/7",
+    "genuine_model_accuracy": "not measured",
+    "genuine_six_case_evaluation": "fixed, dry only, unexecuted"
+  },
+  "docker": {
+    "image_id": "sha256:69170bb0333fb33a05213bba2282131a605ed0c7077f30db50f14df9a54a8a55",
+    "actual_build": "passed",
+    "source_asset_files_compared": 75,
+    "uid": 10001,
+    "restricted_container_audit": "32 HTTP checks and credential-bearing public-start refusal passed",
+    "limits": "Read-only root, bounded tmpfs,512MiB,one CPU,cap-drop ALL,no-new-privileges",
+    "candidate_public_https_verified": false
+  },
+  "security": {
+    "npm_known_findings": 0,
+    "python_known_findings": 0,
+    "secret_review": "See security-scan.json for final bounded staged/build/log scan; not a guarantee",
+    "review": "Distinct same-agent adversarial pass, not external independent certification",
+    "known_unresolved_critical": 0,
+    "known_unresolved_high": 0
+  },
+  "genuine_inference": {
+    "requests_sent": 0,
+    "authorization": "Explicitly forbidden under Phase 5; future runs separately approved",
+    "owner_credential_report": "configured, not inspected or tested",
+    "private_endpoint": "https://inference.baseten.co/v1/chat/completions",
+    "exact_model": "meta-models/muse-spark-open-1026",
+    "alias_entitlement": "owner-supplied, account/authenticated guide unverified",
+    "public_http_inference": "No endpoint; never permitted",
+    "provider_enforced_stopping_and_card_free_entitlement": "not verified for owner account",
+    "private_receipts": "not included in repository"
+  },
+  "performance": {
+    "scope": "Single warm local runs with actual API-backed Chromium journeys, concurrent local tests, software SwiftShader or explicit no-WebGL, loopback public containers at one CPU/512MiB. Not public cold-start, physical mobile, hardware presentation FPS or a retained-leak guarantee.",
+    "workstation_controls_ready_ms": {
+      "min": 955,
+      "median": 999,
+      "max": 1562,
+      "samples": 7,
+      "scope": "page.goto to component selector; graphics availability asserted next, not LCP"
+    },
+    "machine_experiment_ui_ms": {
+      "median": 159.0,
+      "p95": 263.25,
+      "samples": 16,
+      "scope": "Click through response including automation/network/render overhead"
+    },
+    "recorded_fixture_journey": {
+      "capture_ms": 171,
+      "experiment_ms": [
+        332,
+        407
+      ],
+      "export_ms": {
+        "JSON": 68,
+        "HTML": 227
+      }
+    },
+    "rotor": {
+      "source": "Sampled observed RPM/time, slowed by 600; no wall-clock loop",
+      "play_pause_coherence": "asserted in six WebGL machine cases; seventh uses disabled WebGL",
+      "missing_invalid_or_counterfactual_phase": "unavailable",
+      "reduced_motion": "holds still"
+    },
+    "telemetry_inter_update_ms": [
+      485.4,
+      515.1
+    ],
+    "camera_raf_cadence_ms": {
+      "median": 26.549999999813735,
+      "p95": 57.73,
+      "samples": 60,
+      "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS"
+    },
+    "heap_bytes": {
+      "before": 5510520,
+      "after": 7872256,
+      "delta": 2361736,
+      "gc_assisted_view_cycles": 5,
+      "scope": "Includes lazy library loading/context recovery; not leak proof"
+    },
+    "gpu": {
+      "engine": "three.js r180",
+      "drawCalls": "32",
+      "triangles": "4540",
+      "rotorPhase": "0",
+      "reducedMotion": "true"
+    },
+    "javascript_chunks": [
+      {
+        "file": "assets/App-BaiK9ynr.js",
+        "bytes": 27935,
+        "gzip_level9_bytes": 8317
+      },
+      {
+        "file": "assets/Workstation-CYhWahhk.js",
+        "bytes": 532613,
+        "gzip_level9_bytes": 135518
+      },
+      {
+        "file": "assets/index-jJsIP7wY.js",
+        "bytes": 276228,
+        "gzip_level9_bytes": 85186
+      }
+    ],
+    "mesh_asset_bytes": 0,
+    "component_selection_ui_ms": {
+      "median": 17.5,
+      "p95": 36.85,
+      "samples": 30,
+      "scope": "Selection through matching inspector heading includes browser-automation/CDP/render overhead; not hardware input latency or presentation FPS. No diagnostic/model requests."
+    }
+  },
+  "eligibility": "OPEN ELIGIBILITY QUESTION; original Git history and timing inventory unchanged",
+  "protected_refs": {
+    "main": "4f8c522b05ae3f64cb2871b8fe4601a9fe2e20e3",
+    "deployment/judge-access": "5e2ad425b4a0f5781917020460f280f9b73c9179"
+  },
+  "not_performed": [
+    "merge",
+    "deployment",
+    "paid service",
+    "genuine inference",
+    "organizer contact",
+    "submission",
+    "history rewrite"
+  ],
+  "recommendation": "GO FOR REVIEW of prepared integration; NO-GO for genuine Meta submission/deployment claims until separate owner gates are met"
+}

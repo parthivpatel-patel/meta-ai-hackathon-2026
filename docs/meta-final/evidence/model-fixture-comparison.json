@@ -1,0 +1,90 @@
+{
+  "schema": "forge-model-fixture-comparison-1",
+  "cases": [
+    {
+      "scenario": "normal",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "normal"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "bearing",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "process-vibration"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "misalignment",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "INCONCLUSIVE",
+      "findings": [
+        "process-vibration"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "cavitation",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "INCONCLUSIVE",
+      "findings": [],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "pressure_sensor",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "sensor-pressure"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "thermal",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "process-temperature"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    },
+    {
+      "scenario": "process",
+      "source": "test_transport",
+      "decision_matches_independent_baseline": true,
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "process-pressure"
+      ],
+      "local_transport_attempts": 1,
+      "genuine_requests": 0,
+      "replay": true
+    }
+  ],
+  "matched_decisions": "7/7",
+  "genuine_requests": 0,
+  "limitation": "Deliberately fallible fixed local hypotheses. Checks integration/verification independence, not genuine model accuracy or improvement. The separate six-case genuine evaluation remains unexecuted."
+}

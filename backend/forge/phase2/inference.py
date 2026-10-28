@@ -57,6 +57,9 @@ class TransportSettings(BaseSettings):
     event_api_key: SecretStr | None = Field(
         default=None, validation_alias="BASETEN_API_KEY", repr=False, exclude=True
     )
+    unsupported_legacy_key: SecretStr | None = Field(
+        default=None, validation_alias="FORGE_INFERENCE_KEY", repr=False, exclude=True
+    )
     validated_smoke_path: Path | None = Field(default=None, repr=False, exclude=True)
     thermal_images: bool = False
     enabled: bool = False
@@ -70,6 +73,10 @@ class TransportSettings(BaseSettings):
 
     @model_validator(mode="after")
     def secure_endpoint(self):
+        if self.unsupported_legacy_key and self.unsupported_legacy_key.get_secret_value():
+            raise ValueError(
+                "FORGE_INFERENCE_KEY is not a supported credential contract; configure the protected provider-specific key"
+            )
         if self.thermal_images and (
             self.provider != "baseten" or self.model_id != EVENT_MODEL_ID
         ):
@@ -382,7 +389,7 @@ class ChatProvider:
                 choice = data["choices"][0]
                 if choice.get("finish_reason") != "stop" or choice["message"].get(
                     "tool_calls"
-                ):
+                ) or choice["message"].get("function_call"):
                     raise ProviderError(
                         "Incomplete or tool-bearing output was rejected"
                     )

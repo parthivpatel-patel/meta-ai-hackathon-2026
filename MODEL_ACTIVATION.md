@@ -1,17 +1,17 @@
 # Controlled genuine Meta activation
 
-**Current gate:** the replacement protected key is pending. No genuine Meta inference has run in this environment. Earlier text authorizing an automatic test when a key appeared is superseded: **obtain fresh explicit owner authorization before every real smoke, evaluation or follow-up inference run.** Promotional credits are authorized for controlled testing only after availability and spending safeguards are confirmed.
+**Current gate:** the owner reports a protected Baseten key configured; its value and account entitlement remain unverified by this work. No genuine Meta inference has run in this environment. Earlier text authorizing an automatic test when a key appeared is superseded: **obtain fresh explicit owner authorization before every real smoke, evaluation or follow-up inference run.** Promotional credits are authorized for controlled testing only after availability and spending safeguards are confirmed.
 
 ## Before requesting authorization
 
 1. The owner confirms selection and $100 promotional Baseten credits, but the **current remaining balance, card-free entitlement, model access and enforced stopping policy must be checked in the actual account**. No payment method, paid subscription or GPU deployment is allowed. The provider's notification-only budget is not sufficient; confirm enforced Model API limits/no paid fallback. Local request counters and reservation units do not prove billing limits.
-2. Configure `BASETEN_API_KEY` through protected environment settings, scoped only to `inference.baseten.co`. Never send it in chat, commit it, print it or put it into frontend/public Render settings. Do not repeatedly probe authentication while the replacement key is pending.
+2. Configure `BASETEN_API_KEY` through protected environment settings, scoped only to `inference.baseten.co`. Never send it in chat, commit it, print it or put it into frontend/public Render settings. A configured key alone never authorizes a probe.
 3. Target only `meta-models/muse-spark-open-1026` at `https://inference.baseten.co/v1/chat/completions`. No public alias substitution. The participant confirms this restricted event identifier; final authenticated rules/account access still need owner review.
 4. Use a trusted private/local owner runtime. Keep public Render credential-free, inference disabled and request budget zero. The public launcher refuses inference credentials. Check the official model license/Usage Policy and required **“Built with Muse Spark Open”** attribution before actual service use; the full license/terms links are in `docs/META_INTEGRATION.md`.
 
 ## First bounded request
 
-Review `deploy/smoke.env.example`; it contains no credential. Use one request, no retries, maximum 1024 output tokens, reservation 8192 (or up to 16384), per-attempt 15s and total deadline at most 30s. Keep native thermal false. Enable the credit/free-access attestations only after owner verification and explicit authorization.
+Review `deploy/smoke.env.example`; it contains no credential. Use one request, no retries, maximum 1024 output tokens, reservation 8192 (or up to 16384), per-attempt 15s and total deadline at most 30s. Keep native thermal false. Enable credit/free-access and `FORGE_SMOKE_PROVIDER_SPENDING_LIMIT_CONFIRMED` attestations only after owner verification of enforced stopping behavior and explicit authorization.
 
 From `backend`, first run the zero-request preflight:
 
@@ -49,3 +49,7 @@ The suite stops at its first failed model arm; it does not substitute rules outp
 Use the genuine receipt and a separately authorized request budget only in the trusted owner runtime. A configured key or fixture is not authenticated access. The exact event model supports a prepared native thermal PNG path, but its actual acceptance/interpretation has not been tested. Require separate authorization, `FORGE_INFERENCE_THERMAL_IMAGES=true` and, for the suite, `FORGE_EVALUATION_NATIVE_THERMAL_AUTHORIZED=true`. Keep numerical and native-image results separate.
 
 No native audio path is implemented. The vibration evidence is measured in mm/s and processed by RMS/FFT; converting it into purported audio would misrepresent the evidence.
+
+## Phase 5 workstation pathway
+
+See [credential roles and exact request gates](docs/meta-final/ACTIVATION.md). `FORGE_INFERENCE_KEY` is not a supported alias and now fails closed when nonempty; conflicting canonical/generic sources remain rejected. The private workstation CLI requires a genuine smoke receipt and separate `FORGE_WORKSTATION_OWNER_AUTHORIZED` approval. Public HTTP endpoints only prepare/replay/advance numeric evidence and never call a model. No genuine call is authorized by the Phase 5 directive.

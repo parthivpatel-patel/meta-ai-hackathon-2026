@@ -1,0 +1,78 @@
+{
+  "checked_utc": "2026-10-27T23:38:08.212897+00:00",
+  "sources": [
+    {
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon",
+      "status": 200,
+      "redirect": null,
+      "sha256": "0a93ce6aa13d10c64bd4f6b4ba244e6217874437c6d46d02dd7d5498a455ad9b",
+      "bytes": 219748,
+      "truncated": false,
+      "snippets": [
+        "ing $100 in credits and 2M TPM rate limits to select participants to use Meta's open-weights models. Modal is offering $100 in credits to select participants to use Meta's open-weights models through Endpoints in addition to their serverless GPUs, sandboxes, and tools for LLM training. Fire",
+        "rk series, Muse Wonder, Muse Image and SAM 3.1 through Meta Model API, run Meta open weights models, and code faster with Muse Code coding agent. Bring a problem you know firsthand, or an idea that feels out of reach. Build it with the models, learn from the Meta team and partners in live wo",
+        "nd Event Waiver Official Rules will be published before the Hackathon begins on October 26, 2026 and must be accepted by the selected participants.\",\"url\":\"https://cerebralvalley.ai/e/meta-ai-developer-hackathon\",\"startDate\":\"2026-10-26T17:00:00.000Z\",\"endDate\":\"2026-11-05T02:00:00.000Z\",\""
+      ]
+    },
+    {
+      "url": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
+      "status": 200,
+      "redirect": null,
+      "sha256": "2e37e789f36e90d97a760122ed4e8250fbab0cd1b7e29ab28be69fa62f8a6e94",
+      "bytes": 206710,
+      "truncated": false,
+      "snippets": [
+        "ing $100 in credits and 2M TPM rate limits to select participants to use Meta's open-weights models. Modal is offering $100 in credits to select participants to use Meta's open-weights models through Endpoints in addition to their serverless GPUs, sandboxes, and tools for LLM training. Fire",
+        "rk series, Muse Wonder, Muse Image and SAM 3.1 through Meta Model API, run Meta open weights models, and code faster with Muse Code coding agent. Bring a problem you know firsthand, or an idea that feels out of reach. Build it with the models, learn from the Meta team and partners in live wo",
+        "nd Event Waiver Official Rules will be published before the Hackathon begins on October 26, 2026 and must be accepted by the selected participants.\",\"url\":\"https://cerebralvalley.ai/e/meta-ai-developer-hackathon\",\"startDate\":\"2026-10-26T17:00:00.000Z\",\"endDate\":\"2026-11-05T02:00:00.000Z\",\""
+      ]
+    },
+    {
+      "url": "https://dev.meta.ai/events/global-hackathon",
+      "status": 200,
+      "redirect": null,
+      "sha256": "23a8337d3baa8071a4bde8d1b05895924c727cbb09bbe3db89e64f12c1452616",
+      "bytes": 258356,
+      "truncated": false,
+      "snippets": [
+        " the Muse Spark series, Muse Image and SAM 3.1 through Meta Model API, run Meta open weights models, and code faster with Muse Code agentic coding agent. Bring a problem you know firsthand, or an idea that feels out of reach. Build it with the models, learn from the Meta team and partners in",
+        "ng:content-box} Official Rules will be published before the Hackathon begins on October 26, 2026 and must be accepted by the selected participants. .cms-viewport-sbqfsi{width:100%;height:16px;box-sizing:content-box} .cms-viewport-1c71vev{display:flex;flex-direction:column;align-items:cente"
+      ]
+    },
+    {
+      "url": "https://docs.baseten.co/organization/billing",
+      "status": 200,
+      "redirect": null,
+      "sha256": "31f745a28e31aab65da0749787464d6aac251165f0791331c78dd64e970ec7e7",
+      "bytes": 355783,
+      "truncated": false,
+      "snippets": [
+        "p usage. You remain responsible for costs above the configured amount. Enabling Enforce budget rejects Model API requests after spend reaches the budget. Access returns at the start of the next month, when you raise the budget above current spend, or when you remove the budget or disable enfor",
+        " credits, and invoices for your workspace. Copy page Copy page Manage workspace payment methods, credits, invoices, budgets, and usage from the billing and usage dashboard . Baseten updates deployment usage hourly. For organizations with teams, usage is aggregated at the organization level and"
+      ]
+    },
+    {
+      "url": "https://www.baseten.co/library/muse-spark-open/",
+      "status": 200,
+      "redirect": null,
+      "sha256": "22848a5344f83c5ce1d70b0ee052a605d917a50297453b4fe152c386cfeb3a85",
+      "bytes": 323121,
+      "truncated": false,
+      "snippets": [
+        ".org\",\"@type\":\"Article\",\"headline\":\"Muse Spark Open\",\"description\":\"Meta's 816B open-weight MoE model for coding agents, with hybrid attention for high throughput and long context.\",\"image\":\"https://www.datocms-assets.com/104802/1786395649-meta_ai_logo-2026-svg.webp?auto=compress%2Cformat&f",
+        "SETEN_API_KEY\" ], 7 ) 8 9 response = client.chat.completions.create( 10 model= \"meta-models/muse-spark-open\" , 11 messages=[ 12 { 13 \"role\" : \"developer\" , 14 \"content\" : \"You are a senior backend engineer reviewing pull requests. For each code snippet the user shares, respond with: 1) a one-lin"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/resolve/main/LICENSE.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "458a5c57d8e622e395eb0e59799ba5bba1ea7524ffd120ee6e3018688d7d6ace",
+      "bytes": 8299,
+      "truncated": false,
+      "snippets": [
+        "cense and attached hereto as Exhibit A. 2\\. Licensee shall prominently display \"Built with Muse Spark Open\" in the user interface of each product or service that uses the Software or any Derivatives, or in the accompanying documentation, website, or settings menu. \u201cDerivatives\u201d means any AI mod"
+      ]
+    }
+  ]
+}

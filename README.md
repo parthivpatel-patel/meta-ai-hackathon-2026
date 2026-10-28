@@ -2,7 +2,7 @@
 
 FORGE investigates abnormal equipment measurements by comparing possible causes, running controlled diagnostic tests and independently checking the results. The demonstration uses simulated industrial telemetry; it does not establish failures in real equipment.
 
-**[Open the public demonstration](https://forge-judge.onrender.com/demo)** · [Workstation guide](docs/industrial/README.md) · [Documentation](docs/README.md)
+**[Open the public demonstration](https://forge-judge.onrender.com/demo)** · [Workstation and model-pathway guide](docs/meta-final/README.md) · [Documentation](docs/README.md)
 
 The candidate workstation at `/demo` connects a selectable 3D pump and motor to coupled synthetic telemetry, diagnostic captures, counterfactual tests and independently checked results. Use **Investigation library** (`/demo?view=investigations`) for the preserved seven-case, six-stage workflow. The public URL may still run the earlier release; this branch has not been deployed.
 
@@ -15,11 +15,11 @@ The candidate workstation at `/demo` connects a selectable 3D pump and motor to 
 - Explicit uncertainty, source labels and synthetic ground truth.
 - JSON/HTML reports with offline numerical replay.
 
-The public demo uses **rules-based proposals, not Meta inference**. A protected Baseten adapter is prepared for `meta-models/muse-spark-open-1026`; genuine inference has not been verified. The owner reports a configured credential; confirmed card-free entitlement, exact target and separate explicit authorization remain required before a controlled test. Provider credentials must never be added to the public server.
+The public demo uses **rules-based proposals, not live Meta inference**. The candidate can also replay explicitly labeled recorded proposals; fixture imports are never presented as genuine inference. A protected Baseten adapter is prepared for `meta-models/muse-spark-open-1026`; genuine inference has not been verified. The owner reports a configured credential; confirmed card-free entitlement, exact target and separate explicit authorization remain required before a controlled test. Provider credentials must never be added to the public server.
 
 ## Architecture
 
-A modular Python/FastAPI monolith uses Pydantic validation, NumPy/SciPy analysis and SQLite session storage. React, TypeScript, Vite and locally bundled Three.js provide the workstation and preserved guided interface. The hypothesis provider, experiment policy and numerical verifier have separate contracts. [Architecture](ARCHITECTURE.md) and the [workstation architecture](docs/industrial/ARCHITECTURE.md) explain the implementation and its limits.
+A modular Python/FastAPI monolith uses Pydantic validation, NumPy/SciPy analysis and SQLite session storage. React, TypeScript, Vite and locally bundled Three.js provide the workstation and preserved guided interface. The hypothesis provider, experiment policy and numerical verifier have separate contracts. [Architecture](ARCHITECTURE.md) and the [model integration architecture](docs/meta-final/ARCHITECTURE.md) explain the implementation and its limits.
 
 ## Run locally
 
@@ -66,11 +66,11 @@ uv run --frozen python -m forge.industrial.replay /path/to/report.json
 uv run --frozen python -m forge.phase3.replay /path/to/report.json
 ```
 
-The [current validation evidence](docs/industrial/validation.json) records 234 backend tests, 32 frontend tests, seven machine journeys plus the preserved seven library journeys, browser lifecycle/fallback checks and synthetic evaluation. See the [evidence guide](docs/industrial/TEST_EVIDENCE.md) for exact scopes, accessibility measurements and reproduction. These checks do not certify industrial accuracy or complete accessibility.
+The [current validation evidence](docs/meta-final/validation.json) records expanded backend/frontend tests, machine and recorded-proposal browser journeys, preserved library regression, numerical evaluation, accessibility and production/security checks. See the [reproduction guide](docs/meta-final/VALIDATION.md) for exact commands and scopes. Baseline workstation evidence remains preserved under `docs/industrial/`. These checks do not certify industrial accuracy or complete accessibility.
 
 ## Public demo and release limits
 
-The owner reports commit `0107579414f20e46d3919fcffbaf979fcb5296a9` deployed at the public URL. This workstation branch is a separate candidate and has not been deployed. Render Free can sleep when idle and lose SQLite state on spin-down, restart or deployment. Export JSON/HTML reports before relying on a session; keep a recorded demonstration independently. Availability through November 18 is a target, not a guarantee.
+The owner reports commit `0107579414f20e46d3919fcffbaf979fcb5296a9` deployed at the public URL. This Phase 5 integration branch is a separate candidate and has not been deployed. Render Free can sleep when idle and lose SQLite state on spin-down, restart or deployment. Export JSON/HTML reports before relying on a session; keep a recorded demonstration independently. Availability through November 18 is a target, not a guarantee.
 
 The equipment geometry and sensor locations are illustrative. Thermal/waveform evidence is descriptive context, not verified model vision/audio or physical causal proof. Public mode exposes bounded synthetic workflows, has no per-user account isolation and must not hold sensitive industrial data.
 

@@ -64,6 +64,7 @@ const fs = require("node:fs");
       if (scenario === "cavitation")
         await page.getByText("2D inspection mode", { exact: true }).waitFor();
       else await page.locator("canvas").waitFor();
+      const phaseBefore = scenario === "cavitation" ? null : await page.locator("canvas").getAttribute("data-rotor-phase");
       const checks = [];
       async function capture(name) {
         const a = await new AxeBuilder({ page })
@@ -93,6 +94,12 @@ const fs = require("node:fs");
         .click();
       await page.waitForTimeout(1100);
       await page.getByRole("button", { name: "Pause", exact: true }).click();
+      if (phaseBefore !== null) {
+        const phaseAfter = await page.locator("canvas").getAttribute("data-rotor-phase");
+        if (phaseAfter === phaseBefore || phaseAfter === "unavailable") throw Error("Rotor phase did not follow recorded RPM");
+        await page.waitForTimeout(600);
+        if (await page.locator("canvas").getAttribute("data-rotor-phase") !== phaseAfter) throw Error("Paused rotor continued changing");
+      }
       if (
         Number(
           await page

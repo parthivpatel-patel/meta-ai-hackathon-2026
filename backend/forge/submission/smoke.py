@@ -24,12 +24,14 @@ class ActivationSettings(BaseSettings):
     )
     credits_approved: bool = False
     card_free_entitlement_confirmed: bool = False
+    provider_spending_limit_confirmed: bool = False
 
 
 def preflight(settings: TransportSettings, activation: ActivationSettings) -> dict:
     blockers = []
     for passed, code in [
         (activation.credits_approved, "approved_credits_unconfirmed"),
+        (activation.provider_spending_limit_confirmed, "provider_enforced_spending_limit_unconfirmed"),
         (
             activation.card_free_entitlement_confirmed,
             "card_free_entitlement_unconfirmed",

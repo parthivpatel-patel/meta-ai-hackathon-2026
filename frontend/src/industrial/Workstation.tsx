@@ -1,6 +1,7 @@
 import {
   Component as ReactComponent,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
@@ -12,11 +13,13 @@ import {
   testName,
 } from "../investigation/presentation";
 import { Machine } from "./Machine";
+import { ModelPanel } from "./ModelPanel";
 import {
   canonical,
   parseCSV,
   validateRecording,
   validateSimulation,
+  rotorPhases,
   type Recording,
   type Frame,
   type Recipe,
@@ -80,6 +83,8 @@ export default function Workstation() {
   const [busy, setBusy] = useState(false);
   const [replayed, setReplayed] = useState(false);
   const [report, setReport] = useState<Report | null>(null);
+  const [preparedHash, setPreparedHash] = useState("");
+  const inFlight = useRef(false);
   const [graphics2D, setGraphics2D] = useState(false);
   const [preview, setPreview] = useState<Frame | null>(null);
   const [tab, setTab] = useState("Overview");
@@ -118,6 +123,7 @@ export default function Workstation() {
     request.current?.abort();
     const abort = new AbortController();
     request.current = abort;
+    inFlight.current = false;
     setBusy(true);
     setError("");
     setPlaying(false);
@@ -132,6 +138,7 @@ export default function Workstation() {
       setRecipe(next);
       setCursor(0);
       setReport(null);
+      setPreparedHash("");
       setPreview(null);
       setReplayed(false);
       setImportHash("");
@@ -174,6 +181,7 @@ export default function Workstation() {
     return () => clearInterval(timer);
   }, [playing, visible, recording, speed]);
   const frame = preview || recording?.frames[cursor];
+  const phases = useMemo(() => rotorPhases(recording?.frames || []), [recording]);
   const component = recording?.components.find((c) => c.id === selected);
   const sensors =
     recording?.sensors.filter((s) => component?.sensors.includes(s.id)) || [];
@@ -196,7 +204,9 @@ export default function Workstation() {
       : "Within display thresholds";
   }
   async function diagnose(next = false) {
-    if (!recording || busy || (!next && preview)) return;
+    if (!recording || busy || inFlight.current || (!next && preview)) return;
+    inFlight.current = true;
+    const operation = request.current;
     setBusy(true);
     setPlaying(false);
     setError("");
@@ -215,8 +225,12 @@ export default function Workstation() {
               },
               experiments: 0,
             };
-      const response = await post<Report>("/api/v4/investigate", body);
+      const response = next && report?.model_proposal
+        ? await post<Report>("/api/v5/advance", report)
+        : await post<Report>("/api/v4/investigate", body);
+      if (operation?.signal.aborted || request.current !== operation) return;
       setReport(response);
+      setPreparedHash("");
       audit(
         next
           ? "Experiment and independent verification: " +
@@ -226,15 +240,39 @@ export default function Workstation() {
       setPreview(response.events.at(-1)?.after_frame || null);
       setTab("Investigation");
     } catch (e) {
-      setError(
+      if (!operation?.signal.aborted && request.current === operation) setError(
         e instanceof Error ? e.message : "Investigation failed. Try again.",
       );
     } finally {
-      setBusy(false);
+      if (request.current === operation) {
+        inFlight.current = false;
+        setBusy(false);
+      }
+    }
+  }
+  async function prepareModelEvidence() {
+    if (!report || busy || inFlight.current || report.request.experiments !== 0) return;
+    inFlight.current = true;
+    const operation = request.current;
+    setBusy(true);
+    setError("");
+    try {
+      const prepared = await post<{ input_hash: string; evidence: unknown; network_requests_sent: number }>("/api/v5/prepare", report.request);
+      if (operation?.signal.aborted || request.current !== operation) return;
+      if (prepared.network_requests_sent !== 0 || !/^[a-f0-9]{64}$/.test(prepared.input_hash))
+        throw Error("Unexpected preparation response; no inference is permitted here.");
+      setPreparedHash(prepared.input_hash);
+      download("forge-observed-model-evidence.json", JSON.stringify(prepared, null, 2));
+      audit("Observed model evidence prepared; zero model requests");
+    } catch {
+      if (!operation?.signal.aborted && request.current === operation)
+        setError("Evidence preparation failed. The existing investigation is preserved. Retry preparation after recovery; this does not call a model.");
+    } finally {
+      if (request.current === operation) { inFlight.current = false; setBusy(false); }
     }
   }
   async function importFile(file: File) {
-    if (!recording) return;
+    if (!recording || inFlight.current) return;
     if (file.size > 1048576) {
       setError("Import exceeds 1 MiB. Reduce the file first.");
       return;
@@ -242,13 +280,19 @@ export default function Workstation() {
     setPlaying(false);
     setError("");
     setBusy(true);
+    inFlight.current = true;
+    const operation = request.current;
     try {
       const text = await file.text();
+      if (operation?.signal.aborted || request.current !== operation) return;
       const raw = file.name.toLowerCase().endsWith(".csv")
         ? parseCSV(text)
         : JSON.parse(text);
-      if (raw?.schema === "forge-industrial-report-1") {
-        const verified = await post<Report>("/api/v4/investigate", raw.request);
+      if (["forge-industrial-report-1", "forge-industrial-model-report-1"].includes(raw?.schema)) {
+        const verified = raw.schema === "forge-industrial-model-report-1"
+          ? await post<Report>("/api/v5/replay", raw)
+          : await post<Report>("/api/v4/investigate", raw.request);
+        if (operation?.signal.aborted || request.current !== operation) return;
         if (canonical(raw) !== canonical(verified))
           throw Error(
             "Investigation report does not match independent reproduction",
@@ -278,6 +322,7 @@ export default function Workstation() {
       eventNumber.current = 0;
       setPreview(null);
       setReport(null);
+      setPreparedHash("");
       setReplayed(true);
       const digest = await crypto.subtle.digest(
         "SHA-256",
@@ -289,12 +334,13 @@ export default function Workstation() {
           .join(""),
       );
     } catch (e) {
-      setError(
+      if (!operation?.signal.aborted && request.current === operation) setError(
         e instanceof Error
           ? e.message
           : "Import failed. Choose a valid JSON or CSV recording.",
       );
     } finally {
+      inFlight.current = false;
       setBusy(false);
     }
   }
@@ -347,8 +393,11 @@ export default function Workstation() {
           <p>FORGE / PUMP-104</p>
           <h1>Industrial intelligence workstation</h1>
           <p>
-            Simulation only · Connected equipment unavailable · Rules-based
-            proposals, not Meta
+            Simulation only · Connected equipment unavailable · {report?.model_proposal
+              ? report.model_proposal.source === "test_transport"
+                ? "Recorded fixture proposals, not Meta"
+                : "Recorded model claim, source unverified by replay"
+              : "Rules-based proposals, not Meta"}
           </p>
         </div>
         <span role="status">
@@ -551,6 +600,7 @@ export default function Workstation() {
           <RenderBoundary>
             <Machine
               force2D={graphics2D}
+              rotorPhase={preview ? null : phases[cursor] ?? null}
               components={recording.components}
               selected={selected}
               warnings={recording.components
@@ -750,6 +800,7 @@ export default function Workstation() {
       {tab === "Investigation" && (
         <section className="station-panel">
           <h2>Investigation workspace</h2>
+          <ModelPanel report={report} busy={busy} preparedHash={preparedHash} onPrepare={() => void prepareModelEvidence()} />
           {!report ? (
             <p>
               Select an instrumented component at sequence 319 or later, then
@@ -852,10 +903,11 @@ export default function Workstation() {
                   setBusy(true);
                   setError("");
                   try {
-                    const response = await boundedFetch("/api/v4/report.html", {
+                    const response = await boundedFetch(report.model_proposal ? "/api/v5/report.html" : "/api/v4/report.html", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify(report.request),
+                      body: JSON.stringify(report.model_proposal ? report : report.request),
+                      signal: request.current?.signal,
                     });
                     if (!response.ok)
                       throw Error("HTML export failed. Wait and retry.");

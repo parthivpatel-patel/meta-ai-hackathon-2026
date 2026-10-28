@@ -12,7 +12,7 @@ from forge.submission.smoke import ActivationSettings, execute
 
 KEY = "fixture-only-final-engineering-not-a-real-secret"
 ACTIVATION = ActivationSettings(
-    credits_approved=True, card_free_entitlement_confirmed=True
+    credits_approved=True, card_free_entitlement_confirmed=True, provider_spending_limit_confirmed=True
 )
 APPROVAL = evaluation.EvaluationSettings(owner_authorized=True)
 

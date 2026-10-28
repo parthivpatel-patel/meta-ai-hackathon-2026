@@ -13,6 +13,7 @@ jobs:
       - run: uv sync --project backend --frozen --python 3.12
       - run: cd backend && uv run --frozen pytest -q
       - run: cd backend && uv run --frozen python -m forge.industrial.evaluate --output /tmp/forge-industrial-evaluation.json
+      - run: cd backend && uv run --frozen python -m forge.industrial.meta_evaluate --output /tmp/forge-meta-fixture-evaluation.json
       - run: cd backend && uv run --frozen python -m forge.submission.smoke
       - run: cd backend && uv run --frozen python -m forge.submission.model_evaluation
       - run: cd backend && uv run --frozen python -m forge.submission.models

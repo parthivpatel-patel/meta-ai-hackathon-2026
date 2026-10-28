@@ -1,5 +1,7 @@
 # Architecture
 
+Phase 5 adds a [private model preparation/recorded-proposal pathway](docs/meta-final/ARCHITECTURE.md) using the existing adapter, selector and verifier. New public routes cannot call a model; separately authorized private execution remains dry by default. All prior architecture/evidence remains preserved below.
+
 The current candidate adds the [industrial workstation](docs/industrial/ARCHITECTURE.md) to the existing modular monolith: coupled simulation, Three.js/2D machine inspection, bounded playback, existing numerical-verifier integration and a separately versioned report/replay format. Earlier versioned APIs and library behavior remain preserved. The milestone sections below document the architecture's evolution; current behavior and limits are in `docs/industrial/`.
 
 FORGE is a modular monolith: one FastAPI process performs simulation, statistics, and provider orchestration. A React application requests typed JSON over same-origin `/api/v1` through Vite during development. No distributed workers, database, GPU, or external inference is required.

@@ -1,0 +1,7 @@
+misleading_sensor passed
+temperature_response passed
+vibration_response passed
+insufficient passed
+noisy_multifault passed
+normal passed
+confounded passed

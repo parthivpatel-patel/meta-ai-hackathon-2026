@@ -1,0 +1,235 @@
+[
+  {
+    "scenario": "normal",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 1562,
+    "experiment_ui_ms": [
+      228
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "normal"
+    ],
+    "telemetry_roundtrip_bytes": 405628,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "bearing",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 999,
+    "experiment_ui_ms": [
+      123,
+      169
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-vibration"
+    ],
+    "telemetry_roundtrip_bytes": 405625,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "misalignment",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 1152,
+    "experiment_ui_ms": [
+      129,
+      164,
+      217,
+      270
+    ],
+    "decision": "INCONCLUSIVE",
+    "findings": [
+      "process-vibration"
+    ],
+    "telemetry_roundtrip_bytes": 405677,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "cavitation",
+    "width": 1440,
+    "webgl": false,
+    "initial_ms": 1030,
+    "experiment_ui_ms": [
+      135,
+      147,
+      202
+    ],
+    "decision": "INCONCLUSIVE",
+    "findings": [],
+    "telemetry_roundtrip_bytes": 405637,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "pressure_sensor",
+    "width": 390,
+    "webgl": true,
+    "initial_ms": 965,
+    "experiment_ui_ms": [
+      101,
+      161
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "sensor-pressure"
+    ],
+    "telemetry_roundtrip_bytes": 405769,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "thermal",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 955,
+    "experiment_ui_ms": [
+      157,
+      261
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-temperature"
+    ],
+    "telemetry_roundtrip_bytes": 405637,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "scenario": "process",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 970,
+    "experiment_ui_ms": [
+      121,
+      152
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-pressure"
+    ],
+    "telemetry_roundtrip_bytes": 405630,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "32",
+        "triangles": "4540"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  }
+]

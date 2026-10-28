@@ -1,13 +1,13 @@
 # FORGE documentation
 
-Start with the [product README](../README.md) and [workstation guide / three-minute walkthrough](industrial/README.md).
+Start with the [product README](../README.md) and [integration guide](meta-final/README.md) and [demonstration scripts](meta-final/DEMO_SCRIPTS.md).
 
 | Topic | Primary reference |
 | --- | --- |
-| Current implementation, scenarios and assumptions | [Workstation review](industrial/ENGINEERING_REPORT.md) |
+| Current implementation, scenarios and assumptions | [Phase 5 architecture and scope](meta-final/ARCHITECTURE.md) |
 | Architecture | [Workstation architecture](industrial/ARCHITECTURE.md) |
-| Measured tests, performance and synthetic evaluation | [Current validation](industrial/validation.json), [test evidence](industrial/TEST_EVIDENCE.md) |
-| Example JSON/HTML reports and screenshots | [Machine evidence](industrial/evidence/README.md), [preserved library evidence](product-completion/README.md) |
+| Measured tests, performance and synthetic evaluation | [Current validation](meta-final/validation.json), [reproduction](meta-final/VALIDATION.md) |
+| Example JSON/HTML reports and screenshots | [Current integration evidence](meta-final/evidence/README.md), [baseline machine evidence](industrial/evidence/README.md), [preserved library evidence](product-completion/README.md) |
 | Security and operational limits | [Security policy](../SECURITY.md) |
 | Private model activation and genuine evaluation | [Activation](../MODEL_ACTIVATION.md), [evaluation protocol](GENUINE_MODEL_EVALUATION.md) |
 | Deployment and rollback | [Current release procedure](CURRENT_RELEASE.md); use the exact newly approved SHA, not a historical branch head |

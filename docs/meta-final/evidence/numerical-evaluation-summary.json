@@ -1,0 +1,238 @@
+{
+  "v1": {
+    "schema": "forge-evaluation-1",
+    "cases": 480,
+    "overall": {
+      "abstention_rate": {
+        "denominator": 480,
+        "numerator": 260,
+        "rate": 0.5416666666666666
+      },
+      "cases": 480,
+      "correct_finding_recall": {
+        "denominator": 300,
+        "numerator": 220,
+        "rate": 0.7333333333333333
+      },
+      "decisions": {
+        "ABSTAIN": 80,
+        "INCONCLUSIVE": 180,
+        "SUPPORTED_SYNTHETIC": 220
+      },
+      "experiment_selection_accuracy": {
+        "denominator": 300,
+        "numerator": 247,
+        "rate": 0.8233333333333334
+      },
+      "finding_coverage": {
+        "denominator": 480,
+        "numerator": 220,
+        "rate": 0.4583333333333333
+      },
+      "fixed_threshold_baseline": {
+        "false_negative_rate": {
+          "denominator": 400,
+          "numerator": 71,
+          "rate": 0.1775
+        },
+        "false_positive_rate": {
+          "denominator": 80,
+          "numerator": 20,
+          "rate": 0.25
+        },
+        "fn": 71,
+        "fp": 20,
+        "tn": 60,
+        "tp": 329
+      },
+      "observational_only_forced_finding_accuracy": {
+        "denominator": 480,
+        "numerator": 187,
+        "rate": 0.38958333333333334
+      },
+      "required_abstention_recall": {
+        "denominator": 180,
+        "numerator": 180,
+        "rate": 1.0
+      },
+      "robust_detector": {
+        "false_negative_rate": {
+          "denominator": 400,
+          "numerator": 113,
+          "rate": 0.2825
+        },
+        "false_positive_rate": {
+          "denominator": 80,
+          "numerator": 0,
+          "rate": 0.0
+        },
+        "fn": 113,
+        "fp": 0,
+        "tn": 80,
+        "tp": 287
+      },
+      "supported_scope_abstentions": 80,
+      "verification_precision": {
+        "denominator": 220,
+        "numerator": 220,
+        "rate": 1.0
+      }
+    },
+    "scope": "Actual offline current-branch run, synthetic only",
+    "raw_result_sha256": "c4b778225309db74cb92bf906c29c8e40772a3e129d351e087ae8e2876fecaa7",
+    "baseline_cases": 480
+  },
+  "v2": {
+    "schema": "forge-phase2-evaluation-1",
+    "cases": 280,
+    "overall": {
+      "accepted_precision": {
+        "denominator": 212,
+        "numerator": 212,
+        "rate": 1.0
+      },
+      "answerable_exact_set_recall": {
+        "denominator": 240,
+        "numerator": 212,
+        "rate": 0.8833333333333333
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 212,
+        "rate": 0.7571428571428571
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 44,
+        "rate": 0.16923076923076924
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "required_abstention": {
+        "denominator": 40,
+        "numerator": 40,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 48,
+        "SUPPORTED_SYNTHETIC": 212
+      },
+      "v1_coverage": {
+        "denominator": 280,
+        "numerator": 66,
+        "rate": 0.2357142857142857
+      },
+      "v1_precision": {
+        "denominator": 66,
+        "numerator": 60,
+        "rate": 0.9090909090909091
+      }
+    },
+    "scope": "Actual offline current-branch run, synthetic only",
+    "raw_result_sha256": "1c310361e4a6e68373c3963facfb5375e68694264f2014816c0a03bd15835184",
+    "baseline_cases": 280
+  },
+  "v3": {
+    "schema": "forge-phase3-evaluation-1",
+    "cases": 280,
+    "overall": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 25.657,
+      "latency_ms_p95": 46.043650000000014,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "scope": "Actual offline current-branch run, synthetic only",
+    "raw_result_sha256": "c1006ff8c8941b17d3ef8fdad9feb3ccfac967236a629eea29738730dae00ebb",
+    "baseline_cases": 280
+  },
+  "coupled": {
+    "schema": "forge-coupled-evaluation-1",
+    "cases": 21,
+    "overall": {
+      "cases": 21,
+      "accepted_exact": {
+        "numerator": 15,
+        "denominator": 15
+      },
+      "coverage": {
+        "numerator": 15,
+        "denominator": 21
+      },
+      "all_finding_precision": {
+        "numerator": 18,
+        "denominator": 18
+      },
+      "exact_agreement": {
+        "numerator": 18,
+        "denominator": 21
+      },
+      "replay_consistency": "21/21",
+      "inconclusive": 6
+    },
+    "scope": "Actual offline current-branch run, synthetic only",
+    "raw_result_sha256": "c283759aa1f1900c483d949a43c76dca8c98e0558b0370a3a49cae55367c9f3c",
+    "baseline_cases": 21
+  }
+}

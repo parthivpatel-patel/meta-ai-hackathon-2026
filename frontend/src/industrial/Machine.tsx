@@ -9,6 +9,7 @@ export function Machine({
   frame,
   warnings = [],
   force2D = false,
+  rotorPhase = null,
 }: {
   components: Component[];
   selected: string;
@@ -16,6 +17,7 @@ export function Machine({
   frame: Frame;
   warnings?: string[];
   force2D?: boolean;
+  rotorPhase?: number | null;
 }) {
   const host = useRef<HTMLDivElement>(null);
   const control = useRef<(view: string) => void>(() => {});
@@ -42,8 +44,8 @@ export function Machine({
       setFallbackScale(1);
     }
   }
-  const live = useRef({ selected, frame, onSelect, warnings });
-  live.current = { selected, frame, onSelect, warnings };
+  const live = useRef({ selected, frame, onSelect, warnings, rotorPhase });
+  live.current = { selected, frame, onSelect, warnings, rotorPhase };
   const update = useRef<() => void>(() => {});
   useEffect(() => {
     if (!host.current) return;
@@ -126,6 +128,17 @@ export function Machine({
         scene.add(mesh);
         meshes.push(mesh);
       }
+      const coupling = meshes.find((mesh) => mesh.userData.id === "coupling");
+      if (coupling) {
+        const geometry = new THREE.BoxGeometry(0.04, 0.24, 0.08);
+        const material = new THREE.MeshStandardMaterial({ color: "#f2efe9", roughness: 0.8 });
+        geometries.push(geometry);
+        materials.push(material);
+        const marker = new THREE.Mesh(geometry, material);
+        marker.position.set(0.22, 0, 0);
+        marker.userData.id = "coupling";
+        coupling.add(marker);
+      }
       // Procedural cooling rings and impeller vanes share their component's stable ID.
       for (const id of ["cooling", "impeller"]) {
         const owner = meshes.find((m) => m.userData.id === id);
@@ -151,8 +164,15 @@ export function Machine({
           meshes.push(part);
         }
       }
+      const motion = typeof window.matchMedia === "function" ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+      const axis = new THREE.Vector3(1, 0, 0);
       const draw = () => {
         for (const mesh of meshes) {
+          if (["fan", "motor_shaft", "coupling", "pump_shaft", "bearing_ring", "impeller"].includes(mesh.userData.id)) {
+            mesh.userData.rotorBase ??= mesh.quaternion.clone();
+            mesh.quaternion.copy(mesh.userData.rotorBase);
+            mesh.rotateOnWorldAxis(axis, motion?.matches ? 0 : live.current.rotorPhase ?? 0);
+          }
           const mat = mesh.material as THREE.MeshStandardMaterial;
           mat.color.copy(mesh.userData.baseColor);
           if (live.current.warnings.includes(mesh.userData.id))
@@ -167,7 +187,10 @@ export function Machine({
         renderer!.domElement.dataset.triangles = String(
           renderer!.info.render.triangles,
         );
+        renderer!.domElement.dataset.rotorPhase = live.current.rotorPhase === null ? "unavailable" : String(motion?.matches ? 0 : live.current.rotorPhase);
+        renderer!.domElement.dataset.reducedMotion = String(!!motion?.matches);
       };
+      motion?.addEventListener("change", draw);
       update.current = draw;
       const resize = () => {
         const width = node.clientWidth || 600;
@@ -257,6 +280,7 @@ export function Machine({
         draw();
       };
       dispose = () => {
+        motion?.removeEventListener("change", draw);
         observer?.disconnect();
         controls?.dispose();
         renderer?.domElement.removeEventListener("pointerdown", pointerDown);
@@ -279,7 +303,7 @@ export function Machine({
       control.current = () => {};
     };
   }, [components, attempt, force2D]);
-  useEffect(() => update.current(), [selected, frame]);
+  useEffect(() => update.current(), [selected, frame, rotorPhase]);
   return (
     <section aria-label="Machine visualization">
       <div ref={host} hidden={fallback} />
@@ -375,6 +399,8 @@ export function Machine({
       <p className="muted">
         Procedural illustration, not CAD or a calibrated digital twin. Drag to
         orbit; use camera buttons or component list with a keyboard.
+        {" "}Rotor illustration follows sampled RPM at 1/600 speed. Missing data
+        and counterfactual previews have no rotor phase; reduced motion holds it still.
       </p>
     </section>
   );

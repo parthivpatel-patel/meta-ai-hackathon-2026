@@ -212,3 +212,7 @@ if (_dist / "assets").is_dir():
 from .industrial.routes import router as industrial_router
 
 app.include_router(industrial_router)
+
+from .industrial.meta_routes import router as recorded_model_router
+
+app.include_router(recorded_model_router)

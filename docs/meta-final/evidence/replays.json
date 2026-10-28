@@ -1,0 +1,128 @@
+[
+  {
+    "kind": "machine",
+    "file": "bearing.json",
+    "replay": true,
+    "json_sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "cavitation.json",
+    "replay": true,
+    "json_sha256": "df5a32bcb08a1faafcd5bb7348a70f0b855fca28eaf91f7a4a54a5966c051bec",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "misalignment.json",
+    "replay": true,
+    "json_sha256": "db0d8de41dc2e1c8b3590225ef290b66743b8e4fc43cb26d5e1e593c6313f630",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "normal.json",
+    "replay": true,
+    "json_sha256": "ad2edf44a5132e6be0a2cd605a6a5c72b0ae9bd23466b6c027530f4cfd6e2635",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "pressure_sensor.json",
+    "replay": true,
+    "json_sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "process.json",
+    "replay": true,
+    "json_sha256": "d7bc030f75fb302bca34a8d1f0dc45ca069e4a3455b1d24e7b797b8798dd2172",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "machine",
+    "file": "thermal.json",
+    "replay": true,
+    "json_sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89",
+    "html_matches_reproduction": true
+  },
+  {
+    "kind": "library",
+    "file": "confounded.json",
+    "replay": true,
+    "json_sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "insufficient.json",
+    "replay": true,
+    "json_sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "misleading_sensor.json",
+    "replay": true,
+    "json_sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "noisy_multifault.json",
+    "replay": true,
+    "json_sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "normal.json",
+    "replay": true,
+    "json_sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "temperature_response.json",
+    "replay": true,
+    "json_sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "library",
+    "file": "vibration_response.json",
+    "replay": true,
+    "json_sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19",
+    "html_matches_reproduction": "legacy renderer preserved"
+  },
+  {
+    "kind": "recorded_fixture",
+    "file": "fixture-initial.json",
+    "replay": true,
+    "offline_cli": "Industrial replay verified: IN_PROGRESS",
+    "genuine_requests": 0,
+    "json_sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+  },
+  {
+    "kind": "recorded_fixture",
+    "file": "fixture-final.json",
+    "replay": true,
+    "offline_cli": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+    "genuine_requests": 0,
+    "json_sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+  },
+  {
+    "kind": "original_submission",
+    "file": "insufficient.json",
+    "replay": true,
+    "baseline_bytes_unchanged": true
+  },
+  {
+    "kind": "original_submission",
+    "file": "misleading_sensor.json",
+    "replay": true,
+    "baseline_bytes_unchanged": true
+  }
+]

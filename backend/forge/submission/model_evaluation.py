@@ -69,6 +69,7 @@ def preflight(
     checks = [
         (approval.owner_authorized, "separate_owner_authorization_required"),
         (activation.credits_approved, "approved_credits_unconfirmed"),
+        (activation.provider_spending_limit_confirmed, "provider_enforced_spending_limit_unconfirmed"),
         (
             activation.card_free_entitlement_confirmed,
             "card_free_entitlement_unconfirmed",
