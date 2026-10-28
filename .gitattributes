@@ -4,3 +4,6 @@ docs/meta-final/MUSE_LICENSE_REFERENCE.txt -whitespace
 docs/unified/evidence/checks/docker-build.txt -whitespace
 # Preserve the Phase 7 BuildKit transcript's timestamped blank output lines.
 docs/final-experience/evidence/checks/docker-build.txt -whitespace
+
+# Preserve the repair production-build transcript without altering raw evidence.
+docs/investigation-resume/evidence/checks/docker-build.txt -whitespace

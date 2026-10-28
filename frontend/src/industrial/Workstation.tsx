@@ -1,6 +1,7 @@
 import {
   Component as ReactComponent,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -98,6 +99,7 @@ export default function Workstation({
   embedded?: boolean;
   onOpenLibrary?: () => void;
 }) {
+  const captureExplanationId = useId();
   const [recording, setRecording] = useState<Recording | null>(null);
   const [recipe, setRecipe] = useState(initial);
   const [selected, setSelected] = useState("pump");
@@ -224,6 +226,36 @@ export default function Workstation({
   const component = recording?.components.find((c) => c.id === selected);
   const sensors =
     recording?.sensors.filter((s) => component?.sensors.includes(s.id)) || [];
+  // New evidence eligibility is separate from navigation to an existing report.
+  const captureDisabled =
+    busy ||
+    replayed ||
+    !!preview ||
+    cursor < 319 ||
+    recipe.actions.length > 0 ||
+    !sensors.length;
+  const captureExplanation = preview
+    ? "New evidence capture is unavailable while viewing a counterfactual test result. These samples are simulated experiment outcomes, not observed evidence. Return to observed simulation to capture new evidence."
+    : busy
+      ? "New evidence capture is unavailable while an operation is pending."
+      : replayed
+        ? "Imported recordings have no intervention oracle, so new investigation capture is unavailable."
+        : recipe.actions.length > 0
+          ? "New evidence capture requires a simulation without manual operating actions."
+          : !sensors.length
+            ? "Select a component with a mapped instrument before capturing new evidence."
+            : cursor < 319
+              ? "New evidence capture requires observed samples through sequence 319. Use the position slider to inspect that window."
+              : "Observed samples are eligible for a new evidence capture.";
+  const captureAction = (
+    <button
+      disabled={captureDisabled}
+      aria-describedby={captureExplanationId}
+      onClick={() => void diagnose()}
+    >
+      {report ? "Capture new observation window" : "Capture selected component"}
+    </button>
+  );
   function health(id: string) {
     const c = recording?.components.find((p) => p.id === id);
     if (!frame || !c?.sensors.length) return "No instrument";
@@ -817,11 +849,6 @@ export default function Workstation({
             <time>{frame.timestamp}</time> · {frame.source} · Sequence{" "}
             {frame.sequence}
           </p>
-          {preview && (
-            <button onClick={() => setPreview(null)}>
-              Return to observed simulation
-            </button>
-          )}
         </section>
         <aside className="station-panel component-inspector">
           <h2>Component inspector</h2>
@@ -859,25 +886,46 @@ export default function Workstation({
           {!sensors.length && (
             <p>No sensor is mapped to this structural component.</p>
           )}
-          <button
-            disabled={
-              busy ||
-              replayed ||
-              !!preview ||
-              cursor < 319 ||
-              recipe.actions.length > 0 ||
-              !sensors.length
-            }
-            onClick={() => void diagnose()}
-          >
-            Investigate selected component
-          </button>
-          <p className="muted">
-            Capture requires samples through sequence319 with no manual actions.
-            Return to observed simulation before capturing a new investigation.
-            Use the position slider to inspect the full window. Recorded imports
-            have no intervention oracle.
+          {report && (
+            <>
+              <button
+                className="primary-action"
+                onClick={() => setTab("Investigation")}
+              >
+                Resume existing investigation
+              </button>
+              <p>
+                Resume the captured {report.request.context.component_id}{" "}
+                investigation with {report.trials.length} / 4 tests completed.
+                Inspection selection and playback do not change its evidence or
+                test history.
+              </p>
+            </>
+          )}
+          <p id={captureExplanationId} className="muted">
+            {captureExplanation}{" "}
+            {report &&
+              "Your existing investigation and test history are preserved."}
           </p>
+          {preview && (
+            <button onClick={() => setPreview(null)}>
+              Return to observed simulation
+            </button>
+          )}
+          {report ? (
+            <details>
+              <summary>Capture new evidence</summary>
+              <p>
+                A new capture replaces the active investigation and its test
+                history. Export the existing report first to retain a copy.
+                Resuming the existing investigation does not capture evidence or
+                run a test.
+              </p>
+              {captureAction}
+            </details>
+          ) : (
+            captureAction
+          )}
           <details>
             <summary>Component provenance</summary>
             <p>
@@ -932,8 +980,8 @@ export default function Workstation({
             onClick={() => setTab(report.plan ? "Experiments" : "Verification")}
           >
             {report.plan
-              ? "Review proposed experiment"
-              : "Review verified findings"}
+              ? "Resume investigation: review proposed experiment"
+              : "Resume investigation: review verified findings"}
           </button>
         )}
       </div>

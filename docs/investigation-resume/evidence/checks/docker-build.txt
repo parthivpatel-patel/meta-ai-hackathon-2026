@@ -1,0 +1,161 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.74kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.6s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 ...
+
+#5 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+#5 DONE 0.6s
+
+#6 [internal] load metadata for ghcr.io/astral-sh/uv:0.12.23
+#6 DONE 1.0s
+
+#4 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 DONE 1.3s
+
+#7 [internal] load .dockerignore
+#7 transferring context: 315B done
+#7 DONE 0.0s
+
+#8 [uvtool 1/1] FROM ghcr.io/astral-sh/uv:0.12.23@sha256:61d393e44e249f2e4b526b6c7ddcecce245946826e608e11c93ad4f5bba55b21
+#8 DONE 0.0s
+
+#9 [backend 1/5] FROM docker.io/library/python:3.12-slim-bookworm@sha256:e697c81897302a4c4333bade000d98038fbb21eb064f8ee1fd42d02ebcd9d337
+#9 DONE 0.0s
+
+#10 [internal] load build context
+#10 transferring context: 881.49kB 0.0s done
+#10 DONE 0.0s
+
+#11 [frontend 1/6] FROM docker.io/library/node:24-bookworm-slim@sha256:be8204d4bd327363357f532187b752ff62759c31bedf98e9e18fc08c9cbd605c
+#11 resolve docker.io/library/node:24-bookworm-slim@sha256:be8204d4bd327363357f532187b752ff62759c31bedf98e9e18fc08c9cbd605c done
+#11 sha256:be8204d4bd327363357f532187b752ff62759c31bedf98e9e18fc08c9cbd605c 3.93kB / 3.93kB done
+#11 sha256:e1582112fb9f152ed38eefcd712efc93fee1becb519fdfa57574d5e07eaa5e7d 1.93kB / 1.93kB done
+#11 sha256:4d4657ef82b5cf8fd56373dbf8b145cdc6d1d7aabbaca1e6a361efedae04e052 6.71kB / 6.71kB done
+#11 sha256:0c1909f260bd6f20598f777dbcfdde8a739b1dc6a750e641dc36fad45e09c2c1 0B / 3.31kB 0.1s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 0B / 51.08MB 0.1s
+#11 sha256:1a501360ef0b4579641bfcd65436cd25419792156889ed3dcad867f76b64ef8a 0B / 1.71MB 0.1s
+#11 extracting sha256:0c1909f260bd6f20598f777dbcfdde8a739b1dc6a750e641dc36fad45e09c2c1
+#11 sha256:0c1909f260bd6f20598f777dbcfdde8a739b1dc6a750e641dc36fad45e09c2c1 3.31kB / 3.31kB 0.3s done
+#11 sha256:1a501360ef0b4579641bfcd65436cd25419792156889ed3dcad867f76b64ef8a 1.05MB / 1.71MB 0.4s
+#11 extracting sha256:0c1909f260bd6f20598f777dbcfdde8a739b1dc6a750e641dc36fad45e09c2c1 done
+#11 sha256:cfac3e1f67650e1076b4bf1cd7ba90f1a51bdd651fd85d384133e21bb1bbe1e7 0B / 451B 0.4s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 3.15MB / 51.08MB 0.5s
+#11 sha256:1a501360ef0b4579641bfcd65436cd25419792156889ed3dcad867f76b64ef8a 1.71MB / 1.71MB 0.4s done
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 8.39MB / 51.08MB 0.6s
+#11 sha256:cfac3e1f67650e1076b4bf1cd7ba90f1a51bdd651fd85d384133e21bb1bbe1e7 451B / 451B 0.5s done
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 14.68MB / 51.08MB 0.7s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 26.21MB / 51.08MB 0.9s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 32.51MB / 51.08MB 1.0s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 42.99MB / 51.08MB 1.2s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 49.28MB / 51.08MB 1.3s
+#11 sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 51.08MB / 51.08MB 1.3s done
+#11 extracting sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 0.1s
+#11 extracting sha256:a186b86152d92b5466c18410027465dbb26f0238ab7fca29a459b6896022bc2e 1.1s done
+#11 extracting sha256:1a501360ef0b4579641bfcd65436cd25419792156889ed3dcad867f76b64ef8a
+#11 extracting sha256:1a501360ef0b4579641bfcd65436cd25419792156889ed3dcad867f76b64ef8a 0.3s done
+#11 extracting sha256:cfac3e1f67650e1076b4bf1cd7ba90f1a51bdd651fd85d384133e21bb1bbe1e7 done
+#11 DONE 3.3s
+
+#12 [frontend 2/6] WORKDIR /app/frontend
+#12 DONE 0.4s
+
+#13 [frontend 3/6] COPY frontend/package.json frontend/package-lock.json ./
+#13 DONE 0.3s
+
+#14 [frontend 4/6] RUN --mount=type=secret,id=proxy_ca     if [ -f /run/secrets/proxy_ca ]; then export NODE_EXTRA_CA_CERTS=/run/secrets/proxy_ca; fi;     npm ci --strict-ssl=true --no-audit
+#14 1.393 npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+#14 5.908 
+#14 5.908 added 156 packages in 5s
+#14 5.908 
+#14 5.908 23 packages are looking for funding
+#14 5.908   run `npm fund` for details
+#14 5.909 npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+#14 5.909 npm warn install-scripts   esbuild@0.25.12 (postinstall: node install.js)
+#14 5.909 npm warn install-scripts
+#14 5.909 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#14 5.912 npm notice
+#14 5.912 npm notice New major version of npm available! 11.19.1 -> 12.2.1
+#14 5.912 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+#14 5.912 npm notice To update run: npm install -g npm@12.2.1
+#14 5.912 npm notice
+#14 DONE 6.0s
+
+#15 [frontend 5/6] COPY frontend/ ./
+#15 DONE 1.2s
+
+#16 [frontend 6/6] RUN npm run build
+#16 1.542 
+#16 1.542 > forge-dashboard@0.1.0 build
+#16 1.542 > tsc -b && vite build
+#16 1.542 
+#16 5.292 vite v6.4.5 building for production...
+#16 5.370 transforming...
+#16 8.300 ✓ 1610 modules transformed.
+#16 8.512 rendering chunks...
+#16 8.733 computing gzip size...
+#16 8.750 dist/index.html                                           0.47 kB │ gzip:   0.31 kB
+#16 8.750 dist/assets/geist-mono-latin-400-normal-DTRLJnHl.woff2    9.86 kB
+#16 8.750 dist/assets/geist-mono-latin-400-normal-B2yvC1Cq.woff    13.04 kB
+#16 8.750 dist/assets/geist-sans-latin-400-normal-gapTbOY8.woff2   33.40 kB
+#16 8.750 dist/assets/geist-sans-latin-500-normal-uokXdC-Q.woff2   34.72 kB
+#16 8.750 dist/assets/geist-sans-latin-600-normal-DFOURf8L.woff2   35.29 kB
+#16 8.750 dist/assets/geist-sans-latin-400-normal-BOaIZNA2.woff    38.91 kB
+#16 8.750 dist/assets/geist-sans-latin-500-normal-CN2lyvyL.woff    40.52 kB
+#16 8.750 dist/assets/geist-sans-latin-600-normal-CA1yjETN.woff    41.20 kB
+#16 8.750 dist/assets/style-DVLkYlYq.css                           14.91 kB │ gzip:   3.92 kB
+#16 8.750 dist/assets/index-9VpZuxvG.css                           37.00 kB │ gzip:   7.97 kB
+#16 8.751 dist/assets/App-CCXE7XsB.js                              27.94 kB │ gzip:   8.34 kB
+#16 8.751 dist/assets/Workstation-s3DgI9vh.js                      33.90 kB │ gzip:  11.16 kB
+#16 8.751 dist/assets/index-BLT_8T0s.js                           301.09 kB │ gzip:  93.76 kB
+#16 8.751 dist/assets/Machine-C-Fmn66d.js                         546.73 kB │ gzip: 140.99 kB
+#16 8.751 ✓ built in 3.43s
+#16 8.752 
+#16 8.752 (!) Some chunks are larger than 500 kB after minification. Consider:
+#16 8.752 - Using dynamic import() to code-split the application
+#16 8.752 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#16 8.752 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#16 DONE 8.8s
+
+#17 [backend 5/5] RUN --mount=type=secret,id=proxy_ca     if [ -f /run/secrets/proxy_ca ]; then export SSL_CERT_FILE=/run/secrets/proxy_ca; fi;     UV_LINK_MODE=copy uv sync --frozen --no-dev
+#17 CACHED
+
+#18 [runtime 3/6] WORKDIR /app/backend
+#18 CACHED
+
+#19 [backend 3/5] WORKDIR /app/backend
+#19 CACHED
+
+#20 [runtime 4/6] COPY --from=backend --chown=forge:forge /app/backend /app/backend
+#20 CACHED
+
+#21 [runtime 2/6] RUN groupadd --gid 10001 forge && useradd --uid 10001 --gid 10001 --create-home forge     && mkdir -p /data && chown forge:forge /data
+#21 CACHED
+
+#22 [backend 2/5] COPY --from=uvtool /uv /usr/local/bin/uv
+#22 CACHED
+
+#23 [backend 4/5] COPY backend/pyproject.toml backend/uv.lock ./
+#23 CACHED
+
+#24 [runtime 5/6] COPY --chown=forge:forge backend/forge /app/backend/forge
+#24 CACHED
+
+#25 [runtime 6/6] COPY --from=frontend --chown=forge:forge /app/frontend/dist /app/frontend/dist
+#25 DONE 0.5s
+
+#26 exporting to image
+#26 exporting layers
+#26 exporting layers 0.7s done
+#26 writing image sha256:877256eb970957f61bfc3b3502920fa825b78f4cedb14d37accb248b39149871 done
+#26 naming to docker.io/library/forge:resume-fix done
+#26 DONE 0.7s

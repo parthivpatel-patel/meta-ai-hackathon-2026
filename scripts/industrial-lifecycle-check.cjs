@@ -238,7 +238,7 @@ const fs = require("node:fs");
     if (
       await p
         .getByRole("button", {
-          name: "Investigate selected component",
+          name: "Capture selected component",
           exact: true,
         })
         .isEnabled()

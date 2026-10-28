@@ -125,3 +125,7 @@ Branched from exact Phase 5 `51e188dcf7c23fcb11fd3d8a3b556b349eec01d9` on `featu
 ## October 28, 2026 — America/New_York — Phase 7 final experience
 
 Based on exact Phase 6 `17ea7507814960a4f181d45a3cacaddd38e43f7c`, branch `feature/forge-final-experience`. Unified both case families, added bounded browser recovery and independent fixed-case rehydration, retained numerical/report contracts and fixed real-browser JSON normalization/continuity/layout issues. The owner confirmed unavailable written charge protection and directed genuine API requests to remain blocked: zero attempts, no financial gate bypass. Actual results and release limits are in [the handoff](docs/final-experience/README.md). No deployment, merge or paid resources were initiated; the eligibility question and original history remain preserved.
+
+## October 28, 2026 — investigation capture/resume repair
+
+Separated existing-report navigation from new evidence capture in the component inspector. Counterfactual capture remains prohibited; returning to observation preserves the active report and tests. Added regression and actual before/after production-browser evidence. See [repair handoff](docs/investigation-resume/README.md). No deployment, merge, paid resources or genuine model calls.

@@ -1,0 +1,280 @@
+{
+  "schema": "forge-investigation-resume-validation-1",
+  "checked_utc": "2026-10-28T17:19:28.246782+00:00",
+  "baseline": "4e40f41f6f5d777e664eb52b1ffc89a1d615baad",
+  "branch": "fix/forge-investigation-resume",
+  "backend_tests_passed": 278,
+  "frontend_tests_passed": 55,
+  "added_frontend_regressions": 4,
+  "new_regression_fails_baseline": true,
+  "typescript_production_build": "passed",
+  "docker_build": "passed",
+  "image": "sha256:877256eb970957f61bfc3b3502920fa825b78f4cedb14d37accb248b39149871",
+  "runtime_matches_workspace": true,
+  "runtime_credential_variable_names_present": [],
+  "backend_runtime_modified": false,
+  "baseline_browser": {
+    "mode": "before",
+    "base": "http://127.0.0.1:8081",
+    "results": [
+      {
+        "width": 1440,
+        "view": "counterfactual-capture-disabled",
+        "axe_violations": 0
+      },
+      {
+        "width": 1440,
+        "reproduced": true,
+        "cause": "Counterfactual preview disables new capture; inspector has no resume action",
+        "trials": 1,
+        "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614"
+      }
+    ]
+  },
+  "focused_browser_runs": [
+    {
+      "mode": "after",
+      "base": "http://127.0.0.1:8082",
+      "results": [
+        {
+          "width": 1440,
+          "view": "counterfactual-resume-enabled",
+          "axe_violations": 0
+        },
+        {
+          "width": 1440,
+          "view": "resumed-one-test-investigation",
+          "axe_violations": 0
+        },
+        {
+          "width": 1440,
+          "view": "observed-capture-eligible",
+          "axe_violations": 0
+        },
+        {
+          "width": 1440,
+          "view": "restored-observed-investigation",
+          "axe_violations": 0
+        },
+        {
+          "width": 1440,
+          "resume_mutations": 0,
+          "observed_return_mutations": 0,
+          "prior_trials_preserved": true,
+          "recovery_reproduced": true,
+          "continued_trials": 2,
+          "original_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+          "restored_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+          "post_paths": [
+            "/api/v4/simulate",
+            "/api/v4/simulate",
+            "/api/v4/investigate",
+            "/api/v4/investigate",
+            "/api/v4/simulate",
+            "/api/v4/simulate",
+            "/api/v4/investigate",
+            "/api/v4/investigate"
+          ],
+          "genuine_requests": 0
+        }
+      ]
+    },
+    {
+      "mode": "after",
+      "base": "http://127.0.0.1:8082",
+      "results": [
+        {
+          "width": 390,
+          "view": "counterfactual-resume-enabled",
+          "axe_violations": 0
+        },
+        {
+          "width": 390,
+          "view": "resumed-one-test-investigation",
+          "axe_violations": 0
+        },
+        {
+          "width": 390,
+          "view": "observed-capture-eligible",
+          "axe_violations": 0
+        },
+        {
+          "width": 390,
+          "view": "restored-observed-investigation",
+          "axe_violations": 0
+        },
+        {
+          "width": 390,
+          "resume_mutations": 0,
+          "observed_return_mutations": 0,
+          "prior_trials_preserved": true,
+          "recovery_reproduced": true,
+          "continued_trials": 2,
+          "original_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+          "restored_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+          "post_paths": [
+            "/api/v4/simulate",
+            "/api/v4/simulate",
+            "/api/v4/investigate",
+            "/api/v4/investigate",
+            "/api/v4/simulate",
+            "/api/v4/simulate",
+            "/api/v4/investigate",
+            "/api/v4/investigate"
+          ],
+          "genuine_requests": 0
+        }
+      ]
+    }
+  ],
+  "recorded_fixture_browser": [
+    {
+      "view": "observed-preparation",
+      "violations": []
+    },
+    {
+      "view": "recorded-competing-proposals",
+      "violations": []
+    },
+    {
+      "view": "verified-recorded-proposals",
+      "violations": []
+    },
+    {
+      "journey": "desktop",
+      "capture_ms": 149,
+      "experiment_ms": [
+        344,
+        356
+      ],
+      "export_ms": {
+        "JSON": 77,
+        "HTML": 248
+      },
+      "repeated_clicks_bounded": true,
+      "tamper_preserves_investigation": true,
+      "source": "test_transport",
+      "genuine_requests": 0
+    },
+    {
+      "view": "mobile-recorded-fallback",
+      "violations": []
+    },
+    {
+      "view": "mobile-refresh-disabled-model",
+      "violations": []
+    },
+    {
+      "journey": "mobile",
+      "width": 390,
+      "webgl": false,
+      "keyboard_preparation": true,
+      "pending_refresh_preserves_no_live_call_boundary": true,
+      "genuine_requests": 0
+    }
+  ],
+  "axe": {
+    "baseline_views": 1,
+    "focused_fix_views": 8,
+    "recorded_fixture_views": 5,
+    "fix_total": 13,
+    "violations": 0
+  },
+  "replay": {
+    "count": 7,
+    "before_after_one_test_identical": true,
+    "reports": [
+      {
+        "path": "docs/investigation-resume/evidence/after/1440-continued-report.json",
+        "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+        "trials": 2,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "sha256": "b3d1b77a40add23d6ed56346ef5d82ef87e4e9ea4b9c772c6ab57831ecd76b8b"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/after/1440-one-test-report.json",
+        "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+        "trials": 1,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+        "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/after/390-continued-report.json",
+        "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+        "trials": 2,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "sha256": "b3d1b77a40add23d6ed56346ef5d82ef87e4e9ea4b9c772c6ab57831ecd76b8b"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/after/390-one-test-report.json",
+        "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+        "trials": 1,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+        "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/before/1440-one-test-report.json",
+        "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+        "trials": 1,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+        "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/model/fixture-initial.json",
+        "report_hash": "1940bf3f0c3e963e053c390a27589e4aadb6cdd21f6fe2addc036c8c6c4fdbb1",
+        "trials": 0,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+        "sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+      },
+      {
+        "path": "docs/investigation-resume/evidence/model/fixture-final.json",
+        "report_hash": "7ed94cad77ddc7801968f6db3095d6baa1e088b3066551bf08afe3d18ea3c414",
+        "trials": 2,
+        "independent_replay": true,
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+      }
+    ],
+    "genuine_requests": 0
+  },
+  "security": {
+    "container_passed": true,
+    "HTTP_checks": 32,
+    "credential_bearing_public_start_refused": true,
+    "public_inference_enabled": false,
+    "credential_scan": {
+      "checked_utc": "2026-10-28T17:19:28.425447+00:00",
+      "text_inputs": 48,
+      "bytes": 1851817,
+      "patterns": [
+        "private_key",
+        "github_token",
+        "aws_key",
+        "hf_token",
+        "openai_token",
+        "literal_authorization",
+        "literal_baseten_assignment"
+      ],
+      "findings": [],
+      "passed": true,
+      "scope": "Bounded changed source/public evidence, compiled frontend and own saved local container logs; known dummy fixtures excluded. No private provider receipts, secret-file values or environment dump. Not an exhaustive guarantee."
+    }
+  },
+  "limits": [
+    "Actual local Chromium with emulated viewports/touch and software SwiftShader, not physical-device certification",
+    "Interrupted partial browser runs retained separately and excluded from completed counts",
+    "Render live identity, exact-commit dashboard availability and rollback artifact remain owner-verification steps",
+    "Existing ephemeral SQLite/browser eviction limits unchanged"
+  ],
+  "genuine_inference_requests": 0,
+  "deployment_performed": false,
+  "merge_performed": false,
+  "paid_resources_or_charges_initiated": false,
+  "CI": "Final exact-commit result in handoff after push"
+}

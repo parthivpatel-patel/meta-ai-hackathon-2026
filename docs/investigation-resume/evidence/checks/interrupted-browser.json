@@ -1,0 +1,17 @@
+{
+  "status": "interrupted/hung harness after desktop evidence; no completed-suite claim",
+  "runner_pid": 272476,
+  "terminated_owned_processes": [
+    272476,
+    272488,
+    272505,
+    272506,
+    272527,
+    272530,
+    272543,
+    272895,
+    272902,
+    272906
+  ],
+  "completed_artifacts_preserved": true
+}

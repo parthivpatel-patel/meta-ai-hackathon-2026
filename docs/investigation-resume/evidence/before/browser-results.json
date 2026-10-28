@@ -1,0 +1,18 @@
+{
+  "mode": "before",
+  "base": "http://127.0.0.1:8081",
+  "results": [
+    {
+      "width": 1440,
+      "view": "counterfactual-capture-disabled",
+      "axe_violations": 0
+    },
+    {
+      "width": 1440,
+      "reproduced": true,
+      "cause": "Counterfactual preview disables new capture; inspector has no resume action",
+      "trials": 1,
+      "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614"
+    }
+  ]
+}

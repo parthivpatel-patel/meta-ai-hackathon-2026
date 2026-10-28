@@ -1,0 +1,47 @@
+{
+  "mode": "after",
+  "base": "http://127.0.0.1:8082",
+  "results": [
+    {
+      "width": 390,
+      "view": "counterfactual-resume-enabled",
+      "axe_violations": 0
+    },
+    {
+      "width": 390,
+      "view": "resumed-one-test-investigation",
+      "axe_violations": 0
+    },
+    {
+      "width": 390,
+      "view": "observed-capture-eligible",
+      "axe_violations": 0
+    },
+    {
+      "width": 390,
+      "view": "restored-observed-investigation",
+      "axe_violations": 0
+    },
+    {
+      "width": 390,
+      "resume_mutations": 0,
+      "observed_return_mutations": 0,
+      "prior_trials_preserved": true,
+      "recovery_reproduced": true,
+      "continued_trials": 2,
+      "original_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "restored_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "post_paths": [
+        "/api/v4/simulate",
+        "/api/v4/simulate",
+        "/api/v4/investigate",
+        "/api/v4/investigate",
+        "/api/v4/simulate",
+        "/api/v4/simulate",
+        "/api/v4/investigate",
+        "/api/v4/investigate"
+      ],
+      "genuine_requests": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-28T17:19:28.425447+00:00",
+  "text_inputs": 48,
+  "bytes": 1851817,
+  "patterns": [
+    "private_key",
+    "github_token",
+    "aws_key",
+    "hf_token",
+    "openai_token",
+    "literal_authorization",
+    "literal_baseten_assignment"
+  ],
+  "findings": [],
+  "passed": true,
+  "scope": "Bounded changed source/public evidence, compiled frontend and own saved local container logs; known dummy fixtures excluded. No private provider receipts, secret-file values or environment dump. Not an exhaustive guarantee."
+}

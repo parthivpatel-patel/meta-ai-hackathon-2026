@@ -99,7 +99,7 @@ const path = require('node:path');
       await page.getByLabel('Import recording',{exact:true}).setInputFiles({name:'missing.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({schema:'forge-telemetry-1',machine_id:'pump-104',samples:[{timestamp:'2026-10-27T08:00:00Z',sensor_id:'rpm',component_id:'motor',value:null,unit:'rpm'}]}))});
       await page.getByText(/Imported operator recording/).waitFor();await page.getByRole('button',{name:'Machine',exact:true}).click();
       await page.waitForFunction(() => document.querySelector('canvas')?.dataset.rotorPhase === 'unavailable');
-      if(await page.getByRole('button',{name:'Investigate selected component',exact:true}).isEnabled()) throw Error('Imported data acquired an intervention oracle');
+      if(await page.getByRole('button',{name:'Capture selected component',exact:true}).isEnabled()) throw Error('Imported data acquired an intervention oracle');
       await page.getByRole('button',{name:'Use 2D inspection',exact:true}).click();await page.getByText('2D inspection mode',{exact:true}).waitFor();await capture('accessible-fallback');
       row.journeys.push('F: malformed import preserves capture, missing data stops phase, accessible 2D inspection');
       row.errors=errors;row.external_requests=modelRequests;row.decision=report.decision;row.source=report.provider;

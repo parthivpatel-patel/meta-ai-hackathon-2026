@@ -1,0 +1,214 @@
+
+> forge-dashboard@0.1.0 test
+> vitest run --run src/industrial/Workstation.resume.test.tsx -t resumes the reported counterfactual
+
+
+ RUN  v5.0.5 /workspace/meta-ai-hackathon-2026/frontend
+
+stderr | src/industrial/Workstation.resume.test.tsx > resumes the reported counterfactual bearing investigation without recapturing or executing tests
+Encountered two children with the same key, `319`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+
+ ❯ src/industrial/Workstation.resume.test.tsx (4 tests | 1 failed | 3 skipped) 419ms
+   × resumes the reported counterfactual bearing investigation without recapturing or executing tests 417ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/industrial/Workstation.resume.test.tsx > resumes the reported counterfactual bearing investigation without recapturing or executing tests
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name "Resume existing investigation"
+
+Here are the accessible roles:
+
+  heading:
+
+  Name "Component inspector":
+  [36m<h2 />[39m
+
+  --------------------------------------------------heading:
+
+  Name "Bearing housing":
+  [36m<h3 />[39m
+
+  --------------------------------------------------paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------table:
+
+  Name "Associated instruments":
+  [36m<table />[39m
+
+  --------------------------------------------------
+  caption:
+
+  Name "Associated instruments":
+  [36m<caption />[39m
+
+  --------------------------------------------------
+  rowgroup:
+
+  Name "":
+  [36m<thead />[39m
+
+  Name "":
+  [36m<tbody />[39m
+
+  --------------------------------------------------
+  row:
+
+  Name "Sensor Value Quality":
+  [36m<tr />[39m
+
+  Name "vibration 2.95 mm/s VALID":
+  [36m<tr />[39m
+
+  --------------------------------------------------
+  columnheader:
+
+  Name "Sensor":
+  [36m<th />[39m
+
+  Name "Value":
+  [36m<th />[39m
+
+  Name "Quality":
+  [36m<th />[39m
+
+  --------------------------------------------------
+  rowheader:
+
+  Name "vibration":
+  [36m<th[39m
+    [33mscope[39m=[32m"row"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  cell:
+
+  Name "2.95 mm/s":
+  [36m<td />[39m
+
+  Name "VALID":
+  [36m<td />[39m
+
+  --------------------------------------------------button:
+
+  Name "Investigate selected component":
+  [36m<button[39m
+    [33mdisabled[39m=[32m""[39m
+  [36m/>[39m
+
+  --------------------------------------------------paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"muted"[39m
+  [36m/>[39m
+
+  --------------------------------------------------group:
+
+  Name "":
+  [36m<details />[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<aside[39m
+  [33mclass[39m=[32m"station-panel component-inspector"[39m
+[36m>[39m
+  [36m<h2>[39m
+    [0mComponent inspector[0m
+  [36m</h2>[39m
+  [36m<h3>[39m
+    [0mBearing housing[0m
+  [36m</h3>[39m
+  [36m<p>[39m
+    [0mWatch: unusual readings[0m
+    [0m. Display thresholds are not a verified diagnosis.[0m
+  [36m</p>[39m
+  [36m<table>[39m
+    [36m<caption>[39m
+      [0mAssociated instruments[0m
+    [36m</caption>[39m
+    [36m<thead>[39m
+      [36m<tr>[39m
+        [36m<th>[39m
+          [0mSensor[0m
+        [36m</th>[39m
+        [36m<th>[39m
+          [0mValue[0m
+        [36m</th>[39m
+        [36m<th>[39m
+          [0mQuality[0m
+        [36m</th>[39m
+      [36m</tr>[39m
+    [36m</thead>[39m
+    [36m<tbody>[39m
+      [36m<tr>[39m
+        [36m<th[39m
+          [33mscope[39m=[32m"row"[39m
+        [36m>[39m
+          [0mvibration[0m
+        [36m</th>[39m
+        [36m<td>[39m
+          [0m2.95 mm/s[0m
+        [36m</td>[39m
+        [36m<td>[39m
+          [0mVALID[0m
+        [36m</td>[39m
+      [36m</tr>[39m
+    [36m</tbody>[39m
+  [36m</table>[39m
+  [36m<button[39m
+    [33mdisabled[39m=[32m""[39m
+  [36m>[39m
+    [0mInvestigate selected component[0m
+  [36m</button>[39m
+  [36m<p[39m
+    [33mclass[39m=[32m"muted"[39m
+  [36m>[39m
+    [0mCapture requires samples through sequence319 with no manual actions. Return to observed simulation before capturing a new investigation. Use the position slider to inspect the full window. Recorded imports have no intervention oracle.[0m
+  [36m</p>[39m
+  [36m<details>[39m
+    [36m<summary>[39m
+      [0mComponent provenance[0m
+    [36m</summary>[39m
+    [36m<p>[39m
+      [0mprocedural[0m
+      [0m. Parent: pump-104; stable ID: [0m
+      [0mbearing[0m
+      [0m. All machine controls modify simulation/replay only.[0m
+    [36m</p>[39m
+  [36m</details>[39m
+[36m</aside>[39m
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/industrial/Workstation.resume.test.tsx:61:20
+     59| it("resumes the reported counterfactual bearing investigation without …
+     60|   const inspector = await reproduce();
+     61|   expect(inspector.getByRole("button", {name:"Resume existing investig…
+       |                    ^
+     62|   expect(inspector.getByRole("button", {name:"Capture new observation …
+     63|   expect(inspector.getByText(/These samples are simulated experiment o…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 skipped (4)
+   Start at  15:50:45
+   Duration  1.02s (tests 46%, environment 37%, import 9%, setup 5%, transform 2%)
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

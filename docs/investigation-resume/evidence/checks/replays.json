@@ -1,0 +1,63 @@
+{
+  "count": 7,
+  "before_after_one_test_identical": true,
+  "reports": [
+    {
+      "path": "docs/investigation-resume/evidence/after/1440-continued-report.json",
+      "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+      "trials": 2,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "sha256": "b3d1b77a40add23d6ed56346ef5d82ef87e4e9ea4b9c772c6ab57831ecd76b8b"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/after/1440-one-test-report.json",
+      "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "trials": 1,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/after/390-continued-report.json",
+      "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+      "trials": 2,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "sha256": "b3d1b77a40add23d6ed56346ef5d82ef87e4e9ea4b9c772c6ab57831ecd76b8b"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/after/390-one-test-report.json",
+      "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "trials": 1,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/before/1440-one-test-report.json",
+      "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "trials": 1,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/model/fixture-initial.json",
+      "report_hash": "1940bf3f0c3e963e053c390a27589e4aadb6cdd21f6fe2addc036c8c6c4fdbb1",
+      "trials": 0,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/model/fixture-final.json",
+      "report_hash": "7ed94cad77ddc7801968f6db3095d6baa1e088b3066551bf08afe3d18ea3c414",
+      "trials": 2,
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+    }
+  ],
+  "genuine_requests": 0
+}

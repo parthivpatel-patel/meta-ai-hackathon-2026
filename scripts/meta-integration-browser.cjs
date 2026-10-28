@@ -35,7 +35,7 @@ const { execFileSync } = require("node:child_process");
     await page.getByRole("button", { name: "Focus scenario window", exact: true }).click();
     const captureResponse = page.waitForResponse((r) => r.url().endsWith("/api/v4/investigate"));
     const started = Date.now();
-    await page.getByRole("button", { name: "Investigate selected component", exact: true }).click();
+    await page.getByRole("button", { name: "Capture selected component", exact: true }).click();
     const initial = await (await captureResponse).json();
     const capture_ms = Date.now() - started;
     if (initial.request.experiments !== 0) throw Error("Capture already contains trials");
@@ -73,7 +73,7 @@ const { execFileSync } = require("node:child_process");
       if (!r.ok()) throw Error("Recorded experiment rejected");
       report = await r.json();
       experiment_ms.push(Date.now() - before);
-      await page.waitForFunction(() => [...document.querySelectorAll("button")].some((b) => b.textContent.trim() === "Investigate selected component" && b.disabled));
+      await page.waitForFunction(() => [...document.querySelectorAll("button")].some((b) => b.textContent.trim() === "Capture new observation window" && b.disabled));
       if (advanceRequests !== report.trials.length) throw Error("Repeated click amplified experiments");
     }
     if (report.decision.status !== "SUPPORTED_SYNTHETIC") throw Error("Expected synthetic vibration support");

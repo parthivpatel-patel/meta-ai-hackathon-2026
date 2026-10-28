@@ -125,7 +125,7 @@ const fs = require("node:fs");
       );
       await page
         .getByRole("button", {
-          name: "Investigate selected component",
+          name: "Capture selected component",
           exact: true,
         })
         .click();
@@ -148,7 +148,7 @@ const fs = require("node:fs");
         steps.push(Date.now() - start);
         await page.waitForFunction(() =>
           [...document.querySelectorAll("button")].some((button) =>
-            button.textContent.trim() === "Investigate selected component" && button.disabled),
+            button.textContent.trim() === "Capture new observation window" && button.disabled),
         );
       }
       if (
@@ -218,7 +218,7 @@ const fs = require("node:fs");
       if (
         await page
           .getByRole("button", {
-            name: "Investigate selected component",
+            name: "Capture selected component",
             exact: true,
           })
           .isEnabled()

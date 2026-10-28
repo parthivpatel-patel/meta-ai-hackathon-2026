@@ -1,0 +1,1 @@
+Independent function and actual CLI replay passed for 7 reports; before/after one-test payloads identical
