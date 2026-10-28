@@ -1,17 +1,17 @@
 {
   "algorithm": "sha256",
-  "scope": "Phase 9 docs/public metadata/check transcripts except this manifest; pre-attempt snapshots retained, current offline response repair included; no private provider/email receipt",
-  "count": 38,
+  "scope": "Phase 9 docs/public metadata and check transcripts, including separately authorized second genuine smoke summary; historical snapshots retained; excludes this manifest and all private email/provider receipts/reports",
+  "count": 42,
   "files": [
     {
       "path": "READINESS.md",
-      "bytes": 7683,
-      "sha256": "9b678e25c384e2dcf138a9f206aa8fab39b4f87460d9757804a42b8687979b9f"
+      "bytes": 8023,
+      "sha256": "66da71de8093ce24b0a9d9c7e9b0d827590e0ec592c7dcbf2a926d568c8b7222"
     },
     {
       "path": "README.md",
-      "bytes": 2698,
-      "sha256": "b8d43142e5c5cbe867be54d1443aaa2a18253f537186b57be1393a5baeb3c6ab"
+      "bytes": 3191,
+      "sha256": "387fb763c08cd4a47598a50143228c0f3f204aaf5ead4069b8e471aed0f9c16d"
     },
     {
       "path": "RELEASE.md",
@@ -20,8 +20,13 @@
     },
     {
       "path": "RESPONSE_REPAIR.md",
-      "bytes": 8417,
-      "sha256": "a045354feeb0c979c98b21458c78b87d7f7d21bda18a7e2a5231eec8922a5f90"
+      "bytes": 8754,
+      "sha256": "5cf4143b3753ba377b6dd7c94ac23def459d50e26ceee9cde534454529683438"
+    },
+    {
+      "path": "SECOND_SMOKE.md",
+      "bytes": 6284,
+      "sha256": "c83ee7e02a9a1c9f9ff559ca4f2769e3b9414289fdabe72b9ec713faa07daa0d"
     },
     {
       "path": "changed-files.json",
@@ -167,6 +172,21 @@
       "path": "evidence/runtime-readiness.json",
       "bytes": 328,
       "sha256": "bc7e0fc4da8ec955ba70a652ac8607b172be0219361ad2b8cbe677c8331e853f"
+    },
+    {
+      "path": "evidence/second-genuine-smoke.json",
+      "bytes": 3574,
+      "sha256": "7fc9512ffdbf0bed26575f2643b4fdb4a705587e50831d84d96804f9cab88129"
+    },
+    {
+      "path": "evidence/second-smoke-security-scan.json",
+      "bytes": 287,
+      "sha256": "f3d8ffdd5035f382ec39ef74033adfbb683a34c679729b61cb2efc60158c20da"
+    },
+    {
+      "path": "evidence/second-smoke-validation.json",
+      "bytes": 666,
+      "sha256": "875bf4f764aaa303889fc65bdd1117bf229295438632f6f83f3237914124420c"
     },
     {
       "path": "evidence/security-scan.json",

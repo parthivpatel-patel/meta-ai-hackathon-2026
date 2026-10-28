@@ -1,0 +1,7 @@
+{
+  "checked_local": "2026-10-28T19:14:28.313097-04:00",
+  "text_files": 9,
+  "findings": [],
+  "passed": true,
+  "scope": "Bounded changed documentation and sanitized metadata only; no raw response, private receipt, report or credential copied into Git. Not an exhaustive guarantee."
+}

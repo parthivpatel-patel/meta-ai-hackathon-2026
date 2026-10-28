@@ -1,3 +1,9 @@
+# Current Phase 9 authorization — both attempts consumed
+
+The separately authorized second genuine smoke passed: HTTP200, exact event model, finish `stop`, three structured hypotheses and independent synthetic replay. **Cumulative requests 2; remaining authorized requests 0.** See [actual evidence and minimal integration/release plan](docs/phase-9-activation/SECOND_SMOKE.md). No follow-up workstation request, public activation or deployment is authorized. Older counts/readiness statements below describe prior milestones; original limits and safeguards remain.
+
+---
+
 # Current Phase 9 authorization — first attempt consumed
 
 One genuine private request returned HTTP 200 and `meta-models/muse-spark-open-1026`, then failed structured validation. Financial documentary review passed; the credential binding was ready. The allowance is **consumed**, with no additional genuine requests authorized. [Offline response repair, evidence and exact second-test prerequisites](docs/phase-9-activation/RESPONSE_REPAIR.md) supersede historical readiness/account statements below. No public activation, fallback or deployment is authorized; all request limits and financial safeguards remain.

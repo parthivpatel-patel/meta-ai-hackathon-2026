@@ -1,0 +1,16 @@
+{
+  "checked_local": "2026-10-28T19:14:28.299875-04:00",
+  "tested_application_commit": "c3075a376d288c0098fbe75189778ab8b10bd5e9",
+  "evidence_only_update": true,
+  "runtime_code_changes": false,
+  "completed_regression_tests_repeated": false,
+  "first_ledger_preserved": true,
+  "second_receipt_mode": "0600",
+  "offline_actual_receipt_schema_hash_provenance_and_replay": "passed with network connections disabled",
+  "genuine_requests_this_authorization": 1,
+  "cumulative_genuine_requests": 2,
+  "remaining_authorized_genuine_requests": 0,
+  "public_inference_activated": false,
+  "deployment_performed": false,
+  "original_financial_evidence_unchanged": true
+}

@@ -6,7 +6,7 @@ FORGE investigates abnormal equipment measurements by comparing possible causes,
 
 The candidate workstation at `/demo` connects a selectable 3D pump and motor to coupled synthetic telemetry, diagnostic captures, counterfactual tests and independently checked results. Use Cases → **Investigation library** (`/demo?view=investigations`) for the preserved seven-case workflow inside the shared navigation. The public URL may still run the earlier release; this branch has not been deployed.
 
-Current private activation status: [Phase 9 response repair](docs/phase-9-activation/RESPONSE_REPAIR.md). One genuine request returned HTTP 200 and the exact event model, then failed structured validation. Its authorization is consumed. The adapter repair is offline-tested; no additional genuine request or public activation is authorized. Phase 8 diagnostic software is unchanged.
+Current private activation status: [Phase 9 genuine smoke verified](docs/phase-9-activation/SECOND_SMOKE.md). The separately authorized second request returned HTTP 200, the exact event model and three valid hypotheses, then passed independent synthetic verification. Cumulative genuine requests: 2; both authorizations are consumed. No further request or public activation is authorized. Phase 8 diagnostic software is unchanged.
 
 ## Capabilities
 
@@ -18,7 +18,7 @@ Current private activation status: [Phase 9 response repair](docs/phase-9-activa
 - JSON/HTML reports with offline numerical replay, explicit stopping reasons and validated browser-local checkpoint recovery.
 - Four tests are a maximum: the default bearing case completes after two, while unresolved cases can legitimately exhaust the budget.
 
-The public demo uses **rules-based proposals, not live Meta inference**. The candidate can also replay explicitly labeled recorded proposals; fixture imports are never presented as genuine inference. A protected Baseten adapter targets `meta-models/muse-spark-open-1026`. Financial documentary review passed and the private key binding was ready, but the single genuine response failed structured validation; genuine structured integration remains unverified. The consumed authorization does not permit another request. Provider credentials must never be added to the public server.
+The public demo uses **rules-based proposals, not live Meta inference**. The candidate can also replay explicitly labeled recorded proposals; fixture imports are never presented as genuine inference. A protected Baseten adapter targets `meta-models/muse-spark-open-1026`. Financial documentary review passed and the private key binding was ready. After the first response failed validation, a separately authorized second private smoke passed schema/provenance checks and independent numerical replay. This verifies one synthetic pressure/sensor investigation, not genuine Meta integration into the public or coupled 3D workstation. Both allowances are consumed. Provider credentials must never be added to the public server.
 
 ## Architecture
 

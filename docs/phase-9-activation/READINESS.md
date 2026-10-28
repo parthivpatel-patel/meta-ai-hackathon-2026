@@ -1,3 +1,5 @@
+> Latest status: [second genuine smoke verified](SECOND_SMOKE.md). Financial documentary review and ready private binding passed; the second request passed schema/provenance/replay. Cumulative genuine requests 2; both allowances consumed. Historical unresolved-gate and first-attempt statements below are superseded for current readiness.
+
 > Historical pre-attempt snapshot. Current financial/credential review and consumed authorization are recorded in [response repair](RESPONSE_REPAIR.md): one HTTP200/exact-model request failed structured validation; no additional genuine request is authorized. Earlier unresolved-gate statements below describe their original observation time.
 
 # Financial, credential and integration readiness

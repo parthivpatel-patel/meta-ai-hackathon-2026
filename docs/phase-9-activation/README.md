@@ -1,3 +1,9 @@
+# Latest result — genuine private smoke verified
+
+The separately authorized second request passed: HTTP200, exact event model, `stop`, three structured hypotheses and independent synthetic replay. **Cumulative genuine requests 2; both authorizations consumed; remaining requests 0.** See [actual evidence and minimal integration/release plan](SECOND_SMOKE.md). No public or coupled-workstation integration/deployment is claimed. The reports and counts below are historical milestones.
+
+---
+
 # Current status — one genuine attempt consumed
 
 See [response repair](RESPONSE_REPAIR.md) for the latest status. The first request returned HTTP200 and the exact event model, but failed structured validation. Financial documentary review passed; the key binding was ready. Offline repair sends no additional genuine requests. No second attempt is authorized. The original pre-attempt report and validation snapshot below are retained as historical evidence.

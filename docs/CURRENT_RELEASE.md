@@ -1,3 +1,9 @@
+# Current Phase 9 — genuine private smoke verified
+
+The second private smoke against exact repair commit `c3075a376d288c0098fbe75189778ab8b10bd5e9` passed HTTP/model identity, structured hypotheses, provenance and independent numerical verification. [Actual result and minimal integration/release plan](phase-9-activation/SECOND_SMOKE.md). **Cumulative genuine requests 2; both authorizations consumed; no further inference authorized.** This evidence-only update does not change application code or the deployed public demo. Public inference remains disabled. Earlier sections below are historical snapshots, not current request allowances.
+
+---
+
 # Current Phase 9 private response repair
 
 Remain on `feature/forge-phase-9-meta-activation`. [Current response-repair report](phase-9-activation/RESPONSE_REPAIR.md): genuine total **1**, HTTP200/exact model, structured validation failed; allowance consumed. Financial documentary review passed and private binding was ready. The private adapter now has offline-verified parsing/diagnostics improvements; no additional genuine request, public activation or deployment is authorized. Frontend, diagnostic engines and deployed application remain unchanged. Final handoff supplies the review commit/CI. The sections below are historical milestone snapshots.

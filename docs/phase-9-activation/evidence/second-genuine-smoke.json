@@ -1,0 +1,104 @@
+{
+  "recorded_local": "2026-10-28T19:10:53.390866-04:00",
+  "repair_commit": "c3075a376d288c0098fbe75189778ab8b10bd5e9",
+  "financial_gate": "PASS: previously reviewed documentary event-key protection unchanged",
+  "credential_gate": "READY: observed current protected binding scoped to inference.baseten.co",
+  "first_genuine_request_count": 1,
+  "second_authorization_request_count": 1,
+  "cumulative_genuine_request_count": 2,
+  "both_authorizations_consumed": true,
+  "remaining_authorized_genuine_requests": 0,
+  "do_not_retry": true,
+  "http_status": 200,
+  "returned_model": "meta-models/muse-spark-open-1026",
+  "finish_reason": "stop",
+  "reasoning_effort_requested": "low",
+  "provider_reported_usage": {
+    "prompt_tokens": 814,
+    "completion_tokens": 454,
+    "total_tokens": 1268
+  },
+  "reported_reasoning_tokens": 288,
+  "elapsed_attempt_ms": 2507.914,
+  "elapsed_workflow_ms": 2557.736,
+  "response_valid": true,
+  "validation_code": null,
+  "sanitized_diagnostics": {
+    "attempt": 1,
+    "requested_model": "meta-models/muse-spark-open-1026",
+    "returned_model": "meta-models/muse-spark-open-1026",
+    "http_status": 200,
+    "status": "validated",
+    "response_valid": true,
+    "error_code": null,
+    "elapsed_ms": 2507.914,
+    "provider_reported_usage": {
+      "prompt_tokens": 814,
+      "completion_tokens": 454,
+      "total_tokens": 1268
+    },
+    "validation_code": null,
+    "response_structure": {
+      "choices_type": "array",
+      "choices_count": 1,
+      "finish_reason": "stop",
+      "message_type": "object",
+      "content_type": "string",
+      "content_characters": 779,
+      "reasoning_present": true,
+      "reasoning_type": "string",
+      "tool_calls_present": false,
+      "refusal_present": false,
+      "reasoning_tokens": 288,
+      "json_wrapper": "none"
+    }
+  },
+  "source": "meta_http_response",
+  "hypothesis_ids": [
+    "process-pressure",
+    "sensor-pressure",
+    "normal"
+  ],
+  "independent_replay_status": "SUPPORTED_SYNTHETIC",
+  "independent_findings": [
+    "process-pressure",
+    "sensor-pressure"
+  ],
+  "experiments": 2,
+  "hypothesis_evidence_status": [
+    {
+      "id": "process-pressure",
+      "status": "SUPPORTED"
+    },
+    {
+      "id": "sensor-pressure",
+      "status": "SUPPORTED"
+    },
+    {
+      "id": "normal",
+      "status": "CONTRADICTED"
+    }
+  ],
+  "input_hash": "c89f53822d66840c1f5739c8bc675c1ba9e967b6a8384283d1d6719080579e75",
+  "output_hash": "5399b1e5a5ffa8bc11dc592f1238a0d3dfd5d8f3819e39b91f9ce8e3e900e09a",
+  "observed_input_binding_verified": true,
+  "structured_output_hash_verified": true,
+  "private_receipt_verified": true,
+  "private_receipt_sha256": "e6bc7a318e2edac045f863e3bfd4d82c8585b5e065d8717e80c106886478d289",
+  "private_receipt_mode": "0600",
+  "first_ledger_unchanged_sha256": "1e0acfc1d49120f2b76e03d7756aa080bb97343ef1aa9de17984528260035825",
+  "limits": {
+    "additional_requests_max": 1,
+    "max_output_tokens": 1024,
+    "retries": 0,
+    "attempt_seconds": 15,
+    "overall_seconds": 30,
+    "paid_fallback": false,
+    "public_activation": false
+  },
+  "scope": "One private synthetic legacy pressure/sensor smoke, not a coupled-workstation capture, raw multimodal inference or physical failure proof",
+  "causality_limit": "Second attempt succeeded with the repaired client; the first raw response was discarded, so this does not identify which change caused the improvement",
+  "cost": "Unmeasured; provider token counts are not an invoice",
+  "source_or_deployment_changes": false,
+  "offline_verification_network_connections": 0
+}

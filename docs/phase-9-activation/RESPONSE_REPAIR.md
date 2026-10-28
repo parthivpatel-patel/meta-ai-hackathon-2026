@@ -1,3 +1,5 @@
+> Follow-up: the separately authorized [second genuine smoke](SECOND_SMOKE.md) succeeded on exact repair commit `c3075a3`. Cumulative genuine requests are now 2, both authorizations consumed. The one-request count and second-test prerequisites below are the preserved pre-second-attempt repair snapshot. No third attempt is authorized.
+
 # Phase 9 — offline response repair
 
 ## Current state
