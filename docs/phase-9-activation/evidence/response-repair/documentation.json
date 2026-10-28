@@ -1,0 +1,73 @@
+{
+  "scope": "Unauthenticated official documentation GETs only; no inference. Public Muse family documentation is not independent event-alias entitlement verification.",
+  "sources": [
+    {
+      "url": "https://docs.baseten.co/_llms/documentation.txt",
+      "status": 200,
+      "redirect": null,
+      "sha256": "4da9f48be09375b22500ea67697d51fe5e84c6d81920e4ecd11a4c695603217a"
+    },
+    {
+      "url": "https://docs.baseten.co/inference/model-apis/overview.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "c66bdca0b80a261c5de4de2e19d1f22b4dfe2d816992d7788f868c204ac7830f"
+    },
+    {
+      "url": "https://www.baseten.co/library/muse-spark-open/",
+      "status": 200,
+      "redirect": null,
+      "sha256": "915dafa7724177535e68f2b96a7170e3c5b8a025e1e500b10434e77a2d145cb6"
+    },
+    {
+      "url": "https://docs.baseten.co/inference/model-apis/reasoning.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "1cf6b980ab4e2c213b2a52dc4c148247e5ef671694044877ed2ae6165a10e583"
+    },
+    {
+      "url": "https://docs.baseten.co/inference/structured-outputs.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "f32b5af7615bb86cfc6b877bf08cbd119d826a2f415b1546f640e2575b3e71be"
+    },
+    {
+      "url": "https://docs.baseten.co/inference/overview.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "efc25585caee259c1bc61c7a64e324907e079c483d7342df995d45542a8fe72e"
+    },
+    {
+      "url": "https://dev.meta.ai/docs/muse-spark-open/",
+      "status": 308,
+      "redirect": "/docs/muse-spark-open",
+      "sha256": "7c040f8633b8823d72ed63da9b3b2dfe9846e912c66a64c9433ec9c4815d76c2"
+    },
+    {
+      "url": "https://docs.baseten.co/reference/inference-api/chat-completions.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "01e658b2d37531c52a0d82b732f6d7a13f146483360104657ea8a9c5ce3b7984"
+    },
+    {
+      "url": "https://docs.baseten.co/inference/json-mode.md",
+      "status": 200,
+      "redirect": null,
+      "sha256": "722a3ed476dd31acf55775c952a7f189b6d1c8be93ef340b384beff10d31748e"
+    },
+    {
+      "url": "https://dev.meta.ai/docs/muse-spark-open",
+      "status": 200,
+      "redirect": null,
+      "sha256": "a0629ad3d9c8f7a26bfacc1c68dab92d763999ff7ea26753141cddca3ac8f1be"
+    }
+  ],
+  "findings": [
+    "Muse always reasons; low/medium/high/xhigh documented; xhigh default",
+    "max_tokens caps reasoning plus final answer; separate reasoning.max_tokens enforcement is not documented for Muse",
+    "Final answer is message.content; reasoning is message.reasoning_content",
+    "Muse does not enforce json_object or json_schema; prompt plus local strict validation required",
+    "OpenAI-compatible Chat Completions envelope remains supported"
+  ],
+  "raw_sources_committed": false
+}

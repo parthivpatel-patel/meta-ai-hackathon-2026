@@ -1,3 +1,9 @@
+# Current Phase 9 authorization — first attempt consumed
+
+One genuine private request returned HTTP 200 and `meta-models/muse-spark-open-1026`, then failed structured validation. Financial documentary review passed; the credential binding was ready. The allowance is **consumed**, with no additional genuine requests authorized. [Offline response repair, evidence and exact second-test prerequisites](docs/phase-9-activation/RESPONSE_REPAIR.md) supersede historical readiness/account statements below. No public activation, fallback or deployment is authorized; all request limits and financial safeguards remain.
+
+---
+
 # Phase 9 current authorization and readiness
 
 The October 28 Phase 9 directive conditionally authorizes the existing single Baseten smoke only after financial and secure credential gates pass. Do not request that same routine authorization again. The owner confirms $100 credits/no added payment method but explicitly states this is not verified hard spending protection. No genuine request has been sent; the allowance remains unused. Current runtime has no ready secret binding/key in this process. [Current evidence and exact missing proof](docs/phase-9-activation/READINESS.md).

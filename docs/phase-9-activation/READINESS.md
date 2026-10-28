@@ -1,3 +1,5 @@
+> Historical pre-attempt snapshot. Current financial/credential review and consumed authorization are recorded in [response repair](RESPONSE_REPAIR.md): one HTTP200/exact-model request failed structured validation; no additional genuine request is authorized. Earlier unresolved-gate statements below describe their original observation time.
+
 # Financial, credential and integration readiness
 
 ## Financial result: unresolved

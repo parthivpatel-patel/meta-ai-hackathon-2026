@@ -1,3 +1,5 @@
+> Historical manual-release guide for the pre-repair candidate. The latest private adapter changes and consumed attempt are in [response repair](RESPONSE_REPAIR.md). No deployment is authorized by that repair. The old image/SHA/runtime-delta statements below apply to their original candidate; do not use them as proof that a newer repair commit was built or deployed. Public no-inference configuration and rollback precautions remain required.
+
 # Phase 9 exact-commit manual release
 
 This is a software/public-mock release candidate based on Phase 8 `03cbc5295168b9c8b33ad98eb394e62f047ba105`. Use the **full Phase 9 SHA and successful CI run from the final handoff**. Only the private smoke timeout guard changes at runtime; diagnostic engines and compiled frontend assets are byte-identical to Phase 8. The new local Docker image is `sha256:8e6d01140a118cb647b5a31fc80826be3634e463286e2583807efad3a1d07656`.

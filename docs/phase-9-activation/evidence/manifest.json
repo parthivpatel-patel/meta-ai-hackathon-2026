@@ -1,22 +1,27 @@
 {
   "algorithm": "sha256",
-  "scope": "Phase 9 docs/public metadata/check transcripts except this manifest; no private provider/fixture receipt",
-  "count": 28,
+  "scope": "Phase 9 docs/public metadata/check transcripts except this manifest; pre-attempt snapshots retained, current offline response repair included; no private provider/email receipt",
+  "count": 38,
   "files": [
     {
       "path": "READINESS.md",
-      "bytes": 7339,
-      "sha256": "e4c80a9eac3e08cbba779677aeb423bc6baade52916dbc5e6665a4ce320ebe9e"
+      "bytes": 7683,
+      "sha256": "9b678e25c384e2dcf138a9f206aa8fab39b4f87460d9757804a42b8687979b9f"
     },
     {
       "path": "README.md",
-      "bytes": 2231,
-      "sha256": "a95a84f3538e0f042d7a30a94daed8b617ce75149e52aba0ee4a6772296e1723"
+      "bytes": 2698,
+      "sha256": "b8d43142e5c5cbe867be54d1443aaa2a18253f537186b57be1393a5baeb3c6ab"
     },
     {
       "path": "RELEASE.md",
-      "bytes": 4042,
-      "sha256": "eeca0a2ab941cc034bb95fac138435cd2bdc8bc40c45166cb01c1c28e641baf0"
+      "bytes": 4488,
+      "sha256": "13eaccdec2ec252d884a99faeec5114c4eaf80c83b6316143248c58e493848e4"
+    },
+    {
+      "path": "RESPONSE_REPAIR.md",
+      "bytes": 8417,
+      "sha256": "a045354feeb0c979c98b21458c78b87d7f7d21bda18a7e2a5231eec8922a5f90"
     },
     {
       "path": "changed-files.json",
@@ -97,6 +102,51 @@
       "path": "evidence/owner-confirmation.json",
       "bytes": 517,
       "sha256": "278f22eab39b6c1006ed729232adb8f375378c9f6456262bfb50f3c896228849"
+    },
+    {
+      "path": "evidence/response-repair/backend-tests.txt",
+      "bytes": 931,
+      "sha256": "def9e987a40c402ff724187bbdca1e8fc5623d2dfa20003dc1a87566fa5b8d79"
+    },
+    {
+      "path": "evidence/response-repair/documentation.json",
+      "bytes": 2791,
+      "sha256": "da8e64aedcf6b51a63f73df5d3b15c2715eeb5335f837c62e51d1637321e3128"
+    },
+    {
+      "path": "evidence/response-repair/first-genuine-attempt.json",
+      "bytes": 2093,
+      "sha256": "1e0acfc1d49120f2b76e03d7756aa080bb97343ef1aa9de17984528260035825"
+    },
+    {
+      "path": "evidence/response-repair/integration-tests.txt",
+      "bytes": 771,
+      "sha256": "6190ba214fbc2ccfbd050225130b311f6d0b3a5d45718c519930267e29c36fd7"
+    },
+    {
+      "path": "evidence/response-repair/offline-diagnostics.json",
+      "bytes": 5884,
+      "sha256": "187427f37371a74e6b9ed00c6a431dcdbf52f672de4a67019bb1297323db307d"
+    },
+    {
+      "path": "evidence/response-repair/ruff.txt",
+      "bytes": 19,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "evidence/response-repair/security-scan.json",
+      "bytes": 261,
+      "sha256": "144c05dc0130de05917638c6ef66b8784276476ffafdf98dd7a946e9f201b073"
+    },
+    {
+      "path": "evidence/response-repair/targeted-tests.txt",
+      "bytes": 99,
+      "sha256": "e50ff158ccfefcf4d013a04cdc0002cd592d3f808f4b7f386d94ab6e39d92d76"
+    },
+    {
+      "path": "evidence/response-repair/validation.json",
+      "bytes": 1186,
+      "sha256": "05128ce98a70aa4f4bf84cecedc5c2206d7ada29b3f781a0c1084d4d1dac067e"
     },
     {
       "path": "evidence/ruff.txt",

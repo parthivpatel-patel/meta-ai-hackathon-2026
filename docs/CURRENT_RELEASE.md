@@ -1,3 +1,9 @@
+# Current Phase 9 private response repair
+
+Remain on `feature/forge-phase-9-meta-activation`. [Current response-repair report](phase-9-activation/RESPONSE_REPAIR.md): genuine total **1**, HTTP200/exact model, structured validation failed; allowance consumed. Financial documentary review passed and private binding was ready. The private adapter now has offline-verified parsing/diagnostics improvements; no additional genuine request, public activation or deployment is authorized. Frontend, diagnostic engines and deployed application remain unchanged. Final handoff supplies the review commit/CI. The sections below are historical milestone snapshots.
+
+---
+
 # Current narrow activation/release candidate — Phase 9
 
 Current branch `feature/forge-phase-9-meta-activation`, based on exact Phase 8 `03cbc5295168b9c8b33ad98eb394e62f047ba105`. Final handoff supplies the pushed SHA and CI. [Current readiness](phase-9-activation/READINESS.md) and [exact manual release/rollback](phase-9-activation/RELEASE.md) supersede older candidate pointers below. The only runtime change tightens the private smoke attempt ceiling from 20 to 15 seconds. Frontend assets/diagnostic engines remain byte-identical to Phase 8.

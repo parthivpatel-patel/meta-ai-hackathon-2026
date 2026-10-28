@@ -1,0 +1,186 @@
+{
+  "scope": "Fresh offline MockTransport with socket connections disabled. Synthetic approval flags are test configuration, not a genuine request.",
+  "genuine_requests_this_work": 0,
+  "prior_genuine_requests": 1,
+  "remaining_authorized_genuine_requests": 0,
+  "cases": [
+    {
+      "case": "valid_fenced_answer_with_reasoning",
+      "accepted": true,
+      "source": "test_transport",
+      "local_fixture_attempts": 1,
+      "genuine_requests": 0,
+      "diagnostic": {
+        "attempt": 1,
+        "requested_model": "meta-models/muse-spark-open-1026",
+        "returned_model": "meta-models/muse-spark-open-1026",
+        "http_status": 200,
+        "status": "validated",
+        "response_valid": true,
+        "error_code": null,
+        "elapsed_ms": 0.845,
+        "provider_reported_usage": {
+          "prompt_tokens": 500,
+          "completion_tokens": 900,
+          "total_tokens": 1400
+        },
+        "validation_code": null,
+        "response_structure": {
+          "choices_type": "array",
+          "choices_count": 1,
+          "finish_reason": "stop",
+          "message_type": "object",
+          "content_type": "string",
+          "content_characters": 273,
+          "reasoning_present": true,
+          "reasoning_type": "string",
+          "tool_calls_present": false,
+          "refusal_present": false,
+          "reasoning_tokens": 650,
+          "json_wrapper": "single_fence"
+        }
+      }
+    },
+    {
+      "case": "reasoning_only_length_stop",
+      "accepted": false,
+      "source": "test_transport",
+      "local_fixture_attempts": 1,
+      "genuine_requests": 0,
+      "diagnostic": {
+        "attempt": 1,
+        "requested_model": "meta-models/muse-spark-open-1026",
+        "returned_model": "meta-models/muse-spark-open-1026",
+        "http_status": 200,
+        "status": "unverified",
+        "response_valid": false,
+        "error_code": "structured_response_invalid",
+        "elapsed_ms": 0.392,
+        "provider_reported_usage": {
+          "prompt_tokens": 500,
+          "completion_tokens": 900,
+          "total_tokens": 1400
+        },
+        "validation_code": "output_truncated",
+        "response_structure": {
+          "choices_type": "array",
+          "choices_count": 1,
+          "finish_reason": "length",
+          "message_type": "object",
+          "content_type": "string",
+          "content_characters": 0,
+          "reasoning_present": true,
+          "reasoning_type": "string",
+          "tool_calls_present": false,
+          "refusal_present": false,
+          "reasoning_tokens": 650
+        }
+      }
+    },
+    {
+      "case": "malformed_final_json",
+      "accepted": false,
+      "source": "test_transport",
+      "local_fixture_attempts": 1,
+      "genuine_requests": 0,
+      "diagnostic": {
+        "attempt": 1,
+        "requested_model": "meta-models/muse-spark-open-1026",
+        "returned_model": "meta-models/muse-spark-open-1026",
+        "http_status": 200,
+        "status": "unverified",
+        "response_valid": false,
+        "error_code": "structured_response_invalid",
+        "elapsed_ms": 0.289,
+        "provider_reported_usage": {
+          "prompt_tokens": 500,
+          "completion_tokens": 900,
+          "total_tokens": 1400
+        },
+        "validation_code": "content_json_invalid",
+        "response_structure": {
+          "choices_type": "array",
+          "choices_count": 1,
+          "finish_reason": "stop",
+          "message_type": "object",
+          "content_type": "string",
+          "content_characters": 14,
+          "reasoning_present": true,
+          "reasoning_type": "string",
+          "tool_calls_present": false,
+          "refusal_present": false,
+          "reasoning_tokens": 650,
+          "json_wrapper": "none"
+        }
+      }
+    },
+    {
+      "case": "hypothesis_schema_violation",
+      "accepted": false,
+      "source": "test_transport",
+      "local_fixture_attempts": 1,
+      "genuine_requests": 0,
+      "diagnostic": {
+        "attempt": 1,
+        "requested_model": "meta-models/muse-spark-open-1026",
+        "returned_model": "meta-models/muse-spark-open-1026",
+        "http_status": 200,
+        "status": "unverified",
+        "response_valid": false,
+        "error_code": "structured_response_invalid",
+        "elapsed_ms": 0.271,
+        "provider_reported_usage": {
+          "prompt_tokens": 500,
+          "completion_tokens": 900,
+          "total_tokens": 1400
+        },
+        "validation_code": "hypothesis_schema_invalid",
+        "response_structure": {
+          "choices_type": "array",
+          "choices_count": 1,
+          "finish_reason": "stop",
+          "message_type": "object",
+          "content_type": "string",
+          "content_characters": 61,
+          "reasoning_present": true,
+          "reasoning_type": "string",
+          "tool_calls_present": false,
+          "refusal_present": false,
+          "reasoning_tokens": 650,
+          "json_wrapper": "none"
+        },
+        "schema_errors": [
+          {
+            "type": "too_short",
+            "path": [
+              "hypotheses"
+            ]
+          },
+          {
+            "type": "extra_forbidden",
+            "path": [
+              "other_field"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "existing_smoke_workflow": {
+    "source": "test_transport",
+    "local_fixture_attempts": 1,
+    "genuine_requests": 0,
+    "wire": {
+      "model": "meta-models/muse-spark-open-1026",
+      "max_tokens": 1024,
+      "reasoning_effort": "low",
+      "input_hash": "c89f53822d66840c1f5739c8bc675c1ba9e967b6a8384283d1d6719080579e75",
+      "observed_only": true,
+      "response_format_present": false
+    },
+    "schema_valid": true,
+    "returned_model_is_fixture": "meta-models/muse-spark-open-1026",
+    "independent_replay_status": "SUPPORTED_SYNTHETIC",
+    "hypothesis_count": 2
+  }
+}

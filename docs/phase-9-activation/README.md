@@ -1,3 +1,9 @@
+# Current status — one genuine attempt consumed
+
+See [response repair](RESPONSE_REPAIR.md) for the latest status. The first request returned HTTP200 and the exact event model, but failed structured validation. Financial documentary review passed; the key binding was ready. Offline repair sends no additional genuine requests. No second attempt is authorized. The original pre-attempt report and validation snapshot below are retained as historical evidence.
+
+---
+
 # Phase 9 — activation and exact-release candidate
 
 Branch `feature/forge-phase-9-meta-activation`, exact parent `03cbc5295168b9c8b33ad98eb394e62f047ba105`. The final handoff supplies the pushed SHA and exact successful CI result. Phase 8 diagnostic software is complete and unchanged; this is a narrow activation/release pass, not another product phase.
