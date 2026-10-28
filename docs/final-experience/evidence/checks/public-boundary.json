@@ -1,0 +1,20 @@
+{
+  "live_requests_permitted": false,
+  "live_access_verified": false,
+  "denied_routes": [
+    {
+      "path": "/api/v6/infer",
+      "status": 403
+    },
+    {
+      "path": "/api/v5/infer",
+      "status": 403
+    },
+    {
+      "path": "/api/v2/investigate",
+      "status": 403
+    }
+  ],
+  "genuine_requests": 0,
+  "scope": "Local final image only, not Render account settings"
+}

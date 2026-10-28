@@ -1,0 +1,65 @@
+[
+  {
+    "view": "desktop-selected-case",
+    "violations": []
+  },
+  {
+    "view": "desktop-telemetry",
+    "violations": []
+  },
+  {
+    "view": "desktop-restored-report",
+    "violations": []
+  },
+  {
+    "view": "desktop-status",
+    "violations": []
+  },
+  {
+    "journey": "machine",
+    "source": "rules",
+    "checkpoint_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+    "trials": 2,
+    "refresh_reproduced": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "view": "laptop-library-machine",
+    "violations": []
+  },
+  {
+    "view": "laptop-restored-after-server-loss",
+    "violations": []
+  },
+  {
+    "view": "laptop-library-report",
+    "violations": []
+  },
+  {
+    "journey": "library",
+    "server_sessions_evicted": true,
+    "prior_trials": 1,
+    "restored_prior_trials": 1,
+    "final_trials": 2,
+    "future_test_still_explicit": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "view": "mobile-restored-proposal",
+    "violations": []
+  },
+  {
+    "view": "mobile-accessible-recovery",
+    "violations": []
+  },
+  {
+    "journey": "fixture",
+    "source": "test_transport",
+    "genuine_requests": 0,
+    "invalid_private_import_rejected": true,
+    "errors": [],
+    "external": []
+  }
+]

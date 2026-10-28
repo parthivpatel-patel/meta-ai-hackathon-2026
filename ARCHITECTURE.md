@@ -88,3 +88,7 @@ The React application shell uses local state for six real investigation views an
 ## Phase 6 presentation integration
 
 The [unified design](docs/unified/DESIGN.md) preserves the modular monolith and numerical/report contracts. Persistent client work modes coordinate an observation capture, controlled tests, independent findings and reports; the retained multimodal library stays a separate synthetic case source. No new service, model route or persistence migration was added.
+
+## Phase 7 recovery boundary
+
+The [final experience architecture](docs/final-experience/ARCHITECTURE.md) adds a shared shell and bounded native IndexedDB checkpoints. Only fixed public deterministic legacy snapshots can rehydrate through the inference-free v6 recovery handler. Existing numerical/report/provider contracts and the single-service deployment are retained.

@@ -78,3 +78,7 @@ Current runtime/public URL/dependency evidence is in `docs/FINAL_REQUIREMENTS_MA
 ## Unified workstation review
 
 The [Phase 6 product/security review](docs/unified/REVIEW.md) records preserved public inference restrictions, source labels, bounded replay, private activation gates, local container checks and the limits of the same-agent audit. No live service settings or credentials were changed.
+
+## Phase 7
+
+See the [current critical review](docs/final-experience/SECURITY_REVIEW.md) for checkpoint trust, credential isolation, fixed-source recovery, public no-inference controls and the owner-confirmed financial blocker. Browser-local data is not source authentication or durable server storage.

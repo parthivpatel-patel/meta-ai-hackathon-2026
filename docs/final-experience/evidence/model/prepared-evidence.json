@@ -1,0 +1,150 @@
+{
+  "input_hash": "a7bc67d0a0cc47310ad97c135dbf1d33460c61230758a54dd672ba915ad79778",
+  "evidence": {
+    "telemetry": {
+      "signals": [
+        {
+          "channel": "temperature",
+          "flags": 0,
+          "max_score": 0.26604377759383624,
+          "post_observed": 40
+        },
+        {
+          "channel": "vibration",
+          "flags": 40,
+          "max_score": 46.82462296579103,
+          "post_observed": 40
+        },
+        {
+          "channel": "pressure",
+          "flags": 0,
+          "max_score": 0.11844664988270513,
+          "post_observed": 40
+        }
+      ],
+      "quality_issues": []
+    },
+    "multimodal_features": {
+      "schema": "forge-observed-machine-evidence-1",
+      "operating_mode": "SIMULATION_ONLY",
+      "equipment_id": "pump-104",
+      "component_id": "bearing",
+      "associated_sensor_ids": [
+        "bearing_temperature",
+        "vibration"
+      ],
+      "evidence_references": {
+        "temperature": {
+          "sensor_id": "motor_temperature",
+          "unit": "°C",
+          "reference": "92444ae0680834ad1dc73502fb07f5f461cba6296b158d9e8f2849ac9bf58d1a"
+        },
+        "vibration": {
+          "sensor_id": "vibration",
+          "unit": "mm/s",
+          "reference": "8b8073a42154e791b8416ed5c96e556f1fa5d8e65de1a30470db79010eed006f"
+        },
+        "pressure": {
+          "sensor_id": "discharge_pressure",
+          "unit": "bar",
+          "reference": "c22aa7b4261ffbf253828ec36a3b0a2975a367ae9ef8c6600652d799d9ec6a0b"
+        }
+      },
+      "reference_contract": "Output evidence_channels names these closed channel references; no invented references or tools.",
+      "window": {
+        "first_timestamp": "2026-10-27T08:03:20+00:00",
+        "last_timestamp": "2026-10-27T08:05:19+00:00",
+        "sample_period_seconds": 1,
+        "samples": 120
+      },
+      "observed_samples": [
+        {
+          "timestamp": "2026-10-27T08:03:20+00:00",
+          "temperature": 64.983332,
+          "vibration": 1.992722,
+          "pressure": 5.972488
+        },
+        {
+          "timestamp": "2026-10-27T08:03:59+00:00",
+          "temperature": 64.946135,
+          "vibration": 2.000434,
+          "pressure": 6.00674
+        },
+        {
+          "timestamp": "2026-10-27T08:04:39+00:00",
+          "temperature": 65.262989,
+          "vibration": 1.984664,
+          "pressure": 5.997393
+        },
+        {
+          "timestamp": "2026-10-27T08:04:40+00:00",
+          "temperature": 65.062791,
+          "vibration": 2.972765,
+          "pressure": 5.995512
+        },
+        {
+          "timestamp": "2026-10-27T08:04:44+00:00",
+          "temperature": 64.976827,
+          "vibration": 3.012529,
+          "pressure": 5.983269
+        },
+        {
+          "timestamp": "2026-10-27T08:04:48+00:00",
+          "temperature": 65.02175,
+          "vibration": 2.967371,
+          "pressure": 5.985513
+        },
+        {
+          "timestamp": "2026-10-27T08:04:52+00:00",
+          "temperature": 64.915988,
+          "vibration": 2.984946,
+          "pressure": 5.954315
+        },
+        {
+          "timestamp": "2026-10-27T08:04:56+00:00",
+          "temperature": 64.938559,
+          "vibration": 3.019361,
+          "pressure": 6.034868
+        },
+        {
+          "timestamp": "2026-10-27T08:05:00+00:00",
+          "temperature": 64.917588,
+          "vibration": 3.00083,
+          "pressure": 5.967535
+        },
+        {
+          "timestamp": "2026-10-27T08:05:04+00:00",
+          "temperature": 64.808449,
+          "vibration": 3.023512,
+          "pressure": 5.982075
+        },
+        {
+          "timestamp": "2026-10-27T08:05:08+00:00",
+          "temperature": 64.847071,
+          "vibration": 2.989691,
+          "pressure": 5.983563
+        },
+        {
+          "timestamp": "2026-10-27T08:05:12+00:00",
+          "temperature": 64.831259,
+          "vibration": 3.038199,
+          "pressure": 6.029158
+        },
+        {
+          "timestamp": "2026-10-27T08:05:16+00:00",
+          "temperature": 64.841682,
+          "vibration": 3.018272,
+          "pressure": 5.971805
+        },
+        {
+          "timestamp": "2026-10-27T08:05:19+00:00",
+          "temperature": 65.011499,
+          "vibration": 2.954611,
+          "pressure": 5.993686
+        }
+      ],
+      "uncertainty": "Synthetic observations only; unknown cause. Channel support cannot uniquely identify a mechanical failure."
+    }
+  },
+  "network_requests_sent": 0
+}

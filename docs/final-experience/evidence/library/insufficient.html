@@ -1,0 +1,1390 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FORGE investigation report</title><style>body{font:16px/1.6 system-ui,sans-serif;color:#172f30;max-width:1000px;margin:40px auto;padding:0 20px}h1,h2{line-height:1.2}table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;margin:20px 0}td,th{text-align:left;padding:10px;border-bottom:1px solid #d5dfdf;vertical-align:top}pre{white-space:pre-wrap;overflow-wrap:anywhere}summary{cursor:pointer}footer{border-top:1px solid #d5dfdf;margin-top:30px}@media print{details{display:none}body{margin:0}}</style></head><body><header><p>FORGE · Investigation report</p><h1>Synthetic pump investigation</h1><p>Synthetic research demonstration. Physical-world causality is not established.</p></header><main><h2>Case information</h2><table><thead><tr><th scope="col">Case detail</th><th scope="col">Value</th></tr></thead><tbody><tr><td>Investigation</td><td>Synthetic pump investigation</td></tr><tr><td>Equipment</td><td>P-104</td></tr><tr><td>Acquisition start</td><td>Relative time, one-minute intervals</td></tr><tr><td>Data</td><td>Synthetic measurements; temperature °C, vibration mm/s, pressure bar</td></tr><tr><td>Analysis</td><td>No model inference performed</td></tr></tbody></table><h2>Findings</h2><p><strong>Not enough evidence</strong></p><p>No supported diagnosis. Review uncertainty before taking further action.</p><h2>Independent verification</h2><table><thead><tr><th scope="col">Signal</th><th scope="col">Verification</th><th scope="col">Reason</th></tr></thead><tbody></tbody></table><h2>Uncertainty</h2><p>Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities.</p><p>temperature: insufficient coverage; vibration: insufficient coverage; pressure: insufficient coverage</p><h2>Possible causes considered</h2><table><thead><tr><th scope="col">Possible cause</th><th scope="col">Rank (not probability)</th><th scope="col">Evidence status</th></tr></thead><tbody></tbody></table><h2>Tests and new observations</h2><p>Witness means below use normalized baseline units, not engineering units or failure probabilities. Tests are controlled numerical experiments, not interventions on equipment.</p><table><thead><tr><th scope="col">Test</th><th scope="col">Signal</th><th scope="col">Witness before</th><th scope="col">Witness after</th><th scope="col">Replicates</th></tr></thead><tbody></tbody></table><h2>Evidence and provenance</h2><table><thead><tr><th scope="col">Evidence</th><th scope="col">Source</th><th scope="col">Scope</th></tr></thead><tbody><tr><td>120 synthetic minute measurements</td><td>synthetic factory</td><td>numerical test input</td></tr><tr><td>Equipment/time context, not used for hypothesis inference</td><td>operator declared unverified</td><td>descriptive context</td></tr><tr><td>Validated numerical thermal context; alignment to telemetry is not independently established</td><td>operator declared unverified</td><td>descriptive context</td></tr><tr><td>Validated numerical waveform context; alignment to telemetry is not independently established</td><td>operator declared unverified</td><td>descriptive context</td></tr></tbody></table><h2>Limitations</h2><p>Telemetry plus controlled synthetic interventions. Thermal/waveform evidence is descriptive context, not cross-modal causal proof.</p><p>Fixed familywise interval policy, not a posterior probability; ranking is ordinal. No physical-world cause is established.</p><details><summary>Technical audit record and offline reproduction</summary><pre>{
+  &quot;schema&quot;: &quot;forge-report-3&quot;,
+  &quot;run_id&quot;: &quot;RUN3-ca3621ef015c4fb9e71dac4026efc8ec39f73aabe999ad642604d352a511aef1&quot;,
+  &quot;investigation&quot;: {
+    &quot;engine_version&quot;: &quot;forge-engine-3.0&quot;,
+    &quot;status&quot;: &quot;COMPLETE&quot;,
+    &quot;metadata&quot;: {
+      &quot;equipment_id&quot;: &quot;P-104&quot;,
+      &quot;investigation_title&quot;: &quot;Synthetic pump investigation&quot;,
+      &quot;acquired_at&quot;: null,
+      &quot;declared_synthetic&quot;: true
+    },
+    &quot;measurements&quot;: [
+      {
+        &quot;minute&quot;: 0,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.051752
+      },
+      {
+        &quot;minute&quot;: 1,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.036699,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 2,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.926325,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 3,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 4,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 5,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 6,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.788405,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 7,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.315803,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 8,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 63.413192,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 9,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 10,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.05589
+      },
+      {
+        &quot;minute&quot;: 11,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.142031,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 12,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 13,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.066612
+      },
+      {
+        &quot;minute&quot;: 14,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 15,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.957043,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 16,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.928651
+      },
+      {
+        &quot;minute&quot;: 17,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.726608,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.930659
+      },
+      {
+        &quot;minute&quot;: 18,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.232075,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 19,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.126503
+      },
+      {
+        &quot;minute&quot;: 20,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.961518
+      },
+      {
+        &quot;minute&quot;: 21,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.980837
+      },
+      {
+        &quot;minute&quot;: 22,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 23,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 24,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.297916,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.823941
+      },
+      {
+        &quot;minute&quot;: 25,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.983928
+      },
+      {
+        &quot;minute&quot;: 26,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 63.852968,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.958135
+      },
+      {
+        &quot;minute&quot;: 27,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 64.216118,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.766698
+      },
+      {
+        &quot;minute&quot;: 28,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 63.064574,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 29,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 66.442755,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.976403
+      },
+      {
+        &quot;minute&quot;: 30,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.062628,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.922906
+      },
+      {
+        &quot;minute&quot;: 31,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 64.641134,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.081313
+      },
+      {
+        &quot;minute&quot;: 32,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.03272,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.983449
+      },
+      {
+        &quot;minute&quot;: 33,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 34,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.914288
+      },
+      {
+        &quot;minute&quot;: 35,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.799079,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 36,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.906378
+      },
+      {
+        &quot;minute&quot;: 37,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 38,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.126437,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 39,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.956593,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 40,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.317403,
+        &quot;vibration&quot;: 2.137288,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 41,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 64.480692,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.985773
+      },
+      {
+        &quot;minute&quot;: 42,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 43,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 44,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 66.351744,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 45,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.031442,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 46,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.011814
+      },
+      {
+        &quot;minute&quot;: 47,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.607224,
+        &quot;vibration&quot;: 1.926394,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 48,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.198593
+      },
+      {
+        &quot;minute&quot;: 49,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 50,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 51,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 52,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.184611,
+        &quot;pressure&quot;: 6.225525
+      },
+      {
+        &quot;minute&quot;: 53,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 54,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 55,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.035685,
+        &quot;pressure&quot;: 5.797284
+      },
+      {
+        &quot;minute&quot;: 56,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.987441,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 57,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 64.63222,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.812362
+      },
+      {
+        &quot;minute&quot;: 58,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 59,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 60,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.918545
+      },
+      {
+        &quot;minute&quot;: 61,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.927054,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 62,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 63,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.03625
+      },
+      {
+        &quot;minute&quot;: 64,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 65,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 66,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 67,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 68,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.78388,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.03003
+      },
+      {
+        &quot;minute&quot;: 69,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.128211
+      },
+      {
+        &quot;minute&quot;: 70,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.850317
+      },
+      {
+        &quot;minute&quot;: 71,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 72,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 66.342656,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.112678
+      },
+      {
+        &quot;minute&quot;: 73,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 74,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 75,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.674524,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 76,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 77,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.012947
+      },
+      {
+        &quot;minute&quot;: 78,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 65.426747,
+        &quot;vibration&quot;: 2.049477,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 79,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 80,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 81,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 82,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 83,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.933144,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 84,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 85,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.237354
+      },
+      {
+        &quot;minute&quot;: 86,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.895122,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 87,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 88,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.903915,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 89,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 90,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 91,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 73.06586,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 92,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 93,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.941418
+      },
+      {
+        &quot;minute&quot;: 94,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 95,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.251478,
+        &quot;vibration&quot;: 2.039579,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 96,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.337241,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 97,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.897326,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 98,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.959282
+      },
+      {
+        &quot;minute&quot;: 99,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 2.04725,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 100,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 101,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 102,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 103,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 104,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 73.063349,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 105,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 106,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 72.405668,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 107,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 108,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 70.332514,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 109,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: 1.920476,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 110,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 111,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 112,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.932259
+      },
+      {
+        &quot;minute&quot;: 113,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 114,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.71837,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 6.225096
+      },
+      {
+        &quot;minute&quot;: 115,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 116,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: 71.516878,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 117,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: 5.869381
+      },
+      {
+        &quot;minute&quot;: 118,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      },
+      {
+        &quot;minute&quot;: 119,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;temperature&quot;: null,
+        &quot;vibration&quot;: null,
+        &quot;pressure&quot;: null
+      }
+    ],
+    &quot;dataset_hash&quot;: &quot;a07b30deff5df5eca6cfb1595c022f110ffdd3b9beebc0bda8300187f23fd182&quot;,
+    &quot;observed&quot;: {
+      &quot;signals&quot;: [],
+      &quot;quality_issues&quot;: [
+        &quot;temperature: insufficient coverage&quot;,
+        &quot;vibration: insufficient coverage&quot;,
+        &quot;pressure: insufficient coverage&quot;
+      ]
+    },
+    &quot;assets&quot;: {
+      &quot;thermal&quot;: {
+        &quot;pixels&quot;: [
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            85.0,
+            85.0,
+            85.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          [
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0,
+            65.0
+          ]
+        ],
+        &quot;declared_synthetic&quot;: true,
+        &quot;units&quot;: &quot;celsius&quot;
+      },
+      &quot;waveform&quot;: {
+        &quot;samples&quot;: [
+          0.0,
+          0.7653668647301796,
+          1.414213562373095,
+          1.8477590650225735,
+          2.0,
+          1.8477590650225735,
+          1.4142135623730951,
+          0.7653668647301798,
+          2.4492935982947064e-16,
+          -0.7653668647301793,
+          -1.414213562373095,
+          -1.847759065022573,
+          -2.0,
+          -1.8477590650225733,
+          -1.4142135623730954,
+          -0.7653668647301808,
+          -4.898587196589413e-16,
+          0.7653668647301799,
+          1.4142135623730947,
+          1.847759065022573,
+          2.0,
+          1.8477590650225735,
+          1.4142135623730967,
+          0.765366864730181,
+          7.347880794884119e-16,
+          -0.7653668647301797,
+          -1.4142135623730958,
+          -1.8477590650225728,
+          -2.0,
+          -1.8477590650225735,
+          -1.414213562373097,
+          -0.7653668647301812,
+          -9.797174393178826e-16,
+          0.7653668647301795,
+          1.4142135623730956,
+          1.8477590650225728,
+          2.0,
+          1.8477590650225737,
+          1.4142135623730971,
+          0.7653668647301815,
+          1.2246467991473533e-15,
+          -0.7653668647301759,
+          -1.4142135623730954,
+          -1.8477590650225726,
+          -2.0,
+          -1.8477590650225737,
+          -1.4142135623730974,
+          -0.7653668647301785,
+          -1.4695761589768238e-15,
+          0.7653668647301757,
+          1.4142135623730951,
+          1.8477590650225726,
+          2.0,
+          1.8477590650225737,
+          1.4142135623730974,
+          0.7653668647301787,
+          1.7145055188062944e-15,
+          -0.7653668647301755,
+          -1.4142135623730951,
+          -1.8477590650225726,
+          -2.0,
+          -1.847759065022574,
+          -1.4142135623730976,
+          -0.7653668647301789,
+          -1.959434878635765e-15,
+          0.7653668647301752,
+          1.414213562373095,
+          1.8477590650225724,
+          2.0,
+          1.847759065022574,
+          1.4142135623730978,
+          0.7653668647301791,
+          2.204364238465236e-15,
+          -0.765366864730175,
+          -1.4142135623730947,
+          -1.8477590650225724,
+          -2.0,
+          -1.8477590650225741,
+          -1.414213562373098,
+          -0.7653668647301793,
+          -2.4492935982947065e-15,
+          0.7653668647301748,
+          1.4142135623730896,
+          1.8477590650225748,
+          2.0,
+          1.8477590650225741,
+          1.4142135623730983,
+          0.7653668647301861,
+          9.799650315725178e-15,
+          -0.7653668647301811,
+          -1.4142135623730943,
+          -1.8477590650225721,
+          -2.0,
+          -1.847759065022577,
+          -1.4142135623730934,
+          -0.7653668647301798,
+          -2.9391523179536475e-15,
+          0.7653668647301743,
+          1.4142135623730892,
+          1.8477590650225748,
+          2.0,
+          1.8477590650225744,
+          1.4142135623730985,
+          0.7653668647301866,
+          -3.921345679817883e-15,
+          -0.7653668647301807,
+          -1.414213562373094,
+          -1.847759065022572,
+          -2.0,
+          -1.8477590650225773,
+          -1.4142135623730936,
+          -0.7653668647301802,
+          -3.429011037612589e-15,
+          0.7653668647301739,
+          1.4142135623730887,
+          1.8477590650225746,
+          2.0,
+          1.8477590650225746,
+          1.414213562373099,
+          0.765366864730187,
+          1.0779367755043061e-14,
+          -0.7653668647301802,
+          -1.4142135623730936,
+          -1.8477590650225717,
+          -2.0,
+          -1.8477590650225773,
+          -1.414213562373094,
+          -0.7653668647301807,
+          -3.91886975727153e-15,
+          0.7653668647301735,
+          1.4142135623730885,
+          1.8477590650225744,
+          2.0,
+          1.8477590650225748,
+          1.4142135623730991,
+          0.7653668647301874,
+          -2.941628240500001e-15,
+          -0.7653668647301798,
+          -1.4142135623730934,
+          -1.8477590650225715,
+          -2.0,
+          -1.8477590650225775,
+          -1.4142135623730943,
+          -0.7653668647301811,
+          -4.408728476930472e-15,
+          0.765366864730173,
+          1.414213562373088,
+          1.8477590650225741,
+          2.0,
+          1.8477590650225748,
+          1.4142135623730996,
+          0.7653668647301879,
+          1.1759085194360944e-14,
+          -0.7653668647301793,
+          -1.414213562373093,
+          -1.8477590650225713,
+          -2.0,
+          -1.8477590650225777,
+          -1.4142135623730947,
+          -0.7653668647301816,
+          -4.898587196589413e-15,
+          0.7653668647301726,
+          1.4142135623730878,
+          1.8477590650225686,
+          2.0,
+          1.8477590650225806,
+          1.4142135623730898,
+          0.7653668647301752,
+          -1.9619108011821185e-15,
+          -0.7653668647301789,
+          -1.4142135623730927,
+          -1.8477590650225713,
+          -2.0,
+          -1.847759065022578,
+          -1.4142135623731051,
+          -0.7653668647301951,
+          -1.9599300631450357e-14,
+          0.7653668647301852,
+          1.4142135623730974,
+          1.8477590650225737,
+          2.0,
+          1.8477590650225753,
+          1.4142135623731003,
+          0.7653668647301888,
+          1.2738802633678827e-14,
+          -0.7653668647301652,
+          -1.4142135623730823,
+          -1.8477590650225764,
+          -2.0,
+          -1.8477590650225726,
+          -1.4142135623730954,
+          -0.7653668647301825,
+          -5.878304635907295e-15,
+          0.7653668647301716,
+          1.4142135623730872,
+          1.8477590650225681,
+          2.0,
+          1.847759065022581,
+          1.4142135623730905,
+          0.7653668647301761,
+          -9.82193361864236e-16,
+          -0.765366864730178,
+          -1.414213562373092,
+          -1.8477590650225708,
+          -2.0,
+          -1.8477590650225784,
+          -1.4142135623731058,
+          -0.7653668647301961,
+          7.842691359635767e-15,
+          0.7653668647301843,
+          1.4142135623730967,
+          1.8477590650225735,
+          2.0,
+          1.8477590650225757,
+          1.414213562373101,
+          0.7653668647301898,
+          1.371852007299671e-14,
+          -0.7653668647301644,
+          -1.4142135623730816,
+          -1.8477590650225761,
+          -2.0,
+          -1.847759065022573,
+          -1.414213562373096,
+          -0.7653668647301833,
+          -6.858022075225178e-15,
+          0.7653668647301707,
+          1.4142135623730865,
+          1.8477590650225677,
+          2.0,
+          1.8477590650225812,
+          1.4142135623730911,
+          0.765366864730177,
+          -2.475922546353431e-18,
+          -0.765366864730177,
+          -1.4142135623730911,
+          -1.8477590650225704,
+          -2.0,
+          -1.8477590650225786,
+          -1.4142135623731065,
+          -0.765366864730197,
+          -2.1558735510086122e-14,
+          0.7653668647301834,
+          1.414213562373096,
+          1.847759065022573,
+          2.0,
+          1.8477590650225761,
+          1.4142135623731016,
+          0.7653668647301907,
+          1.469823751231459e-14,
+          -0.7653668647301635,
+          -1.414213562373081,
+          -1.8477590650225757,
+          -2.0,
+          -1.8477590650225735,
+          -1.4142135623730967,
+          -0.7653668647301843
+        ],
+        &quot;sample_rate_hz&quot;: 1024,
+        &quot;declared_synthetic&quot;: true,
+        &quot;units&quot;: &quot;mm_per_second&quot;
+      }
+    },
+    &quot;asset_features&quot;: {
+      &quot;content_hash&quot;: &quot;9e0cdd165af6491d67ea3f95ed49071b50a1008bd9e64a71f7f96d53e0528418&quot;,
+      &quot;modalities&quot;: {
+        &quot;thermal&quot;: {
+          &quot;height&quot;: 12,
+          &quot;width&quot;: 12,
+          &quot;median_celsius&quot;: 65.0,
+          &quot;maximum_celsius&quot;: 85.0,
+          &quot;hot_pixel_count&quot;: 9,
+          &quot;declared_synthetic&quot;: true
+        },
+        &quot;waveform&quot;: {
+          &quot;samples&quot;: 256,
+          &quot;rms_mm_per_second&quot;: 1.4142135623730951,
+          &quot;peak_frequency_hz&quot;: 64.0,
+          &quot;frequency_resolution_hz&quot;: 4.0,
+          &quot;declared_synthetic&quot;: true
+        }
+      },
+      &quot;limitation&quot;: &quot;Numerical thermal/waveform features only; uploaded provenance is unverified. No general photo, audio, or video understanding; features do not establish a cause.&quot;
+    },
+    &quot;evidence&quot;: [
+      {
+        &quot;id&quot;: &quot;a07b30deff5df5eca6cfb1595c022f110ffdd3b9beebc0bda8300187f23fd182&quot;,
+        &quot;modality&quot;: &quot;telemetry&quot;,
+        &quot;summary&quot;: &quot;120 synthetic minute measurements&quot;,
+        &quot;provenance&quot;: &quot;synthetic_factory&quot;,
+        &quot;scope&quot;: &quot;numerical_test_input&quot;
+      },
+      {
+        &quot;id&quot;: &quot;4bede86d7f1b66a944b0170defa219f4e974f67aafc01eec21838fb5354d7ea8&quot;,
+        &quot;modality&quot;: &quot;metadata&quot;,
+        &quot;summary&quot;: &quot;Equipment/time context, not used for hypothesis inference&quot;,
+        &quot;provenance&quot;: &quot;operator_declared_unverified&quot;,
+        &quot;scope&quot;: &quot;descriptive_context&quot;
+      },
+      {
+        &quot;id&quot;: &quot;1a15fc505b3f9692959c688160d8345878ae21095eb2ef67808b10bb8629bb8b&quot;,
+        &quot;modality&quot;: &quot;thermal&quot;,
+        &quot;summary&quot;: &quot;Validated numerical thermal context; alignment to telemetry is not independently established&quot;,
+        &quot;provenance&quot;: &quot;operator_declared_unverified&quot;,
+        &quot;scope&quot;: &quot;descriptive_context&quot;
+      },
+      {
+        &quot;id&quot;: &quot;b571e2718fc7493475cd6925c6237860cb2b2cca1dde035cf9b9c90fee2213d0&quot;,
+        &quot;modality&quot;: &quot;waveform&quot;,
+        &quot;summary&quot;: &quot;Validated numerical waveform context; alignment to telemetry is not independently established&quot;,
+        &quot;provenance&quot;: &quot;operator_declared_unverified&quot;,
+        &quot;scope&quot;: &quot;descriptive_context&quot;
+      }
+    ],
+    &quot;hypotheses&quot;: null,
+    &quot;model_source&quot;: &quot;not_run&quot;,
+    &quot;inference&quot;: null,
+    &quot;ranking&quot;: [],
+    &quot;plan&quot;: null,
+    &quot;trials&quot;: [],
+    &quot;decision&quot;: {
+      &quot;status&quot;: &quot;ABSTAIN&quot;,
+      &quot;findings&quot;: [],
+      &quot;channels&quot;: [],
+      &quot;reasons&quot;: [
+        &quot;temperature: insufficient coverage&quot;,
+        &quot;vibration: insufficient coverage&quot;,
+        &quot;pressure: insufficient coverage&quot;
+      ],
+      &quot;uncertainty&quot;: &quot;Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities.&quot;
+    },
+    &quot;max_experiments&quot;: 4,
+    &quot;events&quot;: [
+      {
+        &quot;index&quot;: 0,
+        &quot;action&quot;: &quot;observe&quot;,
+        &quot;evidence_refs&quot;: [],
+        &quot;detail&quot;: &quot;Created an isolated synthetic case; recipe/answer labels excluded from model inputs&quot;
+      }
+    ],
+    &quot;verification_scope&quot;: &quot;Telemetry plus controlled synthetic interventions. Thermal/waveform evidence is descriptive context, not cross-modal causal proof.&quot;,
+    &quot;uncertainty_policy&quot;: &quot;Fixed familywise interval policy, not a posterior probability; ranking is ordinal. No physical-world cause is established.&quot;
+  },
+  &quot;reproduction&quot;: &quot;From backend: uv run --frozen python -m forge.phase3.replay report.json. Offline numerical replay only, not an inference rerun or physical experiment.&quot;,
+  &quot;limitations&quot;: [
+    &quot;Synthetic systems only; no physical causality or industrial certification&quot;,
+    &quot;Ordinal rankings and statistical intervals are not calibrated causal probabilities&quot;,
+    &quot;Thermal/waveform context has no independent time/alignment or model-vision verification&quot;,
+    &quot;Evidence digests are not source authentication; model provenance is not a signed attestation&quot;
+  ]
+}</pre></details></main><footer>FORGE · Preserve the JSON export for independent offline replay.</footer></body></html>

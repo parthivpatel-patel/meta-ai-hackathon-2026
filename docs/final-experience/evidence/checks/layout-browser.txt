@@ -1,0 +1,1 @@
+Large desktop, compact laptop, tablet and 320px layout/keyboard/Axe checks passed

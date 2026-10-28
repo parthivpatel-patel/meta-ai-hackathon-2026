@@ -1,0 +1,123 @@
+{
+  "mobile": [
+    {
+      "width": 320,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 375,
+      "touch": true,
+      "violations": 0
+    },
+    {
+      "width": 430,
+      "touch": true,
+      "violations": 0
+    }
+  ],
+  "lifecycle": {
+    "camera_raf_cadence_ms": [
+      73.5,
+      9.299999997019768,
+      91.59999999403954,
+      321.70000000298023,
+      70.20000000298023,
+      120.40000000596046,
+      205.5,
+      190.19999998807907,
+      216.6000000089407,
+      193,
+      176.5,
+      351.70000000298023,
+      62.79999999701977,
+      236.29999999701977,
+      46.20000000298023,
+      181.20000000298023,
+      201.3999999910593,
+      374.6000000089407,
+      25.19999998807907,
+      205.5,
+      312.70000000298023,
+      181.79999999701977,
+      179.20000000298023,
+      52.6000000089407,
+      149.69999998807907,
+      158.20000000298023,
+      197.40000000596046,
+      186.8999999910593,
+      188.80000001192093,
+      183.09999999403954,
+      182.20000000298023,
+      162.70000000298023,
+      176.69999998807907,
+      189,
+      169.80000001192093,
+      167.69999998807907,
+      173.70000000298023,
+      187.20000000298023,
+      175.40000000596046,
+      156.79999999701977,
+      183.5,
+      187.70000000298023,
+      161.79999999701977,
+      152.3999999910593,
+      170.80000001192093,
+      184.79999999701977,
+      171.3999999910593,
+      162.40000000596046,
+      160,
+      147,
+      540.2000000029802,
+      176.8999999910593,
+      37.30000001192093,
+      299,
+      52,
+      13.899999991059303,
+      177.20000000298023,
+      171.90000000596046,
+      394.5,
+      67.79999999701977
+    ],
+    "telemetry_ui_updates": [
+      {
+        "elapsed_ms": 2763.3999999910593,
+        "sequence": 40
+      }
+    ],
+    "telemetry_functional_progress": {
+      "start_sequence": 0,
+      "end_sequence": 40,
+      "minimum_sample_progress": 16,
+      "paint_sample_count": 1,
+      "scope": "RAF paint samples may coalesce timer ticks; bounded functional progress checked separately, not a cadence/FPS claim"
+    },
+    "scope": "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
+    "heap_before": 6764112,
+    "heap_after": 8339028,
+    "workspace_switch_cycles": 5,
+    "hidden_workstation_renderer_preserved": true,
+    "component_changes": 60,
+    "keyboard_camera_activation": true,
+    "pointer_orbit_wheel_no_accidental_selection": true,
+    "reduced_motion": true,
+    "synthetic_visibility_pause": true,
+    "context_loss_recovery": true,
+    "manual_2d_and_3d_recovery": true,
+    "gpu": {
+      "engine": "three.js r180",
+      "renderCount": "2",
+      "drawCalls": "57",
+      "triangles": "19138",
+      "rotorPhase": "0",
+      "reducedMotion": "true"
+    },
+    "short_import_reset": true
+  },
+  "controls": {
+    "repair_response": true,
+    "shutdown_reaches_stopped": true,
+    "offline_load_preserves_recording": true,
+    "reconnect_reset": true
+  }
+}

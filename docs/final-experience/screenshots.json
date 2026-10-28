@@ -1,0 +1,821 @@
+{
+  "count": 163,
+  "source": "Unedited actual local production Chromium screenshots; no generated concepts",
+  "images": [
+    {
+      "path": "evidence/layout/screenshots/layout-1024.png",
+      "bytes": 365401,
+      "sha256": "08bcd9f7cf082cade3f741d3d2f647398fbb00c08dc097cc04e9bc30caeaeb45"
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-1920.png",
+      "bytes": 427350,
+      "sha256": "cf29df457ea342d74ea64cadea30aabbeff6d9339bb70a3de9f1567284fce5b9"
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-320.png",
+      "bytes": 319354,
+      "sha256": "a3c940af35da0e9ba05a0736c2bc7ff7269995b6c83a6c68abf030da477bae67"
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-768.png",
+      "bytes": 378945,
+      "sha256": "772630f3885b63861c657893c09be9395ede6b535ae2a1fa13c848912516f8e2"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-Possible-causes.png",
+      "bytes": 161836,
+      "sha256": "699bdd480ef851e9f870931daae8919f0170f400377334bcde1ef00de2c4de94"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-Report.png",
+      "bytes": 158253,
+      "sha256": "1c2431de997c7d9d7a3f4ab8c81312cc4648539faa7a0f09983f40867e3cb464"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-Results.png",
+      "bytes": 143251,
+      "sha256": "34ece4e8de69d123b6372fcb9b781afd798c13b8e2211bbcfe52cd8b2780f75e"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-Tests.png",
+      "bytes": 150973,
+      "sha256": "4fa73c84f00b7929bcdde44ef237987a574eb3b2905410dbdac168bf20ec7a49"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-equipment.png",
+      "bytes": 213316,
+      "sha256": "2617e572e61ddb42131c495ea61e95d4e16d24771080796be05ac491da31bd9c"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-evidence.png",
+      "bytes": 158020,
+      "sha256": "c2ef8f960ccefe2519559e9cad27b8332c7d80a6c934b70fa9bb892e678aa46c"
+    },
+    {
+      "path": "evidence/library/screenshots/confounded-overview.png",
+      "bytes": 297286,
+      "sha256": "f3c0e74f5854563ea03fb0cb861baf1e59807b38cfb25d4a0ee67aab5253542a"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-Possible-causes.png",
+      "bytes": 122149,
+      "sha256": "79a3d25a8667face26241c811515e71b9f9a04af20c6ea2e255d4221f210a3ba"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-Report.png",
+      "bytes": 158420,
+      "sha256": "8c39a82fa45c5488a779a840aa61d6d5bebabf20afa42935ee30aa1571ef90c4"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-Results.png",
+      "bytes": 133675,
+      "sha256": "1b0f29b6c3f1b0d85632f5ed051d04c2a681d6db1381793f5f309955a4dbd2e0"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-Tests.png",
+      "bytes": 130830,
+      "sha256": "c1fd8850d51651cbe3b45762ecca349549f2afa50f960fa0fdda0fead1e75b81"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-equipment.png",
+      "bytes": 192668,
+      "sha256": "028ce86d940f2c8f22b412e3831e2e60969e0ce66223288f23ed571d7b996bc8"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-evidence.png",
+      "bytes": 154432,
+      "sha256": "37a81c72b88ff50d903255a14b872140b548918700f6d074ce48224761e7bde9"
+    },
+    {
+      "path": "evidence/library/screenshots/insufficient-overview.png",
+      "bytes": 310904,
+      "sha256": "c56bea6bc0c01b211ed81fa64736869d7d8b1e6c5beb9d71d94e026eab892244"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-Possible-causes.png",
+      "bytes": 169489,
+      "sha256": "ecf99474b14f7296dc13b8ca9e5d4b1c0d0e42d3a503206b55e7752f4bbcfb4d"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-Report.png",
+      "bytes": 158747,
+      "sha256": "1d2cd4c179294830ae18c78dd6532f087a22b96c9d1e06ae99f2fbee86e7c2cf"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-Results.png",
+      "bytes": 146713,
+      "sha256": "99a7b9d60b41edae753a3072e1f360b8496b59b5abc2a5a3f8b71e23d3742cc7"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-Tests.png",
+      "bytes": 139624,
+      "sha256": "0f42456d51ae4a6a3650d0e1aeb34413756131d1b76f31f6152685a2ca50e4ed"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-equipment.png",
+      "bytes": 209314,
+      "sha256": "d97ce14e8d33b3dbc076930529d7b507637c6c6852223a7aeab9978ff420d73a"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-evidence.png",
+      "bytes": 173195,
+      "sha256": "f542d66801e4a7380bc70d3dc1cfc59d0a105357e507f2a6f47344c78487deac"
+    },
+    {
+      "path": "evidence/library/screenshots/misleading_sensor-overview.png",
+      "bytes": 294409,
+      "sha256": "e1e763638b3f0889d04ba330b020c198406e7bf684270163fdc40a11d05ccf6d"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-Possible-causes.png",
+      "bytes": 169732,
+      "sha256": "15752980666ed1b53ad99dccff8eb2706ad130ce5abc641068bd2875f5b98c56"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-Report.png",
+      "bytes": 158252,
+      "sha256": "9e96b283eb542a952a6379d0faa0fe8fe879b19be4e0456083972a0c1f48dc1c"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-Results.png",
+      "bytes": 142680,
+      "sha256": "f0cda2a5363330328d5a4a9443376303c8840875066e6e1a09f06f5c569b78c1"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-Tests.png",
+      "bytes": 138379,
+      "sha256": "b9a03b0f4ca39064c12b83bd77421107bef6a946f5b885a9666d4e7ecc445025"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-equipment.png",
+      "bytes": 201914,
+      "sha256": "0920ffe44435ad97adb6e65b13fb60fcb49886b06bbdb63948c2718cc7da8973"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-evidence.png",
+      "bytes": 171634,
+      "sha256": "1d2b8283598c0b7763d91e76dff72c0bdc65bfec016830efb56df863e04adbcb"
+    },
+    {
+      "path": "evidence/library/screenshots/noisy_multifault-overview.png",
+      "bytes": 296182,
+      "sha256": "8855603055a9d331e4f48ac7015f322b8fac82d49d7a8cbbedff996f2fd6252b"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-Possible-causes.png",
+      "bytes": 169099,
+      "sha256": "63a94e3be060a62a0a193d7c58213c08d916bc869cad0dbab79f0d1555a157c6"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-Report.png",
+      "bytes": 158139,
+      "sha256": "e4e560911806345d0b612dc539854fcfbfd2759be5affa4fe4cd0b4c1616d02a"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-Results.png",
+      "bytes": 143783,
+      "sha256": "4ed75c919263283b351e1b2757d14efa472f90dd987e4e7776699b49d4b7cab8"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-Tests.png",
+      "bytes": 131394,
+      "sha256": "0dd8b7742dbe4705bea141dd2781bb3c28387b1fc4bf046753812b54a624037f"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-equipment.png",
+      "bytes": 199263,
+      "sha256": "e9c2655ed00b154257ff2a9f12694975036a2d35ae71178e84efe700e14a48e7"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-evidence.png",
+      "bytes": 174080,
+      "sha256": "9dd8b402b21e8353ff0f0fcbcd05573a321a0cd2a1687362021fb016b51c5b49"
+    },
+    {
+      "path": "evidence/library/screenshots/normal-overview.png",
+      "bytes": 293544,
+      "sha256": "22c3f81fb5734dc2bb46adfa7b713fd5de4436aed3554042e522a3fa1baaa8d7"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-Possible-causes.png",
+      "bytes": 169970,
+      "sha256": "ca1bc6b838f4c9dfb52b1bbb0372034aa02dc38e4686abb26b73c1f410dcf239"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-Report.png",
+      "bytes": 159660,
+      "sha256": "7fa5ee59cfd90f0624150785b6a49f643a086b44af6d3bb2222a398061f7e6b4"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-Results.png",
+      "bytes": 143947,
+      "sha256": "413c5a611af4ae4002d91880319f8db0e7ad3e8d528adb546389351709e2fe48"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-Tests.png",
+      "bytes": 138684,
+      "sha256": "ce5b240d1de89f644dd185dc17c8ca116ac699e0f7a92eda1cf45bdf151a9acd"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-equipment.png",
+      "bytes": 203267,
+      "sha256": "150cd23f7c86c673f114f30756fc7a893fe3fec061c932c03d351f616c8ab10a"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-evidence.png",
+      "bytes": 170071,
+      "sha256": "89803c1655c6dc5906d531265da0550b94884b3be22e836dd65dbc5f98589759"
+    },
+    {
+      "path": "evidence/library/screenshots/temperature_response-overview.png",
+      "bytes": 295628,
+      "sha256": "b1a9b83a6df316fe931ec3ca5644a4410587082fefd1e90f639bfba0c0516d37"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-Possible-causes.png",
+      "bytes": 123595,
+      "sha256": "70d82070b200f1975fdbf108b19b985ed0b962157292d8c8cf526efe075ec49e"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-Report.png",
+      "bytes": 116967,
+      "sha256": "ce7d4466ca91b8fb784c6015dadd37148ab929457fca7cb23540b67794fbe20d"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-Results.png",
+      "bytes": 97792,
+      "sha256": "e15b4fe1824e75bdd704de9f2316688990575cfb76a889eef06c66e303523d5c"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-Tests.png",
+      "bytes": 97365,
+      "sha256": "93ac19e9dd2de7f3024645f8051bd4bce9b5b32f01457d60836a9608904644ea"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-equipment.png",
+      "bytes": 147145,
+      "sha256": "df9fdcd30a232fbcf61a91d7842e70606ec03342a5f21e5b947736089044627f"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-evidence.png",
+      "bytes": 117299,
+      "sha256": "73137fc2f1005d477b54bcdcb7a7506b8d896c02d17de0c7b924e56ade137caa"
+    },
+    {
+      "path": "evidence/library/screenshots/vibration_response-overview.png",
+      "bytes": 208942,
+      "sha256": "ad429b274bc6dc8f24064c6d53ef187c7529dcb2a1f5ba9ba6f7a06ecb9eedce"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-choose.png",
+      "bytes": 169387,
+      "sha256": "d93d5a472147ce85cd22cd5dc51110721a34ab38a03bf380e77ec29f21b5ab60"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-equipment.png",
+      "bytes": 221383,
+      "sha256": "18b336a49eeb94a0cfaf5268eca8ffb4471cfe9cf6809a0befa43be4f552150a"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-evidence.png",
+      "bytes": 187084,
+      "sha256": "8d7781d7e2a5cdbeb49552ca38c408c62fed17a51fc85b8436da317d473e8b3b"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-missing-evidence.png",
+      "bytes": 166663,
+      "sha256": "4a5af363d57a190f7d5fe922fa69e32941ee0910e1dfdcf42290505c8426a1cd"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-overview.png",
+      "bytes": 307911,
+      "sha256": "8344c3c8cece26c830aa5c6b7ebac818187faeb2c63f7acd55ae11d5172298b5"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-possible-causes.png",
+      "bytes": 223789,
+      "sha256": "b065e42b5a8f815a3a17bfab805af47f99248e713cf5629de03992d76413e022"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-report.png",
+      "bytes": 170942,
+      "sha256": "135bfe5551ad0166100921bf0ba542c5e19ad4f2252aa0b08a1ee63965cb607a"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-results.png",
+      "bytes": 202881,
+      "sha256": "720041c91cbba070668b70f158618ffb0c4f59cd0692ce76ed58ccfe8a98fee4"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-test-proposal.png",
+      "bytes": 138261,
+      "sha256": "b19a9bada887e51df91c2e0dae66e706787cd5015d08c25a6fc58cb2a4b70c9a"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-tests.png",
+      "bytes": 151884,
+      "sha256": "447e32154c4962e8221451c6728bfd8ebd01ecae14213e591d10a36efe399874"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-thermal.png",
+      "bytes": 160603,
+      "sha256": "1e0fba7f2f8058d26af38289f271910f2629478779d4b97e2e0431c5cd8ed785"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-desktop-waveform.png",
+      "bytes": 178497,
+      "sha256": "22346c3fd37f856b3a5d402ece251665b1dc27246adb2f964cb61d1566a7ac3b"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-choose.png",
+      "bytes": 147581,
+      "sha256": "61d1307ad5acbe40a01157efa6dfa7be50bf3edf09cd1bcc056a9c9543677e6d"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-equipment.png",
+      "bytes": 153355,
+      "sha256": "c3e0c8f07bd1af8b457b7fd7795bfe794a1fd77c45c52fa771adeeab576b7111"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-evidence.png",
+      "bytes": 112504,
+      "sha256": "efdcafd01194bdebe53ac35faa087a0282ce4d4d8415c64bde88a6be0eb11172"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-overview.png",
+      "bytes": 201834,
+      "sha256": "09d4921d023723680443a8f26f0281deea7a4569a4b9544a43e945f1ca7ff935"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-possible-causes.png",
+      "bytes": 165206,
+      "sha256": "8dfb4b188ccbe1495f61adef66f2f924d628def12566a05bca4ea6b2e7a7b031"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-report.png",
+      "bytes": 114893,
+      "sha256": "c5519ff4d1637e7e33073e7b29adc686ec3d0d3dbdb792b5bb85411eb461412b"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-results.png",
+      "bytes": 144039,
+      "sha256": "6001d39b23f42e0a56a5dbd470cd01ba083d7e054dea07efab4f9f884ca1557e"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-tests.png",
+      "bytes": 96946,
+      "sha256": "80bd63dfd634fa99d27fed3a143642f42471aa22ac8c65e8e6830183f4e9a235"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-thermal.png",
+      "bytes": 106200,
+      "sha256": "874735f16306c97db80abd2182e9df02f2d6ae40fc014232fd20ea006778efc1"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-320-waveform.png",
+      "bytes": 112273,
+      "sha256": "09512d9d32af7c0e7f5d3200513d0a094fd48aa8ca9c5a52213268651f416ba5"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-choose.png",
+      "bytes": 147448,
+      "sha256": "5610f2a9b31ba4f28c894b8bc8f0419c0547bf06744ab1fbb3f16376ee0c2f45"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-equipment.png",
+      "bytes": 153498,
+      "sha256": "cc04fa4cae85fb9709443ffed77b31c48048b050227aa2a817564c5ec37af1e3"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-evidence.png",
+      "bytes": 115768,
+      "sha256": "e4e8c3f93b1431c022a39597c1e2b01250ccabb5f5f68e67334781f738a997e4"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-overview.png",
+      "bytes": 206261,
+      "sha256": "31f457d4cf7be0f9dbb246842393199d6cf496c404d0c407a7125a7f0ecf3ca4"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-possible-causes.png",
+      "bytes": 164296,
+      "sha256": "ae2ac97c772fbd275b0c39c7756bd7e2813ea5ad0e7fc7eac51ce234cc40f35a"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-report.png",
+      "bytes": 115390,
+      "sha256": "d1d106a55b10c19ffed8ed9fe7350915b8f5b8d27f45fdb685a681a9cc19b138"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-results.png",
+      "bytes": 144223,
+      "sha256": "520c25f2ea968f48b2191ad05a1c97d8c04ac4526041fa11220726ca8759cd28"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-tests.png",
+      "bytes": 98717,
+      "sha256": "92e4f378add4af3d4e8fcf15ad836b10c703c053f7d43d2ff4d6e4432956e8c7"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-thermal.png",
+      "bytes": 104825,
+      "sha256": "29b42f276ec8829ac982f572f63de368d27a44d46fcdf4a08c13a9b40557e491"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-375-waveform.png",
+      "bytes": 113803,
+      "sha256": "ea3d86014e309d07f4b1517452c2d7746e7573fb0d60b8cdb0f6d642f48cf3d7"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-choose.png",
+      "bytes": 146663,
+      "sha256": "0bbaa1a59dabfd707dbc3e50a48c57122e548f7c4585288c107eb7373aa20131"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-equipment.png",
+      "bytes": 165158,
+      "sha256": "69af49a99520f75bf8de6ac339f7899c3925feeb839181d7937ba939274d4abc"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-evidence.png",
+      "bytes": 127431,
+      "sha256": "f5da81153fe505ce8d105e2d92aa8bb4d0bd4eb4f0bf19b9561d939938aa9325"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-missing-evidence.png",
+      "bytes": 115399,
+      "sha256": "5b34200eb7f6aa507c92c8a17a538829140e151ab8d6c10fcc1c41cf5195cb40"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-overview.png",
+      "bytes": 220446,
+      "sha256": "5245ee7ea92039a7b17ae946aa4cea571adeed33c2b7fbf7eb61a9573bbacf5d"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-possible-causes.png",
+      "bytes": 175527,
+      "sha256": "8572cce573ec1e41f13cd3576de466a47de360c6cf9e45e68e66fa70e9e7d7d6"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-report.png",
+      "bytes": 127442,
+      "sha256": "d16267b45623fc591d7c4dfdcf6cc131f46583b17eddf5853e95f372f318362e"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-results.png",
+      "bytes": 157039,
+      "sha256": "5f5f1dd6c4a8ed9ce9a79695ec157518b6cd165f98f3f3f36c4c35b34d5f23ec"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-test-proposal.png",
+      "bytes": 93988,
+      "sha256": "6ac95249847571ee2a5776b6ed95f280ea124a1c9ffd2082f9314dd8dce96770"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-tests.png",
+      "bytes": 110427,
+      "sha256": "9b45627cdae348dd3f1709f277fbc02d63f26da359e4e7b1d6567a2bc8b94bfc"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-thermal.png",
+      "bytes": 116604,
+      "sha256": "da565edad3fa794eecb6fa3c1d7df3f500b20e2fa2aae9af4775abc5144238e3"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-390-waveform.png",
+      "bytes": 124773,
+      "sha256": "7149aa2c54150411a6fc7577bd09ae60b81ca7f3382c70e1e299f7bdf2ca3319"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-choose.png",
+      "bytes": 145137,
+      "sha256": "c645db1c960289fe36873220a206eb1081025b0f3a034cb80a01cc6c1acb894b"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-equipment.png",
+      "bytes": 155697,
+      "sha256": "dd27633b699c9f0b31d7493cba8cdacafbd2d9f867db14ec0e16c76e8c7b4983"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-evidence.png",
+      "bytes": 117721,
+      "sha256": "8863abdbd07170c70eb7073d8d1e3e22e984f8a80a45f94883ab9f5a060ae2bd"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-overview.png",
+      "bytes": 210379,
+      "sha256": "a2cc97b62a0be24cb6f36e05c1faed301f421bb3e691eb4595788ab779e1810a"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-possible-causes.png",
+      "bytes": 166158,
+      "sha256": "249b64f7455da824d37b303e51e527a051816c94a6ed620251354f3649144a02"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-report.png",
+      "bytes": 115321,
+      "sha256": "c704cf45ffe45d06452fba73aeff960fabc3f40bed3b1bbecf238b8e2b8de83e"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-results.png",
+      "bytes": 144331,
+      "sha256": "e4e754f0707c84fabdfb888ee0daba9f403bc5825efc6a292b04f4fef016da33"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-tests.png",
+      "bytes": 98416,
+      "sha256": "8af018130fef512f7d995edbe41c974df32ce8662c0080023b441de214b120d1"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-thermal.png",
+      "bytes": 106482,
+      "sha256": "3af1f4354221d94be6514befb0ee24fb610e695a4ee49914b5d24a0317da78fb"
+    },
+    {
+      "path": "evidence/library-widths/product-v4-mobile-430-waveform.png",
+      "bytes": 114778,
+      "sha256": "2623d26a9f05f938dfc5c0c101773762d70e402ab5b53d2b99de928f7ddde880"
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-320.png",
+      "bytes": 334791,
+      "sha256": "12c881b6d65159deb6e888f3ccc6d9d2ef59d2eb60db563055f037663cc805c0"
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-375.png",
+      "bytes": 347261,
+      "sha256": "a01ce27f3acd3134ae35a18252bdf78f3d61d096dd93127f8dc11386506c534e"
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-430.png",
+      "bytes": 347812,
+      "sha256": "e850eeaae273fef74344f1ab52ad834668d5f3253abbb087a7f25db4af8f4798"
+    },
+    {
+      "path": "evidence/machine/screenshots/bearing-machine.png",
+      "bytes": 444123,
+      "sha256": "9918cce8255e2a672336dbbe197c37df996b358756279c88ba0a54d6e63ce86e"
+    },
+    {
+      "path": "evidence/machine/screenshots/bearing-verification.png",
+      "bytes": 265985,
+      "sha256": "3755c21330c2f343cefe250668d136fcd85028c4f0776e1b40e3d2dcfc81648f"
+    },
+    {
+      "path": "evidence/machine/screenshots/cavitation-machine.png",
+      "bytes": 341070,
+      "sha256": "c47e9a25a4a77336e8408f388377ec1e9bc9ce7aca0aa1eb445db4b3f1598657"
+    },
+    {
+      "path": "evidence/machine/screenshots/cavitation-verification.png",
+      "bytes": 267219,
+      "sha256": "330d935e93ea3f07280063c7350004fe74ab84b66a4f3f9d79f3c2c394113fe7"
+    },
+    {
+      "path": "evidence/machine/screenshots/misalignment-machine.png",
+      "bytes": 447894,
+      "sha256": "6051bb1e42d17176b52d7ac0f906c3287ef5445fd12e9bb1ea6e1c161e5119c2"
+    },
+    {
+      "path": "evidence/machine/screenshots/misalignment-verification.png",
+      "bytes": 272626,
+      "sha256": "3ace23d4304817abe9ee50d40f72dcd1988f4c524d6e910ddd88dd288687d61b"
+    },
+    {
+      "path": "evidence/machine/screenshots/normal-machine.png",
+      "bytes": 485249,
+      "sha256": "438c4bf355f741e831e9a4e9b0411f86cd83121296b11152ce6c14a1e89d9847"
+    },
+    {
+      "path": "evidence/machine/screenshots/normal-verification.png",
+      "bytes": 260015,
+      "sha256": "9bfb1d048f8cb0e31d5a2579fa5b6268380412e1975e6612c528c3590e2f45a0"
+    },
+    {
+      "path": "evidence/machine/screenshots/pressure_sensor-machine.png",
+      "bytes": 315039,
+      "sha256": "222d5c9c2ccdaa7c8aa8682eb877dcfe5eb1a255db614d43a623c2eb71fa7ca0"
+    },
+    {
+      "path": "evidence/machine/screenshots/pressure_sensor-verification.png",
+      "bytes": 252898,
+      "sha256": "9e2be863be8bb1b313d6ffa89d0415fc8a791f7149baaba59014472ea53910a5"
+    },
+    {
+      "path": "evidence/machine/screenshots/process-machine.png",
+      "bytes": 447027,
+      "sha256": "c845f74d8604e68faccde368ffd32ed55143751e6d571ff8c6143ab902fa766a"
+    },
+    {
+      "path": "evidence/machine/screenshots/process-verification.png",
+      "bytes": 266005,
+      "sha256": "d5ce95cbff0d8ec098e52a506274b69331102e00815c70ff709a09782e6276f0"
+    },
+    {
+      "path": "evidence/machine/screenshots/thermal-machine.png",
+      "bytes": 425140,
+      "sha256": "0ba44731d9bc0f0a81a2567951a0a13ab31154630f6d49cc384b413f32c74a5c"
+    },
+    {
+      "path": "evidence/machine/screenshots/thermal-verification.png",
+      "bytes": 264972,
+      "sha256": "312d1a78c0d676e2081f0a924b128d42603891af5dee4bade24239027b740973"
+    },
+    {
+      "path": "evidence/model/screenshots/mobile-recorded-fallback.png",
+      "bytes": 301051,
+      "sha256": "6001e99883a6e839e2dfe24073ba76862cc5c25f806c14bcc188be890c0cfa94"
+    },
+    {
+      "path": "evidence/model/screenshots/mobile-refresh-disabled-model.png",
+      "bytes": 201835,
+      "sha256": "2155c82d7d202199b617c9e206cbd9de52d54b006ee59a2597920247311e930c"
+    },
+    {
+      "path": "evidence/model/screenshots/observed-preparation.png",
+      "bytes": 366831,
+      "sha256": "965803eb74b9bca9c55e49d03493cb938344d48a62e95c14a5f3265705b6d0d3"
+    },
+    {
+      "path": "evidence/model/screenshots/recorded-competing-proposals.png",
+      "bytes": 271963,
+      "sha256": "c48ad7c114b75273d38113b903c2ace090d6a95d1473a652529dd777e664d4e3"
+    },
+    {
+      "path": "evidence/model/screenshots/verified-recorded-proposals.png",
+      "bytes": 267308,
+      "sha256": "22f968339855c6fac2be70c4d442e3ab65bbfbc8ae03d3aeda9efd55478cdf5e"
+    },
+    {
+      "path": "evidence/portable/restored-portable.png",
+      "bytes": 434192,
+      "sha256": "f6ae1462edb4ea2a9cf79b322a38e90da27261bc4665e6718a1eca495dc95523"
+    },
+    {
+      "path": "evidence/screenshots/desktop-restored-report.png",
+      "bytes": 469130,
+      "sha256": "394e42544e6a3fcd1253653e3bc0ae43c33941fe5d9a754d79652d9f4644a896"
+    },
+    {
+      "path": "evidence/screenshots/desktop-selected-case.png",
+      "bytes": 393483,
+      "sha256": "22216e2076b36f51b38e523ad24420b4b02dc965836028f1f31ddb0defd6a686"
+    },
+    {
+      "path": "evidence/screenshots/desktop-status.png",
+      "bytes": 142833,
+      "sha256": "040b42a986e250740c39f9648e5e4463fb81e6b317018e67486d000f4e1142a5"
+    },
+    {
+      "path": "evidence/screenshots/desktop-telemetry.png",
+      "bytes": 182461,
+      "sha256": "6918a8807addc7866ba69b0da0c8d8bc46cb1ad617f0712f0c039d43d02dd2a8"
+    },
+    {
+      "path": "evidence/screenshots/laptop-library-machine.png",
+      "bytes": 290420,
+      "sha256": "e567360828410a91a4490536649cdd744bca56564c2e1f069cd7864f5deb7036"
+    },
+    {
+      "path": "evidence/screenshots/laptop-library-report.png",
+      "bytes": 171803,
+      "sha256": "45e41c9e27ea408e9b2b526c324a70d2a9154d7020bc5fa101fc2a08fcf30406"
+    },
+    {
+      "path": "evidence/screenshots/laptop-restored-after-server-loss.png",
+      "bytes": 306822,
+      "sha256": "60fd0fe5c5f072be2915b4d2b969da1011e95af375cc234e6604532e5f31e0dc"
+    },
+    {
+      "path": "evidence/screenshots/mobile-accessible-recovery.png",
+      "bytes": 338670,
+      "sha256": "3e162bbe8608986346623e371b3fb2a4a3be2c4df5b7015ac6194f6c2715a0bd"
+    },
+    {
+      "path": "evidence/screenshots/mobile-restored-proposal.png",
+      "bytes": 259320,
+      "sha256": "40365639b42e3974c336f682294ddfacf365db62a22ddafa3d656fe4dac4bc4b"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-accessible-fallback.png",
+      "bytes": 101545,
+      "sha256": "e29b95e0d003bc4f317b8f642e96b087365329dfa57f10a873a811866e194d62"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-fault-machine.png",
+      "bytes": 173466,
+      "sha256": "850e964186e38dea307a8748e0e706639555ff14d7777c315d098c94bfbfe684"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-investigation.png",
+      "bytes": 99493,
+      "sha256": "6230e147cdadfd74379067acb4e78c05e30ca3cbca2f2b833dbf3d7757b1490d"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-machine-full.png",
+      "bytes": 337476,
+      "sha256": "317e0660b6d46ddecc4618b42d5f0fcc76ea7391a869effb39c6bfcd914c43b5"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-machine.png",
+      "bytes": 151687,
+      "sha256": "17d0df56653999a6d25e9a26b8f6bee5700157fe4e7241218bf287ce8914de7c"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-report.png",
+      "bytes": 99768,
+      "sha256": "e5217db3547995815dab39e770698bbb5f671b5861bb402108de167ec74af37a"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-telemetry.png",
+      "bytes": 122002,
+      "sha256": "ed96e86f94f32d56697d6303522fe5af60aaf8bf9737cddce8a8e9a859b72f93"
+    },
+    {
+      "path": "evidence/unified/screenshots/1366-verification.png",
+      "bytes": 101071,
+      "sha256": "208c1178ed2b431f4ea7229b239233a69ca2f5b2f209fc465fc34b67b795852a"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-accessible-fallback.png",
+      "bytes": 117568,
+      "sha256": "b474d83f07258c950376ae969efa245df8f63e77f6ec6a773fea52a4a4e732e5"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-fault-machine.png",
+      "bytes": 209493,
+      "sha256": "21ff765a0ecf10295552e324263b125add1954998347512087c714880586be7f"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-investigation.png",
+      "bytes": 116688,
+      "sha256": "2ad435badf6d116ecfec80b016cdcd93ff75e8b33a43783f683e302c2636ab1f"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-machine-full.png",
+      "bytes": 375200,
+      "sha256": "59c604d764e569e45e288fe1f5d87af7193247d561c339b6ac270d872b215cd8"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-machine.png",
+      "bytes": 192748,
+      "sha256": "7f75475c816ba352a9e67c7d64abc2f319cfcf92f1b1ab2003b7fd35b3774cb8"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-report.png",
+      "bytes": 117080,
+      "sha256": "12c06e1029cae4c7d10f5963532fd501deb9e832a213782062945647370ccc3d"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-telemetry.png",
+      "bytes": 156081,
+      "sha256": "d0e20d8729bfc7b15fe37fce57cb103b2fdfbc0e353a029f01bb3bbbb8bdb038"
+    },
+    {
+      "path": "evidence/unified/screenshots/1440-verification.png",
+      "bytes": 124369,
+      "sha256": "c1fe91912ad7f1a72c3e95407793579c94c395bcb1d5587718f9fb3eda855625"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-accessible-fallback.png",
+      "bytes": 57365,
+      "sha256": "d9f59eeff5bfcb7d1cd2d1e4a1ffadb16dacf887aed6bf08dbf3989fb40414a8"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-fault-machine.png",
+      "bytes": 62680,
+      "sha256": "74cdc3c4600a23209cb392b71aa84eff73ca603fe931cea85c70dc654812f39a"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-investigation.png",
+      "bytes": 62742,
+      "sha256": "d444131f1e9407c4055a79a5b5427b0ae3b4bb57f42a7dc6c746b14124120371"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-machine-full.png",
+      "bytes": 305761,
+      "sha256": "a110acf8c188853e7556317a3922d7541db776dbf6017a5c7a7b65fdbb87aa5f"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-machine.png",
+      "bytes": 72006,
+      "sha256": "563e7670aa93fb4c704de7a4bec1bf88e5a8110e5bb007fc4bc733950615f7cd"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-report.png",
+      "bytes": 61163,
+      "sha256": "a09f6007403a00821c5eded8a74d2867b1cb935e7710071d7ee80fa8ad647fff"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-telemetry.png",
+      "bytes": 62491,
+      "sha256": "ad617cc221dc85ff853aee1d9290db8e5313a1a74c29a8d8d60da72c91f009c6"
+    },
+    {
+      "path": "evidence/unified/screenshots/390-verification.png",
+      "bytes": 61935,
+      "sha256": "349db26eff13e1910c5ac4d039e8d00d7e7ad269ea61a6e56c632721661fc899"
+    }
+  ]
+}

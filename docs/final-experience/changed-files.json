@@ -1,0 +1,1172 @@
+{
+  "baseline": "17ea7507814960a4f181d45a3cacaddd38e43f7c",
+  "branch": "feature/forge-final-experience",
+  "count": 291,
+  "scope": "Final candidate changes relative to exact Phase 6; inventory includes itself and manifest. No unrelated source or original submission artifacts changed.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "status": "modified"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "status": "modified"
+    },
+    {
+      "path": "HACKATHON_BUILD_LOG.md",
+      "status": "modified"
+    },
+    {
+      "path": "MODEL_ACTIVATION.md",
+      "status": "modified"
+    },
+    {
+      "path": "README.md",
+      "status": "modified"
+    },
+    {
+      "path": "SECURITY.md",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/experience/__init__.py",
+      "status": "added"
+    },
+    {
+      "path": "backend/forge/experience/routes.py",
+      "status": "added"
+    },
+    {
+      "path": "backend/forge/main.py",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/phase3/safety.py",
+      "status": "modified"
+    },
+    {
+      "path": "backend/tests/test_experience.py",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/ARCHITECTURE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/DEMO.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/ENGINEERING_REPORT.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/INFERENCE_STATUS.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/README.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/RELEASE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/SECURITY_REVIEW.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/VALIDATION.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/changed-files.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/README.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/backend-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/baseten-financial-source.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/container-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/coupled.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/docker-build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/fixture.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/front-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/inference-status.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/layout-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/library-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/library-widths.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/lifecycle-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/lifecycle-raf-failure.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/machine-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/model-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/npm-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/portable-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/public-boundary.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/python-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/replays.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/ruff.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/runtime-hashes.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/security-scan.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/selection-performance.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/selection-performance.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/smoke-preflight.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/types.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/unified-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/v1.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/v2.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/checks/v3.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/layout/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/layout/screenshots/layout-1024.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/layout/screenshots/layout-1920.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/layout/screenshots/layout-320.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/layout/screenshots/layout-768.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-recovered.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-recovered.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/desktop-report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/mobile-report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-choose.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-missing-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-test-proposal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-thermal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-desktop-waveform.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-choose.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-thermal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-320-waveform.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-choose.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-thermal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-375-waveform.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-choose.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-missing-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-test-proposal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-thermal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-390-waveform.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-choose.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-thermal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library-widths/product-v4-mobile-430-waveform.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/confounded.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/confounded.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/insufficient.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/insufficient.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/misleading_sensor.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/misleading_sensor.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/noisy_multifault.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/noisy_multifault.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/normal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/normal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/confounded-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/insufficient-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/misleading_sensor-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/noisy_multifault-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/normal-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/temperature_response-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/screenshots/vibration_response-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/temperature_response.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/temperature_response.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/vibration_response.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/library/vibration_response.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/lifecycle/lifecycle-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/lifecycle/screenshots/workstation-320.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/lifecycle/screenshots/workstation-375.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/lifecycle/screenshots/workstation-430.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine-recovered.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine-recovered.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/bearing.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/bearing.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/cavitation.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/cavitation.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/misalignment.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/misalignment.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/normal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/normal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/pressure_sensor.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/pressure_sensor.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/process.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/process.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/bearing-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/bearing-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/cavitation-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/cavitation-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/misalignment-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/misalignment-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/normal-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/normal-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/pressure_sensor-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/pressure_sensor-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/process-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/process-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/thermal-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/screenshots/thermal-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/thermal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/machine/thermal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/manifest.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/fixture-final.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/fixture-final.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/fixture-initial.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/meta-browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/prepared-evidence.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/screenshots/mobile-recorded-fallback.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/screenshots/mobile-refresh-disabled-model.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/screenshots/observed-preparation.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/screenshots/recorded-competing-proposals.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/model/screenshots/verified-recorded-proposals.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/portable/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/portable/restored-portable.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/portable/result.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/desktop-restored-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/desktop-selected-case.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/desktop-status.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/desktop-telemetry.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/laptop-library-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/laptop-library-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/laptop-restored-after-server-loss.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/mobile-accessible-recovery.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/screenshots/mobile-restored-proposal.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/1366-report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/1366-report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/1440-report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/1440-report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/390-report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/390-report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-accessible-fallback.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-fault-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-investigation.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-machine-full.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-telemetry.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1366-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-accessible-fallback.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-fault-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-investigation.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-machine-full.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-telemetry.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/1440-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-accessible-fallback.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-fault-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-investigation.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-machine-full.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-telemetry.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/screenshots/390-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/evidence/unified/unified-browser.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/screenshots.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/final-experience/validation.json",
+      "status": "added"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/package.json",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/DemoConsole.test.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/DemoConsole.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/LegacyMachine.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/industrial/RecoveryPanel.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/industrial/Shell.test.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/Shell.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/Workstation.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/recovery.test.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/industrial/recovery.ts",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/industrial/workstation.css",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/investigation/useInvestigation.ts",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/checkpoint-portable-browser.cjs",
+      "status": "added"
+    },
+    {
+      "path": "scripts/final-experience-browser.cjs",
+      "status": "added"
+    },
+    {
+      "path": "scripts/industrial-lifecycle-check.cjs",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/unified-browser-check.cjs",
+      "status": "modified"
+    }
+  ]
+}

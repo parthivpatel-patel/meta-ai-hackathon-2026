@@ -1,0 +1,1 @@
+Thirty actual component-selection/inspector timing samples recorded.

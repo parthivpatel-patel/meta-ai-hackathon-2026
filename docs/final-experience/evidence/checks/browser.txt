@@ -1,0 +1,1 @@
+Unified cases, independent browser recovery, server session loss, fixture provenance and failure handling passed; zero genuine requests.

@@ -1,0 +1,341 @@
+{
+  "schema": "forge-coupled-evaluation-1",
+  "cases": [
+    {
+      "scenario": "normal",
+      "seed": 2026,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 1,
+      "exact_set": true,
+      "runtime_ms": 44.866,
+      "replay": true
+    },
+    {
+      "scenario": "bearing",
+      "seed": 2026,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 125.31,
+      "replay": true
+    },
+    {
+      "scenario": "misalignment",
+      "seed": 2026,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "INCONCLUSIVE",
+      "experiments": 4,
+      "exact_set": true,
+      "runtime_ms": 153.369,
+      "replay": true
+    },
+    {
+      "scenario": "cavitation",
+      "seed": 2026,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "status": "INCONCLUSIVE",
+      "experiments": 3,
+      "exact_set": false,
+      "runtime_ms": 100.998,
+      "replay": true
+    },
+    {
+      "scenario": "pressure_sensor",
+      "seed": 2026,
+      "expected": [
+        "sensor-pressure"
+      ],
+      "findings": [
+        "sensor-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 70.164,
+      "replay": true
+    },
+    {
+      "scenario": "thermal",
+      "seed": 2026,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 110.011,
+      "replay": true
+    },
+    {
+      "scenario": "process",
+      "seed": 2026,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 115.169,
+      "replay": true
+    },
+    {
+      "scenario": "normal",
+      "seed": 2027,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 1,
+      "exact_set": true,
+      "runtime_ms": 56.42,
+      "replay": true
+    },
+    {
+      "scenario": "bearing",
+      "seed": 2027,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 67.277,
+      "replay": true
+    },
+    {
+      "scenario": "misalignment",
+      "seed": 2027,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "INCONCLUSIVE",
+      "experiments": 4,
+      "exact_set": true,
+      "runtime_ms": 136.963,
+      "replay": true
+    },
+    {
+      "scenario": "cavitation",
+      "seed": 2027,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "status": "INCONCLUSIVE",
+      "experiments": 3,
+      "exact_set": false,
+      "runtime_ms": 146.176,
+      "replay": true
+    },
+    {
+      "scenario": "pressure_sensor",
+      "seed": 2027,
+      "expected": [
+        "sensor-pressure"
+      ],
+      "findings": [
+        "sensor-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 71.591,
+      "replay": true
+    },
+    {
+      "scenario": "thermal",
+      "seed": 2027,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 70.338,
+      "replay": true
+    },
+    {
+      "scenario": "process",
+      "seed": 2027,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 72.446,
+      "replay": true
+    },
+    {
+      "scenario": "normal",
+      "seed": 2028,
+      "expected": [
+        "normal"
+      ],
+      "findings": [
+        "normal"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 1,
+      "exact_set": true,
+      "runtime_ms": 38.802,
+      "replay": true
+    },
+    {
+      "scenario": "bearing",
+      "seed": 2028,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 70.106,
+      "replay": true
+    },
+    {
+      "scenario": "misalignment",
+      "seed": 2028,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [
+        "process-vibration"
+      ],
+      "status": "INCONCLUSIVE",
+      "experiments": 4,
+      "exact_set": true,
+      "runtime_ms": 138.727,
+      "replay": true
+    },
+    {
+      "scenario": "cavitation",
+      "seed": 2028,
+      "expected": [
+        "process-vibration"
+      ],
+      "findings": [],
+      "status": "INCONCLUSIVE",
+      "experiments": 3,
+      "exact_set": false,
+      "runtime_ms": 103.464,
+      "replay": true
+    },
+    {
+      "scenario": "pressure_sensor",
+      "seed": 2028,
+      "expected": [
+        "sensor-pressure"
+      ],
+      "findings": [
+        "sensor-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 70.364,
+      "replay": true
+    },
+    {
+      "scenario": "thermal",
+      "seed": 2028,
+      "expected": [
+        "process-temperature"
+      ],
+      "findings": [
+        "process-temperature"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 109.217,
+      "replay": true
+    },
+    {
+      "scenario": "process",
+      "seed": 2028,
+      "expected": [
+        "process-pressure"
+      ],
+      "findings": [
+        "process-pressure"
+      ],
+      "status": "SUPPORTED_SYNTHETIC",
+      "experiments": 2,
+      "exact_set": true,
+      "runtime_ms": 68.691,
+      "replay": true
+    }
+  ],
+  "metrics": {
+    "cases": 21,
+    "accepted_exact": {
+      "numerator": 15,
+      "denominator": 15
+    },
+    "coverage": {
+      "numerator": 15,
+      "denominator": 21
+    },
+    "all_finding_precision": {
+      "numerator": 18,
+      "denominator": 18
+    },
+    "exact_agreement": {
+      "numerator": 18,
+      "denominator": 21
+    },
+    "replay_consistency": "21/21",
+    "inconclusive": 6
+  },
+  "limitations": [
+    "21 small fixed synthetic cases; not held-out industrial/model performance",
+    "Truth label uses a prespecified three-baseline-scale process/bias threshold at capture time",
+    "Counterfactual verification can remain inconclusive even when a simulator fault is known",
+    "No genuine model requests or external source authenticity proof"
+  ]
+}

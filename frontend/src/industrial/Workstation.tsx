@@ -17,6 +17,12 @@ import {
   ReportPreview,
   TrialComparison,
 } from "./WorkspacePanels";
+import { RecoveryPanel } from "./RecoveryPanel";
+import {
+  validateCheckpoint,
+  type Checkpoint,
+  type MachineCheckpoint,
+} from "./recovery";
 import { Machine } from "./Machine";
 import { ModelPanel } from "./ModelPanel";
 import {
@@ -80,8 +86,16 @@ function download(name: string, text: string, type = "application/json") {
 export default function Workstation({
   active = true,
   onOpenLibrary,
+  workspaceMode,
+  onModeChange,
+  embedded = false,
+  caseRequest,
 }: {
   active?: boolean;
+  caseRequest?: { scenario: string; sequence: number };
+  workspaceMode?: string;
+  onModeChange?: (mode: string) => void;
+  embedded?: boolean;
   onOpenLibrary?: () => void;
 }) {
   const [recording, setRecording] = useState<Recording | null>(null);
@@ -98,7 +112,12 @@ export default function Workstation({
   const inFlight = useRef(false);
   const [graphics2D, setGraphics2D] = useState(false);
   const [preview, setPreview] = useState<Frame | null>(null);
-  const [tab, setTab] = useState("Machine");
+  const [internalTab, setInternalTab] = useState("Machine");
+  const tab = workspaceMode || internalTab;
+  function setTab(mode: string) {
+    setInternalTab(mode);
+    onModeChange?.(mode);
+  }
   const [operatorEvents, setOperatorEvents] = useState<
     { id: string; sequence: number; kind: string; component: string }[]
   >([]);
@@ -170,6 +189,9 @@ export default function Workstation({
     void load(initial);
     return () => request.current?.abort();
   }, []);
+  useEffect(() => {
+    if (caseRequest) void load({ ...initial, scenario: caseRequest.scenario });
+  }, [caseRequest]);
   useEffect(() => {
     const visibility = () => {
       setVisible(!document.hidden);
@@ -440,6 +462,61 @@ export default function Workstation({
       }),
     );
   }
+  const recoveryData = useMemo<MachineCheckpoint | null>(
+    () =>
+      recording && !replayed
+        ? { recipe, selected, cursor, tab, speed, report }
+        : null,
+    [recording, replayed, recipe, selected, cursor, tab, speed, report],
+  );
+  async function restoreCheckpoint(value: Checkpoint) {
+    const safe = validateCheckpoint(value, "machine").data as MachineCheckpoint;
+    if (inFlight.current || busy) throw Error("Operation pending");
+    request.current?.abort();
+    const abort = new AbortController();
+    request.current = abort;
+    inFlight.current = true;
+    setBusy(true);
+    setPlaying(false);
+    try {
+      const simulation = validateSimulation(
+        await post<unknown>("/api/v4/simulate", safe.recipe),
+      );
+      if (
+        !simulation.components.some((c) => c.id === safe.selected) ||
+        safe.cursor >= simulation.frames.length
+      )
+        throw Error("Invalid component/window");
+      let verified: Report | null = null;
+      if (safe.report) {
+        verified = safe.report.model_proposal
+          ? await post<Report>("/api/v5/replay", safe.report)
+          : await post<Report>("/api/v4/investigate", safe.report.request);
+        if (canonical(verified) !== canonical(safe.report))
+          throw Error("Checkpoint evidence does not reproduce");
+      }
+      if (abort.signal.aborted || request.current !== abort)
+        throw Error("Interrupted");
+      setRecording(simulation);
+      setRecipe(safe.recipe);
+      setSelected(safe.selected);
+      setCursor(safe.cursor);
+      setSpeed(safe.speed);
+      setTab(safe.tab);
+      setReport(verified);
+      setPreview(null);
+      setPreparedHash("");
+      setReplayed(false);
+      setImportHash("");
+      setOperatorEvents([]);
+      setError("");
+    } finally {
+      if (request.current === abort) {
+        inFlight.current = false;
+        setBusy(false);
+      }
+    }
+  }
   if (!recording || !frame)
     return (
       <main className="industrial">
@@ -480,6 +557,12 @@ export default function Workstation({
                 : "Paused / ready"}
         </span>
       </header>
+      <RecoveryPanel
+        kind="machine"
+        data={recoveryData}
+        busy={busy}
+        onRestore={restoreCheckpoint}
+      />
       {error && (
         <div role="alert" className="station-error">
           {error}
@@ -666,7 +749,11 @@ export default function Workstation({
         </details>
       </div>
       {tab !== "Machine" && <InstrumentStrip frame={frame} />}
-      <nav className="station-tabs" aria-label="Workstation views">
+      <nav
+        className="station-tabs"
+        aria-label="Workstation views"
+        hidden={embedded}
+      >
         {[
           "Machine",
           "Telemetry",
@@ -1240,9 +1327,8 @@ export default function Workstation({
       )}
       <footer>
         <p>
-          Simulation only. No industrial control writes. Meta connection
-          unavailable. Export records before the free host restarts; browser
-          playback state is not durable storage.
+          Simulated equipment · No physical control writes · Public inference
+          disabled.
         </p>
         <a href="/assets/THIRD_PARTY_NOTICES.txt">Third-party licenses</a>
       </footer>

@@ -60,9 +60,11 @@ const path = require('node:path');
       }
       if(!await page.getByText(/Captured from/).count()) throw Error('Mode lost case');
       await page.getByRole('button',{name:'Machine',exact:true}).click();
+      await page.getByRole('button',{name:'Cases',exact:true}).click();
       await page.getByRole('button',{name:'Investigation library',exact:true}).click();
       await page.getByRole('button',{name:'Open investigation',exact:true}).waitFor();
       await page.waitForTimeout(700);
+      await page.getByRole('button',{name:'Cases',exact:true}).click();
       await page.getByRole('button',{name:'Machine workstation',exact:true}).click();
       if(await page.getByLabel('Machine recording position',{exact:true}).inputValue()!=='319') throw Error('Library lost playback window');
       await page.getByRole('button',{name:'Reports',exact:true}).click();

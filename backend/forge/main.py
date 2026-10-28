@@ -219,3 +219,7 @@ app.include_router(industrial_router)
 from .industrial.meta_routes import router as recorded_model_router
 
 app.include_router(recorded_model_router)
+
+from .experience.routes import router as experience_router
+
+app.include_router(experience_router)

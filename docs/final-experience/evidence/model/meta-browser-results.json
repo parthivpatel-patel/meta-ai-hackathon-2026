@@ -1,0 +1,46 @@
+[
+  {
+    "view": "observed-preparation",
+    "violations": []
+  },
+  {
+    "view": "recorded-competing-proposals",
+    "violations": []
+  },
+  {
+    "view": "verified-recorded-proposals",
+    "violations": []
+  },
+  {
+    "journey": "desktop",
+    "capture_ms": 207,
+    "experiment_ms": [
+      348,
+      398
+    ],
+    "export_ms": {
+      "JSON": 53,
+      "HTML": 260
+    },
+    "repeated_clicks_bounded": true,
+    "tamper_preserves_investigation": true,
+    "source": "test_transport",
+    "genuine_requests": 0
+  },
+  {
+    "view": "mobile-recorded-fallback",
+    "violations": []
+  },
+  {
+    "view": "mobile-refresh-disabled-model",
+    "violations": []
+  },
+  {
+    "journey": "mobile",
+    "width": 390,
+    "webgl": false,
+    "keyboard_preparation": true,
+    "pending_refresh_preserves_no_live_call_boundary": true,
+    "genuine_requests": 0
+  }
+]

@@ -1,0 +1,332 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "scenario": "bearing",
+    "views": [
+      {
+        "name": "machine",
+        "violations": []
+      },
+      {
+        "name": "fault-machine",
+        "violations": []
+      },
+      {
+        "name": "telemetry",
+        "violations": []
+      },
+      {
+        "name": "investigation",
+        "violations": []
+      },
+      {
+        "name": "verification",
+        "violations": []
+      },
+      {
+        "name": "report",
+        "violations": []
+      },
+      {
+        "name": "accessible-fallback",
+        "violations": []
+      }
+    ],
+    "performance": {
+      "controls_ready_ms": 959,
+      "viewport": {
+        "width": 1006,
+        "height": 450,
+        "engine": "three.js r180",
+        "renderCount": "3",
+        "drawCalls": "57",
+        "triangles": "19138",
+        "rotorPhase": "0",
+        "reducedMotion": "false"
+      },
+      "experiment_ui_ms": [
+        124,
+        175
+      ]
+    },
+    "journeys": [
+      "A: pointer/keyboard camera, pump operation, pause with no idle render",
+      "B: abnormal telemetry, observed capture, competing causes",
+      "C: reviewed and explicitly confirmed tests; independent findings, uncertainty and machine response",
+      "D: JSON/HTML download and independent report re-import",
+      "F: malformed import preserves capture, missing data stops phase, accessible 2D inspection"
+    ],
+    "errors": [],
+    "external_requests": [],
+    "decision": {
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "process-vibration"
+      ],
+      "channels": [
+        {
+          "channel": "temperature",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-da73f515e21a348e877396a36321238c734336723de207c4d084d07c73a551ff#temperature"
+          ]
+        },
+        {
+          "channel": "vibration",
+          "status": "SUPPORTED",
+          "findings": [
+            "process-vibration"
+          ],
+          "reasons": [
+            "Prespecified witness response, persistent sensor offset, telemetry coverage and independent control policy"
+          ],
+          "evidence_refs": [
+            "EXP2-da73f515e21a348e877396a36321238c734336723de207c4d084d07c73a551ff#vibration",
+            "EXP2-81772249ca24cef75034cf036e9f3377621f8a02c6a6a0d9bcd9e211bc25b00d#vibration"
+          ]
+        },
+        {
+          "channel": "pressure",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-da73f515e21a348e877396a36321238c734336723de207c4d084d07c73a551ff#pressure"
+          ]
+        }
+      ],
+      "reasons": [
+        "All observed departures are explained within the scripted synthetic model; physical-world causality is not established"
+      ],
+      "uncertainty": "Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities."
+    },
+    "source": "rules-based, not Meta"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "scenario": "thermal",
+    "views": [
+      {
+        "name": "machine",
+        "violations": []
+      },
+      {
+        "name": "fault-machine",
+        "violations": []
+      },
+      {
+        "name": "telemetry",
+        "violations": []
+      },
+      {
+        "name": "investigation",
+        "violations": []
+      },
+      {
+        "name": "verification",
+        "violations": []
+      },
+      {
+        "name": "report",
+        "violations": []
+      },
+      {
+        "name": "accessible-fallback",
+        "violations": []
+      }
+    ],
+    "performance": {
+      "controls_ready_ms": 1010,
+      "viewport": {
+        "width": 932,
+        "height": 330,
+        "engine": "three.js r180",
+        "renderCount": "3",
+        "drawCalls": "57",
+        "triangles": "19138",
+        "rotorPhase": "0",
+        "reducedMotion": "false"
+      },
+      "experiment_ui_ms": [
+        108,
+        150
+      ]
+    },
+    "journeys": [
+      "A: pointer/keyboard camera, pump operation, pause with no idle render",
+      "B: abnormal telemetry, observed capture, competing causes",
+      "C: reviewed and explicitly confirmed tests; independent findings, uncertainty and machine response",
+      "D: JSON/HTML download and independent report re-import",
+      "F: malformed import preserves capture, missing data stops phase, accessible 2D inspection"
+    ],
+    "errors": [],
+    "external_requests": [],
+    "decision": {
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "process-temperature"
+      ],
+      "channels": [
+        {
+          "channel": "temperature",
+          "status": "SUPPORTED",
+          "findings": [
+            "process-temperature"
+          ],
+          "reasons": [
+            "Prespecified witness response, persistent sensor offset, telemetry coverage and independent control policy"
+          ],
+          "evidence_refs": [
+            "EXP2-d2108246a5431d7c62350e06873499b48b273529fe53a2122a1f72e6de6b8979#temperature",
+            "EXP2-cc9043b1ab9dbd346fc3a4cec1f83a6d3b84c4044add53e0d25bf7b6883d120b#temperature"
+          ]
+        },
+        {
+          "channel": "vibration",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-d2108246a5431d7c62350e06873499b48b273529fe53a2122a1f72e6de6b8979#vibration"
+          ]
+        },
+        {
+          "channel": "pressure",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-d2108246a5431d7c62350e06873499b48b273529fe53a2122a1f72e6de6b8979#pressure"
+          ]
+        }
+      ],
+      "reasons": [
+        "All observed departures are explained within the scripted synthetic model; physical-world causality is not established"
+      ],
+      "uncertainty": "Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities."
+    },
+    "source": "rules-based, not Meta"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "scenario": "pressure_sensor",
+    "views": [
+      {
+        "name": "machine",
+        "violations": []
+      },
+      {
+        "name": "fault-machine",
+        "violations": []
+      },
+      {
+        "name": "telemetry",
+        "violations": []
+      },
+      {
+        "name": "investigation",
+        "violations": []
+      },
+      {
+        "name": "verification",
+        "violations": []
+      },
+      {
+        "name": "report",
+        "violations": []
+      },
+      {
+        "name": "accessible-fallback",
+        "violations": []
+      }
+    ],
+    "performance": {
+      "controls_ready_ms": 664,
+      "viewport": {
+        "width": 332,
+        "height": 330,
+        "engine": "three.js r180",
+        "renderCount": "3",
+        "drawCalls": "57",
+        "triangles": "19138",
+        "rotorPhase": "0",
+        "reducedMotion": "false"
+      },
+      "experiment_ui_ms": [
+        141,
+        184
+      ]
+    },
+    "journeys": [
+      "A: pointer/keyboard camera, pump operation, pause with no idle render",
+      "B: abnormal telemetry, observed capture, competing causes",
+      "C: reviewed and explicitly confirmed tests; independent findings, uncertainty and machine response",
+      "D: JSON/HTML download and independent report re-import",
+      "F: malformed import preserves capture, missing data stops phase, accessible 2D inspection"
+    ],
+    "errors": [],
+    "external_requests": [],
+    "decision": {
+      "status": "SUPPORTED_SYNTHETIC",
+      "findings": [
+        "sensor-pressure"
+      ],
+      "channels": [
+        {
+          "channel": "temperature",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-70bb5b200a09031b2645cf863a80277701c7eb06d481ed90e931d931ed723ff8#temperature"
+          ]
+        },
+        {
+          "channel": "vibration",
+          "status": "BASELINE_CONSISTENT",
+          "findings": [],
+          "reasons": [
+            "Independent reference is quiet"
+          ],
+          "evidence_refs": [
+            "EXP2-70bb5b200a09031b2645cf863a80277701c7eb06d481ed90e931d931ed723ff8#vibration"
+          ]
+        },
+        {
+          "channel": "pressure",
+          "status": "SUPPORTED",
+          "findings": [
+            "sensor-pressure"
+          ],
+          "reasons": [
+            "Prespecified witness response, persistent sensor offset, telemetry coverage and independent control policy"
+          ],
+          "evidence_refs": [
+            "EXP2-70bb5b200a09031b2645cf863a80277701c7eb06d481ed90e931d931ed723ff8#pressure",
+            "EXP2-3622ad65aef7d27012e9815a9c508d5a452ee3ed1334b2461e35a2a6d13e4ff7#pressure"
+          ]
+        }
+      ],
+      "reasons": [
+        "All observed departures are explained within the scripted synthetic model; physical-world causality is not established"
+      ],
+      "uncertainty": "Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities."
+    },
+    "source": "rules-based, not Meta"
+  }
+]

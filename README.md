@@ -79,3 +79,7 @@ See [security](SECURITY.md), [current release and rollback](docs/CURRENT_RELEASE
 ## Unified workstation candidate (Phase 6)
 
 The exact Phase 5 baseline is preserved. The [unified workstation handoff](docs/unified/README.md) documents coordinated machine/investigation modes, detailed procedural geometry, retained library state, actual local production evidence and explicit release gates. No Phase 6 deployment or genuine inference is implied.
+
+## Phase 7 final experience candidate
+
+The [unified case/recovery handoff](docs/final-experience/README.md) records the latest candidate, native browser checkpoints, independent session recovery, actual browser evidence and explicit financial block on genuine inference. No deployment or active public Meta inference is implied.

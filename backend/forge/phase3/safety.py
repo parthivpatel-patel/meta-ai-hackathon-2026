@@ -110,7 +110,7 @@ def public_path(method: str, path: str) -> bool:
     return method == "POST" and (
         path in ("/api/v4/simulate", "/api/v4/investigate", "/api/v4/report.html",
                  "/api/v5/prepare", "/api/v5/replay", "/api/v5/advance", "/api/v5/report.html")
-        or path == "/api/v3/sessions"
+        or path in ("/api/v3/sessions", "/api/v6/recover")
         or bool(re.fullmatch(r"/api/v3/sessions/[a-f0-9]{32}/advance", path))
     )
 

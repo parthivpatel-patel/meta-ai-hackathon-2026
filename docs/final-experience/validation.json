@@ -1,0 +1,425 @@
+{
+  "schema": "forge-final-experience-validation-1",
+  "checked_utc": "2026-10-28T14:50:20.445261+00:00",
+  "baseline": "17ea7507814960a4f181d45a3cacaddd38e43f7c",
+  "branch": "feature/forge-final-experience",
+  "backend_tests_passed": 278,
+  "frontend_tests_passed": 51,
+  "image": "sha256:681e46f3f322273380d72e36c9d8fcff0fb6e0c586a5fc26ef8c864714ffaac4",
+  "runtime_sources_and_bundles_match": true,
+  "typescript_vite_ruff": "passed; existing Vite large-chunk advisory retained",
+  "browser": {
+    "new_recovery_journeys": 3,
+    "preserved_unified_journeys": 3,
+    "machine_scenarios": 7,
+    "legacy_cases": 7,
+    "model_fixture_journeys": 2,
+    "portable_checkpoint": {
+      "native_export": true,
+      "explicit_reset": true,
+      "validated_import": true,
+      "report_hash": "fa7825f44e380a164c9f1b47952756dec0edeffd033e07778ff4c0306014203c",
+      "experiments": 0,
+      "independent_reproductions": 1,
+      "genuine_requests": 0,
+      "errors": [],
+      "violations": []
+    },
+    "errors": 0,
+    "external_application_requests": 0
+  },
+  "axe": {
+    "counts": {
+      "phase7_recovery": 9,
+      "coupled_machine": 14,
+      "preserved_unified": 21,
+      "legacy_cases": 49,
+      "legacy_widths": 56,
+      "model_fixtures": 5,
+      "lifecycle": 3,
+      "large_tablet_layouts": 4,
+      "portable_checkpoint": 1
+    },
+    "total": 162,
+    "violations": 0,
+    "excluded_performance_samples": 5
+  },
+  "synthetic_evaluation": {
+    "total": 1061,
+    "panels": [
+      480,
+      280,
+      280,
+      21
+    ],
+    "coupled": {
+      "cases": 21,
+      "accepted_exact": {
+        "numerator": 15,
+        "denominator": 15
+      },
+      "coverage": {
+        "numerator": 15,
+        "denominator": 21
+      },
+      "all_finding_precision": {
+        "numerator": 18,
+        "denominator": 18
+      },
+      "exact_agreement": {
+        "numerator": 18,
+        "denominator": 21
+      },
+      "replay_consistency": "21/21",
+      "inconclusive": 6
+    },
+    "sequential": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 25.823,
+      "latency_ms_p95": 47.76505000000001,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "fixture_comparisons": {
+      "cases": 7,
+      "matched": "7/7",
+      "scope": "Offline integration/independence; not genuine model quality"
+    }
+  },
+  "replay": {
+    "count": 25,
+    "HTML_comparisons": 20,
+    "reports": [
+      {
+        "CLI_stdout": "Phase 3 replay verified: INCONCLUSIVE []",
+        "path": "docs/final-experience/evidence/library/confounded.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: ABSTAIN []",
+        "path": "docs/final-experience/evidence/library/insufficient.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+        "path": "docs/final-experience/evidence/library/misleading_sensor.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: INCONCLUSIVE ['process-vibration']",
+        "path": "docs/final-experience/evidence/library/noisy_multifault.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['normal']",
+        "path": "docs/final-experience/evidence/library/normal.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-temperature']",
+        "path": "docs/final-experience/evidence/library/temperature_response.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-vibration']",
+        "path": "docs/final-experience/evidence/library/vibration_response.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+        "path": "docs/final-experience/evidence/library-recovered.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+        "path": "docs/final-experience/evidence/library-widths/desktop-report.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": null,
+        "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+        "path": "docs/final-experience/evidence/library-widths/mobile-report.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": null,
+        "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine/bearing.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+        "path": "docs/final-experience/evidence/machine/cavitation.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "df5a32bcb08a1faafcd5bb7348a70f0b855fca28eaf91f7a4a54a5966c051bec"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+        "path": "docs/final-experience/evidence/machine/misalignment.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "db0d8de41dc2e1c8b3590225ef290b66743b8e4fc43cb26d5e1e593c6313f630"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine/normal.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "ad2edf44a5132e6be0a2cd605a6a5c72b0ae9bd23466b6c027530f4cfd6e2635"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine/pressure_sensor.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine/process.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "d7bc030f75fb302bca34a8d1f0dc45ca069e4a3455b1d24e7b797b8798dd2172"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine/thermal.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/machine-recovered.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/model/fixture-final.json",
+        "schema": "forge-industrial-model-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+        "path": "docs/final-experience/evidence/model/fixture-initial.json",
+        "schema": "forge-industrial-model-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": null,
+        "sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/unified/1366-report.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/unified/1440-report.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+      },
+      {
+        "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+        "path": "docs/final-experience/evidence/unified/390-report.json",
+        "schema": "forge-industrial-report-1",
+        "independent_replay": true,
+        "current_template_HTML_exact": true,
+        "sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: ABSTAIN []",
+        "path": "docs/submission/insufficient.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": null,
+        "sha256": "8c3848e2d06c78d4eccdf5ac041bad5e4fbcd93fad0097f868edd3a82f15503d"
+      },
+      {
+        "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+        "path": "docs/submission/misleading_sensor.json",
+        "schema": "forge-report-3",
+        "independent_replay": true,
+        "current_template_HTML_exact": null,
+        "sha256": "cff063f5bf02831f3f8051592762094d197cbb5863e1c175605522cabd39b27d"
+      }
+    ],
+    "genuine_requests": 0
+  },
+  "performance": {
+    "scope": "Local Chromium, emulated viewports/touch, software SwiftShader, not hardware FPS or public cold starts",
+    "camera_RAF_step_median_ms": 176.59999999403954,
+    "telemetry_paint_samples": [
+      {
+        "elapsed_ms": 2763.3999999910593,
+        "sequence": 40
+      }
+    ],
+    "telemetry_functional_progress": {
+      "start_sequence": 0,
+      "end_sequence": 40,
+      "minimum_sample_progress": 16,
+      "paint_sample_count": 1,
+      "scope": "RAF paint samples may coalesce timer ticks; bounded functional progress checked separately, not a cadence/FPS claim"
+    },
+    "selection_median_ms": 23.0,
+    "GPU": {
+      "engine": "three.js r180",
+      "renderCount": "2",
+      "drawCalls": "57",
+      "triangles": "19138",
+      "rotorPhase": "0",
+      "reducedMotion": "true"
+    }
+  },
+  "security": {
+    "container_passed": true,
+    "HTTP_checks": 32,
+    "known_npm_findings": 0,
+    "known_python_findings": 0,
+    "credential_scan": {
+      "checked_utc": "2026-10-28T14:58:08.057295+00:00",
+      "text_inputs": 155,
+      "bytes": 7075444,
+      "patterns": [
+        "private_key",
+        "github_token",
+        "aws_key",
+        "hf_token",
+        "openai_token",
+        "literal_authorization",
+        "literal_baseten_assignment"
+      ],
+      "findings": [],
+      "passed": true,
+      "scope": "Bounded changed source/public evidence, compiled frontend and own saved local container logs; known dummy fixtures excluded. No private provider receipts, secret-file values or environment dump. Not an exhaustive guarantee."
+    }
+  },
+  "inference": {
+    "status": "BLOCKED \u2014 NO GENUINE REQUEST SENT",
+    "phase7_owner_authorization": "Exactly one request maximum, conditional on financial and security gates; unused",
+    "genuine_requests_attempted": 0,
+    "requested_model_plan": "meta-models/muse-spark-open-1026",
+    "endpoint_plan": "https://inference.baseten.co/v1/chat/completions",
+    "returned_model": null,
+    "private_smoke_succeeded": false,
+    "genuine_output_integrated": false,
+    "public_inference_enabled": false,
+    "unresolved": [
+      "No authoritative account-specific confirmation of absent payment method/paid fallback and credit-only stopping was available",
+      "Runtime readiness reported no ready credential binding; dry preflight reports credential_missing",
+      "No financial attestations were fabricated or enabled"
+    ],
+    "not_required": "A usage dashboard is not required. Public documentation establishes budget-enforcement capability, not this account's configuration.",
+    "additional_inference": "The authorized attempt remains unused until its gates pass. No follow-up or genuine evaluation is authorized by a future smoke success. A smoke alone would not prove a complete workstation model investigation.",
+    "owner_clarification": "Owner explicitly confirmed no written credit-only charge protection is currently available and instructed no genuine API requests; offline engineering continues."
+  },
+  "deployment_performed": false,
+  "merge_performed": false,
+  "paid_resources_initiated": false,
+  "eligibility": "OPEN pre-kickoff question; original history preserved",
+  "CI": "Final exact-commit result in handoff after push"
+}

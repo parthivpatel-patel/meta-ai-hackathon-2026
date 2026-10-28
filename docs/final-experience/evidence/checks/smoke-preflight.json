@@ -1,0 +1,24 @@
+{
+  "ready_for_explicit_execution": false,
+  "blockers": [
+    "approved_credits_unconfirmed",
+    "provider_enforced_spending_limit_unconfirmed",
+    "card_free_entitlement_unconfirmed",
+    "inference_disabled",
+    "free_access_unconfirmed",
+    "credential_missing"
+  ],
+  "provider": "baseten",
+  "model_id": "meta-models/muse-spark-open-1026",
+  "request_limit": 1,
+  "max_output_tokens": 1024,
+  "reserved_accounting_budget": 8192,
+  "attempt_deadline_seconds": 15.0,
+  "total_request_deadline_seconds": 30.0,
+  "native_thermal": false,
+  "retry_limit": 0,
+  "network_requests_sent": 0,
+  "entitlement_basis": "Operator attestations, not independently verified provider billing",
+  "cost": "Not measured. Local budgets do not guarantee provider billing.",
+  "mode": "dry_run"
+}

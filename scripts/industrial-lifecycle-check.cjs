@@ -102,6 +102,7 @@ const fs = require("node:fs");
       await p
         .getByLabel("Machine component", { exact: true })
         .selectOption(i % 2 ? "bearing" : "motor");
+    const playbackStart = Number(await p.getByLabel("Machine recording position", {exact:true}).inputValue());
     await p
       .getByRole("button", { name: "Start simulation / Resume", exact: true })
       .click();
@@ -119,7 +120,10 @@ const fs = require("node:fs");
       }
       return updates;
     });
-    if (telemetryUpdates.length < 2) throw Error("Bounded telemetry playback stalled");
+    // RAF can coalesce multiple 500ms state updates under software WebGL.
+    // Preserve measured paint samples, but assert actual two-tick progress rather than their count.
+    await p.waitForFunction(start => Number(document.querySelector('input[aria-label="Machine recording position"]').value) >= start + 16, playbackStart, {timeout:5000});
+    const playbackEnd = Number(await p.getByLabel("Machine recording position", {exact:true}).inputValue());
     await p.evaluate(() => {
       Object.defineProperty(document, "hidden", {
         value: true,
@@ -145,12 +149,14 @@ const fs = require("node:fs");
       document.dispatchEvent(new Event("visibilitychange"));
     });
     for (let i = 0; i < 5; i++) {
+      await p.getByRole("button",{name:"Cases",exact:true}).click();
       await p
         .getByRole("button", { name: "Investigation library", exact: true })
         .click();
       await p
         .getByRole("button", { name: "Open investigation", exact: true })
         .waitFor();
+      await p.getByRole("button",{name:"Cases",exact:true}).click();
       await p
         .getByRole("button", { name: "Machine workstation", exact: true })
         .click();
@@ -179,6 +185,7 @@ const fs = require("node:fs");
     results.lifecycle = {
       camera_raf_cadence_ms: cadence,
       telemetry_ui_updates: telemetryUpdates,
+      telemetry_functional_progress: {start_sequence:playbackStart,end_sequence:playbackEnd,minimum_sample_progress:16,paint_sample_count:telemetryUpdates.length,scope:"RAF paint samples may coalesce timer ticks; bounded functional progress checked separately, not a cadence/FPS claim"},
       scope:
         "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
       heap_before: before.usedSize,

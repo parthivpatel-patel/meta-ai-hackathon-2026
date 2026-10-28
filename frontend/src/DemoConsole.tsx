@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ArrowLeft, ArrowRight, ShieldCheck, RefreshCw } from "lucide-react";
 import "@fontsource/geist-sans/latin-400.css";
 import "@fontsource/geist-sans/latin-500.css";
@@ -22,13 +22,62 @@ import {
   sourceLabel,
   type Stage,
 } from "./investigation/presentation";
-export default function DemoConsole() {
+import { RecoveryPanel } from "./industrial/RecoveryPanel";
+import { LegacyMachine } from "./industrial/LegacyMachine";
+import type { LibraryCheckpoint, Checkpoint } from "./industrial/recovery";
+export default function DemoConsole({
+  embedded = false,
+  workspaceMode,
+  onModeChange,
+}: {
+  embedded?: boolean;
+  workspaceMode?: string;
+  onModeChange?: (mode: string) => void;
+}) {
   const investigation = useInvestigation();
   const { session, cap, busy, error } = investigation;
-  const [stage, setStage] = useState<Stage>("Overview");
+  const [internalStage, setStage] = useState<Stage>("Overview");
+  const stageMap: Record<string, Stage> = {
+    Machine: "Overview",
+    Telemetry: "Evidence",
+    Investigation: "Possible causes",
+    Experiments: "Tests",
+    Verification: "Results",
+    Reports: "Report",
+    Evidence: "Evidence",
+    Replay: "Report",
+  };
+  const stage = workspaceMode
+    ? stageMap[workspaceMode] || internalStage
+    : internalStage;
+  const [caseComponent,setCaseComponent]=useState("pump");
+  const [caseCursor,setCaseCursor]=useState(0);
+  const recoveryData = useMemo(
+    () =>
+      session && cap?.mode === "public" &&
+      ["not_run", "deterministic_rules_not_meta"].includes(
+        session.model_source,
+      ) &&
+      !session.inference
+        ? { session, inspection:{selected:caseComponent,cursor:caseCursor,mode:({Overview:"Machine",Evidence:"Evidence","Possible causes":"Investigation",Tests:"Experiments",Results:"Verification",Report:"Reports"} as Record<Stage,string>)[stage]} }
+        : null,
+    [session, cap?.mode,caseComponent,caseCursor,stage],
+  );
   const [choosing, setChoosing] = useState(false);
   const navigate = (next: Stage) => {
     setStage(next);
+    onModeChange?.(
+      (
+        {
+          Overview: "Machine",
+          Evidence: "Evidence",
+          "Possible causes": "Investigation",
+          Tests: "Experiments",
+          Results: "Verification",
+          Report: "Reports",
+        } as Record<Stage, string>
+      )[next],
+    );
     requestAnimationFrame(() => {
       document.getElementById("investigation-main")?.focus();
       window.scrollTo({ top: 0, behavior: "instant" });
@@ -38,7 +87,7 @@ export default function DemoConsole() {
   async function begin() {
     const result = await investigation.act(true);
     if (result) {
-      setChoosing(false);
+      setChoosing(false);setCaseComponent("pump");setCaseCursor(0);
       navigate("Overview");
     }
   }
@@ -141,13 +190,13 @@ export default function DemoConsole() {
                   text: "Downloaded reports remain available even if this temporary demo restarts.",
                   action: "Choose another case",
                 };
-  const lobby = !session || choosing;
+  const lobby = !session || choosing || workspaceMode === "Cases";
   return (
     <div className="forge-v4">
       <a className="v4-skip" href="#investigation-main">
         Skip to investigation
       </a>
-      <header className="product-bar">
+      <header className="product-bar" hidden={embedded}>
         <a className="wordmark" href="/demo" aria-label="FORGE home">
           <span className="forge-symbol" aria-hidden="true">
             F
@@ -167,6 +216,18 @@ export default function DemoConsole() {
         )}
       </header>
       <div className="app-boundary">
+        {investigation.recoveryNotice && <p role="status">{investigation.recoveryNotice}</p>}
+        <RecoveryPanel
+          kind="library"
+          data={recoveryData}
+          busy={busy}
+          onRestore={async (value: Checkpoint) => {
+            const data=value.data as LibraryCheckpoint;
+            await investigation.recoverLocal(data.session);
+            if(data.inspection){setCaseComponent(data.inspection.selected);setCaseCursor(data.inspection.cursor);}
+            setChoosing(false);navigate(data.inspection ? stageMap[data.inspection.mode] : "Results");
+          }}
+        />
         {error && (
           <div className="notification error" role="alert">
             <div>
@@ -181,7 +242,7 @@ export default function DemoConsole() {
             )}
           </div>
         )}
-        {cap?.hosting_notice && (
+        {cap?.hosting_notice && !embedded && (
           <div className="hosting-message" role="note">
             {cap.hosting_notice}
           </div>
@@ -219,7 +280,14 @@ export default function DemoConsole() {
               busy={busy}
               ready={!!cap}
               onBegin={() => void begin()}
-              onResume={session ? () => setChoosing(false) : undefined}
+              onResume={
+                session
+                  ? () => {
+                      setChoosing(false);
+                      navigate("Overview");
+                    }
+                  : undefined
+              }
               useMeta={investigation.useMeta}
               onUseMeta={investigation.setUseMeta}
               modelAllowed={
@@ -233,6 +301,7 @@ export default function DemoConsole() {
           ) : (
             <>
               <div className="case-context">
+                {embedded && <button className="text-button" onClick={()=>{setChoosing(true);onModeChange?.("Cases");}}>Change case</button>}
                 <div>
                   <span>{session.metadata.equipment_id}</span>
                   <strong>{session.metadata.investigation_title}</strong>
@@ -250,6 +319,7 @@ export default function DemoConsole() {
                 </span>
               </div>
               <Journey stage={stage} onNavigate={navigate} />
+              {embedded && <div hidden={workspaceMode!=="Machine"}><LegacyMachine session={session} selected={caseComponent} cursor={caseCursor} onSelect={setCaseComponent} onCursor={setCaseCursor}/></div>}
               <div className="workspace-layout">
                 <article className="stage-content">
                   <PageHeader title={introductions[stage].title}>

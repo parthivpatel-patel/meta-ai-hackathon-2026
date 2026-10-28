@@ -787,3 +787,27 @@
   .machine-stage { padding-top:14px; }
   .machine-canvas { height:clamp(330px, calc(100svh - 450px), 560px); margin-top:8px; }
 }
+.unified-navigation { display:flex; gap:2px; padding:8px 28px; background:#fff; border-bottom:1px solid #bfced3; overflow:auto; font-family:"Geist Sans",sans-serif; }
+.unified-navigation button { font:inherit; font-size:15px; color:#294b57; background:transparent; border:0; border-bottom:3px solid transparent; padding:12px 15px; min-height:44px; white-space:nowrap; cursor:pointer; }
+.unified-navigation button[aria-current=page] { border-bottom-color:#235e57; background:#e7f0ed; color:#174e46; font-weight:600; }
+.unified-navigation button:focus-visible {outline:3px solid #286b60;outline-offset:-3px;}
+.unified-brand {font-family:"Geist Sans",sans-serif;}
+.unified-brand span {color:#c4d8de;font-size:13px;}
+.case-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.case-cards article {padding:22px;background:white;border:1px solid #bdced2;border-radius:5px;}
+.case-families {display:flex;gap:10px;margin:18px 0;}
+.browser-recovery {font-family:"Geist Sans",sans-serif;border:1px solid #c7d5da;border-radius:5px;padding:10px 14px;margin:12px 0;background:#f7faf9;color:#213f48;}
+.browser-recovery details>p {font-size:14px;max-width:1000px;}
+.browser-recovery button,.browser-recovery input {font:inherit;border:1px solid #aebfc4;padding:9px 12px;background:#fff;color:#20434e;border-radius:4px;min-height:44px;max-width:100%;margin:4px;}
+.browser-recovery summary {cursor:pointer;min-height:28px;}
+.browser-recovery [role=alert] {background:#fff0ed;padding:12px;color:#803b2d;}
+.recovery-available {display:flex;gap:16px;justify-content:space-between;align-items:center;}
+.industrial>.browser-recovery {order:8;}
+.legacy-machine {padding:18px;max-width:none;}
+.legacy-machine .machine-canvas {height:380px;}
+.unified-brand button {white-space:nowrap;}
+@media(max-width:800px){.unified-navigation {padding:4px 10px;}.unified-navigation button {padding:10px 12px;}.case-cards{grid-template-columns:1fr;}.unified-brand span{display:none;}.recovery-available{display:block;}.legacy-machine .machine-canvas{height:330px;}}
+.forge-v4 [hidden] {display:none!important;}
+/* Keep the case's real readings inside narrow reference-inspection panels. */
+.legacy-machine table {table-layout:fixed;width:100%;max-width:100%;}
+.legacy-machine th,.legacy-machine td {overflow-wrap:anywhere;}

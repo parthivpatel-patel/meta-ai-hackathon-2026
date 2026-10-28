@@ -1,3 +1,11 @@
+# Phase 7 authorization and financial boundary
+
+The Phase 7 directive grants exactly one conditional genuine Baseten request, not yet attempted. It is not necessary to request that same authorization again. It does not authorize retries, evaluation or a follow-up workstation request. A failed attempt consumes the authorization.
+
+The owner reports a $100 allocation and unavailable usage tracking. A usage dashboard is **not required**. Before execution, account-specific authoritative evidence must establish no payment method/paid fallback and no charges beyond promotional credits; a key or credit allocation alone is insufficient. Do not set financial attestations to true without evidence or change billing settings. Current runtime preflight/readiness and the Phase 7 handoff report the actual blocker; offline development proceeds independently. Preserve the exact endpoint/model, maximum1024 output tokens,15-second attempt,30-second overall deadline, budget1 and retries0. Existing private output protections remain required. No public inference activation follows from private success.
+
+Earlier procedures below remain historical/operational context; this explicit Phase 7 authorization supersedes their requirement to ask again for the already authorized single request. Financial/security prerequisites remain mandatory. See [Phase 7 evidence](docs/final-experience/README.md).
+
 # Controlled genuine Meta activation
 
 **Current gate:** the owner reports a protected Baseten key configured; its value and account entitlement remain unverified by this work. No genuine Meta inference has run in this environment. Earlier text authorizing an automatic test when a key appeared is superseded: **obtain fresh explicit owner authorization before every real smoke, evaluation or follow-up inference run.** Promotional credits are authorized for controlled testing only after availability and spending safeguards are confirmed.

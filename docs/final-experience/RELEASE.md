@@ -1,0 +1,21 @@
+# Manual exact-commit release — no deployment performed
+
+This branch is a review candidate based on Phase 6 `17ea7507814960a4f181d45a3cacaddd38e43f7c`. The final handoff supplies its exact pushed SHA. The owner reports Phase 6 manually deployed; this work does not modify the service, merge, change a configured branch or provision anything.
+
+Retain the existing single Render Free Docker service `forge-judge`, same-origin FastAPI/React assets and health path `/api/v3/ready`. Public profile remains `FORGE_DEMO_MODE=public`, `FORGE_PROVIDER=mock`, `FORGE_INFERENCE_ENABLED=false`, `FORGE_INFERENCE_REQUEST_BUDGET=0`, ephemeral SQLite under `/tmp`, single-thread numerical libraries and the existing automatic exact-host configuration. No Baseten key, generic inference key, owner token, private receipt or private financial record belongs on Render, in frontend assets or in browser checkpoints. No paid disk/database, subscription or keep-alive traffic.
+
+## Owner actions after separate exact-SHA release approval
+
+1. Open the existing service's Events page. Identify the actual deploy marked **Live**, its full artifact SHA and deploy ID/URL. Confirm the owner-reported Phase 6 artifact rather than assuming a branch-linked GitHub ref proves it. Preserve this record externally and confirm the prior artifact remains available for rollback. No dashboard/HTTPS access was possible from this runtime's network policy, so no live identity/settings claim is made here.
+2. Inspect without changing settings: Docker/Free, repository, currently configured branch, already-disabled auto-deploy, readiness path, public profile and absent credentials/credential-bearing environment groups. If a prerequisite differs, stop for review; this candidate does not authorize silently changing it.
+3. Export required Phase 6 JSON/HTML reports and video externally before any deployment. Phase 6 had no Phase 7 browser checkpoint format: Phase 7 cannot retroactively recover a lost unsaved Phase 6 session. Existing exported reports remain independently replayable. SQLite may disappear on deploy/restart/rollback; browser state is not a server backup.
+4. Use **Manual Deploy → Deploy a specific commit**, if available, and enter the full reviewed Phase 7 SHA from the final handoff. Confirm acceptance without changing the configured branch. Do not choose latest branch head, merge, switch branch, use a paid resource or deploy through a replacement service. Stop if exact-commit deployment is unavailable or rejected. Execution requires the owner's separate release decision; no deployment was done here.
+5. After that owner action, verify the actual Live artifact SHA, external HTTPS readiness/capabilities/model status and the unified case → machine → evidence → explicit test → verification → report journey. Verify browser refresh recovery and a controlled disposable-session loss without operating production data. Confirm private inference remains inaccessible and exported report replay matches. Health alone is not commit identity or industrial validation.
+
+## Rollback
+
+Use the **actual prior Live deploy recorded in step 1**, after verifying its exact artifact and account-specific rollback availability. Select that deploy in Events and use Rollback only if the control/artifact is supported and retained. Verify the resulting Live SHA and external readiness/no-inference/core workflows. If the artifact/control is unavailable, stop; rebuilding a historical exact commit is a distinct action, not an assumed rollback. Do not deploy latest or rewrite Git history.
+
+No server schema migration is introduced. Rollback restores code/artifact, not SQLite sessions, settings or browser data. Phase 7 checkpoint data may remain on a browser after rolling back to Phase 6; Phase 6 ignores it, and exported evidence must be retained separately. On a later Phase 7 visit, incompatible checkpoints are rejected, never silently applied.
+
+Render Free idle spin-down, ephemeral storage and limited availability remain. Availability through November 18 is a target, not a guaranteed service level. The genuine one-request activation remains private, blocked until its independent financial/credential gates pass, and does not alter this public release configuration.

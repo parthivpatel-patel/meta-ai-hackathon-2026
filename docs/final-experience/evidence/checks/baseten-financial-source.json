@@ -1,0 +1,12 @@
+{
+  "url": "https://docs.baseten.co/organization/billing",
+  "http_status": 200,
+  "sha256": "9468a3081f44dfbdb52791c3502b071e26b932206ea418faf1110c61c8cd18a5",
+  "excerpts": [
+    "get sends notifications but does not stop usage. You remain responsible for costs above the configured amount. Enabling Enforce budget rejects Model API requests after spend reaches the budget. Access returns at the start of the next month, when you raise the budget above current spend, or when you remove the budget or disable enforcement. Enforcement applies only to Model APIs. A budget never stops dedicated deployments or traini",
+    "cations off entirely. \u200b Budget enforcement By default, a budget sends notifications but does not stop usage. You remain responsible for costs above the configured amount. Enabling Enforce budget rejects Model API requests after spend reaches the budget. Access returns at the start of the next month, when you raise the budget above current spend, or when you remove the budget or disable enforcement. Enforcement applies only to Model APIs.",
+    "minute usage, and how to manage payment, credits, and invoices for your workspace. Copy page Copy page Manage workspace payment methods, credits, invoices, budgets, and usage from the billing and usage dashboard . Baseten updates deployment usage hourly. For organizations with teams, usage is aggregated at the organization level and visible only to Admins. \u200b View usage View usage in the dashboard, or query the same data through th",
+    "tion/billing\",\"name\":\"Billing and usage\",\"description\":\"How Baseten meters per-minute usage, and how to manage payment, credits, and invoices for your workspace.\",\"dateModified\":\"2026-09-29T21:42:24.705Z\",\"isPartOf\":{\"@id\":\"https://docs.baseten.co#website\"},\"breadcrumb\":{\"@id\":\"https://docs.baseten.co/organization/billing#breadcrumb\"}},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://docs.baseten.co/organization/billing#breadcrumb\""
+  ],
+  "scope": "Public documentation only. Does not establish this account payment-method state, credit balance or enforced stop. No account billing settings changed."
+}

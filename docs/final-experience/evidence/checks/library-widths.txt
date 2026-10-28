@@ -1,0 +1,6 @@
+desktop: focused journey, all views, evidence, keyboard, layout and accessibility checked
+mobile-390: focused journey, all views, evidence, keyboard, layout and accessibility checked
+mobile-320: focused journey, all views, evidence, keyboard, layout and accessibility checked
+mobile-375: focused journey, all views, evidence, keyboard, layout and accessibility checked
+mobile-430: focused journey, all views, evidence, keyboard, layout and accessibility checked
+Zero automated accessibility violations across 56 view/viewport checks

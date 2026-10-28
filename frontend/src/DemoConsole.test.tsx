@@ -203,3 +203,12 @@ it("lets users inspect another case without discarding the current investigation
     true,
   );
 });
+it("keeps a successful investigation usable when browser storage is denied", async () => {
+ const f=setup();
+ vi.spyOn(Storage.prototype,"getItem").mockImplementation(()=>{throw Error("Storage denied");});
+ vi.spyOn(Storage.prototype,"setItem").mockImplementation(()=>{throw Error("Storage denied");});
+ render(<DemoConsole/>);const begin=await screen.findByRole("button",{name:"Open investigation"});await waitFor(()=>expect(begin).toBeEnabled());
+ f.mockResolvedValue({ok:true,status:201,json:async()=>({...record.investigation,id:"a".repeat(32),version:0})});fireEvent.click(begin);
+ expect(await screen.findByRole("button",{name:"Examine the evidence"})).toBeEnabled();
+ expect(screen.queryByRole("alert")).not.toBeInTheDocument();vi.restoreAllMocks();
+});

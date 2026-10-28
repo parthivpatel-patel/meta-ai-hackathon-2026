@@ -1,0 +1,497 @@
+[
+  {
+    "case": "misleading_sensor",
+    "width": 1440,
+    "initial_load_ms": 447,
+    "initialization_ms": 201,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 103
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 89
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 101
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 78
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 68
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 79
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 99
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-pressure",
+      "sensor-pressure"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "temperature_response",
+    "width": 1440,
+    "initial_load_ms": 256,
+    "initialization_ms": 100,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 68
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 64
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 78
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 74
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 82
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 45
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 80
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-temperature"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "vibration_response",
+    "width": 390,
+    "initial_load_ms": 213,
+    "initialization_ms": 79,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 61
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 48
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 58
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 57
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 60
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 56
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 79
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-vibration"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "insufficient",
+    "width": 1440,
+    "initial_load_ms": 195,
+    "initialization_ms": 55,
+    "steps": [],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 48
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 58
+      }
+    ],
+    "decision": "ABSTAIN",
+    "findings": [],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "noisy_multifault",
+    "width": 1440,
+    "initial_load_ms": 256,
+    "initialization_ms": 88,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 42
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 52
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 56
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 57
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 71
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 67
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 86
+      }
+    ],
+    "decision": "INCONCLUSIVE",
+    "findings": [
+      "process-vibration"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "normal",
+    "width": 1440,
+    "initial_load_ms": 220,
+    "initialization_ms": 72,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 47
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 53
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 78
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 66
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 85
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "normal"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "case": "confounded",
+    "width": 1440,
+    "initial_load_ms": 233,
+    "initialization_ms": 69,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 53
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 49
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 58
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 60
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 59
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 60
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 65
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 50
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 126
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 56
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 142
+      }
+    ],
+    "decision": "INCONCLUSIVE",
+    "findings": [],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  }
+]

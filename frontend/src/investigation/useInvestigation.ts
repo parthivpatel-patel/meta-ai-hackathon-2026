@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { canonical } from "../industrial/contracts";
+import { checkpoint } from "../industrial/recovery";
 import type { Session, Capabilities } from "./types";
 class ApiError extends Error {
   constructor(
@@ -28,6 +30,8 @@ export async function boundedFetch(path: string, init: RequestInit = {}) {
     clearTimeout(timer);
   }
 }
+function savedSessionID() {try{return localStorage.getItem("forge-sequential-session");}catch{return null;}}
+function rememberSessionID(id: string | null) {try{if(id)localStorage.setItem("forge-sequential-session",id);else localStorage.removeItem("forge-sequential-session");}catch{/* Storage denial must not turn a successful server action into a retry. */}}
 export function useInvestigation() {
   const [cap, setCap] = useState<Capabilities | null>(null);
   const [scenarios, setScenarios] = useState<{ id: string; title: string }[]>(
@@ -37,6 +41,7 @@ export function useInvestigation() {
   const [session, setSession] = useState<Session | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [recoveryNotice, setRecoveryNotice] = useState("");
   const [authRequired, setAuthRequired] = useState(false);
   const [tokenInput, setTokenInput] = useState("");
   const token = useRef("");
@@ -81,7 +86,7 @@ export function useInvestigation() {
         setCap(c);
         setScenarios(list);
         setAuthRequired(false);
-        const saved = localStorage.getItem("forge-sequential-session");
+        const saved = savedSessionID();
         if (saved) {
           try {
             setSession(
@@ -89,7 +94,7 @@ export function useInvestigation() {
             );
           } catch (e) {
             if (e instanceof ApiError && e.status === 404) {
-              localStorage.removeItem("forge-sequential-session");
+              rememberSessionID(null);
               setError(
                 "Your saved investigation is no longer available. The demo may have restarted. Choose a new case; downloaded reports can still be checked offline.",
               );
@@ -127,7 +132,7 @@ export function useInvestigation() {
       );
       if (!abort.signal.aborted) {
         setSession(result);
-        localStorage.setItem("forge-sequential-session", result.id);
+        rememberSessionID(result.id);
         return result as Session;
       }
     } catch (e) {
@@ -146,7 +151,7 @@ export function useInvestigation() {
     setError("");
     try {
       const id =
-        session?.id || localStorage.getItem("forge-sequential-session");
+        session?.id || savedSessionID();
       if (id) setSession(await call("/api/v3/sessions/" + id));
     } catch (e) {
       setError(
@@ -188,7 +193,23 @@ export function useInvestigation() {
       );
     }
   }
+  async function recoverLocal(snapshot: Session) {
+    if(busy) throw Error("Operation pending");
+    controller.current?.abort();const abort=new AbortController();controller.current=abort;setBusy(true);
+    try {
+      const result=await call("/api/v6/recover",{session:snapshot},abort.signal);
+      if(abort.signal.aborted || controller.current!==abort)throw Error("Recovery interrupted");
+      if(!result.session || result.recovery?.model_requests!==0 || result.recovery?.future_experiments_executed!==0 || result.recovery?.source_authentication!==false)throw Error("Invalid recovery response");
+      checkpoint("library",{session:result.session});
+      const strip=(s:Session)=>Object.fromEntries(Object.entries(s).filter(([key])=>!["id","version"].includes(key)));
+      if(canonical(strip(snapshot))!==canonical(strip(result.session)))throw Error("Recovery changed recorded evidence");
+      setSession(result.session);rememberSessionID(result.session.id);setError("");
+      setRecoveryNotice(`Independently reproduced browser checkpoint ${snapshot.id} version ${snapshot.version} in a new temporary session. Past observations and test records are preserved; source authentication is not established.`);
+    } finally {if(controller.current===abort)setBusy(false);}
+  }
   return {
+    recoverLocal,
+    recoveryNotice,
     cap,
     scenarios,
     preset,
