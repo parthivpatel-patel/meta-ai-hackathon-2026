@@ -11,6 +11,7 @@ const fs = require("node:fs");
     const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
     await page.goto(origin.origin + "/demo");
     await page.getByLabel("Machine component", { exact: true }).waitFor();
+      await page.getByText(/Camera and inspection tools/).click();
     await page.locator("canvas[data-draw-calls]").waitFor();
     const durations = [];
     const parts = [["motor", "Motor housing"], ["bearing", "Bearing housing"], ["pump", "Pump casing"]];

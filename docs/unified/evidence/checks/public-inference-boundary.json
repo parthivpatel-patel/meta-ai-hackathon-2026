@@ -1,0 +1,27 @@
+{
+  "live_requests_permitted": false,
+  "live_access_verified": false,
+  "paths": [
+    {
+      "path": "/api/v5/infer",
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/api/v2/investigate",
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/model-status",
+      "method": "GET",
+      "status": 403
+    },
+    {
+      "path": "/docs",
+      "method": "GET",
+      "status": 403
+    }
+  ],
+  "scope": "Local final image, not live Render settings; zero model requests."
+}

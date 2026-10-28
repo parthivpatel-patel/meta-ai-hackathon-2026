@@ -1,0 +1,226 @@
+{
+  "schema": "forge-unified-validation-1",
+  "checked_utc": "2026-10-28T12:54:18.385873+00:00",
+  "baseline": "51e188dcf7c23fcb11fd3d8a3b556b349eec01d9",
+  "branch": "feature/forge-unified-workstation",
+  "backend_tests": 265,
+  "frontend_tests": 43,
+  "typescript_test_and_production": "passed",
+  "vite_production": "passed, existing >500kB lazy-chunk advisory retained",
+  "ruff": {
+    "environment_configured": "passed",
+    "pinned_CI_profile": "F,I,BLE001,RUF007 with Ruff0.17.3; passed",
+    "exploratory_E_style_profile": "17 preexisting legacy findings; not the configured gate"
+  },
+  "image": "sha256:f2beb2738b59a12f9bcbfc1ed288791779005329e36140a1b9af9cb56895011e",
+  "image_source_and_assets_match_workspace": true,
+  "browser_journeys": {
+    "unified_complete": 3,
+    "machine_scenarios": 7,
+    "recorded_fixture": 2,
+    "legacy_library": 7,
+    "lifecycle": "passed in isolated rerun at unchanged assertion; concurrent software-browser timing miss retained"
+  },
+  "axe": {
+    "view_counts": {
+      "unified": 21,
+      "machine": 14,
+      "lifecycle": 3,
+      "model": 5,
+      "legacy_library": 49,
+      "legacy_all_widths": 56,
+      "large_tablet_boundary_layouts": 4
+    },
+    "total": 152,
+    "violations": 0,
+    "performance_only_samples_excluded": 5
+  },
+  "offline_replay": {
+    "JSON_reports": 23,
+    "current_template_exact_HTML": 18,
+    "historical_submission_HTML": "Not asserted byte-identical to newer renderer; original JSON replay passed and original submission files unchanged"
+  },
+  "synthetic_evaluation": {
+    "total": 1061,
+    "v1_cases": 480,
+    "v2_cases": 280,
+    "v3_cases": 280,
+    "coupled": {
+      "cases": 21,
+      "accepted_exact": {
+        "numerator": 15,
+        "denominator": 15
+      },
+      "coverage": {
+        "numerator": 15,
+        "denominator": 21
+      },
+      "all_finding_precision": {
+        "numerator": 18,
+        "denominator": 18
+      },
+      "exact_agreement": {
+        "numerator": 18,
+        "denominator": 21
+      },
+      "replay_consistency": "21/21",
+      "inconclusive": 6
+    },
+    "v3_overall": {
+      "accepted_precision": {
+        "denominator": 198,
+        "numerator": 198,
+        "rate": 1.0
+      },
+      "cases": 280,
+      "coverage": {
+        "denominator": 280,
+        "numerator": 198,
+        "rate": 0.7071428571428572
+      },
+      "detector_fnr": {
+        "denominator": 260,
+        "numerator": 39,
+        "rate": 0.15
+      },
+      "detector_fpr": {
+        "denominator": 20,
+        "numerator": 0,
+        "rate": 0.0
+      },
+      "exact_set_recall": {
+        "denominator": 220,
+        "numerator": 198,
+        "rate": 0.9
+      },
+      "experiment_mean": 2.425,
+      "experiments_total": 679,
+      "first_target_relevance": {
+        "denominator": 200,
+        "numerator": 199,
+        "rate": 0.995
+      },
+      "latency_ms_p50": 26.144,
+      "latency_ms_p95": 47.81615000000001,
+      "matched_fixed_coverage": {
+        "denominator": 280,
+        "numerator": 78,
+        "rate": 0.2785714285714286
+      },
+      "matched_fixed_precision": {
+        "denominator": 78,
+        "numerator": 78,
+        "rate": 1.0
+      },
+      "observational_forced_accuracy": {
+        "denominator": 280,
+        "numerator": 61,
+        "rate": 0.21785714285714286
+      },
+      "required_abstention": {
+        "denominator": 60,
+        "numerator": 60,
+        "rate": 1.0
+      },
+      "statuses": {
+        "ABSTAIN": 20,
+        "INCONCLUSIVE": 62,
+        "SUPPORTED_SYNTHETIC": 198
+      },
+      "unsupported_adversarial_proposal_supported": 0
+    },
+    "fixture_comparisons": {
+      "count": 7,
+      "matched_decisions": "7/7",
+      "genuine_requests": 0,
+      "scope": "Integration/verification consistency, not model accuracy"
+    }
+  },
+  "performance": {
+    "scope": "Warm local production Chromium, software SwiftShader, emulated viewports/touch. Automation overhead included. Not physical-device/hardware FPS or public cold starts. Lifecycle rerun alone; prior concurrent timing miss retained.",
+    "controls_ready_ms": {
+      "n": 3,
+      "min": 1001,
+      "median": 1047,
+      "p95": 1529.4,
+      "max": 1583
+    },
+    "unified_experiment_ui_ms": {
+      "n": 6,
+      "min": 104,
+      "median": 150.0,
+      "p95": 193.0,
+      "max": 197
+    },
+    "component_selection_ms": {
+      "n": 30,
+      "min": 12,
+      "median": 21.5,
+      "p95": 46.099999999999994,
+      "max": 52
+    },
+    "camera_RAF_step_cadence_ms": {
+      "n": 60,
+      "min": 4.699999995529652,
+      "median": 156.19999999925494,
+      "p95": 316.7800000056623,
+      "max": 495.09999999403954
+    },
+    "telemetry_observed_updates": [
+      {
+        "elapsed_ms": 1288.9000000059605,
+        "sequence": 16
+      },
+      {
+        "elapsed_ms": 2430.5,
+        "sequence": 32
+      }
+    ],
+    "telemetry_limit": "500ms timer is a playback schedule; observed software-browser gaps can exceed it and are not real-time acquisition guarantees.",
+    "heap": {
+      "before": 6611920,
+      "after": 8114304,
+      "scope": "5 retained-workspace switches plus context/fallback cycles, not a leak-proof test"
+    },
+    "GPU": {
+      "width": 1006,
+      "height": 450,
+      "engine": "three.js r180",
+      "renderCount": "3",
+      "drawCalls": "57",
+      "triangles": "19138",
+      "rotorPhase": "0",
+      "reducedMotion": "false"
+    },
+    "percentile_method": "Linear interpolation at (n-1)*p; small denominators retained, not population-performance estimates."
+  },
+  "security": {
+    "container_HTTP_checks": 32,
+    "container_passed": true,
+    "credential_scan": {
+      "checked_utc": "2026-10-28T12:59:54.822609+00:00",
+      "text_inputs_scanned": 141,
+      "bytes_scanned": 6346529,
+      "patterns": [
+        "private_key",
+        "github_token",
+        "aws_access_key",
+        "hf_token",
+        "openai_token",
+        "literal_authorization",
+        "literal_baseten_assignment"
+      ],
+      "findings": [],
+      "passed": true,
+      "scope": "Bounded changed text/evidence, compiled frontend text and only our saved local container logs. Exact synthetic markers excluded. No secret files, private provider receipts or environment dump. Pattern review is not an exhaustive guarantee."
+    },
+    "npm_known_findings": 0,
+    "python_known_findings": 0
+  },
+  "genuine_inference_requests": 0,
+  "deployment_performed": false,
+  "merge_performed": false,
+  "paid_resources_added": false,
+  "eligibility": "OPEN pre-kickoff question; original history preserved",
+  "CI": "Check the final commit GitHub Actions run; status recorded in handoff after push"
+}

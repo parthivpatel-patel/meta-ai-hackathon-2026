@@ -1,0 +1,2 @@
+Error: Bounded telemetry playback stalled
+    at /workspace/meta-ai-hackathon-2026/scripts/industrial-lifecycle-check.cjs:122:44

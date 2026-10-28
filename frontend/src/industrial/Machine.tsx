@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Component, Frame } from "./contracts";
 import * as THREE from "three";
+import { pumpAssembly } from "./pumpAssembly";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 export function Machine({
   components,
@@ -27,7 +28,7 @@ export function Machine({
   const [fallbackAngle, setFallbackAngle] = useState(30);
   const [fallbackScale, setFallbackScale] = useState(1);
   function command(name: string) {
-    if (["front", "side", "isometric", "inspection"].includes(name))
+    if (["front", "side", "isometric", "inspection", "exploded"].includes(name))
       setView(name);
     if (!fallback) {
       control.current(name);
@@ -72,7 +73,10 @@ export function Machine({
         powerPreference: "low-power",
       });
       renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-      renderer.setClearColor("#eef3f2");
+      renderer.setClearColor("#e7edee");
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.15;
       node.appendChild(renderer.domElement);
       renderer.domElement.setAttribute(
         "aria-label",
@@ -80,123 +84,114 @@ export function Machine({
       );
       renderer.domElement.setAttribute("role", "img");
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 50);
-      camera.position.set(6, 4, 7);
+      const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 60);
+      camera.position.set(4, 2.8, 6);
       controls = new OrbitControls(camera, renderer.domElement);
       controls.target.set(0, 0.1, 0);
-      controls.minDistance = 3;
-      controls.maxDistance = 16;
+      controls.minDistance = 1.2;
+      controls.maxDistance = 18;
       controls.maxPolarAngle = Math.PI * 0.85;
       controls.enableDamping = false;
       scene.add(new THREE.HemisphereLight(0xffffff, 0x405050, 2.5));
       const light = new THREE.DirectionalLight(0xffffff, 3);
       light.position.set(3, 7, 4);
       scene.add(light);
-      for (const part of components) {
-        const size = part.geometry.size;
-        let geometry: THREE.BufferGeometry;
-        if (part.geometry.kind === "cylinder")
-          geometry = new THREE.CylinderGeometry(size[0], size[0], size[1], 24);
-        else if (part.geometry.kind === "torus")
-          geometry = new THREE.TorusGeometry(size[0], size[1], 8, 32);
-        else
-          geometry = new THREE.BoxGeometry(
-            ...(size as [number, number, number]),
-          );
-        geometries.push(geometry);
-        const mat = new THREE.MeshStandardMaterial({
-          color:
-            part.category === "motor"
-              ? "#2b6875"
-              : part.category === "instrument"
-                ? "#d1b56d"
-                : part.category === "structure"
-                  ? "#526168"
-                  : "#93a8ac",
-          metalness: 0.45,
-          roughness: 0.55,
-        });
-        materials.push(mat);
-        const mesh = new THREE.Mesh(geometry, mat);
-        mesh.position.set(
-          ...(part.geometry.position as [number, number, number]),
-        );
-        if (part.geometry.kind === "cylinder") mesh.rotation.z = Math.PI / 2;
-        if (part.geometry.kind === "torus") mesh.rotation.y = Math.PI / 2;
-        mesh.userData.id = part.id;
-        mesh.userData.baseColor = mat.color.clone();
-        scene.add(mesh);
-        meshes.push(mesh);
-      }
-      const coupling = meshes.find((mesh) => mesh.userData.id === "coupling");
-      if (coupling) {
-        const geometry = new THREE.BoxGeometry(0.04, 0.24, 0.08);
-        const material = new THREE.MeshStandardMaterial({ color: "#f2efe9", roughness: 0.8 });
-        geometries.push(geometry);
-        materials.push(material);
-        const marker = new THREE.Mesh(geometry, material);
-        marker.position.set(0.22, 0, 0);
-        marker.userData.id = "coupling";
-        coupling.add(marker);
-      }
-      // Procedural cooling rings and impeller vanes share their component's stable ID.
-      for (const id of ["cooling", "impeller"]) {
-        const owner = meshes.find((m) => m.userData.id === id);
-        if (!owner) continue;
-        if (id === "cooling") owner.visible = false;
-        const count = id === "cooling" ? 9 : 5;
-        const geo =
-          id === "cooling"
-            ? new THREE.TorusGeometry(0.56, 0.025, 6, 24)
-            : new THREE.BoxGeometry(0.06, 1.05, 0.075);
-        geometries.push(geo);
-        for (let i = 0; i < count; i++) {
-          const part = new THREE.Mesh(geo, owner.material);
-          if (id === "cooling") {
-            part.position.set(-2.35 + i * 0.16, 0, 0);
-            part.rotation.y = Math.PI / 2;
-          } else {
-            part.position.copy(owner.position);
-            part.rotation.x = (i * Math.PI) / 5;
-          }
-          part.userData = { id, baseColor: owner.userData.baseColor };
-          scene.add(part);
-          meshes.push(part);
+      const assembly = pumpAssembly(components);
+      scene.add(assembly.root);
+      meshes.push(...assembly.meshes);
+      geometries.push(...assembly.geometries);
+      materials.push(...assembly.materials);
+      const fill = new THREE.DirectionalLight(0xc6d8ee, 2);
+      fill.position.set(-4, 2, -4);
+      scene.add(fill);
+      const groundGeo = new THREE.PlaneGeometry(200, 200);
+      const groundMat = new THREE.MeshStandardMaterial({
+        color: "#e1e8e9",
+        roughness: 0.9,
+      });
+      geometries.push(groundGeo);
+      materials.push(groundMat);
+      const ground = new THREE.Mesh(groundGeo, groundMat);
+      ground.rotation.x = -Math.PI / 2;
+      ground.position.y = -1.06;
+      scene.add(ground);
+      // Fit actual assembly corners in camera space instead of a fixed distant camera.
+      function fit(direction = new THREE.Vector3(4, 2.7, 6)) {
+        const bounds = new THREE.Box3().setFromObject(assembly.root);
+        const center = bounds.getCenter(new THREE.Vector3());
+        // A wide flat base puts empty space above the visible machine in an AABB-centered view.
+        // Bias toward the mechanical assembly; the per-mesh frustum fit still keeps every part bounded.
+        center.y -= bounds.getSize(new THREE.Vector3()).y * 0.28;
+        const forward = direction.clone().normalize(),
+          right = new THREE.Vector3()
+            .crossVectors(new THREE.Vector3(0, 1, 0), forward)
+            .normalize();
+        const up = new THREE.Vector3().crossVectors(forward, right).normalize();
+        const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+        let distance = 2;
+        for (const mesh of assembly.meshes) {
+          const partBounds = new THREE.Box3().setFromObject(mesh);
+          for (const x of [partBounds.min.x, partBounds.max.x])
+            for (const y of [partBounds.min.y, partBounds.max.y])
+              for (const z of [partBounds.min.z, partBounds.max.z]) {
+                const v = new THREE.Vector3(x, y, z).sub(center),
+                  depth = v.dot(forward);
+                distance = Math.max(
+                  distance,
+                  depth + Math.abs(v.dot(right)) / (tan * camera.aspect),
+                  depth + Math.abs(v.dot(up)) / tan,
+                );
+              }
         }
+        controls!.target.copy(center);
+        camera.position.copy(center).addScaledVector(forward, distance * 1.09);
+        controls!.update();
       }
-      const motion = typeof window.matchMedia === "function" ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
-      const axis = new THREE.Vector3(1, 0, 0);
+      const motion =
+        typeof window.matchMedia === "function"
+          ? window.matchMedia("(prefers-reduced-motion: reduce)")
+          : null;
+      let hovered = "";
+      let renderCount = 0;
       const draw = () => {
+        if (document.hidden || !node.getClientRects().length) return;
+        for (const group of assembly.rotors)
+          group.rotation.x = motion?.matches
+            ? 0
+            : (live.current.rotorPhase ?? 0);
         for (const mesh of meshes) {
-          if (["fan", "motor_shaft", "coupling", "pump_shaft", "bearing_ring", "impeller"].includes(mesh.userData.id)) {
-            mesh.userData.rotorBase ??= mesh.quaternion.clone();
-            mesh.quaternion.copy(mesh.userData.rotorBase);
-            mesh.rotateOnWorldAxis(axis, motion?.matches ? 0 : live.current.rotorPhase ?? 0);
-          }
           const mat = mesh.material as THREE.MeshStandardMaterial;
           mat.color.copy(mesh.userData.baseColor);
           if (live.current.warnings.includes(mesh.userData.id))
             mat.color.set("#d68c2d");
+          if (mesh.userData.id === hovered) mat.color.set("#688c9d");
           if (mesh.userData.id === live.current.selected)
-            mat.color.set("#1fbbb0");
+            mat.color.set("#36988d");
         }
         renderer!.render(scene, camera);
+        renderer!.domElement.dataset.renderCount = String(++renderCount);
         renderer!.domElement.dataset.drawCalls = String(
           renderer!.info.render.calls,
         );
         renderer!.domElement.dataset.triangles = String(
           renderer!.info.render.triangles,
         );
-        renderer!.domElement.dataset.rotorPhase = live.current.rotorPhase === null ? "unavailable" : String(motion?.matches ? 0 : live.current.rotorPhase);
+        renderer!.domElement.dataset.rotorPhase =
+          live.current.rotorPhase === null
+            ? "unavailable"
+            : String(motion?.matches ? 0 : live.current.rotorPhase);
         renderer!.domElement.dataset.reducedMotion = String(!!motion?.matches);
       };
       motion?.addEventListener("change", draw);
       update.current = draw;
+      let customCamera = false;
       const resize = () => {
         const width = node.clientWidth || 600;
-        camera.aspect = width / 380;
+        const height = node.clientHeight || 480;
+        camera.aspect = width / height;
         camera.updateProjectionMatrix();
-        renderer!.setSize(width, 380);
+        renderer!.setSize(width, height);
+        if (!customCamera) fit(camera.position.clone().sub(controls!.target));
         draw();
       };
       observer = new ResizeObserver(resize);
@@ -205,7 +200,35 @@ export function Machine({
       controls.addEventListener("change", draw);
       let pointerStart: { x: number; y: number } | null = null;
       const pointerDown = (event: PointerEvent) => {
+        customCamera = true;
         pointerStart = { x: event.clientX, y: event.clientY };
+      };
+      const pick = (event: PointerEvent) => {
+        const box = renderer!.domElement.getBoundingClientRect();
+        const ray = new THREE.Raycaster();
+        ray.setFromCamera(
+          new THREE.Vector2(
+            ((event.clientX - box.left) / box.width) * 2 - 1,
+            (-(event.clientY - box.top) / box.height) * 2 + 1,
+          ),
+          camera,
+        );
+        return ray.intersectObjects(meshes)[0]?.object.userData.id as
+          | string
+          | undefined;
+      };
+      const hover = (event: PointerEvent) => {
+        if (event.buttons || event.pointerType === "touch") return;
+        const next = pick(event) || "";
+        if (next !== hovered) {
+          hovered = next;
+          renderer!.domElement.style.cursor = next ? "pointer" : "grab";
+          draw();
+        }
+      };
+      const leave = () => {
+        hovered = "";
+        draw();
       };
       const click = (event: PointerEvent) => {
         if (
@@ -219,70 +242,76 @@ export function Machine({
           return;
         }
         pointerStart = null;
-        const box = renderer!.domElement.getBoundingClientRect();
-        const ray = new THREE.Raycaster();
-        ray.setFromCamera(
-          new THREE.Vector2(
-            ((event.clientX - box.left) / box.width) * 2 - 1,
-            (-(event.clientY - box.top) / box.height) * 2 + 1,
-          ),
-          camera,
-        );
-        const hit = ray.intersectObjects(meshes)[0];
-        if (hit) live.current.onSelect(hit.object.userData.id);
+        const id = pick(event);
+        if (id) live.current.onSelect(id);
       };
       const lost = (event: Event) => {
         event.preventDefault();
         setFallback(true);
       };
+      renderer.domElement.addEventListener("pointermove", hover);
+      renderer.domElement.addEventListener("pointerleave", leave);
       renderer.domElement.addEventListener("pointerdown", pointerDown);
       renderer.domElement.addEventListener("pointerup", click);
       renderer.domElement.addEventListener("webglcontextlost", lost);
       control.current = (name) => {
-        if (["front", "side", "isometric", "inspection"].includes(name))
-          for (const mesh of meshes) {
-            if (["pump", "bearing"].includes(mesh.userData.id)) {
-              const mat = mesh.material as THREE.MeshStandardMaterial;
-              mat.transparent = name === "inspection";
-              mat.opacity = name === "inspection" ? 0.35 : 1;
-            }
-          }
-        const positions: Record<string, number[]> = {
-          front: [0, 1, 9],
-          side: [9, 1, 0],
-          isometric: [6, 4, 7],
-          inspection: [4, 2, 4],
+        customCamera = !["front", "side", "isometric", "inspection", "exploded"].includes(name);
+        if (
+          ["front", "side", "isometric", "inspection", "exploded"].includes(
+            name,
+          )
+        )
+          assembly.inspection(name);
+        const directions: Record<string, THREE.Vector3> = {
+          front: new THREE.Vector3(0, 0.25, 8),
+          side: new THREE.Vector3(8, 0.8, 0.05),
+          isometric: new THREE.Vector3(4, 2.7, 6),
+          inspection: new THREE.Vector3(4, 2.3, 6),
+          exploded: new THREE.Vector3(2.7, 2.2, 7),
         };
-        if (name === "zoom-in") camera.position.multiplyScalar(0.9);
-        else if (name === "zoom-out") camera.position.multiplyScalar(1.1);
+        if (name === "zoom-in")
+          camera.position
+            .sub(controls!.target)
+            .multiplyScalar(0.9)
+            .add(controls!.target);
+        else if (name === "zoom-out")
+          camera.position
+            .sub(controls!.target)
+            .multiplyScalar(1.1)
+            .add(controls!.target);
         else if (name === "left" || name === "right")
-          camera.position.applyAxisAngle(
-            new THREE.Vector3(0, 1, 0),
-            name === "left" ? -0.15 : 0.15,
-          );
+          camera.position
+            .sub(controls!.target)
+            .applyAxisAngle(
+              new THREE.Vector3(0, 1, 0),
+              name === "left" ? -0.15 : 0.15,
+            )
+            .add(controls!.target);
         else if (name === "focus") {
-          const mesh = meshes.find(
-            (m) => m.userData.id === live.current.selected,
-          );
-          if (mesh) controls!.target.copy(mesh.position);
-        } else {
-          camera.position.set(
-            ...((positions[name] || positions.isometric) as [
-              number,
-              number,
-              number,
-            ]),
-          );
-          controls!.target.set(0, 0.1, 0);
-        }
-        camera.position.clampLength(3, 16);
+          const group = assembly.groups.get(live.current.selected);
+          if (group) {
+            const center = new THREE.Box3()
+              .setFromObject(group)
+              .getCenter(new THREE.Vector3());
+            const direction = camera.position
+              .clone()
+              .sub(controls!.target)
+              .normalize();
+            controls!.target.copy(center);
+            camera.position.copy(center).addScaledVector(direction, 3.3);
+          }
+        } else fit(directions[name] || directions.isometric);
         controls!.update();
         draw();
       };
       dispose = () => {
+        for (const material of assembly.materials)
+          if (!materials.includes(material)) material.dispose();
         motion?.removeEventListener("change", draw);
         observer?.disconnect();
         controls?.dispose();
+        renderer?.domElement.removeEventListener("pointermove", hover);
+        renderer?.domElement.removeEventListener("pointerleave", leave);
         renderer?.domElement.removeEventListener("pointerdown", pointerDown);
         renderer?.domElement.removeEventListener("pointerup", click);
         renderer?.domElement.removeEventListener("webglcontextlost", lost);
@@ -306,7 +335,7 @@ export function Machine({
   useEffect(() => update.current(), [selected, frame, rotorPhase]);
   return (
     <section aria-label="Machine visualization">
-      <div ref={host} hidden={fallback} />
+      <div ref={host} className="machine-canvas" hidden={fallback} />
       {fallback && (
         <div className="machine-fallback">
           <h3>2D inspection mode</h3>
@@ -366,41 +395,45 @@ export function Machine({
           </svg>
         </div>
       )}
-      <div className="machine-tools" aria-label="Camera controls">
-        {["front", "side", "isometric", "inspection"].map((v) => (
-          <button
-            key={v}
-            aria-pressed={view === v}
-            onClick={() => {
-              setView(v);
-              command(v);
-            }}
-          >
-            {v[0].toUpperCase() + v.slice(1)} view
-          </button>
-        ))}
-        <button onClick={() => command("left")}>Orbit left</button>
-        <button onClick={() => command("right")}>Orbit right</button>
-        <button onClick={() => command("zoom-in")}>Zoom in</button>
-        <button onClick={() => command("zoom-out")}>Zoom out</button>
-        <button onClick={() => command("focus")}>Focus component</button>
-        <button onClick={() => command("isometric")}>Reset camera</button>
-        {fallback && !force2D && (
-          <button
-            onClick={() => {
-              setFallback(false);
-              setAttempt((a) => a + 1);
-            }}
-          >
-            Retry 3D
-          </button>
-        )}
-      </div>
+      <details className="camera-disclosure">
+        <summary>Camera and inspection tools · {view} view</summary>
+        <div className="machine-tools" aria-label="Camera controls">
+          {["front", "side", "isometric", "inspection", "exploded"].map((v) => (
+            <button
+              key={v}
+              aria-pressed={view === v}
+              onClick={() => {
+                setView(v);
+                command(v);
+              }}
+            >
+              {v[0].toUpperCase() + v.slice(1)} view
+            </button>
+          ))}
+          <button onClick={() => command("left")}>Orbit left</button>
+          <button onClick={() => command("right")}>Orbit right</button>
+          <button onClick={() => command("zoom-in")}>Zoom in</button>
+          <button onClick={() => command("zoom-out")}>Zoom out</button>
+          <button onClick={() => command("focus")}>Focus component</button>
+          <button onClick={() => command("isometric")}>Reset camera</button>
+          {fallback && !force2D && (
+            <button
+              onClick={() => {
+                setFallback(false);
+                setAttempt((a) => a + 1);
+              }}
+            >
+              Retry 3D
+            </button>
+          )}
+        </div>
+      </details>
       <p className="muted">
         Procedural illustration, not CAD or a calibrated digital twin. Drag to
-        orbit; use camera buttons or component list with a keyboard.
-        {" "}Rotor illustration follows sampled RPM at 1/600 speed. Missing data
-        and counterfactual previews have no rotor phase; reduced motion holds it still.
+        orbit; use camera buttons or component list with a keyboard. Rotor
+        illustration follows sampled RPM at 1/600 speed. Missing data and
+        counterfactual previews have no rotor phase; reduced motion holds it
+        still.
       </p>
     </section>
   );

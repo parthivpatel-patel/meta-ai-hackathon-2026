@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://forge-judge.onrender.com/api/v3/ready",
+    "error_type": "URLError"
+  },
+  {
+    "url": "https://forge-judge.onrender.com/demo",
+    "error_type": "URLError"
+  },
+  {
+    "url": "https://render.com/docs/deploys",
+    "error_type": "URLError"
+  },
+  {
+    "url": "https://render.com/docs/rollbacks",
+    "error_type": "URLError"
+  }
+]

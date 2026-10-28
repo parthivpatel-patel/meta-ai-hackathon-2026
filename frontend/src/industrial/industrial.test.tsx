@@ -129,6 +129,7 @@ it("keeps fallback inspection and camera buttons functional without WebGL", () =
     />,
   );
   expect(screen.getByText("2D inspection mode")).toBeInTheDocument();
+  fireEvent.click(screen.getByText(/Camera and inspection tools/));
   const before = container.querySelector("svg g")?.getAttribute("transform");
   fireEvent.click(screen.getByRole("button", { name: "Zoom in" }));
   expect(container.querySelector("svg g")?.getAttribute("transform")).not.toBe(

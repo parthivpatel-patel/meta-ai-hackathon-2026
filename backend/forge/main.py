@@ -31,9 +31,10 @@ async def lifespan(app: FastAPI):
 
     if public_settings().mode != "public":
         get_provider().status()  # Configuration only, never a network probe.
-    from .phase3.storage import get_store
-    from .phase3.safety import settings as demo_settings
     import asyncio
+
+    from .phase3.safety import settings as demo_settings
+    from .phase3.storage import get_store
 
     demo_settings()
     if not get_store().ready():
@@ -64,7 +65,7 @@ async def request_logging(request: Request, call_next):
     start = time.monotonic()
     try:
         response = await call_next(request)
-    except Exception:
+    except Exception:  # noqa: BLE001 - final HTTP boundary must sanitize arbitrary failures
         response = error(request, 500, "internal_error", "Internal server error")
     response.headers["X-Request-ID"] = request.state.request_id
     response.headers["X-Content-Type-Options"] = "nosniff"
@@ -173,17 +174,19 @@ from .engine.routes import router as investigation_router
 
 app.include_router(investigation_router)
 
-from .phase2.routes import router as phase2_router
 from .body_limit import BodyLimitMiddleware
+from .phase2.routes import router as phase2_router
 
 app.include_router(phase2_router)
 app.add_middleware(BodyLimitMiddleware)
 
-from .phase3.routes import router as phase3_router
-from .phase3.safety import SafetyMiddleware
 from pathlib import Path
+
 from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
+
+from .phase3.routes import router as phase3_router
+from .phase3.safety import SafetyMiddleware
 
 app.include_router(phase3_router)
 # The body limiter runs before any JSON parser. Outer safety middleware blocks

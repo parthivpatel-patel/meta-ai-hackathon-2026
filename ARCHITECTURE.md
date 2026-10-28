@@ -84,3 +84,7 @@ Submission tools are standalone trusted-owner CLIs, separate from HTTP routes. T
 ## Redesign and guarded multimodal input
 
 The React application shell uses local state for six real investigation views and preserves versioned backend actions/exports. The event transport defaults to the confirmed -1026 ID, supports protected BASETEN_API_KEY with strict provider/model restriction, total deadlines, optional reported usage and a separately opt-in calibrated thermal PNG input. Visual source/PNG hashes are independently replayed; no raw waveform-to-audio transform is implemented. A private owner smoke receipt gates tested UI access; it is administrative evidence, not signed authentication. Public mode stays credential-free and hard-disabled for inference.
+
+## Phase 6 presentation integration
+
+The [unified design](docs/unified/DESIGN.md) preserves the modular monolith and numerical/report contracts. Persistent client work modes coordinate an observation capture, controlled tests, independent findings and reports; the retained multimodal library stays a separate synthetic case source. No new service, model route or persistence migration was added.

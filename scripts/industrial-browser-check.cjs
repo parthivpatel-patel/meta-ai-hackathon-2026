@@ -49,6 +49,7 @@ const fs = require("node:fs");
       const started = Date.now();
       await page.goto(`http://127.0.0.1:${8050 + index}/demo`);
       await page.getByLabel("Machine component", { exact: true }).waitFor();
+      await page.getByText(/Camera and inspection tools/).click();
       const initial_ms = Date.now() - started;
       if (scenario !== "normal") {
         const pending = page.waitForResponse(
@@ -213,6 +214,7 @@ const fs = require("node:fs");
         .getByLabel("Import recording", { exact: true })
         .setInputFiles(filePath);
       await page.getByText(/Imported synthetic recording/).waitFor();
+      await page.getByRole("button", {name:"Machine", exact:true}).click();
       if (
         await page
           .getByRole("button", {
@@ -222,6 +224,7 @@ const fs = require("node:fs");
           .isEnabled()
       )
         throw Error("Imported telemetry has an intervention oracle");
+      await page.getByRole("button", {name:"Evidence", exact:true}).click();
       await page
         .getByLabel("Import recording", { exact: true })
         .setInputFiles({

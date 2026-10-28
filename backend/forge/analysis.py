@@ -1,3 +1,4 @@
+from itertools import pairwise
 from math import isfinite
 
 import numpy as np
@@ -31,7 +32,7 @@ UNITS = {"temperature": "°C", "vibration": "mm/s RMS", "pressure": "bar"}
 def analyze(rows: list[Measurement]) -> list[ChannelEvidence]:
     if len(rows) < 30 or len(rows) > 1000:
         raise ValueError("Require 30–1000 measurements")
-    if any(b.minute <= a.minute for a, b in zip(rows, rows[1:])):
+    if any(b.minute <= a.minute for a, b in pairwise(rows)):
         raise ValueError("Measurement minutes must strictly increase")
     result = []
     for channel in CHANNELS:

@@ -74,3 +74,7 @@ Smoke/evaluation artifacts are exclusive new 0600 files. Pending/interrupted art
 Production and test TypeScript configurations are separated so test fixtures outside the Docker frontend context cannot break release builds. Test type-checking still runs in CI, which now also builds and validates the actual non-root restricted public image. The external read-only audit explicitly requests uncompressed responses while preserving response-size/compression restrictions.
 
 Current runtime/public URL/dependency evidence is in `docs/FINAL_REQUIREMENTS_MATRIX.md` and `docs/final-engineering-validation.json`. No real key was configured or inference request sent. Zero known dependency advisories and bounded HTTP tests do not establish production readiness or a complete penetration test.
+
+## Unified workstation review
+
+The [Phase 6 product/security review](docs/unified/REVIEW.md) records preserved public inference restrictions, source labels, bounded replay, private activation gates, local container checks and the limits of the same-agent audit. No live service settings or credentials were changed.

@@ -1,0 +1,213 @@
+{
+  "reports": [
+    {
+      "path": "docs/submission/insufficient.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: ABSTAIN []",
+      "html_exact_match": null,
+      "sha256": "8c3848e2d06c78d4eccdf5ac041bad5e4fbcd93fad0097f868edd3a82f15503d"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "html_exact_match": null,
+      "sha256": "cff063f5bf02831f3f8051592762094d197cbb5863e1c175605522cabd39b27d"
+    },
+    {
+      "path": "docs/unified/evidence/1366-report.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89"
+    },
+    {
+      "path": "docs/unified/evidence/1440-report.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+    },
+    {
+      "path": "docs/unified/evidence/390-report.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33"
+    },
+    {
+      "path": "docs/unified/evidence/library/confounded.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: INCONCLUSIVE []",
+      "html_exact_match": true,
+      "sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949"
+    },
+    {
+      "path": "docs/unified/evidence/library/insufficient.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: ABSTAIN []",
+      "html_exact_match": true,
+      "sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b"
+    },
+    {
+      "path": "docs/unified/evidence/library/misleading_sensor.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "html_exact_match": true,
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/unified/evidence/library/noisy_multifault.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: INCONCLUSIVE ['process-vibration']",
+      "html_exact_match": true,
+      "sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da"
+    },
+    {
+      "path": "docs/unified/evidence/library/normal.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['normal']",
+      "html_exact_match": true,
+      "sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0"
+    },
+    {
+      "path": "docs/unified/evidence/library/temperature_response.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-temperature']",
+      "html_exact_match": true,
+      "sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488"
+    },
+    {
+      "path": "docs/unified/evidence/library/vibration_response.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-vibration']",
+      "html_exact_match": true,
+      "sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19"
+    },
+    {
+      "path": "docs/unified/evidence/library-widths/desktop-report.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "html_exact_match": null,
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/unified/evidence/library-widths/mobile-report.json",
+      "schema": "forge-report-3",
+      "replayed": true,
+      "cli": "forge.phase3.replay",
+      "cli_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "html_exact_match": null,
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/unified/evidence/machine/bearing.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+    },
+    {
+      "path": "docs/unified/evidence/machine/cavitation.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "html_exact_match": true,
+      "sha256": "df5a32bcb08a1faafcd5bb7348a70f0b855fca28eaf91f7a4a54a5966c051bec"
+    },
+    {
+      "path": "docs/unified/evidence/machine/misalignment.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "html_exact_match": true,
+      "sha256": "db0d8de41dc2e1c8b3590225ef290b66743b8e4fc43cb26d5e1e593c6313f630"
+    },
+    {
+      "path": "docs/unified/evidence/machine/normal.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "ad2edf44a5132e6be0a2cd605a6a5c72b0ae9bd23466b6c027530f4cfd6e2635"
+    },
+    {
+      "path": "docs/unified/evidence/machine/pressure_sensor.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33"
+    },
+    {
+      "path": "docs/unified/evidence/machine/process.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "d7bc030f75fb302bca34a8d1f0dc45ca069e4a3455b1d24e7b797b8798dd2172"
+    },
+    {
+      "path": "docs/unified/evidence/machine/thermal.json",
+      "schema": "forge-industrial-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89"
+    },
+    {
+      "path": "docs/unified/evidence/model/fixture-final.json",
+      "schema": "forge-industrial-model-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "html_exact_match": true,
+      "sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+    },
+    {
+      "path": "docs/unified/evidence/model/fixture-initial.json",
+      "schema": "forge-industrial-model-report-1",
+      "replayed": true,
+      "cli": "forge.industrial.replay",
+      "cli_stdout": "Industrial replay verified: IN_PROGRESS",
+      "html_exact_match": null,
+      "sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+    }
+  ],
+  "count": 23,
+  "genuine_requests": 0
+}

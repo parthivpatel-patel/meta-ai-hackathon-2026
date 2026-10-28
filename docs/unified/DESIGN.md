@@ -1,0 +1,27 @@
+# One case, coordinated work modes
+
+The default desktop experience gives the detailed motor-driven centrifugal pump a large viewport and a component inspector. Operating configuration is progressively disclosed; common scenario, component, playback and observation-window controls remain explicit. On narrow screens, the viewport comes before configuration and the inspector. Navigation can scroll within its own bounded strip; the document must not overflow horizontally.
+
+Machine, Telemetry, Investigation, Experiments, Verification and Reports share one `Workstation` state: recording, recipe, selected component, cursor, captured report, counterfactual preview, source and experiment history. Evidence and Replay remain directly accessible compatibility views. Changing modes does not call the numerical engine. Capturing observations executes zero experiments. The operator must explicitly select **Run proposed simulated test** to execute one proposed bounded test. The result opens Experiments while further work remains, or Verification when the engine stops. Selecting an experiment's machine response opens Machine mode; returning to observed history preserves the captured report.
+
+The case strip explains the next action and retains the capture digest, component and evidence window. The global component selector remains usable in each work mode. Changing the selected component after capture changes inspection only; the original report context stays fixed. Choosing a different scenario intentionally starts a new recording/case. Reloading the page is not durable case storage; export first.
+
+The retained original case library is not a fabricated thermal or waveform view of this pump. Its independent synthetic cases retain equipment records, imagery, waveforms, possible causes, proposed tests, history, verification and reports. Evidence explicitly links to it. `Shell` mounts each workspace only when first visited, then preserves both in memory while hiding the inactive workspace. The hidden workstation pauses playback; its renderer skips hidden draws. The compatibility URL `/demo?view=investigations` is preserved. Backend session state is not duplicated or migrated.
+
+## Geometry and camera
+
+`pumpAssembly.ts` creates presentation geometry associated with the existing 18 stable component IDs. Motor end caps, terminal housing, cooling rings, fan, shafts, coupling, bearing shell/balls, mechanical seal, pump casing, volute spiral, impeller vanes, suction/discharge flanges, bolts, pipe/valve fittings and instrument mounts clarify mechanical relationships. Instanced fasteners, rings and vanes limit draw calls. Metal/paint roughness, controlled hemisphere/key/fill lighting and a neutral ground provide depth without external assets or postprocessing. No CAD accuracy or field calibration is asserted; the detailed shapes do not change simulation geometry contracts or physics.
+
+Camera fitting uses per-mesh bounds and the actual responsive aspect ratio, rather than a fixed distant camera. Orbit, zoom, component focus, front/side/isometric, transparent cutaway, exploded and reset controls work with pointer or labeled buttons. Custom camera positions are retained through resizing. Hover and selection map to stable component IDs. The accessible 2D schematic, component selector and instrument table remain available without WebGL; context loss can be retried.
+
+Rotation is driven only by the existing acquisition-time/RPM-derived phase at 1/600 illustrative speed. The fan, shafts, coupling, bearing ring and impeller share that phase. No wallclock physics or continuous render loop was introduced. Missing/invalid RPM and counterfactual states have no phase; reduced motion holds still. Resize, camera interaction, relevant sample/selection changes and motion preference changes request renders. Geometry, materials, observers, controls and listeners are disposed when the scene is actually replaced/unmounted.
+
+## Evidence, experiments and reports
+
+Readable instrumentation names units and quality; selected-component plots retain actual acquisition timestamps, omitted missing points and display watch markers. The initial observed reading is a display comparison, not a healthy operating baseline or failure proof; imported/unverified recordings have no assumed baseline. Three projected channels continue to enter the existing verifier. Experiment comparison tables distinguish the captured point from the counterfactual point and explain that 96 synthetic replicates, rather than two display values, determine verification.
+
+The report preview presents equipment/component, observed window, proposal source, experiment sequence, channel findings, uncertainty, provenance digest and complete limitations. Existing JSON/HTML schemas and offline replay are unchanged. A recorded fixture remains visibly a fixture; recorded Meta source claims remain unattested by digest replay. Public model preparation is observation-only and performs zero inference. Genuine activation stays a separately authorized private workflow.
+
+## Scope boundary
+
+No backend numerical, provider, public-route, persistence or report contract was redesigned. Two backend lint cleanups replace adjacent-row `zip` with equivalent `pairwise` and order imports; a targeted comment explains the deliberately sanitized final HTTP exception boundary. No machine types, accounts, infrastructure or dependencies were added. The CI lint tool is independently pinned; it is not an application dependency.

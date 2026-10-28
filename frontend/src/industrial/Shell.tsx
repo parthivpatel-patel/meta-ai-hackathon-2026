@@ -29,6 +29,8 @@ export default function Shell() {
   const [library, setLibrary] = useState(
     new URLSearchParams(location.search).get("view") === "investigations",
   );
+  const [machineVisited, setMachineVisited] = useState(!library);
+  const [libraryVisited, setLibraryVisited] = useState(library);
   return (
     <>
       <div className="workstation-entry">
@@ -37,6 +39,8 @@ export default function Shell() {
           onClick={() => {
             const next = !library;
             setLibrary(next);
+            if (next) setLibraryVisited(true);
+            else setMachineVisited(true);
             history.replaceState(
               null,
               "",
@@ -47,16 +51,28 @@ export default function Shell() {
           {library ? "Machine workstation" : "Investigation library"}
         </button>
       </div>
-      {library ? (
-        <DemoConsole />
-      ) : (
-        <WorkspaceBoundary>
-          <Suspense
-            fallback={<p role="status">Loading machine workstation…</p>}
-          >
-            <Workstation />
-          </Suspense>
-        </WorkspaceBoundary>
+      {libraryVisited && (
+        <div hidden={!library}>
+          <DemoConsole />
+        </div>
+      )}
+      {machineVisited && (
+        <div hidden={library}>
+          <WorkspaceBoundary>
+            <Suspense
+              fallback={<p role="status">Loading machine workstation…</p>}
+            >
+              <Workstation
+                active={!library}
+                onOpenLibrary={() => {
+                  setLibraryVisited(true);
+                  setLibrary(true);
+                  history.replaceState(null, "", "/demo?view=investigations");
+                }}
+              />
+            </Suspense>
+          </WorkspaceBoundary>
+        </div>
       )}
     </>
   );

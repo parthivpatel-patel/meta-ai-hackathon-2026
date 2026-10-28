@@ -220,3 +220,570 @@
     margin: 12px 0;
   }
 }
+/* Unified workstation: one case, persistent modes, progressive operating controls. */
+.industrial {
+  max-width: 1800px;
+  padding: 26px 32px;
+  background: #f1f4f4;
+  color: #19343d;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.industrial [hidden] {
+  display: none !important;
+}
+.industrial h1 {
+  font-size: clamp(26px, 2.2vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+.industrial h2 {
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  margin-top: 0;
+}
+.industrial h3 {
+  font-size: 18px;
+}
+.station-header {
+  padding-bottom: 18px;
+  margin-bottom: 14px;
+  border-color: #c8d2d5;
+}
+.station-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  color: #4b6571;
+  margin: 0 0 8px;
+}
+.station-subtitle {
+  font-size: 14px;
+  margin: 8px 0 0;
+  max-width: 900px;
+}
+.station-header > span {
+  white-space: nowrap;
+  border-radius: 4px;
+  color: #22564f;
+  background: #e2eeea;
+  font-size: 14px;
+}
+.station-controls {
+  align-items: end;
+  padding: 0 0 14px;
+  margin: 0;
+  gap: 10px;
+}
+.station-controls > label {
+  font-size: 13px;
+  font-weight: 500;
+  min-width: 250px;
+}
+.station-controls select {
+  margin-top: 4px;
+  min-width: 250px;
+}
+.industrial button,
+.industrial select,
+.industrial input[type="file"] {
+  border-color: #afbec4;
+  border-radius: 5px;
+  min-height: 44px;
+  font-size: 15px;
+}
+.industrial button.primary-action {
+  background: #235e57;
+  border-color: #235e57;
+  color: white;
+  font-weight: 500;
+}
+.industrial button.primary-action:hover {
+  background: #194b45;
+}
+.operation-settings {
+  position: relative;
+}
+.industrial summary {
+  display: list-item;
+  padding: 8px 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.operation-settings > summary {
+  border: 1px solid #afbec4;
+  padding: 10px 14px;
+  border-radius: 5px;
+  background: white;
+  min-height: 44px;
+}
+.operation-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 750px;
+  padding: 12px 0;
+}
+.instrument-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  background: #fff;
+  border: 1px solid #cbd5d8;
+  border-radius: 6px;
+  margin: 0 0 16px;
+}
+.instrument-strip > div {
+  padding: 13px 18px;
+  border-right: 1px solid #e0e6e8;
+}
+.instrument-strip > div:last-child {
+  border: 0;
+}
+.instrument-strip span {
+  display: block;
+  font-size: 12px;
+  color: #536a74;
+}
+.instrument-strip span:first-child {
+  font-size: 14px;
+}
+.instrument-strip strong {
+  display: block;
+  font:
+    500 27px/1.5 "Geist Mono",
+    monospace;
+  letter-spacing: -0.04em;
+}
+.instrument-strip small {
+  font:
+    14px "Geist Sans",
+    sans-serif;
+  color: #536a74;
+  letter-spacing: 0;
+}
+.instrument-strip [data-quality="MISSING"] {
+  background: #f1f3f4;
+}
+.instrument-strip [data-quality="OUT_OF_RANGE"] {
+  background: #fff3df;
+}
+.case-journey {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 18px;
+  border: 1px solid #b9ceca;
+  border-left: 3px solid #316c61;
+  background: #f8fbf9;
+  border-radius: 4px;
+}
+.case-journey > div {
+  min-width: 0;
+}
+.case-journey span,
+.case-journey strong {
+  display: block;
+}
+.case-journey strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+.case-journey span:last-child {
+  color: #4d6570;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.case-journey button {
+  flex-shrink: 0;
+}
+.station-tabs {
+  gap: 0;
+  border-bottom: 1px solid #bfcdd1;
+  padding: 10px 0 0;
+  margin: 4px 0 18px;
+}
+.industrial .station-tabs button {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  border-radius: 0;
+  padding: 12px 17px;
+  color: #4a626e;
+}
+.industrial .station-tabs button[aria-current="page"] {
+  border-bottom-color: #286b60;
+  color: #164f47;
+  font-weight: 600;
+  background: #e7efed;
+}
+.machine-grid {
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 18px;
+  align-items: start;
+}
+.station-panel {
+  border-radius: 6px;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-color: #cbd5d8;
+}
+.machine-stage {
+  padding: 18px 20px 12px;
+}
+.machine-stage .panel-title h2 {
+  font-size: 19px;
+}
+.panel-title > span {
+  font:
+    13px "Geist Mono",
+    monospace;
+  color: #4d6671;
+}
+.machine-canvas {
+  height: clamp(400px, 38vw, 560px);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #e7edee;
+  margin-top: 12px;
+}
+.machine-canvas canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  display: block;
+}
+.camera-disclosure {
+  margin-top: 7px;
+}
+.machine-tools {
+  gap: 7px;
+  margin: 8px 0;
+}
+.industrial .machine-tools button {
+  font-size: 14px;
+  padding: 8px 11px;
+}
+.machine-stage > label {
+  font-size: 14px;
+}
+.machine-stage time {
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+}
+.machine-stage > p {
+  font-size: 12px;
+  color: #4d6570;
+}
+.component-inspector h2 {
+  font-size: 19px;
+}
+.component-inspector select {
+  width: 100%;
+}
+.component-inspector h3 {
+  margin-bottom: 6px;
+}
+.component-inspector p {
+  font-size: 14px;
+}
+.component-inspector table {
+  font-size: 13px;
+}
+.component-inspector button {
+  width: 100%;
+  margin-top: 14px;
+  background: #235e57;
+  color: white;
+}
+.industrial .muted {
+  color: #506976;
+  font-size: 14px;
+}
+.industrial table {
+  font-size: 15px;
+}
+.industrial th,
+.industrial td {
+  padding: 12px 9px;
+}
+.industrial caption {
+  font-size: 15px;
+}
+.industrial figure {
+  width: calc(50% - 16px);
+  margin: 8px;
+  padding: 18px;
+  background: #fafcfb;
+  border-radius: 5px;
+}
+.industrial figcaption {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.industrial figure > p {
+  font-size: 13px;
+  color: #4c6370;
+}
+.industrial figure svg {
+  height: 170px;
+}
+.model-pathway {
+  border: 1px solid #cbd6d9;
+  background: #f7f9fa;
+  padding: 10px 16px;
+  border-radius: 5px;
+  margin: 14px 0;
+}
+.source-label {
+  display: inline-block;
+  background: #eaf1ee;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.trial-comparison,
+.report-preview {
+  margin: 24px 0;
+  padding: 22px;
+  border: 1px solid #c7d7d3;
+  border-radius: 5px;
+  background: #f8fbfa;
+}
+.report-preview dl > div {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid #d9e2e0;
+  gap: 15px;
+}
+.report-preview dt {
+  color: #536b73;
+}
+.report-preview dd {
+  margin: 0;
+}
+.report-preview code {
+  word-break: break-all;
+}
+.empty-state,
+.test-confirmation {
+  padding: 12px 16px;
+  background: #f0f5f4;
+  border-left: 3px solid #7e9c94;
+}
+.workstation-entry {
+  background: #142f3b;
+  padding: 12px 32px;
+  font-size: 14px;
+}
+.workstation-entry strong {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+.industrial footer {
+  font-size: 13px;
+  color: #4f6671;
+  border-top: 1px solid #ccd7db;
+  margin-top: 15px;
+}
+@media (max-width: 1100px) {
+  .industrial {
+    padding: 20px;
+  }
+  .machine-grid {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+  .machine-stage {
+    padding: 14px;
+  }
+  .machine-canvas {
+    height: 420px;
+  }
+  .instrument-strip > div {
+    padding: 12px;
+  }
+  .instrument-strip strong {
+    font-size: 22px;
+  }
+  .industrial .station-tabs button {
+    padding: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .industrial {
+    padding: 16px;
+  }
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+  .machine-canvas {
+    height: 400px;
+  }
+  .instrument-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .instrument-strip strong {
+    font-size: 22px;
+  }
+  .instrument-strip > div {
+    border-bottom: 1px solid #e0e6e8;
+  }
+  .case-journey {
+    display: block;
+  }
+  .case-journey button {
+    margin-top: 12px;
+  }
+  .industrial figure {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .workstation-entry {
+    padding: 12px 16px;
+  }
+  .report-preview dl > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .industrial {
+    padding: 12px;
+  }
+  .station-header > span {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .station-controls {
+    gap: 8px;
+  }
+  .station-controls > label,
+  .station-controls select {
+    width: 100%;
+    min-width: 0;
+  }
+  .instrument-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .instrument-strip > div:last-child {
+    grid-column: 1/-1;
+  }
+  .machine-canvas {
+    height: 330px;
+  }
+  .industrial .station-tabs button {
+    padding: 10px 12px;
+  }
+  .station-panel {
+    padding: 16px;
+  }
+  .trial-comparison,
+  .report-preview {
+    padding: 12px;
+  }
+  .industrial table {
+    font-size: 13px;
+  }
+  .industrial th,
+  .industrial td {
+    padding: 9px 4px;
+  }
+  .workstation-entry {
+    align-items: start;
+  }
+  .workstation-entry strong {
+    max-width: 45%;
+  }
+}
+.component-inspector th:last-child {
+  white-space: nowrap;
+}
+@media (max-width: 800px) {
+  /* Put the machine ahead of configuration on touch screens; keep one DOM and one case. */
+  .industrial {
+    display: flex;
+    flex-direction: column;
+  }
+  .station-header {
+    order: 0;
+  }
+  .station-error {
+    order: 0;
+  }
+  .station-tabs {
+    order: 1;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .industrial .station-tabs button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .machine-grid {
+    display: contents;
+  }
+  .machine-stage {
+    order: 2;
+  }
+  .station-controls {
+    order: 3;
+  }
+  .component-inspector {
+    order: 4;
+  }
+  .case-journey {
+    order: 5;
+  }
+  .instrument-strip {
+    order: 6;
+  }
+  .station-panel {
+    order: 7;
+  }
+  .station-panel.machine-stage {
+    order: 2;
+  }
+  .station-panel.component-inspector {
+    order: 4;
+  }
+  .industrial footer {
+    order: 8;
+  }
+  .machine-stage .panel-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .machine-stage .panel-title h2 {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+  }
+  .station-controls > label {
+    min-width: 0;
+    width: calc(50% - 5px);
+  }
+  .station-controls select {
+    min-width: 0;
+    width: 100%;
+  }
+}
+@media (min-width:801px) {
+  /* Keep the complete assembly above the first laptop fold at ordinary zoom. */
+  .workstation-entry { padding-top:8px; padding-bottom:8px; }
+  .industrial { padding-top:20px; }
+  .station-header > div > .station-eyebrow { display:none; }
+  .industrial .station-header h1 { font-size:30px; margin:0; }
+  .station-header { padding-bottom:12px; margin-bottom:12px; }
+  .station-subtitle { margin-top:6px; }
+  .station-controls { padding-bottom:8px; }
+  .station-tabs { margin-bottom:12px; }
+  .industrial .station-tabs button { padding-top:10px; padding-bottom:10px; }
+  .machine-stage { padding-top:14px; }
+  .machine-canvas { height:clamp(330px, calc(100svh - 450px), 560px); margin-top:8px; }
+}

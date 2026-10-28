@@ -11,6 +11,7 @@ jobs:
         with:
           version: "0.12.23"
       - run: uv sync --project backend --frozen --python 3.12
+      - run: uvx --from ruff==0.17.3 ruff check --isolated --select F,I,BLE001,RUF007 backend/forge
       - run: cd backend && uv run --frozen pytest -q
       - run: cd backend && uv run --frozen python -m forge.industrial.evaluate --output /tmp/forge-industrial-evaluation.json
       - run: cd backend && uv run --frozen python -m forge.industrial.meta_evaluate --output /tmp/forge-meta-fixture-evaluation.json

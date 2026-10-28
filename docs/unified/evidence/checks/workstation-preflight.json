@@ -1,0 +1,29 @@
+{
+  "ready_for_explicit_execution": false,
+  "blockers": [
+    "approved_credits_unconfirmed",
+    "provider_enforced_spending_limit_unconfirmed",
+    "card_free_entitlement_unconfirmed",
+    "inference_disabled",
+    "free_access_unconfirmed",
+    "credential_missing",
+    "request_budget_must_equal_one",
+    "reservation_budget_must_be_one_to_16384",
+    "separate_workstation_request_authorization_required",
+    "private_genuine_smoke_receipt_required"
+  ],
+  "provider": "baseten",
+  "model_id": "meta-models/muse-spark-open-1026",
+  "request_limit": 1,
+  "max_output_tokens": 1024,
+  "reserved_accounting_budget": 32768,
+  "attempt_deadline_seconds": 15.0,
+  "total_request_deadline_seconds": 30.0,
+  "native_thermal": false,
+  "retry_limit": 0,
+  "network_requests_sent": 0,
+  "entitlement_basis": "Operator attestations, not independently verified provider billing",
+  "cost": "Unknown until account credit balance, rates and enforced provider stopping behavior are reviewed. No cash expenditure authorized; notification budgets are insufficient.",
+  "purpose": "One initial observed-machine hypothesis request. Experiments and replay make zero additional requests.",
+  "mode": "dry_run"
+}

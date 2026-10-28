@@ -31,6 +31,7 @@ const fs = require("node:fs");
       await p
         .getByLabel("Machine component", { exact: true })
         .selectOption("bearing");
+      await p.getByText(/Camera and inspection tools/).tap();
       await p.getByRole("button", { name: "Zoom in", exact: true }).tap();
       const a = await new AxeBuilder({ page: p })
         .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
@@ -67,6 +68,7 @@ const fs = require("node:fs");
     await p.getByLabel("Machine component", { exact: true }).waitFor();
     await p.locator("canvas[data-draw-calls]").waitFor();
     await p.emulateMedia({ reducedMotion: "reduce" });
+    await p.getByText(/Camera and inspection tools/).click();
     await p.getByRole("button", { name: "Zoom in", exact: true }).focus();
     await p.keyboard.press("Enter");
     const selectionBeforeDrag = await p.getByLabel("Machine component", { exact: true }).inputValue();
@@ -87,7 +89,7 @@ const fs = require("node:fs");
       for (let i = 0; i < 60; i++)
         await new Promise((resolve) =>
           requestAnimationFrame(() => {
-            document.querySelectorAll(".machine-tools button")[4].click();
+            [...document.querySelectorAll(".machine-tools button")].find(button => button.textContent.trim() === "Orbit left").click();
             const now = performance.now();
             times.push(now - old);
             old = now;
@@ -181,7 +183,8 @@ const fs = require("node:fs");
         "60 camera steps scheduled via requestAnimationFrame with local CPU SwiftShader; cadence, not hardware presentation FPS",
       heap_before: before.usedSize,
       heap_after: after.usedSize,
-      mount_unmount_cycles: 5,
+      workspace_switch_cycles: 5,
+      hidden_workstation_renderer_preserved: true,
       component_changes: 60,
       keyboard_camera_activation: true,
       pointer_orbit_wheel_no_accidental_selection: true,
@@ -219,10 +222,12 @@ const fs = require("node:fs");
         .isEnabled()
     )
       throw Error("Recorded data exposed simulation seek");
+    await p.getByText("Operating controls", {exact:true}).click();
     await p
       .getByRole("button", { name: "Reset recording", exact: true })
       .click();
     await p.getByLabel("Machine component", { exact: true }).waitFor();
+    await p.getByRole("button", {name:"Machine", exact:true}).click();
     if (
       await p
         .getByRole("button", {
@@ -252,6 +257,7 @@ const fs = require("node:fs");
       .getByRole("button", { name: "Focus scenario window", exact: true })
       .click();
     pending = q.waitForResponse((r) => r.url().endsWith("/api/v4/simulate"));
+    await q.getByText("Operating controls", {exact:true}).click();
     await q
       .getByRole("button", { name: "Apply simulated repair", exact: true })
       .click();

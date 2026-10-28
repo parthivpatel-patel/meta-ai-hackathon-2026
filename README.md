@@ -75,3 +75,7 @@ The owner reports commit `0107579414f20e46d3919fcffbaf979fcb5296a9` deployed at 
 The equipment geometry and sensor locations are illustrative. Thermal/waveform evidence is descriptive context, not verified model vision/audio or physical causal proof. Public mode exposes bounded synthetic workflows, has no per-user account isolation and must not hold sensitive industrial data.
 
 See [security](SECURITY.md), [current release and rollback](docs/CURRENT_RELEASE.md), [model activation gates](MODEL_ACTIVATION.md) and the [submission checklist](SUBMISSION_CHECKLIST.md). The development-window eligibility question remains [unresolved](docs/ELIGIBILITY_TIMING_REVIEW.md). Historical evidence, attribution and original Git timestamps are preserved; no organizer approval or completed submission is claimed.
+
+## Unified workstation candidate (Phase 6)
+
+The exact Phase 5 baseline is preserved. The [unified workstation handoff](docs/unified/README.md) documents coordinated machine/investigation modes, detailed procedural geometry, retained library state, actual local production evidence and explicit release gates. No Phase 6 deployment or genuine inference is implied.
