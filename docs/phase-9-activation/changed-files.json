@@ -1,0 +1,148 @@
+{
+  "baseline": "03cbc5295168b9c8b33ad98eb394e62f047ba105",
+  "branch": "feature/forge-phase-9-meta-activation",
+  "count": 35,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "status": "modified"
+    },
+    {
+      "path": "MODEL_ACTIVATION.md",
+      "status": "modified"
+    },
+    {
+      "path": "README.md",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/submission/smoke.py",
+      "status": "modified"
+    },
+    {
+      "path": "backend/tests/test_phase9_activation.py",
+      "status": "added"
+    },
+    {
+      "path": "docs/CURRENT_RELEASE.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/phase-9-activation/READINESS.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/README.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/RELEASE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/changed-files.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/backend-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/container-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/coupled.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/credential-presence.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/docker-build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/exact-smoke-fixture.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/exact-smoke-fixture.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/financial-source.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/fixture.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/frontend-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/integration-fixture.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/integration-fixture.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/manifest.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/model-api-financial-source.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/owner-confirmation.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/ruff.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/runtime-delta.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/runtime-hashes.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/runtime-readiness.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/security-scan.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/smoke-preflight.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/targeted-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/evidence/types.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-9-activation/validation.json",
+      "status": "added"
+    }
+  ],
+  "scope": "Narrow timeout guard, four regressions, activation/release evidence; Phase 8 UI/diagnostics/historical evidence unchanged"
+}

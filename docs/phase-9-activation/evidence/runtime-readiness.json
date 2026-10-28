@@ -1,0 +1,9 @@
+{
+  "scope": "Sanitized final managed runtime observation; earlier transient configuration-change errors resolved",
+  "observations_current": true,
+  "observed_phase": "running",
+  "network_policy_state": "enforced",
+  "ready_secret_bindings": [],
+  "ready_runtime_variables": [],
+  "credential_values_read_or_printed": false
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "Owner statement during Phase 9, not provider/account verification",
+  "promotional_credits_reported_usd": 100,
+  "payment_method_requested_or_added_reported": false,
+  "paid_usage_authorized": false,
+  "zero_out_of_pocket_required": true,
+  "provider_enforced_hard_limit_independently_established": false,
+  "owner_instruction": "Do not infer no charges from absence of a card; proceed only if authoritative provider/account protection and secure credential gates pass, otherwise no genuine request."
+}

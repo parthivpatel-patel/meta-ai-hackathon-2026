@@ -1,0 +1,18 @@
+{
+  "scope": "Existing exact smoke.execute through an injected MockTransport; synthetic approval flags are unit configuration, not account attestations",
+  "source": "test_transport",
+  "local_fixture_attempts": 1,
+  "genuine_requests": 0,
+  "fixture_returned_model": "meta-models/muse-spark-open-1026",
+  "actual_returned_model": null,
+  "schema_valid": true,
+  "independent_status": "SUPPORTED_SYNTHETIC",
+  "reservation_units_used": 4089,
+  "reservation_limit": 8192,
+  "attempt_seconds": 15,
+  "total_seconds": 30,
+  "max_output_tokens": 1024,
+  "retry_limit": 0,
+  "observed_only_input": true,
+  "genuine_receipt_created": false
+}

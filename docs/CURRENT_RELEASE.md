@@ -1,3 +1,11 @@
+# Current narrow activation/release candidate — Phase 9
+
+Current branch `feature/forge-phase-9-meta-activation`, based on exact Phase 8 `03cbc5295168b9c8b33ad98eb394e62f047ba105`. Final handoff supplies the pushed SHA and CI. [Current readiness](phase-9-activation/READINESS.md) and [exact manual release/rollback](phase-9-activation/RELEASE.md) supersede older candidate pointers below. The only runtime change tightens the private smoke attempt ceiling from 20 to 15 seconds. Frontend assets/diagnostic engines remain byte-identical to Phase 8.
+
+Genuine requests 0; financial zero-overage evidence and secure key access remain unresolved. Owner-reported credits/no card are not sufficient proof. No genuine/paid/public activation, deployment, merge or submission occurred. The current actual Render Live artifact/settings/rollback still require owner verification. Existing protected refs and full Phase 8 evidence remain preserved.
+
+---
+
 # Current review candidate and owner release gates
 
 The current software review candidate is **Phase 8**, branch `feature/forge-phase-8-final-completion`, based on exact resume fix `e6b8ab29050f10fe2d3a5d0aade5aca5db685106`. The final handoff supplies its full pushed SHA and exact CI result. See [the engineering report](phase-8-final/ENGINEERING_REPORT.md), [validation](phase-8-final/validation.json) and [manual deployment/rollback instructions](phase-8-final/RELEASE.md).

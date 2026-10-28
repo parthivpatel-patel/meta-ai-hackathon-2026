@@ -1,0 +1,9 @@
+{
+  "baseline": "03cbc5295168b9c8b33ad98eb394e62f047ba105",
+  "runtime_file_changes": [
+    "backend/forge/submission/smoke.py"
+  ],
+  "frontend_assets_identical": true,
+  "diagnostic_engine_files_identical": true,
+  "scope": "Actual final local image versus Phase 8 recorded file hashes; only private smoke preflight module differs"
+}

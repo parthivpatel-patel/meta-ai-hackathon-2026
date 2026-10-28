@@ -1,3 +1,9 @@
+# Phase 9 current authorization and readiness
+
+The October 28 Phase 9 directive conditionally authorizes the existing single Baseten smoke only after financial and secure credential gates pass. Do not request that same routine authorization again. The owner confirms $100 credits/no added payment method but explicitly states this is not verified hard spending protection. No genuine request has been sent; the allowance remains unused. Current runtime has no ready secret binding/key in this process. [Current evidence and exact missing proof](docs/phase-9-activation/READINESS.md).
+
+Preserve one attempted request, maximum 1024 output tokens, zero retries, **attempt≤15 seconds**, total≤30 seconds and no paid fallback. The existing preflight now enforces the 15-second ceiling. No financial attestation, billing/public setting or credential alias was changed. Repeated testing uses fixtures only. Financial/private access and a successful private smoke are distinct from public integration; no follow-up/evaluation/public call is authorized by smoke success. Older phase-specific permission wording below is historical; current conditional scope and all safeguards take precedence.
+
 # Phase 7 authorization and financial boundary
 
 **Phase 8 boundary:** genuine Baseten inference remains blocked. The owner has not supplied authoritative credit-only/no-overage confirmation; this phase does not reauthorize the unused request. Continue offline fixtures only. Public inference stays disabled. See [current provenance and activation status](docs/phase-8-final/MODEL_STATUS.md).

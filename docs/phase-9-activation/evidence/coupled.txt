@@ -1,0 +1,1 @@
+{"cases": 21, "accepted_exact": {"numerator": 15, "denominator": 15}, "coverage": {"numerator": 15, "denominator": 21}, "all_finding_precision": {"numerator": 18, "denominator": 18}, "exact_agreement": {"numerator": 18, "denominator": 21}, "replay_consistency": "21/21", "inconclusive": 6}

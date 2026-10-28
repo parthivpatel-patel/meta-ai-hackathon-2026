@@ -1,0 +1,19 @@
+{
+  "scope": "Fresh existing private CLI with --fixture/MockTransport only; not a genuine provider response or receipt",
+  "source": "test_transport",
+  "genuine_requests": 0,
+  "local_fixture_attempts": 1,
+  "structured_proposal_validated": true,
+  "observed_only_input_excludes_hidden_recipe_seed_scenario_truth": true,
+  "initial_capture_hash": "a5fa9d94f6253750974adabe10f9fc813c652ff2b2c1b3e7cbc277b009d0ba1f",
+  "initial_model_report_hash": "2372b4acffed67c578be9ee305e53783bbb163e91198d63c1bd2f953be4a3505",
+  "final_model_report_hash": "477a95be57cc877179e2ce0c8de22f0cfe505ebea426922c62617c921e2ba4f8",
+  "experiments": 2,
+  "independent_status": "SUPPORTED_SYNTHETIC",
+  "baseline_decision_and_trials_identical": true,
+  "independent_replay": true,
+  "private_fixture_receipt_mode": "0600",
+  "public_inference_enabled": false,
+  "genuine_returned_model": null,
+  "scope_warning": "No genuine smoke exists; this fixture cannot unlock live workstation inference, establish model quality, or be relabeled genuine."
+}

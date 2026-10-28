@@ -6,6 +6,8 @@ FORGE investigates abnormal equipment measurements by comparing possible causes,
 
 The candidate workstation at `/demo` connects a selectable 3D pump and motor to coupled synthetic telemetry, diagnostic captures, counterfactual tests and independently checked results. Use Cases → **Investigation library** (`/demo?view=investigations`) for the preserved seven-case workflow inside the shared navigation. The public URL may still run the earlier release; this branch has not been deployed.
 
+Current activation/release candidate: [Phase 9](docs/phase-9-activation/README.md). Phase 8 diagnostic software is unchanged. Genuine inference remains blocked by unresolved financial protection and absent private-runtime credential access; public inference stays disabled.
+
 ## Capabilities
 
 - Temperature, vibration and pressure analysis with missing-data handling.

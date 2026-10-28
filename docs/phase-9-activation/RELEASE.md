@@ -1,0 +1,20 @@
+# Phase 9 exact-commit manual release
+
+This is a software/public-mock release candidate based on Phase 8 `03cbc5295168b9c8b33ad98eb394e62f047ba105`. Use the **full Phase 9 SHA and successful CI run from the final handoff**. Only the private smoke timeout guard changes at runtime; diagnostic engines and compiled frontend assets are byte-identical to Phase 8. The new local Docker image is `sha256:8e6d01140a118cb647b5a31fc80826be3634e463286e2583807efad3a1d07656`.
+
+**No deployment, settings change, merge, paid resource or public inference activation is authorized/performed by this work.** A genuine Meta-enabled release remains NO-GO because no actual response or verified financial/private credential access exists. A successful private smoke alone would not establish public integration.
+
+After owner approval of the exact software SHA:
+
+1. Render Dashboard → existing **forge-judge → Events**. Record the actual current **Live** deploy ID/URL and full SHA externally; confirm its retained artifact and **Rollback** control. The owner previously reported Phase 7 live, but do not assume its identity from a Git branch or use the Phase 8 review baseline as an unverified rollback artifact. This runtime's network policy does not permit independent Render verification.
+2. Inspect without changing: Free Docker service, existing repository/configured branch, already-disabled auto-deploy, `/api/v3/ready`, existing host configuration and ephemeral SQLite under `/tmp`. Keep `FORGE_DEMO_MODE=public`, `FORGE_PROVIDER=mock`, `FORGE_INFERENCE_ENABLED=false`, `FORGE_INFERENCE_REQUEST_BUDGET=0`. No Baseten/provider/owner credentials or credential-bearing environment groups on Render. No schema/env/branch/paid-resource changes are needed. Stop if prerequisites differ.
+3. Export required reports/checkpoints and retain the actual recording outside ephemeral storage. Code rollback does not recover SQLite. Browser checkpoints are local/evictable, not server backups.
+4. **Manual Deploy → Deploy a specific commit** → paste the full reviewed Phase 9 SHA from the handoff. Verify acceptance without switching the configured branch. Deploy only after the separate owner release decision. If unavailable/rejected, stop; do not substitute latest, merge, upgrade or create a replacement service.
+5. Confirm the actual resulting **Live SHA**, then external HTTPS `https://forge-judge.onrender.com/api/v3/ready` and `/demo`. Health alone is not commit identity. Anonymous desktop/phone acceptance: select bearing case, focus 319, capture, explicitly confirm two tests, verify legitimate supported 2/4 completion, inspect counterfactual response, resume with no recapture, export/replay, save/refresh/restore and verify unchanged report/history. Check inconclusive/fallback/library behavior as in the Phase 8 guide. Public inference must remain disabled and developer/private endpoints restricted. Respect the existing quota and free-host wake-up; never delete production session tables or generate keep-alive traffic.
+6. Retain actual Live identity, acceptance/export evidence and the owner release decision. Do not advertise genuine Meta operation based on this public mock deployment or a future private smoke alone.
+
+## Rollback procedure — actual artifact/control requires owner verification
+
+If acceptance fails, select the **actual prior Live artifact recorded in step 1**, verify its full SHA/deploy ID and use **Rollback** only if supported/retained. Confirm the resulting Live SHA, HTTPS readiness, prior workflows and public no-inference/no-key configuration. If unavailable, stop for a distinct recovery decision; rebuilding an old commit is not an assumed artifact rollback. Preserve Git history and protected branches.
+
+The unchanged Phase 8 [full release guide](../phase-8-final/RELEASE.md), [demo/recording fallback](../phase-8-final/DEMO_AND_RECORDING.md) and [software limitations](../phase-8-final/KNOWN_LIMITATIONS.md) remain applicable. No industrial, uptime, genuine-model or submission-readiness claim is introduced.

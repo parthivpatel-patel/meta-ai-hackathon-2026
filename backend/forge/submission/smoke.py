@@ -58,7 +58,7 @@ def preflight(settings: TransportSettings, activation: ActivationSettings) -> di
         ),
         (not settings.thermal_images, "first_smoke_must_use_numeric_summaries_only"),
         (0 < settings.token_budget <= 16384, "reservation_budget_must_be_one_to_16384"),
-        (settings.timeout_seconds <= 20, "timeout_must_not_exceed_20_seconds"),
+        (settings.timeout_seconds <= 15, "timeout_must_not_exceed_15_seconds"),
     ]:
         if not passed:
             blockers.append(code)
