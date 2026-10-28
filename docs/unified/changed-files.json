@@ -1,8 +1,9 @@
 {
   "baseline": "51e188dcf7c23fcb11fd3d8a3b556b349eec01d9",
   "branch": "feature/forge-unified-workstation",
-  "count": 269,
+  "count": 270,
   "files": [
+    ".gitattributes",
     ".github/workflows/ci.yml",
     "ARCHITECTURE.md",
     "HACKATHON_BUILD_LOG.md",

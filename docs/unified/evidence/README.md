@@ -15,3 +15,5 @@ All Phase 6 browser groups ultimately ran on final image `sha256:f2beb2738b59a12
 The final isolated lifecycle run passed the unchanged telemetry assertion. A [concurrent software-browser timing miss](checks/lifecycle-concurrent-failure.txt) is retained transparently; it is excluded from passing runs. Final telemetry observations still show scheduling delays, and camera RAF cadence is not hardware FPS. During development, readiness races, disclosure-aware locators and an index-based camera locator were corrected; unsuccessful exploratory runs were never counted as successes.
 
 See [screenshots.json](../screenshots.json) for153 actual image files and their hashes. Screenshots illustrate the tested local candidate, not a deployment, real industrial observation or generated concept rendering.
+
+The actual BuildKit transcript retains timestamped blank lines with trailing spaces. A file-specific Git attribute preserves its raw bytes; ordinary source whitespace checks remain enabled.

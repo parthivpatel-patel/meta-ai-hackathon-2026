@@ -1,2 +1,4 @@
 # Preserve the verbatim upstream license bytes, including Markdown hard breaks.
 docs/meta-final/MUSE_LICENSE_REFERENCE.txt -whitespace
+# Preserve the actual BuildKit transcript, including timestamped blank output lines.
+docs/unified/evidence/checks/docker-build.txt -whitespace
