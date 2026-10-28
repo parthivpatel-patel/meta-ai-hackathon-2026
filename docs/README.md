@@ -1,5 +1,7 @@
 # FORGE documentation
 
+Current review candidate: [Phase 8 final completion](phase-8-final/README.md), including the stopping policy, state matrix, actual validation and owner release gates. Earlier phase evidence below remains historical.
+
 Start with the [product README](../README.md) and [integration guide](meta-final/README.md) and [demonstration scripts](meta-final/DEMO_SCRIPTS.md).
 
 | Topic | Primary reference |

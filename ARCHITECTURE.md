@@ -92,3 +92,7 @@ The [unified design](docs/unified/DESIGN.md) preserves the modular monolith and 
 ## Phase 7 recovery boundary
 
 The [final experience architecture](docs/final-experience/ARCHITECTURE.md) adds a shared shell and bounded native IndexedDB checkpoints. Only fixed public deterministic legacy snapshots can rehydrate through the inference-free v6 recovery handler. Existing numerical/report/provider contracts and the single-service deployment are retained.
+
+## Phase 8 final completion
+
+The existing selector/verifier and sealed JSON contracts are unchanged. Derived stopping presentation, truthful telemetry provenance, fail-closed execution controls, asynchronous recovery/import guards and operation generations improve the existing monolith. See [the current architecture](docs/phase-8-final/ARCHITECTURE.md) and [state matrix](docs/phase-8-final/STATE_TRANSITIONS.md).

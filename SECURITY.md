@@ -82,3 +82,7 @@ The [Phase 6 product/security review](docs/unified/REVIEW.md) records preserved 
 ## Phase 7
 
 See the [current critical review](docs/final-experience/SECURITY_REVIEW.md) for checkpoint trust, credential isolation, fixed-source recovery, public no-inference controls and the owner-confirmed financial blocker. Browser-local data is not source authentication or durable server storage.
+
+## Phase 8 final review
+
+See [the current security/adversarial review](docs/phase-8-final/SECURITY_REVIEW.md) for bounded credential/dependency scans, actual public-container checks, unchanged quotas, stale-response/duplicate-operation controls and remaining limitations. Genuine inference, deployment and spending remain prohibited by this candidate.

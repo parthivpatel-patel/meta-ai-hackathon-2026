@@ -1,0 +1,21 @@
+{
+  "models": [
+    {
+      "model_id": "meta-models/muse-spark-open",
+      "status": "documented_public",
+      "source": "https://www.baseten.co/library/muse-spark-open/",
+      "endpoint": "https://inference.baseten.co/v1/chat/completions",
+      "family_eligibility": "Public event permits Meta open weights; participant confirms event-specific model/credential restriction in the redesign directive",
+      "account_access_verified": false
+    },
+    {
+      "model_id": "meta-models/muse-spark-open-1026",
+      "status": "participant_confirmed_event",
+      "source": "https://cerebralvalley.ai/e/meta-ai-developer-hackathon/details",
+      "endpoint": "https://inference.baseten.co/v1/chat/completions",
+      "family_eligibility": "Public event permits Meta open weights; participant confirms event-specific model/credential restriction in the redesign directive",
+      "account_access_verified": false
+    }
+  ],
+  "warning": "Documentation is not credit entitlement or successful inference. No network requests were made."
+}

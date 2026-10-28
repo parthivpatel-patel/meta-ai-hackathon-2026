@@ -1,0 +1,9 @@
+All selected local Phase 7 containers ready
+Retained workflow passed: library
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Retained workflow passed: model
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Retained workflow passed: portable
+Removed selected owned final-image test containers only

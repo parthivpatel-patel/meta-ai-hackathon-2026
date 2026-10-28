@@ -1,0 +1,24 @@
+[
+  {
+    "view": "laptop-library-machine",
+    "violations": []
+  },
+  {
+    "view": "laptop-restored-after-server-loss",
+    "violations": []
+  },
+  {
+    "view": "laptop-library-report",
+    "violations": []
+  },
+  {
+    "journey": "library",
+    "server_sessions_evicted": true,
+    "prior_trials": 1,
+    "restored_prior_trials": 1,
+    "final_trials": 2,
+    "future_test_still_explicit": true,
+    "errors": [],
+    "external": []
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "case": "vibration_response",
+    "width": 390,
+    "initial_load_ms": 199,
+    "initialization_ms": 72,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 59
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 67
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 64
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 47
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 60
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 64
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 92
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-vibration"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  }
+]

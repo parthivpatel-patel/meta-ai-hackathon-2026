@@ -1,0 +1,76 @@
+[
+  {
+    "case": "misleading_sensor",
+    "width": 1440,
+    "initial_load_ms": 244,
+    "initialization_ms": 110,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 52
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 63
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 79
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 49
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 72
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 45
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 92
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-pressure",
+      "sensor-pressure"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  }
+]

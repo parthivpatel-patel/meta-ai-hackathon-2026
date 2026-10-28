@@ -1,0 +1,1164 @@
+{
+  "baseline": "e6b8ab29050f10fe2d3a5d0aade5aca5db685106",
+  "branch": "feature/forge-phase-8-final-completion",
+  "count": 289,
+  "scope": "Exact candidate delta, including this inventory and evidence manifest; original historical evidence unchanged",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "status": "modified"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "status": "modified"
+    },
+    {
+      "path": "DEVELOPMENT_ROADMAP.md",
+      "status": "modified"
+    },
+    {
+      "path": "EVALUATION_PLAN.md",
+      "status": "modified"
+    },
+    {
+      "path": "HACKATHON_BUILD_LOG.md",
+      "status": "modified"
+    },
+    {
+      "path": "MODEL_ACTIVATION.md",
+      "status": "modified"
+    },
+    {
+      "path": "README.md",
+      "status": "modified"
+    },
+    {
+      "path": "SECURITY.md",
+      "status": "modified"
+    },
+    {
+      "path": "SUBMISSION_CHECKLIST.md",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/industrial/investigation.py",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/industrial/meta.py",
+      "status": "modified"
+    },
+    {
+      "path": "backend/forge/industrial/presentation.py",
+      "status": "added"
+    },
+    {
+      "path": "backend/tests/test_completion.py",
+      "status": "added"
+    },
+    {
+      "path": "docs/CURRENT_RELEASE.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/README.md",
+      "status": "modified"
+    },
+    {
+      "path": "docs/phase-8-final/ARCHITECTURE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/DEMO_AND_RECORDING.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/ENGINEERING_REPORT.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/KNOWN_LIMITATIONS.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/MODEL_STATUS.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/README.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/RELEASE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/SECURITY_REVIEW.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/STATE_TRANSITIONS.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/STOPPING_POLICY.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/SUBMISSION_PACKAGE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/USER_GUIDE.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/VALIDATION.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/changed-files.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/README.md",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/observed-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/one-test-resumed.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/report-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/terminal-explained.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/unavailable-backend-preserves-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/browser-restart-restored.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/observed-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/one-test-resumed.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/report-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/terminal-explained.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/unavailable-backend-preserves-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/observed-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/one-test-resumed.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/report-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/terminal-explained.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/unavailable-backend-preserves-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/missing-import-explicit.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/observed-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/one-test-resumed.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/report-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/terminal-explained.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/unavailable-backend-preserves-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/acceptance-1366.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/acceptance-1440.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/acceptance-390.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/acceptance-768.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/backend-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/checkpoint-serialization.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/checkpoint-serialization.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/container-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/core-matrix.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/coupled.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/docker-final-build.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/evaluation-comparison.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/fixture.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/frontend-tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/layout-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-cases-matrix.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-confounded.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-insufficient.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-misleading_sensor.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-noisy_multifault.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-normal.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-temperature_response.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/library-vibration_response.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/lifecycle-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-bearing.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-cavitation.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-matrix.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-misalignment.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-normal.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-pressure_sensor.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-process.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/machine-thermal.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/model-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/model-catalogue.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/npm-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/portable-browser.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/python-audit.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/replays.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/replays.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/requirements.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/retained-matrix.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/ruff.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/runtime-hashes.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/security-scan.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/selection-performance.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/source-fingerprint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/startup-performance.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/submission-model-fixture.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/submission-smoke.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/types.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/v1.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/v2.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/checks/v3.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/failure.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/observed-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/one-test-resumed.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/report-ready.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/report.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/report.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/terminal-explained.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/exploratory/quota-restart/transcript.txt",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/layout/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/layout/screenshots/layout-1024.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/layout/screenshots/layout-1920.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/layout/screenshots/layout-320.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/layout/screenshots/layout-768.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/confounded.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/confounded.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/screenshots/confounded-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/insufficient.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/insufficient.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/screenshots/insufficient-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/misleading_sensor.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/misleading_sensor.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/noisy_multifault.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/noisy_multifault.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/normal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/normal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/screenshots/normal-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/screenshots/temperature_response-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/temperature_response.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/temperature_response.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-Possible-causes.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-Report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-Results.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-Tests.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-equipment.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-evidence.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/screenshots/vibration_response-overview.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/vibration_response.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/vibration_response.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/library-recovered.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/library-recovered.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/screenshots/laptop-library-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/screenshots/laptop-library-report.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/screenshots/laptop-restored-after-server-loss.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/lifecycle/lifecycle-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/lifecycle/screenshots/workstation-320.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/lifecycle/screenshots/workstation-375.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/lifecycle/screenshots/workstation-430.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/bearing.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/bearing.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/screenshots/bearing-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/screenshots/bearing-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/cavitation.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/cavitation.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/screenshots/cavitation-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/screenshots/cavitation-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/misalignment.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/misalignment.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/screenshots/misalignment-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/screenshots/misalignment-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/normal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/normal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/screenshots/normal-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/screenshots/normal-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/pressure_sensor.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/pressure_sensor.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/screenshots/pressure_sensor-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/screenshots/pressure_sensor-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/process.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/process.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/screenshots/process-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/screenshots/process-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/screenshots/thermal-machine.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/screenshots/thermal-verification.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/thermal.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/thermal.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/manifest.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/fixture-final.html",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/fixture-final.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/fixture-initial.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/meta-browser-results.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/prepared-evidence.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/screenshots/mobile-recorded-fallback.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/screenshots/mobile-refresh-disabled-model.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/screenshots/observed-preparation.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/screenshots/recorded-competing-proposals.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/screenshots/verified-recorded-proposals.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/portable/checkpoint.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/portable/restored-portable.png",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/portable/result.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/selection-performance.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/performance.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/screenshots.json",
+      "status": "added"
+    },
+    {
+      "path": "docs/phase-8-final/validation.json",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/DemoConsole.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/RecoveryPanel.test.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/industrial/RecoveryPanel.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/WorkspacePanels.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/Workstation.resume.test.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/Workstation.tsx",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/contracts.ts",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/industrial/workstation.css",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/investigation/InvestigationProgress.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/investigation/continuity.test.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/investigation/progress.test.tsx",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/investigation/progress.ts",
+      "status": "added"
+    },
+    {
+      "path": "frontend/src/investigation/types.ts",
+      "status": "modified"
+    },
+    {
+      "path": "frontend/src/investigation/useInvestigation.ts",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/final-experience-browser.cjs",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/industrial-browser-check.cjs",
+      "status": "modified"
+    },
+    {
+      "path": "scripts/phase8-acceptance-browser.cjs",
+      "status": "added"
+    },
+    {
+      "path": "scripts/product-completion-browser.cjs",
+      "status": "modified"
+    }
+  ]
+}

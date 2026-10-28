@@ -31,6 +31,7 @@ export type Session = {
     acquired_at?: string | null;
   };
   measurements: Row[];
+  max_experiments?: number;
   model_source: string;
   inference?: {
     input_mode?: string;

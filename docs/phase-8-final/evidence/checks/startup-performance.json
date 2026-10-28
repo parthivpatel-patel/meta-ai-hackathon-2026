@@ -1,0 +1,6 @@
+{
+  "create_to_readiness_ms": 6759.076,
+  "samples": 1,
+  "image": "sha256:99ddd0e957b4e88f3f232cdf5512c36918677590ebb56cb5d55a80108435d7cc",
+  "scope": "Local Docker create plus VFS rootfs copy and HTTP readiness poll, restricted 512 MiB/one CPU; not Render spin-up or production latency"
+}

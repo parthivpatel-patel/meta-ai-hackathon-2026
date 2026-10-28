@@ -1,0 +1,248 @@
+{
+  "count": 24,
+  "HTML_comparisons": 20,
+  "reports": [
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1366/report.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "current_template_HTML_exact": true,
+      "replay_ms": 144.964,
+      "CLI_with_startup_ms": 994.52,
+      "sha256": "db0d8de41dc2e1c8b3590225ef290b66743b8e4fc43cb26d5e1e593c6313f630"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/1440/report.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 76.383,
+      "CLI_with_startup_ms": 963.855,
+      "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/390/report.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "current_template_HTML_exact": true,
+      "replay_ms": 101.755,
+      "CLI_with_startup_ms": 919.613,
+      "sha256": "df5a32bcb08a1faafcd5bb7348a70f0b855fca28eaf91f7a4a54a5966c051bec"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/acceptance/768/report.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 37.982,
+      "CLI_with_startup_ms": 897.545,
+      "sha256": "ad2edf44a5132e6be0a2cd605a6a5c72b0ae9bd23466b6c027530f4cfd6e2635"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library/library-recovered.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 17.922,
+      "CLI_with_startup_ms": 982.32,
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/confounded/confounded.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: INCONCLUSIVE []",
+      "current_template_HTML_exact": true,
+      "replay_ms": 50.103,
+      "CLI_with_startup_ms": 908.946,
+      "sha256": "1c2aa3dd3e7d8403c7b0dd5e6c9d1d24f70e84e0272908ce63aebd4c657ec949"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/insufficient/insufficient.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: ABSTAIN []",
+      "current_template_HTML_exact": true,
+      "replay_ms": 1.928,
+      "CLI_with_startup_ms": 982.799,
+      "sha256": "884dbfd050da348aa67cbcd4c4dfa90b4852db7f181a1acff9c1a7bb474ce14b"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/misleading_sensor/misleading_sensor.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 20.864,
+      "CLI_with_startup_ms": 997.294,
+      "sha256": "086e8d0879d732a012a103a5dea3d1116cee2d5468ed2f638650689cce9f4c97"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/noisy_multifault/noisy_multifault.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: INCONCLUSIVE ['process-vibration']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 19.074,
+      "CLI_with_startup_ms": 884.102,
+      "sha256": "aad0add5b7b3bf9287459775010dded9687f8f3adec3bac677a1f21c34d826da"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/normal/normal.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['normal']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 11.791,
+      "CLI_with_startup_ms": 887.219,
+      "sha256": "0449301b4fd87a0db8039a8e91bb01f3fe586d4dba547daa6fb8004bb12bfae0"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/temperature_response/temperature_response.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-temperature']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 19.687,
+      "CLI_with_startup_ms": 993.123,
+      "sha256": "f8a45a8be9415a1655ff787a496543b4773cf848e523556614ea9deaa7c83488"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/library-cases/vibration_response/vibration_response.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-vibration']",
+      "current_template_HTML_exact": true,
+      "replay_ms": 20.928,
+      "CLI_with_startup_ms": 884.005,
+      "sha256": "a065e1631ef7840beb8f96fa0f7775961d809109aa7c18cdcf86e298a5a54e19"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/bearing/bearing.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 70.614,
+      "CLI_with_startup_ms": 1122.626,
+      "sha256": "4921fea7f78ceafd61aa750b5b21c62b7dc5e1b1c9b39291ecbd94b426263a31"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/cavitation/cavitation.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "current_template_HTML_exact": true,
+      "replay_ms": 111.576,
+      "CLI_with_startup_ms": 966.752,
+      "sha256": "df5a32bcb08a1faafcd5bb7348a70f0b855fca28eaf91f7a4a54a5966c051bec"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/misalignment/misalignment.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: INCONCLUSIVE",
+      "current_template_HTML_exact": true,
+      "replay_ms": 162.268,
+      "CLI_with_startup_ms": 1136.976,
+      "sha256": "db0d8de41dc2e1c8b3590225ef290b66743b8e4fc43cb26d5e1e593c6313f630"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/normal/normal.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 41.731,
+      "CLI_with_startup_ms": 954.97,
+      "sha256": "ad2edf44a5132e6be0a2cd605a6a5c72b0ae9bd23466b6c027530f4cfd6e2635"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/pressure_sensor/pressure_sensor.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 70.977,
+      "CLI_with_startup_ms": 924.253,
+      "sha256": "f8cb6eb653b6d371319cef46ad3547438ae8884de3de05c426f09c541b7e7d33"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/process/process.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 70.18,
+      "CLI_with_startup_ms": 917.042,
+      "sha256": "d7bc030f75fb302bca34a8d1f0dc45ca069e4a3455b1d24e7b797b8798dd2172"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/machine/thermal/thermal.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 71.228,
+      "CLI_with_startup_ms": 900.313,
+      "sha256": "5fa82cd6ad540be94602a98a97638b2de4b120f88a696745164523edde24af89"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/fixture-final.json",
+      "schema": "forge-industrial-model-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: SUPPORTED_SYNTHETIC",
+      "current_template_HTML_exact": true,
+      "replay_ms": 160.137,
+      "CLI_with_startup_ms": 1053.731,
+      "sha256": "fbd10ad0d796a544c69114e47dcb24d9e6903a9d4b37bc0e6de6c20006e69346"
+    },
+    {
+      "path": "docs/phase-8-final/evidence/model/fixture-initial.json",
+      "schema": "forge-industrial-model-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "current_template_HTML_exact": null,
+      "replay_ms": 89.044,
+      "CLI_with_startup_ms": 1039.167,
+      "sha256": "422b8c83f0322a8cdaf6c662e8ee363ebda146fc6a697f830b666c60c0eb9b60"
+    },
+    {
+      "path": "docs/investigation-resume/evidence/before/1440-one-test-report.json",
+      "schema": "forge-industrial-report-1",
+      "independent_replay": true,
+      "CLI_stdout": "Industrial replay verified: IN_PROGRESS",
+      "current_template_HTML_exact": null,
+      "replay_ms": 42.983,
+      "CLI_with_startup_ms": 973.672,
+      "sha256": "ae12ee321faae6bbd35b89a28a60a8172aec8d8c6b9bcb17eea03d78de175caa"
+    },
+    {
+      "path": "docs/submission/insufficient.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: ABSTAIN []",
+      "current_template_HTML_exact": null,
+      "replay_ms": 2.386,
+      "CLI_with_startup_ms": 963.255,
+      "sha256": "8c3848e2d06c78d4eccdf5ac041bad5e4fbcd93fad0097f868edd3a82f15503d"
+    },
+    {
+      "path": "docs/submission/misleading_sensor.json",
+      "schema": "forge-report-3",
+      "independent_replay": true,
+      "CLI_stdout": "Phase 3 replay verified: SUPPORTED_SYNTHETIC ['process-pressure', 'sensor-pressure']",
+      "current_template_HTML_exact": null,
+      "replay_ms": 18.279,
+      "CLI_with_startup_ms": 958.239,
+      "sha256": "cff063f5bf02831f3f8051592762094d197cbb5863e1c175605522cabd39b27d"
+    }
+  ],
+  "genuine_requests": 0,
+  "scope": "Actual function and CLI replay; new HTML exact checks only, original historical JSON still verifies"
+}

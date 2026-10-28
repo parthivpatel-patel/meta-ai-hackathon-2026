@@ -1,0 +1,36 @@
+[
+  {
+    "scenario": "pressure_sensor",
+    "width": 390,
+    "webgl": true,
+    "initial_ms": 1142,
+    "experiment_ui_ms": [
+      122,
+      160
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "sensor-pressure"
+    ],
+    "telemetry_roundtrip_bytes": 405769,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "57",
+        "triangles": "19138"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  }
+]

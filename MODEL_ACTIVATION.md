@@ -1,5 +1,7 @@
 # Phase 7 authorization and financial boundary
 
+**Phase 8 boundary:** genuine Baseten inference remains blocked. The owner has not supplied authoritative credit-only/no-overage confirmation; this phase does not reauthorize the unused request. Continue offline fixtures only. Public inference stays disabled. See [current provenance and activation status](docs/phase-8-final/MODEL_STATUS.md).
+
 The Phase 7 directive grants exactly one conditional genuine Baseten request, not yet attempted. It is not necessary to request that same authorization again. It does not authorize retries, evaluation or a follow-up workstation request. A failed attempt consumes the authorization.
 
 The owner reports a $100 allocation and unavailable usage tracking. A usage dashboard is **not required**. Before execution, account-specific authoritative evidence must establish no payment method/paid fallback and no charges beyond promotional credits; a key or credit allocation alone is insufficient. Do not set financial attestations to true without evidence or change billing settings. Current runtime preflight/readiness and the Phase 7 handoff report the actual blocker; offline development proceeds independently. Preserve the exact endpoint/model, maximum1024 output tokens,15-second attempt,30-second overall deadline, budget1 and retries0. Existing private output protections remain required. No public inference activation follows from private success.

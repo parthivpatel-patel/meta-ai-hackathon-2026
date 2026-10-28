@@ -89,6 +89,13 @@ export type Report = {
     findings: string[];
     reasons: string[];
     uncertainty: string;
+    channels?: {
+      channel: string;
+      status: string;
+      findings: string[];
+      reasons: string[];
+      evidence_refs: string[];
+    }[];
   };
   plan: {
     kind: string;
@@ -117,14 +124,25 @@ export function rotorPhases(frames: Frame[]): (number | null)[] {
   return frames.map((frame, index) => {
     const reading = frame.readings.find((r) => r.sensor_id === "rpm");
     const rpm = reading?.value;
-    if (rpm == null || !Number.isFinite(rpm) || reading?.quality !== "VALID") return null;
+    if (rpm == null || !Number.isFinite(rpm) || reading?.quality !== "VALID")
+      return null;
     if (index === 0 || frame.state === "STOPPED") return angle;
     const previous = frames[index - 1];
-    const previousReading = previous.readings.find((r) => r.sensor_id === "rpm");
+    const previousReading = previous.readings.find(
+      (r) => r.sensor_id === "rpm",
+    );
     const before = previousReading?.value;
-    if (before == null || !Number.isFinite(before) || previousReading?.quality !== "VALID") return null;
-    const dt = (Date.parse(frame.timestamp) - Date.parse(previous.timestamp)) / 1000;
-    angle = (angle + ((rpm + before) / 2) * dt * 2 * Math.PI / 60 / 600) % (2 * Math.PI);
+    if (
+      before == null ||
+      !Number.isFinite(before) ||
+      previousReading?.quality !== "VALID"
+    )
+      return null;
+    const dt =
+      (Date.parse(frame.timestamp) - Date.parse(previous.timestamp)) / 1000;
+    angle =
+      (angle + (((rpm + before) / 2) * dt * 2 * Math.PI) / 60 / 600) %
+      (2 * Math.PI);
     return angle;
   });
 }

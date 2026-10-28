@@ -1,0 +1,855 @@
+{
+  "source": "Actual unedited Chromium screenshots; no generated concepts",
+  "final_candidate_count": 101,
+  "exploratory_count": 5,
+  "images": [
+    {
+      "path": "evidence/acceptance/1366/observed-ready.png",
+      "width": 1366,
+      "height": 2243,
+      "bytes": 349967,
+      "sha256": "e997e71bf54b522938e7a5365ecb6013e07e454ebbd4f211e6235ad98f65cb74",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1366/one-test-resumed.png",
+      "width": 1366,
+      "height": 3472,
+      "bytes": 418558,
+      "sha256": "85c15fc34ea0283487a001b646c51e980c119b6c3f9c98b5430c97f7c188ada8",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1366/report-ready.png",
+      "width": 1366,
+      "height": 4407,
+      "bytes": 569741,
+      "sha256": "310e3687c9e9365efa3bdac5d2f050335a2a608613192bf067075237d1ea939e",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1366/terminal-explained.png",
+      "width": 1366,
+      "height": 2640,
+      "bytes": 333766,
+      "sha256": "73af5c86659ddbcf60807c6492ce176495848796f014eabf7382ad03e9c37bde",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1366/unavailable-backend-preserves-report.png",
+      "width": 1366,
+      "height": 3399,
+      "bytes": 414423,
+      "sha256": "3308373823400774a103a842245a034fec5903d2ad3da6c025046f44c0a238cb",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/browser-restart-restored.png",
+      "width": 1440,
+      "height": 3851,
+      "bytes": 523214,
+      "sha256": "1ba69d9729bc0d9cfa90c18f54f4e91555376f2e81b4c54ead56d202e99dc272",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/observed-ready.png",
+      "width": 1440,
+      "height": 2363,
+      "bytes": 385872,
+      "sha256": "246ece441d7e4fb300ab46ac97bd29d4e99a005da84222ff35317d7bed000334",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/one-test-resumed.png",
+      "width": 1440,
+      "height": 3472,
+      "bytes": 431007,
+      "sha256": "94c244987a8c8dce9772e8a437a9c12e05ec7912d3d39e024c3fa690a242dfcb",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/report-ready.png",
+      "width": 1440,
+      "height": 4244,
+      "bytes": 572408,
+      "sha256": "d5ddb902f403a4d2e35488149fbfaa55c862e8473bffea4a08d554c4667354c1",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/terminal-explained.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 336106,
+      "sha256": "8b3c6d88721eb6129c73cc7a1912b571e9e1f15294df3630b3944b136f4ecfaa",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/1440/unavailable-backend-preserves-report.png",
+      "width": 1440,
+      "height": 3286,
+      "bytes": 423666,
+      "sha256": "af3b9e982df217cf8f743ad1e16ef4b7665c5e8e43433970c5830b66ae31fe57",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/390/observed-ready.png",
+      "width": 390,
+      "height": 4298,
+      "bytes": 299639,
+      "sha256": "39331616ecef22a9f6ac7d4f8e6d8931f26de2225f795a85713cd76e03797f81",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/390/one-test-resumed.png",
+      "width": 390,
+      "height": 5447,
+      "bytes": 401695,
+      "sha256": "84a7b4f6f4f498a710a8489df9edf5838d67b8be09c6af5ca4f34935ba695a22",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/390/report-ready.png",
+      "width": 390,
+      "height": 7257,
+      "bytes": 558009,
+      "sha256": "eb836327b478f9500085b2e2566a8dbab59ae67a4f87edd3ab6cb625a6746168",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/390/terminal-explained.png",
+      "width": 390,
+      "height": 4437,
+      "bytes": 331699,
+      "sha256": "ead0ca216e13744a9d2c38d85a1eb1f8051bca6d415314e9585ced56d69d3341",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/390/unavailable-backend-preserves-report.png",
+      "width": 390,
+      "height": 5415,
+      "bytes": 406253,
+      "sha256": "d70ceee646a11acd4b00d1514c7728a010ee8f74bf9dbf5d86231a980a5e88db",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/missing-import-explicit.png",
+      "width": 768,
+      "height": 2390,
+      "bytes": 230951,
+      "sha256": "6b973b6097179f80e776cc0acfe57c70e22efc3e238150bddfda69d19aea6f66",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/observed-ready.png",
+      "width": 768,
+      "height": 4012,
+      "bytes": 427783,
+      "sha256": "a8c3f746bce982f7a8c6feeb47068ebf79976547e84e0233a582259f5c7d919c",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/one-test-resumed.png",
+      "width": 768,
+      "height": 3821,
+      "bytes": 409047,
+      "sha256": "2737c5be6641a34ff58acfceeaee1c7487fb9282fc7c27fd11d717ffb10fc174",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/report-ready.png",
+      "width": 768,
+      "height": 5046,
+      "bytes": 558859,
+      "sha256": "3743535e22daa0ead4f5c5877d6a31b359316e995f70464dd0bc3ed7710fc8a9",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/terminal-explained.png",
+      "width": 768,
+      "height": 3821,
+      "bytes": 409047,
+      "sha256": "2737c5be6641a34ff58acfceeaee1c7487fb9282fc7c27fd11d717ffb10fc174",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/acceptance/768/unavailable-backend-preserves-report.png",
+      "width": 768,
+      "height": 3920,
+      "bytes": 422449,
+      "sha256": "b51cf98a5f72ec40c262dd6c68ada9a2262b34e3f0cf978ac0826eaa2572e2b4",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/exploratory/quota-restart/failure.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 40731,
+      "sha256": "359cae67dabdba8480bbb729a51cd75e2723af0c953f00989fa834cd84e3d4f9",
+      "final_acceptance": false
+    },
+    {
+      "path": "evidence/exploratory/quota-restart/observed-ready.png",
+      "width": 1440,
+      "height": 2363,
+      "bytes": 385872,
+      "sha256": "246ece441d7e4fb300ab46ac97bd29d4e99a005da84222ff35317d7bed000334",
+      "final_acceptance": false
+    },
+    {
+      "path": "evidence/exploratory/quota-restart/one-test-resumed.png",
+      "width": 1440,
+      "height": 3472,
+      "bytes": 431007,
+      "sha256": "94c244987a8c8dce9772e8a437a9c12e05ec7912d3d39e024c3fa690a242dfcb",
+      "final_acceptance": false
+    },
+    {
+      "path": "evidence/exploratory/quota-restart/report-ready.png",
+      "width": 1440,
+      "height": 4244,
+      "bytes": 572408,
+      "sha256": "d5ddb902f403a4d2e35488149fbfaa55c862e8473bffea4a08d554c4667354c1",
+      "final_acceptance": false
+    },
+    {
+      "path": "evidence/exploratory/quota-restart/terminal-explained.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 336106,
+      "sha256": "8b3c6d88721eb6129c73cc7a1912b571e9e1f15294df3630b3944b136f4ecfaa",
+      "final_acceptance": false
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-1024.png",
+      "width": 1024,
+      "height": 2521,
+      "bytes": 369401,
+      "sha256": "527dfe276ee3919ab96a63fe0c59ed461ec119785431b507506e9e69aa400f84",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-1920.png",
+      "width": 1920,
+      "height": 2500,
+      "bytes": 423450,
+      "sha256": "db126825144aa53e809e4254eb78c24c2951b64e487dc3a9a6b30f5df1c2efa3",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-320.png",
+      "width": 320,
+      "height": 5192,
+      "bytes": 324168,
+      "sha256": "5ac62dff528c75a5bb3feb9db3a4aedb32d596d30a14953b7338e2e40dac25a6",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/layout/screenshots/layout-768.png",
+      "width": 768,
+      "height": 3727,
+      "bytes": 382537,
+      "sha256": "df410c0d8859340a6a5307a1eae09d3a8e498327d9acd2687762f7ffa93f0a83",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library/screenshots/laptop-library-machine.png",
+      "width": 1366,
+      "height": 2222,
+      "bytes": 290420,
+      "sha256": "e567360828410a91a4490536649cdd744bca56564c2e1f069cd7864f5deb7036",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library/screenshots/laptop-library-report.png",
+      "width": 1366,
+      "height": 1679,
+      "bytes": 223761,
+      "sha256": "52ac2b56def8826d18cb582f04fcee6e736cdafc32680c9da61c7ce638f38599",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library/screenshots/laptop-restored-after-server-loss.png",
+      "width": 1366,
+      "height": 2273,
+      "bytes": 307380,
+      "sha256": "5d3b862f10dd3902621ec8c6b00cfa296b50652c5e3fe694fb36a33591b4d6bf",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-Possible-causes.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 161836,
+      "sha256": "699bdd480ef851e9f870931daae8919f0170f400377334bcde1ef00de2c4de94",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 207042,
+      "sha256": "b37eb75130ffc856b4cebaf11aa28710c4e96c3ffb544953c7b27402e9e86b4f",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-Results.png",
+      "width": 1440,
+      "height": 1592,
+      "bytes": 191733,
+      "sha256": "470fe97da1c23c5251ebc0cd4ed38b656fcac1d5a0b27ec64810bb198c5cb724",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-Tests.png",
+      "width": 1440,
+      "height": 1773,
+      "bytes": 200042,
+      "sha256": "486e5b4f544a78688a8355d4872c9d2378a6aa1206e9c2d4e54414d9ca8add9d",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-equipment.png",
+      "width": 1440,
+      "height": 1788,
+      "bytes": 213323,
+      "sha256": "7588f6e793dfa1acf5d95a254fb284dd1db39dfcac6274acf218f4bce2d9ca3e",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-evidence.png",
+      "width": 1440,
+      "height": 1368,
+      "bytes": 158055,
+      "sha256": "8b3645754b4a832343759094818dffb1fdd3bf101c74202e96ea5129d00def24",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/confounded/screenshots/confounded-overview.png",
+      "width": 1440,
+      "height": 2250,
+      "bytes": 297286,
+      "sha256": "f3c0e74f5854563ea03fb0cb861baf1e59807b38cfb25d4a0ee67aab5253542a",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-Possible-causes.png",
+      "width": 1440,
+      "height": 1107,
+      "bytes": 122149,
+      "sha256": "79a3d25a8667face26241c811515e71b9f9a04af20c6ea2e255d4221f210a3ba",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 208622,
+      "sha256": "6bd5206e0dba6aae92c19e8367c21f4de94172688b32788f5e8259e9c35b38c5",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-Results.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 184001,
+      "sha256": "1aa8660fdad044e2a878801db13e0afbe585071c782e35c3101036332d8c532f",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-Tests.png",
+      "width": 1440,
+      "height": 1387,
+      "bytes": 181145,
+      "sha256": "6f5885fa1ca21be849d708bce0d722dd9daa17ee30e106d5ec344045780afbc6",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-equipment.png",
+      "width": 1440,
+      "height": 1660,
+      "bytes": 192668,
+      "sha256": "028ce86d940f2c8f22b412e3831e2e60969e0ce66223288f23ed571d7b996bc8",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-evidence.png",
+      "width": 1440,
+      "height": 1368,
+      "bytes": 154432,
+      "sha256": "37a81c72b88ff50d903255a14b872140b548918700f6d074ce48224761e7bde9",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/insufficient/screenshots/insufficient-overview.png",
+      "width": 1440,
+      "height": 2418,
+      "bytes": 310904,
+      "sha256": "c56bea6bc0c01b211ed81fa64736869d7d8b1e6c5beb9d71d94e026eab892244",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Possible-causes.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 169489,
+      "sha256": "ecf99474b14f7296dc13b8ca9e5d4b1c0d0e42d3a503206b55e7752f4bbcfb4d",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 210814,
+      "sha256": "f7fd42e6f9e3bdeeb247aede5f211c1e7c1a40e32c9461e02b2ab75e96fa8dbe",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Results.png",
+      "width": 1440,
+      "height": 1619,
+      "bytes": 198725,
+      "sha256": "41353a1e9174bddf518d691f0fbff630900913eb0006322b3a62b8c2fd46705b",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-Tests.png",
+      "width": 1440,
+      "height": 1567,
+      "bytes": 191427,
+      "sha256": "c1457ac00ecdd668c33b85e278bee9cb71cc848a52ea3266a4ba7e9ecbbf63d0",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-equipment.png",
+      "width": 1440,
+      "height": 1737,
+      "bytes": 209308,
+      "sha256": "77c10f601ec600a501a50886f51cb0b0b0d12383d3db2fc9b51dfc378c350554",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-evidence.png",
+      "width": 1440,
+      "height": 1368,
+      "bytes": 173195,
+      "sha256": "f542d66801e4a7380bc70d3dc1cfc59d0a105357e507f2a6f47344c78487deac",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/misleading_sensor/screenshots/misleading_sensor-overview.png",
+      "width": 1440,
+      "height": 2224,
+      "bytes": 294409,
+      "sha256": "e1e763638b3f0889d04ba330b020c198406e7bf684270163fdc40a11d05ccf6d",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Possible-causes.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 169650,
+      "sha256": "8d760c1caf23b00d9c0c62d4d8ae313e965eb2a3ba9ffe8af193ca4c147377d1",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 207930,
+      "sha256": "eca3189fcb1ce4e49bbe5a6c4d1754d65e89534c3f6e1d369eacf88fedd42a04",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Results.png",
+      "width": 1440,
+      "height": 1581,
+      "bytes": 191998,
+      "sha256": "96405e450edfb0bf466d021e9707075a7181e54354e6d745db6455179238be18",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-Tests.png",
+      "width": 1440,
+      "height": 1567,
+      "bytes": 187845,
+      "sha256": "132a056ffc8ab612fdcd6d6c8aaca9f191b8f95481d2d859592a472eabc486c0",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-equipment.png",
+      "width": 1440,
+      "height": 1712,
+      "bytes": 201914,
+      "sha256": "0920ffe44435ad97adb6e65b13fb60fcb49886b06bbdb63948c2718cc7da8973",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-evidence.png",
+      "width": 1440,
+      "height": 1368,
+      "bytes": 171634,
+      "sha256": "1d2b8283598c0b7763d91e76dff72c0bdc65bfec016830efb56df863e04adbcb",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/noisy_multifault/screenshots/noisy_multifault-overview.png",
+      "width": 1440,
+      "height": 2250,
+      "bytes": 296182,
+      "sha256": "8855603055a9d331e4f48ac7015f322b8fac82d49d7a8cbbedff996f2fd6252b",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-Possible-causes.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 169099,
+      "sha256": "63a94e3be060a62a0a193d7c58213c08d916bc869cad0dbab79f0d1555a157c6",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 210480,
+      "sha256": "4717a3b9839527750ded92d72af673d5d691d0cbad7708379ec2a4186c982a06",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-Results.png",
+      "width": 1440,
+      "height": 1581,
+      "bytes": 195265,
+      "sha256": "9c8b6660e3eed7fe1a09454dc7b369020ba8820ca275118d20111ae996e84ba3",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-Tests.png",
+      "width": 1440,
+      "height": 1464,
+      "bytes": 183937,
+      "sha256": "ca5aa99fc87df048925d015a1406a5e1243b60233f4c59e9c8e25244194f6bdb",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-equipment.png",
+      "width": 1440,
+      "height": 1686,
+      "bytes": 199269,
+      "sha256": "136f7e72976717d0503c2c36eed275ba2b581ea458b08796d2f87afe55d241f2",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-evidence.png",
+      "width": 1440,
+      "height": 1368,
+      "bytes": 174080,
+      "sha256": "9dd8b402b21e8353ff0f0fcbcd05573a321a0cd2a1687362021fb016b51c5b49",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/normal/screenshots/normal-overview.png",
+      "width": 1440,
+      "height": 2224,
+      "bytes": 293544,
+      "sha256": "22c3f81fb5734dc2bb46adfa7b713fd5de4436aed3554042e522a3fa1baaa8d7",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-Possible-causes.png",
+      "width": 1440,
+      "height": 1361,
+      "bytes": 169970,
+      "sha256": "ca1bc6b838f4c9dfb52b1bbb0372034aa02dc38e4686abb26b73c1f410dcf239",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-Report.png",
+      "width": 1440,
+      "height": 1630,
+      "bytes": 211766,
+      "sha256": "86645bb9018367d6c17944900ca0e2f4703198b5f73589d06a6977a4eff6af6f",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-Results.png",
+      "width": 1440,
+      "height": 1581,
+      "bytes": 195063,
+      "sha256": "5fab9094d41b0d7ed2e97b59b85000899383ee700ac812a87270bf910b197baf",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-Tests.png",
+      "width": 1440,
+      "height": 1567,
+      "bytes": 190487,
+      "sha256": "fd1741b760bc69ee06cf3ea83785da300b2277147c66f632f2c073be550b3fba",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-equipment.png",
+      "width": 1440,
+      "height": 1712,
+      "bytes": 203267,
+      "sha256": "150cd23f7c86c673f114f30756fc7a893fe3fec061c932c03d351f616c8ab10a",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-evidence.png",
+      "width": 1440,
+      "height": 1393,
+      "bytes": 170019,
+      "sha256": "7febfd16de2e22ae5db2b1815e63e0cfcbcab81f9f8000c52f1a79f5016f7caf",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/temperature_response/screenshots/temperature_response-overview.png",
+      "width": 1440,
+      "height": 2224,
+      "bytes": 295628,
+      "sha256": "b1a9b83a6df316fe931ec3ca5644a4410587082fefd1e90f639bfba0c0516d37",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-Possible-causes.png",
+      "width": 390,
+      "height": 1991,
+      "bytes": 123595,
+      "sha256": "70d82070b200f1975fdbf108b19b985ed0b962157292d8c8cf526efe075ec49e",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-Report.png",
+      "width": 390,
+      "height": 2606,
+      "bytes": 175763,
+      "sha256": "f6ca270f15e29584763cb55e29acc9a44fd57570b8618f9e67d43ec411faa4dc",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-Results.png",
+      "width": 390,
+      "height": 2460,
+      "bytes": 156708,
+      "sha256": "24d7e5aaab36b385485a0a917b3f21d95a9b11a520f4d77dfb71b4b50608d679",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-Tests.png",
+      "width": 390,
+      "height": 2404,
+      "bytes": 156287,
+      "sha256": "b9b2bc2dfab0cc252f9a2ce7cbc77ae693b8ad4c5f343ada73738e5fd9500bb1",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-equipment.png",
+      "width": 390,
+      "height": 2219,
+      "bytes": 147145,
+      "sha256": "df9fdcd30a232fbcf61a91d7842e70606ec03342a5f21e5b947736089044627f",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-evidence.png",
+      "width": 390,
+      "height": 1882,
+      "bytes": 117299,
+      "sha256": "73137fc2f1005d477b54bcdcb7a7506b8d896c02d17de0c7b924e56ade137caa",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/library-cases/vibration_response/screenshots/vibration_response-overview.png",
+      "width": 390,
+      "height": 2891,
+      "bytes": 208942,
+      "sha256": "ad429b274bc6dc8f24064c6d53ef187c7529dcb2a1f5ba9ba6f7a06ecb9eedce",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-320.png",
+      "width": 320,
+      "height": 5065,
+      "bytes": 334095,
+      "sha256": "d78cd8308f9c3c749bb90e7c792ba0c2adde728708dcc5b38ca4d0ad2c3ff6b7",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-375.png",
+      "width": 375,
+      "height": 4726,
+      "bytes": 347550,
+      "sha256": "6952820d548bec3d2984dcaaeb8e977de86afc316a8d5c6394e9ebd04c273e7d",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/lifecycle/screenshots/workstation-430.png",
+      "width": 430,
+      "height": 4347,
+      "bytes": 350440,
+      "sha256": "896b2e42d2a80fbb64ea8de6fe7d5c925421a7c072b0055349eb83ea71054fb1",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/bearing/screenshots/bearing-machine.png",
+      "width": 1440,
+      "height": 2654,
+      "bytes": 435261,
+      "sha256": "9d252c53c29497de5c00c2a0ec88600e535de45bcea37ea47f11de177a6fa580",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/bearing/screenshots/bearing-verification.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 336106,
+      "sha256": "8b3c6d88721eb6129c73cc7a1912b571e9e1f15294df3630b3944b136f4ecfaa",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/cavitation/screenshots/cavitation-machine.png",
+      "width": 1440,
+      "height": 2536,
+      "bytes": 332142,
+      "sha256": "9a16df890d16aa228d293255dc094bbd97cbc16815155e5f1caacce3749d59f0",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/cavitation/screenshots/cavitation-verification.png",
+      "width": 1440,
+      "height": 2572,
+      "bytes": 334724,
+      "sha256": "fc0c62ec67cb5dbbd9b5dd5547567020f5d56ca5bac86990281652f0bea0be35",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/misalignment/screenshots/misalignment-machine.png",
+      "width": 1440,
+      "height": 2654,
+      "bytes": 439382,
+      "sha256": "25005776264d096bedf9c7a25fa0cbb3f26b1da4f67b85ac9fdf1739fb1833ad",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/misalignment/screenshots/misalignment-verification.png",
+      "width": 1440,
+      "height": 2616,
+      "bytes": 339171,
+      "sha256": "1a6cf35e0eaee0c12c3442dfe1fb7c656bb71588b257adfbc04a70e210b6c394",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/normal/screenshots/normal-machine.png",
+      "width": 1440,
+      "height": 3021,
+      "bytes": 482239,
+      "sha256": "418ddf3407b9e138b2cd305526cb535536e9f1cfbe88beb865f0eea8f8abf3de",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/normal/screenshots/normal-verification.png",
+      "width": 1440,
+      "height": 2484,
+      "bytes": 330309,
+      "sha256": "adb07feec3bd974cbbdfab064d352bd0ff390723a5ff4b897c9cedcee02bc92c",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/pressure_sensor/screenshots/pressure_sensor-machine.png",
+      "width": 390,
+      "height": 4235,
+      "bytes": 310675,
+      "sha256": "b6c5bd5a9d15398515f46c7041664b450eaf0dd93e6a1ba6bdbbee85db646d27",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/pressure_sensor/screenshots/pressure_sensor-verification.png",
+      "width": 390,
+      "height": 4466,
+      "bytes": 336278,
+      "sha256": "fbdf70c9eb0d1505cc0ab40ab59c68f511af6b1df99195714e88b1ef3a932706",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/process/screenshots/process-machine.png",
+      "width": 1440,
+      "height": 2654,
+      "bytes": 438169,
+      "sha256": "447118cafa74bc7179a3b6973e6a8f914250fcaa3c84d0e02f17d63481caf543",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/process/screenshots/process-verification.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 336152,
+      "sha256": "f34302aec7f0cd6661109b2ca44427e4d0d596e172c4066d4096d73fc10d14d0",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/thermal/screenshots/thermal-machine.png",
+      "width": 1440,
+      "height": 2654,
+      "bytes": 416128,
+      "sha256": "b6700b9bbd734fcfc08604cd5a737c3ef9ed4347e213e4787b8f442db39156c8",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/machine/thermal/screenshots/thermal-verification.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 335068,
+      "sha256": "1edf45d159a10d9bf25e8086e6da97765ee3f614157328d4030676a6aab64434",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/model/screenshots/mobile-recorded-fallback.png",
+      "width": 390,
+      "height": 4461,
+      "bytes": 320407,
+      "sha256": "4bb6b1feb9016787568e3686a59d98b7f8a90ceb9138e791a6edcb1f4962216e",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/model/screenshots/mobile-refresh-disabled-model.png",
+      "width": 390,
+      "height": 2560,
+      "bytes": 201483,
+      "sha256": "46153df39d063786825801987dda5580c636a43587e4c4be3080a25121ee74ec",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/model/screenshots/observed-preparation.png",
+      "width": 1440,
+      "height": 3192,
+      "bytes": 412299,
+      "sha256": "5520f7ec8943e50f0bf00bfae364046fcdc57345a70be2dbcb0fb11b01930b0a",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/model/screenshots/recorded-competing-proposals.png",
+      "width": 1440,
+      "height": 2523,
+      "bytes": 317216,
+      "sha256": "6548f67993642539da2a78117940e271f41823a0ba7bc4cafff4ec14bcb823b6",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/model/screenshots/verified-recorded-proposals.png",
+      "width": 1440,
+      "height": 2528,
+      "bytes": 337339,
+      "sha256": "3cf2bd29a9411daa65b6648fff865cca09b02f9835031b3c0f0c0cbf88073742",
+      "final_acceptance": true
+    },
+    {
+      "path": "evidence/portable/restored-portable.png",
+      "width": 1440,
+      "height": 3774,
+      "bytes": 479531,
+      "sha256": "38a8f94d37b1591818163fd1fbf6f558394a0cc2404d8069d9435013df66e7dd",
+      "final_acceptance": true
+    }
+  ]
+}

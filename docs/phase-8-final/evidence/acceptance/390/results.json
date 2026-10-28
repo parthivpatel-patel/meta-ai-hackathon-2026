@@ -1,0 +1,82 @@
+{
+  "width": 390,
+  "scenario": "cavitation",
+  "checks": [
+    {
+      "view": "observed-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "one-test-resumed",
+      "axe_violations": 0
+    },
+    {
+      "recovery": "one-test refresh",
+      "report_hash": "d81843acd9f79feb244b3c257b71ac734ba974b629ad88e44ba24c4c56c7d1a0",
+      "additional_tests": 0
+    },
+    {
+      "view": "terminal-explained",
+      "axe_violations": 0
+    },
+    {
+      "view": "report-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "unavailable-backend-preserves-report",
+      "axe_violations": 0
+    },
+    {
+      "failure": "invalid schema",
+      "preserved": true
+    }
+  ],
+  "timings": [
+    {
+      "action": "initial_controls_ready",
+      "ms": 2099
+    },
+    {
+      "action": "capture",
+      "ms": 202
+    },
+    {
+      "action": "explicit_test_1",
+      "ms": 230
+    },
+    {
+      "action": "explicit_test_2",
+      "ms": 190
+    },
+    {
+      "action": "explicit_test_3",
+      "ms": 230
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "heap_before_bytes": 6475546,
+  "heap_after_bytes": 16899065,
+  "renderer": {
+    "mode": "2D fallback"
+  },
+  "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance",
+  "report_hash": "edd698575aede8f5e2fc43d180f284877d7ce3304e3074d38fd04d5ac8a4bf83",
+  "trials": 3,
+  "status": "INCONCLUSIVE",
+  "post_paths": [
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/report.html",
+    "/api/v4/investigate"
+  ],
+  "genuine_requests": 0
+}

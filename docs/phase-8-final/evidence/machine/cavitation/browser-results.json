@@ -1,0 +1,30 @@
+[
+  {
+    "scenario": "cavitation",
+    "width": 1440,
+    "webgl": false,
+    "initial_ms": 644,
+    "experiment_ui_ms": [
+      132,
+      186,
+      241
+    ],
+    "decision": "INCONCLUSIVE",
+    "findings": [],
+    "telemetry_roundtrip_bytes": 405637,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  }
+]

@@ -57,3 +57,7 @@ The committed backend/evaluation/phase3-results.json records280 new synthetic ca
 ## Final genuine-model pilot
 
 The separate dry-default `forge.submission.model_evaluation` suite uses six predeclared new-seed matched cases, at most five model calls and equal four-test budgets. It requires genuine smoke evidence and separate owner authorization, stops on first failure, records actual usage/latency when supplied, and reports case-level intervals and missing denominators. Only clearly labeled fixtures have executed. See [the protocol](docs/GENUINE_MODEL_EVALUATION.md); no actual-model metrics or industrial accuracy are claimed.
+
+## Phase 8 regression scope
+
+The 1,061 existing fixed synthetic cases and seven offline fixture comparisons are rerun as regression panels, not newly unseen industrial evidence or genuine-model evaluation. [Current validation](docs/phase-8-final/VALIDATION.md) retains selective denominators, uncertainty and replay limitations.

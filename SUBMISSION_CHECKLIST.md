@@ -1,33 +1,28 @@
-# Final submission readiness checklist
+# Final owner-acceptance and submission checklist
 
-Current candidate: `feature/forge-final-engineering`, derived from verified FORGE 4.0 `f5512c05c187733d1a69af86b399bc33175d6d5e`. Internal target October 30, 2026. Public event deadline November 4, 2026 at 9 PM Eastern; confirm the final authenticated guide/form.
+Current candidate: `feature/forge-phase-8-final-completion`, based on `e6b8ab29050f10fe2d3a5d0aade5aca5db685106`. Review the full pushed SHA and exact CI result in the handoff. Internal target: October 30, 2026. Confirm the authenticated official submission requirements/deadline before submitting; this work does not submit.
 
-## Verified engineering evidence
+## Software evidence for review
 
-- [x] Independent FORGE repository; no unrelated project assets or source used.
-- [x] GitHub repository independently verified PUBLIC.
-- [x] FORGE 4.0 interface retained; no cosmetic redesign in this phase.
-- [x] Complete synthetic investigation, independent verifier, missing-evidence handling, reports and offline replay.
-- [x] Existing synthetic benchmarks retained; model proposals do not override numerical findings.
-- [x] Exact event model/endpoint adapter, fixture tests, safe diagnostics and explicit budget/timeout limits.
-- [x] Dry-default matched model evaluation suite, separately authorized after genuine smoke; CI performs fixtures only.
-- [x] Production/test TypeScript isolation fixes the discovered Docker build blocker; actual container CI added.
-- [x] Existing external HTTPS URL and 32 public-boundary checks verified. This is not proof that the final candidate is deployed.
-- [x] Release/rollback procedure, current demo script, recording fallback and submission draft prepared.
+- [x] Independent FORGE repository, verified PUBLIC; original history and protected branches preserved.
+- [x] Coupled pump plus retained multimodal library, coherent navigation, resume, explicit synthetic experiments, independent verification, JSON/HTML and offline replay.
+- [x] Early stopping distinguished from exhaustion/inconclusive outcomes; no forced four-test sequence.
+- [x] Versioned bounded browser recovery, malformed/stale/private-state rejection and independent reproduction.
+- [x] Full backend/frontend, fixed synthetic and fixture regression, actual multi-viewport browser, accessibility, production build and public-container/security evidence prepared.
+- [x] [State matrix](docs/phase-8-final/STATE_TRANSITIONS.md), [review/limitations](docs/phase-8-final/SECURITY_REVIEW.md), [demo sequence](docs/phase-8-final/DEMO_AND_RECORDING.md) and [release/rollback](docs/phase-8-final/RELEASE.md) prepared.
 
-## Gates still open
+## Owner and external gates
 
-- [ ] Owner/organizer resolves the OPEN ELIGIBILITY QUESTION in `docs/ELIGIBILITY_TIMING_REVIEW.md` and confirms which foundation work may be demonstrated. Commit timestamps alone are not an eligibility ruling.
-- [ ] Replacement protected key configured privately; remaining card-free promotional entitlement and enforced spending controls checked.
-- [ ] Fresh explicit authorization for exactly one genuine smoke request.
-- [ ] Actual event model response recorded, schema/identity checked and independently replayed.
-- [ ] Separate bounded model evaluation authorization and genuine results reviewed, with sample sizes and uncertainty.
-- [ ] Applicable model license/Usage Policy and required “Built with Muse Spark Open” attribution reviewed for actual use.
-- [ ] Owner approves exact final commit for manual Render release; final deployed SHA independently recorded.
-- [ ] Final candidate's external browser workflow, exports/replay and phone access checked after deployment.
-- [ ] Truthful three-minute final video recorded with genuine Meta contribution identified as live or recorded as actually shown.
-- [ ] Availability/fallback plan retained through November 18, including exports outside ephemeral host storage. No guaranteed uptime claimed.
-- [ ] Final authenticated rules/form reviewed; exact public branch/commit and video links checked anonymously.
-- [ ] Actual submission completed and confirmation retained.
+- [ ] Accept the exact software candidate and inspect a physical laptop/phone and assistive-technology behavior where practical; emulation/Axe is not certification.
+- [ ] Obtain authoritative guidance for the OPEN pre-kickoff eligibility question. Preserve [timing inventory](docs/eligibility-timing-inventory.json), original Git history and unsent organizer draft. Do not claim approval or disqualification without evidence.
+- [ ] Verify applicable eligible model/license/Usage Policy/attribution and authenticated submission rules. Existing documented model IDs are not proof of account entitlement or actual inference.
+- [ ] Obtain authoritative account-specific credit-only/no-overage protection. No card, paid fallback or gate bypass. A usage dashboard is not required.
+- [ ] Resolve secure private credential readiness and then-current separate authorization for any genuine request. The prior conditional one-attempt allowance is unused and Phase 8 does not reauthorize it. No follow-up/evaluation is implied by a future smoke success.
+- [ ] Retain actual provider/model/schema/provenance evidence before claiming genuine activation; a generic smoke alone does not prove a workstation investigation or industrial diagnostic accuracy. Keep public inference disabled.
+- [ ] Record the actual Render Live artifact/settings and supported rollback before considering the exact-SHA manual release. No branch/settings/paid-resource changes are authorized by this checklist.
+- [ ] After separately approved owner deployment, verify actual Live SHA, anonymous HTTPS workflows, public restrictions, exports/replay and recovery. Keep external recording/reports through the judge-access period; no guaranteed Free uptime is claimed.
+- [ ] Record the actual 2–3 minute demo, upload it separately, verify judge access anonymously and retain originals. No video/upload is fabricated by this work.
+- [ ] Review truthful [submission copy](docs/phase-8-final/SUBMISSION_PACKAGE.md), exact public SHA, video/demo links and all unresolved limitations against the authenticated form.
+- [ ] Submit manually and retain the confirmation. No automatic submission occurs.
 
-Current state: **engineering release candidate, not a completed eligible-model submission**. See `OWNER_ACTIONS.md`, `docs/FINAL_REQUIREMENTS_MATRIX.md` and `SUBMISSION_PACKAGE.md`. No real inference, live update, payment-method request or submission occurred.
+The software candidate does not complete genuine Meta activation, deployment or hackathon submission. Those milestones require their own evidence and authorization.

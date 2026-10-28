@@ -7,3 +7,6 @@ docs/final-experience/evidence/checks/docker-build.txt -whitespace
 
 # Preserve the repair production-build transcript without altering raw evidence.
 docs/investigation-resume/evidence/checks/docker-build.txt -whitespace
+
+# Preserve raw Phase 8 BuildKit evidence without rewriting timestamped blank lines.
+docs/phase-8-final/evidence/checks/docker-final-build.txt -whitespace

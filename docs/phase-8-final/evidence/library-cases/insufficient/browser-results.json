@@ -1,0 +1,52 @@
+[
+  {
+    "case": "insufficient",
+    "width": 1440,
+    "initial_load_ms": 221,
+    "initialization_ms": 86,
+    "steps": [],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 61
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 60
+      }
+    ],
+    "decision": "ABSTAIN",
+    "findings": [],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  }
+]

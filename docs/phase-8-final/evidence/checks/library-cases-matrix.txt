@@ -1,0 +1,21 @@
+All selected local Phase 7 containers ready
+Library case passed: misleading_sensor
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: temperature_response
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: vibration_response
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: insufficient
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: noisy_multifault
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: normal
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Library case passed: confounded
+Removed selected owned final-image test containers only

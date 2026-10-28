@@ -1,0 +1,75 @@
+[
+  {
+    "case": "temperature_response",
+    "width": 1440,
+    "initial_load_ms": 242,
+    "initialization_ms": 74,
+    "steps": [
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 65
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 63
+      },
+      {
+        "status": "HYPOTHESES_READY",
+        "elapsed_ms": 67
+      },
+      {
+        "status": "EXPERIMENT_SELECTED",
+        "elapsed_ms": 56
+      },
+      {
+        "status": "COMPLETE",
+        "elapsed_ms": 78
+      }
+    ],
+    "downloads": [
+      {
+        "format": "json",
+        "elapsed_ms": 67
+      },
+      {
+        "format": "html",
+        "elapsed_ms": 95
+      }
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-temperature"
+    ],
+    "refresh_and_restart_isolation": true,
+    "axe": [
+      {
+        "stage": "overview",
+        "violations": []
+      },
+      {
+        "stage": "evidence",
+        "violations": []
+      },
+      {
+        "stage": "Possible-causes",
+        "violations": []
+      },
+      {
+        "stage": "Tests",
+        "violations": []
+      },
+      {
+        "stage": "Results",
+        "violations": []
+      },
+      {
+        "stage": "Report",
+        "violations": []
+      },
+      {
+        "stage": "equipment",
+        "violations": []
+      }
+    ]
+  }
+]

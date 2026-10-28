@@ -129,3 +129,7 @@ Based on exact Phase 6 `17ea7507814960a4f181d45a3cacaddd38e43f7c`, branch `featu
 ## October 28, 2026 — investigation capture/resume repair
 
 Separated existing-report navigation from new evidence capture in the component inspector. Counterfactual capture remains prohibited; returning to observation preserves the active report and tests. Added regression and actual before/after production-browser evidence. See [repair handoff](docs/investigation-resume/README.md). No deployment, merge, paid resources or genuine model calls.
+
+## October 28, 2026 — America/New_York — Phase 8 final completion
+
+Based on exact resume-fix `e6b8ab29050f10fe2d3a5d0aade5aca5db685106`. Explained legitimate early stopping, preserved numerical/report contracts, corrected counterfactual/imported instrumentation labels and constant/missing plots, hardened delayed restoration/boot/export handling and duplicate/reconnect behavior, and executed the final regression/browser/security matrix. Actual evidence and remaining gates are in [the Phase 8 handoff](docs/phase-8-final/README.md). Zero genuine provider requests, no deployment, merge, submission, paid resources or financial-gate changes.

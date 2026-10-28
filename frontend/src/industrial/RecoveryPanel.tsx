@@ -27,6 +27,8 @@ export function RecoveryPanel({
   const latest = useRef(data);
   latest.current = data;
   const operation = useRef(false);
+  const restoreTarget = useRef(onRestore);
+  restoreTarget.current = onRestore;
   const revision = useRef(0);
   useEffect(() => {
     if (!globalThis.indexedDB) {
@@ -83,20 +85,31 @@ export function RecoveryPanel({
     }, 400);
     return () => clearTimeout(timer);
   }, [checked, blocked, busy, working, data, kind]);
-  async function restore(value: Checkpoint) {
+  async function restore(value: Checkpoint | File) {
     if (operation.current || busy) return;
     operation.current = true;
-    revision.current++;
+    const ticket = ++revision.current;
+    const target = onRestore;
     setWorking(true);
     setError("");
     try {
-      await onRestore(validateCheckpoint(value, kind));
+      let raw: unknown = value;
+      if (value instanceof File) {
+        if (value.size > 1048576) throw Error("Import too large");
+        raw = JSON.parse(await value.text());
+      }
+      // A delayed file read must not attach evidence to a changed workspace.
+      if (ticket !== revision.current || restoreTarget.current !== target)
+        throw Error("Workspace changed");
+      await target(validateCheckpoint(raw, kind));
       setPending(null);
       setBlocked(false);
       setStatus("Checkpoint independently reproduced; playback paused");
     } catch {
       setError(
-        "Checkpoint restoration failed validation or the server is unavailable. Current evidence is preserved. No new experiment or model request was authorized.",
+        value instanceof File
+          ? "Recovery import rejected: incompatible, malformed, private, oversized or stale data, or the server is unavailable. Current evidence is preserved; retry in the intended case."
+          : "Checkpoint restoration failed validation or the server is unavailable. Current evidence is preserved. No new experiment or model request was authorized.",
       );
     } finally {
       operation.current = false;
@@ -115,7 +128,7 @@ export function RecoveryPanel({
       setStatus("Checkpoint saved on this browser");
     } catch {
       setError(
-        "Checkpoint save failed. No private credentials or receipts may be stored; export validated public evidence instead.",
+        "Checkpoint save failed; browser storage may be full or unavailable. Export validated public evidence instead. Private credentials and receipts cannot be saved.",
       );
     } finally {
       operation.current = false;
@@ -184,28 +197,20 @@ export function RecoveryPanel({
             type="file"
             accept=".json"
             disabled={busy || working}
-            onChange={async (e) => {
+            onChange={(e) => {
               const f = e.target.files?.[0];
               e.target.value = "";
-              if (!f) return;
-              try {
-                if (f.size > 1048576) throw Error();
-                const value = validateCheckpoint(
-                  JSON.parse(await f.text()),
-                  kind,
-                );
-                await restore(value);
-              } catch {
-                setError(
-                  "Recovery import rejected: incompatible, malformed, private or oversized data.",
-                );
-              }
+              if (f) void restore(f);
             }}
           />
         </label>
         <button
           disabled={busy || working}
           onClick={() => {
+            if (operation.current || busy) return;
+            operation.current = true;
+            revision.current++;
+            setWorking(true);
             void deleteCheckpoint(kind)
               .then(() => {
                 setPending(null);
@@ -214,8 +219,14 @@ export function RecoveryPanel({
                 setStatus("Checkpoint cleared; new changes can be saved");
               })
               .catch(() =>
-                setError("Browser checkpoint could not be cleared."),
-              );
+                setError(
+                  "Browser checkpoint could not be cleared; export a copy before leaving.",
+                ),
+              )
+              .finally(() => {
+                operation.current = false;
+                setWorking(false);
+              });
           }}
         >
           Discard saved checkpoint

@@ -93,7 +93,7 @@ function setup() {
       );
     throw Error("Unexpected route");
   });
-  render(<Workstation />);
+  return render(<Workstation />);
 }
 const inspect = () =>
   within(document.querySelector(".component-inspector") as HTMLElement);
@@ -309,4 +309,84 @@ it("allows navigation to an existing report while an experiment is pending witho
       screen.getByRole("button", { name: "Run proposed simulated test" }),
     ).toBeEnabled(),
   );
+});
+
+it("keeps the investigation available when browser report downloads are denied", async () => {
+  const inspector = await reproduce();
+  const descriptor = Object.getOwnPropertyDescriptor(URL, "createObjectURL");
+  Object.defineProperty(URL, "createObjectURL", {
+    configurable: true,
+    value: () => {
+      throw Error("browser denied download");
+    },
+  });
+  try {
+    fireEvent.click(
+      inspector.getByRole("button", { name: "Resume existing investigation" }),
+    );
+    fireEvent.click(
+      screen.getByRole("button", { name: "Export investigation JSON" }),
+    );
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "Download unavailable",
+    );
+    await assertPreserved();
+  } finally {
+    if (descriptor) Object.defineProperty(URL, "createObjectURL", descriptor);
+    else
+      delete (URL as unknown as { createObjectURL?: unknown }).createObjectURL;
+  }
+});
+it("discards a late HTML export after another case has replaced its request controller", async () => {
+  const view = setup();
+  await screen.findByRole("heading", { name: "Pump and motor assembly" });
+  fireEvent.click(
+    screen.getByRole("button", { name: "Focus scenario window" }),
+  );
+  fireEvent.change(
+    screen.getByLabelText("Machine component", { exact: true }),
+    { target: { value: "bearing" } },
+  );
+  fireEvent.click(
+    screen.getByRole("button", { name: "Capture observation window" }),
+  );
+  await screen.findByText(/Captured from/);
+  let finish!: (value: Response) => void;
+  vi.mocked(boundedFetch).mockImplementationOnce(
+    () =>
+      new Promise((resolve) => {
+        finish = resolve;
+      }),
+  );
+  fireEvent.click(
+    screen.getByRole("button", { name: "Export investigation HTML" }),
+  );
+  view.rerender(
+    <Workstation caseRequest={{ scenario: "thermal", sequence: 1 }} />,
+  );
+  await waitFor(() =>
+    expect(screen.getByLabelText("Machine scenario")).toHaveValue("thermal"),
+  );
+  const descriptor = Object.getOwnPropertyDescriptor(URL, "createObjectURL"),
+    create = vi.fn();
+  Object.defineProperty(URL, "createObjectURL", {
+    value: create,
+    configurable: true,
+  });
+  try {
+    finish(new Response("<html>old case</html>"));
+    await waitFor(() =>
+      expect(
+        screen.getByRole("button", { name: "Focus scenario window" }),
+      ).toBeEnabled(),
+    );
+    expect(create).not.toHaveBeenCalled();
+    expect(
+      screen.queryByRole("button", { name: "Resume existing investigation" }),
+    ).not.toBeInTheDocument();
+  } finally {
+    if (descriptor) Object.defineProperty(URL, "createObjectURL", descriptor);
+    else
+      delete (URL as unknown as { createObjectURL?: unknown }).createObjectURL;
+  }
 });

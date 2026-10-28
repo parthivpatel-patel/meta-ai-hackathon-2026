@@ -1,0 +1,36 @@
+[
+  {
+    "scenario": "process",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 1237,
+    "experiment_ui_ms": [
+      174,
+      213
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-pressure"
+    ],
+    "telemetry_roundtrip_bytes": 405630,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "57",
+        "triangles": "19138"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  }
+]

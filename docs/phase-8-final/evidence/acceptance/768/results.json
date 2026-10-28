@@ -1,0 +1,72 @@
+{
+  "width": 768,
+  "scenario": "normal",
+  "checks": [
+    {
+      "view": "observed-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "one-test-resumed",
+      "axe_violations": 0
+    },
+    {
+      "view": "terminal-explained",
+      "axe_violations": 0
+    },
+    {
+      "view": "report-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "unavailable-backend-preserves-report",
+      "axe_violations": 0
+    },
+    {
+      "failure": "invalid schema",
+      "preserved": true
+    },
+    {
+      "view": "missing-import-explicit",
+      "axe_violations": 0
+    }
+  ],
+  "timings": [
+    {
+      "action": "initial_controls_ready",
+      "ms": 1368
+    },
+    {
+      "action": "capture",
+      "ms": 220
+    },
+    {
+      "action": "explicit_test_1",
+      "ms": 133
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "heap_before_bytes": 9677421,
+  "heap_after_bytes": 48460668,
+  "renderer": {
+    "engine": "three.js r180",
+    "renderCount": "14",
+    "drawCalls": "57",
+    "triangles": "19138",
+    "rotorPhase": "0",
+    "reducedMotion": "true"
+  },
+  "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance",
+  "report_hash": "9e0ff8006e8b7dbae748a97bfbd24645a33bc6c7e71fdea6e729011e15bd4a0e",
+  "trials": 1,
+  "status": "SUPPORTED_SYNTHETIC",
+  "post_paths": [
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/report.html",
+    "/api/v4/investigate"
+  ],
+  "genuine_requests": 0
+}

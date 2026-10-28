@@ -1,0 +1,35 @@
+{
+  "ready_for_explicit_execution": false,
+  "blockers": [
+    "separate_owner_authorization_required",
+    "approved_credits_unconfirmed",
+    "provider_enforced_spending_limit_unconfirmed",
+    "card_free_entitlement_unconfirmed",
+    "inference_or_free_entitlement_disabled",
+    "credential_missing",
+    "request_budget_must_match_predeclared_cases",
+    "private_genuine_smoke_receipt_required"
+  ],
+  "mode": "dry_run",
+  "model_id": "meta-models/muse-spark-open-1026",
+  "endpoint": "https://inference.baseten.co/v1/chat/completions",
+  "planned_cases": 6,
+  "maximum_requests": 5,
+  "max_output_tokens": 1024,
+  "reserved_accounting_budget": 32768,
+  "attempt_deadline_seconds": 15.0,
+  "total_request_deadline_seconds": 30.0,
+  "native_thermal": false,
+  "retry_limit": 0,
+  "max_experiments_per_arm": 4,
+  "cases": [
+    "normal",
+    "pressure_and_sensor",
+    "noisy_pair",
+    "sensor_drift",
+    "confounded",
+    "missing75"
+  ],
+  "network_requests_sent": 0,
+  "warning": "Local reservations are not billing caps. Verify promotional balance and no paid fallback in the provider account before authorization."
+}

@@ -1,0 +1,9 @@
+All selected local Phase 7 containers ready
+Core acceptance passed 1366
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Core acceptance passed 768
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Core acceptance passed 390
+Removed selected owned final-image test containers only

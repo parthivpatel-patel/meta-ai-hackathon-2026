@@ -12,7 +12,13 @@ const instruments = [
   ["vibration", "Vibration", "mm/s"],
   ["motor_temperature", "Motor temperature", "°C"],
 ] as const;
-export function InstrumentStrip({ frame }: { frame: Frame }) {
+export function InstrumentStrip({
+  frame,
+  mode = "observed",
+}: {
+  frame: Frame;
+  mode?: "observed" | "counterfactual" | "imported";
+}) {
   return (
     <section
       className="instrument-strip"
@@ -29,7 +35,11 @@ export function InstrumentStrip({ frame }: { frame: Frame }) {
             </strong>
             <span>
               {r?.quality === "VALID"
-                ? "Observed synthetic sample"
+                ? mode === "counterfactual"
+                  ? "Counterfactual test sample"
+                  : mode === "imported"
+                    ? "Imported sample; source unverified"
+                    : "Observed synthetic sample"
                 : r?.quality?.replaceAll("_", " ") || "MISSING"}
             </span>
           </div>

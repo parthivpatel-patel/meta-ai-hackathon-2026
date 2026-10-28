@@ -16,6 +16,8 @@ const { execFileSync } = require("node:child_process");
     ],
   });
   const results = [];
+  const journey = process.env.FORGE_FINAL_JOURNEY;
+  if (journey && !["machine", "library", "fixture"].includes(journey)) throw Error("Invalid journey filter");
   async function setup(port, width = 1440, height = 900, fallback = false) {
     const ctx = await browser.newContext({
       viewport: { width, height },
@@ -104,7 +106,7 @@ const { execFileSync } = require("node:child_process");
     }
   }
   try {
-    {
+    if (!journey || journey === "machine") {
       const { ctx, p, errors, external } = await setup(8071);
       await p.getByLabel("Machine component", { exact: true }).waitFor();
       await p.getByRole("button", { name: "Cases", exact: true }).click();
@@ -205,7 +207,7 @@ const { execFileSync } = require("node:child_process");
       });
       await ctx.close();
     }
-    {
+    if (!journey || journey === "library") {
       const { ctx, p, errors, external } = await setup(8072, 1366, 768);
       await p.getByLabel("Machine component", { exact: true }).waitFor();
       await p.getByRole("button", { name: "Cases", exact: true }).click();
@@ -338,7 +340,7 @@ const { execFileSync } = require("node:child_process");
       });
       await ctx.close();
     }
-    {
+    if (!journey || journey === "fixture") {
       const { ctx, p, errors, external } = await setup(8073, 390, 844, true);
       await p.getByLabel("Machine component", { exact: true }).waitFor();
       await p.getByRole("button", { name: "Evidence", exact: true }).click();

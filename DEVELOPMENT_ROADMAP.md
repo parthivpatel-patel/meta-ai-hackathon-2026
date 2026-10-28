@@ -48,3 +48,7 @@ By October 27, confirm the card-free Baseten route, event alias and license and 
 ## October 30 completion priorities
 
 October27–28: owner confirms Baseten approval, card-free credits, exact event alias, model license and authenticated rules; run a bounded genuine test only after zero-cost authorization. October29: real-model failure/evaluation matrix, measured latency/cost and truthful demo rehearsal. October30: freeze verified artifacts and record final demonstration. Public hosting remains optional and blocked pending verified no-card terms. No mock/rules output can satisfy the Meta requirement.
+
+## Final owner-acceptance gates
+
+Review the [Phase 8 candidate](docs/phase-8-final/README.md); no new architectural phase is proposed. Remaining milestones are distinct: actual financial/model authorization and evidence, eligibility clarification, owner-approved exact-SHA release/rollback verification, recorded-demo accessibility and manual submission. Software acceptance alone does not complete those milestones.

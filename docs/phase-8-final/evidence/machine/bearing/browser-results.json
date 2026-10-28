@@ -1,0 +1,36 @@
+[
+  {
+    "scenario": "bearing",
+    "width": 1440,
+    "webgl": true,
+    "initial_ms": 1258,
+    "experiment_ui_ms": [
+      136,
+      163
+    ],
+    "decision": "SUPPORTED_SYNTHETIC",
+    "findings": [
+      "process-vibration"
+    ],
+    "telemetry_roundtrip_bytes": 405625,
+    "report_import_verified": true,
+    "tampered_report_rejected": true,
+    "preview_new_capture_disabled": true,
+    "gpu": [
+      {
+        "draw_calls": "57",
+        "triangles": "19138"
+      }
+    ],
+    "checks": [
+      {
+        "view": "machine",
+        "violations": []
+      },
+      {
+        "view": "verification",
+        "violations": []
+      }
+    ]
+  }
+]

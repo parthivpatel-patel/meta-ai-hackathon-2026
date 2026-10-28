@@ -1,0 +1,133 @@
+{
+  "selection_samples": 30,
+  "selection_median_ms": 22.5,
+  "serialization_samples": 100,
+  "serialization_median_ms": 0.10000000894069672,
+  "checkpoint_bytes": 47802,
+  "startup": {
+    "create_to_readiness_ms": 6759.076,
+    "samples": 1,
+    "image": "sha256:99ddd0e957b4e88f3f232cdf5512c36918677590ebb56cb5d55a80108435d7cc",
+    "scope": "Local Docker create plus VFS rootfs copy and HTTP readiness poll, restricted 512 MiB/one CPU; not Render spin-up or production latency"
+  },
+  "lifecycle_heap": {
+    "before_bytes": 6780856,
+    "after_bytes": 8345088,
+    "switch_cycles": 5,
+    "scope": "Finite local samples, not proof against long-term leaks"
+  },
+  "lifecycle_telemetry": {
+    "start_sequence": 0,
+    "end_sequence": 32,
+    "minimum_sample_progress": 16,
+    "paint_sample_count": 1,
+    "scope": "RAF paint samples may coalesce timer ticks; bounded functional progress checked separately, not a cadence/FPS claim"
+  },
+  "browser": [
+    {
+      "width": 1440,
+      "timings": [
+        {
+          "action": "initial_controls_ready",
+          "ms": 1087
+        },
+        {
+          "action": "capture",
+          "ms": 158
+        },
+        {
+          "action": "explicit_test_1",
+          "ms": 167
+        },
+        {
+          "action": "explicit_test_2",
+          "ms": 176
+        }
+      ],
+      "heap_before_bytes": 9286510,
+      "heap_after_bytes": 32729767,
+      "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance"
+    },
+    {
+      "width": 1366,
+      "timings": [
+        {
+          "action": "initial_controls_ready",
+          "ms": 1022
+        },
+        {
+          "action": "capture",
+          "ms": 165
+        },
+        {
+          "action": "explicit_test_1",
+          "ms": 158
+        },
+        {
+          "action": "explicit_test_2",
+          "ms": 188
+        },
+        {
+          "action": "explicit_test_3",
+          "ms": 222
+        },
+        {
+          "action": "explicit_test_4",
+          "ms": 288
+        }
+      ],
+      "heap_before_bytes": 9822261,
+      "heap_after_bytes": 41126083,
+      "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance"
+    },
+    {
+      "width": 768,
+      "timings": [
+        {
+          "action": "initial_controls_ready",
+          "ms": 1368
+        },
+        {
+          "action": "capture",
+          "ms": 220
+        },
+        {
+          "action": "explicit_test_1",
+          "ms": 133
+        }
+      ],
+      "heap_before_bytes": 9677421,
+      "heap_after_bytes": 48460668,
+      "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance"
+    },
+    {
+      "width": 390,
+      "timings": [
+        {
+          "action": "initial_controls_ready",
+          "ms": 2099
+        },
+        {
+          "action": "capture",
+          "ms": 202
+        },
+        {
+          "action": "explicit_test_1",
+          "ms": 230
+        },
+        {
+          "action": "explicit_test_2",
+          "ms": 190
+        },
+        {
+          "action": "explicit_test_3",
+          "ms": 230
+        }
+      ],
+      "heap_before_bytes": 6475546,
+      "heap_after_bytes": 16899065,
+      "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance"
+    }
+  ],
+  "scope": "Local Chromium/software SwiftShader and restricted Docker, emulated viewports/touch; not physical GPU FPS, mobile hardware latency or public Render cold starts"
+}

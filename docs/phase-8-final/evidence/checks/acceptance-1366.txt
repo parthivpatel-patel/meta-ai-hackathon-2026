@@ -1,0 +1,739 @@
+2026-10-28T18:34:50.294Z pw:api => browserType.launchPersistentContext started
+2026-10-28T18:34:50.615Z pw:api <= browserType.launchPersistentContext succeeded
+2026-10-28T18:34:50.616Z pw:api => browserContext.route started
+2026-10-28T18:34:50.618Z pw:api <= browserContext.route succeeded
+2026-10-28T18:34:50.619Z pw:api => page.emulateMedia started
+2026-10-28T18:34:50.627Z pw:api <= page.emulateMedia succeeded
+2026-10-28T18:34:50.628Z pw:api => page.goto started
+2026-10-28T18:34:50.628Z pw:api navigating to "http://127.0.0.1:8088/demo", waiting until "load"
+2026-10-28T18:34:50.645Z pw:api => route.continue started
+2026-10-28T18:34:50.647Z pw:api <= route.continue succeeded
+2026-10-28T18:34:50.681Z pw:api   "commit" event fired
+2026-10-28T18:34:50.681Z pw:api   navigated to "http://127.0.0.1:8088/demo"
+2026-10-28T18:34:50.708Z pw:api => route.continue started
+2026-10-28T18:34:50.709Z pw:api => route.continue started
+2026-10-28T18:34:50.716Z pw:api <= route.continue succeeded
+2026-10-28T18:34:50.716Z pw:api <= route.continue succeeded
+2026-10-28T18:34:50.763Z pw:api   "domcontentloaded" event fired
+2026-10-28T18:34:50.763Z pw:api   "load" event fired
+2026-10-28T18:34:50.764Z pw:api <= page.goto succeeded
+2026-10-28T18:34:50.764Z pw:api => locator.waitFor started
+2026-10-28T18:34:50.765Z pw:api waiting for getByLabel('Machine scenario', { exact: true }) to be visible
+2026-10-28T18:34:50.785Z pw:api => route.continue started
+2026-10-28T18:34:50.786Z pw:api => route.continue started
+2026-10-28T18:34:50.802Z pw:api <= route.continue succeeded
+2026-10-28T18:34:50.807Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.062Z pw:api => route.continue started
+2026-10-28T18:34:51.062Z pw:api => route.continue started
+2026-10-28T18:34:51.063Z pw:api => route.continue started
+2026-10-28T18:34:51.065Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.065Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.065Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.086Z pw:api => route.continue started
+2026-10-28T18:34:51.087Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.185Z pw:api => route.continue started
+2026-10-28T18:34:51.186Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.307Z pw:api   locator resolved to visible <select aria-label="Machine scenario">…</select>
+2026-10-28T18:34:51.308Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:34:51.308Z pw:api => page.evaluate started
+2026-10-28T18:34:51.313Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:51.315Z pw:api => locator.selectOption started
+2026-10-28T18:34:51.315Z pw:api waiting for getByLabel('Machine scenario', { exact: true })
+2026-10-28T18:34:51.320Z pw:api   locator resolved to <select aria-label="Machine scenario">…</select>
+2026-10-28T18:34:51.324Z pw:api attempting select option action
+2026-10-28T18:34:51.324Z pw:api   waiting for element to be visible and enabled
+2026-10-28T18:34:51.335Z pw:api   selected specified option(s)
+2026-10-28T18:34:51.335Z pw:api => route.continue started
+2026-10-28T18:34:51.335Z pw:api <= locator.selectOption succeeded
+2026-10-28T18:34:51.336Z pw:api <= route.continue succeeded
+2026-10-28T18:34:51.595Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:34:51.595Z pw:api => locator.focus started
+2026-10-28T18:34:51.596Z pw:api waiting for getByRole('button', { name: 'Focus scenario window', exact: true })
+2026-10-28T18:34:51.712Z pw:api   locator resolved to <button disabled>Focus scenario window</button>
+2026-10-28T18:34:51.870Z pw:api <= locator.focus succeeded
+2026-10-28T18:34:51.870Z pw:api => keyboard.press started
+2026-10-28T18:34:51.890Z pw:api <= keyboard.press succeeded
+2026-10-28T18:34:51.890Z pw:api => locator.inputValue started
+2026-10-28T18:34:51.890Z pw:api waiting for getByLabel('Machine recording position')
+2026-10-28T18:34:51.898Z pw:api   locator resolved to <input min="0" max="359" value="319" type="range" aria-label="Machine recording position"/>
+2026-10-28T18:34:51.898Z pw:api <= locator.inputValue succeeded
+2026-10-28T18:34:51.899Z pw:api => page.evaluate started
+2026-10-28T18:34:52.061Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.066Z pw:api => page.evaluate started
+2026-10-28T18:34:52.068Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.069Z pw:api => frame.evaluate started
+2026-10-28T18:34:52.080Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:34:52.080Z pw:api => frame.evaluate started
+2026-10-28T18:34:52.097Z pw:api   "networkidle" event fired
+2026-10-28T18:34:52.390Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:34:52.397Z pw:api => browserContext.newPage started
+2026-10-28T18:34:52.465Z pw:api <= browserContext.newPage succeeded
+2026-10-28T18:34:52.465Z pw:api => page.evaluate started
+2026-10-28T18:34:52.648Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.649Z pw:api => page.evaluate started
+2026-10-28T18:34:52.653Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.653Z pw:api => page.evaluate started
+2026-10-28T18:34:52.654Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.657Z pw:api => page.evaluate started
+2026-10-28T18:34:52.668Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.668Z pw:api => page.evaluate started
+2026-10-28T18:34:52.746Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.750Z pw:api => page.close started
+2026-10-28T18:34:52.762Z pw:api <= page.close succeeded
+2026-10-28T18:34:52.763Z pw:api => page.evaluate started
+2026-10-28T18:34:52.767Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:52.767Z pw:api => page.screenshot started
+2026-10-28T18:34:52.768Z pw:api taking page screenshot
+2026-10-28T18:34:52.772Z pw:api waiting for fonts to load...
+2026-10-28T18:34:52.773Z pw:api fonts loaded
+2026-10-28T18:34:53.112Z pw:api <= page.screenshot succeeded
+1366: observed-ready
+2026-10-28T18:34:53.116Z pw:api => locator.click started
+2026-10-28T18:34:53.117Z pw:api waiting for getByRole('button', { name: 'Capture observation window', exact: true })
+2026-10-28T18:34:53.132Z pw:api   locator resolved to <button class="primary-action">Capture observation window</button>
+2026-10-28T18:34:53.133Z pw:api attempting click action
+2026-10-28T18:34:53.133Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.162Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.162Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.163Z pw:api   done scrolling
+2026-10-28T18:34:53.167Z pw:api   performing click action
+2026-10-28T18:34:53.183Z pw:api => route.continue started
+2026-10-28T18:34:53.184Z pw:api <= route.continue succeeded
+2026-10-28T18:34:53.185Z pw:api   click action done
+2026-10-28T18:34:53.185Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.191Z pw:api   navigations have finished
+2026-10-28T18:34:53.191Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.249Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:34:53.249Z pw:api => response.json started
+2026-10-28T18:34:53.280Z pw:api <= response.json succeeded
+2026-10-28T18:34:53.281Z pw:api => locator.click started
+2026-10-28T18:34:53.282Z pw:api waiting for getByRole('button', { name: 'Run proposed simulated test', exact: true })
+2026-10-28T18:34:53.289Z pw:api => route.continue started
+2026-10-28T18:34:53.291Z pw:api <= route.continue succeeded
+2026-10-28T18:34:53.299Z pw:api   locator resolved to <button class="primary-action">Run proposed simulated test</button>
+2026-10-28T18:34:53.304Z pw:api attempting click action
+2026-10-28T18:34:53.304Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.345Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.345Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.346Z pw:api   done scrolling
+2026-10-28T18:34:53.349Z pw:api   performing click action
+2026-10-28T18:34:53.357Z pw:api => route.continue started
+2026-10-28T18:34:53.358Z pw:api <= route.continue succeeded
+2026-10-28T18:34:53.359Z pw:api   click action done
+2026-10-28T18:34:53.359Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.366Z pw:api   navigations have finished
+2026-10-28T18:34:53.366Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.428Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:34:53.428Z pw:api => response.json started
+2026-10-28T18:34:53.439Z pw:api <= response.json succeeded
+2026-10-28T18:34:53.439Z pw:api => locator.click started
+2026-10-28T18:34:53.440Z pw:api waiting for getByRole('button', { name: /inspect machine response/ }).last()
+2026-10-28T18:34:53.451Z pw:api   locator resolved to <button>Check independent reference measurements · More t…</button>
+2026-10-28T18:34:53.452Z pw:api attempting click action
+2026-10-28T18:34:53.452Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.478Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.479Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.479Z pw:api   done scrolling
+2026-10-28T18:34:53.481Z pw:api   performing click action
+2026-10-28T18:34:53.492Z pw:api   click action done
+2026-10-28T18:34:53.492Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.492Z pw:api   navigations have finished
+2026-10-28T18:34:53.493Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.493Z pw:api => locator.waitFor started
+2026-10-28T18:34:53.493Z pw:api waiting for getByText('Counterfactual test result', { exact: true }) to be visible
+2026-10-28T18:34:53.517Z pw:api   locator resolved to visible <span role="status">Counterfactual test result</span>
+2026-10-28T18:34:53.518Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:34:53.518Z pw:api => locator.count started
+2026-10-28T18:34:53.524Z pw:api <= locator.count succeeded
+2026-10-28T18:34:53.524Z pw:api => locator.count started
+2026-10-28T18:34:53.526Z pw:api <= locator.count succeeded
+2026-10-28T18:34:53.526Z pw:api => locator.click started
+2026-10-28T18:34:53.528Z pw:api waiting for locator('.component-inspector').getByRole('button', { name: 'Resume existing investigation', exact: true })
+2026-10-28T18:34:53.533Z pw:api   locator resolved to <button class="primary-action">Resume existing investigation</button>
+2026-10-28T18:34:53.534Z pw:api attempting click action
+2026-10-28T18:34:53.534Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.629Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.629Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.629Z pw:api   done scrolling
+2026-10-28T18:34:53.632Z pw:api   performing click action
+2026-10-28T18:34:53.644Z pw:api => route.continue started
+2026-10-28T18:34:53.645Z pw:api   click action done
+2026-10-28T18:34:53.645Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.645Z pw:api <= route.continue succeeded
+2026-10-28T18:34:53.662Z pw:api   navigations have finished
+2026-10-28T18:34:53.663Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.663Z pw:api => locator.click started
+2026-10-28T18:34:53.663Z pw:api waiting for getByRole('button', { name: 'Machine', exact: true })
+2026-10-28T18:34:53.669Z pw:api   locator resolved to <button>Machine</button>
+2026-10-28T18:34:53.670Z pw:api attempting click action
+2026-10-28T18:34:53.671Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.695Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.696Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.696Z pw:api   done scrolling
+2026-10-28T18:34:53.698Z pw:api   performing click action
+2026-10-28T18:34:53.706Z pw:api   click action done
+2026-10-28T18:34:53.706Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.707Z pw:api   navigations have finished
+2026-10-28T18:34:53.708Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.708Z pw:api => locator.click started
+2026-10-28T18:34:53.708Z pw:api waiting for getByRole('button', { name: 'Return to observed simulation', exact: true })
+2026-10-28T18:34:53.734Z pw:api   locator resolved to <button>Return to observed simulation</button>
+2026-10-28T18:34:53.736Z pw:api attempting click action
+2026-10-28T18:34:53.736Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.802Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.802Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.803Z pw:api   done scrolling
+2026-10-28T18:34:53.805Z pw:api   performing click action
+2026-10-28T18:34:53.821Z pw:api   click action done
+2026-10-28T18:34:53.821Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.826Z pw:api   navigations have finished
+2026-10-28T18:34:53.826Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.827Z pw:api => locator.click started
+2026-10-28T18:34:53.827Z pw:api waiting for getByRole('button', { name: 'Investigation', exact: true })
+2026-10-28T18:34:53.833Z pw:api   locator resolved to <button>Investigation</button>
+2026-10-28T18:34:53.834Z pw:api attempting click action
+2026-10-28T18:34:53.834Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.878Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.878Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.879Z pw:api   done scrolling
+2026-10-28T18:34:53.882Z pw:api   performing click action
+2026-10-28T18:34:53.891Z pw:api => route.continue started
+2026-10-28T18:34:53.892Z pw:api   click action done
+2026-10-28T18:34:53.892Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.892Z pw:api <= route.continue succeeded
+2026-10-28T18:34:53.894Z pw:api   navigations have finished
+2026-10-28T18:34:53.894Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.895Z pw:api => locator.evaluate started
+2026-10-28T18:34:53.895Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Browser recovery' }).locator('..')
+2026-10-28T18:34:53.921Z pw:api   locator resolved to visible <details>…</details>
+2026-10-28T18:34:53.945Z pw:api <= locator.evaluate succeeded
+2026-10-28T18:34:53.945Z pw:api => locator.click started
+2026-10-28T18:34:53.946Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Browser recovery' })
+2026-10-28T18:34:53.949Z pw:api   locator resolved to <summary>Browser recovery · Checkpoint saved on this brows…</summary>
+2026-10-28T18:34:53.949Z pw:api attempting click action
+2026-10-28T18:34:53.950Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:53.979Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:53.979Z pw:api   scrolling into view if needed
+2026-10-28T18:34:53.980Z pw:api   done scrolling
+2026-10-28T18:34:53.982Z pw:api   performing click action
+2026-10-28T18:34:53.988Z pw:api   click action done
+2026-10-28T18:34:53.988Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:53.989Z pw:api   navigations have finished
+2026-10-28T18:34:53.989Z pw:api <= locator.click succeeded
+2026-10-28T18:34:53.989Z pw:api => locator.click started
+2026-10-28T18:34:53.989Z pw:api waiting for getByRole('button', { name: 'Save browser checkpoint', exact: true })
+2026-10-28T18:34:53.994Z pw:api   locator resolved to <button>Save browser checkpoint</button>
+2026-10-28T18:34:53.994Z pw:api attempting click action
+2026-10-28T18:34:53.994Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:54.029Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:54.029Z pw:api   scrolling into view if needed
+2026-10-28T18:34:54.029Z pw:api   done scrolling
+2026-10-28T18:34:54.032Z pw:api   performing click action
+2026-10-28T18:34:54.040Z pw:api   click action done
+2026-10-28T18:34:54.040Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:54.041Z pw:api   navigations have finished
+2026-10-28T18:34:54.042Z pw:api <= locator.click succeeded
+2026-10-28T18:34:54.042Z pw:api => locator.waitFor started
+2026-10-28T18:34:54.043Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Checkpoint saved on this browser' }) to be visible
+2026-10-28T18:34:54.047Z pw:api   locator resolved to visible <summary>Browser recovery · Checkpoint saved on this brows…</summary>
+2026-10-28T18:34:54.047Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:34:54.048Z pw:api => page.evaluate started
+2026-10-28T18:34:54.067Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.069Z pw:api => page.evaluate started
+2026-10-28T18:34:54.132Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.133Z pw:api => page.evaluate started
+2026-10-28T18:34:54.134Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.134Z pw:api => frame.evaluate started
+2026-10-28T18:34:54.142Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:34:54.142Z pw:api => frame.evaluate started
+2026-10-28T18:34:54.417Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:34:54.422Z pw:api => browserContext.newPage started
+2026-10-28T18:34:54.463Z pw:api <= browserContext.newPage succeeded
+2026-10-28T18:34:54.463Z pw:api => page.evaluate started
+2026-10-28T18:34:54.650Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.650Z pw:api => page.evaluate started
+2026-10-28T18:34:54.652Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.652Z pw:api => page.evaluate started
+2026-10-28T18:34:54.654Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.657Z pw:api => page.evaluate started
+2026-10-28T18:34:54.674Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.674Z pw:api => page.evaluate started
+2026-10-28T18:34:54.767Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.769Z pw:api => page.close started
+2026-10-28T18:34:54.778Z pw:api <= page.close succeeded
+2026-10-28T18:34:54.778Z pw:api => page.evaluate started
+2026-10-28T18:34:54.784Z pw:api <= page.evaluate succeeded
+2026-10-28T18:34:54.784Z pw:api => page.screenshot started
+2026-10-28T18:34:54.784Z pw:api taking page screenshot
+2026-10-28T18:34:54.788Z pw:api waiting for fonts to load...
+2026-10-28T18:34:54.793Z pw:api fonts loaded
+2026-10-28T18:34:55.045Z pw:api <= page.screenshot succeeded
+1366: one-test-resumed
+2026-10-28T18:34:55.047Z pw:api => page.reload started
+2026-10-28T18:34:55.048Z pw:api waiting for navigation until "load"
+2026-10-28T18:34:55.054Z pw:api => route.continue started
+2026-10-28T18:34:55.056Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.101Z pw:api   "commit" event fired
+2026-10-28T18:34:55.101Z pw:api   navigated to "http://127.0.0.1:8088/demo"
+2026-10-28T18:34:55.101Z pw:api   navigated to "http://127.0.0.1:8088/demo"
+2026-10-28T18:34:55.117Z pw:api => route.continue started
+2026-10-28T18:34:55.118Z pw:api => route.continue started
+2026-10-28T18:34:55.120Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.120Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.144Z pw:api   "domcontentloaded" event fired
+2026-10-28T18:34:55.145Z pw:api   "load" event fired
+2026-10-28T18:34:55.145Z pw:api <= page.reload succeeded
+2026-10-28T18:34:55.146Z pw:api => locator.click started
+2026-10-28T18:34:55.146Z pw:api waiting for getByRole('button', { name: 'Restore browser checkpoint', exact: true })
+2026-10-28T18:34:55.152Z pw:api => route.continue started
+2026-10-28T18:34:55.154Z pw:api => route.continue started
+2026-10-28T18:34:55.155Z pw:api => route.continue started
+2026-10-28T18:34:55.156Z pw:api => route.continue started
+2026-10-28T18:34:55.156Z pw:api => route.continue started
+2026-10-28T18:34:55.156Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.157Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.157Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.157Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.157Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.450Z pw:api => route.continue started
+2026-10-28T18:34:55.452Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.530Z pw:api => route.continue started
+2026-10-28T18:34:55.535Z pw:api <= route.continue succeeded
+2026-10-28T18:34:55.984Z pw:api   locator resolved to <button>Restore browser checkpoint</button>
+2026-10-28T18:34:55.985Z pw:api attempting click action
+2026-10-28T18:34:55.985Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:34:56.013Z pw:api   element is visible, enabled and stable
+2026-10-28T18:34:56.013Z pw:api   scrolling into view if needed
+2026-10-28T18:34:56.014Z pw:api   done scrolling
+2026-10-28T18:34:56.016Z pw:api   performing click action
+2026-10-28T18:34:56.025Z pw:api => route.continue started
+2026-10-28T18:34:56.026Z pw:api <= route.continue succeeded
+2026-10-28T18:34:56.028Z pw:api   click action done
+2026-10-28T18:34:56.028Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:34:56.035Z pw:api   navigations have finished
+2026-10-28T18:34:56.036Z pw:api <= locator.click succeeded
+2026-10-28T18:34:56.094Z pw:api => route.continue started
+2026-10-28T18:34:56.095Z pw:api <= route.continue succeeded
+2026-10-28T18:34:56.160Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:34:56.160Z pw:api => response.json started
+2026-10-28T18:34:56.165Z pw:api <= response.json succeeded
+2026-10-28T18:34:56.165Z pw:api => locator.waitFor started
+2026-10-28T18:34:56.166Z pw:api waiting for getByRole('heading', { name: 'Investigation workspace', exact: true }) to be visible
+2026-10-28T18:34:56.226Z pw:api => route.continue started
+2026-10-28T18:34:56.228Z pw:api <= route.continue succeeded
+2026-10-28T18:34:56.230Z pw:api   locator resolved to visible <h2>Investigation workspace</h2>
+2026-10-28T18:34:56.230Z pw:api <= locator.waitFor succeeded
+1366: respecting unchanged public write quota (after rapid checkpoint reproduction)
+2026-10-28T18:34:56.733Z pw:api   "networkidle" event fired
+2026-10-28T18:35:58.239Z pw:api => locator.click started
+2026-10-28T18:35:58.240Z pw:api waiting for getByRole('button', { name: 'Run proposed simulated test', exact: true })
+2026-10-28T18:35:58.248Z pw:api   locator resolved to <button class="primary-action">Run proposed simulated test</button>
+2026-10-28T18:35:58.249Z pw:api attempting click action
+2026-10-28T18:35:58.249Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:35:58.276Z pw:api   element is visible, enabled and stable
+2026-10-28T18:35:58.276Z pw:api   scrolling into view if needed
+2026-10-28T18:35:58.277Z pw:api   done scrolling
+2026-10-28T18:35:58.279Z pw:api   performing click action
+2026-10-28T18:35:58.286Z pw:api => route.continue started
+2026-10-28T18:35:58.286Z pw:api   click action done
+2026-10-28T18:35:58.286Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:35:58.287Z pw:api   navigations have finished
+2026-10-28T18:35:58.287Z pw:api <= locator.click succeeded
+2026-10-28T18:35:58.287Z pw:api <= route.continue succeeded
+2026-10-28T18:35:58.422Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:35:58.422Z pw:api => response.json started
+2026-10-28T18:35:58.427Z pw:api <= response.json succeeded
+2026-10-28T18:35:58.427Z pw:api => locator.click started
+2026-10-28T18:35:58.428Z pw:api waiting for getByRole('button', { name: 'Run proposed simulated test', exact: true })
+2026-10-28T18:35:58.437Z pw:api   locator resolved to <button class="primary-action">Run proposed simulated test</button>
+2026-10-28T18:35:58.440Z pw:api attempting click action
+2026-10-28T18:35:58.440Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:35:58.459Z pw:api   element is visible, enabled and stable
+2026-10-28T18:35:58.460Z pw:api   scrolling into view if needed
+2026-10-28T18:35:58.460Z pw:api   done scrolling
+2026-10-28T18:35:58.462Z pw:api   performing click action
+2026-10-28T18:35:58.469Z pw:api => route.continue started
+2026-10-28T18:35:58.469Z pw:api   click action done
+2026-10-28T18:35:58.469Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:35:58.470Z pw:api   navigations have finished
+2026-10-28T18:35:58.471Z pw:api <= locator.click succeeded
+2026-10-28T18:35:58.471Z pw:api <= route.continue succeeded
+2026-10-28T18:35:58.641Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:35:58.641Z pw:api => response.json started
+2026-10-28T18:35:58.649Z pw:api <= response.json succeeded
+2026-10-28T18:35:58.650Z pw:api => locator.click started
+2026-10-28T18:35:58.650Z pw:api waiting for getByRole('button', { name: 'Run proposed simulated test', exact: true })
+2026-10-28T18:35:58.665Z pw:api   locator resolved to <button class="primary-action">Run proposed simulated test</button>
+2026-10-28T18:35:58.666Z pw:api attempting click action
+2026-10-28T18:35:58.666Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:35:58.693Z pw:api   element is visible, enabled and stable
+2026-10-28T18:35:58.693Z pw:api   scrolling into view if needed
+2026-10-28T18:35:58.693Z pw:api   done scrolling
+2026-10-28T18:35:58.695Z pw:api   performing click action
+2026-10-28T18:35:58.702Z pw:api => route.continue started
+2026-10-28T18:35:58.702Z pw:api   click action done
+2026-10-28T18:35:58.702Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:35:58.703Z pw:api <= route.continue succeeded
+2026-10-28T18:35:58.703Z pw:api   navigations have finished
+2026-10-28T18:35:58.704Z pw:api <= locator.click succeeded
+2026-10-28T18:35:58.929Z pw:api <= page.waitForResponse succeeded
+2026-10-28T18:35:58.929Z pw:api => response.json started
+2026-10-28T18:35:58.937Z pw:api <= response.json succeeded
+2026-10-28T18:35:58.938Z pw:api => locator.count started
+2026-10-28T18:35:58.946Z pw:api <= locator.count succeeded
+2026-10-28T18:35:58.946Z pw:api => locator.waitFor started
+2026-10-28T18:35:58.947Z pw:api waiting for getByRole('heading', { name: 'Investigation complete — budget exhausted after 4 of 4 permitted tests', exact: true }) to be visible
+2026-10-28T18:35:58.952Z pw:api   locator resolved to visible <h3>Investigation complete — budget exhausted after 4…</h3>
+2026-10-28T18:35:58.953Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:35:58.953Z pw:api => page.evaluate started
+2026-10-28T18:35:59.015Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.015Z pw:api => page.evaluate started
+2026-10-28T18:35:59.016Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.016Z pw:api => frame.evaluate started
+2026-10-28T18:35:59.021Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:35:59.021Z pw:api => frame.evaluate started
+2026-10-28T18:35:59.293Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:35:59.300Z pw:api => browserContext.newPage started
+2026-10-28T18:35:59.372Z pw:api <= browserContext.newPage succeeded
+2026-10-28T18:35:59.372Z pw:api => page.evaluate started
+2026-10-28T18:35:59.544Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.544Z pw:api => page.evaluate started
+2026-10-28T18:35:59.546Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.546Z pw:api => page.evaluate started
+2026-10-28T18:35:59.547Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.549Z pw:api => page.evaluate started
+2026-10-28T18:35:59.561Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.562Z pw:api => page.evaluate started
+2026-10-28T18:35:59.638Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.644Z pw:api => page.close started
+2026-10-28T18:35:59.654Z pw:api <= page.close succeeded
+2026-10-28T18:35:59.655Z pw:api => page.evaluate started
+2026-10-28T18:35:59.661Z pw:api <= page.evaluate succeeded
+2026-10-28T18:35:59.661Z pw:api => page.screenshot started
+2026-10-28T18:35:59.661Z pw:api taking page screenshot
+2026-10-28T18:35:59.664Z pw:api waiting for fonts to load...
+2026-10-28T18:35:59.665Z pw:api fonts loaded
+2026-10-28T18:35:59.876Z pw:api <= page.screenshot succeeded
+1366: terminal-explained
+2026-10-28T18:35:59.881Z pw:api => locator.click started
+2026-10-28T18:35:59.881Z pw:api waiting for getByRole('button', { name: 'Review and export report', exact: true })
+2026-10-28T18:35:59.895Z pw:api   locator resolved to <button class="primary-action">Review and export report</button>
+2026-10-28T18:35:59.897Z pw:api attempting click action
+2026-10-28T18:35:59.897Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:35:59.928Z pw:api   element is visible, enabled and stable
+2026-10-28T18:35:59.928Z pw:api   scrolling into view if needed
+2026-10-28T18:35:59.930Z pw:api   done scrolling
+2026-10-28T18:35:59.935Z pw:api   performing click action
+2026-10-28T18:35:59.950Z pw:api   click action done
+2026-10-28T18:35:59.950Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:35:59.950Z pw:api   navigations have finished
+2026-10-28T18:35:59.951Z pw:api <= locator.click succeeded
+2026-10-28T18:35:59.951Z pw:api => locator.waitFor started
+2026-10-28T18:35:59.951Z pw:api waiting for getByRole('region', { name: 'Report preview' }) to be visible
+2026-10-28T18:35:59.958Z pw:api   locator resolved to visible <section class="report-preview" aria-label="Report preview">…</section>
+2026-10-28T18:35:59.958Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:35:59.959Z pw:api => locator.click started
+2026-10-28T18:35:59.959Z pw:api waiting for getByRole('button', { name: 'Export investigation JSON', exact: true })
+2026-10-28T18:35:59.966Z pw:api   locator resolved to <button>Export investigation JSON</button>
+2026-10-28T18:35:59.969Z pw:api attempting click action
+2026-10-28T18:35:59.969Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:35:59.975Z pw:api   element is visible, enabled and stable
+2026-10-28T18:35:59.976Z pw:api   scrolling into view if needed
+2026-10-28T18:35:59.977Z pw:api   done scrolling
+2026-10-28T18:35:59.978Z pw:api   performing click action
+2026-10-28T18:35:59.984Z pw:api <= page.waitForEvent succeeded
+2026-10-28T18:35:59.985Z pw:api   click action done
+2026-10-28T18:35:59.985Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:35:59.985Z pw:api   navigations have finished
+2026-10-28T18:35:59.985Z pw:api <= locator.click succeeded
+2026-10-28T18:35:59.987Z pw:api => locator.click started
+2026-10-28T18:35:59.987Z pw:api waiting for getByRole('button', { name: 'Export investigation HTML', exact: true })
+2026-10-28T18:35:59.991Z pw:api   locator resolved to <button>Export investigation HTML</button>
+2026-10-28T18:35:59.991Z pw:api attempting click action
+2026-10-28T18:35:59.991Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:00.026Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:00.026Z pw:api   scrolling into view if needed
+2026-10-28T18:36:00.027Z pw:api   done scrolling
+2026-10-28T18:36:00.029Z pw:api   performing click action
+2026-10-28T18:36:00.036Z pw:api => route.continue started
+2026-10-28T18:36:00.036Z pw:api   click action done
+2026-10-28T18:36:00.036Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:00.036Z pw:api <= route.continue succeeded
+2026-10-28T18:36:00.037Z pw:api   navigations have finished
+2026-10-28T18:36:00.037Z pw:api <= locator.click succeeded
+2026-10-28T18:36:00.416Z pw:api <= page.waitForEvent succeeded
+2026-10-28T18:36:00.419Z pw:api => locator.evaluate started
+2026-10-28T18:36:00.420Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Browser recovery' }).locator('..')
+2026-10-28T18:36:00.444Z pw:api   locator resolved to visible <details>…</details>
+2026-10-28T18:36:00.502Z pw:api <= locator.evaluate succeeded
+2026-10-28T18:36:00.502Z pw:api => locator.click started
+2026-10-28T18:36:00.503Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Browser recovery' })
+2026-10-28T18:36:00.506Z pw:api   locator resolved to <summary>Browser recovery · Checkpoint saved on this brows…</summary>
+2026-10-28T18:36:00.506Z pw:api attempting click action
+2026-10-28T18:36:00.506Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:00.526Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:00.526Z pw:api   scrolling into view if needed
+2026-10-28T18:36:00.527Z pw:api   done scrolling
+2026-10-28T18:36:00.529Z pw:api   performing click action
+2026-10-28T18:36:00.534Z pw:api   click action done
+2026-10-28T18:36:00.534Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:00.534Z pw:api   navigations have finished
+2026-10-28T18:36:00.535Z pw:api <= locator.click succeeded
+2026-10-28T18:36:00.535Z pw:api => locator.click started
+2026-10-28T18:36:00.535Z pw:api waiting for getByRole('button', { name: 'Save browser checkpoint', exact: true })
+2026-10-28T18:36:00.540Z pw:api   locator resolved to <button>Save browser checkpoint</button>
+2026-10-28T18:36:00.541Z pw:api attempting click action
+2026-10-28T18:36:00.541Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:00.576Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:00.576Z pw:api   scrolling into view if needed
+2026-10-28T18:36:00.577Z pw:api   done scrolling
+2026-10-28T18:36:00.579Z pw:api   performing click action
+2026-10-28T18:36:00.587Z pw:api   click action done
+2026-10-28T18:36:00.588Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:00.588Z pw:api   navigations have finished
+2026-10-28T18:36:00.588Z pw:api <= locator.click succeeded
+2026-10-28T18:36:00.588Z pw:api => locator.waitFor started
+2026-10-28T18:36:00.589Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Checkpoint saved on this browser' }) to be visible
+2026-10-28T18:36:00.591Z pw:api   locator resolved to visible <summary>Browser recovery · Checkpoint saved on this brows…</summary>
+2026-10-28T18:36:00.591Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:36:00.592Z pw:api => locator.click started
+2026-10-28T18:36:00.592Z pw:api waiting for getByRole('button', { name: 'Export recovery checkpoint', exact: true })
+2026-10-28T18:36:00.599Z pw:api   locator resolved to <button disabled>Export recovery checkpoint</button>
+2026-10-28T18:36:00.602Z pw:api attempting click action
+2026-10-28T18:36:00.602Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:00.626Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:00.626Z pw:api   scrolling into view if needed
+2026-10-28T18:36:00.627Z pw:api   done scrolling
+2026-10-28T18:36:00.629Z pw:api   performing click action
+2026-10-28T18:36:00.635Z pw:api <= page.waitForEvent succeeded
+2026-10-28T18:36:00.636Z pw:api   click action done
+2026-10-28T18:36:00.636Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:00.639Z pw:api   navigations have finished
+2026-10-28T18:36:00.639Z pw:api <= locator.click succeeded
+2026-10-28T18:36:00.640Z pw:api => page.evaluate started
+2026-10-28T18:36:00.689Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:00.690Z pw:api => page.evaluate started
+2026-10-28T18:36:00.691Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:00.691Z pw:api => frame.evaluate started
+2026-10-28T18:36:00.697Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:36:00.698Z pw:api => frame.evaluate started
+2026-10-28T18:36:01.010Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:36:01.019Z pw:api => browserContext.newPage started
+2026-10-28T18:36:01.063Z pw:api <= browserContext.newPage succeeded
+2026-10-28T18:36:01.063Z pw:api => page.evaluate started
+2026-10-28T18:36:01.241Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.242Z pw:api => page.evaluate started
+2026-10-28T18:36:01.244Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.244Z pw:api => page.evaluate started
+2026-10-28T18:36:01.247Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.248Z pw:api => page.evaluate started
+2026-10-28T18:36:01.263Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.263Z pw:api => page.evaluate started
+2026-10-28T18:36:01.361Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.365Z pw:api => page.close started
+2026-10-28T18:36:01.376Z pw:api <= page.close succeeded
+2026-10-28T18:36:01.376Z pw:api => page.evaluate started
+2026-10-28T18:36:01.385Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.385Z pw:api => page.screenshot started
+2026-10-28T18:36:01.385Z pw:api taking page screenshot
+2026-10-28T18:36:01.390Z pw:api waiting for fonts to load...
+2026-10-28T18:36:01.391Z pw:api fonts loaded
+2026-10-28T18:36:01.697Z pw:api <= page.screenshot succeeded
+1366: report-ready
+2026-10-28T18:36:01.701Z pw:api => page.evaluate started
+2026-10-28T18:36:01.742Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:01.743Z pw:api => locator.click started
+2026-10-28T18:36:01.744Z pw:api waiting for getByRole('button', { name: 'Return to machine', exact: true })
+2026-10-28T18:36:01.751Z pw:api   locator resolved to <button class="primary-action">Return to machine</button>
+2026-10-28T18:36:01.752Z pw:api attempting click action
+2026-10-28T18:36:01.752Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:01.777Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:01.777Z pw:api   scrolling into view if needed
+2026-10-28T18:36:01.778Z pw:api   done scrolling
+2026-10-28T18:36:01.780Z pw:api   performing click action
+2026-10-28T18:36:01.789Z pw:api   click action done
+2026-10-28T18:36:01.789Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:01.789Z pw:api   navigations have finished
+2026-10-28T18:36:01.789Z pw:api <= locator.click succeeded
+2026-10-28T18:36:01.790Z pw:api => locator.selectOption started
+2026-10-28T18:36:01.790Z pw:api waiting for getByLabel('Machine component', { exact: true })
+2026-10-28T18:36:01.845Z pw:api   locator resolved to <select aria-label="Machine component">…</select>
+2026-10-28T18:36:01.846Z pw:api attempting select option action
+2026-10-28T18:36:01.846Z pw:api   waiting for element to be visible and enabled
+2026-10-28T18:36:01.854Z pw:api   selected specified option(s)
+2026-10-28T18:36:01.854Z pw:api <= locator.selectOption succeeded
+2026-10-28T18:36:01.855Z pw:api => locator.isEnabled started
+2026-10-28T18:36:01.855Z pw:api waiting for locator('.component-inspector').getByRole('button', { name: 'Resume existing investigation', exact: true })
+2026-10-28T18:36:01.857Z pw:api   locator resolved to <button class="primary-action">Resume existing investigation</button>
+2026-10-28T18:36:01.858Z pw:api <= locator.isEnabled succeeded
+2026-10-28T18:36:01.858Z pw:api => locator.selectOption started
+2026-10-28T18:36:01.858Z pw:api waiting for getByLabel('Machine component', { exact: true })
+2026-10-28T18:36:01.860Z pw:api   locator resolved to <select aria-label="Machine component">…</select>
+2026-10-28T18:36:01.861Z pw:api attempting select option action
+2026-10-28T18:36:01.861Z pw:api   waiting for element to be visible and enabled
+2026-10-28T18:36:01.868Z pw:api   selected specified option(s)
+2026-10-28T18:36:01.868Z pw:api <= locator.selectOption succeeded
+2026-10-28T18:36:01.868Z pw:api => locator.count started
+2026-10-28T18:36:01.873Z pw:api <= locator.count succeeded
+2026-10-28T18:36:01.873Z pw:api => locator.click started
+2026-10-28T18:36:01.873Z pw:api waiting for getByRole('button', { name: 'Return to observed simulation', exact: true })
+2026-10-28T18:36:01.876Z pw:api   locator resolved to <button>Return to observed simulation</button>
+2026-10-28T18:36:01.877Z pw:api attempting click action
+2026-10-28T18:36:01.877Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:02.015Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:02.015Z pw:api   scrolling into view if needed
+2026-10-28T18:36:02.018Z pw:api   done scrolling
+2026-10-28T18:36:02.022Z pw:api   performing click action
+2026-10-28T18:36:02.043Z pw:api   click action done
+2026-10-28T18:36:02.043Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:02.045Z pw:api   navigations have finished
+2026-10-28T18:36:02.046Z pw:api <= locator.click succeeded
+2026-10-28T18:36:02.046Z pw:api => locator.click started
+2026-10-28T18:36:02.046Z pw:api waiting for locator('summary').filter({ hasText: 'Capture new evidence' })
+2026-10-28T18:36:02.066Z pw:api   locator resolved to <summary>Capture new evidence</summary>
+2026-10-28T18:36:02.067Z pw:api attempting click action
+2026-10-28T18:36:02.067Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:02.094Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:02.094Z pw:api   scrolling into view if needed
+2026-10-28T18:36:02.096Z pw:api   done scrolling
+2026-10-28T18:36:02.098Z pw:api   performing click action
+2026-10-28T18:36:02.105Z pw:api   click action done
+2026-10-28T18:36:02.105Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:02.106Z pw:api   navigations have finished
+2026-10-28T18:36:02.106Z pw:api <= locator.click succeeded
+2026-10-28T18:36:02.107Z pw:api => page.route started
+2026-10-28T18:36:02.107Z pw:api <= page.route succeeded
+2026-10-28T18:36:02.107Z pw:api => locator.click started
+2026-10-28T18:36:02.108Z pw:api waiting for getByRole('button', { name: 'Capture new observation window', exact: true })
+2026-10-28T18:36:02.113Z pw:api   locator resolved to <button aria-describedby="_r_0_">Capture new observation window</button>
+2026-10-28T18:36:02.114Z pw:api attempting click action
+2026-10-28T18:36:02.114Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:02.165Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:02.165Z pw:api   scrolling into view if needed
+2026-10-28T18:36:02.166Z pw:api   done scrolling
+2026-10-28T18:36:02.172Z pw:api   performing click action
+2026-10-28T18:36:02.183Z pw:api => route.abort started
+2026-10-28T18:36:02.184Z pw:api <= route.abort succeeded
+2026-10-28T18:36:02.186Z pw:api   click action done
+2026-10-28T18:36:02.186Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:02.187Z pw:api   navigations have finished
+2026-10-28T18:36:02.187Z pw:api <= locator.click succeeded
+2026-10-28T18:36:02.187Z pw:api => locator.waitFor started
+2026-10-28T18:36:02.187Z pw:api waiting for getByRole('alert').filter({ hasText: /current investigation is preserved/ }) to be visible
+2026-10-28T18:36:02.198Z pw:api   locator resolved to visible <div role="alert" class="station-error">…</div>
+2026-10-28T18:36:02.199Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:36:02.199Z pw:api => locator.click started
+2026-10-28T18:36:02.199Z pw:api waiting for locator('.component-inspector').getByRole('button', { name: 'Resume existing investigation', exact: true })
+2026-10-28T18:36:02.201Z pw:api   locator resolved to <button class="primary-action">Resume existing investigation</button>
+2026-10-28T18:36:02.202Z pw:api attempting click action
+2026-10-28T18:36:02.202Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:02.243Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:02.243Z pw:api   scrolling into view if needed
+2026-10-28T18:36:02.244Z pw:api   done scrolling
+2026-10-28T18:36:02.246Z pw:api   performing click action
+2026-10-28T18:36:02.269Z pw:api => route.continue started
+2026-10-28T18:36:02.269Z pw:api   click action done
+2026-10-28T18:36:02.269Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:02.270Z pw:api <= route.continue succeeded
+2026-10-28T18:36:02.272Z pw:api   navigations have finished
+2026-10-28T18:36:02.272Z pw:api <= locator.click succeeded
+2026-10-28T18:36:02.273Z pw:api => locator.evaluate started
+2026-10-28T18:36:02.273Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Browser recovery' }).locator('..')
+2026-10-28T18:36:02.303Z pw:api   locator resolved to visible <details open="">…</details>
+2026-10-28T18:36:02.306Z pw:api <= locator.evaluate succeeded
+2026-10-28T18:36:02.307Z pw:api => locator.click started
+2026-10-28T18:36:02.307Z pw:api waiting for getByRole('button', { name: 'Save browser checkpoint', exact: true })
+2026-10-28T18:36:02.317Z pw:api   locator resolved to <button>Save browser checkpoint</button>
+2026-10-28T18:36:02.318Z pw:api attempting click action
+2026-10-28T18:36:02.318Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:02.342Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:02.343Z pw:api   scrolling into view if needed
+2026-10-28T18:36:02.343Z pw:api   done scrolling
+2026-10-28T18:36:02.345Z pw:api   performing click action
+2026-10-28T18:36:02.352Z pw:api   click action done
+2026-10-28T18:36:02.352Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:02.356Z pw:api   navigations have finished
+2026-10-28T18:36:02.356Z pw:api <= locator.click succeeded
+2026-10-28T18:36:02.356Z pw:api => locator.waitFor started
+2026-10-28T18:36:02.357Z pw:api waiting for locator('summary:visible').filter({ hasText: 'Checkpoint saved on this browser' }) to be visible
+2026-10-28T18:36:02.361Z pw:api   locator resolved to visible <summary>Browser recovery · Checkpoint saved on this brows…</summary>
+2026-10-28T18:36:02.361Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:36:02.361Z pw:api => page.evaluate started
+2026-10-28T18:36:02.402Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.404Z pw:api => page.evaluate started
+2026-10-28T18:36:02.453Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.453Z pw:api => page.evaluate started
+2026-10-28T18:36:02.454Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.454Z pw:api => frame.evaluate started
+2026-10-28T18:36:02.461Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:36:02.461Z pw:api => frame.evaluate started
+2026-10-28T18:36:02.725Z pw:api <= frame.evaluate succeeded
+2026-10-28T18:36:02.729Z pw:api => browserContext.newPage started
+2026-10-28T18:36:02.778Z pw:api <= browserContext.newPage succeeded
+2026-10-28T18:36:02.779Z pw:api => page.evaluate started
+2026-10-28T18:36:02.949Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.950Z pw:api => page.evaluate started
+2026-10-28T18:36:02.951Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.951Z pw:api => page.evaluate started
+2026-10-28T18:36:02.953Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.955Z pw:api => page.evaluate started
+2026-10-28T18:36:02.966Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:02.966Z pw:api => page.evaluate started
+2026-10-28T18:36:03.060Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:03.061Z pw:api => page.close started
+2026-10-28T18:36:03.070Z pw:api <= page.close succeeded
+2026-10-28T18:36:03.071Z pw:api => page.evaluate started
+2026-10-28T18:36:03.075Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:03.075Z pw:api => page.screenshot started
+2026-10-28T18:36:03.075Z pw:api taking page screenshot
+2026-10-28T18:36:03.078Z pw:api waiting for fonts to load...
+2026-10-28T18:36:03.080Z pw:api fonts loaded
+2026-10-28T18:36:03.296Z pw:api <= page.screenshot succeeded
+1366: unavailable-backend-preserves-report
+2026-10-28T18:36:03.297Z pw:api => locator.click started
+2026-10-28T18:36:03.297Z pw:api waiting for getByRole('button', { name: 'Dismiss', exact: true })
+2026-10-28T18:36:03.305Z pw:api   locator resolved to <button>Dismiss</button>
+2026-10-28T18:36:03.311Z pw:api attempting click action
+2026-10-28T18:36:03.311Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:03.362Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:03.362Z pw:api   scrolling into view if needed
+2026-10-28T18:36:03.362Z pw:api   done scrolling
+2026-10-28T18:36:03.364Z pw:api   performing click action
+2026-10-28T18:36:03.370Z pw:api   click action done
+2026-10-28T18:36:03.370Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:03.370Z pw:api   navigations have finished
+2026-10-28T18:36:03.370Z pw:api <= locator.click succeeded
+2026-10-28T18:36:03.371Z pw:api => locator.setInputFiles started
+2026-10-28T18:36:03.372Z pw:api waiting for getByLabel('Import machine checkpoint')
+2026-10-28T18:36:03.375Z pw:api   locator resolved to <input type="file" accept=".json" aria-label="Import machine checkpoint"/>
+2026-10-28T18:36:03.399Z pw:api <= locator.setInputFiles succeeded
+2026-10-28T18:36:03.400Z pw:api => locator.waitFor started
+2026-10-28T18:36:03.400Z pw:api waiting for getByRole('alert').filter({ hasText: /Recovery import rejected/ }) to be visible
+2026-10-28T18:36:03.428Z pw:api   locator resolved to visible <p role="alert">Recovery import rejected: incompatible, malformed…</p>
+2026-10-28T18:36:03.428Z pw:api <= locator.waitFor succeeded
+2026-10-28T18:36:03.428Z pw:api => page.evaluate started
+2026-10-28T18:36:03.454Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:03.456Z pw:api => locator.click started
+2026-10-28T18:36:03.456Z pw:api waiting for getByRole('button', { name: 'Reports', exact: true })
+2026-10-28T18:36:03.459Z pw:api   locator resolved to <button>Reports</button>
+2026-10-28T18:36:03.460Z pw:api attempting click action
+2026-10-28T18:36:03.460Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-28T18:36:03.475Z pw:api   element is visible, enabled and stable
+2026-10-28T18:36:03.475Z pw:api   scrolling into view if needed
+2026-10-28T18:36:03.476Z pw:api   done scrolling
+2026-10-28T18:36:03.477Z pw:api   performing click action
+2026-10-28T18:36:03.484Z pw:api   click action done
+2026-10-28T18:36:03.484Z pw:api   waiting for scheduled navigations to finish
+2026-10-28T18:36:03.485Z pw:api   navigations have finished
+2026-10-28T18:36:03.485Z pw:api <= locator.click succeeded
+2026-10-28T18:36:03.485Z pw:api => locator.count started
+2026-10-28T18:36:03.492Z pw:api <= locator.count succeeded
+2026-10-28T18:36:03.492Z pw:api => locator.evaluate started
+2026-10-28T18:36:03.493Z pw:api waiting for locator('canvas').first()
+2026-10-28T18:36:03.499Z pw:api   locator resolved to hidden <canvas role="img" width="600" height="480" data-draw-calls="57" data-rotor-phase="0" data-render-count="5" data-triangles="19138" data-reduced-motion="true" data-engine="three.js r180" aria-label="Illustrative centrifugal pump and motor; use component buttons for accessible selection"></canvas>
+2026-10-28T18:36:03.506Z pw:api <= locator.evaluate succeeded
+2026-10-28T18:36:03.506Z pw:api => page.evaluate started
+2026-10-28T18:36:03.508Z pw:api <= page.evaluate succeeded
+2026-10-28T18:36:03.510Z pw:api => browserContext.close started
+2026-10-28T18:36:03.591Z pw:api <= browserContext.close succeeded
+{"passed":true,"width":1366,"scenario":"misalignment","trials":4,"views":5,"genuine_requests":0}

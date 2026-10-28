@@ -1,0 +1,21 @@
+All selected local Phase 7 containers ready
+Machine browser passed: normal
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: bearing
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: misalignment
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: cavitation
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: pressure_sensor
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: thermal
+Removed selected owned final-image test containers only
+All selected local Phase 7 containers ready
+Machine browser passed: process
+Removed selected owned final-image test containers only

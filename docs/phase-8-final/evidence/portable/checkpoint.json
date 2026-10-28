@@ -1,0 +1,1073 @@
+{
+  "schema": "forge-browser-checkpoint-1",
+  "kind": "machine",
+  "saved_at": "2026-10-28T18:38:11.177Z",
+  "data": {
+    "recipe": {
+      "version": "coupled-pump-1",
+      "scenario": "bearing",
+      "seed": 2026,
+      "steps": 360,
+      "onset": 280,
+      "sample_period_seconds": 1,
+      "actions": []
+    },
+    "selected": "bearing",
+    "cursor": 319,
+    "tab": "Investigation",
+    "speed": 8,
+    "report": {
+      "schema": "forge-industrial-report-1",
+      "engine": "existing-phase3-verifier/coupled-pump-1",
+      "request": {
+        "recipe": {
+          "version": "coupled-pump-1",
+          "scenario": "bearing",
+          "seed": 2026,
+          "steps": 360,
+          "onset": 280,
+          "sample_period_seconds": 1,
+          "actions": []
+        },
+        "context": {
+          "component_id": "bearing",
+          "at_sequence": 319
+        },
+        "experiments": 0
+      },
+      "machine_id": "pump-104",
+      "source": "SIMULATED",
+      "provider": "rules-based, not Meta",
+      "evidence_window": {
+        "first_sequence": 200,
+        "last_sequence": 319,
+        "time_step_seconds": 1,
+        "legacy_index_field": "minute is a sample index in this adapter, not elapsed minutes"
+      },
+      "measurements": [
+        {
+          "minute": 0,
+          "state": "running",
+          "temperature": 64.983332,
+          "vibration": 1.992722,
+          "pressure": 5.972488
+        },
+        {
+          "minute": 1,
+          "state": "running",
+          "temperature": 65.072646,
+          "vibration": 1.964192,
+          "pressure": 6.015328
+        },
+        {
+          "minute": 2,
+          "state": "running",
+          "temperature": 64.984927,
+          "vibration": 1.971705,
+          "pressure": 5.997945
+        },
+        {
+          "minute": 3,
+          "state": "running",
+          "temperature": 64.861798,
+          "vibration": 1.976117,
+          "pressure": 5.998119
+        },
+        {
+          "minute": 4,
+          "state": "running",
+          "temperature": 65.058315,
+          "vibration": 2.001367,
+          "pressure": 6.003394
+        },
+        {
+          "minute": 5,
+          "state": "running",
+          "temperature": 65.056268,
+          "vibration": 1.981705,
+          "pressure": 6.027166
+        },
+        {
+          "minute": 6,
+          "state": "running",
+          "temperature": 65.221413,
+          "vibration": 1.979083,
+          "pressure": 5.999821
+        },
+        {
+          "minute": 7,
+          "state": "running",
+          "temperature": 64.852775,
+          "vibration": 1.987968,
+          "pressure": 6.044647
+        },
+        {
+          "minute": 8,
+          "state": "running",
+          "temperature": 64.842608,
+          "vibration": 1.993812,
+          "pressure": 5.963615
+        },
+        {
+          "minute": 9,
+          "state": "running",
+          "temperature": 65.102428,
+          "vibration": 1.981341,
+          "pressure": 6.011365
+        },
+        {
+          "minute": 10,
+          "state": "running",
+          "temperature": 65.008627,
+          "vibration": 2.009471,
+          "pressure": 6.00495
+        },
+        {
+          "minute": 11,
+          "state": "running",
+          "temperature": 65.178861,
+          "vibration": 2.016769,
+          "pressure": 6.028931
+        },
+        {
+          "minute": 12,
+          "state": "running",
+          "temperature": 64.798764,
+          "vibration": 1.999719,
+          "pressure": 6.023023
+        },
+        {
+          "minute": 13,
+          "state": "running",
+          "temperature": 64.810742,
+          "vibration": 1.949141,
+          "pressure": 5.984561
+        },
+        {
+          "minute": 14,
+          "state": "running",
+          "temperature": 64.835121,
+          "vibration": 1.958261,
+          "pressure": 5.967393
+        },
+        {
+          "minute": 15,
+          "state": "running",
+          "temperature": 64.795012,
+          "vibration": 2.015646,
+          "pressure": 6.019049
+        },
+        {
+          "minute": 16,
+          "state": "running",
+          "temperature": 64.873403,
+          "vibration": 2.002837,
+          "pressure": 6.016859
+        },
+        {
+          "minute": 17,
+          "state": "running",
+          "temperature": 65.102964,
+          "vibration": 1.978354,
+          "pressure": 5.993173
+        },
+        {
+          "minute": 18,
+          "state": "running",
+          "temperature": 64.972228,
+          "vibration": 2.013547,
+          "pressure": 6.005271
+        },
+        {
+          "minute": 19,
+          "state": "running",
+          "temperature": 64.94457,
+          "vibration": 1.977537,
+          "pressure": 6.02896
+        },
+        {
+          "minute": 20,
+          "state": "running",
+          "temperature": 65.061443,
+          "vibration": 1.991041,
+          "pressure": 5.952704
+        },
+        {
+          "minute": 21,
+          "state": "running",
+          "temperature": 65.08107,
+          "vibration": 1.987218,
+          "pressure": 6.043752
+        },
+        {
+          "minute": 22,
+          "state": "running",
+          "temperature": 65.14673,
+          "vibration": 1.989101,
+          "pressure": 6.002958
+        },
+        {
+          "minute": 23,
+          "state": "running",
+          "temperature": 65.096224,
+          "vibration": 1.993782,
+          "pressure": 6.023781
+        },
+        {
+          "minute": 24,
+          "state": "running",
+          "temperature": 64.977974,
+          "vibration": 1.997071,
+          "pressure": 6.04663
+        },
+        {
+          "minute": 25,
+          "state": "running",
+          "temperature": 65.051009,
+          "vibration": 1.986347,
+          "pressure": 6.025074
+        },
+        {
+          "minute": 26,
+          "state": "running",
+          "temperature": 65.025404,
+          "vibration": 2.014612,
+          "pressure": 5.99485
+        },
+        {
+          "minute": 27,
+          "state": "running",
+          "temperature": 65.190358,
+          "vibration": 2.022461,
+          "pressure": 5.997839
+        },
+        {
+          "minute": 28,
+          "state": "running",
+          "temperature": 65.083218,
+          "vibration": 1.993144,
+          "pressure": 5.979111
+        },
+        {
+          "minute": 29,
+          "state": "running",
+          "temperature": 64.88725,
+          "vibration": 1.986474,
+          "pressure": 5.963944
+        },
+        {
+          "minute": 30,
+          "state": "running",
+          "temperature": 64.89494,
+          "vibration": 1.996348,
+          "pressure": 6.05575
+        },
+        {
+          "minute": 31,
+          "state": "running",
+          "temperature": 64.980952,
+          "vibration": 2.020305,
+          "pressure": 6.008114
+        },
+        {
+          "minute": 32,
+          "state": "running",
+          "temperature": 65.275657,
+          "vibration": 1.970737,
+          "pressure": 6.011491
+        },
+        {
+          "minute": 33,
+          "state": "running",
+          "temperature": 65.053095,
+          "vibration": 2.014212,
+          "pressure": 6.050263
+        },
+        {
+          "minute": 34,
+          "state": "running",
+          "temperature": 64.933813,
+          "vibration": 2.000986,
+          "pressure": 5.950145
+        },
+        {
+          "minute": 35,
+          "state": "running",
+          "temperature": 65.056118,
+          "vibration": 1.957409,
+          "pressure": 5.968132
+        },
+        {
+          "minute": 36,
+          "state": "running",
+          "temperature": 64.990088,
+          "vibration": 2.007349,
+          "pressure": 5.999349
+        },
+        {
+          "minute": 37,
+          "state": "running",
+          "temperature": 64.743544,
+          "vibration": 1.950868,
+          "pressure": 5.994649
+        },
+        {
+          "minute": 38,
+          "state": "running",
+          "temperature": 64.924978,
+          "vibration": 2.026841,
+          "pressure": 5.987444
+        },
+        {
+          "minute": 39,
+          "state": "running",
+          "temperature": 64.946135,
+          "vibration": 2.000434,
+          "pressure": 6.00674
+        },
+        {
+          "minute": 40,
+          "state": "running",
+          "temperature": 64.925116,
+          "vibration": 2.022348,
+          "pressure": 5.978292
+        },
+        {
+          "minute": 41,
+          "state": "running",
+          "temperature": 64.67228,
+          "vibration": 1.983636,
+          "pressure": 6.016984
+        },
+        {
+          "minute": 42,
+          "state": "running",
+          "temperature": 64.82535,
+          "vibration": 1.959772,
+          "pressure": 5.984348
+        },
+        {
+          "minute": 43,
+          "state": "running",
+          "temperature": 65.022809,
+          "vibration": 1.976213,
+          "pressure": 5.978625
+        },
+        {
+          "minute": 44,
+          "state": "running",
+          "temperature": 65.000273,
+          "vibration": 1.994398,
+          "pressure": 6.047049
+        },
+        {
+          "minute": 45,
+          "state": "running",
+          "temperature": 65.208029,
+          "vibration": 1.973136,
+          "pressure": 6.030374
+        },
+        {
+          "minute": 46,
+          "state": "running",
+          "temperature": 64.957049,
+          "vibration": 2.001401,
+          "pressure": 5.987414
+        },
+        {
+          "minute": 47,
+          "state": "running",
+          "temperature": 64.919495,
+          "vibration": 2.028776,
+          "pressure": 5.983183
+        },
+        {
+          "minute": 48,
+          "state": "running",
+          "temperature": 65.183516,
+          "vibration": 1.946553,
+          "pressure": 5.999471
+        },
+        {
+          "minute": 49,
+          "state": "running",
+          "temperature": 64.97001,
+          "vibration": 2.008795,
+          "pressure": 5.984949
+        },
+        {
+          "minute": 50,
+          "state": "running",
+          "temperature": 64.636679,
+          "vibration": 1.952308,
+          "pressure": 6.003827
+        },
+        {
+          "minute": 51,
+          "state": "running",
+          "temperature": 64.98373,
+          "vibration": 1.982745,
+          "pressure": 5.978269
+        },
+        {
+          "minute": 52,
+          "state": "running",
+          "temperature": 65.056903,
+          "vibration": 1.987818,
+          "pressure": 5.966649
+        },
+        {
+          "minute": 53,
+          "state": "running",
+          "temperature": 64.872684,
+          "vibration": 2.009929,
+          "pressure": 5.93924
+        },
+        {
+          "minute": 54,
+          "state": "running",
+          "temperature": 65.192292,
+          "vibration": 1.993277,
+          "pressure": 5.994392
+        },
+        {
+          "minute": 55,
+          "state": "running",
+          "temperature": 64.967587,
+          "vibration": 2.002699,
+          "pressure": 6.045612
+        },
+        {
+          "minute": 56,
+          "state": "running",
+          "temperature": 65.121275,
+          "vibration": 2.008146,
+          "pressure": 5.999173
+        },
+        {
+          "minute": 57,
+          "state": "running",
+          "temperature": 64.815178,
+          "vibration": 1.982758,
+          "pressure": 6.015178
+        },
+        {
+          "minute": 58,
+          "state": "running",
+          "temperature": 64.789167,
+          "vibration": 2.016828,
+          "pressure": 5.969657
+        },
+        {
+          "minute": 59,
+          "state": "running",
+          "temperature": 65.140449,
+          "vibration": 1.987517,
+          "pressure": 6.00952
+        },
+        {
+          "minute": 60,
+          "state": "running",
+          "temperature": 65.130173,
+          "vibration": 1.98214,
+          "pressure": 6.02544
+        },
+        {
+          "minute": 61,
+          "state": "running",
+          "temperature": 64.974604,
+          "vibration": 1.995709,
+          "pressure": 6.021649
+        },
+        {
+          "minute": 62,
+          "state": "running",
+          "temperature": 64.821209,
+          "vibration": 2.017104,
+          "pressure": 6.02779
+        },
+        {
+          "minute": 63,
+          "state": "running",
+          "temperature": 65.024618,
+          "vibration": 2.02134,
+          "pressure": 5.968935
+        },
+        {
+          "minute": 64,
+          "state": "running",
+          "temperature": 64.950801,
+          "vibration": 1.962856,
+          "pressure": 5.966981
+        },
+        {
+          "minute": 65,
+          "state": "running",
+          "temperature": 64.955395,
+          "vibration": 2.004748,
+          "pressure": 5.978932
+        },
+        {
+          "minute": 66,
+          "state": "running",
+          "temperature": 65.026465,
+          "vibration": 1.981935,
+          "pressure": 5.987663
+        },
+        {
+          "minute": 67,
+          "state": "running",
+          "temperature": 64.895484,
+          "vibration": 1.994658,
+          "pressure": 5.997332
+        },
+        {
+          "minute": 68,
+          "state": "running",
+          "temperature": 64.849879,
+          "vibration": 1.957423,
+          "pressure": 5.962895
+        },
+        {
+          "minute": 69,
+          "state": "running",
+          "temperature": 64.716956,
+          "vibration": 2.008931,
+          "pressure": 6.019965
+        },
+        {
+          "minute": 70,
+          "state": "running",
+          "temperature": 65.123145,
+          "vibration": 1.962384,
+          "pressure": 6.013637
+        },
+        {
+          "minute": 71,
+          "state": "running",
+          "temperature": 65.083925,
+          "vibration": 1.983202,
+          "pressure": 5.994623
+        },
+        {
+          "minute": 72,
+          "state": "running",
+          "temperature": 64.933115,
+          "vibration": 1.958551,
+          "pressure": 5.967511
+        },
+        {
+          "minute": 73,
+          "state": "running",
+          "temperature": 64.829667,
+          "vibration": 1.990105,
+          "pressure": 6.024639
+        },
+        {
+          "minute": 74,
+          "state": "running",
+          "temperature": 64.951134,
+          "vibration": 1.952792,
+          "pressure": 5.961201
+        },
+        {
+          "minute": 75,
+          "state": "running",
+          "temperature": 65.223649,
+          "vibration": 1.989242,
+          "pressure": 5.938629
+        },
+        {
+          "minute": 76,
+          "state": "running",
+          "temperature": 64.984384,
+          "vibration": 2.00297,
+          "pressure": 6.046543
+        },
+        {
+          "minute": 77,
+          "state": "running",
+          "temperature": 65.115023,
+          "vibration": 2.000718,
+          "pressure": 5.985906
+        },
+        {
+          "minute": 78,
+          "state": "running",
+          "temperature": 64.935105,
+          "vibration": 2.043224,
+          "pressure": 6.002909
+        },
+        {
+          "minute": 79,
+          "state": "running",
+          "temperature": 65.262989,
+          "vibration": 1.984664,
+          "pressure": 5.997393
+        },
+        {
+          "minute": 80,
+          "state": "running",
+          "temperature": 65.062791,
+          "vibration": 2.972765,
+          "pressure": 5.995512
+        },
+        {
+          "minute": 81,
+          "state": "running",
+          "temperature": 64.908941,
+          "vibration": 2.96818,
+          "pressure": 6.023655
+        },
+        {
+          "minute": 82,
+          "state": "running",
+          "temperature": 64.830638,
+          "vibration": 2.98976,
+          "pressure": 5.973496
+        },
+        {
+          "minute": 83,
+          "state": "running",
+          "temperature": 64.791272,
+          "vibration": 2.995115,
+          "pressure": 6.029249
+        },
+        {
+          "minute": 84,
+          "state": "running",
+          "temperature": 64.976827,
+          "vibration": 3.012529,
+          "pressure": 5.983269
+        },
+        {
+          "minute": 85,
+          "state": "running",
+          "temperature": 64.824945,
+          "vibration": 2.99808,
+          "pressure": 6.012385
+        },
+        {
+          "minute": 86,
+          "state": "running",
+          "temperature": 65.07131,
+          "vibration": 3.02775,
+          "pressure": 6.005877
+        },
+        {
+          "minute": 87,
+          "state": "running",
+          "temperature": 64.784286,
+          "vibration": 2.955925,
+          "pressure": 5.968477
+        },
+        {
+          "minute": 88,
+          "state": "running",
+          "temperature": 65.02175,
+          "vibration": 2.967371,
+          "pressure": 5.985513
+        },
+        {
+          "minute": 89,
+          "state": "running",
+          "temperature": 65.011379,
+          "vibration": 2.99656,
+          "pressure": 5.967052
+        },
+        {
+          "minute": 90,
+          "state": "running",
+          "temperature": 64.768849,
+          "vibration": 2.961798,
+          "pressure": 5.995874
+        },
+        {
+          "minute": 91,
+          "state": "running",
+          "temperature": 64.95048,
+          "vibration": 3.012107,
+          "pressure": 6.027066
+        },
+        {
+          "minute": 92,
+          "state": "running",
+          "temperature": 64.915988,
+          "vibration": 2.984946,
+          "pressure": 5.954315
+        },
+        {
+          "minute": 93,
+          "state": "running",
+          "temperature": 64.995092,
+          "vibration": 2.982903,
+          "pressure": 5.983661
+        },
+        {
+          "minute": 94,
+          "state": "running",
+          "temperature": 65.347886,
+          "vibration": 2.99938,
+          "pressure": 6.035884
+        },
+        {
+          "minute": 95,
+          "state": "running",
+          "temperature": 65.075927,
+          "vibration": 3.013739,
+          "pressure": 6.015418
+        },
+        {
+          "minute": 96,
+          "state": "running",
+          "temperature": 64.938559,
+          "vibration": 3.019361,
+          "pressure": 6.034868
+        },
+        {
+          "minute": 97,
+          "state": "running",
+          "temperature": 65.092407,
+          "vibration": 2.99371,
+          "pressure": 6.008127
+        },
+        {
+          "minute": 98,
+          "state": "running",
+          "temperature": 64.895236,
+          "vibration": 2.970326,
+          "pressure": 5.97576
+        },
+        {
+          "minute": 99,
+          "state": "running",
+          "temperature": 64.874648,
+          "vibration": 3.008855,
+          "pressure": 6.020557
+        },
+        {
+          "minute": 100,
+          "state": "running",
+          "temperature": 64.917588,
+          "vibration": 3.00083,
+          "pressure": 5.967535
+        },
+        {
+          "minute": 101,
+          "state": "running",
+          "temperature": 64.893807,
+          "vibration": 2.97057,
+          "pressure": 5.950075
+        },
+        {
+          "minute": 102,
+          "state": "running",
+          "temperature": 64.920644,
+          "vibration": 2.985353,
+          "pressure": 6.04009
+        },
+        {
+          "minute": 103,
+          "state": "running",
+          "temperature": 64.910412,
+          "vibration": 3.022083,
+          "pressure": 6.015601
+        },
+        {
+          "minute": 104,
+          "state": "running",
+          "temperature": 64.808449,
+          "vibration": 3.023512,
+          "pressure": 5.982075
+        },
+        {
+          "minute": 105,
+          "state": "running",
+          "temperature": 64.928084,
+          "vibration": 2.962431,
+          "pressure": 5.952509
+        },
+        {
+          "minute": 106,
+          "state": "running",
+          "temperature": 65.259761,
+          "vibration": 3.033982,
+          "pressure": 5.99948
+        },
+        {
+          "minute": 107,
+          "state": "running",
+          "temperature": 64.894609,
+          "vibration": 2.966784,
+          "pressure": 6.016625
+        },
+        {
+          "minute": 108,
+          "state": "running",
+          "temperature": 64.847071,
+          "vibration": 2.989691,
+          "pressure": 5.983563
+        },
+        {
+          "minute": 109,
+          "state": "running",
+          "temperature": 65.108946,
+          "vibration": 3.047995,
+          "pressure": 6.003476
+        },
+        {
+          "minute": 110,
+          "state": "running",
+          "temperature": 65.018153,
+          "vibration": 3.005525,
+          "pressure": 5.997445
+        },
+        {
+          "minute": 111,
+          "state": "running",
+          "temperature": 65.070129,
+          "vibration": 2.97733,
+          "pressure": 6.021292
+        },
+        {
+          "minute": 112,
+          "state": "running",
+          "temperature": 64.831259,
+          "vibration": 3.038199,
+          "pressure": 6.029158
+        },
+        {
+          "minute": 113,
+          "state": "running",
+          "temperature": 65.043999,
+          "vibration": 3.035712,
+          "pressure": 5.976691
+        },
+        {
+          "minute": 114,
+          "state": "running",
+          "temperature": 64.790683,
+          "vibration": 3.011248,
+          "pressure": 6.02831
+        },
+        {
+          "minute": 115,
+          "state": "running",
+          "temperature": 64.957861,
+          "vibration": 3.036713,
+          "pressure": 6.021882
+        },
+        {
+          "minute": 116,
+          "state": "running",
+          "temperature": 64.841682,
+          "vibration": 3.018272,
+          "pressure": 5.971805
+        },
+        {
+          "minute": 117,
+          "state": "running",
+          "temperature": 64.779268,
+          "vibration": 2.972942,
+          "pressure": 5.974028
+        },
+        {
+          "minute": 118,
+          "state": "running",
+          "temperature": 64.84234,
+          "vibration": 3.024374,
+          "pressure": 6.011299
+        },
+        {
+          "minute": 119,
+          "state": "running",
+          "temperature": 65.011499,
+          "vibration": 2.954611,
+          "pressure": 5.993686
+        }
+      ],
+      "observed": {
+        "signals": [
+          {
+            "channel": "temperature",
+            "flags": 0,
+            "max_score": 0.26604377759383624,
+            "post_observed": 40
+          },
+          {
+            "channel": "vibration",
+            "flags": 40,
+            "max_score": 46.82462296579103,
+            "post_observed": 40
+          },
+          {
+            "channel": "pressure",
+            "flags": 0,
+            "max_score": 0.11844664988270513,
+            "post_observed": 40
+          }
+        ],
+        "quality_issues": []
+      },
+      "hypotheses": {
+        "hypotheses": [
+          {
+            "hypothesis_id": "normal",
+            "rationale": "Signals reflect baseline variability.",
+            "evidence_channels": [],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "process-temperature",
+            "rationale": "A synthetic process departure affects temperature.",
+            "evidence_channels": [
+              "temperature"
+            ],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "sensor-temperature",
+            "rationale": "A primary temperature sensor offset explains the observed departure.",
+            "evidence_channels": [
+              "temperature"
+            ],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "process-vibration",
+            "rationale": "A synthetic process departure affects vibration.",
+            "evidence_channels": [
+              "vibration"
+            ],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "sensor-vibration",
+            "rationale": "A primary vibration sensor offset explains the observed departure.",
+            "evidence_channels": [
+              "vibration"
+            ],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "process-pressure",
+            "rationale": "A synthetic process departure affects pressure.",
+            "evidence_channels": [
+              "pressure"
+            ],
+            "scope": "synthetic_mechanism"
+          },
+          {
+            "hypothesis_id": "sensor-pressure",
+            "rationale": "A primary pressure sensor offset explains the observed departure.",
+            "evidence_channels": [
+              "pressure"
+            ],
+            "scope": "synthetic_mechanism"
+          }
+        ]
+      },
+      "ranking": [
+        {
+          "hypothesis_id": "process-pressure",
+          "rank": 1,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "process-temperature",
+          "rank": 2,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "process-vibration",
+          "rank": 3,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "sensor-pressure",
+          "rank": 4,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "sensor-temperature",
+          "rank": 5,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "sensor-vibration",
+          "rank": 6,
+          "evidence_status": "NEEDS_TEST",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        },
+        {
+          "hypothesis_id": "normal",
+          "rank": 7,
+          "evidence_status": "CONTRADICTED",
+          "reason": "Deterministic evidence fit; model rationale and asserted certainty cannot override numerical support",
+          "evidence_refs": [
+            "093c89cd2070bbf092eba98327fd137b483b6ed04a1d6077d59a2073f5032f70"
+          ],
+          "score_kind": "ordinal_not_probability"
+        }
+      ],
+      "trials": [],
+      "events": [],
+      "decision": {
+        "status": "IN_PROGRESS",
+        "findings": [],
+        "channels": [],
+        "reasons": [
+          "Independent reference acquisition is required"
+        ],
+        "uncertainty": "Fixed 99% familywise Bonferroni t-interval policy over at most 63 planned comparisons; deterministic decisions under synthetic replicate assumptions, not calibrated causal probabilities."
+      },
+      "plan": {
+        "kind": "reference_check",
+        "reason": "Acquire independent reference readings before choosing an intervention",
+        "competing_predictions": [
+          "Process: primary and witness depart together",
+          "Sensor bias: primary/witness disagree",
+          "Normal: both remain inside the quiet band"
+        ]
+      },
+      "limitations": [
+        "Coupled pedagogical model, not field-validated physics or a calibrated twin",
+        "Only motor-temperature, vibration and discharge-pressure are projected to the existing verifier",
+        "Channel-level support is not unique identification of bearing, alignment or cavitation failure",
+        "96 synthetic instrument replicates of fixed before/after states, not recorded independent industrial trials",
+        "Counterfactual experiments do not overwrite observed history; no physical actuation",
+        "Digest/replay consistency is not authentication of an external source"
+      ],
+      "report_hash": "fa7825f44e380a164c9f1b47952756dec0edeffd033e07778ff4c0306014203c"
+    }
+  }
+}

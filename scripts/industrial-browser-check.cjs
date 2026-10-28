@@ -26,7 +26,10 @@ const fs = require("node:fs");
     "process",
   ];
   try {
+    const selected = process.env.FORGE_INDUSTRIAL_SCENARIO;
+    if (selected && !cases.includes(selected)) throw Error("Unknown scenario filter");
     for (const [index, scenario] of cases.entries()) {
+      if (selected && selected !== scenario) continue;
       const width = scenario === "pressure_sensor" ? 390 : 1440;
       const context = await browser.newContext({
         viewport: { width, height: 1000 },

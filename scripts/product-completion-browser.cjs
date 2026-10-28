@@ -21,7 +21,10 @@ const fs = require("node:fs");
   ];
   const results = [];
   try {
+    const selected = process.env.FORGE_LIBRARY_CASE;
+    if (selected && !cases.some(([id]) => id === selected)) throw Error("Unknown library case filter");
     for (const [id, title, port] of cases) {
+      if (selected && selected !== id) continue;
       const context = await browser.newContext({
         viewport: {
           width: id === "vibration_response" ? 390 : 1440,

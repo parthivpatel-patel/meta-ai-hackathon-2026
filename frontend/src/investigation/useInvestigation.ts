@@ -30,8 +30,21 @@ export async function boundedFetch(path: string, init: RequestInit = {}) {
     clearTimeout(timer);
   }
 }
-function savedSessionID() {try{return localStorage.getItem("forge-sequential-session");}catch{return null;}}
-function rememberSessionID(id: string | null) {try{if(id)localStorage.setItem("forge-sequential-session",id);else localStorage.removeItem("forge-sequential-session");}catch{/* Storage denial must not turn a successful server action into a retry. */}}
+function savedSessionID() {
+  try {
+    return localStorage.getItem("forge-sequential-session");
+  } catch {
+    return null;
+  }
+}
+function rememberSessionID(id: string | null) {
+  try {
+    if (id) localStorage.setItem("forge-sequential-session", id);
+    else localStorage.removeItem("forge-sequential-session");
+  } catch {
+    /* Storage denial must not turn a successful server action into a retry. */
+  }
+}
 export function useInvestigation() {
   const [cap, setCap] = useState<Capabilities | null>(null);
   const [scenarios, setScenarios] = useState<{ id: string; title: string }[]>(
@@ -48,6 +61,8 @@ export function useInvestigation() {
   const [reload, setReload] = useState(0);
   const [useMeta, setUseMeta] = useState(false);
   const controller = useRef<AbortController | null>(null);
+  const activeOperation = useRef(false);
+  const generation = useRef(0);
   async function call(path: string, body?: object, signal?: AbortSignal) {
     const response = await boundedFetch(path, {
       method: body ? "POST" : "GET",
@@ -76,27 +91,37 @@ export function useInvestigation() {
     return response.json();
   }
   useEffect(() => {
+    controller.current?.abort();
+    activeOperation.current = false;
+    setBusy(false);
     const abort = new AbortController();
+    const revision = ++generation.current;
     setError("");
     Promise.all([
       call("/api/v3/capabilities", undefined, abort.signal),
       call("/api/v3/scenarios", undefined, abort.signal),
     ])
       .then(async ([c, list]) => {
+        if (abort.signal.aborted || generation.current !== revision) return;
         setCap(c);
         setScenarios(list);
         setAuthRequired(false);
         const saved = savedSessionID();
         if (saved) {
           try {
-            setSession(
-              await call("/api/v3/sessions/" + saved, undefined, abort.signal),
+            const restored = await call(
+              "/api/v3/sessions/" + saved,
+              undefined,
+              abort.signal,
             );
+            if (!abort.signal.aborted && generation.current === revision)
+              setSession(restored);
           } catch (e) {
+            if (abort.signal.aborted || generation.current !== revision) return;
             if (e instanceof ApiError && e.status === 404) {
               rememberSessionID(null);
               setError(
-                "Your saved investigation is no longer available. The demo may have restarted. Choose a new case; downloaded reports can still be checked offline.",
+                "Your saved investigation is no longer available. The demo may have restarted. Restore a browser checkpoint or choose a new case; downloaded reports can still be checked offline.",
               );
             } else {
               setError(
@@ -109,7 +134,8 @@ export function useInvestigation() {
         }
       })
       .catch((e) => {
-        if (!abort.signal.aborted) setError(e.message);
+        if (!abort.signal.aborted && generation.current === revision)
+          setError(e.message);
       });
     return () => {
       abort.abort();
@@ -117,6 +143,9 @@ export function useInvestigation() {
     };
   }, [reload]);
   async function act(create = false) {
+    if (activeOperation.current) return;
+    activeOperation.current = true;
+    generation.current++;
     controller.current?.abort();
     const abort = new AbortController();
     controller.current = abort;
@@ -143,27 +172,49 @@ export function useInvestigation() {
             : "The server could not be reached. Check your connection and try again.",
         );
     } finally {
-      if (!abort.signal.aborted) setBusy(false);
+      if (controller.current === abort) {
+        activeOperation.current = false;
+        if (!abort.signal.aborted) setBusy(false);
+      }
     }
   }
   async function restore() {
+    if (activeOperation.current) return;
+    activeOperation.current = true;
+    generation.current++;
+    controller.current?.abort();
+    const abort = new AbortController();
+    controller.current = abort;
     setBusy(true);
     setError("");
     try {
-      const id =
-        session?.id || savedSessionID();
-      if (id) setSession(await call("/api/v3/sessions/" + id));
+      const id = session?.id || savedSessionID();
+      if (id) {
+        const result = await call(
+          "/api/v3/sessions/" + id,
+          undefined,
+          abort.signal,
+        );
+        if (!abort.signal.aborted && controller.current === abort)
+          setSession(result);
+      }
     } catch (e) {
-      setError(
-        e instanceof Error
-          ? e.message
-          : "The saved investigation could not be loaded. Try again.",
-      );
+      if (!abort.signal.aborted)
+        setError(
+          e instanceof Error
+            ? e.message
+            : "The saved investigation could not be loaded. Restore a browser checkpoint or choose another case.",
+        );
     } finally {
-      setBusy(false);
+      if (controller.current === abort) {
+        activeOperation.current = false;
+        setBusy(false);
+      }
     }
   }
+
   async function download(format: "json" | "html") {
+    const revision = generation.current;
     setError("");
     try {
       const r = await boundedFetch(
@@ -179,6 +230,7 @@ export function useInvestigation() {
           "The report is not available yet. Finish the investigation, then try again.",
         );
       const blob = await r.blob();
+      if (generation.current !== revision) return;
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
@@ -186,6 +238,7 @@ export function useInvestigation() {
       a.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch (e) {
+      if (generation.current !== revision) return;
       setError(
         e instanceof Error
           ? e.message
@@ -194,18 +247,47 @@ export function useInvestigation() {
     }
   }
   async function recoverLocal(snapshot: Session) {
-    if(busy) throw Error("Operation pending");
-    controller.current?.abort();const abort=new AbortController();controller.current=abort;setBusy(true);
+    if (busy || activeOperation.current) throw Error("Operation pending");
+    activeOperation.current = true;
+    generation.current++;
+    controller.current?.abort();
+    const abort = new AbortController();
+    controller.current = abort;
+    setBusy(true);
     try {
-      const result=await call("/api/v6/recover",{session:snapshot},abort.signal);
-      if(abort.signal.aborted || controller.current!==abort)throw Error("Recovery interrupted");
-      if(!result.session || result.recovery?.model_requests!==0 || result.recovery?.future_experiments_executed!==0 || result.recovery?.source_authentication!==false)throw Error("Invalid recovery response");
-      checkpoint("library",{session:result.session});
-      const strip=(s:Session)=>Object.fromEntries(Object.entries(s).filter(([key])=>!["id","version"].includes(key)));
-      if(canonical(strip(snapshot))!==canonical(strip(result.session)))throw Error("Recovery changed recorded evidence");
-      setSession(result.session);rememberSessionID(result.session.id);setError("");
-      setRecoveryNotice(`Independently reproduced browser checkpoint ${snapshot.id} version ${snapshot.version} in a new temporary session. Past observations and test records are preserved; source authentication is not established.`);
-    } finally {if(controller.current===abort)setBusy(false);}
+      const result = await call(
+        "/api/v6/recover",
+        { session: snapshot },
+        abort.signal,
+      );
+      if (abort.signal.aborted || controller.current !== abort)
+        throw Error("Recovery interrupted");
+      if (
+        !result.session ||
+        result.recovery?.model_requests !== 0 ||
+        result.recovery?.future_experiments_executed !== 0 ||
+        result.recovery?.source_authentication !== false
+      )
+        throw Error("Invalid recovery response");
+      checkpoint("library", { session: result.session });
+      const strip = (s: Session) =>
+        Object.fromEntries(
+          Object.entries(s).filter(([key]) => !["id", "version"].includes(key)),
+        );
+      if (canonical(strip(snapshot)) !== canonical(strip(result.session)))
+        throw Error("Recovery changed recorded evidence");
+      setSession(result.session);
+      rememberSessionID(result.session.id);
+      setError("");
+      setRecoveryNotice(
+        `Independently reproduced browser checkpoint ${snapshot.id} version ${snapshot.version} in a new temporary session. Past observations and test records are preserved; source authentication is not established.`,
+      );
+    } finally {
+      if (controller.current === abort) {
+        activeOperation.current = false;
+        setBusy(false);
+      }
+    }
   }
   return {
     recoverLocal,

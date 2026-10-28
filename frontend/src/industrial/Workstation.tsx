@@ -18,6 +18,8 @@ import {
   ReportPreview,
   TrialComparison,
 } from "./WorkspacePanels";
+import { investigationProgress } from "../investigation/progress";
+import { InvestigationProgress } from "../investigation/InvestigationProgress";
 import { RecoveryPanel } from "./RecoveryPanel";
 import {
   validateCheckpoint,
@@ -76,7 +78,7 @@ class RenderBoundary extends ReactComponent<
     );
   }
 }
-function download(name: string, text: string, type = "application/json") {
+function saveDownload(name: string, text: string, type = "application/json") {
   const a = document.createElement("a");
   const u = URL.createObjectURL(new Blob([text], { type }));
   a.href = u;
@@ -111,6 +113,24 @@ export default function Workstation({
   const [replayed, setReplayed] = useState(false);
   const [report, setReport] = useState<Report | null>(null);
   const [preparedHash, setPreparedHash] = useState("");
+  function download(name: string, text: string, type = "application/json") {
+    try {
+      saveDownload(name, text, type);
+    } catch {
+      setError(
+        "Download unavailable. Allow browser downloads and retry; the investigation is preserved. You can also save a browser checkpoint.",
+      );
+    }
+  }
+  const progress = report
+    ? investigationProgress({
+        status: report.decision.status,
+        completed: report.trials.length,
+        maximum: 4,
+        hasPlan: !!report.plan,
+      })
+    : null;
+
   const inFlight = useRef(false);
   const [graphics2D, setGraphics2D] = useState(false);
   const [preview, setPreview] = useState<Frame | null>(null);
@@ -137,12 +157,21 @@ export default function Workstation({
   const [visible, setVisible] = useState(!document.hidden);
   const request = useRef<AbortController | null>(null);
   async function post<T>(url: string, body: unknown): Promise<T> {
-    const response = await boundedFetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-      signal: request.current?.signal,
-    });
+    let response: Response;
+    try {
+      response = await boundedFetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        signal: request.current?.signal,
+      });
+    } catch (e) {
+      if (request.current?.signal.aborted) throw e;
+      throw Error(
+        (e instanceof Error ? e.message : "Backend unavailable.") +
+          " Check the server connection or wait for the free host to wake. Your current investigation is preserved; restore it before retrying an interrupted test.",
+      );
+    }
     if (!response.ok)
       throw Error(
         response.status === 429
@@ -292,7 +321,14 @@ export default function Workstation({
     setPreview(null);
   }
   async function diagnose(next = false) {
-    if (!recording || busy || inFlight.current || (!next && preview)) return;
+    if (
+      !recording ||
+      busy ||
+      inFlight.current ||
+      (!next && preview) ||
+      (next && !progress?.canExecute)
+    )
+      return;
     inFlight.current = true;
     const operation = request.current;
     setBusy(true);
@@ -780,7 +816,38 @@ export default function Workstation({
           </div>
         </details>
       </div>
-      {tab !== "Machine" && <InstrumentStrip frame={frame} />}
+      {preview && tab !== "Machine" && (
+        <div className="station-panel">
+          <p>
+            Counterfactual test results are displayed. New observed evidence
+            capture and simulation playback are unavailable in this view; the
+            existing investigation remains resumable.
+          </p>
+          <button onClick={() => setPreview(null)}>
+            Return to observed simulation
+          </button>
+        </div>
+      )}
+      {replayed && (
+        <p className="muted">
+          Imported replay: simulation controls and new diagnostic capture are
+          unavailable because this recording has no intervention oracle.
+          Inspect/export it or choose another case.
+        </p>
+      )}
+      {busy && (
+        <p role="status">
+          A bounded operation is pending. Simulation changes and additional test
+          execution are disabled until it finishes; view navigation preserves
+          the active report.
+        </p>
+      )}
+      {tab !== "Machine" && (
+        <InstrumentStrip
+          frame={frame}
+          mode={preview ? "counterfactual" : replayed ? "imported" : "observed"}
+        />
+      )}
       <nav
         className="station-tabs"
         aria-label="Workstation views"
@@ -945,7 +1012,7 @@ export default function Workstation({
           <strong>
             {!report
               ? "Inspect → capture → compare → test → verify"
-              : `${report.trials.length} / 4 tests · ${resultLabel(report.decision.status)}`}
+              : `${report.trials.length} / 4 tests · ${progress?.terminal ? "Investigation complete · " : ""}${resultLabel(report.decision.status)}`}
           </strong>
           <span>
             {report
@@ -977,15 +1044,34 @@ export default function Workstation({
         ) : (
           <button
             className="primary-action"
-            onClick={() => setTab(report.plan ? "Experiments" : "Verification")}
+            onClick={() =>
+              setTab(
+                progress?.code === "invalid"
+                  ? "Evidence"
+                  : progress?.terminal
+                    ? tab === "Reports"
+                      ? "Machine"
+                      : "Reports"
+                    : "Experiments",
+              )
+            }
           >
-            {report.plan
-              ? "Resume investigation: review proposed experiment"
-              : "Resume investigation: review verified findings"}
+            {progress?.code === "invalid"
+              ? "Review or restore evidence"
+              : progress?.terminal
+                ? tab === "Reports"
+                  ? "Return to machine"
+                  : "Review and export report"
+                : "Resume investigation: review proposed experiment"}
           </button>
         )}
       </div>
-      {tab === "Machine" && <InstrumentStrip frame={frame} />}
+      {tab === "Machine" && (
+        <InstrumentStrip
+          frame={frame}
+          mode={preview ? "counterfactual" : replayed ? "imported" : "observed"}
+        />
+      )}
       {(tab === "Machine" || tab === "Telemetry") && (
         <section className="station-panel">
           <h2>
@@ -1007,6 +1093,12 @@ export default function Workstation({
             missing readings are omitted. Watch conditions do not establish a
             failure. The displayed vertical range follows the visible samples.
           </p>
+          {!sensors.length && (
+            <p>
+              No instruments are mapped to this component. Select an
+              instrumented component to examine telemetry.
+            </p>
+          )}
           {sensors.slice(0, 3).map((s) => {
             const rows = preview
               ? [
@@ -1020,8 +1112,14 @@ export default function Workstation({
               const v = f.readings.find((r) => r.sensor_id === s.id)?.value;
               return v == null ? [] : [v];
             });
-            const low = values.length ? Math.min(...values) : 0;
-            const high = values.length ? Math.max(...values) : 1;
+            const minimum = values.length ? Math.min(...values) : 0;
+            const maximum = values.length ? Math.max(...values) : 1;
+            const constant = values.length > 0 && minimum === maximum;
+            const padding = constant
+              ? Math.max(Math.abs(minimum) * 0.01, 0.01)
+              : 0;
+            const low = minimum - padding;
+            const high = maximum + padding;
             const span = Math.max(high - low, 0.01);
             return (
               <figure key={s.id}>
@@ -1039,6 +1137,13 @@ export default function Workstation({
                   {replayed
                     ? "Baseline unavailable for unverified recording."
                     : `Initial observed reading: ${recording.frames[0]?.readings.find((r) => r.sensor_id === s.id)?.value?.toFixed(2) ?? "Missing"} ${s.unit}. Display comparison only; no failure proof.`}
+                </p>
+                <p className="muted">
+                  {!values.length
+                    ? "No valid readings in this window; missing values are not interpolated."
+                    : constant
+                      ? "Constant series; the scale is padded for readability, not an uncertainty interval."
+                      : `${rows.length - values.length} missing readings; valid readings are shown without interpolation.`}
                 </p>
                 <svg
                   viewBox="0 0 360 140"
@@ -1171,6 +1276,44 @@ export default function Workstation({
                                 )?.rationale
                               }
                             </p>
+                            <p>
+                              <strong>Supporting observations:</strong>{" "}
+                              {r.evidence_status === "SUPPORTED"
+                                ? "Independent test evidence supports this channel-level candidate within the synthetic assumptions."
+                                : "No complete support established for this candidate."}
+                            </p>
+                            <p>
+                              <strong>Contradictory observations:</strong>{" "}
+                              {r.evidence_status === "CONTRADICTED"
+                                ? "The independent evidence contradicts this candidate; review channel reasons below."
+                                : "No candidate-specific contradiction is established by this status; absence is not proof of the mechanism."}
+                            </p>
+                            <p>
+                              <strong>Missing evidence:</strong>{" "}
+                              {["NEEDS_TEST", "UNRESOLVED"].includes(
+                                r.evidence_status,
+                              )
+                                ? "Discriminating evidence is missing or unresolved; do not infer a physical diagnosis."
+                                : "Channel-level verification cannot establish a unique physical component failure."}
+                            </p>
+                            <p>
+                              {(report.decision.channels || [])
+                                .filter(
+                                  (c) =>
+                                    r.hypothesis_id === "normal" ||
+                                    r.hypothesis_id.endsWith("-" + c.channel),
+                                )
+                                .flatMap((c) => c.reasons)
+                                .join(" ") || report.decision.reasons.join(" ")}
+                            </p>
+                            <p>
+                              <strong>Discriminating experiment:</strong>{" "}
+                              {report.plan
+                                ? testName(report.plan.kind) +
+                                  ". " +
+                                  report.plan.reason
+                                : "No eligible next experiment under the terminal policy; review verification and limitations."}
+                            </p>
                             <p>References: {r.evidence_refs.join(", ")}</p>
                           </details>
                         </td>
@@ -1181,7 +1324,8 @@ export default function Workstation({
                 </table>
               )}
               {(tab === "Investigation" || tab === "Experiments") &&
-                report.plan && (
+                report.plan &&
+                progress?.canExecute && (
                   <>
                     <h3>Proposed test: {testName(report.plan.kind)}</h3>
                     <p>{report.plan.reason}</p>
@@ -1204,6 +1348,14 @@ export default function Workstation({
                     </button>
                   </>
                 )}
+              <InvestigationProgress
+                status={report.decision.status}
+                completed={report.trials.length}
+                maximum={4}
+                hasPlan={!!report.plan}
+                reasons={report.decision.reasons}
+              />
+
               <TrialComparison report={report} recording={recording} />
               <h3>Independent verification</h3>
               <p>{report.decision.uncertainty}</p>
@@ -1241,6 +1393,9 @@ export default function Workstation({
               <button
                 disabled={busy}
                 onClick={async () => {
+                  if (busy || inFlight.current) return;
+                  inFlight.current = true;
+                  const operation = request.current;
                   setBusy(true);
                   setError("");
                   try {
@@ -1259,17 +1414,28 @@ export default function Workstation({
                     );
                     if (!response.ok)
                       throw Error("HTML export failed. Wait and retry.");
-                    download(
-                      "forge-industrial-report.html",
-                      await response.text(),
-                      "text/html",
-                    );
+                    const text = await response.text();
+                    if (
+                      operation?.signal.aborted ||
+                      request.current !== operation
+                    )
+                      return;
+                    download("forge-industrial-report.html", text, "text/html");
                   } catch (e) {
-                    setError(
-                      e instanceof Error ? e.message : "Export unavailable",
-                    );
+                    if (
+                      !operation?.signal.aborted &&
+                      request.current === operation
+                    )
+                      setError(
+                        e instanceof Error
+                          ? e.message
+                          : "Export unavailable; retry or use the JSON report.",
+                      );
                   } finally {
-                    setBusy(false);
+                    if (request.current === operation) {
+                      inFlight.current = false;
+                      setBusy(false);
+                    }
                   }
                 }}
               >

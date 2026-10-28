@@ -22,6 +22,7 @@ import {
   sourceLabel,
   type Stage,
 } from "./investigation/presentation";
+import { InvestigationProgress } from "./investigation/InvestigationProgress";
 import { RecoveryPanel } from "./industrial/RecoveryPanel";
 import { LegacyMachine } from "./industrial/LegacyMachine";
 import type { LibraryCheckpoint, Checkpoint } from "./industrial/recovery";
@@ -356,6 +357,7 @@ export default function DemoConsole({
                   {guide.text}
                 </Guide>
               </div>
+              {["Tests", "Results", "Report"].includes(stage) && <InvestigationProgress status={session.decision.status} completed={session.trials.length} maximum={session.max_experiments ?? 4} hasPlan={!!session.plan} selectionPending={session.status === "OBSERVED" || session.status === "HYPOTHESES_READY"} reasons={session.decision.reasons} />}
               <div className="analysis-footer">
                 <ShieldCheck size={17} aria-hidden="true" />
                 <span>{sourceLabel(session.model_source)}.</span>

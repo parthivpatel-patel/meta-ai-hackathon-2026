@@ -16,6 +16,7 @@ from ..phase3.service import rank, select
 from ..phase3.verification import verify
 from ..simulation import Measurement
 from .model import COMPONENTS, Recipe, simulate
+from .presentation import render_progress
 
 
 class CoupledTrial(Trial):
@@ -219,7 +220,9 @@ def render(report):
             "<li>" + escape(e["action"]) + ": " + escape(e["verification"]) + "</li>"
             for e in report["events"]
         )
-        + "</ul><h2>Uncertainty</h2><p>"
+        + "</ul>"
+        + render_progress(report)
+        + "<h2>Uncertainty</h2><p>"
         + escape(report["decision"]["uncertainty"])
         + "</p><h2>Limitations</h2><ul>"
         + "".join("<li>" + escape(x) + "</li>" for x in report["limitations"])

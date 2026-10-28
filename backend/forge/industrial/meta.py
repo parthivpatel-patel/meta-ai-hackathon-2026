@@ -161,6 +161,8 @@ def advance(report: dict) -> dict:
 
 
 def render(report: dict) -> str:
+    from .presentation import render_progress
+
     r = replay(report)
     esc = lambda value: html.escape(str(value))
     return (
@@ -175,7 +177,9 @@ def render(report: dict) -> str:
             "<li>" + esc(h["hypothesis_id"]) + ": " + esc(h["rationale"]) + "</li>"
             for h in r["hypotheses"]["hypotheses"]
         )
-        + "</ul><h2>Limitations</h2><ul>"
+        + "</ul>"
+        + render_progress(r)
+        + "<h2>Limitations</h2><ul>"
         + "".join("<li>" + esc(x) + "</li>" for x in r["limitations"])
         + '</ul><details><summary>Complete reproduction evidence</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">'
         + esc(json.dumps(r, indent=2))

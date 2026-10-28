@@ -1,0 +1,92 @@
+{
+  "width": 1366,
+  "scenario": "misalignment",
+  "checks": [
+    {
+      "view": "observed-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "one-test-resumed",
+      "axe_violations": 0
+    },
+    {
+      "recovery": "one-test refresh",
+      "report_hash": "8e8ee36f7ce1f1fb2d3d9396c322e14b58a7cc784fe0a682503307e21e55832c",
+      "additional_tests": 0
+    },
+    {
+      "view": "terminal-explained",
+      "axe_violations": 0
+    },
+    {
+      "view": "report-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "unavailable-backend-preserves-report",
+      "axe_violations": 0
+    },
+    {
+      "failure": "invalid schema",
+      "preserved": true
+    }
+  ],
+  "timings": [
+    {
+      "action": "initial_controls_ready",
+      "ms": 1022
+    },
+    {
+      "action": "capture",
+      "ms": 165
+    },
+    {
+      "action": "explicit_test_1",
+      "ms": 158
+    },
+    {
+      "action": "explicit_test_2",
+      "ms": 188
+    },
+    {
+      "action": "explicit_test_3",
+      "ms": 222
+    },
+    {
+      "action": "explicit_test_4",
+      "ms": 288
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "heap_before_bytes": 9822261,
+  "heap_after_bytes": 41126083,
+  "renderer": {
+    "engine": "three.js r180",
+    "renderCount": "5",
+    "drawCalls": "57",
+    "triangles": "19138",
+    "rotorPhase": "0",
+    "reducedMotion": "true"
+  },
+  "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance",
+  "report_hash": "23794ed38fb075ea57a1901209f1ed1e396bbf89eff5f99c6908e2f56e6c2d33",
+  "trials": 4,
+  "status": "INCONCLUSIVE",
+  "post_paths": [
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/report.html",
+    "/api/v4/investigate"
+  ],
+  "genuine_requests": 0
+}
