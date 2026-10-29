@@ -41,7 +41,7 @@ class CreateRequest(Record):
     assets: EvidenceBundle | None = None
     metadata: Metadata = Metadata()
     use_meta: bool = False
-    max_experiments: int = Field(default=4, ge=1, le=4)
+    max_experiments: int = Field(default=4, ge=1, le=4, strict=True)
 
 
 class AdvanceRequest(Record):

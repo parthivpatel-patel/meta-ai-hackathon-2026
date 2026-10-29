@@ -128,7 +128,7 @@ class Session(Record):
     plan: Plan | None = None
     trials: list[Trial] = Field(default_factory=list, max_length=4)
     decision: SequentialDecision
-    max_experiments: int = Field(default=4, ge=1, le=4)
+    max_experiments: int = Field(default=4, ge=1, le=4, strict=True)
     events: list[Event]
     verification_scope: str = "Telemetry plus controlled synthetic interventions. Thermal/waveform evidence is descriptive context, not cross-modal causal proof."
     uncertainty_policy: str = "Fixed familywise interval policy, not a posterior probability; ranking is ordinal. No physical-world cause is established."

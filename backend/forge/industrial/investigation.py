@@ -33,7 +33,7 @@ class Context(Record):
 class InvestigationRequest(Record):
     recipe: Recipe = Recipe()
     context: Context = Context()
-    experiments: int = Field(default=0, ge=0, le=4)
+    experiments: int = Field(default=0, ge=0, le=4, strict=True)
 
 
 def project(frame, true=False):
