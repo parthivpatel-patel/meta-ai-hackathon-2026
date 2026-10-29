@@ -22,6 +22,9 @@ vi.mock("../DemoConsole", () => ({
     return <button onClick={() => setN((v) => v + 1)}>Library test {n}</button>;
   },
 }));
+vi.mock("./RecordedMeta", () => ({ default: ({ onReturn }: {onReturn:()=>void}) => <div>
+  <h1>Recorded Meta investigation</h1><button onClick={onReturn}>Return to existing workspace</button>
+</div> }));
 afterEach(() => {
   cleanup();
   history.replaceState(null, "", "/demo");
@@ -50,4 +53,33 @@ it("does not let a completed hidden-workspace action navigate another case famil
  render(<Shell/>);fireEvent.click(await screen.findByRole("button",{name:"Delayed report navigation"}));
  fireEvent.click(screen.getByRole("button",{name:"Cases"}));fireEvent.click(screen.getByRole("button",{name:"Investigation library"}));
  await new Promise(resolve=>setTimeout(resolve,80));expect(screen.getByRole("button",{name:"Cases"})).toHaveAttribute("aria-current","page");
+});
+
+it("preserves a captured machine while the recorded case is open and suspends playback", async () => {
+  render(<Shell />);
+  fireEvent.click(await screen.findByRole("button", {name:"Capture 0"}));
+  fireEvent.click(screen.getByRole("button", {name:"Recorded Meta"}));
+  expect(await screen.findByRole("heading", {name:"Recorded Meta investigation"})).toBeVisible();
+  expect(screen.getByText("Machine active: false")).toBeInTheDocument();
+  expect(location.search).toBe("?view=recorded-meta");
+  fireEvent.click(screen.getByRole("button", {name:"Return to existing workspace"}));
+  expect(screen.getByRole("button", {name:"Capture 1"})).toBeVisible();
+  expect(screen.getByText("Machine active: true")).toBeInTheDocument();
+});
+
+it("opens the recorded deep link without initializing an unrelated pump capture", async () => {
+  history.replaceState(null,"","/demo?view=recorded-meta");
+  render(<Shell />);
+  expect(await screen.findByRole("heading", {name:"Recorded Meta investigation"})).toBeVisible();
+  expect(screen.queryByText("Capture 0")).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", {name:"Machine"}));
+  expect(await screen.findByRole("button", {name:"Capture 0"})).toBeVisible();
+});
+
+it("does not let a hidden machine completion steal recorded-case navigation", async () => {
+  render(<Shell />);
+  fireEvent.click(await screen.findByRole("button", {name:"Delayed report navigation"}));
+  fireEvent.click(screen.getByRole("button", {name:"Recorded Meta"}));
+  await new Promise(resolve=>setTimeout(resolve,80));
+  expect(screen.getByRole("button", {name:"Recorded Meta"})).toHaveAttribute("aria-current","page");
 });

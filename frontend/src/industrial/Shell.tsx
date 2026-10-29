@@ -3,6 +3,7 @@ import "./workstation.css";
 import DemoConsole from "../DemoConsole";
 import { modes } from "./recovery";
 const Workstation = lazy(() => import("./Workstation"));
+const RecordedMeta = lazy(() => import("./RecordedMeta"));
 class WorkspaceBoundary extends Component<
   { children: ReactNode },
   { failed: boolean }
@@ -38,12 +39,15 @@ const pumpCases = {
 export default function Shell() {
   const legacy =
     new URLSearchParams(location.search).get("view") === "investigations";
+  const recorded = new URLSearchParams(location.search).get("view") === "recorded-meta";
   const [family, setFamily] = useState<"machine" | "library">(
     legacy ? "library" : "machine",
   );
   const currentFamily=useRef(family);currentFamily.current=family;
-  const [view, setView] = useState("Machine");
-  const [machineVisited, setMachineVisited] = useState(!legacy),
+  const [view, setView] = useState(recorded ? "Recorded Meta" : "Machine");
+  const currentView = useRef(view); currentView.current = view;
+  const [recordedVisited, setRecordedVisited] = useState(recorded);
+  const [machineVisited, setMachineVisited] = useState(!legacy && !recorded),
     [libraryVisited, setLibraryVisited] = useState(legacy);
   const [machineMode, setMachineMode] = useState("Machine"),
     [libraryMode, setLibraryMode] = useState("Machine");
@@ -67,8 +71,10 @@ export default function Shell() {
   }
   function navigate(mode: string) {
     setView(mode);
+    if (mode === "Recorded Meta") setRecordedVisited(true);
+    history.replaceState(null, "", mode === "Recorded Meta" ? "/demo?view=recorded-meta" : family === "library" ? "/demo?view=investigations" : "/demo");
     if (modes.includes(mode as (typeof modes)[number])) {
-      if (family === "machine") setMachineMode(mode);
+      if (family === "machine") { setMachineVisited(true); setMachineMode(mode); }
       else setLibraryMode(mode);
     }
   }
@@ -77,14 +83,14 @@ export default function Shell() {
       <header className="workstation-entry unified-brand">
         <strong>FORGE · Industrial intelligence</strong>
         <span>
-          {family === "machine"
+          {view === "Recorded Meta" ? "Reviewed recorded Meta / synthetic evidence" : family === "machine"
             ? "PUMP-104 / coupled simulation"
             : "Evidence case / synthetic library"}
         </span>
         <button onClick={() => navigate("Status")}>Status / About</button>
       </header>
       <nav className="unified-navigation" aria-label="Unified workspace">
-        {["Cases", ...modes].map((mode) => (
+        {["Cases", ...modes, "Recorded Meta"].map((mode) => (
           <button
             key={mode}
             aria-current={view === mode ? "page" : undefined}
@@ -119,6 +125,11 @@ export default function Shell() {
               Investigation library
             </button>
           </div>
+          <section className="station-panel">
+            <h2>Recorded genuine Meta investigation</h2>
+            <p>Review the genuine, previously recorded synthetic pressure/sensor case and replay its independent verification without any model requests. Your current workstation case is preserved.</p>
+            <button onClick={() => navigate("Recorded Meta")}>Open recorded Meta investigation</button>
+          </section>
           {family === "machine" && (
             <>
               <h2>Coupled pump cases</h2>
@@ -161,10 +172,10 @@ export default function Shell() {
             </p>
             <h3>Activation and provenance</h3>
             <p>
-              Private genuine Meta verification is not published by this public
-              app. The Phase 7 attempt remains subject to verified financial and
-              credential gates. A private successful smoke would not enable
-              public inference or establish workstation accuracy.
+              The Recorded Meta view publishes one reviewed genuine private
+              response with its own synthetic evidence and independent tests.
+              It is previously recorded, not live inference, and does not describe
+              a separately selected 3D pump capture.
             </p>
             <ul>
               <li>Deterministic rules: labeled on each investigation.</li>
@@ -178,8 +189,8 @@ export default function Shell() {
               </li>
               <li>
                 Genuine Meta verified privately / recorded genuine output:
-                require reviewed private evidence; no such success is asserted
-                by this screen.
+                are available only in the fixed reviewed Recorded Meta case.
+                Arbitrary imported source claims are not promoted to that status.
               </li>
               <li>
                 Provider unavailable or activation blocked: offline
@@ -206,21 +217,26 @@ export default function Shell() {
           </section>
         </main>
       )}
+      {recordedVisited && <div hidden={view !== "Recorded Meta"}>
+        <WorkspaceBoundary><Suspense fallback={<p role="status">Loading recorded investigation…</p>}>
+          <RecordedMeta onReturn={() => navigate(family === "machine" ? machineMode : libraryMode)} />
+        </Suspense></WorkspaceBoundary>
+      </div>}
       {libraryVisited && (
-        <div hidden={family !== "library" || view === "Status"}>
+        <div hidden={family !== "library" || view === "Status" || view === "Recorded Meta"}>
           <DemoConsole
             embedded
             workspaceMode={view === "Cases" ? "Cases" : libraryMode}
             onModeChange={(mode) => {
               setLibraryMode(mode);
-              if(currentFamily.current === "library")setView(mode);
+              if(currentFamily.current === "library" && currentView.current !== "Recorded Meta")setView(mode);
             }}
           />
         </div>
       )}
       {machineVisited && (
         <div
-          hidden={family !== "machine" || view === "Cases" || view === "Status"}
+          hidden={family !== "machine" || view === "Cases" || view === "Status" || view === "Recorded Meta"}
         >
           <WorkspaceBoundary>
             <Suspense
@@ -229,12 +245,12 @@ export default function Shell() {
               <Workstation
                 embedded
                 active={
-                  family === "machine" && view !== "Cases" && view !== "Status"
+                  family === "machine" && view !== "Cases" && view !== "Status" && view !== "Recorded Meta"
                 }
                 workspaceMode={machineMode}
                 onModeChange={(mode) => {
                   setMachineMode(mode);
-                  if (currentFamily.current === "machine") setView(mode);
+                  if (currentFamily.current === "machine" && currentView.current !== "Recorded Meta") setView(mode);
                 }}
                 caseRequest={caseRequest}
                 onOpenLibrary={() => choose("library")}

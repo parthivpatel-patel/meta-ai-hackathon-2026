@@ -1,4 +1,10 @@
-# Latest result — genuine private smoke verified
+# Latest result — reviewed recorded case integrated
+
+The owner authorized read-only integration and deployment of the validated genuine case. [Current release/evidence/dashboard handoff](RECORDED_DEMO_RELEASE.md) and [recording/submission instructions](RECORDED_DEMO_SCRIPT.md) supersede the integration plan below. The current candidate adds a separate hash-pinned pressure/sensor case inside the shared workstation navigation. It makes no model requests, preserves the 3D case, and keeps public live inference disabled. **Additional genuine requests 0; cumulative genuine requests 2.** Deployment has not been performed from this environment. The following milestones remain historical evidence.
+
+---
+
+# Genuine private smoke verified
 
 The separately authorized second request passed: HTTP200, exact event model, `stop`, three structured hypotheses and independent synthetic replay. **Cumulative genuine requests 2; both authorizations consumed; remaining requests 0.** See [actual evidence and minimal integration/release plan](SECOND_SMOKE.md). No public or coupled-workstation integration/deployment is claimed. The reports and counts below are historical milestones.
 

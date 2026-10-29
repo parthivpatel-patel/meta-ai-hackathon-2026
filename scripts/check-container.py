@@ -19,6 +19,44 @@ else:
     raise SystemExit(1)
 """
 
+RECORDED = """
+import hashlib,json,urllib.request,urllib.error
+base='http://127.0.0.1:7860/api/v3/recorded-meta'
+responses={}
+for suffix in ('','/report.json','/report.html','/replay'):
+    with urllib.request.urlopen(base+suffix,timeout=10) as r:
+        assert r.status == 200
+        assert r.headers['cache-control'] == 'no-store'
+        assert r.headers['x-content-type-options'] == 'nosniff'
+        assert r.headers['x-frame-options'] == 'DENY'
+        assert "default-src 'self'" in r.headers['content-security-policy']
+        assert not r.headers.get('access-control-allow-origin')
+        responses[suffix]=r.read(262145)
+        assert len(responses[suffix]) <= 262144
+    try:
+        urllib.request.urlopen(urllib.request.Request(base+suffix,data=b'{}',method='POST'),timeout=10)
+    except urllib.error.HTTPError as e:
+        assert e.code == 403
+    else:
+        raise AssertionError('Recorded evidence must be read-only')
+p=json.loads(responses[''])['provenance']
+assert p['source'] == 'meta_http_response' and p['mode'] == 'previously_recorded'
+assert p['synthetic'] is True and p['independently_verified'] is True
+assert p['public_live_inference_enabled'] is False
+assert p['model_id'] == 'meta-models/muse-spark-open-1026'
+sha=hashlib.sha256(responses['/report.json']).hexdigest()
+assert sha == p['artifact_sha256'] == '8cb36b2d182ac84657abbe07ba6230c7483dd115aeeed0478fee80a49c32b88f'
+report=json.loads(responses['/report.json'])['investigation']
+assert len(report['measurements']) == 120
+assert len(report['hypotheses']['hypotheses']) == 3 and len(report['trials']) == 2
+assert all(label.encode() in responses['/report.html'] for label in p['labels'])
+replay=json.loads(responses['/replay'])
+assert replay['verified'] is True and replay['status'] == 'SUPPORTED_SYNTHETIC'
+assert replay['findings'] == ['process-pressure','sensor-pressure']
+assert replay['network_requests_sent'] == replay['new_experiments_executed'] == 0
+print(json.dumps({'passed':True,'artifact_sha256':sha,'read_only_routes':4,'model_requests':0,'new_experiments':0}))
+"""
+
 
 def check(container: str, image: str | None, local_socket: bool = False) -> dict:
     docker_command = ["docker"] + (
@@ -79,6 +117,21 @@ def check(container: str, image: str | None, local_socket: bool = False) -> dict
         "non_root_image_user": int(uid) > 0 and owner not in ("", "root", "0", "0:0"),
         "scope": "Local image only, not an external HTTPS deployment",
     }
+    reviewed = subprocess.run(
+        [
+            *docker_command,
+            "exec",
+            container,
+            "/app/backend/.venv/bin/python",
+            "-c",
+            RECORDED,
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=45,
+    )
+    output["recorded_meta"] = json.loads(reviewed.stdout)
     if image:
         if not re.fullmatch(r"[a-z0-9][a-z0-9._/:-]{0,127}", image):
             raise ValueError("Invalid local image tag")
@@ -104,6 +157,7 @@ def check(container: str, image: str | None, local_socket: bool = False) -> dict
     output["passed"] = (
         output["non_root_image_user"]
         and audit["passed"]
+        and output["recorded_meta"]["passed"]
         and output.get("credential_bearing_public_start_refused", True)
     )
     return output

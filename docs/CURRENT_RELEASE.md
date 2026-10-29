@@ -1,6 +1,6 @@
-# Current Phase 9 — genuine private smoke verified
+# Current Phase 9 — reviewed recorded Meta integration
 
-The second private smoke against exact repair commit `c3075a376d288c0098fbe75189778ab8b10bd5e9` passed HTTP/model identity, structured hypotheses, provenance and independent numerical verification. [Actual result and minimal integration/release plan](phase-9-activation/SECOND_SMOKE.md). **Cumulative genuine requests 2; both authorizations consumed; no further inference authorized.** This evidence-only update does not change application code or the deployed public demo. Public inference remains disabled. Earlier sections below are historical snapshots, not current request allowances.
+Continue the existing branch from evidence `2cf71c6a87fdbbdda7ae40440648e4a2e5c87803` and repaired application `c3075a3`. The owner authorized integration/deployment of the reviewed, read-only recorded case. [Current release, evidence and exact dashboard/rollback steps](phase-9-activation/RECORDED_DEMO_RELEASE.md). The separate `/demo?view=recorded-meta` view preserves the coupled workstation and presents only the real case's own synthetic measurements. No public live inference. **Cumulative genuine requests 2; additional requests 0; both authorizations consumed.** No deployment performed from this environment; no Render access is configured. Earlier sections below are historical snapshots.
 
 ---
 

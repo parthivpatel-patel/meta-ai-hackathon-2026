@@ -815,3 +815,10 @@
 .investigation-progress { margin:1rem 0; padding:1rem; border:1px solid var(--line,#cbd8d8); border-left:3px solid #176d66; background:#f5f9f8; color:#193b40; overflow-wrap:anywhere; }
 .progress-counts { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr)); gap:1rem; }
 .progress-counts dt { font-size:.85rem; color:#416168; } .progress-counts dd { margin:.3rem 0 0; font-weight:600; }
+.recorded-labels {display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;}
+.recorded-labels li {padding:6px 10px;border:1px solid #91afa7;background:#eaf4ef;border-radius:4px;font-weight:600;}
+.recorded-meta .station-header {flex-wrap:wrap;}
+.recorded-meta dl,.recorded-meta dd {overflow-wrap:anywhere;min-width:0;}
+.recorded-meta dd {margin-left:0;}
+.recorded-meta .case-cards {margin-top:16px;}
+.recorded-meta summary {cursor:pointer;min-height:44px;padding:10px 0;}

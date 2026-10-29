@@ -2,11 +2,13 @@
 
 FORGE investigates abnormal equipment measurements by comparing possible causes, running controlled diagnostic tests and independently checking the results. The demonstration uses simulated industrial telemetry; it does not establish failures in real equipment.
 
-**[Open the public demonstration](https://forge-judge.onrender.com/demo)** · [Phase 8 release candidate](docs/phase-8-final/README.md) · [Documentation](docs/README.md)
+**[Open the public demonstration](https://forge-judge.onrender.com/demo)** · [Recorded Meta release candidate](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md) · [Documentation](docs/README.md)
 
 The candidate workstation at `/demo` connects a selectable 3D pump and motor to coupled synthetic telemetry, diagnostic captures, counterfactual tests and independently checked results. Use Cases → **Investigation library** (`/demo?view=investigations`) for the preserved seven-case workflow inside the shared navigation. The public URL may still run the earlier release; this branch has not been deployed.
 
-Current private activation status: [Phase 9 genuine smoke verified](docs/phase-9-activation/SECOND_SMOKE.md). The separately authorized second request returned HTTP 200, the exact event model and three valid hypotheses, then passed independent synthetic verification. Cumulative genuine requests: 2; both authorizations are consumed. No further request or public activation is authorized. Phase 8 diagnostic software is unchanged.
+The candidate adds **Recorded Meta** (`/demo?view=recorded-meta`): one reviewed, genuine, previously recorded synthetic pressure/sensor investigation with its own telemetry, three model hypotheses, two numerical tests, independent replay and JSON/HTML exports. It is separate from the selected 3D machine and does not change its capture/history. [Release evidence and dashboard instructions](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md) · [2–3-minute recording script](docs/phase-9-activation/RECORDED_DEMO_SCRIPT.md). The new public endpoints were not yet deployed when checked; a successful HTML route alone does not establish publication.
+
+The [genuine private smoke](docs/phase-9-activation/SECOND_SMOKE.md) returned HTTP 200, the exact event model and three valid hypotheses, then passed independent synthetic verification. Cumulative genuine requests: 2; both authorizations are consumed. This integration makes **zero additional requests**. Public live inference stays disabled. Phase 8 diagnostic algorithms are unchanged.
 
 ## Capabilities
 
@@ -18,7 +20,7 @@ Current private activation status: [Phase 9 genuine smoke verified](docs/phase-9
 - JSON/HTML reports with offline numerical replay, explicit stopping reasons and validated browser-local checkpoint recovery.
 - Four tests are a maximum: the default bearing case completes after two, while unresolved cases can legitimately exhaust the budget.
 
-The public demo uses **rules-based proposals, not live Meta inference**. The candidate can also replay explicitly labeled recorded proposals; fixture imports are never presented as genuine inference. A protected Baseten adapter targets `meta-models/muse-spark-open-1026`. Financial documentary review passed and the private key binding was ready. After the first response failed validation, a separately authorized second private smoke passed schema/provenance checks and independent numerical replay. This verifies one synthetic pressure/sensor investigation, not genuine Meta integration into the public or coupled 3D workstation. Both allowances are consumed. Provider credentials must never be added to the public server.
+Interactive pump cases use **rules-based proposals, not live Meta inference**. Only the new fixed **Recorded Meta** view presents the reviewed genuine response from `meta-models/muse-spark-open-1026`. It verifies one synthetic pressure/sensor investigation, not a different coupled-machine capture or physical equipment. Imported fixtures/source claims cannot replace this hash-pinned case or acquire its reviewed status. Provider credentials must never be added to the public server.
 
 ## Architecture
 
@@ -69,15 +71,15 @@ uv run --frozen python -m forge.industrial.replay /path/to/report.json
 uv run --frozen python -m forge.phase3.replay /path/to/report.json
 ```
 
-The [current validation evidence](docs/phase-8-final/validation.json) records expanded backend/frontend tests, machine and recorded-proposal browser journeys, preserved library regression, numerical evaluation, accessibility and production/security checks. See the [reproduction guide](docs/phase-8-final/VALIDATION.md) for exact commands and scopes. Baseline workstation evidence remains preserved under `docs/industrial/`. These checks do not certify industrial accuracy or complete accessibility.
+The [recorded-case release evidence](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md) adds full regression, focused desktop/mobile browser, integrity, accessibility and restricted production-container checks. The [Phase 8 validation](docs/phase-8-final/validation.json) and [reproduction guide](docs/phase-8-final/VALIDATION.md) remain preserved. These checks do not certify industrial accuracy or complete accessibility.
 
 ## Public demo and release limits
 
-The owner reports a Phase 7 deployment. Its actual Live SHA/settings/rollback artifact require dashboard verification; this Phase 8 candidate has not been deployed. Render Free can sleep when idle and lose SQLite state on spin-down, restart or deployment. Export JSON/HTML reports before relying on a session; keep a recorded demonstration independently. Availability through November 18 is a target, not a guarantee.
+The existing service is `forge-judge`. Its actual Live SHA/settings/rollback artifact require dashboard verification; this recorded-case candidate has not been deployed from this environment. Render Free can sleep when idle and lose SQLite state on spin-down, restart or deployment. The fixed recorded case is packaged in the image and survives loss of temporary sessions. Export other reports/checkpoints and keep the demonstration recording independently. Availability through November 18 is a target, not a guarantee.
 
 The equipment geometry and sensor locations are illustrative. Thermal/waveform evidence is descriptive context, not verified model vision/audio or physical causal proof. Public mode exposes bounded synthetic workflows, has no per-user account isolation and must not hold sensitive industrial data.
 
-See [security](SECURITY.md), [current release and rollback](docs/phase-8-final/RELEASE.md), [model activation gates](MODEL_ACTIVATION.md) and the [submission checklist](SUBMISSION_CHECKLIST.md). The development-window eligibility question remains [unresolved](docs/ELIGIBILITY_TIMING_REVIEW.md). Historical evidence, attribution and original Git timestamps are preserved; no organizer approval or completed submission is claimed.
+See [security](SECURITY.md), [current release and rollback](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md), [model activation gates](MODEL_ACTIVATION.md) and the [submission checklist](docs/phase-9-activation/RECORDED_DEMO_SCRIPT.md#final-submission-checklist). The development-window eligibility question remains [unresolved](docs/ELIGIBILITY_TIMING_REVIEW.md). Historical evidence, attribution and original Git timestamps are preserved; no organizer approval or completed submission is claimed.
 
 ## Unified workstation candidate (Phase 6)
 

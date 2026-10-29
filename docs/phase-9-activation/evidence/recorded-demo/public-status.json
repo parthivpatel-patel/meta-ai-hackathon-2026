@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-29T11:49:43.466111+00:00",
+  "read_only_requests": [
+    {
+      "path": "/api/v3/ready",
+      "error": "TimeoutError"
+    },
+    {
+      "path": "/api/v3/capabilities",
+      "error": "TimeoutError"
+    },
+    {
+      "path": "/api/v3/recorded-meta",
+      "status": 403
+    },
+    {
+      "path": "/api/v3/recorded-meta/report.json",
+      "status": 403
+    },
+    {
+      "path": "/demo?view=recorded-meta",
+      "status": 200,
+      "bytes": 466
+    }
+  ],
+  "inference_requests": 0,
+  "deployment_performed": false
+}

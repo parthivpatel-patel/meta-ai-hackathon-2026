@@ -55,6 +55,8 @@ Model suggestions are untrusted and independently assessed. Replay checks canoni
 
 Restricted public mode blocks legacy APIs, custom recipes/uploads and all inference. Private mode uses constant-time bearer comparison and a minimum32-character token; local mode must stay local. One-worker rate/resource caps, body limits, strict schemas, no CORS grants, CSP/security headers, escaped reports, parameterized SQLite and0600 database files protect the demo boundary. Opaque session IDs are not user authorization; only fixed public synthetic data belongs in public mode. SQLite state is unsigned, retention is logical24h, and process-local budgets reset on restart. No credentials were introduced. Dependency audits and security tests are recorded in docs/PHASE3.md; these checks do not constitute a penetration test or industrial certification.
 
+The reviewed recorded Meta case adds only four fixed GET paths under `/api/v3/recorded-meta`: metadata, JSON, escaped HTML and numerical replay. It accepts no replacement uploads or inference inputs. The immutable packaged artifact is hash-pinned in backend/browser; wrong, missing, symlinked or inconsistent evidence fails closed. The case is synthetic, previously recorded and separate from machine captures. Public inference remains disabled/budget0 with no provider/owner keys. [Recorded-case security/production evidence](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md) describes the bounded audit; hash/replay consistency is not a signed provider attestation.
+
 
 ## Phase4 deployment review
 

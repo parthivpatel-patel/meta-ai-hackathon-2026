@@ -1,0 +1,9 @@
+1440: observed-ready
+1440: one-test-resumed
+1440: respecting unchanged public write quota (after rapid checkpoint reproduction)
+1440: terminal-explained
+1440: report-ready
+1440: respecting unchanged public write quota (before actual browser restart)
+1440: browser-restart-restored
+1440: unavailable-backend-preserves-report
+{"passed":true,"width":1440,"scenario":"bearing","trials":2,"views":6,"genuine_requests":0}

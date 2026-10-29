@@ -1,0 +1,94 @@
+{
+  "width": 1440,
+  "scenario": "bearing",
+  "checks": [
+    {
+      "view": "observed-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "one-test-resumed",
+      "axe_violations": 0
+    },
+    {
+      "recovery": "one-test refresh",
+      "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+      "additional_tests": 0
+    },
+    {
+      "view": "terminal-explained",
+      "axe_violations": 0
+    },
+    {
+      "view": "report-ready",
+      "axe_violations": 0
+    },
+    {
+      "view": "browser-restart-restored",
+      "axe_violations": 0
+    },
+    {
+      "recovery": "actual persistent Chromium restart",
+      "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+      "additional_tests": 0
+    },
+    {
+      "view": "unavailable-backend-preserves-report",
+      "axe_violations": 0
+    },
+    {
+      "failure": "invalid schema",
+      "preserved": true
+    }
+  ],
+  "timings": [
+    {
+      "action": "initial_controls_ready",
+      "ms": 1395
+    },
+    {
+      "action": "capture",
+      "ms": 148
+    },
+    {
+      "action": "explicit_test_1",
+      "ms": 150
+    },
+    {
+      "action": "explicit_test_2",
+      "ms": 186
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "heap_before_bytes": 8726286,
+  "heap_after_bytes": 37685705,
+  "renderer": {
+    "engine": "three.js r180",
+    "renderCount": "4",
+    "drawCalls": "57",
+    "triangles": "19138",
+    "rotorPhase": "0",
+    "reducedMotion": "true"
+  },
+  "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance",
+  "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+  "trials": 2,
+  "status": "SUPPORTED_SYNTHETIC",
+  "post_paths": [
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate",
+    "/api/v4/report.html",
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate"
+  ],
+  "genuine_requests": 0
+}

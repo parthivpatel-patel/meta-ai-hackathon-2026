@@ -1,4 +1,4 @@
-> Historical manual-release guide for the pre-repair candidate. The latest private adapter changes and consumed attempt are in [response repair](RESPONSE_REPAIR.md). No deployment is authorized by that repair. The old image/SHA/runtime-delta statements below apply to their original candidate; do not use them as proof that a newer repair commit was built or deployed. Public no-inference configuration and rollback precautions remain required.
+> Historical manual-release guide for the pre-repair candidate. Use the [current recorded-case release guide](RECORDED_DEMO_RELEASE.md) for the owner-authorized read-only integration, final evidence and exact-commit dashboard deployment. The old image/SHA/runtime-delta statements below apply only to their original candidate. Public no-inference configuration and rollback precautions remain required.
 
 # Phase 9 exact-commit manual release
 

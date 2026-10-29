@@ -13,6 +13,7 @@ from pydantic import Field
 from ..engine.contracts import Record
 from ..phase2.evidence import EvidenceBundle, demo_assets
 from ..phase2.inference import get_provider
+from ..recorded import available as recorded_available
 from .oracle import Recipe
 from .reporting import export, render
 from .safety import settings
@@ -100,7 +101,8 @@ def ready():
     except (sqlite3.Error, OSError):
         database = False
     bundle = frontend_bundle_path().is_file()
-    ok = database and (settings().mode != "public" or bundle)
+    recorded = recorded_available()
+    ok = database and recorded and (settings().mode != "public" or bundle)
     return Response(
         json.dumps(
             {
@@ -108,6 +110,7 @@ def ready():
                 "storage": database,
                 "frontend_bundle": bundle,
                 "inference_required": False,
+                "recorded_meta_evidence": recorded,
             }
         ),
         status_code=200 if ok else 503,
@@ -129,6 +132,8 @@ def capabilities():
         if public
         else model_status["authenticated_response_received"],
         "model_configuration": "disabled" if public else model_status["status"],
+        "reviewed_recorded_meta_available": recorded_available(),
+        "recorded_meta_is_live": False,
         "max_experiments": 4,
         "replicates_per_experiment": 96,
         "uploads_permitted": not public,

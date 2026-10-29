@@ -1,0 +1,45 @@
+{
+  "width": 390,
+  "checks": [
+    {
+      "view": "recorded-replayed",
+      "axe_violations": 0
+    },
+    {
+      "view": "replay-failure-preserves-evidence",
+      "axe_violations": 0
+    },
+    {
+      "view": "machine-observed",
+      "axe_violations": 0
+    },
+    {
+      "view": "separate-machine-history-preserved",
+      "axe_violations": 0
+    },
+    {
+      "view": "tampered-evidence-fails-closed",
+      "axe_violations": 0
+    },
+    {
+      "exports": "JSON hash and HTML labels verified",
+      "reload_replay": true,
+      "independent_findings": [
+        "process-pressure",
+        "sensor-pressure"
+      ],
+      "machine_history_preserved": true,
+      "tamper_rejected": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "mutation_paths": [
+    "/api/v4/simulate",
+    "/api/v4/simulate",
+    "/api/v4/investigate",
+    "/api/v4/investigate"
+  ],
+  "genuine_requests": 0,
+  "scope": "Local production Chromium, software WebGL desktop; mobile viewport with forced accessible fallback. Not public HTTPS deployment evidence."
+}

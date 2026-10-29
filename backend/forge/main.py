@@ -223,3 +223,7 @@ app.include_router(recorded_model_router)
 from .experience.routes import router as experience_router
 
 app.include_router(experience_router)
+
+from .recorded_routes import router as reviewed_recorded_router
+
+app.include_router(reviewed_recorded_router)

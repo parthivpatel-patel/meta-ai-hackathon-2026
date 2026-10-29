@@ -272,3 +272,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+========================================================================
+Recorded Muse Spark Open investigation
+========================================================================
+Built with Muse Spark Open. Copyright (c) 2026 Meta Platforms, Inc.
+The model license and Exhibit A Usage Policy reference are included in
+/assets/MUSE_LICENSE_REFERENCE.txt. This app distributes a reviewed recorded
+synthetic investigation, not model weights. Public live inference is disabled.

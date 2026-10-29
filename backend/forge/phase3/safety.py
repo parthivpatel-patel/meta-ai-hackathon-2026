@@ -99,6 +99,10 @@ def public_path(method: str, path: str) -> bool:
                 "/api/v3/scenarios",
                 "/api/v4/catalog",
                 "/api/v5/model-status",
+                "/api/v3/recorded-meta",
+                "/api/v3/recorded-meta/replay",
+                "/api/v3/recorded-meta/report.json",
+                "/api/v3/recorded-meta/report.html",
             )
             or bool(re.fullmatch(r"/assets/[A-Za-z0-9][A-Za-z0-9_.-]*", path))
             or bool(

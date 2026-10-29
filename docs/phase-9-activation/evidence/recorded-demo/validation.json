@@ -1,0 +1,174 @@
+{
+  "recorded_local": "2026-10-29T07:54:32.652449-04:00",
+  "branch": "feature/forge-phase-9-meta-activation",
+  "base_evidence_commit": "2cf71c6a87fdbbdda7ae40440648e4a2e5c87803",
+  "tested_adapter_commit": "c3075a376d288c0098fbe75189778ab8b10bd5e9",
+  "interrupted_work_preserved": true,
+  "backend": {
+    "passed": 370,
+    "failed": 0
+  },
+  "frontend": {
+    "passed": 90,
+    "failed": 0
+  },
+  "typescript": "PASS",
+  "ruff": "PASS",
+  "vite_build": "PASS",
+  "docker_build": "PASS",
+  "local_image": "sha256:4007d70186993cd400daeecb5018eab10c679f777e7f2076c1ef2ca2b2db73ab",
+  "browser_viewports": [
+    1440,
+    390
+  ],
+  "focused_axe_views": 10,
+  "focused_axe_violations": 0,
+  "workstation_regression": {
+    "width": 1440,
+    "scenario": "bearing",
+    "checks": [
+      {
+        "view": "observed-ready",
+        "axe_violations": 0
+      },
+      {
+        "view": "one-test-resumed",
+        "axe_violations": 0
+      },
+      {
+        "recovery": "one-test refresh",
+        "report_hash": "d14c9048a6f7e614f22719999f68eed44337d73f63eff13099c7de611e27b614",
+        "additional_tests": 0
+      },
+      {
+        "view": "terminal-explained",
+        "axe_violations": 0
+      },
+      {
+        "view": "report-ready",
+        "axe_violations": 0
+      },
+      {
+        "view": "browser-restart-restored",
+        "axe_violations": 0
+      },
+      {
+        "recovery": "actual persistent Chromium restart",
+        "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+        "additional_tests": 0
+      },
+      {
+        "view": "unavailable-backend-preserves-report",
+        "axe_violations": 0
+      },
+      {
+        "failure": "invalid schema",
+        "preserved": true
+      }
+    ],
+    "timings": [
+      {
+        "action": "initial_controls_ready",
+        "ms": 1395
+      },
+      {
+        "action": "capture",
+        "ms": 148
+      },
+      {
+        "action": "explicit_test_1",
+        "ms": 150
+      },
+      {
+        "action": "explicit_test_2",
+        "ms": 186
+      }
+    ],
+    "errors": [],
+    "external": [],
+    "heap_before_bytes": 8726286,
+    "heap_after_bytes": 37685705,
+    "renderer": {
+      "engine": "three.js r180",
+      "renderCount": "4",
+      "drawCalls": "57",
+      "triangles": "19138",
+      "rotorPhase": "0",
+      "reducedMotion": "true"
+    },
+    "scope": "Local Chromium/software SwiftShader; viewport/touch emulation, not public cold-start latency or hardware GPU performance",
+    "report_hash": "0655dbd3f0ebe76c20bba41274713a7fd10984d73c455a94d645678f6f5557dc",
+    "trials": 2,
+    "status": "SUPPORTED_SYNTHETIC",
+    "post_paths": [
+      "/api/v4/simulate",
+      "/api/v4/simulate",
+      "/api/v4/investigate",
+      "/api/v4/investigate",
+      "/api/v4/simulate",
+      "/api/v4/simulate",
+      "/api/v4/investigate",
+      "/api/v4/investigate",
+      "/api/v4/report.html",
+      "/api/v4/simulate",
+      "/api/v4/simulate",
+      "/api/v4/investigate",
+      "/api/v4/investigate"
+    ],
+    "genuine_requests": 0
+  },
+  "additional_genuine_requests": 0,
+  "cumulative_genuine_requests": 2,
+  "remaining_request_authorizations": 0,
+  "public_live_inference_enabled": false,
+  "private_receipt_unchanged": true,
+  "first_ledger_unchanged": true,
+  "published_report_equals_validated_private_export": true,
+  "credential_pattern_scan": {
+    "files": 76,
+    "findings": [],
+    "scope": "Known credential/private-key patterns in changed source, compiled browser chunks and saved logs/artifacts; no actual credential was read for comparison"
+  },
+  "deployment": {
+    "performed": false,
+    "reason": "No Render identity, key, hook or authenticated deployment connector",
+    "public_origin": "https://forge-judge.onrender.com",
+    "recorded_route": "/demo?view=recorded-meta",
+    "recorded_api_observed_status": 403
+  },
+  "known_limits": [
+    "Synthetic mechanism only; no real industrial accuracy claim",
+    "Recorded genuine model proposals are not the separate rules-based coupled machine capture",
+    "Public live inference remains disabled",
+    "Render Free idle cold starts and ephemeral SQLite",
+    "Open development-window eligibility question",
+    "Baseline Starlette TestClient deprecation and Three.js bundle-size advisory"
+  ],
+  "evidence_sha256": {
+    "docs/phase-9-activation/evidence/recorded-demo/backend-full.txt": "0097acf587bb55ee3be75e2972650ca1bb28322b22481de407d56cadbb69bb2d",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-1440/machine-observed.png": "8e79d8866183a17eab7dab8ae1b8e5550aee1d4821561fed0cc883300981ffb2",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-1440/recorded-replayed.png": "b552b38f7ba4d07a2a695c88b299bc731107a78a4ade842386d1e17f467cc287",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-1440/results.json": "9dec46680cf54da9fc3f609531c4eec1ec0b953dcdc3e6d7eb4e47108246a357",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-1440/separate-machine-history-preserved.png": "65b8e946cf7ce2eece993f66d42bf4ac3571a687a480270b0068e15eb41610da",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-1440/tampered-evidence-fails-closed.png": "0656fe053a992fb3adbafd94f4a83a3166226bf0e092fe4287dd30d6ee689c99",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-390/machine-observed.png": "beadd6ce150a0103916d6b77a83ca1b99937532bdebbcf1eca93193e9a312d0b",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-390/recorded-replayed.png": "cae81c9a275fffdcdf5e29fc11cfcb5f20197925996648c77e2a1dfc4670c90c",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-390/results.json": "7a622b05a3762de49ba5df5d9f67aad88ef1c2b35155b647eb323f118fac2752",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-390/separate-machine-history-preserved.png": "1a11c362c9b877eb682b38599a43d5acca43bf2342e7c841bd5505287f1d8d34",
+    "docs/phase-9-activation/evidence/recorded-demo/browser-390/tampered-evidence-fails-closed.png": "a70517af37d786d98e34020e384ccd4cd339cbf3c81ba33d72f2f93fc7816c0c",
+    "docs/phase-9-activation/evidence/recorded-demo/build.txt": "47e05a660fb83aab5b440bbf75b7ce64a747bddcf8e3188ef48f77182a45151b",
+    "docs/phase-9-activation/evidence/recorded-demo/container-audit.json": "aa0d119b7776d8804e81e3c9a57f6ac4cdfa753e838fb349d2d75fa40077edb9",
+    "docs/phase-9-activation/evidence/recorded-demo/docker-build.txt": "6ddfb74ebd4b431343daaac75505fb23dba6dd1295183bfa455e73e49555ec4c",
+    "docs/phase-9-activation/evidence/recorded-demo/frontend-full.txt": "6c268e63c559933a073a16e937d8814a85086d014f7f85d742c0692959021ee8",
+    "docs/phase-9-activation/evidence/recorded-demo/public-status.json": "241f6caf6d7d85cf6f8838f6fb0ac7d667509ec908d01ec6a7a4d68ad79d9d98",
+    "docs/phase-9-activation/evidence/recorded-demo/types.txt": "c4f06f11832a139e0c77b18b842c498cbee4fdef130ac170567e0fba1d40b046",
+    "docs/phase-9-activation/evidence/recorded-demo/workstation-regression.json": "665ae9bdd7fa7cca316948caea51860bb5b222fc2b56857534d91b5d7bb2e543",
+    "docs/phase-9-activation/evidence/recorded-demo/workstation-regression.txt": "e4b7da08e863fcd2dc57edd55f2bf2cce660fb51f09ebbb20e2e750d9c4a1049",
+    "backend/forge/recorded_data/meta-pressure-investigation.json": "8cb36b2d182ac84657abbe07ba6230c7483dd115aeeed0478fee80a49c32b88f"
+  },
+  "browser_tools": {
+    "playwright": "1.56.1",
+    "axe_core_playwright": "4.11.0",
+    "chromium": "154.0.8037.57"
+  }
+}

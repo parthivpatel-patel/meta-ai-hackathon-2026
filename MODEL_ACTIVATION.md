@@ -1,6 +1,6 @@
 # Current Phase 9 authorization — both attempts consumed
 
-The separately authorized second genuine smoke passed: HTTP200, exact event model, finish `stop`, three structured hypotheses and independent synthetic replay. **Cumulative requests 2; remaining authorized requests 0.** See [actual evidence and minimal integration/release plan](docs/phase-9-activation/SECOND_SMOKE.md). No follow-up workstation request, public activation or deployment is authorized. Older counts/readiness statements below describe prior milestones; original limits and safeguards remain.
+The separately authorized second genuine smoke passed: HTTP200, exact event model, finish `stop`, three structured hypotheses and independent synthetic replay. **Cumulative requests 2; remaining authorized requests 0.** See [actual evidence](docs/phase-9-activation/SECOND_SMOKE.md). The owner subsequently authorized read-only publication/deployment of that reviewed recorded case, with **zero additional inference**. See [the release boundary](docs/phase-9-activation/RECORDED_DEMO_RELEASE.md). No follow-up workstation request or public live inference is authorized. Older counts/readiness statements below describe prior milestones; original limits and safeguards remain.
 
 ---
 
